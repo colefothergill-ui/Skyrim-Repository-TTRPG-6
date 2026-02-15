@@ -3,7 +3,7 @@
   "campaign_name": "The Elder Scrolls: Skyrim - Fate Core Campaign",
   "started_date": "4E 201, 17th of Last Seed",
   "current_act": 1,
-  "active_pc": "Oskern Cindershroud",
+  "active_pc": "pc_oskern_cindershroud",
   "active_pc_id": "pc_oskern_cindershroud",
   "session_zero_completed": true,
   "session_count": 0,

@@ -40,7 +40,7 @@
   "conditional_first_impression_lines": [
     {
       "id": "college_recognition",
-      "if_npc_id_in": ["tolfdir", "savos_aren"],
+      "if_npc_id_in": ["tolfdir", "savos_aren", "npc_stat_tolfdir", "npc_stat_savos_aren"],
       "lines": {
         "positive": [
           "Oskern Cindershroud... the College hears your footsteps before you arrive. Good - now prove you deserve the echo.",
@@ -136,7 +136,7 @@
     },
     {
       "id": "cindershroud_artifact_named_npcs",
-      "if_npc_id_in": ["ulfric_stormcloak", "elisif_the_fair", "tullius", "tolfdir", "savos_aren"],
+      "if_npc_id_in": ["ulfric_stormcloak", "general_tullius", "tolfdir", "savos_aren"],
       "lines": {
         "neutral": [
           "The Staff of Cinders… so the stories were true.",
