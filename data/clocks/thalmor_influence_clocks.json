@@ -1,7 +1,7 @@
 {
   "thalmor_influence_clocks": {
     "description": "Track Thalmor schemes and influence operations across Skyrim",
-    "last_updated": "2026-02-02",
+    "last_updated": "2026-02-15",
     "clocks": {
       "thalmor_influence_skyrim": {
         "name": "Thalmor Influence in Skyrim",
@@ -144,6 +144,71 @@
           "risk": "If Ulfric discovers manipulation, he may unite with Empire against Thalmor"
         },
         "gm_notes": "This is revealed in Diplomatic Immunity. Ulfric is NOT a willing agent, but his rebellion benefits Thalmor."
+      },
+      "thalmor_eye_of_magnus_operation": {
+        "name": "Thalmor Eye of Magnus Operation",
+        "description": "Ancano's mission to secure the Eye of Magnus for the Aldmeri Dominion. The Eye is an ancient artifact of immense power discovered at Saarthal by the College of Winterhold. Ancano, embedded as a 'cultural advisor,' seeks to control or extract it.",
+        "current_progress": 0,
+        "total_segments": 8,
+        "completion_effect": "Ancano successfully secures the Eye for the Thalmor, granting the Dominion reality-altering power and dominance over Skyrim's magical landscape",
+        "advancement_triggers": [
+          "Eye of Magnus discovered at Saarthal (+2)",
+          "Eye transported to College Hall of Elements (+1)",
+          "Ancano gains unrestricted access to Eye (+1)",
+          "College leadership weakened or distracted (+1)",
+          "Ancano successfully attunes to the Eye (+2)",
+          "Thalmor reinforcements arrive at College (+1)"
+        ],
+        "setback_triggers": [
+          "Party retrieves Staff of Magnus (-2)",
+          "Ancano's true intentions exposed (-1)",
+          "College faculty unites against him (-1)",
+          "Savos Aren takes decisive action (-2)",
+          "Psijic Order intervenes (-3)",
+          "Ancano defeated in final confrontation (-5)"
+        ],
+        "story_hooks": [
+          "At 2/8: Ancano shows unusual interest in Saarthal expedition",
+          "At 4/8: Ancano begins studying the Eye intensely, College concerned",
+          "At 6/8: Ancano makes his move, seals College with magical barriers",
+          "At 8/8: Ancano harnesses Eye's power, reality begins to fracture"
+        ],
+        "connection_to_instability_clock": "This clock advances the Eye Instability clock. As Ancano progresses, the Eye becomes more unstable.",
+        "gm_notes": "This clock tracks Ancano's progress toward weaponizing the Eye. It should escalate during the College questline. The climax (8/8) triggers the final confrontation. If players neglect this, Ancano succeeds and the campaign faces reality-warping consequences."
+      },
+      "eye_of_magnus_instability": {
+        "name": "Eye of Magnus Instability",
+        "description": "The Eye of Magnus is an artifact of such power that reality itself strains around it. The more it's studied, moved, or manipulated, the more unstable it becomes. Unchecked, it could cause a localized Dragonbreak or worse.",
+        "current_progress": 0,
+        "total_segments": 6,
+        "completion_effect": "The Eye's power spirals out of control, creating magical anomalies, dimensional rifts, and potentially a Dragonbreak affecting Winterhold and beyond",
+        "advancement_triggers": [
+          "Eye moved or transported (+1)",
+          "Eye studied without proper precautions (+1)",
+          "Ancano attempts to attune to Eye (+2)",
+          "Magical combat near the Eye (+1)",
+          "Eye's containment wards fail (+2)"
+        ],
+        "setback_triggers": [
+          "Staff of Magnus used to stabilize Eye (-2)",
+          "Psijic Order provides guidance (-1)",
+          "Eye properly warded by College mages (-1)",
+          "Eye sealed or removed from Mundus (-3)"
+        ],
+        "story_hooks": [
+          "At 2/6: Magical anomalies appear near College—wards flickering, time distortions",
+          "At 4/6: Students and faculty report nightmares, reality feels 'thin'",
+          "At 5/6: Physical manifestations—objects phasing, gravity anomalies, spectral visions",
+          "At 6/6: Full breakdown—reality rifts, Eye attempting to tear open barriers between planes"
+        ],
+        "environmental_effects": {
+          "low_instability": "Minor magical fluctuations, enhanced spell effects",
+          "moderate_instability": "Random magical surges, teleportation mishaps, summoned creatures appearing",
+          "high_instability": "Time loops, pocket dimensions, party experiencing alternate timelines",
+          "critical_instability": "Reality fracturing, potential Dragonbreak, Eye could consume College/Winterhold"
+        },
+        "connection_to_thalmor_clock": "Ancano's manipulation (Thalmor Eye Operation clock) directly advances this clock.",
+        "gm_notes": "This clock creates urgency and consequence for the College questline. Use environmental effects to show escalation. At 5-6 segments, the final confrontation becomes mandatory. This clock can justify high stakes and dramatic set pieces."
       }
     },
     "thalmor_operations": {
@@ -718,6 +783,89 @@
             "Destroy major Thalmor asset (+2 resolution)"
           ]
         }
+      },
+      "operation_eye_of_magnus": {
+        "operation_name": "Operation Eye of Magnus",
+        "objective": "Secure the Eye of Magnus artifact for the Aldmeri Dominion through Agent Ancano embedded at the College of Winterhold",
+        "priority": "Critical (upon discovery)",
+        "current_phase": "dormant",
+        "discovery_state": {
+          "segments": 4,
+          "current": 0,
+          "description": "Thalmor (and player) awareness of the Eye of Magnus",
+          "revelations": [
+            "Segment 1: College begins excavation at Saarthal—routine monitoring",
+            "Segment 2: Ancano reports 'significant artifact' discovered",
+            "Segment 3: Eye transported to College—Ancano confirms reality-altering power",
+            "Segment 4: Elenwen authorizes full operation—secure Eye at any cost"
+          ],
+          "current_thalmor_knowledge": "No awareness yet—operation activates when Eye discovered"
+        },
+        "progress_state": {
+          "segments": 8,
+          "current": 0,
+          "description": "Ancano's success in securing/controlling the Eye",
+          "milestones": [
+            "Segment 2: Ancano gains unrestricted access to Eye",
+            "Segment 4: Begins attunement process",
+            "Segment 6: Ancano seizes control—locks down College",
+            "Segment 8: Successfully harnesses Eye for Dominion (or dies trying)"
+          ]
+        },
+        "resolution_state": {
+          "segments": 6,
+          "current": 0,
+          "description": "Player/College success in stopping Ancano and securing Eye",
+          "milestones": [
+            "Segment 2: Retrieve Staff of Magnus (key to disrupting Eye connection)",
+            "Segment 4: Break through Ancano's wards",
+            "Segment 6: Defeat Ancano and stabilize Eye"
+          ]
+        },
+        "triggers": {
+          "discovery_advancement": [
+            "Saarthal excavation begins (+1 discovery)",
+            "Unusual artifact unearthed (+2 discovery)",
+            "Eye brought to College Hall of Elements (+1 discovery)",
+            "Ancano reports to Elenwen (+0 discovery for players, operation now active)"
+          ],
+          "progress_advancement": [
+            "Ancano gains access to Eye unsupervised (+1 progress)",
+            "College leadership distracted or weakened (+1 progress)",
+            "Ancano successfully attunes to Eye (+2 progress)",
+            "Players delay retrieving Staff of Magnus (+1 progress per delay)",
+            "Magical barriers seal College (+2 progress)"
+          ],
+          "resolution_advancement": [
+            "Retrieve Staff of Magnus from Labyrinthian (+2 resolution)",
+            "College faculty unites against Ancano (+1 resolution)",
+            "Break through College barriers (+1 resolution)",
+            "Confront and defeat Ancano (+2 resolution)",
+            "Stabilize Eye with Staff (+0 resolution but prevents catastrophe)"
+          ],
+          "completion_thalmor": "If progress reaches 8: Ancano succeeds—Eye under Thalmor control, reality warping begins, campaign-level consequences",
+          "completion_player": "If resolution reaches 6: Ancano defeated, Eye secured, Thalmor lose major asset"
+        },
+        "connection_to_college_questline": {
+          "first_lessons": "Dormant—Ancano observing, no action yet",
+          "under_saarthal": "Discovery state advances to segment 2-3",
+          "hitting_the_books": "Ancano intensifies interest, progress state begins",
+          "staff_of_magnus": "Progress state advances rapidly, players gain resolution tool",
+          "eye_of_magnus_finale": "Progress vs Resolution climax—outcome determines Eye's fate"
+        },
+        "thalmor_resources_committed": {
+          "ancano": "Deep cover agent, embedded for years, authorized to use any means",
+          "embassy_support": "Elenwen provides intelligence, magical resources, contingency plans",
+          "reinforcements": "If Ancano requests, Thalmor strike team can be dispatched (extreme measure)",
+          "diplomatic_cover": "If operation exposed, Thalmor deny knowledge, claim Ancano acted alone"
+        },
+        "failure_consequences": {
+          "ancano_death": "Major operational loss, Thalmor diplomatic incident",
+          "eye_secured_by_college": "Dominion denied reality-altering power",
+          "psijic_intervention": "If Psijic Order removes Eye, Thalmor completely lose access",
+          "public_exposure": "If operation revealed, major propaganda victory for Thalmor enemies"
+        },
+        "gm_notes": "This operation is THE College questline hook for Thalmor. It escalates from background surveillance to existential crisis. Ancano is expendable—Elenwen authorized him to die if necessary to secure Eye. Use this to tie College storyline into broader Thalmor conspiracy. If players ignore College, Ancano may succeed, giving Thalmor reality-warping capabilities for rest of campaign."
       }
     },
     "thalmor_agents": {

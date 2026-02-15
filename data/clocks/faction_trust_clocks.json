@@ -1,7 +1,7 @@
 {
   "faction_trust_clocks": {
     "description": "Track party standing and trust with all major factions in Skyrim",
-    "last_updated": "2026-02-02",
+    "last_updated": "2026-02-15",
     "trust_scale": {
       "0-2": {
         "level": "Stranger",
@@ -222,9 +222,9 @@
       },
       "college_of_winterhold_trust": {
         "faction": "College of Winterhold",
-        "current_trust": 0,
+        "current_trust": 2,
         "max_trust": 10,
-        "trust_level": "Stranger",
+        "trust_level": "Member (in good standing)",
         "advancement_triggers": {
           "join_college": "+2",
           "complete_college_quest": "+1 to +2",
@@ -265,7 +265,8 @@
           "magic_required": "Must demonstrate magical ability to join",
           "political_neutrality": "College stays out of civil war",
           "thalmor_presence": "Ancano creates tension - defeating him is major trust gain"
-        }
+        },
+        "notes": "[2026-02-15] Session 0 setup: PC is a recognized College member. Initialize trust to reflect baseline access; modify upward/downward via Eye of Magnus arc outcomes."
       },
       "greybeards_trust": {
         "faction": "The Greybeards",
