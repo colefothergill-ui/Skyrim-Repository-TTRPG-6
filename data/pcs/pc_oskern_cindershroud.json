@@ -13,9 +13,10 @@
       "The Dragon of Haafingar (Inherited Family Title / Thu'um User)",
       "Lord Cindershroud, Friend of Ulfric, Once Beloved by Elisif. (Noble Clan / Tie to Ulfric / Tie to Jarl Elisif)."
     ],
-    "compel_library": [
-      {
-        "id": "oskern_legacy_prove_the_dragon",
+    "compel_library": {
+      "ideas": [
+        {
+          "id": "oskern_legacy_prove_the_dragon",
         "pillar": "legacy",
         "source_aspect_hint": "trouble / high concept (legacy pressure)",
         "title": "Prove You're Worthy of the Dragon of Haafingar",
@@ -141,7 +142,7 @@
         "title": "The Eye Calls",
         "when_to_offer": "When the Eye is active (or hinted), when you're exhausted, or when you should retreat.",
         "the_push": "You *feel* the pull: curiosity, hunger, destiny. The artifact and the Voice make it worse.",
-        "accept_effect": "Gain 1 FP. You push deeper / take the risky approach / ignore a safety warning. Tick Eye Instability +1.",
+        "accept_effect": "Gain 1 FP. You push deeper / take the risky approach / ignore a safety warning, letting the Eye's influence escalate.",
         "refuse_cost": "Pay 1 FP OR take 'Shaken by the Echo' as mild mental consequence.",
         "gm_notes": "This is the 'main questline throttle.' Use it to pace escalation.",
         "tags": ["eye_of_magnus", "mythic", "danger"]
@@ -183,6 +184,7 @@
         "tags": ["identity", "civil_war", "social"]
       }
     ]
+    }
   },
   "skills": {
     "Great (+4)": [
