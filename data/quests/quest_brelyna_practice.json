@@ -1,0 +1,22 @@
+{
+  "quest_id": "quest_brelyna_practice",
+  "name": "Brelyna's Practice",
+  "type": "Side Quest (Companion)",
+  "status": "available",
+  "giver": "Brelyna Maryon",
+  "location": "College of Winterhold",
+  "description": "Brelyna asks you to be her test subject while she refines spells. The results range from helpful to humiliating to 'why am I suddenly glowing.'",
+  "objectives": [
+    { "id": "agree", "text": "Agree to help Brelyna practice (set boundaries).", "completed": false },
+    { "id": "undergo_tests", "text": "Endure several practice effects (and manage misfires).", "completed": false },
+    { "id": "stabilize_spell", "text": "Help her stabilize the casting pattern under pressure.", "completed": false },
+    { "id": "debrief", "text": "Debrief and encourage Brelyna (or choose a colder path).", "completed": false }
+  ],
+  "rewards": {
+    "fate_points": 0,
+    "items": ["Brelyna's Focus Charm (narrative permission; minor stability aid)"],
+    "reputation": ["+Brelyna loyalty tick", "+College trust (if handled respectfully)"],
+    "notes": "Unlocks Brelyna as companion and strengthens her Arcane Stabilizer reliability."
+  },
+  "gm_notes": "This is a great 'low-stakes high-character' quest. If the PC is noble/aspiring archmage, it also lets them play mentor."
+}

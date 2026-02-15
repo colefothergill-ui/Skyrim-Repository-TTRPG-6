@@ -1,0 +1,22 @@
+{
+  "quest_id": "quest_onmund_request",
+  "name": "Onmund's Request",
+  "type": "Side Quest (Companion)",
+  "status": "available",
+  "giver": "Onmund",
+  "location": "College of Winterhold",
+  "description": "Onmund asks for help recovering a family amulet he regrets selling. The trail leads into the College's gray-market politics (and possibly local Winterhold resentment).",
+  "objectives": [
+    { "id": "ask_onmund", "text": "Hear Onmund out privately.", "completed": false },
+    { "id": "find_buyer", "text": "Identify who currently holds the amulet (Enthir / black-market contact).", "completed": false },
+    { "id": "recover_amulet", "text": "Recover the amulet: negotiate, trade, steal, or win it.", "completed": false },
+    { "id": "return_amulet", "text": "Return the amulet to Onmund (or decide its fate).", "completed": false }
+  ],
+  "rewards": {
+    "fate_points": 0,
+    "items": ["Onmund's Amulet (aspect hook; optional minor warding benefit)"],
+    "reputation": ["+College trust", "+Onmund loyalty tick"],
+    "notes": "Completing this quest unlocks Onmund as a stable companion pick for dangerous expeditions."
+  },
+  "gm_notes": "Great place to introduce Enthir, quiet College corruption, and 'neutral institution' hypocrisy. If PC leans noble/political, this can become a leverage scene."
+}

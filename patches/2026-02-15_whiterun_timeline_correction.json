@@ -1,0 +1,13 @@
+{
+  "patch_id": "2026-02-15_whiterun_timeline_correction",
+  "date": "2026-02-15",
+  "type": "continuity_fix",
+  "source": "Player clarification (Cole) + state alignment",
+  "summary": "Whiterun Battle has NOT begun yet in Oskern's timeline; Whiterun remains neutral under Balgruuf (no Imperial occupation).",
+  "file_changes": [
+    {
+      "path": "data/world_state/current_state.json",
+      "change": "Remove/replace claims that the Battle of Whiterun is underway and that Whiterun is under Imperial control; keep Balgruuf neutral and the battle 'approaching'."
+    }
+  ]
+}

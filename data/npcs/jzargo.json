@@ -1,0 +1,50 @@
+{
+  "name": "J'zargo",
+  "id": "jzargo",
+  "type": "Potential Companion",
+  "location": "College of Winterhold",
+  "faction": "College of Winterhold",
+  "tags": ["khajiit", "student", "college", "ambitious", "destruction", "experimenter"],
+  "aspects": {
+    "high_concept": "Ambitious Khajiit Spell-Savant in Training",
+    "trouble": "Ego Bigger Than His Spellbook",
+    "other_aspects": [
+      "Loves Risk When It's His Idea",
+      "Collects 'Proof' of Greatness",
+      "Charm Like a Knife"
+    ]
+  },
+  "skills": {
+    "Great": ["Lore"],
+    "Good": ["Will", "Deceive"],
+    "Fair": ["Rapport", "Notice", "Investigate"],
+    "Average": ["Athletics", "Provoke"]
+  },
+  "stunts": [
+    "J'zargo the Magnificent: +2 to Deceive or Rapport when bragging to gain access, attention, or a concession.",
+    "Experimental Scrollwork: Once per scene, create a situational aspect related to an improvised spell effect using Lore (success with style grants 2 free invokes, but failure creates a GM-controlled complication aspect)."
+  ],
+  "stress": { "physical": [false, false], "mental": [false, false, false] },
+  "consequences": { "mild": null, "moderate": null, "severe": null },
+  "refresh": 3,
+  "fate_points": 3,
+  "companion_status": {
+    "available": true,
+    "recruitment_conditions": [
+      "PC tolerates J'zargo's methods (at least publicly)",
+      "Complete (or meaningfully advance) 'J'zargo's Experiment'"
+    ],
+    "loyalty_clock": { "name": "J'zargo — Respect", "current": 1, "max": 6 },
+    "bond_benefits": [
+      "Once per session, J'zargo can 'overclock' a spell: +2 to a single Lore-based magical action, but the GM immediately creates a minor collateral aspect in the scene."
+    ]
+  },
+  "personal_quest_ref": "data/quests/quest_jzargo_experiment.json",
+  "personality_notes": {
+    "speaking_style": "Third-person bravado, theatrical confidence, sly humor",
+    "motivations": ["Become Arch-Mage", "Outshine rivals", "Prove Khajiit brilliance"],
+    "fears": ["Being ignored", "Being ordinary", "A rival getting credit"]
+  },
+  "scene_triggers": ["Saarthal expedition", "Dangerous experiments", "Rival student tensions"],
+  "act_context": ["Act 1", "Act 2"]
+}

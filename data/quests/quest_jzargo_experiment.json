@@ -1,0 +1,22 @@
+{
+  "quest_id": "quest_jzargo_experiment",
+  "name": "J'zargo's Experiment",
+  "type": "Side Quest (Companion)",
+  "status": "available",
+  "giver": "J'zargo",
+  "location": "College of Winterhold",
+  "description": "J'zargo wants 'field validation' for experimental scrolls. They might be brilliant. They might be suicide in paper form.",
+  "objectives": [
+    { "id": "hear_pitch", "text": "Hear J'zargo's proposal (and his extremely confident risk assessment).", "completed": false },
+    { "id": "test_scrolls", "text": "Test the scrolls in a controlled (ha) environment or hostile ruin.", "completed": false },
+    { "id": "survive_results", "text": "Deal with the consequences—success, failure, or unexpected attention.", "completed": false },
+    { "id": "report_back", "text": "Return results to J'zargo (truthfully or strategically).", "completed": false }
+  ],
+  "rewards": {
+    "fate_points": 0,
+    "items": ["Experimental Scroll Cache (consumable aspect generator)"],
+    "reputation": ["+J'zargo loyalty tick", "+College curiosity / -College caution (depending on chaos)"],
+    "notes": "Unlocks J'zargo as companion and strengthens his Overclock stunt benefit reliability."
+  },
+  "gm_notes": "Perfect for compels and collateral aspects. If you want Saarthal to feel dangerous early, this quest can 'preload' that tone."
+}

@@ -95,6 +95,63 @@
           "Incompetent leadership (-5)"
         ]
       }
+    },
+    "onmund": {
+      "name": "Onmund",
+      "role": "College student companion",
+      "initial_loyalty": 30,
+      "personality": "Earnest, protective, determined to prove mages can be good",
+      "bond_trigger": "Advance or complete Onmund's Request",
+      "relationship_modifiers": {
+        "positive": [
+          "Protecting students (+5)",
+          "Respecting College neutrality (+2)",
+          "Defusing prejudice peacefully (+3)"
+        ],
+        "negative": [
+          "Reckless collateral damage (-5)",
+          "Bullying or humiliating students (-10)",
+          "Endorsing anti-mage persecution (-20)"
+        ]
+      }
+    },
+    "jzargo": {
+      "name": "J'zargo",
+      "role": "College student companion",
+      "initial_loyalty": 25,
+      "personality": "Brilliant, cocky, risk-happy, status-driven",
+      "bond_trigger": "Advance or complete J'zargo's Experiment",
+      "relationship_modifiers": {
+        "positive": [
+          "Letting him 'prove himself' (+4)",
+          "Sharing credit publicly (+5)",
+          "High-risk victories (+3)"
+        ],
+        "negative": [
+          "Publicly embarrassing him (-10)",
+          "Blocking experiments without offering alternatives (-5)",
+          "Taking credit for his work (-15)"
+        ]
+      }
+    },
+    "brelyna_maryon": {
+      "name": "Brelyna Maryon",
+      "role": "College student companion",
+      "initial_loyalty": 30,
+      "personality": "Quiet, kind, serious scholar with Telvanni roots",
+      "bond_trigger": "Advance or complete Brelyna's Practice",
+      "relationship_modifiers": {
+        "positive": [
+          "Patience and mentorship (+5)",
+          "Respecting her boundaries (+4)",
+          "Protecting her from mockery (+3)"
+        ],
+        "negative": [
+          "Using her as a tool (-10)",
+          "Mocking failures (-15)",
+          "Forcing risky tests without consent (-20)"
+        ]
+      }
     }
   },
   "major_npc_relationships": {
