@@ -1,0 +1,15 @@
+{
+  "patch_id": "2026-02-15_thieves_progress_reset",
+  "date": "2026-02-15",
+  "type": "timeline_correction",
+  "source": "Player clarification (Cole)",
+  "summary": "Oskern has NOT begun Thieves Guild or skooma trade questlines; clear any active objectives from retired-PC drift.",
+  "files_touched": [
+    "data/quests/quest_thieves_guild.json",
+    "data/quests/quest_skooma_trade.json"
+  ],
+  "rules": [
+    "Set quest status to Inactive",
+    "Set all objective statuses to Pending"
+  ]
+}

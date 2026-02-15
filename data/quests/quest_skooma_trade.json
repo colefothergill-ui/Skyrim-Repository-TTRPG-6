@@ -2,14 +2,14 @@
   "quest_id": "quest_skooma_trade",
   "name": "The Skooma Trade",
   "type": "Side Quest",
-  "status": "Active",
+  "status": "Inactive",
   "giver": "Jarl Laila Law-Giver",
   "location": "Riften and The Rift",
   "description": "Jarl Laila has noticed a surge in skooma use and crime in The Rift. She has tasked you with rooting out the source of the skooma entering her hold. You must investigate the rumors in Riften, track down the smugglers or dealers responsible, and shut down their operation. By putting an end to the skooma trade, you will help the people of The Rift and earn favor with Riften's leadership (perhaps even the title of Thane). Be wary – those behind the skooma operation could be dangerous, and there might be powerful figures silently pulling the strings.",
   "objectives": [
     {
       "description": "Investigate rumors of skooma in Riften (e.g., talk to an Argonian dockworker or an addict who might know about the skooma dealers).",
-      "status": "Active",
+      "status": "Pending",
       "optional": false
     },
     {
