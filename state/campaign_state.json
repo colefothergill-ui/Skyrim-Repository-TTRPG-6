@@ -5,9 +5,9 @@
   "current_act": 1,
   "active_pc": null,
   "active_pc_id": null,
-  "session_zero_completed": false,
+  "session_zero_completed": true,
   "session_count": 0,
-  "last_updated": "2026-02-02",
+  "last_updated": "2026-02-15 03:37:54",
   "starting_location": "Whiterun",
   "current_scene_id": null,
   "current_location": "Whiterun",
@@ -19,9 +19,9 @@
   "scene_aspects": {},
   "scene_clocks": {},
   "civil_war_state": {
-    "player_alliance": null,
+    "player_alliance": "neutral",
     "whiterun_control": "neutral",
-    "battle_of_whiterun_status": "pending",
+    "battle_of_whiterun_status": "approaching",
     "imperial_victories": 0,
     "stormcloak_victories": 0,
     "key_battles_completed": [],
@@ -63,7 +63,7 @@
     "jarl_balgruuf_support": null,
     "thalmor_embassy_approach": null,
     "talos_worship_stance": null,
-    "civil_war_entry_contact": null,
+    "civil_war_entry_contact": "undecided",
     "battle_of_whiterun_choice": null
   },
   "world_consequences": {
@@ -106,14 +106,43 @@
         "location": "Riverwood or Stormcloak camps",
         "recruitment_condition": "Party encounters Ralof and helps with Stormcloak-related task",
         "faction_affinity": "stormcloaks"
+      },
+      {
+        "npc_id": "npc_stat_hadvar",
+        "name": "Hadvar",
+        "status": "available",
+        "loyalty": 50,
+        "location": "Riverwood or Whiterun",
+        "recruitment_condition": "Party encounters Hadvar and helps with Imperial-related task",
+        "faction_affinity": "imperial_legion"
+      },
+      {
+        "npc_id": "npc_stat_ralof",
+        "name": "Ralof",
+        "status": "available",
+        "loyalty": 50,
+        "location": "Riverwood or Stormcloak camps",
+        "recruitment_condition": "Party encounters Ralof and helps with Stormcloak-related task",
+        "faction_affinity": "stormcloaks"
       }
     ],
     "dismissed_companions": [],
     "companion_relationships": {},
     "notes": "Companion loyalty ranges from 0-100."
   },
-  "player_characters": [],
+  "player_characters": [
+    {
+      "id": "pc_oskern_cindershroud",
+      "name": "Oskern Cindershroud",
+      "player": "Cole",
+      "race": "Imperial",
+      "standing_stone": "The Atronach Stone",
+      "faction_alignment": "neutral"
+    }
+  ],
   "starting_narrative": "The party arrives in Whiterun, trying to remain neutral in the civil war. They have not yet committed to either side in the conflict. Jarl Balgruuf the Greater has reluctantly sided with the Empire, and the Stormcloaks prepare to assault the city. The party may align with neutral factions like the Companions, who focus on honor over politics. The Battle of Whiterun approaches, and the party must navigate the conflict while maintaining their independence. They may encounter Hadvar or Ralof in Riverwood or Whiterun and decide whether to accept either as a companion.",
-  "faction_relationships": {},
+  "faction_relationships": {
+    "companions": 20
+  },
   "npc_first_impressions": {}
 }
