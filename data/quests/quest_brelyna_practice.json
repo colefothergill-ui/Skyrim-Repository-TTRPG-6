@@ -1,0 +1,60 @@
+{
+  "quest_id": "quest_brelyna_practice",
+  "name": "Brelyna's Practice",
+  "type": "Side Quest (Companion)",
+  "status": "Inactive",
+  "giver": "Brelyna Maryon",
+  "location": "College of Winterhold",
+  "description": "Brelyna asks you to be her test subject while she refines spells. The results range from helpful to humiliating to 'why am I suddenly glowing.'",
+  "objectives": [
+    { "description": "Agree to help Brelyna practice (set boundaries).", "status": "incomplete", "optional": false },
+    { "description": "Endure several practice effects (and manage misfires).", "status": "incomplete", "optional": false },
+    { "description": "Help her stabilize the casting pattern under pressure.", "status": "incomplete", "optional": false },
+    { "description": "Debrief and encourage Brelyna (or choose a colder path).", "status": "incomplete", "optional": false }
+  ],
+  "rewards": {
+    "experience": 0,
+    "gold": 0,
+    "items": ["Brelyna's Focus Charm (narrative permission; minor stability aid)"],
+    "reputation": [
+      {
+        "faction": "Brelyna Maryon",
+        "change": "small_increase",
+        "reason": "Helped her practice, improving personal loyalty."
+      },
+      {
+        "faction": "College of Winterhold",
+        "change": "small_increase",
+        "reason": "Demonstrated reliability during magical practice, improving trust."
+      }
+    ]
+  },
+  "prerequisites": [
+    "Player has access to the College of Winterhold.",
+    "Player has met Brelyna Maryon and is not currently hostile to her."
+  ],
+  "consequences": {
+    "success": [
+      "Brelyna gains confidence in her spellcasting and becomes available as a companion.",
+      "College mages are marginally more trusting of the player, especially in magical experiments.",
+      "Future scenes may reference the specific mishaps that occurred during practice."
+    ],
+    "failure": [
+      "Brelyna is shaken or embarrassed and may be more hesitant around high-risk magic.",
+      "College trust may stagnate or slightly drop if the player was careless or mocking.",
+      "Brelyna may require an additional scene to regain confidence before joining as a companion."
+    ]
+  },
+  "notes": "Unlocks Brelyna as companion and strengthens her Arcane Stabilizer reliability. Run this as a light, comedic interlude that still reveals Brelyna's vulnerability and ambition. Let the player set boundaries about what kinds of magical mishaps are on the table, and use the misfires to foreshadow Brelyna's later competence. If the player is noble/aspiring archmage, lean into mentor dynamics; otherwise, play up peer experimentation and shared risk.",
+  "related_npcs": [
+    "Brelyna Maryon",
+    "Tolfdir",
+    "Mirabelle Ervine"
+  ],
+  "related_locations": [
+    "College of Winterhold",
+    "Hall of Attainment",
+    "Hall of the Elements"
+  ],
+  "gm_notes": "This is a great 'low-stakes high-character' quest. If the PC is noble/aspiring archmage, it also lets them play mentor."
+}

@@ -1,0 +1,34 @@
+{
+  "name": "Brelyna Maryon",
+  "id": "npc_stat_brelyna_maryon",
+  "type": "Dunmer Apprentice Mage (Telvanni-trained)",
+  "category": "Ally",
+  "location": "College of Winterhold",
+  "faction": "College of Winterhold",
+  "aspects": {
+    "high_concept": "Quietly Brilliant Dunmer Apprentice",
+    "trouble": "Unstable Magic Under Stress",
+    "other_aspects": ["Telvanni Theory Brain", "Kind Under the Guard"]
+  },
+  "skills": {
+    "Good": ["Lore", "Will"],
+    "Fair": ["Investigate", "Notice", "Empathy"],
+    "Average": ["Rapport", "Athletics"]
+  },
+  "stunts": [
+    "Arcane Stabilizer: Once per scene, cancel a minor magical complication aspect if Brelyna can narratively 'correct the pattern'.",
+    "Telvanni Recall: +2 to Lore when identifying ancient magical signatures or anomalies."
+  ],
+  "stress": { "physical": [false, false], "mental": [false, false, false] },
+  "consequences": { "mild": null, "moderate": null, "severe": null },
+  "refresh": 2,
+  "armor": 0,
+  "starting_equipment": {
+    "armor": "College Robes (Armor:0)",
+    "weapon": "Utility/Control Spellcraft (Weapon:2, excels at aspects)",
+    "other": ["Practice tomes", "Telvanni notes", "Small focus charm"]
+  },
+  "notes": "Brelyna is a control-and-support mage. If protected and respected, she becomes terrifyingly useful against magical puzzles and relic phenomena.",
+  "combat_tactics": "Creates advantages, summons distractions, stabilizes allies and magical effects; avoids spotlight unless necessary.",
+  "act_context": ["Act 1", "Act 2"]
+}

@@ -1,0 +1,14 @@
+{
+  "patch_id": "2026-02-15_whiterun_timeline_correction",
+  "date": "2026-02-15",
+  "type": "canon_alignment",
+  "source": "Player clarification (Cole) + state alignment",
+  "summary": "Whiterun Battle has NOT begun yet in Oskern's timeline; Whiterun remains neutral under Balgruuf (no Imperial occupation).",
+  "canon_reference": [
+    "TES V: Skyrim base game questline timeline for the Battle of Whiterun",
+    "Patch 2026-02-15_whiterun_status_alignment.json (Whiterun status alignment)"
+  ],
+  "files_touched": [
+    "data/world_state/current_state.json"
+  ]
+}

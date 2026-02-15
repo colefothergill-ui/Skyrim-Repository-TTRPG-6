@@ -1,0 +1,35 @@
+{
+  "name": "J'zargo",
+  "id": "npc_stat_jzargo",
+  "type": "Khajiit Apprentice Battlemage",
+  "category": "Ally",
+  "location": "College of Winterhold",
+  "faction": "College of Winterhold",
+  "aspects": {
+    "high_concept": "Ambitious Khajiit Spell-Savant",
+    "trouble": "Reckless Experiments for Glory",
+    "other_aspects": ["Bravado as a Weapon", "Always 'Testing' Something"]
+  },
+  "skills": {
+    "Great": ["Lore"],
+    "Good": ["Will", "Deceive"],
+    "Fair": ["Notice", "Rapport", "Investigate"],
+    "Average": ["Athletics", "Provoke"]
+  },
+  "stunts": [
+    "Overclock: Once per scene, add +2 to a Lore-based spell action; immediately create a minor collateral aspect (GM controls, no free invokes).",
+    "Showman: +2 to Rapport when the goal is to impress a crowd or win status."
+  ],
+  "stress": { "physical": [false, false], "mental": [false, false, false] },
+  "consequences": { "mild": null, "moderate": null, "severe": null },
+  "refresh": 3,
+  "armor": 0,
+  "starting_equipment": {
+    "armor": "College Robes (Armor:0)",
+    "weapon": "Aggressive Spellcraft (Weapon:3, but 'loud' and noticeable)",
+    "other": ["Experimental scrolls", "Ink & notes", "Concealed trinkets"]
+  },
+  "notes": "J'zargo is a competent mage whose primary danger is his ego. He's excellent leverage, and also an excellent accident generator.",
+  "combat_tactics": "Opens with big pressure spells, tries to end fights quickly, and hates defensive play unless he can make it look heroic.",
+  "act_context": ["Act 1", "Act 2"]
+}

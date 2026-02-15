@@ -39,6 +39,24 @@
   },
   "conditional_first_impression_lines": [
     {
+      "id": "college_student_trio_unique_barks",
+      "if_npc_id_in": ["onmund", "jzargo", "brelyna_maryon", "npc_stat_onmund", "npc_stat_jzargo", "npc_stat_brelyna_maryon"],
+      "lines": {
+        "neutral": [
+          "You're not just another robe in the Hall… people know your name here.",
+          "That staff isn't a fashion choice. That's… history."
+        ],
+        "positive": [
+          "If you're taking point, I'm in. Just… try not to get us killed.",
+          "Okay—fine. That was impressive. Teach me how you did that."
+        ],
+        "negative": [
+          "You're talented. Also… terrifying. Try not to prove the town right about us.",
+          "If you're going to show off, at least make sure we survive the consequences."
+        ]
+      }
+    },
+    {
       "id": "college_recognition",
       "if_npc_id_in": ["tolfdir", "savos_aren", "npc_stat_tolfdir", "npc_stat_savos_aren"],
       "lines": {

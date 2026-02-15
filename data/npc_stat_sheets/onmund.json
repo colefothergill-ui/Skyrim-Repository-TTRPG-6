@@ -1,0 +1,34 @@
+{
+  "name": "Onmund",
+  "id": "npc_stat_onmund",
+  "type": "Nord Apprentice Mage",
+  "category": "Ally",
+  "location": "College of Winterhold",
+  "faction": "College of Winterhold",
+  "aspects": {
+    "high_concept": "Idealistic Nord Apprentice Mage",
+    "trouble": "Must Prove Mages Are Not Monsters",
+    "other_aspects": ["Wards Before Glory", "Sincere and Stubborn"]
+  },
+  "skills": {
+    "Good": ["Lore", "Will"],
+    "Fair": ["Notice", "Rapport", "Empathy"],
+    "Average": ["Athletics", "Investigate"]
+  },
+  "stunts": [
+    "Ward Specialist: +2 to Defend with Lore against spell attacks or magical traps.",
+    "Steady Hands: Once per scene, Onmund may reduce an ally's mental stress taken from a magical effect by 1 (teamwork justification required)."
+  ],
+  "stress": { "physical": [false, false], "mental": [false, false, false] },
+  "consequences": { "mild": null, "moderate": null, "severe": null },
+  "refresh": 2,
+  "armor": 0,
+  "starting_equipment": {
+    "armor": "College Robes (Armor:0, +1 to Lore when studying/casting in calm conditions)",
+    "weapon": "Basic Destruction/Utility Magic (Weapon:2)",
+    "other": ["Ward practice notes", "Student satchel", "Minor potions"]
+  },
+  "notes": "Onmund is earnest, defensive of the College's mission, and uncomfortable with Skyrim's anti-mage prejudice. He's a reliable 'support caster' in conflicts.",
+  "combat_tactics": "Prioritizes wards and protective magic, then controlled ranged spells. Avoids collateral damage unless forced.",
+  "act_context": ["Act 1", "Act 2"]
+}

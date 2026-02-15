@@ -1,0 +1,49 @@
+{
+  "name": "Onmund",
+  "id": "onmund",
+  "type": "Potential Companion",
+  "location": "College of Winterhold",
+  "faction": "College of Winterhold",
+  "tags": ["nord", "student", "college", "restoration-curious", "warding", "anti-stigma"],
+  "aspects": {
+    "high_concept": "Idealistic Nord Apprentice Mage of the College",
+    "trouble": "Feels He Must Prove Mages Aren't Monsters",
+    "other_aspects": [
+      "Honest to a Fault",
+      "Homesick but Determined",
+      "Wards Before Glory"
+    ]
+  },
+  "skills": {
+    "Good": ["Lore", "Will"],
+    "Fair": ["Rapport", "Empathy", "Notice"],
+    "Average": ["Athletics", "Investigate"]
+  },
+  "stunts": [
+    "Practical Wards: +2 to Lore when Defending against spells or magical hazards with wards/barriers.",
+    "Earnest Appeal: +2 to Rapport when asking for help sincerely (especially from faculty or townsfolk)."
+  ],
+  "stress": { "physical": [false, false], "mental": [false, false, false] },
+  "consequences": { "mild": null, "moderate": null, "severe": null },
+  "refresh": 2,
+  "fate_points": 2,
+  "companion_status": {
+    "available": true,
+    "recruitment_conditions": [
+      "PC is a College member in good standing OR earns Onmund's trust",
+      "Complete (or meaningfully advance) 'Onmund's Request'"
+    ],
+    "loyalty_clock": { "name": "Onmund — Trust", "current": 1, "max": 6 },
+    "bond_benefits": [
+      "Once per scene, Onmund can absorb a hostile spell impact as a Consequence-reduction assist (narrative + mechanical teamwork)."
+    ]
+  },
+  "personal_quest_ref": "data/quests/quest_onmund_request.json",
+  "personality_notes": {
+    "speaking_style": "Polite, straightforward, occasionally self-conscious",
+    "motivations": ["Learn responsibly", "Help people fear magic less", "Be worthy despite prejudice"],
+    "fears": ["Being treated as a monster", "Failing the College", "Hurting someone by mistake"]
+  },
+  "scene_triggers": ["Saarthal expedition", "College lessons", "Anti-mage prejudice in Winterhold"],
+  "act_context": ["Act 1", "Act 2"]
+}

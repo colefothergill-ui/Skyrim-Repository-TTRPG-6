@@ -1,0 +1,49 @@
+{
+  "name": "Brelyna Maryon",
+  "id": "brelyna_maryon",
+  "type": "Potential Companion",
+  "location": "College of Winterhold",
+  "faction": "College of Winterhold",
+  "tags": ["dunmer", "student", "college", "telvanni", "conjuration", "shy-but-sharp"],
+  "aspects": {
+    "high_concept": "Young Dunmer Mage with Telvanni Roots",
+    "trouble": "Magic Gets Unstable When She's Nervous",
+    "other_aspects": [
+      "Quietly Brilliant",
+      "Trying to Escape Family Expectations",
+      "Curiosity That Won't Sit Still"
+    ]
+  },
+  "skills": {
+    "Good": ["Lore", "Will"],
+    "Fair": ["Investigate", "Notice", "Empathy"],
+    "Average": ["Rapport", "Athletics"]
+  },
+  "stunts": [
+    "Telvanni Theory: +2 to Lore when researching obscure arcana, relic history, or magical anomalies.",
+    "Conjurer's Instinct: Once per scene, Brelyna may Create Advantage with Lore to summon/manifest a short-lived helper aspect (e.g., 'Conjured Distraction', 'Bound Guardian's Grip')."
+  ],
+  "stress": { "physical": [false, false], "mental": [false, false, false] },
+  "consequences": { "mild": null, "moderate": null, "severe": null },
+  "refresh": 2,
+  "fate_points": 2,
+  "companion_status": {
+    "available": true,
+    "recruitment_conditions": [
+      "PC shows patience/kindness OR earns academic respect",
+      "Complete (or meaningfully advance) 'Brelyna's Practice'"
+    ],
+    "loyalty_clock": { "name": "Brelyna — Trust", "current": 1, "max": 6 },
+    "bond_benefits": [
+      "Once per scene, Brelyna can 'stabilize' a magical mishap: cancel a minor complication aspect created by a spell/ritual, if she can justify it in-fiction."
+    ]
+  },
+  "personal_quest_ref": "data/quests/quest_brelyna_practice.json",
+  "personality_notes": {
+    "speaking_style": "Soft-spoken, careful, honest; confidence rises with safety",
+    "motivations": ["Master her magic", "Learn freely", "Be seen for her merit"],
+    "fears": ["Public failure", "Losing control", "Being used as a tool"]
+  },
+  "scene_triggers": ["Saarthal expedition", "Eye-of-Magnus research", "Practice sessions gone weird"],
+  "act_context": ["Act 1", "Act 2"]
+}

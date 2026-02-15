@@ -172,6 +172,18 @@ def winterhold_location_triggers(loc: str, campaign_state: dict) -> list[str]:
         events.append(
             "The Hall of the Elements hums with practiced danger: sparks that don't quite burn, frost that doesn't quite melt, and the unspoken rule that nobody complains about singed eyebrows."
         )
+        
+        # Add student trio introduction
+        if is_college_member and not flags.get("college_students_intro_done"):
+            if has_staff:
+                events.append(
+                    "Onmund (earnest Nord), Brelyna Maryon (quiet Dunmer), and J'zargo (ambitious Khajiit) step out of the student crowd—your 'main peers' are finally present. They react to your Staff of Cinders and your obvious faculty familiarity."
+                )
+            else:
+                events.append(
+                    "Onmund (earnest Nord), Brelyna Maryon (quiet Dunmer), and J'zargo (ambitious Khajiit) step out of the student crowd—your 'main peers' are finally present. They react to your presence and your obvious faculty familiarity."
+                )
+            flags["college_students_intro_done"] = True
 
     if key in {"college_hall_of_attainment", "hall_of_attainment"}:
         events.append(
