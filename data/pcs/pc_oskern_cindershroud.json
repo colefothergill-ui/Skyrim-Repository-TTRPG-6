@@ -71,7 +71,7 @@
         "the_push": "You *need* to know. Safety feels like ignorance wearing armor.",
         "accept_effect": "You investigate anyway. Gain 1 FP. Create scene aspect: 'I Opened the Wrong Thing' with 1 GM free invoke.",
         "refuse_cost": "Pay 1 FP OR take a persistent aspect 'It's Still Unanswered' (until you pursue it later).",
-        "gm_notes": "Use constantly in the Midden, Saarthal, Arcanaeum, and Eye-of-Magnus scenes.",
+        "gm_notes": "Use constantly in the Midden, Saarthal, Arcanaeum, and Eye of Magnus scenes.",
         "tags": ["prodigy", "research", "danger"]
       },
       {
