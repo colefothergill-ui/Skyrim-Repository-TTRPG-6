@@ -1,0 +1,31 @@
+{
+  "patch_id": "2026-02-15_conflict_resolution",
+  "date": "2026-02-15",
+  "type": "conflict_resolution",
+  "source": "Player clarification (Cole)",
+  "summary": "Retcon incorrect world-state notes from a retired PC timeline: Galmar Stone-Fist is NOT dead; Thieves Guild / Goldenglow progress has NOT occurred for Oskern.",
+  "conflicts_resolved": [
+    {
+      "conflict": "World state claimed Galmar Stone-Fist was slain during the Battle of Whiterun.",
+      "resolution": "Galmar Stone-Fist is alive and continues commanding Stormcloak forces.",
+      "affected_entities": ["Galmar Stone-Fist", "Stormcloak Rebellion", "Battle of Whiterun"]
+    },
+    {
+      "conflict": "World state claimed Goldenglow Estate was sabotaged and Aringoth's safe robbed (Thieves Guild progress).",
+      "resolution": "Remove these progress markers; Thieves Guild / Goldenglow job has not been completed in Oskern's timeline.",
+      "affected_entities": ["Thieves Guild", "Goldenglow Estate", "Aringoth", "Maven Black-Briar"]
+    },
+    {
+      "conflict": "World state referenced a Thieves-Guild-adjacent codename ('Dream Catcher of Dusk') as an active Thalmor threat.",
+      "resolution": "Remove the retired-PC codename; replace with a generic Thalmor surveillance pressure relevant to Oskern and the College.",
+      "affected_entities": ["Thalmor", "College of Winterhold"]
+    }
+  ],
+  "file_changes": [
+    {
+      "path": "data/world_state/current_state.json",
+      "change": "Remove incorrect major_events/rumors/active_threats/notes and replace with corrected Galmar-alive and non-Thieves-Guild-progress state."
+    }
+  ],
+  "gm_notes": "This patch preserves module content (Thieves Guild encounters/quests still exist) but clears any implied completion/progress for the active PC timeline. If future sessions involve the Thieves Guild, treat all related jobs as unstarted."
+}
