@@ -2,21 +2,42 @@
   "quest_id": "quest_jzargo_experiment",
   "name": "J'zargo's Experiment",
   "type": "Side Quest (Companion)",
-  "status": "available",
+  "status": "Inactive",
   "giver": "J'zargo",
   "location": "College of Winterhold",
   "description": "J'zargo wants 'field validation' for experimental scrolls. They might be brilliant. They might be suicide in paper form.",
   "objectives": [
-    { "id": "hear_pitch", "text": "Hear J'zargo's proposal (and his extremely confident risk assessment).", "completed": false },
-    { "id": "test_scrolls", "text": "Test the scrolls in a controlled (ha) environment or hostile ruin.", "completed": false },
-    { "id": "survive_results", "text": "Deal with the consequences—success, failure, or unexpected attention.", "completed": false },
-    { "id": "report_back", "text": "Return results to J'zargo (truthfully or strategically).", "completed": false }
+    { "description": "Hear J'zargo's proposal (and his extremely confident risk assessment).", "status": "Pending", "optional": false },
+    { "description": "Test the scrolls in a controlled (ha) environment or hostile ruin.", "status": "Pending", "optional": false },
+    { "description": "Deal with the consequences—success, failure, or unexpected attention.", "status": "Pending", "optional": false },
+    { "description": "Return results to J'zargo (truthfully or strategically).", "status": "Pending", "optional": false }
   ],
   "rewards": {
-    "fate_points": 0,
+    "experience": 0,
+    "gold": 0,
     "items": ["Experimental Scroll Cache (consumable aspect generator)"],
-    "reputation": ["+J'zargo loyalty tick", "+College curiosity / -College caution (depending on chaos)"],
-    "notes": "Unlocks J'zargo as companion and strengthens his Overclock stunt benefit reliability."
+    "reputation": [
+      {
+        "faction": "J'zargo",
+        "change": "increase",
+        "amount": 1,
+        "reason": "Completed his experimental scroll field test, improving his trust and loyalty."
+      },
+      {
+        "faction": "College of Winterhold",
+        "change": "mixed",
+        "amount": 0,
+        "reason": "Word spreads of the dangerous experiment, provoking both curiosity and caution."
+      }
+    ]
   },
+  "prerequisites": [],
+  "consequences": {
+    "success": "J'zargo's experiment is validated in the field, improving his confidence and making him available as a full companion. The College takes note—curious or cautious depending on how messy the tests were.",
+    "failure": "A scroll mishap causes collateral damage or injury, drawing unwanted attention from the College and possibly delaying J'zargo's advancement. Trust in his work may be shaken."
+  },
+  "notes": "Unlocks J'zargo as companion and strengthens his Overclock stunt benefit reliability. Use this quest to telegraph the volatile nature of experimental magic and to foreshadow how the College responds when things go wrong.",
+  "related_npcs": ["J'zargo"],
+  "related_locations": ["College of Winterhold"],
   "gm_notes": "Perfect for compels and collateral aspects. If you want Saarthal to feel dangerous early, this quest can 'preload' that tone."
 }

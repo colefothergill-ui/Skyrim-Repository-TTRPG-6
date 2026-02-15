@@ -2,21 +2,32 @@
   "quest_id": "quest_onmund_request",
   "name": "Onmund's Request",
   "type": "Side Quest (Companion)",
-  "status": "available",
+  "status": "Inactive",
   "giver": "Onmund",
   "location": "College of Winterhold",
   "description": "Onmund asks for help recovering a family amulet he regrets selling. The trail leads into the College's gray-market politics (and possibly local Winterhold resentment).",
   "objectives": [
-    { "id": "ask_onmund", "text": "Hear Onmund out privately.", "completed": false },
-    { "id": "find_buyer", "text": "Identify who currently holds the amulet (Enthir / black-market contact).", "completed": false },
-    { "id": "recover_amulet", "text": "Recover the amulet: negotiate, trade, steal, or win it.", "completed": false },
-    { "id": "return_amulet", "text": "Return the amulet to Onmund (or decide its fate).", "completed": false }
+    { "description": "Hear Onmund out privately.", "status": "Pending", "optional": false },
+    { "description": "Identify who currently holds the amulet (Enthir / black-market contact).", "status": "Pending", "optional": false },
+    { "description": "Recover the amulet: negotiate, trade, steal, or win it.", "status": "Pending", "optional": false },
+    { "description": "Return the amulet to Onmund (or decide its fate).", "status": "Pending", "optional": false }
   ],
   "rewards": {
-    "fate_points": 0,
+    "experience": 0,
+    "gold": 0,
     "items": ["Onmund's Amulet (aspect hook; optional minor warding benefit)"],
-    "reputation": ["+College trust", "+Onmund loyalty tick"],
-    "notes": "Completing this quest unlocks Onmund as a stable companion pick for dangerous expeditions."
+    "reputation": [
+      { "target": "College of Winterhold", "change": "minor_increase", "reason": "Helped recover a student's family heirloom." },
+      { "target": "Onmund", "change": "major_increase", "reason": "Recovered and returned his family amulet." }
+    ]
   },
+  "prerequisites": [],
+  "consequences": {
+    "success": "Onmund regains his family amulet and grows to trust the party more, clarifying College black-market dynamics.",
+    "failure": "Onmund remains conflicted or resentful and the amulet stays in circulation or is lost, shifting future College politics."
+  },
+  "notes": "Completing this quest unlocks Onmund as a stable companion pick for dangerous expeditions. Use this quest to explore College of Winterhold politics and Onmund's values. Adjust outcomes based on whether the amulet is returned, destroyed, or repurposed.",
+  "related_npcs": ["Onmund", "Enthir"],
+  "related_locations": ["College of Winterhold", "Winterhold"],
   "gm_notes": "Great place to introduce Enthir, quiet College corruption, and 'neutral institution' hypocrisy. If PC leans noble/political, this can become a leverage scene."
 }
