@@ -17,7 +17,7 @@
       {
         "id": "oskern_legacy_prove_the_dragon",
         "pillar": "legacy",
-        "source_aspect_hint": "Trouble / High Concept (legacy pressure)",
+        "source_aspect_hint": "trouble / high concept (legacy pressure)",
         "title": "Prove You're Worthy of the Dragon of Haafingar",
         "when_to_offer": "When an audience is watching, a rival challenges your reputation, or a situation calls for restraint.",
         "the_push": "Your pride and your name demand a *demonstration*. Subtlety feels like surrender.",
@@ -29,7 +29,7 @@
       {
         "id": "oskern_legacy_fathers_shadow",
         "pillar": "legacy",
-        "source_aspect_hint": "Trouble (living up to father)",
+        "source_aspect_hint": "trouble (living up to father)",
         "title": "Hakon's Shadow",
         "when_to_offer": "When someone compares you to Hakon, or you find his old peers / war stories / artifacts.",
         "the_push": "You overcorrect to match the myth—harder, colder, more decisive—because you *can't* be 'less than'.",
@@ -65,7 +65,7 @@
       {
         "id": "oskern_prodigy_forbidden_curiosity",
         "pillar": "prodigy",
-        "source_aspect_hint": "Prodigy / scholar drive",
+        "source_aspect_hint": "prodigy / scholar drive",
         "title": "Forbidden Curiosity",
         "when_to_offer": "When a warded door, restricted tome, or dangerous experiment is present.",
         "the_push": "You *need* to know. Safety feels like ignorance wearing armor.",
@@ -101,7 +101,7 @@
       {
         "id": "oskern_college_professor_politics",
         "pillar": "winterhold",
-        "source_aspect_hint": "College faction",
+        "source_aspect_hint": "college faction",
         "title": "Professor Pressure: You're a Student, Not a Warlord",
         "when_to_offer": "When you mix College business with civil war politics, or flex noble status inside the College.",
         "the_push": "A senior mage (Tolfdir/Mirabelle/Urag) insists you follow protocol, ethics, or academic hierarchy.",
@@ -113,7 +113,7 @@
       {
         "id": "oskern_college_rival_mage",
         "pillar": "winterhold",
-        "source_aspect_hint": "Prodigy reputation",
+        "source_aspect_hint": "prodigy reputation",
         "title": "Rival Mage: 'So You Think You're Special?'",
         "when_to_offer": "When students are present, after public spell displays, or after you gain an arcane win.",
         "the_push": "A rival picks at your status—noble AND prodigy—trying to bait you into a duel or embarrassment.",
@@ -161,7 +161,7 @@
       {
         "id": "oskern_staff_wants_a_story",
         "pillar": "artifact",
-        "source_aspect_hint": "Staff awakening clock",
+        "source_aspect_hint": "staff awakening clock",
         "title": "The Staff Demands Myth",
         "when_to_offer": "When you face an opportunity to act heroically, dramatically, or dangerously in a way that feeds legend.",
         "the_push": "The staff 'wants' to be used like a saga. Quiet victories don't awaken it.",
@@ -173,7 +173,7 @@
       {
         "id": "oskern_bloodline_split_loyalties",
         "pillar": "identity",
-        "source_aspect_hint": "Half-Nord / Imperial tension",
+        "source_aspect_hint": "half-Nord / Imperial tension",
         "title": "Split Loyalties (And Everyone Has Opinions)",
         "when_to_offer": "When factions demand clarity: Stormcloaks, Legion, Winterhold locals, or College neutrality debates.",
         "the_push": "Someone frames your identity as betrayal no matter what you do.",
