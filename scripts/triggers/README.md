@@ -61,18 +61,40 @@ Handles Dawnstar and The Pale Hold including:
 
 Features Stormcloak/Imperial faction awareness and atmospheric cold coastal setting.
 
-### The Rift Triggers (`rift_triggers.py`)
+### Hjaalmarch Triggers (`hjaalmarch_triggers.py`)
 
-Handles Riften and The Rift Hold locations including the Thieves Guild integration.
+Handles Morthal and Hjaalmarch Hold locations with vampire/necromancy themes.
+
+### Winterhold Triggers (`winterhold_triggers.py`)
+
+Handles Winterhold Hold and the College of Winterhold including:
+- Winterhold Town (ruined post-Great Collapse city)
+- The Frozen Hearth (inn and social hub)
+- Jarl's Longhouse (Jarl Korir's court)
+- College of Winterhold locations:
+  - College Bridge (Faralda's admission test)
+  - College Courtyard
+  - Hall of the Elements
+  - Hall of Attainment
+  - The Arcanaeum (Urag gro-Shub's library)
+  - The Midden (forbidden depths)
+  - Arch-Mage's Quarters
+- Saarthal (ancient Nordic ruins excavation site)
+
+Features College membership awareness, civil war faction reactions, Staff of Cinders recognition, and Eye of Magnus questline hooks.
 
 ## Usage
 
 ```python
-from triggers import whiterun_location_triggers, windhelm_location_triggers
+from triggers import whiterun_location_triggers, windhelm_location_triggers, winterhold_location_triggers
 
 campaign_state = {
     "companions": {
         "active_companions": ["Lydia"]
+    },
+    "player": {
+        "college_member": True,
+        "college_rank": "Adept"
     }
 }
 
@@ -81,6 +103,9 @@ events = whiterun_location_triggers("whiterun", campaign_state)
 
 # Windhelm triggers
 events = windhelm_location_triggers("windhelm_palace_of_the_kings", campaign_state)
+
+# Winterhold triggers
+events = winterhold_location_triggers("college_bridge", campaign_state)
 ```
 
 ## Future Expansions
@@ -90,7 +115,7 @@ Additional trigger modules can be added for other holds and locations:
 - `solitude_triggers.py` - Solitude and Haafingar Hold
 - ~~`windhelm_triggers.py` - Windhelm and Eastmarch Hold~~ ✓ Implemented
 - `markarth_triggers.py` - Markarth and the Reach
-- `winterhold_triggers.py` - Winterhold and its college
+- ~~`winterhold_triggers.py` - Winterhold and its college~~ ✓ Implemented
 - ~~`dawnstar_triggers.py` - Dawnstar and the Pale~~ ✓ Implemented (as `pale_triggers.py`)
 - ~~`falkreath_triggers.py` - Falkreath Hold~~ ✓ Implemented
 - `morthal_triggers.py` - Morthal and Hjaalmarch
@@ -106,6 +131,7 @@ Test suites available:
 - `tests/test_falkreath_triggers.py` - Falkreath triggers test suite
 - `tests/test_pale_triggers.py` - The Pale (Dawnstar) triggers test suite
 - `tests/test_rift_triggers.py` - The Rift triggers test suite
+- `tests/test_winterhold_triggers.py` - Winterhold & College triggers test suite
 
 ## Documentation
 
@@ -119,3 +145,4 @@ For demo usage examples, run:
 - `tests/demo_falkreath.py`
 - `tests/demo_pale_triggers.py`
 - `tests/demo_rift_triggers.py`
+- `tests/demo_winterhold_triggers.py`

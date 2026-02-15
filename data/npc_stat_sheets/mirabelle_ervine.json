@@ -1,0 +1,115 @@
+{
+  "name": "Mirabelle Ervine",
+  "id": "npc_stat_mirabelle_ervine",
+  "type": "Breton Master Wizard",
+  "category": "Ally",
+  "location": "College of Winterhold",
+  "faction": "College of Winterhold",
+  "aspects": {
+    "high_concept": "Overworked Master Wizard and College Administrator",
+    "trouble": "Caught Between Faculty Politics and Existential Threats",
+    "other_aspects": [
+      "Dedicated Guardian of the College's Students",
+      "Pragmatic Problem-Solver Who Gets Things Done",
+      "Deeply Distrusts Ancano's Presence"
+    ]
+  },
+  "skills": {
+    "Superb": ["Lore"],
+    "Great": ["Rapport", "Will"],
+    "Good": ["Investigate", "Notice"],
+    "Fair": ["Empathy", "Shoot", "Fight"],
+    "Average": ["Resources", "Deceive"]
+  },
+  "stunts": [
+    "Master of Restoration: +2 to Lore when using healing, protective, or ward magic",
+    "Administrative Authority: +2 to Rapport when organizing College activities or delegating tasks",
+    "Arcane Multitasker: Can maintain concentration on multiple spells simultaneously in crisis"
+  ],
+  "stress": {
+    "physical": [false, false],
+    "mental": [false, false, false, false]
+  },
+  "consequences": {
+    "mild": null,
+    "moderate": null,
+    "severe": null
+  },
+  "refresh": 3,
+  "armor": 0,
+  "notes": "Mirabelle Ervine is the College's Master Wizard and de facto administrator, handling day-to-day operations while Savos Aren deals with larger concerns. She's competent, warm but professional, and deeply protective of students. She's aware of Ancano's suspicious behavior and monitors him when possible. In many timelines, she dies defending the College during the Eye crisis, making her a tragic figure.",
+  "combat_tactics": "Mirabelle excels at defensive magic—wards, healing, and protective barriers. In combat she prioritizes protecting others over dealing damage. She'll use Restoration to heal allies, Alteration for armor spells, and limited Destruction for offense. Against overwhelming threats, she'll sacrifice herself to buy time for evacuation.",
+  "scene_triggers": [
+    "College admission and orientation",
+    "Quest briefings and debriefings",
+    "Eye of Magnus crisis response",
+    "Potential death scene defending College"
+  ],
+  "act_context": ["Act 1", "Act 2", "Act 3"],
+  "starting_equipment": {
+    "armor": "Master Wizard Robes (Armor:0, +1 to Lore, +50 Magicka)",
+    "weapon": "Restoration/Destruction Magic (Weapon:2)",
+    "other": ["College administrative keys", "Student roster", "Emergency ward stones"]
+  },
+  "social_interaction": "Mirabelle is professional and efficient but genuinely cares about people. She's the approachable face of College leadership—willing to listen and help solve problems. She shows patience with nervous students and firmness with troublemakers. Her warmth makes her death (if it occurs) emotionally impactful.",
+  "relationships": {
+    "Savos Aren": "Arch-Mage who relies heavily on her; she shoulders his administrative burden",
+    "Tolfdir": "Fellow Master Wizard, respects his dedication to teaching",
+    "Ancano": "Deeply distrusts, watches his movements, powerless to remove him",
+    "Faralda": "Works well together maintaining College security",
+    "Students": "Protective and nurturing, knows each by name",
+    "Party": "Appreciates competent help, can become mentor figure"
+  },
+  "personality_notes": {
+    "speaking_style": "Clear, professional, efficient, but warm when appropriate. Stressed undertones become apparent during crisis.",
+    "motivations": [
+      "Keep the College running smoothly despite challenges",
+      "Protect students from physical and political dangers",
+      "Support Savos Aren while managing his workload",
+      "Maintain College's academic standards and safety protocols",
+      "Expose or remove Ancano if possible"
+    ],
+    "fears": [
+      "The College being destroyed on her watch",
+      "Students dying due to her failure",
+      "Ancano's scheme succeeding",
+      "Magical catastrophe she can't prevent"
+    ],
+    "quirks": [
+      "Always carries administrative notes and lists",
+      "Rubs temples when stressed",
+      "Checks ward integrity compulsively",
+      "Knows every student's name and progress"
+    ],
+    "character_growth": "Mirabelle's arc is about recognizing limits—she can't solve everything alone. If she survives the Eye crisis, she learns to delegate and trust others. If she dies, it's a heroic sacrifice that galvanizes the party."
+  },
+  "administrative_role": {
+    "daily_duties": "Student scheduling, faculty coordination, facility maintenance, security protocols",
+    "crisis_response": "Evacuation procedures, defensive ward activation, emergency healing",
+    "ancano_monitoring": "Documents suspicious behavior, reports to Savos, limited by diplomatic constraints",
+    "relationship_with_party": "Assigns quests, provides resources, offers advice, becomes ally and friend"
+  },
+  "death_scenario": {
+    "trigger": "Eye of Magnus crisis when Ancano seals the College",
+    "circumstances": "Dies maintaining protective ward so students can evacuate",
+    "last_words": "Get them out! Don't let him—*magical surge*—tell Savos... we tried...",
+    "impact": "Her death raises stakes dramatically, provides emotional motivation for final confrontation",
+    "alternative": "GM can choose to have her survive but critically injured, changing post-crisis dynamics"
+  },
+  "story_hooks": [
+    "Guides party through College membership process",
+    "Assigns research and expedition quests",
+    "Confides concerns about Ancano to trusted party members",
+    "Requests help investigating magical anomalies",
+    "If survives: becomes key ally in post-Eye reconstruction",
+    "If dies: her sacrifice inspires College to honor her legacy"
+  ],
+  "dialogue_samples": {
+    "greeting": "Welcome to the College of Winterhold. I'm Mirabelle Ervine, Master Wizard. I handle most of the day-to-day operations here. If you need anything, come find me.",
+    "assigning_quest": "I need someone capable to handle a delicate matter. The Arch-Mage asked me to... well, there's a situation that requires investigation. Can I count on you?",
+    "about_ancano": "*lowers voice* Between us? I don't trust him. The Arch-Mage's hands are tied politically, but I keep watch. If you see anything suspicious, tell me immediately.",
+    "crisis": "We need to evacuate NOW. Get the students to safety. I'll maintain the wards as long as I can. GO!",
+    "survival": "We... we survived. Barely. I couldn't save everyone. *pause* But we saved the College. That has to be enough."
+  },
+  "gm_notes": "Mirabelle is the College's heart—competent, caring, overwhelmed. Her death is optional but creates powerful drama. If she dies, the party should witness her sacrifice and feel weight of her loss. If she survives, she's grateful ally who helps rebuild. Either way, she represents the College's best qualities—dedication to learning and protection of the vulnerable. Use her to humanize College and make players care about its fate."
+}

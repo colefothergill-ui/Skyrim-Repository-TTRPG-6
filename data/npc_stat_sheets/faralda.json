@@ -1,0 +1,114 @@
+{
+  "name": "Faralda",
+  "id": "npc_stat_faralda",
+  "type": "Altmer Destruction Mage",
+  "category": "Ally",
+  "location": "College of Winterhold - Bridge",
+  "faction": "College of Winterhold",
+  "aspects": {
+    "high_concept": "Vigilant Gatekeeper of the College",
+    "trouble": "No Patience for the Unworthy or Unprepared",
+    "other_aspects": [
+      "Master of Destruction Magic—Fire, Frost, and Shock",
+      "Guards the College's Standards and Traditions",
+      "Proud Defender of Magical Excellence"
+    ]
+  },
+  "skills": {
+    "Superb": ["Lore"],
+    "Great": ["Will", "Notice"],
+    "Good": ["Fight", "Shoot"],
+    "Fair": ["Rapport", "Athletics"],
+    "Average": ["Investigate", "Physique"]
+  },
+  "stunts": [
+    "Destruction Specialist: +2 to Lore when casting Destruction spells of any element",
+    "Ward the Gates: +2 to Notice when detecting threats approaching the College",
+    "Elemental Mastery: Can switch between fire, frost, and shock damage types freely in same scene"
+  ],
+  "stress": {
+    "physical": [false, false],
+    "mental": [false, false, false]
+  },
+  "consequences": {
+    "mild": null,
+    "moderate": null,
+    "severe": null
+  },
+  "refresh": 3,
+  "armor": 0,
+  "notes": "Faralda is the College's gatekeeper, stationed at the bridge that connects Winterhold town to the College. She administers the admission test to all prospective students, ensuring only those with genuine magical ability enter. She's stern and exacting but fair—she respects competence and dedication. Her mastery of Destruction magic makes her a formidable guardian.",
+  "combat_tactics": "Faralda fights at range with Destruction spells, switching elements based on enemy resistances. She's aggressive and precise, using area effects to control battlefield. She maintains wards defensively but prefers offense. In College defense scenarios, she holds the bridge—a natural chokepoint—making her nearly impossible to bypass.",
+  "scene_triggers": [
+    "First approach to College (admission test)",
+    "College defense against external threats",
+    "Advanced Destruction training sessions"
+  ],
+  "act_context": ["Act 1", "Act 2", "Act 3"],
+  "starting_equipment": {
+    "armor": "College Robes (Armor:0, +1 to Lore)",
+    "weapon": "Destruction Magic - All Elements (Weapon:3)",
+    "other": ["College ward stones", "Spell tomes for students", "Bridge defense runes"]
+  },
+  "social_interaction": "Faralda is direct, challenging, and somewhat intimidating. She doesn't suffer fools and her admission test doubles as personality assessment—she's evaluating character as much as magical skill. Those who pass earn her respect; those who fail or complain are dismissed. She warms slightly to proven mages but maintains professional distance.",
+  "relationships": {
+    "College Faculty": "Respected peer, takes her gatekeeping role seriously",
+    "Mirabelle Ervine": "Works with on security matters",
+    "Savos Aren": "Arch-Mage, follows his directives",
+    "Potential Students": "Tests rigorously, judges harshly",
+    "Proven Mages": "Respects competence, offers training"
+  },
+  "personality_notes": {
+    "speaking_style": "Direct and challenging, formal and precise, no unnecessary words",
+    "motivations": [
+      "Maintain College's standards—only worthy mages enter",
+      "Protect the College from external threats",
+      "Advance Destruction magic theory and practice",
+      "Ensure College's reputation for excellence"
+    ],
+    "fears": [
+      "Admitting someone who harms the College",
+      "The College's standards declining",
+      "Her defenses being breached",
+      "Being perceived as weak gatekeeper"
+    ],
+    "quirks": [
+      "Stands perfectly still while watching bridge approaches",
+      "Tests applicants' reaction to pressure",
+      "Adjusts focus when assessing magical auras",
+      "Slight nod is highest praise she gives"
+    ]
+  },
+  "admission_test": {
+    "purpose": "Verify magical ability and assess character before entry",
+    "requirements": "Cast spell of any school to demonstrate competence",
+    "alternatives": "Letters of recommendation from court wizards, special circumstances, Dragon-related urgency",
+    "pass_criteria": "Successfully cast requested spell or demonstrate equivalent ability",
+    "fail_consequences": "Denied entry, must return with better preparation",
+    "personality_test": "Observes how applicants handle pressure and criticism",
+    "special_cases": "May waive test for recognized Dragonborn or those bearing urgent messages"
+  },
+  "teaching_role": {
+    "specialty": "Advanced Destruction magic training",
+    "philosophy": "Power without control is useless; control without power is meaningless",
+    "lessons": "Elemental damage types, area effects, magical precision under pressure",
+    "standards": "Expects perfection, accepts nothing less than best effort",
+    "success_metric": "Students who can defend themselves and others competently"
+  },
+  "story_hooks": [
+    "Administers admission test—first major College interaction",
+    "Offers advanced Destruction training to capable students",
+    "Defends bridge during Eye of Magnus crisis",
+    "May request party investigate magical threats near College",
+    "Source of powerful Destruction spell tomes",
+    "Can teach combination/dual-casting techniques"
+  ],
+  "dialogue_samples": {
+    "greeting": "You wish to enter the College? Then you must demonstrate your worth. The College doesn't accept just anyone. Show me you can cast *any* spell, and we'll talk.",
+    "test_passed": "Adequate. You have potential. Enter, and do not waste the opportunity. The College of Winterhold is not to be trifled with.",
+    "test_failed": "Insufficient. The College has standards. Return when you're properly prepared.",
+    "teaching": "Destruction magic is not about anger—it's about precision. Channel your power through focus, not fury. Again. Better.",
+    "defending": "They dare approach the College with hostile intent? Let them learn why our standards are high. *lightning crackles* This bridge is my domain."
+  },
+  "gm_notes": "Faralda is the College's first impression—make her memorable. Her test can be roleplay opportunity or skill challenge depending on party. She's stern but not cruel; she genuinely wants to maintain quality. In combat, she's devastating on the bridge chokepoint. Use her to establish College's competence and standards. Players who earn her respect gain valuable ally and trainer."
+}

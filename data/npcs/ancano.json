@@ -1,0 +1,60 @@
+{
+  "name": "Ancano",
+  "id": "ancano",
+  "type": "Antagonist",
+  "location": "College of Winterhold",
+  "faction": "Thalmor",
+  "aspects": {
+    "high_concept": "Thalmor Advisor Embedded in the College",
+    "trouble": "Obsessed with the Eye of Magnus",
+    "other_aspects": [
+      "Arrogant and Dismissive of 'Lesser' Mages",
+      "The Dominion's Will Made Manifest",
+      "Patient Schemer with Hidden Agenda"
+    ]
+  },
+  "skills": {
+    "Great": ["Deceive", "Lore"],
+    "Good": ["Will", "Notice"],
+    "Fair": ["Rapport", "Investigate"]
+  },
+  "stunts": [
+    "Thalmor Training: +2 to Will when resisting magical effects",
+    "Diplomatic Immunity: Can invoke political protection to avoid consequences"
+  ],
+  "stress": {
+    "physical": [false, false],
+    "mental": [false, false, false]
+  },
+  "consequences": {
+    "mild": null,
+    "moderate": null,
+    "severe": null
+  },
+  "refresh": 3,
+  "fate_points": 3,
+  "relationships": {
+    "Elenwen": "Superior and handler at the Thalmor Embassy",
+    "Savos Aren": "Arch-Mage forced to tolerate his presence",
+    "Mirabelle Ervine": "Openly distrusts him",
+    "Thalmor": "Loyal agent advancing Dominion interests"
+  },
+  "personality_notes": {
+    "speaking_style": "Condescending and formal, treats non-Altmer as inferior",
+    "motivations": [
+      "Secure the Eye of Magnus for the Thalmor",
+      "Prove Altmer magical superiority",
+      "Undermine the College's independence"
+    ],
+    "fears": [
+      "Failure before the Thalmor hierarchy",
+      "Being expelled before completing his mission"
+    ]
+  },
+  "scene_triggers": [
+    "College admission (first encounter)",
+    "Eye of Magnus discovery",
+    "Final confrontation in Hall of the Elements"
+  ],
+  "act_context": ["Act 1", "Act 2", "Act 3"]
+}

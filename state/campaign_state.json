@@ -18,6 +18,12 @@
   "scene_last_major_update": "2026-02-02",
   "scene_aspects": {},
   "scene_clocks": {},
+  "player": {
+    "college_member": true,
+    "college_rank": "Adept",
+    "has_staff_of_cinders": true,
+    "artifacts": ["staff_of_cinders"]
+  },
   "civil_war_state": {
     "player_alliance": "neutral",
     "whiterun_control": "neutral",

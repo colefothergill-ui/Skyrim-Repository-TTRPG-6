@@ -1,0 +1,77 @@
+{
+  "hold": "Winterhold Hold",
+  "capital": "Winterhold",
+  "jarl": "Jarl Korir (Stormcloak-aligned, bitter and resentful toward the College)",
+  "steward": "None (Winterhold's court is small and distrustful of outsiders)",
+  "alternative_jarl": "Kraldar (Imperial-aligned, installed if the Empire secures Winterhold)",
+  "description": "Winterhold is Skyrim's ruined northern hold, once proud, now shattered by the Great Collapse. The town clings to a cliff above the Sea of Ghosts while most of the old city lies broken in the surf below. Nords here blame the College of Winterhold for the disaster and treat mages with open suspicion. Politically the hold leans Stormcloak, but the College stands apart from the civil war—neutral in name, yet impossible to ignore when ancient magic stirs under the snow.",
+  "major_locations": [
+    {
+      "name": "Winterhold (Town)",
+      "type": "Town",
+      "description": "A handful of buildings perched on an icy cliff: the Frozen Hearth inn, a small longhouse where the Jarl holds court, and windswept streets that end abruptly where the land fell away. Residents are hardy, insular, and short on patience for strangers—especially spellcasters."
+    },
+    {
+      "name": "The College of Winterhold",
+      "type": "Faction Headquarters",
+      "description": "A fortress of ancient stone connected to town by a narrow bridge. Within are the Hall of the Elements, the Arcanaeum library, and hidden levels beneath (the Midden). The College is Skyrim's primary center of magical study. Its neutrality in the civil war is both a shield and a target."
+    },
+    {
+      "name": "Saarthal",
+      "type": "Nordic Ruins",
+      "description": "An ancient Nord city buried in ice not far from Winterhold. Excavations led by the College occasionally uncover draugr, warded doors, and artifacts older than the Empire. The ruins are a pressure point where the Eye of Magnus storyline can ignite."
+    },
+    {
+      "name": "The Great Collapse Ruins",
+      "type": "Disaster Zone",
+      "description": "The shattered remnants of Old Winterhold, visible as broken walls and half-sunk rooftops below the cliff. Fishermen avoid the waters during storms; some swear they see pale lights moving under the ice."
+    }
+  ],
+  "districts": [
+    {
+      "name": "The Frozen Hearth",
+      "description": "Winterhold's inn and social hub. A low-ceilinged refuge from blizzards, filled with the smell of stew and wet wool. Rumors travel faster than caravans here."
+    },
+    {
+      "name": "Jarl's Longhouse",
+      "description": "A modest hall where Jarl Korir (or Kraldar) hears petitions. The court is small, guarded, and prickly—Winterhold has little wealth and less patience for politics."
+    },
+    {
+      "name": "College Bridge & Courtyard",
+      "description": "A narrow stone bridge over a deadly drop, warded and watched by Faralda. The courtyard beyond is calm, almost unreal compared to the storm-slashed town."
+    },
+    {
+      "name": "Hall of the Elements",
+      "description": "The College's central teaching hall. Students practice spells under faculty supervision; when the Eye of Magnus arc is active, the air can hum with unstable magicka."
+    },
+    {
+      "name": "The Arcanaeum",
+      "description": "The College library, guarded by Urag gro-Shub. A sanctuary of knowledge—and a place where certain artifacts (or certain family names) cause eyebrows to rise."
+    },
+    {
+      "name": "The Midden",
+      "description": "Forgotten tunnels beneath the College. Old experiments, forbidden texts, and things that never should have been summoned."
+    }
+  ],
+  "factions_present": [
+    "Stormcloak Rebellion (Hold Authority)",
+    "College of Winterhold (Neutral Arcane Institution)",
+    "Thalmor (Covert Influence via Ancano)",
+    "Local Nords (Anti-mage Sentiment)"
+  ],
+  "local_quest_hooks": [
+    {
+      "id": "winterhold_college_eye_of_magnus",
+      "quest": "College of Winterhold: Eye of Magnus",
+      "giver": "Tolfdir / Savos Aren",
+      "description": "The College begins (or continues) an excavation at Saarthal that awakens an ancient power. This questline escalates from academic curiosity to a crisis that can reshape Skyrim's balance of power. It ties directly into Thalmor schemes (Ancano), and indirectly into the civil war if either side seeks to weaponize arcane leverage."
+    },
+    {
+      "id": "winterhold_jarl_suspicion",
+      "quest": "Winterhold Court: Bitter Petitions",
+      "giver": "Jarl Korir (or Kraldar)",
+      "description": "Winterhold's Jarl resents the College and wants proof that outsiders (and especially mages) won't bring another disaster. This hook can generate bounties, political tests, or demands that place the party between town and College. Imperial-aligned PCs may be viewed as occupiers; Stormcloak-aligned PCs may be treated as 'useful, but watched.'"
+    }
+  ],
+  "notes": "Winterhold is politically Stormcloak by default, but the College is neutral. The hold is a natural convergence point for: (1) Thalmor infiltration (Ancano), (2) post-Alduin power struggles (who controls magical leverage), and (3) civil war politics (Jarls changing after victories). If Whiterun is under Imperial control in your campaign, travel routes north are heavily patrolled; this can be used to frame Winterhold as a tense border between ideology and necessity."
+}

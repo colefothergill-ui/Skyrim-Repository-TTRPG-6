@@ -1,0 +1,60 @@
+{
+  "name": "Urag gro-Shub",
+  "id": "urag_gro_shub",
+  "type": "Ally",
+  "location": "College of Winterhold - Arcanaeum",
+  "faction": "College of Winterhold",
+  "aspects": {
+    "high_concept": "Orsimer Librarian Who Treasures Books Above All",
+    "trouble": "Books Are More Important Than People",
+    "other_aspects": [
+      "Guardian of Forbidden Knowledge",
+      "Gruff But Fair",
+      "Respects Those Who Respect Books"
+    ]
+  },
+  "skills": {
+    "Great": ["Lore", "Investigate"],
+    "Good": ["Notice", "Will"],
+    "Fair": ["Rapport", "Deceive"]
+  },
+  "stunts": [
+    "Master Librarian: +2 to Investigate when researching in the Arcanaeum",
+    "Forbidden Lore: Can recall obscure magical knowledge once per session"
+  ],
+  "stress": {
+    "physical": [false, false],
+    "mental": [false, false, false]
+  },
+  "consequences": {
+    "mild": null,
+    "moderate": null,
+    "severe": null
+  },
+  "refresh": 3,
+  "fate_points": 3,
+  "relationships": {
+    "The Arcanaeum": "His life's work and passion",
+    "College Members": "Tolerates if they respect books",
+    "Reckless Students": "Scolds harshly"
+  },
+  "personality_notes": {
+    "speaking_style": "Gruff and protective of books, warms to serious scholars",
+    "motivations": [
+      "Preserve and protect the Arcanaeum",
+      "Advance magical knowledge through research",
+      "Punish those who damage books"
+    ],
+    "fears": [
+      "The library being destroyed",
+      "Losing irreplaceable texts",
+      "Forbidden knowledge falling into wrong hands"
+    ]
+  },
+  "scene_triggers": [
+    "First visit to Arcanaeum",
+    "Research quests",
+    "Book recovery missions"
+  ],
+  "act_context": ["Act 1", "Act 2", "Act 3"]
+}
