@@ -1,0 +1,59 @@
+{
+  "name": "Faralda",
+  "id": "faralda",
+  "type": "Ally",
+  "location": "College of Winterhold - Bridge",
+  "faction": "College of Winterhold",
+  "aspects": {
+    "high_concept": "Vigilant Gatekeeper of the College",
+    "trouble": "No Patience for the Unworthy",
+    "other_aspects": [
+      "Master of Destruction Magic",
+      "Guards the College's Traditions",
+      "Proud and Exacting"
+    ]
+  },
+  "skills": {
+    "Great": ["Lore", "Will"],
+    "Good": ["Notice", "Fight"],
+    "Fair": ["Rapport", "Athletics"]
+  },
+  "stunts": [
+    "Destruction Specialist: +2 to Lore when casting Destruction spells",
+    "Ward the Gates: +2 to Notice when detecting threats to the College"
+  ],
+  "stress": {
+    "physical": [false, false],
+    "mental": [false, false, false]
+  },
+  "consequences": {
+    "mild": null,
+    "moderate": null,
+    "severe": null
+  },
+  "refresh": 3,
+  "fate_points": 3,
+  "relationships": {
+    "College Faculty": "Respected colleague",
+    "Potential Students": "Tests rigorously",
+    "Unworthy Applicants": "Dismissive"
+  },
+  "personality_notes": {
+    "speaking_style": "Direct and challenging, tests resolve",
+    "motivations": [
+      "Maintain College's standards",
+      "Ensure only capable mages enter",
+      "Protect the College from threats"
+    ],
+    "fears": [
+      "Admitting someone who harms the College",
+      "The College's reputation declining"
+    ]
+  },
+  "scene_triggers": [
+    "First approach to College bridge",
+    "Admission test",
+    "Defense of the College"
+  ],
+  "act_context": ["Act 1", "Act 2", "Act 3"]
+}

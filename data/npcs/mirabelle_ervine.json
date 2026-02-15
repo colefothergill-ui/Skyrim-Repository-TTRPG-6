@@ -1,0 +1,61 @@
+{
+  "name": "Mirabelle Ervine",
+  "id": "mirabelle_ervine",
+  "type": "Ally",
+  "location": "College of Winterhold",
+  "faction": "College of Winterhold",
+  "aspects": {
+    "high_concept": "Overworked Master Wizard and College Administrator",
+    "trouble": "Caught Between Faculty Politics and Real Threats",
+    "other_aspects": [
+      "Dedicated to the College's Students",
+      "Pragmatic Problem-Solver",
+      "Distrusts Ancano Deeply"
+    ]
+  },
+  "skills": {
+    "Great": ["Lore", "Rapport"],
+    "Good": ["Investigate", "Will"],
+    "Fair": ["Notice", "Empathy"]
+  },
+  "stunts": [
+    "Master of Restoration: +2 to Lore when using healing or protective magic",
+    "Administrative Authority: +2 to Rapport when organizing College activities"
+  ],
+  "stress": {
+    "physical": [false, false],
+    "mental": [false, false, false]
+  },
+  "consequences": {
+    "mild": null,
+    "moderate": null,
+    "severe": null
+  },
+  "refresh": 3,
+  "fate_points": 3,
+  "relationships": {
+    "Savos Aren": "Arch-Mage, relies heavily on her",
+    "Tolfdir": "Fellow Master Wizard, respects his dedication",
+    "Ancano": "Deeply distrusts, watches carefully",
+    "Students": "Protective and nurturing"
+  },
+  "personality_notes": {
+    "speaking_style": "Professional but warm, efficient and clear",
+    "motivations": [
+      "Keep the College running smoothly",
+      "Protect students from harm",
+      "Maintain College's standards"
+    ],
+    "fears": [
+      "The College being destroyed",
+      "Students dying under her watch",
+      "Ancano's true intentions"
+    ]
+  },
+  "scene_triggers": [
+    "College admission process",
+    "Quest assignments",
+    "Eye of Magnus crisis"
+  ],
+  "act_context": ["Act 1", "Act 2", "Act 3"]
+}

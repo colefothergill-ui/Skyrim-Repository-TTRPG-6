@@ -1,0 +1,185 @@
+{
+  "college_first_lessons": {
+    "name": "First Lessons",
+    "quest_id": "college_first_lessons",
+    "quest_giver": "Tolfdir",
+    "description": "Your first day at the College of Winterhold begins with Tolfdir's introductory lecture on magical theory and practice. A seemingly routine lesson turns unexpectedly intense when a magical anomaly manifests during training.",
+    "objectives": [
+      "Pass Faralda's admission test at the College bridge",
+      "Meet with Mirabelle Ervine and receive College robes",
+      "Attend Tolfdir's lecture in the Hall of the Elements",
+      "Demonstrate basic spellcasting during the practical exercise",
+      "Investigate the magical anomaly that appears during training",
+      "Report findings to Tolfdir and prepare for the Saarthal expedition"
+    ],
+    "rewards": [
+      "Official College membership (Apprentice rank)",
+      "College robes and access to facilities",
+      "Tolfdir's trust and mentorship",
+      "+2 College of Winterhold faction trust"
+    ],
+    "outcomes": {
+      "anomaly_contained": "The party helps contain the magical disturbance. Tolfdir is impressed by their quick thinking and marks them for the Saarthal expedition team.",
+      "anomaly_studied": "The party takes time to study the anomaly's nature, gaining insight into unusual magical phenomena. This knowledge may prove useful later.",
+      "anomaly_ignored": "The disturbance fades on its own, but questions linger. Tolfdir notes the party's cautious approach."
+    },
+    "notes": "This quest establishes the party's relationship with the College and introduces key NPCs. The magical anomaly foreshadows the Eye of Magnus storyline. Players who demonstrate arcane knowledge or curiosity gain Tolfdir's special attention.",
+    "prerequisites": [],
+    "follow_up_quest": "college_under_saarthal"
+  },
+  "college_under_saarthal": {
+    "name": "Under Saarthal",
+    "quest_id": "college_under_saarthal",
+    "quest_giver": "Tolfdir",
+    "description": "Tolfdir leads an expedition into the ancient Nordic ruins of Saarthal. What begins as an archaeological dig becomes a dangerous encounter with draugr, ancient magic, and a mysterious artifact that predates modern understanding.",
+    "objectives": [
+      "Travel to Saarthal with Tolfdir and other College students",
+      "Explore the excavation site and assist with cataloging findings",
+      "Investigate the sealed chamber when strange energy is detected",
+      "Confront the draugr that awaken when ancient wards are disturbed",
+      "Discover the Amulet of Saarthal (or similar powerful artifact)",
+      "Witness Tolfdir's encounter with a Psijic Order monk who appears with a warning",
+      "Return to the College and report to both Tolfdir and Arch-Mage Savos Aren"
+    ],
+    "rewards": [
+      "Amulet of Saarthal (Fortify Magicka +30)",
+      "Advancement to Adept rank in the College",
+      "Loot from draugr encounters (Nordic weapons, gold)",
+      "+2 College of Winterhold faction trust",
+      "Introduction to the Psijic Order storyline"
+    ],
+    "outcomes": {
+      "artifact_claimed": "The party claims the Amulet of Saarthal. Its power is significant, but so is its connection to deeper mysteries.",
+      "psijic_warning_heeded": "The mysterious Psijic monk warns of dangers ahead. The party takes note of his cryptic message about 'the Eye' and ancient powers.",
+      "draugr_threat_eliminated": "The party fights through awakened draugr and secures the excavation site, though many questions remain about what was truly buried here."
+    },
+    "notes": "This quest introduces the Eye of Magnus arc and the Psijic Order. The appearance of Quaranir (or another Psijic monk) signals that events at the College have drawn the attention of powerful, ancient forces. The draugr encounters should feel dangerous but manageable for a College-trained party.",
+    "prerequisites": ["college_first_lessons"],
+    "follow_up_quest": "college_hitting_the_books"
+  },
+  "college_hitting_the_books": {
+    "name": "Hitting the Books",
+    "quest_id": "college_hitting_the_books",
+    "quest_giver": "Urag gro-Shub",
+    "description": "Arch-Mage Savos Aren tasks you with researching the mysterious artifact found at Saarthal. Urag gro-Shub, the College's librarian, directs you to rare texts—but some volumes are missing, stolen by rogue mages at Fellglow Keep.",
+    "objectives": [
+      "Speak with Urag gro-Shub about researching the Saarthal findings",
+      "Learn that key texts have been stolen by ex-College member known as 'The Caller'",
+      "Travel to Fellglow Keep and infiltrate the rogue mages' stronghold",
+      "Navigate traps, summoned creatures, and hostile mages",
+      "Confront The Caller and negotiate or fight for the stolen books",
+      "Return the books to Urag and learn critical information about 'The Eye of Magnus'"
+    ],
+    "rewards": [
+      "Access to restricted sections of the Arcanaeum",
+      "Spell tomes from Fellglow Keep (Destruction and Conjuration focus)",
+      "+1 College of Winterhold faction trust",
+      "Knowledge: The artifact is called the Eye of Magnus, an ancient source of immense power"
+    ],
+    "outcomes": {
+      "books_recovered_peacefully": "If the party negotiates successfully with The Caller, they can trade for the books and avoid bloodshed. The Caller may become a future contact.",
+      "books_taken_by_force": "The party defeats The Caller and her followers, securing the texts. Urag appreciates results over methods.",
+      "orthorn_rescued": "If the party finds and rescues the captive student Orthorn, they gain additional trust from College faculty."
+    },
+    "notes": "Fellglow Keep is a significant dungeon crawl featuring multiple mage enemies and magical hazards. The Caller can be a tough opponent if the party chooses combat. This quest reveals the name 'Eye of Magnus' and establishes the stakes: an artifact of unprecedented power is now in the College's possession.",
+    "prerequisites": ["college_under_saarthal"],
+    "follow_up_quest": "college_revealing_the_unseen"
+  },
+  "college_revealing_the_unseen": {
+    "name": "Revealing the Unseen",
+    "quest_id": "college_revealing_the_unseen",
+    "quest_giver": "Mirabelle Ervine",
+    "description": "The Eye of Magnus is now within the College's Hall of the Elements, but its power is unstable and dangerous. To study it safely, you must retrieve the Staff of Magnus—an ancient artifact with the unique ability to focus and control the Eye's energy.",
+    "objectives": [
+      "Receive briefing from Mirabelle about the Staff of Magnus",
+      "Research leads: Speak with various College members about the Staff's location",
+      "Follow trail to Mzulft, a Dwemer ruin where the Synod is conducting research",
+      "Navigate Dwemer machinery and Falmer-infested tunnels",
+      "Locate the Synod researchers and learn they're using a focusing crystal",
+      "Retrieve the crystal and solve the Oculory puzzle to reveal the Staff's location",
+      "Discover the Staff is held at Labyrinthian, a dangerous Nordic ruin"
+    ],
+    "rewards": [
+      "Mzulft focusing crystal (unique quest item)",
+      "Map to Labyrinthian",
+      "Dwemer loot and Synod research notes",
+      "+1 College of Winterhold faction trust"
+    ],
+    "outcomes": {
+      "synod_aided": "The party helps the surviving Synod researcher complete their work before claiming the crystal. They may gain the researcher as an informant.",
+      "oculory_mastered": "Successfully solving the Oculory puzzle demonstrates the party's intellectual prowess and earns Mirabelle's respect.",
+      "labyrinthian_warned": "Learning the Staff's location fills even veteran mages with dread. Labyrinthian's reputation as a deathtrap is well-earned."
+    },
+    "notes": "This quest involves both Dwemer dungeon exploration and magical puzzle-solving. The Oculory is a complex mechanism that requires understanding of light, lenses, and Dwemer engineering. The revelation that the Staff is at Labyrinthian should feel ominous—Labyrinthian is one of Skyrim's most dangerous locations.",
+    "prerequisites": ["college_hitting_the_books"],
+    "follow_up_quest": "college_staff_of_magnus"
+  },
+  "college_staff_of_magnus": {
+    "name": "The Staff of Magnus",
+    "quest_id": "college_staff_of_magnus",
+    "quest_giver": "Mirabelle Ervine / Tolfdir",
+    "description": "Venture into Labyrinthian, the ruins of the ancient city where Skyrim's first Arch-Mage once ruled. Face its deadly guardians, including the spectral Dragon Priest Morokei, to claim the Staff of Magnus—the only tool that can control the Eye.",
+    "objectives": [
+      "Journey to Labyrinthian in the mountains of Hjaalmarch",
+      "Navigate the treacherous ruins filled with powerful draugr and mages",
+      "Solve environmental puzzles and overcome magical barriers",
+      "Confront Morokei, the Dragon Priest guardian of the Staff",
+      "Claim the Staff of Magnus from Morokei's possession",
+      "Return to the College—only to find it under siege by magical anomalies"
+    ],
+    "rewards": [
+      "Staff of Magnus (Absorb 20 Magicka per second, unique artifact)",
+      "Morokei's Mask (Dragon Priest mask with Magicka Regeneration +100%)",
+      "Advancement to Wizard rank in the College",
+      "+2 College of Winterhold faction trust"
+    ],
+    "outcomes": {
+      "morokei_defeated": "The party defeats the ancient Dragon Priest and claims the Staff. This is a significant victory, but the crisis is far from over.",
+      "labyrinthian_survived": "Navigating Labyrinthian's dangers proves the party's capability. They return as seasoned adventurers worthy of the College's highest regard.",
+      "college_in_crisis": "Upon return, the party finds the College under assault by magical anomalies. The Eye's power is spiraling out of control, and Ancano has made his move."
+    },
+    "notes": "Labyrinthian is a multi-stage dungeon that should feel like a culmination of magical challenges. Morokei is a powerful boss fight requiring strategy and preparation. The twist ending—returning to find the College under siege—drives home the urgency. Mirabelle may be injured or killed in the attack, raising the emotional stakes.",
+    "prerequisites": ["college_revealing_the_unseen"],
+    "follow_up_quest": "college_eye_of_magnus"
+  },
+  "college_eye_of_magnus": {
+    "name": "The Eye of Magnus",
+    "quest_id": "college_eye_of_magnus",
+    "quest_giver": "Tolfdir / Savos Aren",
+    "description": "The College's darkest hour has arrived. Ancano, the Thalmor advisor, has seized the Eye of Magnus and is attempting to harness its reality-bending power. With the Staff of Magnus in hand, you must stop Ancano before he tears apart the fabric of reality itself.",
+    "objectives": [
+      "Respond to the crisis: The College is sealed by magical barriers",
+      "Work with Tolfdir to break through Ancano's wards using the Staff of Magnus",
+      "Confront Ancano in the Hall of the Elements",
+      "Use the Staff of Magnus to disrupt Ancano's connection to the Eye",
+      "Defeat Ancano in combat while managing the Eye's unstable energy",
+      "Stabilize the Eye of Magnus to prevent catastrophic magical release",
+      "Speak with Tolfdir about the aftermath and the College's future"
+    ],
+    "rewards": [
+      "Promotion to Master Wizard (or potential Arch-Mage if Savos Aren perished)",
+      "Arch-Mage's Robes (if appointed Arch-Mage)",
+      "Labyrinthian Torc (unique reward from College treasury)",
+      "+3 College of Winterhold faction trust (maximum trust)",
+      "Title: Savior of the College",
+      "The Eye of Magnus is secured/contained"
+    ],
+    "outcomes": {
+      "ancano_defeated": "Ancano is killed in the confrontation. His plans to weaponize the Eye for the Thalmor are thwarted. However, the Dominion now has confirmation of the Eye's existence.",
+      "eye_contained": "Using the Staff, the party manages to contain the Eye's power. Scholars will spend years studying it safely, or the party may recommend its destruction/removal.",
+      "arch_mage_succession": "If Savos Aren died during the crisis, Tolfdir nominates the party leader for Arch-Mage. This is a major decision that affects the campaign's direction.",
+      "thalmor_escalation": "Ancano's death triggers Thalmor diplomatic protests and potential retaliation. The party has made powerful enemies.",
+      "college_saved": "The College of Winterhold survives its greatest crisis. The party are heroes, but the price was high. Faculty may have died, and the College's neutrality is now openly questioned."
+    },
+    "notes": "This is the climactic finale of the College storyline. Ancano should be a formidable opponent with mastery of all magic schools and the Eye's power augmenting him. The fight has high stakes: failure could mean reality itself unravels. The aftermath shapes the College's future: Does it remain neutral? Does it align with a civil war faction? Does the new Arch-Mage (if the PC accepts) change its policies? The Eye of Magnus remains a wildcard—what will be done with it?",
+    "prerequisites": ["college_staff_of_magnus"],
+    "follow_up_quest": null,
+    "epilogue_considerations": [
+      "PC as Arch-Mage: How do they balance College leadership with adventuring?",
+      "Thalmor retaliation: The Dominion won't forget Ancano's death",
+      "Eye of Magnus disposition: Keep, study, hide, destroy, or transport to Psijic Order?",
+      "College's role in civil war: Neutrality tested by whichever side controls Winterhold",
+      "Magical research breakthroughs: Access to the Eye could revolutionize magic"
+    ]
+  }
+}

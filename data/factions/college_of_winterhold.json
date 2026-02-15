@@ -1,0 +1,37 @@
+{
+  "name": "College of Winterhold",
+  "id": "college_of_winterhold",
+  "type": "Academic Arcane Institution",
+  "alignment": "Neutral (publicly)",
+  "description": "Skyrim's premier institution for magical study, perched above the ruins of Winterhold. The College claims neutrality in the civil war, but the Eye of Magnus crisis forces it into Skyrim's political reality.",
+  "ranks": [
+    "Visitor",
+    "Apprentice",
+    "Adept",
+    "Wizard",
+    "Master Wizard",
+    "Arch-Mage"
+  ],
+  "core_values": [
+    "Knowledge",
+    "Responsible practice",
+    "Neutrality (as survival strategy)",
+    "Protection of students"
+  ],
+  "notable_members": [
+    "Savos Aren (Arch-Mage)",
+    "Tolfdir (Master Wizard)",
+    "Mirabelle Ervine (Master Wizard)",
+    "Urag gro-Shub (Arcanaeum Librarian)",
+    "Faralda (Gatekeeper)",
+    "Ancano (Thalmor 'advisor'—controversial)"
+  ],
+  "relationships": {
+    "stormcloaks": "Uneasy coexistence. Winterhold hold authority is suspicious of the College.",
+    "imperial_legion": "Pragmatic tolerance. The Empire prefers stability over witch-hunts.",
+    "thalmor": "Infiltrated. The Dominion seeks arcane leverage and information.",
+    "local_nords": "Hostile. Many blame the College for the Great Collapse."
+  },
+  "questline_ref": "data/quests/college_of_winterhold_quests.json",
+  "gm_notes": "Use the College as a neutral institution that becomes a battleground for ideology, espionage, and mythic magic. The Eye of Magnus can be run as a contained crisis or as a Dragonbreak-level fracture depending on clock outcomes."
+}

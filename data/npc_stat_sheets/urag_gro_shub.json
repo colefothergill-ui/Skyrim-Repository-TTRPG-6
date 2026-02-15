@@ -1,0 +1,124 @@
+{
+  "name": "Urag gro-Shub",
+  "id": "npc_stat_urag_gro_shub",
+  "type": "Orsimer Librarian",
+  "category": "Ally",
+  "location": "College of Winterhold - The Arcanaeum",
+  "faction": "College of Winterhold",
+  "aspects": {
+    "high_concept": "Orsimer Librarian Who Treasures Books Above All",
+    "trouble": "Books Matter More Than People—Including Himself",
+    "other_aspects": [
+      "Guardian of Forbidden and Ancient Knowledge",
+      "Gruff Exterior Hiding Deep Scholarly Passion",
+      "Respects Those Who Respect Books"
+    ]
+  },
+  "skills": {
+    "Superb": ["Lore"],
+    "Great": ["Investigate", "Notice"],
+    "Good": ["Will", "Rapport"],
+    "Fair": ["Deceive", "Empathy"],
+    "Average": ["Fight", "Resources"]
+  },
+  "stunts": [
+    "Master Librarian: +2 to Investigate when researching in the Arcanaeum or recalling book locations",
+    "Forbidden Lore: Once per session, recall extremely obscure magical or historical knowledge",
+    "Keeper of Secrets: +2 to Lore when identifying cursed or dangerous texts"
+  ],
+  "stress": {
+    "physical": [false, false],
+    "mental": [false, false, false, false]
+  },
+  "consequences": {
+    "mild": null,
+    "moderate": null,
+    "severe": null
+  },
+  "refresh": 3,
+  "armor": 0,
+  "notes": "Urag gro-Shub is the College's librarian and keeper of the Arcanaeum. An Orc of unusual scholarly inclination, he's devoted his life to preserving and understanding magical texts. He's gruff and protective of his books, famously valuing them more than people's feelings. However, he respects genuine scholars and will go to great lengths to help those who show proper reverence for knowledge.",
+  "combat_tactics": "Urag avoids combat when possible—his expertise is scholarship, not battle. If forced to fight, he uses defensive magic and throws books as improvised weapons while retreating to safer position. He'll prioritize saving books over his own safety in fire or destruction scenarios. Not a warrior, but surprisingly tough due to Orcish heritage.",
+  "scene_triggers": [
+    "First visit to the Arcanaeum",
+    "Research quests requiring ancient texts",
+    "Book recovery missions (Hitting the Books quest)",
+    "Late-night library encounters with dedicated students"
+  ],
+  "act_context": ["Act 1", "Act 2", "Act 3"],
+  "starting_equipment": {
+    "armor": "Librarian Robes (Armor:0)",
+    "weapon": "Heavy Books (Weapon:1, improvised)",
+    "other": ["Arcanaeum master key", "Catalog of holdings", "Forbidden texts vault access", "Reading spectacles"]
+  },
+  "social_interaction": "Urag is brusque and often seems annoyed, but it's protective instinct for his books rather than true hostility. He respects those who handle texts carefully and ask intelligent questions. He becomes genuinely enthusiastic when discussing rare tomes or obscure lore. Careless scholars earn his legendary scolding; respectful ones gain invaluable ally.",
+  "relationships": {
+    "The Arcanaeum": "His life's work, passion, and purpose—the books are family",
+    "College Faculty": "Tolerates, cooperates with when books are involved",
+    "Savos Aren": "Arch-Mage, respects his commitment to knowledge preservation",
+    "Students": "Ranges from grudging tolerance to genuine warmth depending on book respect",
+    "Reckless Mages": "Will verbally eviscerate anyone who damages texts",
+    "Party": "Initially skeptical, warms if they prove scholarly dedication"
+  },
+  "personality_notes": {
+    "speaking_style": "Gruff and to-the-point, lectures about book care, enthusiastic about rare lore, uses 'hrm' and 'hmph' frequently",
+    "motivations": [
+      "Preserve and protect every book in the Arcanaeum",
+      "Expand collection with rare and unique texts",
+      "Advance magical knowledge through research",
+      "Punish those who damage or disrespect books",
+      "Share knowledge with worthy scholars"
+    ],
+    "fears": [
+      "The Arcanaeum burning or being destroyed",
+      "Losing irreplaceable texts",
+      "Forbidden knowledge falling into incompetent hands",
+      "Being unable to protect his collection",
+      "Books being used for harm rather than learning"
+    ],
+    "quirks": [
+      "Sniffs books to check condition",
+      "Mutters about proper shelving while reshelving",
+      "Softer tone when handling ancient texts",
+      "Memorized location of every single book",
+      "Takes personal offense to damaged spines"
+    ]
+  },
+  "arcanaeum_management": {
+    "holdings": "Thousands of texts on magic, history, Daedra, artifacts, and forbidden knowledge",
+    "restricted_section": "Dangerous texts requiring permission—Daedric summoning, necromancy, reality manipulation",
+    "acquisition": "Always seeking new additions, will pay for rare books or send recovery missions",
+    "organization": "Complex system only Urag fully understands, can locate any book instantly",
+    "protection": "Magical wards, anti-theft enchantments, personal vigilance"
+  },
+  "hitting_the_books_quest": {
+    "stolen_texts": "The Caller stole volumes on Night of Tears and other Saarthal-related topics",
+    "urag_reaction": "Furious about theft, desperate to recover books undamaged",
+    "negotiation": "Promises rare spell tomes or restricted access if books returned safely",
+    "aftermath": "Genuinely grateful if books returned intact, becomes loyal ally",
+    "alternative": "If books damaged, he's devastated but still provides needed information"
+  },
+  "research_assistance": {
+    "eye_of_magnus": "Directs research into ancient texts, reveals historical references",
+    "saarthal_history": "Knows Night of Tears accounts, elf-nord conflicts, ancient artifacts",
+    "daedric_lore": "Extensive knowledge of Daedric princes, artifacts, summoning",
+    "dwemer_texts": "Limited Dwemer materials, mostly architectural and magical theory",
+    "elder_scrolls": "Aware of Elder Scrolls but doesn't have any in collection"
+  },
+  "story_hooks": [
+    "Guides research for College questline progression",
+    "Assigns book recovery missions (reward: rare spell tomes)",
+    "Provides historical context for artifacts party discovers",
+    "Source of forbidden knowledge (with proper permissions)",
+    "May request party investigate rumors of rare books",
+    "After earning trust: shares personal theories and restricted texts"
+  ],
+  "dialogue_samples": {
+    "greeting": "Arcanaeum. Books, not conversation. If you need something specific, ask clearly and handle materials with respect.",
+    "book_damage": "What did you DO?! That text survived the Oblivion Crisis and you—*sputters*—OUT! Come back when you learn proper reverence!",
+    "research_help": "Hmph. Interesting question. Let me see... *pulls book from seemingly random location* Here. This should help. Don't damage it.",
+    "hitting_the_books": "That imbecile The Caller STOLE from me. Those volumes are irreplaceable. Bring them back INTACT and I'll... I'll be grateful. Just get them back.",
+    "after_trust": "*quietly* You handle books properly. Most don't. There's a text in the restricted section... might help with your inquiry. Don't tell anyone."
+  },
+  "gm_notes": "Urag is comic relief who's also genuinely useful. His book obsession is endearing and his gruff persona hides real care for knowledge-seekers. Use him for research scenes and lore dumps. His reactions to book damage can be hilariously over-the-top. He's bridge between dusty academic and practical adventuring needs. Players who befriend him gain access to incredible information and rare spell tomes. Remember: he's not human-averse, just book-protective. Deep down, he wants to share knowledge with those who'll use it wisely."
+}

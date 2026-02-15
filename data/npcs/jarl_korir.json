@@ -1,0 +1,61 @@
+{
+  "name": "Jarl Korir",
+  "id": "jarl_korir",
+  "type": "Authority Figure",
+  "location": "Winterhold - Jarl's Longhouse",
+  "faction": "Stormcloak Rebellion",
+  "aspects": {
+    "high_concept": "Bitter Jarl of Ruined Winterhold",
+    "trouble": "Blames the College for the Great Collapse",
+    "other_aspects": [
+      "Proud Remnant of a Once-Great Hold",
+      "Suspicious of All Outsiders",
+      "Stormcloak Loyalist"
+    ]
+  },
+  "skills": {
+    "Great": ["Will", "Rapport"],
+    "Good": ["Notice", "Command"],
+    "Fair": ["Fight", "Empathy"]
+  },
+  "stunts": [
+    "Voice of Winterhold: +2 to Rapport when speaking for his hold",
+    "Unwavering Resolve: +2 to Will when resisting magical or political pressure"
+  ],
+  "stress": {
+    "physical": [false, false],
+    "mental": [false, false, false]
+  },
+  "consequences": {
+    "mild": null,
+    "moderate": null,
+    "severe": null
+  },
+  "refresh": 3,
+  "fate_points": 3,
+  "relationships": {
+    "College of Winterhold": "Blames them, deep resentment",
+    "Stormcloaks": "Loyal supporter",
+    "Winterhold Citizens": "Protects fiercely",
+    "Imperial Legion": "Distrusts"
+  },
+  "personality_notes": {
+    "speaking_style": "Bitter and guarded, speaks of past glory",
+    "motivations": [
+      "Protect what remains of Winterhold",
+      "See the College held accountable",
+      "Support Stormcloak cause"
+    ],
+    "fears": [
+      "Another disaster destroying his hold",
+      "Being forced to accept Imperial rule",
+      "The College causing more destruction"
+    ]
+  },
+  "scene_triggers": [
+    "First meeting with Winterhold's Jarl",
+    "Civil war developments",
+    "College-related incidents"
+  ],
+  "act_context": ["Act 1", "Act 2", "Act 3"]
+}

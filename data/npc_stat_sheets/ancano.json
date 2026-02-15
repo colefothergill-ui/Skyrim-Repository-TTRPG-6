@@ -1,0 +1,111 @@
+{
+  "name": "Ancano",
+  "id": "npc_stat_ancano",
+  "type": "Altmer Thalmor Agent",
+  "category": "Antagonist",
+  "location": "College of Winterhold",
+  "faction": "Thalmor",
+  "aspects": {
+    "high_concept": "Thalmor Advisor Embedded in the College",
+    "trouble": "Obsessed with the Eye of Magnus—To His Doom",
+    "other_aspects": [
+      "Arrogant Supremacist Who Underestimates 'Lesser' Mages",
+      "The Dominion's Will Made Manifest",
+      "Patient Schemer Until the Prize Is Within Reach"
+    ]
+  },
+  "skills": {
+    "Superb": ["Lore"],
+    "Great": ["Deceive", "Will"],
+    "Good": ["Notice", "Investigate"],
+    "Fair": ["Rapport", "Shoot", "Fight"],
+    "Average": ["Athletics", "Physique"]
+  },
+  "stunts": [
+    "Thalmor Arcane Training: +2 to Lore when casting Destruction or Conjuration spells",
+    "Diplomatic Immunity: Once per session, invoke political status to avoid immediate consequences",
+    "Eye of Magnus Attunement: When connected to the Eye, gains +2 to all magical actions but becomes vulnerable to the Staff of Magnus"
+  ],
+  "stress": {
+    "physical": [false, false, false],
+    "mental": [false, false, false, false]
+  },
+  "consequences": {
+    "mild": null,
+    "moderate": null,
+    "severe": null
+  },
+  "refresh": 3,
+  "armor": 0,
+  "notes": "Ancano is the Thalmor's agent within the College, ostensibly an 'advisor' but actually a spy and saboteur. He's charming when it suits him but reveals contempt for non-Altmer. His obsession with the Eye of Magnus drives the College questline's climax. In the final battle, he's empowered by the Eye, making him extremely dangerous.",
+  "combat_tactics": "Ancano fights at range with Destruction magic (lightning preferred) and summons Daedric allies. When empowered by the Eye, he gains magical shields and area attacks. The Staff of Magnus is his weakness—it disrupts his connection to the Eye. Focus on high-damage spells and summons while maintaining wards.",
+  "scene_triggers": [
+    "College admission (observing from shadows)",
+    "Eye of Magnus discovery (showing unusual interest)",
+    "Final confrontation in Hall of the Elements"
+  ],
+  "act_context": ["Act 1", "Act 2", "Act 3"],
+  "starting_equipment": {
+    "armor": "Thalmor Robes (Armor:0, +1 to Lore)",
+    "weapon": "Destruction Magic (Weapon:3, Lightning element)",
+    "other": ["Thalmor Embassy communications", "Surveillance notes on College members", "Elven dagger"]
+  },
+  "social_interaction": "Ancano is outwardly polite but condescending, especially to non-Altmer. He speaks with barely concealed superiority and dismisses concerns as provincial ignorance. He's patient but shows cracks when questioned about his authority or the Thalmor's intentions. In the endgame, his facade drops completely, revealing megalomaniacal ambition.",
+  "relationships": {
+    "Elenwen": "Superior at Thalmor Embassy, receives orders from her",
+    "Savos Aren": "Arch-Mage forced to accept his presence, mutual distrust",
+    "Mirabelle Ervine": "She watches him constantly, he finds it amusing",
+    "Tolfdir": "Dismisses as harmless old fool",
+    "Thalmor Hierarchy": "Ambitious agent seeking to advance through success"
+  },
+  "personality_notes": {
+    "speaking_style": "Smooth and formal with barely veiled condescension, increasingly unhinged when discussing the Eye",
+    "motivations": [
+      "Secure the Eye of Magnus for the Thalmor Dominion",
+      "Prove Altmer magical supremacy",
+      "Advance his position within Thalmor hierarchy",
+      "Undermine the College's independence",
+      "Harness reality-bending power"
+    ],
+    "fears": [
+      "Failure before his superiors",
+      "Being expelled before mission completion",
+      "The Eye's power being beyond his control",
+      "Being outmaneuvered by 'lesser' mages"
+    ],
+    "quirks": [
+      "Adjusts robes when irritated",
+      "Uses increasingly grandiose language when excited",
+      "Studies magical artifacts with obsessive focus"
+    ],
+    "character_growth": "Ancano's arc is tragic ambition—he goes from subtle manipulator to mad with power, ultimately destroyed by the very artifact he sought to control."
+  },
+  "thalmor_mission": {
+    "official_role": "Cultural advisor and diplomatic liaison",
+    "actual_mission": "Monitor College activities, identify exploitable artifacts, assess magical threats to Dominion",
+    "eye_discovery": "Upon learning of the Eye, Ancano immediately reports to Elenwen and receives orders to secure it at any cost",
+    "final_gambit": "Attempts to harness the Eye's power to reshape reality according to Dominion ideology—elimination of Talos worship, Altmer supremacy enforced by cosmic law"
+  },
+  "boss_fight_mechanics": {
+    "phase_1": "Before Eye connection—powerful but standard mage combat",
+    "phase_2": "Connected to Eye—gains magical barriers, area effects, summons",
+    "phase_3": "Staff of Magnus disrupts connection—vulnerable but desperate, maximum aggression",
+    "weakness": "Staff of Magnus absorbs his magical energy and breaks Eye connection",
+    "environment": "Hall of Elements becomes unstable with magical anomalies during fight"
+  },
+  "story_hooks": [
+    "Investigates party if they show unusual magical ability or possess artifacts",
+    "May attempt to recruit party as unwitting agents",
+    "Provides information that seems helpful but advances his agenda",
+    "Escalates tensions between College and local Nords",
+    "Final confrontation determines fate of Eye of Magnus and College's future"
+  ],
+  "dialogue_samples": {
+    "greeting": "Ah, a new face. How... quaint. I am Ancano, advisor to the College. The Thalmor take a keen interest in magical education. Do try to be worthy of it.",
+    "dismissive": "Your concerns are noted. The Thalmor have matters well in hand. Perhaps focus on your studies rather than... speculation.",
+    "eye_interest": "This 'Eye of Magnus' as you call it... fascinating. Such power should be properly understood. Managed. The Dominion has considerable expertise in such matters.",
+    "revealed": "Did you truly think you could stop me? The Eye's power is beyond your comprehension. The Thalmor will reshape this world, and you will be nothing but forgotten footnotes!",
+    "final_battle": "You dare use that against me?! No! The Eye is MINE! Reality itself bends to my will!"
+  },
+  "gm_notes": "Ancano is the College questline's primary antagonist. Build him up slowly—polite menace, then showing his hand, finally megalomania. The Eye of Magnus fight should feel apocalyptic. Consider having magical instability effects during the battle—reality glitches, time distortions, summoned beings appearing randomly. If defeated, his death triggers Thalmor diplomatic response that can ripple through the campaign."
+}

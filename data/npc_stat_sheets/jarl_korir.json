@@ -1,0 +1,134 @@
+{
+  "name": "Jarl Korir",
+  "id": "npc_stat_jarl_korir",
+  "type": "Nord Jarl",
+  "category": "Authority Figure",
+  "location": "Winterhold - Jarl's Longhouse",
+  "faction": "Stormcloak Rebellion",
+  "aspects": {
+    "high_concept": "Bitter Jarl of Ruined Winterhold",
+    "trouble": "Blames the College for the Great Collapse—And Won't Forgive",
+    "other_aspects": [
+      "Proud Remnant of a Once-Great Hold",
+      "Suspicious of All Outsiders, Especially Mages",
+      "Loyal Stormcloak Despite Minimal Support"
+    ]
+  },
+  "skills": {
+    "Great": ["Will", "Rapport"],
+    "Good": ["Notice", "Command", "Fight"],
+    "Fair": ["Empathy", "Physique"],
+    "Average": ["Resources", "Investigate"]
+  },
+  "stunts": [
+    "Voice of Winterhold: +2 to Rapport when speaking for his hold or its grievances",
+    "Unwavering Resolve: +2 to Will when resisting magical, political, or emotional manipulation",
+    "Remember the Collapse: Once per session, invoke memory of lost Winterhold to gain +2 on any action defending what remains"
+  ],
+  "stress": {
+    "physical": [false, false],
+    "mental": [false, false, false]
+  },
+  "consequences": {
+    "mild": null,
+    "moderate": null,
+    "severe": null
+  },
+  "refresh": 3,
+  "armor": 0,
+  "notes": "Jarl Korir is the embittered ruler of Winterhold Hold, watching over the ruins of what was once a prosperous city. The Great Collapse destroyed most of Winterhold, and Korir—like many locals—blames the College of Winterhold for the catastrophe. He's suspicious, guarded, and deeply resentful. Despite this, he's a capable leader doing his best to protect his people with minimal resources. He supports the Stormcloaks but receives little aid due to Winterhold's strategic insignificance.",
+  "combat_tactics": "Korir is a competent warrior but not exceptional. He fights with one-handed weapon and shield in traditional Nord style—defensive but aggressive when protecting his people. He'll prioritize his citizens' safety over personal glory. In civil war scenarios, he'll defend Winterhold fiercely but knows when to yield to superior force.",
+  "scene_triggers": [
+    "First meeting with Winterhold's Jarl",
+    "Civil war developments affecting Winterhold",
+    "College-related incidents or investigations",
+    "Petitions from Winterhold citizens"
+  ],
+  "act_context": ["Act 1", "Act 2", "Act 3"],
+  "starting_equipment": {
+    "armor": "Jarl's Fur Armor (Armor:1)",
+    "weapon": "Nord Steel Sword (Weapon:2)",
+    "other": ["Jarl's Seal of Office", "Shield of Winterhold", "Minimal treasury"]
+  },
+  "social_interaction": "Korir is guarded and suspicious, especially with outsiders and anyone associated with the College. He speaks of Winterhold's past glory with bitter nostalgia. He's more forthcoming with fellow Nords and Stormcloak sympathizers, but even then maintains distance. Those who prove themselves helpful to Winterhold (not the College) can earn grudging respect. He's haunted by responsibility for dwindling population.",
+  "relationships": {
+    "College of Winterhold": "Blames them for the Great Collapse, deep resentment and distrust",
+    "Stormcloaks": "Loyal supporter, wishes they could spare more aid for Winterhold",
+    "Ulfric Stormcloak": "Respects and supports, disappointed by lack of material support",
+    "Imperial Legion": "Distrusts, sees as occupiers and enemies",
+    "Kraldar": "Imperial-backed alternative Jarl if Empire wins Winterhold",
+    "Winterhold Citizens": "Protects fiercely, feels responsible for their hardship",
+    "Thalmor": "Despises, but less immediate concern than College",
+    "Party": "Suspicious unless they prove anti-College or pro-Winterhold stance"
+  },
+  "personality_notes": {
+    "speaking_style": "Bitter and guarded, speaks of past glory, short and clipped with strangers, warming slightly to allies",
+    "motivations": [
+      "Protect what remains of Winterhold and its people",
+      "See the College held accountable for the Collapse",
+      "Support Stormcloak cause for independent Skyrim",
+      "Restore some measure of Winterhold's former status",
+      "Prove his leadership despite overwhelming challenges"
+    ],
+    "fears": [
+      "Another disaster destroying what little remains",
+      "Being forced to accept Imperial rule",
+      "The College causing more destruction",
+      "His hold being abandoned entirely",
+      "Failing the few citizens who remain"
+    ],
+    "quirks": [
+      "Gestures toward ruins when speaking of past",
+      "Pauses before mentioning the College, jaw tightening",
+      "Checks weather obsessively—another collapse?",
+      "Speaks of 'Old Winterhold' with reverence"
+    ]
+  },
+  "great_collapse_trauma": {
+    "event": "Most of Winterhold fell into the Sea of Ghosts around 4E 122",
+    "cause_belief": "Locals blame College magical experiments for destabilizing ground",
+    "reality": "True cause uncertain—College denies responsibility, geological factors possible",
+    "impact": "City reduced from major hold capital to handful of buildings on cliff edge",
+    "korir_experience": "Became Jarl after disaster, entire leadership defined by this tragedy",
+    "political_consequence": "Winterhold stripped of influence, College now larger than town"
+  },
+  "civil_war_position": {
+    "alignment": "Stormcloak loyalist",
+    "reasoning": "Empire represents outsider authority, Stormcloaks are fellow Nords",
+    "irony": "Receives minimal support from either side due to strategic worthlessness",
+    "if_imperial_victory": "Replaced by Kraldar, an Imperial-aligned Jarl",
+    "if_stormcloak_victory": "Remains in power but still receives minimal aid",
+    "college_neutrality": "Resents that College won't take side, sees as cowardice"
+  },
+  "college_relations": {
+    "official_stance": "Tolerates College presence due to lack of power to remove them",
+    "personal_belief": "College destroyed Old Winterhold through reckless magic",
+    "practical_reality": "College is larger and wealthier than town itself",
+    "resentment": "College members cross his bridge to enter town, reminder of power imbalance",
+    "opportunities": "Any evidence of College wrongdoing exploited immediately",
+    "party_implications": "College members face suspicion in town, potential conflicts"
+  },
+  "story_hooks": [
+    "Petitions party to investigate College for evidence of wrongdoing",
+    "Requests help with local threats (bandits, creatures) that he lacks resources to handle",
+    "Civil war missions if party is Stormcloak-aligned",
+    "Potential conflict if party defends College against his accusations",
+    "May be deposed if Imperials win civil war",
+    "Could become grudging ally if party helps Winterhold without helping College"
+  ],
+  "dialogue_samples": {
+    "greeting": "You're new here. Good. Maybe you won't bring more disaster to Winterhold. State your business.",
+    "about_college": "*jaw tightens* The College. They sit up there in their stone fortress while the rest of us scrape by in the ruins of what they destroyed. Don't expect me to speak well of them.",
+    "about_collapse": "You see this? *gestures to cliffs* That used to be a great city. Streets, markets, walls—all of it gone. Fell into the sea. And up there *points to College*, they deny responsibility. Deny it!",
+    "stormcloak_loyalty": "Ulfric understands what it means to be a true Nord. The Empire? They'd sell us to the Thalmor. At least Ulfric fights for Skyrim, even if he can't spare much for Winterhold.",
+    "earning_trust": "*slight nod* You've proven yourself useful to my hold. That's... appreciated. Winterhold remembers its friends. We're few, but we're loyal."
+  },
+  "alternative_jarl": {
+    "name": "Kraldar",
+    "condition": "Installed if Imperial Legion wins Winterhold during civil war",
+    "personality": "Less bitter, more pragmatic, accepts College presence",
+    "policies": "More cooperative with Empire and College, less interesting dramatically",
+    "story_impact": "Korir's displacement can be used for exile plotlines or resistance movements"
+  },
+  "gm_notes": "Korir is defined by loss and bitterness. He's not a villain but an antagonist to College-friendly parties. His suspicions aren't entirely unfounded—College's neutrality during civil war seems callous from his perspective, and magical catastrophe is plausible explanation for Collapse. Use him to create tension between party and College if they become too cozy with mages. He can be won over through actions benefiting Winterhold specifically, creating interesting political dynamics. His potential replacement by Kraldar provides civil war stakes. Remember: he's tragic figure, not tyrant—he's doing his best with impossible situation."
+}
