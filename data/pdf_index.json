@@ -1,0 +1,94 @@
+{
+  "pdf_index": {
+    "description": "Index of PDF content converted to structured Markdown and JSON for efficient querying",
+    "last_updated": "2026-01-23",
+    "source_pdfs": [
+      "Elder Scrolls: Skyrim - Fate Core Campaign Module.pdf",
+      "Daedric Princes, Man & Mer, and the Standing Stones of Skyrim.pdf",
+      "Dragonbreaks, Creatures, and Companions Module.pdf",
+      "Skyrim Faction Pack: Side Plot C - Allegiances in War.pdf"
+    ]
+  },
+  "topics": {
+    "character_creation": {
+      "races": {
+        "file": "source_material/converted_pdfs/races.json",
+        "format": "json",
+        "source_pdf": "Daedric Princes, Man & Mer, and the Standing Stones of Skyrim.pdf",
+        "description": "All playable races with mechanical bonuses, racial abilities, and starting aspects",
+        "topics": ["races", "character creation", "racial abilities", "skills"]
+      },
+      "standing_stones": {
+        "file": "source_material/converted_pdfs/standing_stones.md",
+        "format": "markdown",
+        "source_pdf": "Daedric Princes, Man & Mer, and the Standing Stones of Skyrim.pdf",
+        "description": "Complete guide to Standing Stones with Fate Core mechanical translations",
+        "topics": ["standing stones", "character creation", "blessings", "bonuses"]
+      }
+    },
+    "lore_and_worldbuilding": {
+      "dragonbreaks": {
+        "file": "source_material/converted_pdfs/dragonbreaks.md",
+        "format": "markdown",
+        "source_pdf": "Dragonbreaks, Creatures, and Companions Module.pdf",
+        "description": "Canon management, Dragonbreak mechanics, and how to handle player divergence from established lore",
+        "topics": ["dragonbreaks", "canon", "timeline", "lore", "GM guidance"]
+      },
+      "daedric_quests": {
+        "file": "source_material/converted_pdfs/daedric_quests.md",
+        "format": "markdown",
+        "source_pdf": "Daedric Princes, Man & Mer, and the Standing Stones of Skyrim.pdf",
+        "description": "Complete guide to Daedric Princes, their quests, artifacts, and moral complexity",
+        "topics": ["daedric princes", "artifacts", "quests", "morality", "rewards"]
+      }
+    },
+    "campaign_management": {
+      "session_zero": {
+        "file": "scripts/session_zero.py",
+        "format": "python",
+        "source_pdf": "Multiple",
+        "description": "Session 0 script for character creation, Standing Stone selection, and campaign setup",
+        "topics": ["session zero", "character creation", "campaign setup"]
+      },
+      "gm_protocol": {
+        "file": "docs/how_to_gm.md",
+        "format": "markdown",
+        "source_pdf": "Multiple",
+        "description": "Comprehensive GM guidance including tone, decision frameworks, and gameplay protocols",
+        "topics": ["GM guidance", "tone", "protocols", "decision making", "roleplay"]
+      }
+    }
+  },
+  "query_mappings": {
+    "races": ["races.json"],
+    "standing stones": ["standing_stones.md"],
+    "dragonbreak": ["dragonbreaks.md"],
+    "canon": ["dragonbreaks.md"],
+    "daedric": ["daedric_quests.md"],
+    "artifacts": ["daedric_quests.md"],
+    "character creation": ["races.json", "standing_stones.md"],
+    "session zero": ["session_zero.py", "how_to_gm.md"],
+    "gm guidance": ["how_to_gm.md", "dragonbreaks.md"],
+    "nord": ["races.json"],
+    "imperial": ["races.json"],
+    "breton": ["races.json"],
+    "redguard": ["races.json"],
+    "high elf": ["races.json"],
+    "wood elf": ["races.json"],
+    "dark elf": ["races.json"],
+    "orc": ["races.json"],
+    "khajiit": ["races.json"],
+    "argonian": ["races.json"],
+    "warrior stone": ["standing_stones.md"],
+    "mage stone": ["standing_stones.md"],
+    "thief stone": ["standing_stones.md"],
+    "azura": ["daedric_quests.md"],
+    "mehrunes dagon": ["daedric_quests.md"],
+    "hermaeus mora": ["daedric_quests.md"],
+    "molag bal": ["daedric_quests.md"]
+  },
+  "usage": {
+    "query_example": "Use DataQueryManager.query_pdf_topics('standing stones') to retrieve related files",
+    "integration": "query_data.py has been extended to query PDF index topics"
+  }
+}

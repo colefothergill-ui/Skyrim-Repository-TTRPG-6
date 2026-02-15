@@ -1,0 +1,1087 @@
+{
+  "major_factions": {
+    "imperial_legion": {
+      "id": "imperial_legion",
+      "name": "Imperial Legion",
+      "description": "The military force of the Cyrodilic Empire, fighting to maintain control of Skyrim",
+      "headquarters": "Castle Dour, Solitude",
+      "leader": {
+        "name": "General Tullius",
+        "role": "Military Governor of Skyrim"
+      },
+      "second_in_command": {
+        "name": "Legate Rikke",
+        "role": "Senior Legate"
+      },
+      "alignment": "Lawful Neutral",
+      "goals": [
+        "Defeat the Stormcloak Rebellion",
+        "Maintain Imperial rule in Skyrim",
+        "Protect trade routes and order",
+        "Appease the Thalmor (reluctantly)"
+      ],
+      "clocks": [
+        {
+          "name": "Military Dominance",
+          "progress": 3,
+          "segments": 10,
+          "effect": "When filled, Imperial Legion wins the civil war"
+        },
+        {
+          "name": "Popular Support",
+          "progress": 4,
+          "segments": 8,
+          "effect": "Civilian population supports Imperial rule"
+        }
+      ],
+      "resources": {
+        "military_strength": 60,
+        "gold": "High",
+        "supply_lines": "Good"
+      },
+      "relationships": {
+        "stormcloaks": -80,
+        "thalmor": -20,
+        "whiterun": 40,
+        "companions": 0
+      },
+      "joinable": true,
+      "ranks": [
+        "Auxiliary",
+        "Quaestor",
+        "Praefect",
+        "Tribune",
+        "Legate"
+      ],
+      "common_npcs": [
+        "npc_stat_whiterun_guard",
+        "npc_stat_housecarl"
+      ]
+    },
+    "stormcloaks": {
+      "id": "stormcloaks",
+      "name": "Stormcloak Rebellion",
+      "description": "Nord rebels fighting for Skyrim's independence from the Empire",
+      "headquarters": "Palace of the Kings, Windhelm",
+      "leader": {
+        "name": "Ulfric Stormcloak",
+        "role": "Jarl of Windhelm, Leader of the Rebellion"
+      },
+      "second_in_command": {
+        "name": "Galmar Stone-Fist",
+        "role": "Housecarl and Military Commander"
+      },
+      "alignment": "Chaotic Good",
+      "goals": [
+        "Free Skyrim from Imperial rule",
+        "Expel the Thalmor from Skyrim",
+        "Restore Talos worship",
+        "Establish Nord sovereignty"
+      ],
+      "clocks": [
+        {
+          "name": "Rebellion Momentum",
+          "progress": 4,
+          "segments": 10,
+          "effect": "When filled, Stormcloaks win the civil war"
+        },
+        {
+          "name": "Nord Unity",
+          "progress": 5,
+          "segments": 8,
+          "effect": "More Jarls join the Stormcloak cause"
+        }
+      ],
+      "resources": {
+        "military_strength": 55,
+        "gold": "Moderate",
+        "supply_lines": "Strained"
+      },
+      "relationships": {
+        "imperial_legion": -80,
+        "thalmor": -90,
+        "whiterun": -20,
+        "companions": 20
+      },
+      "joinable": true,
+      "ranks": [
+        "Unblooded",
+        "Ice-Veins",
+        "Bone-Breaker",
+        "Snow-Hammer",
+        "Stormblade"
+      ],
+      "common_npcs": [
+        "npc_stat_housecarl",
+        "npc_stat_forsworn_marauder"
+      ],
+      "allegations": [
+        {
+          "id": "allegation_1",
+          "type": "thalmor_conspiracy",
+          "accuser": "Test Accuser",
+          "details": "Test allegation details",
+          "status": "pending",
+          "evidence_level": 3,
+          "created": "2026-01-27 00:50:34",
+          "consequences": [],
+          "evidence_trail": [
+            {
+              "description": "Test evidence",
+              "change": 3,
+              "timestamp": "2026-01-27 00:50:34"
+            }
+          ]
+        },
+        {
+          "id": "allegation_2",
+          "type": "thalmor_conspiracy",
+          "accuser": "Test Accuser",
+          "details": "Test allegation details",
+          "status": "pending",
+          "evidence_level": 3,
+          "created": "2026-01-29 17:43:08",
+          "consequences": [],
+          "evidence_trail": [
+            {
+              "description": "Test evidence",
+              "change": 3,
+              "timestamp": "2026-01-29 17:43:08"
+            }
+          ]
+        }
+      ]
+    },
+    "thalmor": {
+      "id": "thalmor",
+      "name": "Thalmor (Aldmeri Dominion)",
+      "description": "High Elf supremacist organization that enforces the White-Gold Concordat",
+      "headquarters": "Thalmor Embassy, Haafingar",
+      "leader": {
+        "name": "Elenwen",
+        "role": "First Emissary to Skyrim"
+      },
+      "alignment": "Lawful Evil",
+      "goals": [
+        "Prolong the civil war to weaken both sides",
+        "Eliminate Talos worship",
+        "Maintain dominance over the Empire",
+        "Gather intelligence on threats to Dominion",
+        "Investigate dragon rumors"
+      ],
+      "clocks": [
+        {
+          "name": "Civil War Perpetuation",
+          "progress": 2,
+          "segments": 8,
+          "effect": "Keep war going to weaken Empire and Skyrim"
+        },
+        {
+          "name": "Talos Persecution",
+          "progress": 5,
+          "segments": 10,
+          "effect": "Eliminate Talos worship from Skyrim"
+        },
+        {
+          "name": "Intelligence Network",
+          "progress": 3,
+          "segments": 8,
+          "effect": "Comprehensive spy network established"
+        }
+      ],
+      "resources": {
+        "military_strength": 30,
+        "gold": "Very High",
+        "intelligence": "Excellent"
+      },
+      "relationships": {
+        "imperial_legion": -30,
+        "stormcloaks": -90,
+        "blades": -100,
+        "college_of_winterhold": 10
+      },
+      "joinable": false,
+      "secret_objectives": [
+        "Neither side should win the civil war decisively",
+        "Gather information on rising champions and warriors",
+        "Maintain presence despite Nordic hostility"
+      ],
+      "common_npcs": [
+        "npc_stat_thalmor_agent"
+      ]
+    },
+    "companions": {
+      "id": "companions",
+      "name": "The Companions",
+      "description": "Ancient warrior guild based in Whiterun, honor-bound fighters with a werewolf secret",
+      "headquarters": "Jorrvaskr, Whiterun",
+      "leader": {
+        "name": "Kodlak Whitemane",
+        "role": "Harbinger"
+      },
+      "alignment": "Neutral Good",
+      "goals": [
+        "Maintain honor and warrior traditions",
+        "Cure the beast blood (Kodlak's wish)",
+        "Protect Skyrim from threats",
+        "Train worthy warriors"
+      ],
+      "clocks": [
+        {
+          "name": "Reputation",
+          "progress": 6,
+          "segments": 8,
+          "effect": "Companions are respected throughout Skyrim"
+        },
+        {
+          "name": "Beast Blood Curse",
+          "progress": 7,
+          "segments": 10,
+          "effect": "When filled, curse becomes irreversible or must be cured"
+        }
+      ],
+      "resources": {
+        "military_strength": 40,
+        "gold": "Moderate"
+      },
+      "relationships": {
+        "whiterun": 60,
+        "imperial_legion": 0,
+        "stormcloaks": 0,
+        "silver_hand": -100
+      },
+      "joinable": true,
+      "ranks": [
+        "Whelp",
+        "Member",
+        "Blade",
+        "Harbinger"
+      ],
+      "secret": "Inner Circle members are werewolves",
+      "common_npcs": [
+        "npc_stat_companion_member"
+      ]
+    },
+    "thieves_guild": {
+      "id": "thieves_guild",
+      "name": "Thieves Guild",
+      "description": "Criminal organization based in Riften, dedicated to theft and stealth",
+      "headquarters": "The Ragged Flagon, Riften",
+      "leader": {
+        "name": "Mercer Frey",
+        "role": "Guild Master (corrupt)"
+      },
+      "alignment": "Chaotic Neutral",
+      "goals": [
+        "Restore the Guild's former glory",
+        "Regain Nocturnal's favor",
+        "Expand influence across Skyrim",
+        "Profit from the civil war chaos"
+      ],
+      "clocks": [
+        {
+          "name": "Guild Reputation",
+          "progress": 2,
+          "segments": 10,
+          "effect": "Guild's influence in Skyrim cities"
+        },
+        {
+          "name": "Nocturnal's Favor",
+          "progress": 0,
+          "segments": 8,
+          "effect": "Restore blessing of Lady Luck"
+        }
+      ],
+      "resources": {
+        "military_strength": 15,
+        "gold": "High",
+        "information_network": "Good"
+      },
+      "relationships": {
+        "dark_brotherhood": 20,
+        "riften_guard": -40,
+        "black-briar_family": 60
+      },
+      "joinable": true,
+      "ranks": [
+        "Recruit",
+        "Member",
+        "Agent",
+        "Guild Master"
+      ]
+    },
+    "dark_brotherhood": {
+      "id": "dark_brotherhood",
+      "name": "Dark Brotherhood",
+      "description": "Assassins guild devoted to Sithis and the Night Mother",
+      "headquarters": "Dark Brotherhood Sanctuary near Falkreath",
+      "leader": {
+        "name": "Astrid",
+        "role": "Leader of Falkreath Sanctuary"
+      },
+      "alignment": "Chaotic Evil",
+      "goals": [
+        "Fulfill contracts for assassination",
+        "Serve the Night Mother",
+        "Rebuild after near-destruction",
+        "Maintain secrecy"
+      ],
+      "clocks": [
+        {
+          "name": "Brotherhood Strength",
+          "progress": 3,
+          "segments": 8,
+          "effect": "Assassin organization's power"
+        },
+        {
+          "name": "Night Mother's Return",
+          "progress": 0,
+          "segments": 6,
+          "effect": "True leadership revealed"
+        }
+      ],
+      "resources": {
+        "military_strength": 20,
+        "gold": "Moderate",
+        "stealth_capability": "Excellent"
+      },
+      "relationships": {
+        "everyone": -50
+      },
+      "joinable": true,
+      "ranks": [
+        "Initiate",
+        "Assassin",
+        "Silencer",
+        "Listener"
+      ]
+    },
+    "college_of_winterhold": {
+      "id": "college_of_winterhold",
+      "name": "College of Winterhold",
+      "description": "Mages guild dedicated to magical study and research",
+      "headquarters": "College of Winterhold",
+      "leader": {
+        "name": "Arch-Mage Savos Aren",
+        "role": "Arch-Mage"
+      },
+      "alignment": "True Neutral",
+      "goals": [
+        "Pursue magical knowledge",
+        "Train mages",
+        "Investigate the Eye of Magnus",
+        "Maintain independence from politics"
+      ],
+      "clocks": [
+        {
+          "name": "Eye of Magnus Mystery",
+          "progress": 1,
+          "segments": 8,
+          "effect": "Uncovering ancient magical artifact"
+        },
+        {
+          "name": "Public Trust",
+          "progress": 2,
+          "segments": 10,
+          "effect": "Nords are suspicious of magic"
+        }
+      ],
+      "resources": {
+        "military_strength": 35,
+        "gold": "Moderate",
+        "magical_knowledge": "Excellent"
+      },
+      "relationships": {
+        "thalmor": -10,
+        "winterhold": -30,
+        "psijic_order": 40
+      },
+      "joinable": true,
+      "ranks": [
+        "Apprentice",
+        "Evoker",
+        "Conjurer",
+        "Magus",
+        "Master Wizard",
+        "Arch-Mage"
+      ]
+    },
+    "greybeards": {
+      "id": "greybeards",
+      "name": "The Greybeards",
+      "description": "Monks who study the Way of the Voice atop High Hrothgar",
+      "headquarters": "High Hrothgar",
+      "leader": {
+        "name": "Master Arngeir",
+        "role": "Speaker for the Greybeards"
+      },
+      "alignment": "Lawful Neutral",
+      "goals": [
+        "Study and teach the Way of the Voice",
+        "Maintain peace and meditation",
+        "Guide worthy warriors",
+        "Protect Paarthurnax"
+      ],
+      "clocks": [
+        {
+          "name": "Voice Training",
+          "progress": 0,
+          "segments": 8,
+          "effect": "Teaching warriors the Way of the Voice"
+        }
+      ],
+      "resources": {
+        "military_strength": 70,
+        "influence": "Spiritual"
+      },
+      "relationships": {
+        "blades": -60,
+        "nords": 80,
+        "paarthurnax": 100
+      },
+      "joinable": false
+    },
+    "blades": {
+      "id": "blades",
+      "name": "The Blades",
+      "description": "Ancient dragon-hunting order, now in hiding",
+      "headquarters": "Sky Haven Temple (hidden)",
+      "leader": {
+        "name": "Delphine",
+        "role": "Last known Blade agent"
+      },
+      "alignment": "Lawful Good",
+      "goals": [
+        "Rebuild the Blades",
+        "Defeat Alduin",
+        "Kill all dragons (including Paarthurnax)",
+        "Serve the rising champion"
+      ],
+      "clocks": [
+        {
+          "name": "Blade Reconstruction",
+          "progress": 0,
+          "segments": 10,
+          "effect": "Rebuilding the order"
+        },
+        {
+          "name": "Dragon Threat Eliminated",
+          "progress": 0,
+          "segments": 12,
+          "effect": "All dragons defeated"
+        }
+      ],
+      "resources": {
+        "military_strength": 10,
+        "gold": "Low",
+        "dragon_knowledge": "Excellent"
+      },
+      "relationships": {
+        "thalmor": -100,
+        "greybeards": -60,
+        "dragons": -100
+      },
+      "joinable": true,
+      "ranks": [
+        "Recruit",
+        "Blade"
+      ]
+    }
+  },
+  "minor_factions": {
+    "jarls": [
+      "Whiterun (Jarl Balgruuf)",
+      "Solitude (Jarl Elisif)",
+      "Windhelm (Jarl Ulfric)",
+      "Riften (Jarl Laila Law-Giver)",
+      "Markarth (Jarl Igmund)",
+      "Falkreath (Jarl Siddgeir)",
+      "Morthal (Jarl Idgrod Ravencrone)",
+      "Dawnstar (Jarl Skald)",
+      "Winterhold (Jarl Korir)"
+    ],
+    "criminal_groups": [
+      "Silver Hand (werewolf hunters)",
+      "Forsworn (Reach natives)",
+      "Bandits (various groups)"
+    ]
+  },
+  "faction_quests": {
+    "companions": {
+      "questline": "Glory of the Dead",
+      "quests": [
+        {
+          "id": "companions_01",
+          "name": "Take Up Arms",
+          "description": "Prove yourself worthy to join the Companions",
+          "objectives": [
+            "Complete a trial combat",
+            "Impress Vilkas or Farkas",
+            "Be accepted into Jorrvaskr"
+          ],
+          "rewards": [
+            "Companions membership",
+            "Access to training",
+            "Companion NPC stat sheet for ally"
+          ],
+          "trust_change": 2,
+          "civil_war_tie": "Companions remain neutral but favor Whiterun's independence",
+          "act_context": [
+            "Act 1"
+          ]
+        },
+        {
+          "id": "companions_02",
+          "name": "The Silver Hand",
+          "description": "Investigate the Silver Hand's attacks on the Companions",
+          "objectives": [
+            "Track Silver Hand activity",
+            "Discover their base",
+            "Learn their secret"
+          ],
+          "rewards": [
+            "Intel on Silver Hand",
+            "Companions trust increases"
+          ],
+          "trust_change": 2,
+          "civil_war_tie": "If civil war active, Silver Hand may be funded by one side to weaken Companions",
+          "act_context": [
+            "Act 1",
+            "Act 2"
+          ]
+        },
+        {
+          "id": "companions_03",
+          "name": "Blood's Honor",
+          "description": "Discover the truth about the Companions' beast blood",
+          "objectives": [
+            "Learn about werewolf curse",
+            "Choose to accept or reject the blood",
+            "Face consequences"
+          ],
+          "rewards": [
+            "Optional lycanthropy",
+            "Inner Circle membership",
+            "Werewolf stat options"
+          ],
+          "trust_change": 3,
+          "branching": "Accept or reject beast blood affects future quests",
+          "act_context": [
+            "Act 2"
+          ]
+        },
+        {
+          "id": "companions_04",
+          "name": "Glory of the Dead",
+          "description": "Cure Kodlak's spirit and decide the fate of the beast blood",
+          "objectives": [
+            "Enter Ysgramor's Tomb",
+            "Free Kodlak's spirit",
+            "Confront your own curse"
+          ],
+          "rewards": [
+            "Option to cure lycanthropy",
+            "Leadership role",
+            "Harbinger potential"
+          ],
+          "trust_change": 4,
+          "civil_war_tie": "Companions may aid Whiterun defense if trust is high",
+          "act_context": [
+            "Act 2",
+            "Act 3"
+          ]
+        }
+      ],
+      "side_quests": [
+        {
+          "name": "Companion Contracts",
+          "description": "Regular mercenary work across Skyrim holds",
+          "repeatable": true,
+          "trust_change": 1,
+          "civil_war_tie": "Contracts may come from either side of civil war"
+        }
+      ]
+    },
+    "thieves_guild": {
+      "questline": "Darkness Returns",
+      "quests": [
+        {
+          "id": "thieves_01",
+          "name": "Taking Care of Business",
+          "description": "Prove yourself by shaking down merchants for the Guild",
+          "objectives": [
+            "Intimidate or persuade three merchants",
+            "Report to Brynjolf",
+            "Join the Guild"
+          ],
+          "rewards": [
+            "Guild membership",
+            "Access to Ragged Flagon",
+            "Fence contacts"
+          ],
+          "trust_change": 2,
+          "civil_war_tie": "Guild profits from civil war chaos, targets both sides' supply lines",
+          "act_context": [
+            "Act 1",
+            "Act 2"
+          ]
+        },
+        {
+          "id": "thieves_02",
+          "name": "Loud and Clear",
+          "description": "First major heist - Goldenglow Estate",
+          "objectives": [
+            "Infiltrate estate",
+            "Burn beehives (optional)",
+            "Steal Aringoth's safe"
+          ],
+          "rewards": [
+            "Guild reputation increase",
+            "Gold",
+            "Special item"
+          ],
+          "trust_change": 2,
+          "act_context": [
+            "Act 1",
+            "Act 2"
+          ]
+        },
+        {
+          "id": "thieves_03",
+          "name": "The Pursuit",
+          "description": "Uncover Mercer Frey's betrayal",
+          "objectives": [
+            "Follow Mercer's trail",
+            "Discover his theft",
+            "Learn about Nocturnal"
+          ],
+          "rewards": [
+            "Truth about Guild's decline",
+            "Quest for Skeleton Key"
+          ],
+          "trust_change": 3,
+          "civil_war_tie": "Mercer may have sold information to Thalmor - connects to main plot",
+          "act_context": [
+            "Act 2"
+          ]
+        },
+        {
+          "id": "thieves_04",
+          "name": "Darkness Returns",
+          "description": "Return the Skeleton Key and restore Nocturnal's favor",
+          "objectives": [
+            "Enter Twilight Sepulcher",
+            "Defeat Mercer",
+            "Choose to return or keep Skeleton Key"
+          ],
+          "rewards": [
+            "Guild Master position",
+            "Nocturnal's blessing",
+            "Guild restoration"
+          ],
+          "trust_change": 4,
+          "branching": "Keeping Skeleton Key provides benefits but angers Nocturnal",
+          "act_context": [
+            "Act 2",
+            "Act 3"
+          ]
+        }
+      ],
+      "side_quests": [
+        {
+          "name": "City Influence Jobs",
+          "description": "Expand Guild influence to all major cities",
+          "repeatable": true,
+          "trust_change": 1,
+          "civil_war_tie": "Each city's political situation affects Guild operations"
+        }
+      ]
+    },
+    "college_of_winterhold": {
+      "questline": "Eye of Magnus",
+      "quests": [
+        {
+          "id": "college_01",
+          "name": "First Lessons",
+          "description": "Pass the entry test and learn basic magic",
+          "objectives": [
+            "Demonstrate magical ability",
+            "Receive training",
+            "Meet fellow students"
+          ],
+          "rewards": [
+            "College membership",
+            "Student robes",
+            "Access to Arcanaeum"
+          ],
+          "trust_change": 2,
+          "civil_war_tie": "College remains neutral but Thalmor watch closely",
+          "act_context": [
+            "Act 1",
+            "Act 2"
+          ]
+        },
+        {
+          "id": "college_02",
+          "name": "Under Saarthal",
+          "description": "Archaeological expedition reveals ancient magic",
+          "objectives": [
+            "Explore Saarthal with Tolfdir",
+            "Discover Eye of Magnus",
+            "Encounter Psijic Order"
+          ],
+          "rewards": [
+            "Discovery of major artifact",
+            "Psijic Order contact",
+            "Daedric quest hook"
+          ],
+          "trust_change": 2,
+          "thalmor_tie": "Thalmor become interested in Eye of Magnus",
+          "act_context": [
+            "Act 1",
+            "Act 2"
+          ]
+        },
+        {
+          "id": "college_03",
+          "name": "Revealing the Unseen",
+          "description": "Research the Staff of Magnus",
+          "objectives": [
+            "Consult Augur of Dunlain",
+            "Travel to Mzulft",
+            "Retrieve focusing crystal"
+          ],
+          "rewards": [
+            "Knowledge of Staff location",
+            "Dwemer artifact"
+          ],
+          "trust_change": 2,
+          "act_context": [
+            "Act 2"
+          ]
+        },
+        {
+          "id": "college_04",
+          "name": "The Eye of Magnus",
+          "description": "Stop Ancano from using the Eye's power",
+          "objectives": [
+            "Retrieve Staff of Magnus",
+            "Defeat Ancano",
+            "Contain the Eye"
+          ],
+          "rewards": [
+            "Arch-Mage position",
+            "College saved",
+            "Powerful magic items"
+          ],
+          "trust_change": 4,
+          "thalmor_tie": "Major blow to Thalmor plans - Ancano's death creates consequences",
+          "civil_war_tie": "College's increased power affects regional politics",
+          "act_context": [
+            "Act 2",
+            "Act 3"
+          ]
+        }
+      ],
+      "side_quests": [
+        {
+          "name": "Daedric Investigations",
+          "description": "Research Daedric artifacts and magic",
+          "repeatable": false,
+          "trust_change": 1,
+          "daedric_tie": "Connects to Daedric quest arcs"
+        }
+      ]
+    },
+    "civil_war_imperial": {
+      "questline": "Reunification of Skyrim",
+      "quests": [
+        {
+          "id": "imperial_cw_01",
+          "name": "Joining the Legion",
+          "description": "Swear oath to General Tullius and the Empire",
+          "objectives": [
+            "Travel to Solitude",
+            "Meet General Tullius",
+            "Complete oath ceremony"
+          ],
+          "rewards": [
+            "Imperial Legion membership",
+            "Imperial armor",
+            "Access to Imperial quests"
+          ],
+          "trust_change": 3,
+          "npc_available": [
+            "npc_stat_imperial_legionnaire"
+          ],
+          "act_context": [
+            "Act 1",
+            "Act 2"
+          ]
+        },
+        {
+          "id": "imperial_cw_02",
+          "name": "The Jagged Crown",
+          "description": "Race Stormcloaks to recover ancient Nord artifact",
+          "objectives": [
+            "Enter Korvanjund",
+            "Defeat Stormcloak forces",
+            "Secure the Crown"
+          ],
+          "rewards": [
+            "Imperial victories increase",
+            "Legitimacy boost"
+          ],
+          "trust_change": 2,
+          "enemy_encounter": [
+            "npc_stat_stormcloak_soldier"
+          ],
+          "act_context": [
+            "Act 1",
+            "Act 2"
+          ]
+        },
+        {
+          "id": "imperial_cw_03",
+          "name": "Battle for Whiterun",
+          "description": "Defend or capture Whiterun for the Empire",
+          "objectives": [
+            "Coordinate with Legate Rikke",
+            "Siege or defend Whiterun",
+            "Secure the city"
+          ],
+          "rewards": [
+            "Major victory",
+            "Whiterun becomes Imperial"
+          ],
+          "trust_change": 3,
+          "main_quest_tie": "Affects player's standing with both factions",
+          "act_context": [
+            "Act 1",
+            "Act 2"
+          ]
+        },
+        {
+          "id": "imperial_cw_04",
+          "name": "Battle for Windhelm",
+          "description": "Final assault on Stormcloak capital",
+          "objectives": [
+            "Siege Windhelm",
+            "Defeat Ulfric Stormcloak",
+            "End the rebellion"
+          ],
+          "rewards": [
+            "Civil war ends - Imperial victory",
+            "Land and title",
+            "Major influence"
+          ],
+          "trust_change": 5,
+          "act_context": [
+            "Act 2",
+            "Act 3"
+          ]
+        }
+      ]
+    },
+    "civil_war_stormcloak": {
+      "questline": "Liberation of Skyrim",
+      "quests": [
+        {
+          "id": "stormcloak_cw_01",
+          "name": "Joining the Stormcloaks",
+          "description": "Prove your loyalty to Ulfric and free Skyrim",
+          "objectives": [
+            "Travel to Windhelm",
+            "Meet Ulfric Stormcloak",
+            "Take the oath"
+          ],
+          "rewards": [
+            "Stormcloak membership",
+            "Stormcloak armor",
+            "Access to rebellion quests"
+          ],
+          "trust_change": 3,
+          "npc_available": [
+            "npc_stat_stormcloak_soldier"
+          ],
+          "act_context": [
+            "Act 1",
+            "Act 2"
+          ]
+        },
+        {
+          "id": "stormcloak_cw_02",
+          "name": "The Jagged Crown",
+          "description": "Claim the ancient crown for Ulfric",
+          "objectives": [
+            "Enter Korvanjund",
+            "Defeat Imperial forces",
+            "Deliver crown to Ulfric"
+          ],
+          "rewards": [
+            "Stormcloak victories increase",
+            "Ulfric's favor"
+          ],
+          "trust_change": 2,
+          "enemy_encounter": [
+            "npc_stat_imperial_legionnaire"
+          ],
+          "act_context": [
+            "Act 1",
+            "Act 2"
+          ]
+        },
+        {
+          "id": "stormcloak_cw_03",
+          "name": "Battle for Whiterun",
+          "description": "Capture Whiterun for the Stormcloaks",
+          "objectives": [
+            "Assault Whiterun with Galmar",
+            "Breach the walls",
+            "Force Jarl's surrender"
+          ],
+          "rewards": [
+            "Major victory",
+            "Whiterun becomes Stormcloak territory"
+          ],
+          "trust_change": 3,
+          "main_quest_tie": "Affects player's standing with all factions",
+          "act_context": [
+            "Act 1",
+            "Act 2"
+          ]
+        },
+        {
+          "id": "stormcloak_cw_04",
+          "name": "Battle for Solitude",
+          "description": "Final assault on Imperial capital of Skyrim",
+          "objectives": [
+            "Siege Solitude",
+            "Defeat General Tullius",
+            "Free Skyrim from Empire"
+          ],
+          "rewards": [
+            "Civil war ends - Stormcloak victory",
+            "Thane of Windhelm",
+            "Major influence"
+          ],
+          "trust_change": 5,
+          "thalmor_tie": "Thalmor are displeased with decisive outcome",
+          "act_context": [
+            "Act 2",
+            "Act 3"
+          ]
+        }
+      ]
+    }
+  },
+  "trust_mechanics": {
+    "description": "Trust clocks track player standing with each faction",
+    "trust_levels": {
+      "0-2": "Stranger - Faction is neutral or suspicious",
+      "3-5": "Ally - Faction trusts you and offers aid",
+      "6-8": "Champion - Faction considers you a hero",
+      "9-10": "Legend - Faction's highest honor, unique rewards"
+    },
+    "trust_actions": {
+      "positive": [
+        "Complete faction quests (+1 to +4)",
+        "Aid faction in civil war (+2)",
+        "Defend faction members (+1)",
+        "Donate resources (+1)",
+        "Resolve conflicts peacefully (+1)"
+      ],
+      "negative": [
+        "Attack faction members (-3)",
+        "Steal from faction (-2)",
+        "Aid rival faction (-2)",
+        "Betray faction secrets (-4)",
+        "Kill faction leader (-10, usually irreversible)"
+      ]
+    },
+    "trust_benefits": {
+      "companions": {
+        "3": "Companion allies in combat",
+        "6": "Werewolf form training",
+        "9": "Harbinger candidacy"
+      },
+      "thieves_guild": {
+        "3": "Fence access in all cities",
+        "6": "Special heist opportunities",
+        "9": "Guild Master abilities"
+      },
+      "college_of_winterhold": {
+        "3": "Advanced spell access",
+        "6": "Psijic Order contact",
+        "9": "Arch-Mage authority"
+      },
+      "imperial_legion": {
+        "3": "Imperial garrison support",
+        "6": "Command small units",
+        "9": "Legate rank"
+      },
+      "stormcloaks": {
+        "3": "Stormcloak safe houses",
+        "6": "Command raids",
+        "9": "Ulfric's inner circle"
+      }
+    }
+  },
+  "main_story_integration": {
+    "description": "How faction quests tie into the civil war and regional conflicts",
+    "key_interactions": [
+      {
+        "quest": "Diplomatic Immunity",
+        "factions_involved": [
+          "Thieves Guild",
+          "Blades"
+        ],
+        "description": "Infiltrating Thalmor Embassy - Thieves Guild can provide intel and equipment"
+      },
+      {
+        "quest": "Season Unending",
+        "factions_involved": [
+          "Imperial Legion",
+          "Stormcloaks",
+          "Greybeards"
+        ],
+        "description": "Peace negotiation - faction standing affects negotiating power"
+      },
+      {
+        "quest": "Alduin's Bane",
+        "factions_involved": [
+          "Greybeards",
+          "Blades",
+          "College of Winterhold"
+        ],
+        "description": "Dragon combat - factions can provide unique aid based on trust level"
+      },
+      {
+        "quest": "Dragonslayer",
+        "factions_involved": [
+          "Blades",
+          "Companions",
+          "Any faction at high trust"
+        ],
+        "description": "Final confrontation - high-trust factions send champions to aid their allies"
+      }
+    ],
+    "civil_war_dragon_crisis": {
+      "description": "How the civil war and dragon crisis interweave",
+      "scenarios": [
+        {
+          "name": "Dragon attacks during civil war battles",
+          "effect": "Forces temporary truce or cooperation between factions"
+        },
+        {
+          "name": "Thalmor manipulation",
+          "effect": "Thalmor try to prolong war to prevent unified response to dragons"
+        },
+        {
+          "name": "Faction aid against dragons",
+          "effect": "Factions with high trust provide troops/mages/resources for dragon battles"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "patch_id": "2026-02-05_olfrid_payout_foothold",
+  "created_at": "2026-02-05",
+  "scope": "scene_resolution",
+  "summary": {
+    "scene_id": "A1-S6",
+    "location": "Whiterun — Plains District (Battle-Born Balcony / Arcana Front)",
+    "highlights": [
+      "Olfrid pays remaining contract balance and bonus.",
+      "Guild Foothold (Whiterun) completes at 5/5; Arcana front formally sanctioned.",
+      "Residency/charter paperwork issued to protect the front and backroom access."
+    ]
+  },
+  "updates": {
+    "pc": {
+      "pc_insaerndel": {
+        "gold_delta": 2000,
+        "gold_reason": "Olfrid contract remainder (1400g) + bonus (600g) after battle stabilization and Greymane pressure.",
+        "items_added": [
+          "Charter of Residency: Battle-Born Arcana (Plains District) — official sanction + guard discouragement",
+          "Receipt: Olfrid Contract Settlement (3,000g total) — marked paid in full"
+        ],
+        "items_removed": [
+          "Contract: Olfrid Battle-Born — 3,000g total promised; payment pending delivery after battle stabilization."
+        ],
+        "notes_append": "A1-S6: Olfrid paid remainder + bonus; Arcana front chartered; Guild foothold in Whiterun completed."
+      }
+    },
+    "clocks": {
+      "whiterun_jobs.guild_foothold_whiterun": {
+        "current": 5,
+        "status": "completed"
+      }
+    },
+    "state": {
+      "campaign_state": {
+        "current_scene_id": "A1-S6",
+        "current_location": "Whiterun — Plains District (Battle-Born Balcony / Arcana Front)",
+        "current_objective": "Secure Whiterun foothold, manage heat, and depart for Riften meeting."
+      }
+    }
+  }
+}

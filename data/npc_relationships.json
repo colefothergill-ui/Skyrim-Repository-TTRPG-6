@@ -1,0 +1,218 @@
+{
+  "relationship_system": {
+    "description": "Tracks bonds, loyalties, and dynamics between NPCs and PCs",
+    "relationship_scale": {
+      "-100_to_-51": "Hostile/Enemy",
+      "-50_to_-21": "Unfriendly/Dislike",
+      "-20_to_20": "Neutral/Acquaintance",
+      "21_to_50": "Friendly/Ally",
+      "51_to_100": "Close Friend/Loyal Companion"
+    }
+  },
+  "companion_bonds": {
+    "lydia": {
+      "name": "Lydia",
+      "role": "Housecarl of Whiterun (if appointed)",
+      "initial_loyalty": 60,
+      "personality": "Dutiful, brave, loyal",
+      "relationship_modifiers": {
+        "positive": [
+          "Defending Whiterun (+5)",
+          "Completing quests honorably (+2 each)",
+          "Gift giving (+1 to +5)",
+          "Regular dialogue/care (+1 per session)"
+        ],
+        "negative": [
+          "Betraying Whiterun (-20)",
+          "Reckless behavior endangering her (-5)",
+          "Ignoring her for sessions (-2 per session)",
+          "Joining Dark Brotherhood (-10)"
+        ]
+      },
+      "loyalty_thresholds": {
+        "80": "Will sacrifice herself for PC",
+        "60": "Loyal companion, follows orders",
+        "40": "Questioning loyalty, hesitant",
+        "20": "May refuse dangerous orders",
+        "0": "Leaves service"
+      }
+    },
+    "farkas": {
+      "name": "Farkas",
+      "role": "Companion member",
+      "initial_loyalty": 40,
+      "personality": "Simple, strong, good-hearted",
+      "bond_trigger": "Complete Companions questline",
+      "relationship_modifiers": {
+        "positive": [
+          "Honorable combat (+5)",
+          "Defending the weak (+3)",
+          "Accepting beast blood (+10)",
+          "Curing beast blood together (+15)"
+        ],
+        "negative": [
+          "Dishonorable tactics (-5)",
+          "Refusing to help Companions (-10)",
+          "Killing innocents (-15)"
+        ]
+      }
+    },
+    "serana": {
+      "name": "Serana",
+      "role": "Vampire daughter of Lord Harkon (Dawnguard DLC)",
+      "initial_loyalty": 30,
+      "personality": "Cautious, curious, conflicted about vampirism",
+      "bond_trigger": "Awaken from Dimhollow Crypt",
+      "relationship_modifiers": {
+        "positive": [
+          "Respecting her autonomy (+5)",
+          "Protecting her from father (+10)",
+          "Deep conversations (+3 each)",
+          "Choosing Dawnguard path (+5)"
+        ],
+        "negative": [
+          "Forcing her to cure vampirism (-20)",
+          "Siding with her father (-30)",
+          "Treating her as tool (-10)"
+        ]
+      },
+      "special_note": "Cannot marry, but can achieve deep friendship"
+    },
+    "teldryn_sero": {
+      "name": "Teldryn Sero",
+      "role": "Dunmer mercenary (Solstheim)",
+      "initial_loyalty": 20,
+      "personality": "Sarcastic, skilled, professional",
+      "bond_trigger": "Hire in Raven Rock",
+      "relationship_modifiers": {
+        "positive": [
+          "Regular payment (+1 per mission)",
+          "Dangerous contracts (+3)",
+          "Respecting his skill (+5)"
+        ],
+        "negative": [
+          "Not paying agreed fee (-10)",
+          "Incompetent leadership (-5)"
+        ]
+      }
+    }
+  },
+  "major_npc_relationships": {
+    "jarl_balgruuf": {
+      "name": "Jarl Balgruuf the Greater",
+      "relationship_to_party": 0,
+      "relationship_factors": {
+        "warning_about_dragons": 20,
+        "retrieving_dragonstone": 10,
+        "defending_whiterun": 30,
+        "siding_with_stormcloaks": -50,
+        "siding_with_imperials": 20
+      },
+      "importance": "Key to civil war, neutral Jarl, dragon crisis responder"
+    },
+    "ulfric_stormcloak": {
+      "name": "Ulfric Stormcloak",
+      "relationship_to_party": 0,
+      "relationship_factors": {
+        "joining_stormcloaks": 40,
+        "winning_battles_for_stormcloaks": 10,
+        "joining_imperials": -80,
+        "killing_thalmor": 5,
+        "being_high_elf": -10
+      },
+      "importance": "Leader of Stormcloak Rebellion"
+    },
+    "general_tullius": {
+      "name": "General Tullius",
+      "relationship_to_party": 0,
+      "relationship_factors": {
+        "joining_imperials": 40,
+        "winning_battles_for_imperials": 10,
+        "joining_stormcloaks": -80,
+        "diplomatic_solutions": 5
+      },
+      "importance": "Imperial military commander"
+    },
+    "delphine": {
+      "name": "Delphine",
+      "relationship_to_party": 0,
+      "relationship_factors": {
+        "helping_investigate_dragons": 30,
+        "infiltrating_embassy": 20,
+        "refusing_to_kill_paarthurnax": -40,
+        "killing_paarthurnax": 50,
+        "recruiting_blades_members": 10
+      },
+      "importance": "Blades leader, dragon crisis"
+    },
+    "paarthurnax": {
+      "name": "Paarthurnax",
+      "relationship_to_party": 0,
+      "relationship_factors": {
+        "learning_from_him": 30,
+        "philosophical_discussions": 10,
+        "refusing_blades_order_to_kill": 50,
+        "killing_him": -100
+      },
+      "importance": "Ancient dragon, mentor, moral dilemma"
+    },
+    "elenwen": {
+      "name": "Elenwen",
+      "relationship_to_party": -20,
+      "relationship_factors": {
+        "infiltrating_embassy": -40,
+        "killing_thalmor": -10,
+        "cooperating_with_thalmor": 20,
+        "being_high_elf": 5,
+        "disrupting_thalmor_plans": -15
+      },
+      "importance": "Thalmor antagonist"
+    }
+  },
+  "npc_to_npc_relationships": {
+    "companion_dynamics": {
+      "lydia_and_farkas": {
+        "relationship": 10,
+        "notes": "Professional respect, different warrior traditions"
+      },
+      "lydia_and_serana": {
+        "relationship": -10,
+        "notes": "Lydia distrusts vampires, may cause tension"
+      },
+      "farkas_and_vilkas": {
+        "relationship": 70,
+        "notes": "Brothers, complex bond over beast blood"
+      }
+    },
+    "factional_conflicts": {
+      "companions_and_silver_hand": {
+        "relationship": -100,
+        "notes": "Mortal enemies, werewolf hunters vs werewolves"
+      },
+      "blades_and_greybeards": {
+        "relationship": -60,
+        "notes": "Philosophical conflict over Paarthurnax"
+      },
+      "thalmor_and_everyone": {
+        "relationship": -50,
+        "notes": "Thalmor are widely hated in Skyrim"
+      }
+    }
+  },
+  "relationship_mechanics": {
+    "tracking": "Use this file to track changing relationships",
+    "consequences": [
+      "NPCs may refuse to help if relationship is too low",
+      "NPCs may offer special quests or aid if relationship is high",
+      "Companions may leave if relationship drops below threshold",
+      "Romantic relationships require 70+ relationship score"
+    ],
+    "dialogue_changes": [
+      "Hostile: Threats, refusal to speak",
+      "Unfriendly: Curt, suspicious",
+      "Neutral: Professional, distant",
+      "Friendly: Warm, helpful",
+      "Close: Personal, trusting"
+    ]
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "name": "Balgruuf the Greater",
+  "id": "balgruuf_the_greater",
+  "type": "Ally",
+  "location": "Whiterun - Dragonsreach (Cloud District)",
+  "faction": "Whiterun Guard",
+  "aspects": {
+    "high_concept": "Jarl of Whiterun Torn Between Empire and Stormcloaks",
+    "trouble": "Strains of Neutrality – Under Pressure from All Sides",
+    "other_aspects": [
+      "Beloved Leader of Whiterun's People",
+      "Determined to Protect his Hold from Dragons and War",
+      "Honorable Nord with a Pragmatic Streak"
+    ]
+  },
+  "skills": {
+    "Great": ["Rapport", "Will"],
+    "Good": ["Notice", "Command"],
+    "Fair": ["Fight", "Lore"],
+    "Average": ["Empathy", "Resources"]
+  },
+  "stunts": [
+    "Voice of Authority: +2 to Rapport when giving orders or resolving disputes among his subjects.",
+    "Steadfast Ruler: +2 to Will when resisting intimidation or political pressure from either Imperials or Stormcloaks."
+  ],
+  "stress": {
+    "physical": [false, false],
+    "mental": [false, false, false]
+  },
+  "consequences": {
+    "mild": null,
+    "moderate": null,
+    "severe": null
+  },
+  "refresh": 3,
+  "fate_points": 3,
+  "trust_clock": {
+    "enabled": true,
+    "current": 0,
+    "max": 6,
+    "description": "Measures Jarl Balgruuf's trust in the party based on their actions in Whiterun Hold."
+  },
+  "relationships": {
+    "Irileth": "Trusted Housecarl and military advisor",
+    "Whiterun Guard": "Commands as Jarl",
+    "Imperial Legion": "Owes allegiance (leaning Imperial, though officially neutral)",
+    "Stormcloaks": "Potential adversaries (he's wary of their cause)",
+    "Gray-Mane Clan": "Respected citizens, but disagrees with their Stormcloak sympathies",
+    "Battle-Born Clan": "Close allies in city politics (pro-Imperial family)"
+  },
+  "personality_notes": {
+    "speaking_style": "Gravelly and authoritative, yet with warmth when speaking to his people. Balgruuf balances firmness with a fatherly concern.",
+    "motivations": [
+      "Protect Whiterun and its people from any threat (dragons or war)",
+      "Maintain stability and neutrality as long as possible",
+      "Fulfill his duties honorably as a Nord Jarl while keeping Skyrim intact"
+    ],
+    "fears": [
+      "Whiterun falling to chaos or being destroyed (by war or dragons)",
+      "Being forced into a civil war choice that tears his hold apart",
+      "Failing his people or losing their trust"
+    ],
+    "quirks": [
+      "Often drums his fingers on the armrest of his throne when deep in thought",
+      "Shows genuine concern for even the least of his subjects",
+      "Can be surprisingly frank and direct, even to powerful figures"
+    ]
+  },
+  "combat_tactics": "Balgruuf typically avoids direct combat, delegating to Irileth and his guards. If forced to fight (such as during a dragon attack or siege), he wades in with a one-handed axe and shield, fighting defensively. He prioritizes protecting civilians and rallying his men over chasing glory.",
+  "scene_triggers": [
+    "Dragon Rising (first dragon encounter at the Western Watchtower)",
+    "Civil War negotiations or the moment Whiterun must choose a side",
+    "Battle of Whiterun siege events",
+    "Audience with the Jarl (any time the party seeks council in Dragonsreach)"
+  ],
+  "act_context": ["Act 1", "Act 2"]
+}

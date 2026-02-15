@@ -1,0 +1,750 @@
+{
+  "system_name": "Pre-Built Combat Encounter Templates",
+  "description": "Ready-to-use combat encounters across various Skyrim settings with stat blocks, tactics, and environmental features.",
+  "version": "1.0",
+  "difficulty_scale": {
+    "trivial": "Easy victory, minimal resource expenditure",
+    "easy": "Victory likely, some resource use",
+    "moderate": "Challenging but fair, significant resources",
+    "hard": "Difficult fight, may take consequences",
+    "very_hard": "Extremely dangerous, party may need to retreat or get creative",
+    "legendary": "Epic boss fight, full party resources required"
+  },
+  "wilderness_encounters": [
+    {
+      "name": "Bandit Ambush",
+      "difficulty": "Easy to Moderate (scales with number)",
+      "location": "Roads, forests, mountain paths",
+      "enemy_composition": {
+        "bandits": "2-4 Bandit Marauders",
+        "leader": "1 Bandit Chief (optional for higher difficulty)"
+      },
+      "stat_blocks": {
+        "bandit_marauder": {
+          "aspects": ["Desperate Outlaw", "Poorly Equipped"],
+          "skills": {
+            "Good": ["Fight"],
+            "Fair": ["Shoot", "Athletics"],
+            "Average": ["Notice", "Physique"]
+          },
+          "stress": "Physical: 2 boxes",
+          "equipment": "Iron weapon (Weapon:1), leather armor (Armor:1)",
+          "tactics": "Ambush from cover, focus on isolated targets, flee if taking heavy casualties"
+        },
+        "bandit_chief": {
+          "aspects": ["Ruthless Leader", "Combat Veteran"],
+          "skills": {
+            "Great": ["Fight"],
+            "Good": ["Provoke", "Athletics"],
+            "Fair": ["Physique", "Notice"]
+          },
+          "stress": "Physical: 3 boxes",
+          "consequences": "Mild",
+          "equipment": "Steel weapon (Weapon:2), Studded armor (Armor:1)",
+          "tactics": "Commands bandits, targets spellcasters first, fights to the death for loot"
+        }
+      },
+      "terrain": {
+        "features": ["Rocky cover", "Elevated positions", "Narrow path"],
+        "aspects": "Create 'Ambush Position' or 'Treacherous Footing' as situation aspects"
+      },
+      "rewards": {
+        "gold": "10-50 gold",
+        "loot": "Basic weapons, armor, potions"
+      },
+      "variations": {
+        "archer_focus": "Replace 2 marauders with archers (Good Shoot, Fair Fight)",
+        "mage_support": "Add bandit hedge mage with basic destruction spells"
+      }
+    },
+    {
+      "name": "Wolf Pack",
+      "difficulty": "Easy to Moderate",
+      "location": "Forests, tundra, mountains",
+      "enemy_composition": {
+        "wolves": "3-5 wolves"
+      },
+      "stat_blocks": {
+        "wolf": {
+          "aspects": ["Pack Hunter", "Keen Senses"],
+          "skills": {
+            "Good": ["Fight", "Athletics"],
+            "Fair": ["Notice", "Stealth"],
+            "Average": ["Physique"]
+          },
+          "stress": "Physical: 2 boxes",
+          "special": "Pack Tactics: +1 to Fight when adjacent to another wolf",
+          "tactics": "Surround prey, attack weakest target, flee if alpha is killed"
+        },
+        "alpha_wolf": {
+          "aspects": ["Pack Leader", "Vicious Fighter"],
+          "skills": {
+            "Great": ["Fight"],
+            "Good": ["Athletics", "Notice"],
+            "Fair": ["Physique"]
+          },
+          "stress": "Physical: 3 boxes",
+          "consequences": "Mild",
+          "special": "Alpha Howl: Once per scene, all wolves gain +2 to Fight for one exchange",
+          "tactics": "Coordinates pack, focuses on wounded targets"
+        }
+      },
+      "terrain": {
+        "features": ["Dense underbrush", "Rocky outcrops", "Snow drifts"],
+        "aspects": "'Difficult Terrain' or 'Limited Visibility'"
+      },
+      "rewards": {
+        "loot": "Wolf pelts (crafting material), sometimes wolf meat"
+      },
+      "scaling": "Add more wolves or ice wolves (stronger variant) for higher difficulty"
+    },
+    {
+      "name": "Troll Encounter",
+      "difficulty": "Hard",
+      "location": "Mountains, caves, bridges",
+      "enemy_composition": {
+        "troll": "1 Troll (Frost or Cave variant)"
+      },
+      "stat_blocks": {
+        "troll": {
+          "aspects": ["Regenerating Beast", "Vulnerable to Fire"],
+          "skills": {
+            "Superb": ["Physique"],
+            "Great": ["Fight"],
+            "Good": ["Athletics"],
+            "Fair": ["Notice"]
+          },
+          "stress": "Physical: 4 boxes",
+          "consequences": "Mild, Moderate",
+          "special": {
+            "regeneration": "At start of each exchange, clear 1 physical stress box (stopped if hit by fire damage)",
+            "powerful_blows": "Weapon:3 melee attacks"
+          },
+          "weaknesses": "Fire damage prevents regeneration for one exchange, -2 to defend against fire",
+          "tactics": "Aggressive melee assault, regenerates unless burned, flees only when near death"
+        }
+      },
+      "terrain": {
+        "features": ["Narrow bridge", "Cave entrance", "Mountain path"],
+        "hazards": "Potentially knock enemies off edges with strong attacks"
+      },
+      "rewards": {
+        "loot": "Troll fat (alchemy), sometimes treasure from victims"
+      },
+      "gm_notes": "Trolls are dangerous early-game threats. Party should use fire or focus fire to overwhelm regeneration."
+    },
+    {
+      "name": "Giant and Mammoth",
+      "difficulty": "Very Hard",
+      "location": "Tundra, giant camps",
+      "enemy_composition": {
+        "giant": "1 Giant",
+        "mammoth": "1-2 Mammoths (optional)"
+      },
+      "stat_blocks": {
+        "giant": {
+          "aspects": ["Towering Beast", "One-Hit Killer", "Peaceful Unless Provoked"],
+          "skills": {
+            "Fantastic": ["Physique"],
+            "Superb": ["Fight"],
+            "Great": ["Notice"]
+          },
+          "stress": "Physical: 5 boxes",
+          "consequences": "Mild, Moderate, Severe",
+          "special": {
+            "giant_stomp": "Weapon:4 attack, on success with style, sends target flying (move 2 zones, take 1 additional stress)",
+            "club_smash": "Weapon:3 attack, can hit multiple targets in melee"
+          },
+          "tactics": "Slow but devastating attacks, usually peaceful unless provoked or camp approached",
+          "size": "Giants occupy 2 zones worth of space"
+        },
+        "mammoth": {
+          "aspects": ["Massive Beast", "Stampede Danger"],
+          "skills": {
+            "Great": ["Physique", "Fight"],
+            "Good": ["Notice"]
+          },
+          "stress": "Physical: 4 boxes",
+          "consequences": "Mild, Moderate",
+          "special": "Trample: Weapon:3, can move through zone and attack all targets in path",
+          "tactics": "Defensive unless giant is attacked, then charges aggressively"
+        }
+      },
+      "terrain": {
+        "features": ["Open tundra", "Giant camp with fire pit", "Mammoth cheese and valuables"],
+        "aspects": "'Open Ground' (nowhere to hide) or 'Camp Obstacles'"
+      },
+      "rewards": {
+        "loot": "Giant's toe (valuable alchemy), mammoth tusk (valuable), gold, cheese wheels"
+      },
+      "diplomacy_option": "Giants are not inherently hostile. Can be avoided or even befriended in rare cases.",
+      "warning": "Giants can one-shot low-level characters. Approach with extreme caution."
+    },
+    {
+      "name": "Sabre Cat Stalker",
+      "difficulty": "Moderate",
+      "location": "Mountains, caves, forests",
+      "enemy_composition": {
+        "sabre_cat": "1 Sabre Cat"
+      },
+      "stat_blocks": {
+        "sabre_cat": {
+          "aspects": ["Apex Predator", "Stealthy Hunter"],
+          "skills": {
+            "Great": ["Fight", "Stealth"],
+            "Good": ["Athletics", "Notice"],
+            "Fair": ["Physique"]
+          },
+          "stress": "Physical: 3 boxes",
+          "consequences": "Mild",
+          "special": {
+            "pounce": "If attacking from stealth, Weapon:3 and create 'Pinned' aspect on target",
+            "bleeding_bite": "On successful hit, create 'Bleeding' aspect (1 stress per exchange unless treated)"
+          },
+          "tactics": "Stalks from stealth, pounces on isolated target, disengages if seriously wounded"
+        }
+      },
+      "terrain": {
+        "features": ["Rocky terrain", "High grass", "Cave shadows"],
+        "aspects": "'Poor Visibility' for sabre cat's benefit"
+      },
+      "rewards": {
+        "loot": "Sabre cat pelt (valuable), teeth, eye"
+      }
+    }
+  ],
+  "dungeon_encounters": [
+    {
+      "name": "Draugr Ambush",
+      "difficulty": "Moderate",
+      "location": "Nordic ruins, barrows",
+      "enemy_composition": {
+        "draugr": "2-3 Draugr",
+        "draugr_wight": "1 Draugr Wight (stronger variant)"
+      },
+      "stat_blocks": {
+        "draugr": {
+          "aspects": ["Ancient Nord Undead", "Fearless Guardian"],
+          "skills": {
+            "Good": ["Fight"],
+            "Fair": ["Physique", "Notice"],
+            "Average": ["Athletics"]
+          },
+          "stress": "Physical: 2 boxes",
+          "special": "Immune to fear, poison, and disease. Vulnerable to fire (+2 stress from fire attacks)",
+          "equipment": "Ancient Nord weapon (Weapon:2)",
+          "tactics": "Mindless aggression, fight until destroyed, no self-preservation"
+        },
+        "draugr_wight": {
+          "aspects": ["Powerful Undead Warrior", "Fire Vulnerable"],
+          "skills": {
+            "Great": ["Fight"],
+            "Good": ["Physique", "Athletics"],
+            "Fair": ["Shoot"]
+          },
+          "stress": "Physical: 3 boxes",
+          "consequences": "Mild",
+          "special": {
+            "frost_breath": "Once per scene, exhale frost in zone (Weapon:2 to all targets, creates 'Chilled' aspect)",
+            "unrelenting_force_minor": "Can use Fus (1-word shout) to knock back targets"
+          },
+          "tactics": "Uses Thu'um if available, aggressive melee combatant"
+        }
+      },
+      "terrain": {
+        "features": ["Ancient sarcophagi", "Pillars", "Trapped hallways"],
+        "traps": "Pressure plates triggering darts or fire (Notice Fair +2 to spot, Overcome to disarm)",
+        "aspects": "'Ancient Ruins' or 'Trapped Corridor'"
+      },
+      "rewards": {
+        "loot": "Ancient Nord weapons, gold, possibly enchanted item in boss chest",
+        "special": "Word Wall in deeper chambers (Thu'um learning opportunity)"
+      },
+      "variations": {
+        "archer_support": "Add 1-2 Draugr Archers (Good Shoot)",
+        "boss_version": "Draugr Overlord or Death Lord (see legendary encounters)"
+      }
+    },
+    {
+      "name": "Falmer Patrol",
+      "difficulty": "Moderate to Hard",
+      "location": "Dwemer ruins, underground caves",
+      "enemy_composition": {
+        "falmer": "2-4 Falmer",
+        "chaurus": "1-2 Chaurus (insect creatures)"
+      },
+      "stat_blocks": {
+        "falmer": {
+          "aspects": ["Blind but Deadly", "Underground Dweller", "Poison User"],
+          "skills": {
+            "Good": ["Fight", "Notice (hearing only)"],
+            "Fair": ["Stealth", "Athletics"],
+            "Average": ["Shoot"]
+          },
+          "stress": "Physical: 2 boxes",
+          "special": {
+            "blind_sight": "Cannot see but has superb hearing. +2 to Notice sounds, -2 to Notice visual stealth",
+            "poisoned_weapons": "Attacks create 'Poisoned' aspect (1 stress per exchange for 2 exchanges unless treated)"
+          },
+          "tactics": "Relies on hearing, swarms targets, uses poison, fights in darkness"
+        },
+        "chaurus": {
+          "aspects": ["Giant Insect", "Spit Poison"],
+          "skills": {
+            "Good": ["Fight", "Athletics"],
+            "Fair": ["Physique"]
+          },
+          "stress": "Physical: 3 boxes",
+          "special": {
+            "poison_spit": "Ranged attack (Shoot Good +3), creates 'Poisoned' aspect on hit",
+            "chitinous_armor": "Armor: 1"
+          },
+          "tactics": "Spits poison from range, charges into melee, protects Falmer"
+        }
+      },
+      "terrain": {
+        "features": ["Complete darkness", "Dwemer machinery", "Toxic fungi"],
+        "hazards": "Without light source, party takes -2 to all actions. Falmer unaffected.",
+        "aspects": "'Pitch Black' or 'Dangerous Machinery'"
+      },
+      "rewards": {
+        "loot": "Falmer ears, chaurus chitin (crafting), Dwemer artifacts, poison samples"
+      },
+      "stealth_option": "Party can sneak past if they're very quiet (opposing Falmer's Notice+2)"
+    },
+    {
+      "name": "Necromancer and Undead",
+      "difficulty": "Hard",
+      "location": "Caves, ruins, abandoned forts",
+      "enemy_composition": {
+        "necromancer": "1 Necromancer",
+        "thralls": "2-3 Thralls (zombies)"
+      },
+      "stat_blocks": {
+        "necromancer": {
+          "aspects": ["Master of Death Magic", "Fragile Spellcaster", "Raises the Dead"],
+          "skills": {
+            "Great": ["Lore (Conjuration)"],
+            "Good": ["Will", "Notice"],
+            "Fair": ["Deceive", "Lore (Destruction)"],
+            "Average": ["Physique"]
+          },
+          "stress": "Physical: 2 boxes, Mental: 3 boxes",
+          "consequences": "Mild",
+          "special": {
+            "raise_dead": "Once per scene, raise 1-2 corpses as thralls (requires corpses in area)",
+            "drain_life": "Weapon:2 spell attack, heals necromancer for 1 stress on hit",
+            "ice_spike": "Weapon:2 frost spell attack"
+          },
+          "tactics": "Stays at range, raises undead minions, drains life, flees if threatened in melee"
+        },
+        "thrall": {
+          "aspects": ["Mindless Undead", "Animated Corpse"],
+          "skills": {
+            "Fair": ["Fight"],
+            "Average": ["Physique", "Athletics"]
+          },
+          "stress": "Physical: 2 boxes",
+          "special": "Immune to fear and mental attacks. When destroyed, can be raised again by necromancer.",
+          "tactics": "Swarm nearest living target, block access to necromancer"
+        }
+      },
+      "terrain": {
+        "features": ["Ritual circle", "Corpse piles", "Necromancer's laboratory"],
+        "aspects": "'Desecrated Ground' or 'Corpses Everywhere' (necromancer can raise more)"
+      },
+      "rewards": {
+        "loot": "Soul gems, spell tomes, necromancer robes (enchanted), alchemy ingredients",
+        "special": "Necromancer's journal (lore/story information)"
+      },
+      "tactical_note": "Focus fire on necromancer or prevent corpse raising. Undead respawn if caster lives."
+    },
+    {
+      "name": "Dwemer Automaton Defense",
+      "difficulty": "Hard to Very Hard",
+      "location": "Dwemer ruins",
+      "enemy_composition": {
+        "sphere": "1-2 Dwemer Spheres",
+        "spider": "2-3 Dwemer Spiders"
+      },
+      "stat_blocks": {
+        "dwemer_sphere": {
+          "aspects": ["Ancient Guardian Construct", "Blades and Crossbow", "Construct"],
+          "skills": {
+            "Great": ["Fight"],
+            "Good": ["Shoot", "Athletics"],
+            "Fair": ["Physique"]
+          },
+          "stress": "Physical: 4 boxes",
+          "consequences": "Mild",
+          "special": {
+            "blade_arms": "Weapon:2 melee attacks",
+            "crossbow": "Weapon:2 ranged attacks",
+            "construct_resilience": "Immune to poison, disease, mental effects. Vulnerable to shock damage (+2 stress)"
+          },
+          "tactics": "Patrols ruins, activates when intruders detected, uses crossbow at range then charges with blades"
+        },
+        "dwemer_spider": {
+          "aspects": ["Small Construct", "Explodes When Destroyed", "Fast"],
+          "skills": {
+            "Good": ["Athletics", "Fight"],
+            "Fair": ["Notice"]
+          },
+          "stress": "Physical: 1 box",
+          "special": {
+            "lightning_burst": "When destroyed, explodes dealing Weapon:2 shock damage to adjacent targets",
+            "small_and_fast": "+2 to defend against ranged attacks"
+          },
+          "tactics": "Swarms targets, sacrificial attacks to trigger explosion"
+        }
+      },
+      "terrain": {
+        "features": ["Dwemer machinery", "Steam vents", "Gears and pistons"],
+        "hazards": "Steam vents can be triggered (Weapon:2 fire damage in zone)",
+        "aspects": "'Active Machinery' or 'Steam Hazard'"
+      },
+      "rewards": {
+        "loot": "Dwemer scrap metal (valuable), Dwemer cogs and gears, soul gems from constructs"
+      },
+      "scaling": "Add Dwemer Centurion (boss-level automaton) for legendary difficulty"
+    }
+  ],
+  "faction_combat_encounters": [
+    {
+      "name": "Imperial Patrol",
+      "difficulty": "Moderate",
+      "location": "Roads, Imperial camps, cities",
+      "enemy_composition": {
+        "soldiers": "3-4 Imperial Soldiers",
+        "legate": "1 Legate (optional for higher difficulty)"
+      },
+      "stat_blocks": {
+        "imperial_soldier": {
+          "aspects": ["Disciplined Legionnaire", "Well-Equipped"],
+          "skills": {
+            "Good": ["Fight", "Athletics"],
+            "Fair": ["Shoot", "Physique", "Notice"]
+          },
+          "stress": "Physical: 3 boxes",
+          "equipment": "Imperial sword (Weapon:2), Imperial armor (Armor:2), shield",
+          "special": "Shield Wall: When adjacent to another soldier, both gain +1 to defend",
+          "tactics": "Formations, coordinated attacks, retreat to regroup if losing badly"
+        },
+        "legate": {
+          "aspects": ["Imperial Commander", "Tactical Mind"],
+          "skills": {
+            "Great": ["Fight"],
+            "Good": ["Rapport (command)", "Notice", "Will"],
+            "Fair": ["Physique", "Lore"]
+          },
+          "stress": "Physical: 3 boxes, Mental: 3 boxes",
+          "consequences": "Mild",
+          "equipment": "Imperial longsword (Weapon:2), Heavy Imperial armor (Armor:2)",
+          "special": "Command: Once per scene, all Imperial allies gain +2 to one action type for one exchange",
+          "tactics": "Commands troops, focuses on party leader, negotiates if possible"
+        }
+      },
+      "terrain": {
+        "features": ["Road", "Camp fortifications", "Elevated positions"],
+        "aspects": "'Imperial Territory' or 'Fortified Position'"
+      },
+      "diplomacy": "If party is neutral or Imperial-aligned, can negotiate instead of fight. Hostile if party is Stormcloak.",
+      "rewards": {
+        "loot": "Imperial equipment, gold, orders/intelligence"
+      }
+    },
+    {
+      "name": "Stormcloak Ambush",
+      "difficulty": "Moderate",
+      "location": "Forests, mountains, rebel camps",
+      "enemy_composition": {
+        "soldiers": "3-4 Stormcloak Soldiers",
+        "officer": "1 Stormcloak Officer (optional)"
+      },
+      "stat_blocks": {
+        "stormcloak_soldier": {
+          "aspects": ["True Son of Skyrim", "Guerrilla Fighter", "Nord Fury"],
+          "skills": {
+            "Good": ["Fight", "Survival"],
+            "Fair": ["Athletics", "Stealth", "Physique"]
+          },
+          "stress": "Physical: 3 boxes",
+          "equipment": "Nord battleaxe or sword (Weapon:2), Stormcloak armor (Armor:1)",
+          "special": "For Skyrim!: Once per scene, battle cry gives all Stormcloaks +1 to Fight for one exchange",
+          "tactics": "Ambush tactics, hit and run, aggressive charges, fight with passion"
+        },
+        "stormcloak_officer": {
+          "aspects": ["Freedom Fighter", "Inspired Leader"],
+          "skills": {
+            "Great": ["Fight"],
+            "Good": ["Provoke (inspire)", "Athletics", "Will"],
+            "Fair": ["Survival", "Physique"]
+          },
+          "stress": "Physical: 3 boxes, Mental: 3 boxes",
+          "consequences": "Mild",
+          "equipment": "Steel battleaxe (Weapon:2), Stormcloak armor (Armor:1)",
+          "special": "Rally Cry: Once per scene, all allies gain +2 to attack rolls for one exchange",
+          "tactics": "Leads from front, inspires troops, targets enemies aggressively"
+        }
+      },
+      "terrain": {
+        "features": ["Forest cover", "Mountain paths", "Hidden positions"],
+        "aspects": "'Ambush Position' or 'Home Ground Advantage'"
+      },
+      "diplomacy": "If party is neutral or Stormcloak-aligned, can negotiate. Hostile if party is Imperial.",
+      "rewards": {
+        "loot": "Stormcloak equipment, gold, Talos amulets"
+      }
+    },
+    {
+      "name": "Thalmor Justiciar Patrol",
+      "difficulty": "Hard",
+      "location": "Roads, Thalmor Embassy, cities",
+      "enemy_composition": {
+        "justiciar": "1 Thalmor Justiciar",
+        "soldiers": "2-3 Thalmor Soldiers",
+        "wizard": "1 Thalmor Wizard (optional)"
+      },
+      "stat_blocks": {
+        "thalmor_justiciar": {
+          "aspects": ["Elven Supremacist", "Magical Warrior", "Enforcer of the Concordat"],
+          "skills": {
+            "Great": ["Lore (magic)", "Fight"],
+            "Good": ["Will", "Rapport (intimidate)", "Notice"],
+            "Fair": ["Deceive", "Physique"]
+          },
+          "stress": "Physical: 3 boxes, Mental: 3 boxes",
+          "consequences": "Mild",
+          "equipment": "Elven sword (Weapon:2), Thalmor robes (Armor:1, +1 to magic)",
+          "special": {
+            "lightning_bolt": "Weapon:2 shock spell attack",
+            "ward": "+2 to defend against magic",
+            "arrogant": "Underestimates non-elven opponents"
+          },
+          "tactics": "Uses magic primarily, melee as backup, orders soldiers aggressively"
+        },
+        "thalmor_soldier": {
+          "aspects": ["Elite Altmer Warrior", "Fanatically Loyal"],
+          "skills": {
+            "Good": ["Fight", "Shoot"],
+            "Fair": ["Physique", "Will", "Athletics"]
+          },
+          "stress": "Physical: 3 boxes",
+          "equipment": "Elven weapons (Weapon:2), Elven armor (Armor:2)",
+          "tactics": "Protects Justiciar, coordinated attacks, fights to the death"
+        }
+      },
+      "terrain": {
+        "features": ["Roads", "Checkpoints", "Embassy grounds"],
+        "aspects": "'Thalmor Authority' (intimidating to locals)"
+      },
+      "diplomacy": "Thalmor are generally hostile to anyone sympathetic to Talos worship or Stormcloaks. Arrogant in negotiations.",
+      "rewards": {
+        "loot": "Elven equipment, Thalmor documents (intelligence value), gold"
+      },
+      "story_importance": "Thalmor encounters tie into main conspiracy storyline. Documents can reveal plots."
+    }
+  ],
+  "legendary_boss_encounters": [
+    {
+      "name": "Dragon Priest",
+      "difficulty": "Legendary",
+      "location": "Nordic ruins, dragon temples",
+      "enemy_composition": {
+        "dragon_priest": "1 Dragon Priest"
+      },
+      "stat_blocks": {
+        "dragon_priest": {
+          "aspects": ["Ancient Undead Sorcerer", "Master of All Magic", "Dragon Priest Mask"],
+          "skills": {
+            "Fantastic": ["Lore (all magic)"],
+            "Superb": ["Will"],
+            "Great": ["Notice"],
+            "Good": ["Fight", "Physique"]
+          },
+          "stress": "Physical: 4 boxes, Mental: 5 boxes",
+          "consequences": "Mild, Moderate, Severe",
+          "equipment": "Dragon Priest Staff (Weapon:3), Dragon Priest Mask (Armor:2, unique powers)",
+          "special_abilities": {
+            "master_destruction": "Can cast Fireball (Weapon:3, hits all in zone), Ice Storm (Weapon:3, creates 'Frozen' aspect), Lightning Storm (Weapon:4)",
+            "summon_undead": "Once per scene, summon 2-3 Draugr or Frost Atronach",
+            "magical_ward": "Armor: 2 vs. all attacks, +2 additional vs. magic",
+            "hover": "Floats, immune to ground-based obstacles and attacks",
+            "mask_power": "Each mask has unique ability (varies by priest)"
+          },
+          "tactics": "Stays at range, casts devastating spells, summons minions, uses staff and mask powers, extremely intelligent",
+          "regeneration": "Recovers 1 stress box per exchange while mask is active"
+        }
+      },
+      "terrain": {
+        "features": ["Ancient temple", "Word Wall", "Treasure hoard"],
+        "hazards": "Trapped temple, environmental magic effects",
+        "aspects": "'Ancient Power' or 'Consecrated Ground'"
+      },
+      "rewards": {
+        "loot": "Dragon Priest Mask (legendary artifact with unique power), Staff, massive gold hoard, enchanted items",
+        "special": "Word Wall teaching Thu'um word"
+      },
+      "preparation": "Party should be well-prepared with potions, strategy, and full resources. This is an epic boss fight.",
+      "variations": "Each named Dragon Priest (Morokei, Krosis, Volsung, etc.) has different mask powers and spell preferences"
+    },
+    {
+      "name": "Frost Dragon",
+      "difficulty": "Legendary",
+      "location": "Mountains, dragon lairs, word walls",
+      "enemy_composition": {
+        "dragon": "1 Frost Dragon"
+      },
+      "stat_blocks": {
+        "frost_dragon": {
+          "aspects": ["Ancient Dovah", "Master of the Thu'um", "Frost Incarnate", "Flies"],
+          "skills": {
+            "Fantastic": ["Physique"],
+            "Superb": ["Fight", "Lore (Thu'um)"],
+            "Great": ["Notice", "Athletics (flying)"],
+            "Good": ["Will"]
+          },
+          "stress": "Physical: 6 boxes",
+          "consequences": "Mild, Moderate, Severe",
+          "special_abilities": {
+            "frost_breath": "Weapon:4 attack to all in zone, creates 'Deep Freeze' aspect. Can use from air.",
+            "thu_um_mastery": "Knows multiple shouts: Frost Breath (primary), Unrelenting Force (Fus Ro Dah), Fire Breath (if elder dragon)",
+            "flight": "Can fly, making melee difficult. Archers and mages most effective. Can be grounded with Dragonrend shout if available.",
+            "bite_and_claw": "Weapon:3 melee attacks when on ground",
+            "tail_swipe": "Weapon:2 attack hitting multiple adjacent targets",
+            "wing_buffet": "Knockback attack, pushes all adjacent enemies one zone"
+          },
+          "tactics": "Flies and uses breath attacks, lands occasionally for melee, uses Thu'um strategically, highly intelligent and tactical",
+          "phases": {
+            "aerial": "Strafing breath attacks, difficult to hit with melee",
+            "grounded": "Melee combat, still uses breath and Thu'um, more vulnerable"
+          }
+        }
+      },
+      "terrain": {
+        "features": ["Open sky", "Mountain peak", "Word Wall", "Dragon lair with hoard"],
+        "aspects": "'Dragon's Domain' or 'Exposed to the Sky'"
+      },
+      "rewards": {
+        "loot": "Dragon scales and bones (crafting legendary armor/weapons), dragon soul (if Thu'um user), massive treasure hoard, possibly legendary artifact",
+        "special": "Word Wall teaching Thu'um, reputation boost as Dragon Slayer"
+      },
+      "tactical_notes": [
+        "Ranged combat essential during aerial phase",
+        "Cover to avoid breath attacks",
+        "Dragonrend Thu'um (if known) forces dragon to land",
+        "Fire damage is less effective, shock is standard, frost is resisted",
+        "Dragon will flee if reduced to severe consequence and no lair to defend"
+      ],
+      "story_impact": "Slaying a dragon is a legendary feat. NPCs treat dragon slayer with awe and respect."
+    },
+    {
+      "name": "Werewolf Pack Leader",
+      "difficulty": "Very Hard",
+      "location": "Wilderness at night, werewolf dens",
+      "enemy_composition": {
+        "alpha_werewolf": "1 Alpha Werewolf",
+        "werewolves": "2-3 Werewolves"
+      },
+      "stat_blocks": {
+        "alpha_werewolf": {
+          "aspects": ["Pack Alpha", "Beast Blood Empowered", "Ferocious and Cunning"],
+          "skills": {
+            "Superb": ["Fight"],
+            "Great": ["Athletics", "Physique"],
+            "Good": ["Notice", "Survival"],
+            "Fair": ["Stealth"]
+          },
+          "stress": "Physical: 5 boxes",
+          "consequences": "Mild, Moderate, Severe",
+          "special_abilities": {
+            "claw_attacks": "Weapon:3, can attack twice per exchange",
+            "howl": "Once per scene, all werewolves gain +2 to all actions for two exchanges",
+            "regeneration": "Recover 1 physical stress box per exchange (silver weapons prevent this)",
+            "beast_form_strength": "+3 to Physique checks",
+            "fear_aura": "Enemies must overcome Fair (+2) Will check or take -1 to all actions"
+          },
+          "weaknesses": "Silver weapons deal +2 stress and prevent regeneration for one exchange",
+          "tactics": "Pack coordination, alpha commands, brutal melee assault, uses howl to empower pack"
+        },
+        "werewolf": {
+          "aspects": ["Beast Form", "Pack Hunter"],
+          "skills": {
+            "Great": ["Fight", "Athletics"],
+            "Good": ["Physique", "Notice"],
+            "Fair": ["Stealth"]
+          },
+          "stress": "Physical: 3 boxes",
+          "consequences": "Mild",
+          "special": {
+            "claw_attacks": "Weapon:2",
+            "pack_tactics": "+1 to Fight when adjacent to another werewolf"
+          },
+          "weaknesses": "Silver weapons deal +1 stress",
+          "tactics": "Surround prey, coordinate with pack, follow alpha's lead"
+        }
+      },
+      "terrain": {
+        "features": ["Night-time forest", "Den entrance", "Moon visible"],
+        "aspects": "'Full Moon's Power' (werewolves +1 to all actions)"
+      },
+      "rewards": {
+        "loot": "Rare alchemy ingredients, possibly silver weapons from previous victims",
+        "special": "May discover cure for lycanthropy or learn werewolf secrets"
+      },
+      "moral_complexity": "Werewolves may be cursed innocents, not purely evil. Party may seek cure rather than kill."
+    }
+  ],
+  "environmental_encounter_templates": {
+    "blizzard_combat": {
+      "conditions": "Heavy snowstorm, limited visibility",
+      "effects": {
+        "all_combatants": "-1 to Notice and ranged attacks",
+        "cold_damage": "1 stress per two exchanges without cold protection",
+        "aspects": "'Blinding Snow' or 'Freezing Cold'"
+      },
+      "tactics": "Favors melee fighters, Nords, and those with cold resistance"
+    },
+    "avalanche_danger": {
+      "conditions": "Unstable snow on mountain slopes",
+      "trigger": "Loud sounds (Thu'um, explosions, giant stomps) may trigger avalanche",
+      "effect": "All in area must overcome Great (+4) Athletics or be buried (Weapon:3, creates 'Buried in Snow' aspect)",
+      "tactics": "Be careful with loud abilities, use to your advantage against enemies"
+    },
+    "ancient_ruins_traps": {
+      "common_traps": [
+        "Pressure plate arrows: Notice (Fair +2) to spot, Overcome (Fair +2) to disarm, Weapon:2 if triggered",
+        "Swinging blades: Notice (Good +3) to spot, Athletics (Good +3) to avoid, Weapon:3 if hit",
+        "Flame jets: Notice (Fair +2) to spot, Overcome (Fair +2) to disable, Weapon:2 fire if triggered",
+        "Poison darts: Stealth or Notice (Fair +2), creates 'Poisoned' aspect if hit"
+      ],
+      "integration": "Traps add danger to dungeon combats. Enemies may trigger them or force PCs into them."
+    }
+  },
+  "gm_guidance": {
+    "using_templates": [
+      "Adjust difficulty by adding/removing enemies or increasing skill levels",
+      "Combine encounters (bandits + wolves, draugr + traps)",
+      "Use terrain and aspects to make encounters memorable",
+      "Don't just use combat - allow negotiation, stealth, or clever solutions"
+    ],
+    "scaling_encounters": [
+      "For higher level parties: increase enemy skills by +1-2, add more enemies, or use advanced variants",
+      "For lower level parties: reduce enemy numbers, lower skills by -1-2, or allow easier diplomacy/escape",
+      "Use consequences and stress to gauge difficulty. If party isn't using resources, increase challenge."
+    ],
+    "making_combat_interesting": [
+      "Use environmental features (cliffs, fire pits, machinery)",
+      "Create situation aspects PCs can exploit",
+      "Have enemies use tactics (cover, flanking, focus fire)",
+      "Give enemies personality (taunts, fear reactions, clever strategies)",
+      "Offer alternative objectives (protect NPC, retrieve item, escape)"
+    ],
+    "encounter_balance": [
+      "Not every encounter should be fair - sometimes overwhelming odds or trivial fights tell story",
+      "Mix combat difficulty throughout session: easy (resource conservation), moderate (standard), hard (resource expenditure), legendary (rare, climactic)",
+      "Give PCs chance to recover between hard fights",
+      "Reward creativity - if PCs find clever solution, let it work"
+    ]
+  }
+}

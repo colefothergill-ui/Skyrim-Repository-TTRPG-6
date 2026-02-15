@@ -1,0 +1,118 @@
+{
+  "name": "Astrid",
+  "id": "npc_stat_astrid",
+  "type": "Nord Assassin",
+  "category": "Faction Leader",
+  "location": "Dark Brotherhood Sanctuary (near Falkreath)",
+  "faction": "Dark Brotherhood",
+  "aspects": {
+    "high_concept": "Ruthless Leader of the Dark Brotherhood",
+    "trouble": "Pride Before the Night Mother",
+    "other_aspects": [
+      "The Family is Everything",
+      "Married to Arnbjorn the Werewolf",
+      "Coldly Calculating in Life and Death"
+    ]
+  },
+  "skills": {
+    "Superb": ["Stealth"],
+    "Great": ["Fight", "Deceive"],
+    "Good": ["Notice", "Will"],
+    "Fair": ["Athletics", "Rapport", "Burglary"],
+    "Average": ["Physique", "Contacts", "Empathy"]
+  },
+  "stunts": [
+    "Master Assassin: +2 to Fight when attacking from stealth or ambush",
+    "Death's Whisper: +2 to Stealth when moving to kill target",
+    "Command the Shadows: Once per session, coordinate perfect assassination with family members for automatic success on target"
+  ],
+  "stress": {
+    "physical": [false, false, false],
+    "mental": [false, false, false, false]
+  },
+  "consequences": {
+    "mild": null,
+    "moderate": null,
+    "severe": null
+  },
+  "refresh": 3,
+  "armor": 1,
+  "notes": "Astrid is the leader of the Dark Brotherhood's Falkreath Sanctuary, a position she maintains through skill, ruthlessness, and dedication to 'the family.' She's fiercely protective of her Brotherhood members and will do anything to ensure their survival and prosperity. Married to the werewolf Arnbjorn, she's rejected the traditional worship of the Night Mother, instead focusing on practical business - taking contracts and getting paid. She's cold, calculating, and utterly professional about murder.",
+  "combat_tactics": "Astrid is a master assassin who prefers stealth kills. When forced into open combat, she's deadly efficient with her blade, using poisons and hit-and-run tactics. She'll retreat and reposition if needed, never letting pride override tactical advantage. She fights smarter, not harder.",
+  "scene_triggers": ["Dark Brotherhood recruitment", "Sanctuary meetings", "Contract assignments", "Civil war complications"],
+  "act_context": ["Act 1", "Act 2", "Act 3"],
+  "starting_equipment": {
+    "armor": "Shrouded Armor (Armor:1, +1 to Stealth)",
+    "weapon": "Ebony Blade (Weapon:3, poisoned)",
+    "other": ["Deadly poisons", "Sanctuary key", "Contract scrolls", "Night Mother's rejection"]
+  },
+  "social_interaction": "Astrid is cool, controlled, and direct. She doesn't waste words and expects the same from others. She speaks of murder as casually as merchants speak of sales. With Brotherhood members, she shows warmth and protection - they are her family. With outsiders, she's all business. She has dark humor and appreciates competence. She's dismissive of traditional Brotherhood dogma.",
+  "relationships": {
+    "Arnbjorn": "Husband, werewolf, fierce mutual devotion",
+    "Nazir": "Trusted lieutenant, respects his professionalism",
+    "Babette": "Vampire child assassin, protective of her",
+    "Cicero": "Keeper of Night Mother, views as fanatic and threat to her authority",
+    "Veezara": "Skilled member, values his abilities",
+    "Festus Krex": "Mage assassin, appreciates his effectiveness",
+    "Night Mother": "Rejects her authority, sees as outdated tradition"
+  },
+  "personality_notes": {
+    "speaking_style": "Cold, direct, sometimes darkly humorous, speaks of death casually, protective when discussing family",
+    "motivations": ["Protect the Brotherhood family", "Maintain profitable contract business", "Keep independence from Night Mother's dogma", "Ensure Arnbjorn's safety", "Secure the Sanctuary's future"],
+    "fears": ["Brotherhood's destruction", "Losing Arnbjorn", "Night Mother undermining her authority", "Civil war disrupting contracts", "Cicero's fanaticism destroying family"],
+    "quirks": ["Tests potential recruits with impossible choices", "Refers to Brotherhood as 'the family' constantly", "Touches her wedding ring when stressed"],
+    "character_growth": "May realize her pride was her downfall, could reconcile with tradition, or die protecting her family"
+  },
+  "dark_brotherhood_philosophy": {
+    "modern_approach": "Focuses on contracts, payment, and survival rather than religious ritual",
+    "rejects_tradition": "Dismisses Night Mother worship as superstition",
+    "family_first": "Brotherhood members are family - their safety is paramount",
+    "pragmatic": "Will take any contract if price is right and risk is acceptable",
+    "independence": "Runs Sanctuary without interference from old ways"
+  },
+  "recruitment_method": {
+    "test": "Kidnaps potential recruit, forces them to kill one of three captives to prove worth",
+    "philosophy": "Death is the business - squeamishness has no place",
+    "initiation": "If PC kills someone, they prove they belong in Brotherhood",
+    "alternative": "If PC refuses to kill, Astrid respects the unexpected choice but won't recruit"
+  },
+  "whiterun_assassination_contract": {
+    "target": "Jarl Balgruuf the Greater",
+    "client": "Anonymous (potentially Stormcloak sympathizer)",
+    "timing": "Contract offered during Battle of Whiterun preparations",
+    "complication": "Chaos of battle provides perfect cover for assassination",
+    "astrid_briefing": "Simple contract - Jarl Balgruuf. The civil war makes everyone nervous, and nervous people pay well. His death during the battle will look like war casualty. Clean, professional, profitable.",
+    "pc_choice": "PC must decide whether to take contract or refuse and choose sides in battle"
+  },
+  "civil_war_stance": {
+    "official": "Dark Brotherhood is neutral - serves whoever pays",
+    "practical": "Civil war is good for business - lots of murder contracts",
+    "concern": "Winner might crack down on Brotherhood operations",
+    "strategy": "Take contracts from both sides to maintain neutrality"
+  },
+  "story_hooks": [
+    "Recruits PC through kidnapping and choice test",
+    "Assigns assassination contracts across Skyrim",
+    "Sends PC to Whiterun with Balgruuf contract during battle",
+    "Protects Brotherhood members fiercely when threatened",
+    "Conflict with Cicero over Night Mother creates internal drama",
+    "Eventually faces consequences of rejecting traditions",
+    "Connection to Emperor assassination main questline"
+  ],
+  "dialogue_samples": {
+    "greeting": "So... you finally grace us with your presence. Or should I say... the unwitting assassin? You've already killed. Now you'll kill for us.",
+    "recruitment": "Welcome to the family. We're a close-knit group here - we protect our own. You complete contracts, you get paid, everyone's happy. Simple.",
+    "whiterun_contract": "I have a contract for you. Jarl Balgruuf of Whiterun. Anonymous client, excellent payment. The city's preparing for battle - perfect cover. His death will look like war casualty. In, kill, out. Think you can handle it?",
+    "family_protection": "Touch any member of this family, and you'll learn why I'm the one in charge. We kill for profit, but we protect each other for free.",
+    "night_mother_dismissal": "The Night Mother? Ancient corpse worshipped by fanatics like Cicero. We have real work to do - contracts, targets, coin. That's what matters."
+  },
+  "neutral_faction_integration": {
+    "starting_narrative": "Astrid found you. Whether through your actions or reputation, you've drawn the Dark Brotherhood's attention. After proving yourself, she offers you a contract. 'Jarl Balgruuf in Whiterun,' she says coolly. 'The civil war's chaos provides perfect cover. Kill him during the battle preparations, and no one will suspect the Brotherhood.'",
+    "transition_to_battle": "You arrive in Whiterun as the Battle begins. Chaos surrounds you - the perfect assassination opportunity. But as you watch Hadvar and Ralof meet in the chaos, both trying to rally defenders, you must decide: Complete Astrid's contract, or choose a side and protect the Jarl?",
+    "consequences": {
+      "take_contract": "Successful assassination earns Brotherhood gold and reputation, but makes you enemy of winning faction",
+      "refuse": "Declining angers Astrid but you can fight for a side. Brotherhood may come after you later",
+      "compromise": "Fight in battle, delay assassination - Astrid disappointed but accepts strategic delay"
+    }
+  }
+}

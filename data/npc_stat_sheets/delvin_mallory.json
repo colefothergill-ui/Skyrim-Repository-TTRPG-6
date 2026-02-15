@@ -1,0 +1,78 @@
+{
+  "name": "Delvin Mallory",
+  "id": "npc_stat_delvin_mallory",
+  "type": "Breton Thief",
+  "category": "Guild Officer",
+  "location": "Riften (Ragged Flagon - Cistern)",
+  "faction": "Thieves Guild",
+  "aspects": {
+    "high_concept": "Veteran Fence and Guild Historian",
+    "trouble": "Sentimental About the Guild's Glory Days",
+    "other_aspects": [
+      "Knows Everyone in the Underworld",
+      "Master of Black Market Trade",
+      "Mentor to Younger Thieves"
+    ]
+  },
+  "skills": {
+    "Great": ["Contacts", "Resources"],
+    "Good": ["Deceive", "Notice", "Rapport"],
+    "Fair": ["Burglary", "Lore", "Will"],
+    "Average": ["Stealth", "Fight", "Empathy"]
+  },
+  "stunts": [
+    "Black Market Connections: +2 to Contacts when dealing with fences, smugglers, or criminal networks",
+    "Appraiser's Eye: +2 to Notice when evaluating stolen goods or detecting forgeries",
+    "Old Friends Everywhere: Once per session, call in a favor from an underworld contact in any major city"
+  ],
+  "stress": {
+    "physical": [false, false],
+    "mental": [false, false, false, false]
+  },
+  "consequences": {
+    "mild": null,
+    "moderate": null,
+    "severe": null
+  },
+  "refresh": 3,
+  "armor": 0,
+  "notes": "Delvin Mallory is a veteran member of the Thieves Guild who serves as its primary fence and maintains connections throughout Skyrim's underworld. He's older, wiser, and more laid-back than most guild members. Delvin remembers the guild's glory days and yearns to see it restored. He's a mentor figure who offers advice, jobs, and connections. His extensive network of contacts makes him invaluable for moving stolen goods and establishing guild presence in cities.",
+  "combat_tactics": "Delvin avoids combat at all costs, relying on his contacts and silver tongue to talk his way out of trouble. If cornered, he'll use distractions and environmental tricks to escape.",
+  "scene_triggers": ["Ragged Flagon", "City influence planning", "Fence operations", "Guild history discussions"],
+  "act_context": ["Act 1", "Act 2", "Act 3"],
+  "starting_equipment": {
+    "armor": "Guild Vest (Armor:0)",
+    "weapon": "Guild Dagger (Weapon:1, rarely used)",
+    "other": ["Ledgers", "Contact lists across Skyrim", "Appraiser's tools", "200 gold"]
+  },
+  "social_interaction": "Delvin is friendly, talkative, and approachable. He speaks with the confidence of someone who's seen it all and survived. He's generous with advice and stories about the guild's past. He treats younger thieves like protégés and has a warm, almost fatherly demeanor despite his criminal profession.",
+  "relationships": {
+    "Brynjolf": "Close friend and fellow old-timer in the guild",
+    "Mercer Frey": "Respects as Guild Master, though sometimes questions his coldness",
+    "Vex": "Close working relationship on city influence jobs",
+    "Karliah": "Remembers her as Gallus's partner, believes traitor story",
+    "Gallus": "Former friend and guild member, mourns his death"
+  },
+  "personality_notes": {
+    "speaking_style": "Warm, conversational, uses terms of endearment like 'lad' or 'lass', tells stories",
+    "motivations": ["Restore guild to its former glory", "Help younger thieves succeed", "Maintain his network of contacts", "See guild prosper again before he retires"],
+    "fears": ["Guild's permanent decline", "Losing his contacts", "Being too old to contribute", "Outliving the guild he loves"],
+    "quirks": ["Tells stories about glory days", "Always knows someone who knows someone", "Keeps detailed ledgers", "Protective of guild traditions"],
+    "character_growth": "Delvin finds renewed purpose as the guild is restored, seeing his networks and mentorship pay off"
+  },
+  "story_hooks": [
+    "Provides city influence jobs alongside Vex",
+    "Offers fence services for stolen goods",
+    "Shares guild history and context",
+    "Can establish contacts in any major city",
+    "Provides advice on criminal enterprises and heists",
+    "Supports restoration of guild influence across Skyrim"
+  ],
+  "dialogue_samples": {
+    "greeting": "Ah, there you are, lad. Come to hear about the old days, or are you here for business?",
+    "job_offer": "I've got some work that needs doing in the cities. Nothing too fancy, just helping the guild get its foot back in the door, you know?",
+    "fence": "Whatever you've got, I can move it. That's what I do. The guild's been doing this for centuries, and I know every fence from here to Solitude.",
+    "nostalgic": "You should've seen the guild back in the day. We had the jarls eating out of our hands, and the coin flowed like mead at a Nord wedding.",
+    "supportive": "You're doing good work, really bringing the guild back. Makes an old man like me proud to see it."
+  }
+}

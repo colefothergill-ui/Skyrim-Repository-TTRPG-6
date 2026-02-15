@@ -1,0 +1,50 @@
+{
+  "name": "Dragon Priest",
+  "id": "npc_stat_dragon_priest",
+  "type": "Undead Mage",
+  "category": "Enemy",
+  "location": "Dragon priest lairs, word walls, ancient temples",
+  "faction": "Dragon Cult",
+  "aspects": {
+    "high_concept": "Undying Servant of the Dragons - Master of Ancient Magic",
+    "trouble": "Bound to Their Lair and Duty",
+    "other_aspects": [
+      "Wears a Powerful Ancient Mask",
+      "Commands Draugr Legions",
+      "Wielder of Devastating Destruction Magic",
+      "Fanatical Devotion to Dragon Masters"
+    ]
+  },
+  "skills": {
+    "Legendary": ["Lore"],
+    "Superb": ["Will"],
+    "Great": ["Notice", "Fight"],
+    "Good": ["Physique", "Deceive"],
+    "Fair": ["Athletics", "Provoke"],
+    "Average": ["Stealth"]
+  },
+  "stunts": [
+    "Ancient Mask Power: Each Dragon Priest's mask grants unique powers (e.g., +3 to specific magic school, damage immunity, summon spectral warriors)",
+    "Staff of Magnus: Can wield powerful ancient staves that drain magicka or deal massive elemental damage",
+    "Master of Destruction: +3 to Lore when casting destructive elemental spells (fire, frost, lightning)",
+    "Summon Draugr: Once per scene, summon 2-3 Draugr warriors or a Draugr Overlord to fight",
+    "Magical Ward: Automatically create 'Impenetrable Ward' aspect at start of combat (three free invokes, resists magical attacks)",
+    "Death Throes: When defeated, create explosion in zone dealing damage to all enemies (Fair difficulty to defend)"
+  ],
+  "stress": {
+    "physical": [false, false, false, false, false, false],
+    "mental": [false, false, false, false, false]
+  },
+  "consequences": {
+    "mild": null,
+    "moderate": null,
+    "severe": null
+  },
+  "refresh": 7,
+  "fate_points": 7,
+  "notes": "Dragon Priests are the most powerful undead enemies in Skyrim - ancient Nord mages who served the dragons in life and were granted immortality. Though the Dragon Cult is defunct and Alduin defeated, these guardians remain bound to their lairs. They wear distinctive masks that grant them incredible powers. Each guards a word wall or important dragon cult site. They command vast magical power and can summon draugr to their aid. Defeating one is a legendary accomplishment.",
+  "combat_tactics": "Dragon Priests hover or levitate, maintaining distance. They open with powerful area-of-effect destruction spells and maintain magical wards. They summon draugr to occupy melee combatants while they cast devastating magic. They use staff attacks to drain enemy resources. They never flee and fight until destroyed, exploding when defeated.",
+  "scene_triggers": ["Word wall discoveries", "Dragon priest lair quests", "Ancient Nordic temple final chambers", "Major dungeon bosses"],
+  "act_context": ["Act 2", "Act 3"],
+  "loot": ["Dragon Priest Mask (unique, powerful)", "Ancient staff", "High-level spell tomes", "Rare enchanted weapons", "Large quantities of gold", "Rare alchemical ingredients"]
+}

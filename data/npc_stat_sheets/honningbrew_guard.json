@@ -1,0 +1,89 @@
+{
+  "name": "Honningbrew Guard",
+  "id": "npc_stat_honningbrew_guard",
+  "type": "Nord Guard",
+  "category": "Friendly NPC",
+  "role": "Security",
+  "location": "Whiterun (Honningbrew Meadery)",
+  "faction": "Whiterun Guard",
+  "aspects": {
+    "high_concept": "Bored Guard on Pest Control Duty",
+    "trouble": "This Job Is Beneath My Training",
+    "other_aspects": [
+      "Would Rather Be Fighting Dragons Than Skeevers",
+      "Competent But Unmotivated",
+      "Just Following Orders"
+    ]
+  },
+  "skills": {
+    "Great": ["Fight"],
+    "Good": ["Notice", "Physique"],
+    "Fair": ["Athletics", "Will"],
+    "Average": ["Stealth", "Shoot"]
+  },
+  "stunts": [
+    "Shield Wall: +2 to Defend with Fight when using a shield",
+    "Watchful Eye: +2 to Notice when on patrol or guard duty",
+    "Armor Training: Can ignore 1 shift of Physical stress once per scene due to armor"
+  ],
+  "stress": {
+    "physical": [false, false, false],
+    "mental": [false, false]
+  },
+  "consequences": {
+    "mild": null,
+    "moderate": null,
+    "severe": null
+  },
+  "refresh": 3,
+  "armor": 2,
+  "notes": "This guard has been assigned to help with the pest problem at Honningbrew Meadery. He's a competent but unenthusiastic Whiterun guard who feels this duty is beneath him - he joined to fight bandits and protect the hold, not chase skeevers through a basement. He's bored, slightly resentful of the assignment, but professional enough to do his job. He'll help clear the meadery but won't go out of his way to investigate suspicious circumstances unless directly told to do so by a superior. He's typical of Whiterun guards: loyal to the Jarl, competent in basic combat, and more interested in proper threats than pest control.",
+  "combat_tactics": "Standard guard tactics - shield and sword, defensive positioning, calls for backup if seriously threatened. Against skeevers, he's competent but not enthusiastic. Against real threats, he's professional and effective.",
+  "scene_triggers": ["Honningbrew Meadery", "Dampened Spirits quest", "Basement clearing", "Guard duty"],
+  "act_context": ["Act 1"],
+  "starting_equipment": {
+    "armor": "Imperial Light Armor (Armor:2)",
+    "weapon": "Imperial Sword (Weapon:2) and Shield (Defense bonus)",
+    "other": ["Guard whistle", "Health potion x1", "Torch", "10 gold"]
+  },
+  "social_interaction": "Professional but unenthusiastic. He'll answer questions about the pest problem and his orders, but he clearly thinks this is a waste of his time. He's more interested in talking about 'real' guard work - bandit raids, dragon sightings, the civil war. He'll follow orders and help with the job, but don't expect enthusiasm. He can be friendly in a gruff, warrior-to-warrior way if the PC treats him with respect.",
+  "relationships": {
+    "Commander Caius": "Superior officer, follows his orders",
+    "Sabjorn": "Civilian employer for this assignment, cooperative but not close",
+    "Other Whiterun Guards": "Fellow guards, professional camaraderie",
+    "PC": "Neutral, will treat as ally if PC helps with pest clearing"
+  },
+  "personality_notes": {
+    "speaking_style": "Gruff, professional, slightly complaining, typical Nord guard",
+    "motivations": ["Complete assignment and return to proper guard duty", "Avoid getting bitten by skeevers", "Maintain professional reputation", "Get back to real guard work"],
+    "fears": ["Serious injury from a 'mere' skeever infestation would be embarrassing", "Missing real action elsewhere", "Looking incompetent"],
+    "quirks": ["Complains about being assigned to pest control", "Perks up when discussing real combat", "Maintains equipment meticulously despite boring duty"],
+    "character_growth": "None expected - he's a stock guard NPC"
+  },
+  "story_hooks": [
+    "Can assist PC in clearing Honningbrew basement",
+    "Provides information about Sabjorn's pest problems",
+    "May notice suspicious activity if PC points it out",
+    "Can be distracted, bribed, or convinced to look the other way",
+    "Represents official Whiterun Guard presence at the meadery"
+  ],
+  "dialogue_samples": {
+    "greeting": "You here about the pest problem too? Good. Maybe with help we can clear this place and I can get back to real guard work.",
+    "complaining": "Skeevers. I trained with the Companions' techniques, survived bandit raids, and now I'm hunting rats in a basement.",
+    "professional": "I've got my orders. We clear the pests, secure the meadery, report back to Commander Caius. Simple enough.",
+    "cooperative": "You know how to handle yourself in a fight. Good. Watch your flanks down there - skeevers like to swarm.",
+    "afterwards": "Well, that's done. I'll make my report. If you need anything else, talk to Commander Caius."
+  },
+  "dampened_spirits_context": {
+    "role": "Official guard presence for pest clearing",
+    "orders": "Help clear skeever infestation, ensure meadery security, report back",
+    "awareness": "Doesn't suspect sabotage unless PC or evidence makes it obvious",
+    "flexibility": "Will follow PC's lead if they seem competent and help with the job",
+    "authority": "Can arrest Mallus if given clear evidence and reason"
+  },
+  "combat_stats": {
+    "typical_tactics": "Shield wall defense, controlled sword strikes, calls for backup if outnumbered",
+    "vs_skeevers": "Competent but annoyed, fights defensively to avoid bites",
+    "vs_real_threats": "Professional and effective, standard guard training"
+  }
+}

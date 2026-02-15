@@ -1,0 +1,49 @@
+{
+  "name": "Jarl Siddgeir",
+  "id": "npc_stat_siddgeir",
+  "type": "Nord Noble",
+  "category": "Friendly NPC",
+  "location": "Falkreath",
+  "faction": "Imperial-aligned Falkreath Court",
+  "aspects": {
+    "high_concept": "Indolent Young Jarl of Falkreath",
+    "trouble": "Nepotism and Complacency",
+    "other_aspects": [
+      "Imperial Favor: Placed in power due to Empire's influence",
+      "Enjoys Comforts of Jarlship (luxury over duty)",
+      "Underestimates the Dangers in His Hold"
+    ]
+  },
+  "skills": {
+    "Great": ["Contacts"], 
+    "Good": ["Rapport", "Resources"],
+    "Fair": ["Deceive", "Will"],
+    "Average": ["Empathy", "Fight", "Notice"]
+  },
+  "stunts": [
+    "Do You Know Who I Am?: +2 to Rapport or Intimidation when invoking his title as Jarl to influence someone.",
+    "Imperial Connections: Once per session, can call on an Imperial resource or favor (funds, soldiers) to solve a problem (GM determines exact effect)."
+  ],
+  "stress": {
+    "physical": [false, false],
+    "mental": [false, false, false]
+  },
+  "consequences": {
+    "mild": null,
+    "moderate": null,
+    "severe": null
+  },
+  "refresh": 2,
+  "notes": "Siddgeir became Jarl of Falkreath through family ties and Imperial backing, not through personal merit. He is affable but lazy, preferring others do the hard work while he enjoys mead and comfort. He often appears disinterested or dismissive of threats, unless his own status is challenged.",
+  "personality_traits": {
+    "motivations": ["Maintain his easy life as Jarl", "Keep Imperial support to stay in power", "Avoid anything that requires hard effort"],
+    "attitude_towards_players": "Initially condescending or flippant. If impressed (e.g., by completing tasks for him), he becomes friendlier and offers rewards, possibly the title of Thane.",
+    "voice_style": "Drawling and lazy, with an undercurrent of entitlement. He addresses commoners with a casual disregard."
+  },
+  "relationships": {
+    "Dengeir of Stuhn": "Uncle and former Jarl; Siddgeir is wary of Dengeir's influence and paranoid claims.",
+    "Nenya": "Steward who actually runs Falkreath's day-to-day affairs; Siddgeir trusts her to handle work he avoids.",
+    "Imperial Legion": "Allies; relies on Imperial support to legitimize his rule. He offers hospitality to Imperial officers.",
+    "Stormcloaks": "Enemies; considers them rebels and knows they'd remove him in favor of Dengeir if they could."
+  }
+}

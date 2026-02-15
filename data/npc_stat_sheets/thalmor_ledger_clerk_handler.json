@@ -1,0 +1,64 @@
+{
+  "name": "Thalmor Handler (Ledger-Clerk)",
+  "id": "thalmor_ledger_clerk_handler",
+  "type": "NPC",
+  "category": "Antagonist",
+  "location": "Whiterun (Plains District / checkpoints)",
+  "faction": "Thalmor",
+  "aspects": {
+    "high_concept": "Civilian Disguise Handler Running Dominion Paper Trails",
+    "trouble": "Sees Patterns Everywhere",
+    "other": [
+      "Silver Ring of Authority",
+      "Ink-Stained Hands, Bloodless Orders"
+    ]
+  },
+  "skills": {
+    "Great": [
+      "Investigate"
+    ],
+    "Good": [
+      "Notice",
+      "Deceive"
+    ],
+    "Fair": [
+      "Lore",
+      "Stealth"
+    ],
+    "Average": [
+      "Will",
+      "Rapport"
+    ]
+  },
+  "stunts": [
+    {
+      "name": "Paper Is a Weapon",
+      "description": "Because the handler controls records and informants, gain +2 to Create Advantage with Investigate when constructing a suspect profile from partial clues."
+    },
+    {
+      "name": "Quiet Contact Web",
+      "description": "Once per scene, may spend a free invoke on a city-wide surveillance aspect (if it exists) as if they were present, representing informants."
+    }
+  ],
+  "stress": {
+    "physical": 2,
+    "mental": 2
+  },
+  "consequences": {
+    "mild": "",
+    "moderate": "",
+    "severe": ""
+  },
+  "refresh": 1,
+  "armor": 0,
+  "notes": "Looks like a clerk, moves like a spy. Not a frontline Justiciar, but more dangerous in the long game. If threatened, they disappear behind guards and paperwork.",
+  "combat_tactics": "Avoid combat. Flees, calls for guards, and tries to preserve evidence/witnesses. Prefers ambush setups over confrontation.",
+  "scene_triggers": {
+    "sighting": "If the PC leaves a signature trail, the handler advances Thalmor clocks and dispatches probing encounters."
+  },
+  "dialogue_samples": [
+    "Curious. This ink does not match.",
+    "Names are less important than patterns.",
+    "Every city has its quiet doors. We own several."
+  ]
+}

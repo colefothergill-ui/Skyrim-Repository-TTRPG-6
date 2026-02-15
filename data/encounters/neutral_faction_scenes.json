@@ -1,0 +1,547 @@
+{
+  "system_name": "Neutral Faction Dynamic Encounter System",
+  "description": "Interaction scenes and recruitment opportunities for neutral factions that adapt based on PC faction allegiance and progression.",
+  "version": "1.0",
+  "encounter_types": {
+    "thieves_guild": {
+      "faction": "Thieves Guild",
+      "headquarters": "The Ragged Flagon, Riften",
+      "initial_contact": {
+        "name": "A Chance Arrangement - Brynjolf's Approach",
+        "location": "Riften Market Square",
+        "trigger": "PC enters Riften for the first time or visits marketplace",
+        "npc": "Brynjolf",
+        "scene_description": "Brynjolf, a charming Nord thief, approaches you in Riften's bustling market. He's clearly evaluating you, looking for someone with potential.",
+        "opening_dialogue": {
+          "brynjolf": "Never done an honest day's work in your life for all that coin you're carrying, eh lad/lass? Come on over here, I want to talk to you about a business opportunity."
+        },
+        "player_options": [
+          {
+            "option": "Listen to Brynjolf's proposal",
+            "leads_to": "recruitment_pitch",
+            "reputation_change": 0
+          },
+          {
+            "option": "Ask what kind of business",
+            "leads_to": "thieves_guild_explanation",
+            "skill_check": "Rapport or Deceive (Fair +2) to seem interested"
+          },
+          {
+            "option": "Refuse and walk away",
+            "leads_to": "encounter_ends",
+            "note": "Can still be recruited later, Brynjolf tries again if PC commits crime"
+          },
+          {
+            "option": "Report him to guards",
+            "leads_to": "hostile_thieves_guild",
+            "consequence": "Thieves Guild becomes hostile, locks out faction"
+          }
+        ],
+        "recruitment_pitch": {
+          "description": "Brynjolf explains he needs someone to create a distraction while he plants evidence on a competitor. Simple job, good pay.",
+          "quest": "A Chance Arrangement",
+          "reward": "20 gold, introduction to Thieves Guild",
+          "skill_checks": [
+            "Deceive (Fair +2) to frame Madesi convincingly",
+            "Pickpocket (Good +3) to steal ring if taking that approach",
+            "Rapport (Fair +2) to create believable distraction"
+          ],
+          "success": "Brynjolf is impressed, invites PC to Ragged Flagon to meet Mercer Frey",
+          "failure": "Caught by guards, Brynjolf disappears. Can try again later with penalty to reputation."
+        },
+        "faction_adaptation": {
+          "imperial_aligned": {
+            "brynjolf_comment": "Don't worry about your Imperial friends. The Guild doesn't take sides in politics. Coin is coin.",
+            "note": "Thieves Guild accepts Imperials but may have fewer targets in Imperial-controlled areas"
+          },
+          "stormcloak_aligned": {
+            "brynjolf_comment": "A true Nord, eh? Good. Riften's Jarl understands the value of... practical business arrangements.",
+            "note": "Slight reputation bonus (+5) with Guild due to Stormcloak-sympathetic leadership"
+          },
+          "neutral": {
+            "brynjolf_comment": "Smart. Don't get caught up in politics. Let the soldiers fight while we make coin.",
+            "note": "Standard recruitment, no penalties or bonuses"
+          }
+        }
+      },
+      "progression_encounters": [
+        {
+          "name": "Loud and Clear - First Guild Job",
+          "trigger": "Accept Brynjolf's invitation to Ragged Flagon",
+          "objective": "Complete training job with Vex and Mercer Frey",
+          "npc": "Mercer Frey, Brynjolf, Vex, Delvin Mallory",
+          "reputation_gain": 20,
+          "unlocks": "Guild member status, radiant quests"
+        },
+        {
+          "name": "Goldenglow Estate Heist",
+          "trigger": "Complete initial training",
+          "objective": "Burn three beehives and clear safe in Goldenglow Estate",
+          "difficulty": "Good (+3) Stealth and lockpicking challenges",
+          "reputation_gain": 15,
+          "loot": "Various valuables, 500+ gold potential"
+        },
+        {
+          "name": "Speaking with Silence - Karliah Encounter",
+          "trigger": "After several guild jobs, Mercer betrayal revealed",
+          "description": "Meet Karliah, discover Mercer's treachery, learn about Nightingales",
+          "major_story_branch": true,
+          "reputation_gain": 25,
+          "unlocks": "Nightingale path option"
+        }
+      ]
+    },
+    "college_of_winterhold": {
+      "faction": "College of Winterhold",
+      "headquarters": "College of Winterhold",
+      "initial_contact": {
+        "name": "First Lessons - Farengar Secret-Fire Connection",
+        "location": "Dragonsreach, Whiterun OR College of Winterhold entrance",
+        "trigger": "PC shows interest in magic or visits College",
+        "npc": "Farengar Secret-Fire (in Whiterun) or Faralda (at College)",
+        "scene_description": "The College of Winterhold accepts those who demonstrate magical aptitude. Multiple entry paths exist depending on PC's location and progression.",
+        "entry_path_1_whiterun": {
+          "npc": "Farengar Secret-Fire",
+          "location": "Dragonsreach, Court Wizard's quarters",
+          "trigger": "PC completes 'Bleak Falls Barrow' quest or shows interest in magic",
+          "opening_dialogue": {
+            "farengar": "Ah, an adventurer. Perfect. I have need of someone with your... particular skills. I'm researching ancient Nordic magic and need artifacts. The College of Winterhold would be interested in someone like you."
+          },
+          "player_options": [
+            {
+              "option": "Ask about the College",
+              "leads_to": "college_explanation",
+              "farengar_response": "The premiere institution of magical learning in Skyrim. They're always looking for promising students. I can provide a recommendation if you assist my research."
+            },
+            {
+              "option": "Offer to help with research",
+              "leads_to": "research_quest",
+              "quest": "Assist Farengar with magical research",
+              "reward": "Letter of recommendation to College, +10 College reputation"
+            },
+            {
+              "option": "Ask about learning magic",
+              "leads_to": "basic_spell_training",
+              "farengar_response": "I can teach you basics here, but for true mastery, you need the College. Here, take this spell tome as a start."
+            }
+          ]
+        },
+        "entry_path_2_direct": {
+          "npc": "Faralda",
+          "location": "College of Winterhold bridge entrance",
+          "trigger": "PC travels to College",
+          "opening_dialogue": {
+            "faralda": "Hold. The College of Winterhold is not open to all. You must demonstrate magical aptitude before entry is permitted. Can you cast a spell?"
+          },
+          "entrance_test": {
+            "requirement": "Cast any spell OR pass Lore check (Good +3) to demonstrate magical knowledge",
+            "options": [
+              "Cast spell (any school)",
+              "Lore check to discuss magical theory",
+              "Show magical item as proof of interest",
+              "Present Farengar's recommendation (automatic pass)"
+            ],
+            "success": "Faralda admits PC to College, introduces to Mirabelle Ervine",
+            "failure": "Asked to return when more experienced. Can try again later or get recommendation."
+          }
+        },
+        "recruitment_quest": {
+          "name": "First Lessons",
+          "description": "Meet Tolfdir, attend first lecture, complete training exercise at Saarthal",
+          "skill_checks": [
+            "Lore (Fair +2) to understand magical principles",
+            "Will (Fair +2) to maintain concentration during exercises"
+          ],
+          "reward": "Official College membership, access to trainers and facilities",
+          "reputation_gain": 20
+        },
+        "faction_adaptation": {
+          "imperial_aligned": {
+            "npc_reactions": "College is neutral but appreciates Imperial respect for learning. +1 to Rapport with instructors.",
+            "note": "No mechanical difference, College stays neutral"
+          },
+          "stormcloak_aligned": {
+            "npc_reactions": "Some College members (especially Nords like Arniel) sympathize with Stormcloaks, but College officially neutral.",
+            "note": "Slight tension with non-Nord mages but no penalties"
+          },
+          "neutral": {
+            "npc_reactions": "College strongly approves of political neutrality. Fits their philosophy perfectly.",
+            "bonus": "+5 reputation for staying neutral in civil war"
+          }
+        }
+      },
+      "progression_encounters": [
+        {
+          "name": "Under Saarthal",
+          "trigger": "Complete First Lessons",
+          "objective": "Excavate Saarthal with Tolfdir, discover Eye of Magnus",
+          "npc": "Tolfdir, Arniel Gane",
+          "reputation_gain": 15,
+          "major_discovery": "Eye of Magnus (major plot point)",
+          "unlocks": "Advanced spell training"
+        },
+        {
+          "name": "Staff of Magnus Quest Chain",
+          "trigger": "After Under Saarthal",
+          "description": "Recover Staff of Magnus from Labyrinthian to control the Eye",
+          "difficulty": "Superb (+5) magical and combat challenges",
+          "reputation_gain": 30,
+          "reward": "Staff of Magnus (unique artifact)"
+        },
+        {
+          "name": "Arch-Mage Ascension",
+          "trigger": "Complete Staff of Magnus quest",
+          "description": "Become Arch-Mage after defeating magical threat",
+          "reputation_gain": 40,
+          "unlocks": "Arch-Mage status, all College resources"
+        }
+      ]
+    },
+    "blades": {
+      "faction": "The Blades",
+      "headquarters": "Sky Haven Temple (hidden)",
+      "status": "Secretive, nearly destroyed by Thalmor",
+      "initial_contact": {
+        "name": "A Blade in the Dark - Delphine's Test",
+        "location": "Sleeping Giant Inn, Riverwood OR Kynesgrove",
+        "trigger": "PC investigates dragon sightings or interacts with Delphine in Riverwood",
+        "npc": "Delphine",
+        "scene_description": "Delphine, innkeeper of the Sleeping Giant Inn, is secretly a Blade. She's been watching you, evaluating whether you can be trusted.",
+        "trust_building": {
+          "stage_1": "Delphine tests PC subtly through conversations and observations",
+          "stage_2": "If PC proves competent, Delphine reveals her identity as a Blade",
+          "stage_3": "Delphine asks PC to investigate dragon activity and prove loyalty"
+        },
+        "opening_dialogue": {
+          "delphine": "You're that adventurer everyone's talking about. I've been keeping an eye on things, and something's not right with these dragons appearing. If you're interested in truth rather than coin, we should talk... privately."
+        },
+        "player_options": [
+          {
+            "option": "Express interest in dragons",
+            "leads_to": "dragon_investigation",
+            "delphine_response": "Good. Meet me in the back room after midnight. Come alone."
+          },
+          {
+            "option": "Ask about her suspicions",
+            "leads_to": "blades_revelation",
+            "skill_check": "Empathy (Fair +2) to read her caution"
+          },
+          {
+            "option": "Dismiss her concerns",
+            "leads_to": "delayed_recruitment",
+            "note": "Delphine waits, tries again later if PC proves capable"
+          }
+        ],
+        "recruitment_quest": {
+          "name": "A Blade in the Dark",
+          "description": "Investigate dragon resurrection at Kynesgrove, witness Alduin's power (or dragon activity post-Alduin)",
+          "objective": "Prove you're capable and trustworthy enough to learn Blades secrets",
+          "skill_checks": [
+            "Notice (Good +3) to observe dragon patterns",
+            "Stealth (Fair +2) to avoid detection during investigation",
+            "Fight (Good +3) if encountering hostile forces"
+          ],
+          "success": "Delphine reveals she's a Blade, invites PC to Sky Haven Temple",
+          "reputation_gain": 25
+        },
+        "faction_adaptation": {
+          "imperial_aligned": {
+            "delphine_reaction": "Cautiously positive. Blades historically served Empire, but Imperials now submit to Thalmor.",
+            "trust_penalty": "-5 initial reputation due to Imperial-Thalmor connection",
+            "dialogue": "I served the Empire once. But the Empire that bows to the Thalmor is not the Empire I knew. Prove you're different."
+          },
+          "stormcloak_aligned": {
+            "delphine_reaction": "Approves. Stormcloaks oppose Thalmor, aligning with Blades' primary enemy.",
+            "trust_bonus": "+10 initial reputation due to anti-Thalmor stance",
+            "dialogue": "You fight for Skyrim's independence from those who destroyed the Blades. I respect that. We have common enemies."
+          },
+          "neutral": {
+            "delphine_reaction": "Evaluates based on actions against Thalmor rather than faction",
+            "note": "Standard progression, reputation based purely on PC's proven capabilities"
+          }
+        }
+      },
+      "progression_encounters": [
+        {
+          "name": "Alduin's Wall",
+          "trigger": "Accept Delphine's invitation",
+          "objective": "Reach Sky Haven Temple, decipher Alduin's Wall prophecy",
+          "npc": "Delphine, Esbern",
+          "reputation_gain": 20,
+          "unlocks": "Access to Sky Haven Temple, Blades archives"
+        },
+        {
+          "name": "Rebuilding the Blades",
+          "trigger": "After establishing base at Sky Haven Temple",
+          "description": "Recruit warriors to rebuild the Blades order",
+          "objective": "Find 3+ worthy followers to join Blades",
+          "reputation_gain": "15 per recruit",
+          "note": "Some followers may refuse if it requires killing Paarthurnax"
+        },
+        {
+          "name": "Thalmor Strikes - Anti-Thalmor Operations",
+          "trigger": "Blades membership established",
+          "description": "Conduct covert operations against Thalmor in Skyrim",
+          "objective": "Disrupt Thalmor intelligence, rescue prisoners, recover Blade artifacts",
+          "difficulty": "Great (+4) stealth and combat challenges",
+          "reputation_gain": "25 per major operation",
+          "story_impact": "Major factor in Thalmor conspiracy storyline"
+        }
+      ]
+    },
+    "dark_brotherhood": {
+      "faction": "Dark Brotherhood",
+      "headquarters": "Dark Brotherhood Sanctuary (hidden location)",
+      "status": "Secretive assassin's guild",
+      "initial_contact": {
+        "name": "Innocence Lost - Astrid's Abduction",
+        "location": "Various (PC is abducted during sleep)",
+        "trigger": "PC kills someone (any NPC) OR learns about Aventus Aretino in Windhelm OR performs Black Sacrament",
+        "npc": "Astrid",
+        "scene_description": "You wake in an abandoned shack, hands bound. A woman in dark leather armor stands before you, a blade in her hand and an unsettling smile on her face.",
+        "opening_dialogue": {
+          "astrid": "Sleep well? You've been busy. Killing. Murdering. Either someone wants you dead, or you're trying to get our attention. So which is it? Want to join the family, or should I kill you now?"
+        },
+        "recruitment_test": {
+          "description": "Three bound captives are before you. Astrid demands you kill one to prove yourself.",
+          "captives": ["Fultheim the Fearless", "Vasha the Khajiit", "Alea Quintus"],
+          "player_options": [
+            {
+              "option": "Kill one of the captives",
+              "leads_to": "brotherhood_recruitment",
+              "astrid_response": "Perfect. You have potential. The Dark Brotherhood will contact you again. Sleep well."
+            },
+            {
+              "option": "Kill all three captives",
+              "leads_to": "impress_astrid",
+              "astrid_response": "Oh my. Overachieving. I like that. The family will be very interested in you."
+            },
+            {
+              "option": "Refuse to kill anyone",
+              "leads_to": "astrid_disappointed",
+              "astrid_response": "Shame. You showed such promise. I suppose I'll have to kill you instead.",
+              "consequence": "Must fight Astrid or escape, locks out Dark Brotherhood"
+            },
+            {
+              "option": "Attack Astrid",
+              "leads_to": "destroy_brotherhood_path",
+              "consequence": "Triggers 'Destroy the Dark Brotherhood' alternate questline",
+              "note": "Can wipe out Brotherhood instead of joining"
+            }
+          ]
+        },
+        "post_test": {
+          "description": "Return to sleep anywhere. Astrid contacts you again, invites to Dark Brotherhood Sanctuary.",
+          "reputation_gain": 20,
+          "unlocks": "Dark Brotherhood membership, assassination contracts"
+        },
+        "faction_adaptation": {
+          "imperial_aligned": {
+            "brotherhood_reaction": "Neutral. Brotherhood cares only about contracts and coin, not politics.",
+            "note": "May receive contracts targeting Stormcloaks, aligning with Imperial goals"
+          },
+          "stormcloak_aligned": {
+            "brotherhood_reaction": "Neutral. Will take contracts from any side.",
+            "note": "May receive contracts targeting Imperials, aligning with Stormcloak goals"
+          },
+          "neutral": {
+            "brotherhood_reaction": "Appreciates neutrality. Makes you unpredictable and valuable.",
+            "bonus": "More diverse contract options available"
+          },
+          "all_factions": {
+            "warning": "Dark Brotherhood membership is secret. If exposed, faces persecution from all legitimate factions. Social consequences if discovered."
+          }
+        }
+      },
+      "progression_encounters": [
+        {
+          "name": "Sanctuary Welcome",
+          "trigger": "Accept Astrid's invitation",
+          "objective": "Meet Dark Brotherhood family, receive first contract",
+          "npc": "Astrid, Nazir, Babette, Cicero, others",
+          "reputation_gain": 15,
+          "unlocks": "Contract system, Brotherhood perks"
+        },
+        {
+          "name": "Contract Kills",
+          "trigger": "Ongoing Brotherhood membership",
+          "description": "Complete assassination contracts for gold and reputation",
+          "difficulty": "Varies (Fair +2 to Fantastic +6)",
+          "reputation_gain": "5-20 per contract depending on difficulty",
+          "rewards": "Gold, unique items, assassination techniques"
+        },
+        {
+          "name": "Cure for Madness - Cicero Crisis",
+          "trigger": "After several contracts",
+          "description": "Cicero goes mad and attacks. Must track him down.",
+          "major_decision": "Kill Cicero or spare him",
+          "reputation_impact": "Varies based on choice",
+          "story_impact": "Affects Brotherhood's future"
+        },
+        {
+          "name": "Emperor Assassination",
+          "trigger": "Late Brotherhood questline",
+          "description": "Ultimate contract: assassinate the Emperor himself",
+          "difficulty": "Legendary (+7) stealth and planning challenge",
+          "reputation_gain": 50,
+          "reward": "Become Listener, lead Brotherhood"
+        }
+      ]
+    },
+    "companions": {
+      "faction": "The Companions",
+      "headquarters": "Jorrvaskr, Whiterun",
+      "status": "Honor-bound warrior guild (neutral in Civil War)",
+      "initial_contact": {
+        "name": "Trouble at the Farm - Giant Slaying Introduction",
+        "location": "Near Pelagia Farm, Whiterun Outskirts",
+        "trigger": "PC encounters a giant attacking the farm (early Act I)",
+        "npc": "Aela the Huntress, Farkas",
+        "scene_description": "A giant roars in pain as two warriors engage it. Aela looses arrows while Farkas closes in with his blade. The farmers cower. You arrive as the battle hangs in the balance.",
+        "player_options": [
+          {
+            "option": "Help the Companions defeat the giant",
+            "leads_to": "companions_recruitment_offer",
+            "skill_check": "Fight or Shoot (Average +1) to significantly wound the giant"
+          },
+          {
+            "option": "Stay back and watch",
+            "leads_to": "companions_outcome_observe",
+            "note": "The giant is defeated by the Companions; PC is chastised for inaction but can still approach"
+          }
+        ],
+        "companions_recruitment_offer": {
+          "dialogue": "Aela approaches, impressed. \"Not bad. You handle yourself well. Ever thought about joining the Companions?\"",
+          "quest": "Join the Companions",
+          "reward": "Invitation to Jorrvaskr (Companions headquarters)",
+          "faction_alignment": "neutral"
+        },
+        "companions_outcome_observe": {
+          "description": "The giant collapses under the Companions' assault. Farkas notices you watching.",
+          "outcome": "Farkas grunts about needing more brave souls. Aela still offers the PC a chance to prove themselves at Jorrvaskr."
+        }
+      },
+      "faction_adaptation": {
+        "imperial_aligned": {
+          "aela_comment": "You fight with discipline. Good. The Companions respect strength, not politics.",
+          "note": "Companions are neutral but appreciate martial skill regardless of allegiance"
+        },
+        "stormcloak_aligned": {
+          "aela_comment": "A true Nord warrior. The Companions have always stood for Skyrim's honor.",
+          "note": "Slight cultural affinity, +5 reputation bonus for Nord traditions",
+          "farkas_comment": "Good to see someone who fights for what they believe in."
+        },
+        "neutral": {
+          "aela_comment": "Smart. The Companions don't take sides in politics. We fight for honor, not banners.",
+          "note": "Perfect alignment with Companions' philosophy, +10 reputation bonus for staying neutral"
+        }
+      },
+      "progression_encounters": [
+        {
+          "name": "Proving Honor",
+          "trigger": "After accepting invitation to Jorrvaskr",
+          "objective": "Undertake a trial mission with Farkas (retrieve a fragment of Wuuthrad from a tomb)",
+          "npc": "Farkas, Kodlak Whitemane",
+          "reputation_gain": 20,
+          "unlocks": "Official Companions membership, access to Inner Circle quests"
+        },
+        {
+          "name": "The Silver Hand",
+          "trigger": "Upon becoming a Companion (Act II)",
+          "description": "Companions hunt a group of werewolf hunters (the Silver Hand) after a tragedy in the guild.",
+          "major_story_branch": true,
+          "reputation_gain": 30,
+          "story_impact": "Inner Circle's secret (the beast blood) is revealed; PC must choose to embrace or cure lycanthropy."
+        },
+        {
+          "name": "Purity of Revenge / Glory of the Dead",
+          "trigger": "Late Companions questline (Act III)",
+          "description": "After a great loss, undertake the final missions to avenge Kodlak and cure the Circle's lycanthropy curse.",
+          "reputation_gain": 50,
+          "reward": "Kodlak's spirit laid to rest, player can cure their beast blood if desired. Companions faction fully allied."
+        }
+      ]
+    }
+  },
+  "faction_interaction_matrix": {
+    "description": "How neutral faction membership affects and is affected by other allegiances",
+    "civil_war_impact": {
+      "thieves_guild": {
+        "imperial": "Slight friction in Imperial cities with stronger law enforcement, -1 to Stealth in Imperial holds",
+        "stormcloak": "Better conditions in Stormcloak holds with weaker central authority, +1 to Contacts",
+        "neutral": "Optimal for Guild operations, no penalties"
+      },
+      "college_of_winterhold": {
+        "imperial": "Imperials respect education, +1 to Rapport with Imperial scholars",
+        "stormcloak": "Some Nords distrust magic, -1 to Rapport with Nord traditionalists outside College",
+        "neutral": "Best fit, +5 reputation with College for staying out of politics"
+      },
+      "blades": {
+        "imperial": "Complicated due to Imperial-Thalmor alliance, -5 initial trust",
+        "stormcloak": "Strong anti-Thalmor alliance, +10 initial trust",
+        "neutral": "Judged by actions against Thalmor, not political stance"
+      },
+      "dark_brotherhood": {
+        "imperial": "May receive contracts supporting Imperial goals",
+        "stormcloak": "May receive contracts supporting Stormcloak goals",
+        "neutral": "Receive contracts from all sides, maximum flexibility"
+      },
+      "companions": {
+        "imperial": "Companions officially neutral but may show preference for defending Whiterun",
+        "stormcloak": "Companions officially neutral but respect Nord traditions and independence",
+        "neutral": "Perfect fit, Companions honor neutrality in political conflicts, +5 reputation"
+      }
+    },
+    "multiple_neutral_factions": {
+      "thieves_guild_college": "Compatible. Can be scholarly thief or magically talented infiltrator.",
+      "thieves_guild_dark_brotherhood": "Compatible but attention-drawing. Committing many crimes attracts notice.",
+      "thieves_guild_companions": "Compatible. Both guilds respect honor among their members, though methods differ.",
+      "college_blades": "Compatible. Blades respect magical knowledge for combating threats.",
+      "college_dark_brotherhood": "Compatible. Magic aids assassination.",
+      "college_companions": "Compatible. Companions respect all forms of strength, including magical prowess.",
+      "blades_dark_brotherhood": "Conflicted. Blades serve justice, Brotherhood serves death. Possible but causes internal conflict.",
+      "blades_companions": "Highly compatible. Both are honorable warrior organizations with proud traditions.",
+      "companions_dark_brotherhood": "Conflicted. Companions value honor, Brotherhood uses subterfuge. Inner Circle secret complicates this.",
+      "all_neutral": "Possible but challenging to manage. Divided loyalties and time commitments."
+    }
+  },
+  "gm_guidance": {
+    "encounter_timing": [
+      "Introduce 1-2 neutral factions in Act 1 before civil war commitment",
+      "Save most secretive factions (Blades, Dark Brotherhood) for later acts",
+      "Let players discover factions naturally through exploration and NPC interaction",
+      "Don't force faction membership - make it appealing through story and benefits"
+    ],
+    "adapting_to_choices": [
+      "Track which civil war faction PC joins (if any)",
+      "Adjust neutral faction NPC dialogue to reference PC's allegiance",
+      "Apply appropriate bonuses/penalties based on faction interaction matrix",
+      "Let PC's reputation in one faction affect others (positively or negatively)"
+    ],
+    "creating_drama": [
+      "Use faction conflicts to create tension (Guild wants to rob College, Brotherhood contract targets faction member)",
+      "Present moral dilemmas (Blades want you to kill someone, but they're innocent)",
+      "Make faction choices matter in story (Brotherhood contract affects civil war outcome)",
+      "Let companions react to faction membership (Lydia disapproves of Dark Brotherhood, etc.)"
+    ],
+    "balancing_multiple_factions": [
+      "Don't let PC join every faction simultaneously - creates diffusion",
+      "Limit active faction quests to 2-3 at a time",
+      "Make faction quests compete for PC's time and loyalty",
+      "Higher rank in one faction may demand more time, limiting other activities"
+    ]
+  },
+  "optional_rule_secret_membership": {
+    "description": "For Dark Brotherhood and Thieves Guild, membership can be secret",
+    "mechanics": [
+      "PC can hide faction membership from companions and other factions",
+      "Requires Deceive checks if questioned or if evidence of crimes surface",
+      "If discovered, companions may leave or demand explanation",
+      "Some companions (Serana, J'zargo) may not care, others (Lydia, Hadvar) may be horrified"
+    ],
+    "discovery_consequences": {
+      "thieves_guild_discovered": "Legitimate factions distrust PC, -10 reputation with law-aligned groups, guards more suspicious",
+      "dark_brotherhood_discovered": "Major scandal, possible arrest warrants, companions may leave, -25 reputation with all lawful factions"
+    }
+  }
+}

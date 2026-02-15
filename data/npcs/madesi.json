@@ -1,0 +1,69 @@
+{
+  "name": "Madesi",
+  "id": "madesi",
+  "type": "Merchant (Jeweler)",
+  "location": "Riften (Marketplace)",
+  "faction": "Riften Merchants",
+  "aspects": {
+    "high_concept": "Honest Argonian Jeweler in a Den of Thieves",
+    "trouble": "Easy Mark for Scams and Thieves",
+    "other_aspects": [
+      "Skilled Craftsman with an Eye for Detail",
+      "Dreams of Finding a Rare Gem",
+      "Friendly to Fellow Argonians"
+    ]
+  },
+  "skills": {
+    "Great": ["Crafts"],
+    "Good": ["Notice", "Rapport"],
+    "Fair": ["Lore", "Empathy", "Resources"],
+    "Average": ["Will", "Athletics", "Investigate", "Contacts"]
+  },
+  "stunts": [
+    "Master Jeweler: +2 to Crafts when creating or repairing jewelry, or appraising gems.",
+    "Keen Eye: +2 to Notice when examining gems, jewelry, or detecting fake/stolen goods.",
+    "Argonian Kinship: +2 to Rapport when interacting with fellow Argonians or discussing shared hardships."
+  ],
+  "stress": {
+    "physical": [false, false],
+    "mental": [false, false, false]
+  },
+  "consequences": {
+    "mild": null,
+    "moderate": null,
+    "severe": null
+  },
+  "refresh": 3,
+  "fate_points": 3,
+  "notes": "Madesi is a skilled Argonian jeweler who runs a market stall in Riften's plaza. Despite the city's corruption, he maintains an honest business, crafting fine jewelry and dealing in gems. His pride in his work is matched only by his vulnerability to the thieves and con artists that surround him. Madesi is kind-hearted and somewhat naive about the depths of Riften's criminal underworld, making him an unfortunate target in Brynjolf's recruitment scheme for the Thieves Guild. He dreams of one day obtaining a truly rare gem to craft into a masterpiece. Madesi is friendly with other Argonians in the city, particularly Keerava, and they look out for each other in a city that often treats their kind poorly.",
+  "relationships": {
+    "Keerava": "Fellow Argonian and friend - they support each other in Riften",
+    "Brynjolf": "Wary of him - has been the victim of his schemes",
+    "Riften Guards": "Cordial but knows they won't always help him",
+    "Brand-Shei": "Fellow merchant - friendly rivalry",
+    "Thieves Guild": "Unaware of their full presence but occasionally victimized"
+  },
+  "quests": ["A Chance Arrangement (his ring is stolen as part of the Thieves Guild initiation)", "Supplier side quest (searching for rare gems)"],
+  "inventory": ["Jeweler's Tools", "Various Rings and Necklaces", "Gold and Silver Ingots", "Gems (Garnets, Amethysts)"],
+  "personality_notes": {
+    "speaking_style": "Polite and professional. Speaks with pride about his craft. Occasionally mentions his Argonian heritage with dignity.",
+    "motivations": [
+      "Create beautiful jewelry and gain recognition for his craft",
+      "Find rare gems to work with",
+      "Maintain an honest business despite Riften's corruption",
+      "Support fellow Argonians in the city"
+    ],
+    "fears": [
+      "Being robbed or losing his livelihood",
+      "Never achieving recognition as a master jeweler",
+      "The city's prejudice against Argonians",
+      "Being unable to compete with dishonest merchants"
+    ],
+    "quirks": [
+      "Very proud of his jewelry and takes criticism of his work personally",
+      "Naive about the extent of crime in Riften",
+      "Dreams of crafting a legendary piece",
+      "Kind to customers and often gives fair deals"
+    ]
+  }
+}

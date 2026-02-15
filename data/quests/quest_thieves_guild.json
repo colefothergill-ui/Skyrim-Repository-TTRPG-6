@@ -1,0 +1,65 @@
+{
+  "quest_id": "quest_thieves_guild",
+  "name": "Thieves Guild Reborn",
+  "type": "Faction Quest",
+  "status": "Active",
+  "giver": "Brynjolf",
+  "location": "Riften",
+  "description": "Having piqued Brynjolf's interest, you undertake the journey of joining the Thieves Guild and restoring it to its former glory. From a simple pickpocketing test in Riften's market to uncovering a profound betrayal at the heart of the guild, your wits and skills will determine the fate of Skyrim's underworld. Prove yourself to the guild, rebuild its influence across the land, and confront the traitor who nearly destroyed it. Succeed, and you will become the new Guild Master of the Thieves Guild – the greatest thief in Skyrim.",
+  "objectives": [
+    {
+      "description": "Pass Brynjolf's test by stealing Madesi's ring and planting it without getting caught (Brynjolf's initial trial).",
+      "status": "Completed",
+      "optional": false
+    },
+    {
+      "description": "Meet Brynjolf in the Ragged Flagon and officially join the Thieves Guild. Collect the overdue debts from Riften business owners (Keerava, Bersi, etc.) to prove your loyalty and bring wealth to the guild.",
+      "status": "Completed",
+      "optional": false
+    },
+    {
+      "description": "Help the Guild regain a foothold in Skyrim's major cities. (Complete a series of jobs for Delvin and Vex in Whiterun, Markarth, Solitude, and Windhelm to restore the Guild's influence there.)",
+      "status": "Active",
+      "optional": true
+    },
+    {
+      "description": "Investigate the Guild's recent misfortunes. Follow Karliah's clues to uncover the truth about Gallus's murder and Mercer Frey's activities.",
+      "status": "Active",
+      "optional": false
+    },
+    {
+      "description": "Confront Mercer Frey at his hideout and retrieve the Skeleton Key. Defeat Mercer and end his betrayal of the Thieves Guild.",
+      "status": "Pending",
+      "optional": false
+    },
+    {
+      "description": "Return the Skeleton Key to the Twilight Sepulcher (Nocturnal's shrine) to fulfill the Guild's pact and lift the curse on their luck.",
+      "status": "Pending",
+      "optional": false
+    },
+    {
+      "description": "Assume leadership of the Thieves Guild. With Mercer gone and the Guild's luck restored, step into your role as the new Guild Master and cement the Thieves Guild's resurgence.",
+      "status": "Pending",
+      "optional": false
+    }
+  ],
+  "rewards": {
+    "experience": 500,
+    "gold": 1200,
+    "items": ["Guild Master Armor set", "Nightingale Bow (if not already acquired)"],
+    "reputation": "+50 with Thieves Guild"
+  },
+  "prerequisites": [],
+  "consequences": {
+    "success": "Mercer's betrayal is exposed and ended, the Skeleton Key is returned to Nocturnal, and the Thieves Guild is restored to prominence. You are named Guild Master, with Brynjolf and the others pledging their support. The Guild starts thriving again: coffers refill, connections are rebuilt in each city, and Nocturnal's favor grants the organization uncanny luck on jobs. Under your leadership, even Maven Black-Briar respects the Guild's newfound unity and power.",
+    "failure": "If you fail or abandon the Guild, its decline accelerates. Mercer continues to exploit the Guild until it collapses entirely – Brynjolf and the others scatter or meet grim fates, and organized thievery in Skyrim becomes a thing of the past. (This outcome would severely impact underworld storylines.)"
+  },
+  "complications": [
+    "Maven's Maneuvers: Maven Black-Briar monitors your rise closely. Depending on your choices, she either becomes a powerful ally (ensuring the Guild's protection in Riften in exchange for greater cuts and favors) or a dangerous antagonist (if you defy her, she may use her influence as Jarl or noble to hamper Guild activities).",
+    "Civil War Shifts: If the civil war's outcome changes Riften's leadership during the quest (e.g., Maven becomes Jarl), the Guild's environment changes. An allied Jarl Maven might openly shelter the Guild, boosting resources but also pulling the Guild into her political schemes. This could alter how you operate but ultimately can strengthen the Guild if navigated carefully.",
+    "Nightingale Oath: After returning the Skeleton Key, you (alongside Brynjolf, if he agrees) may swear the Nightingale oath with Karliah. This grants you special boons from Nocturnal (and a measure of responsibility to maintain the luck of the Guild). While beneficial (e.g., shadow powers), it also ties your fate to the Daedric Prince of Darkness."
+  ],
+  "notes": "Completing this questline will likely involve multiple play sessions, as it contains several sub-quests. Track incremental reputation gains for each major objective: e.g., +10 with Thieves Guild for completing the debt jobs, +10 for restoring influence in each city, etc., so that by the final objective the player's faction reputation reaches 100 (Guild Master level). After the quest, update the Thieves Guild faction status to reflect the new leadership and prosperity. Brynjolf, Delvin, and Vex will offer congratulations and discuss plans for the Guild's future. Karliah may depart after the Nightingale oath is fulfilled, or stay on as a mentor for spiritual matters. The Ragged Flagon bustles with new recruits and business, showing the tangible effect of your success.\n\nWhiterun foothold established: Battle-Born Arcana secured as a sanctioned Guild front/safehouse (20% revenue cut to Olfrid Battle-Born).\n\nRiften return: Veils disguise tested successfully at the city gate; Brynjolf briefed; pivoting into 'Loud and Clear' (Goldenglow Estate).\n\nDampened Spirits completed: Honningbrew collapsed; Sabjorn framed; Mallus preserved as Maven's asset. Turn-in produced Ivory Thread lead (Hroldar 'Whitefin', Nightgate Pass) tied to Arisann's trail.",
+  "related_npcs": ["Brynjolf", "Mercer Frey", "Karliah", "Maven Black-Briar"],
+  "related_locations": ["Riften", "Twilight Sepulcher", "Irkngthand (Mercer's Hideout)"]
+}

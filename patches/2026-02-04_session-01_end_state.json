@@ -1,0 +1,132 @@
+{
+  "patch_id": "2026-02-04_session-01_end_state",
+  "patch_date": "2026-02-04",
+  "patch_type": "session_end_update",
+  "session_number": 1,
+  "description": "Session 01 end state: Battle-Born Arcana deal finalized; Thalmor Whiterun node neutralized; Western Gate stabilized; ledger routed to Irileth; Guild foothold at 4/5",
+  "campaign_state_changes": {
+    "session_count": 1,
+    "last_updated": "2026-02-04",
+    "current_scene_id": "A1-S4",
+    "current_location": "Whiterun — Western Barricade Parapet",
+    "current_objective": "Secure Imperial win in Battle of Whiterun; ensure Hadvar survives; trigger Greymane investigation fallout; protect Battle-Born Arcana foothold.",
+    "civil_war_state": {
+      "whiterun_control": "imperial",
+      "battle_of_whiterun_status": "imperial_advantage"
+    },
+    "scene_flags_added": [
+      "battleborn_arcana_deal_signed",
+      "battleborn_writ_of_privilege_received",
+      "contract_olfrid_3000g_active",
+      "battleborn_evac_route_temple_of_kynareth_secured",
+      "ledger_routed_to_irileth_via_guard_chain",
+      "western_gate_stabilized",
+      "stormcloak_survivor_arrow_to_knee",
+      "bannered_mare_handler_eliminated",
+      "thalmor_whiterun_node_neutralized",
+      "greymane_framejob_active",
+      "for_greymane_illusion_witnessed",
+      "parapet_flank_climbers_neutralized",
+      "stormcloak_sergeant_taken_out",
+      "compel_no_witnesses_accepted"
+    ],
+    "npcs_killed": [
+      "thalmor_ledger_clerk_handler",
+      "thalmor_escort_1",
+      "thalmor_escort_2",
+      "stormcloak_west_gate_spearman",
+      "stormcloak_west_gate_charger",
+      "stormcloak_west_parapet_sergeant"
+    ],
+    "npc_first_impressions_added": {
+      "commander_caius_whiterun_guard": {
+        "pc": "pc_insaerndel",
+        "timestamp": "2026-02-04T14:30:00",
+        "disposition": "positive",
+        "line": "That hooded Altmer who moves like a shadow—recognized him from the manor grounds. Took the ledger through proper channels even under siege. Professional."
+      }
+    }
+  },
+  "pc_changes": {
+    "pc_id": "pc_insaerndel",
+    "fate_points": 4,
+    "inventory_additions": [
+      "Sealed Writ of Privilege (House Battle-Born)",
+      "Silver Ring of Authority (Thalmor handler token)",
+      "Seal kit (wax + stamp plates)",
+      "Torn routing slip (single lead fragment)",
+      "Contract: Olfrid Battle-Born — 3,000g total promised; payment pending delivery after battle stabilization."
+    ]
+  },
+  "clock_updates": {
+    "whiterun_jobs": {
+      "guild_foothold_whiterun": {
+        "current": 4,
+        "max": 5,
+        "note": "Major progress: Battle-Born deal signed, writ received, safehouse established"
+      },
+      "battleborn_quiet_inquiry": {
+        "current": 3,
+        "max": 4,
+        "note": "Olfrid's investigation continues; high-value contract delivery expected to reduce by -1"
+      }
+    },
+    "pc_extras_clocks": {
+      "insaerndel_thalmor_search_clock": {
+        "current_progress": 1,
+        "total_segments": 8,
+        "note": "Magic signature trail from handler elimination (+1)"
+      },
+      "whiterun_alley_bodies_discovered": {
+        "current_progress": 0,
+        "total_segments": 4,
+        "note": "NEW CLOCK: Bodies behind Bannered Mare concealed; tracks discovery timeline"
+      }
+    },
+    "faction_trust_clocks": {
+      "imperial_legion_trust": {
+        "current_trust": 2,
+        "max_trust": 10,
+        "note": "Progress from western gate defense and intelligence handoff to Irileth"
+      }
+    },
+    "thalmor_influence_clocks": {
+      "whiterun_hold": {
+        "influence_level": 0,
+        "max_influence": 10,
+        "status": "Neutralized",
+        "note": "Whiterun node neutralized via handler elimination + evidence burn"
+      }
+    }
+  },
+  "summary": {
+    "major_achievements": [
+      "Battle-Born Arcana deal finalized (3,000g contract)",
+      "Thalmor Whiterun node neutralized (handler + escorts eliminated)",
+      "Western Gate stabilized (Imperial advantage maintained)",
+      "Ledger routed to Irileth via chain-of-command",
+      "Guild foothold advanced to 4/5 segments",
+      "Greymane frame job witnessed ('For Greymane' illusion)"
+    ],
+    "strategic_position": {
+      "civil_war": "Imperial advantage in Battle of Whiterun",
+      "guild_foothold": "One segment from completion (4/5)",
+      "thalmor_heat": "Low (1/8); node neutralized but magic trail detected",
+      "faction_standing": "Imperial Legion trust at 2/10 (Stranger level)"
+    },
+    "pending_consequences": [
+      "Alley bodies discovery timeline (0/4 clock started)",
+      "Battle-Born Quiet Inquiry at 3/4 (contract delivery may reduce)",
+      "Greymane investigation fallout incoming (ledger + frame job)",
+      "Contract payment pending: 3,000g after battle stabilization"
+    ]
+  },
+  "gm_notes": [
+    "Thalmor Whiterun node neutralized is a major strategic win",
+    "Bodies behind Bannered Mare create time-limited complication",
+    "Greymane frame job will escalate political tensions post-battle",
+    "Guild foothold at 4/5; gate condition references imperial control & western_gate_stabilized",
+    "Imperial momentum strong; Hadvar survival objective ongoing",
+    "Fate points at 4 provide good cushion for next session challenges"
+  ]
+}

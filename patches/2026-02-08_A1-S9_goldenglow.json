@@ -1,0 +1,82 @@
+{
+  "patch_id": "2026-02-08_A1-S9_goldenglow",
+  "created_at": "2026-02-08",
+  "scope": "session_end_update",
+  "session_number": 2,
+  "summary": {
+    "scene_id": "A1-S9",
+    "location": "Riften — Ragged Flagon (Cistern)",
+    "highlights": [
+      "Goldenglow Estate infiltrated silently; safe cleared without alarm",
+      "Three beehives burned per Maven's message requirement",
+      "Pale-linked shipping note recovered (major Arisann lead)",
+      "Thieves Guild trust elevated to Champion level (7/10)"
+    ]
+  },
+  "state_updates": {
+    "campaign_state": {
+      "session_count": 2,
+      "last_updated": "2026-02-08",
+      "current_scene_id": "A1-S9",
+      "current_location": "Riften — Ragged Flagon (Cistern)",
+      "active_hold": "The Rift",
+      "current_objective": "Thieves Guild: Debrief Mercer on the Goldenglow job and brace for Maven's next demand. Keep pursuing Arisann's Pale lead from the safe papers.",
+      "scene_flags_added": {
+        "thieves_guild_loud_and_clear_active": false,
+        "thieves_guild_loud_and_clear_completed": true,
+        "goldenglow_estate_infiltrated": true,
+        "goldenglow_safe_cleared": true,
+        "goldenglow_beehives_burned": true,
+        "goldenglow_alarm_full": false,
+        "scene_last_major_update": "2026-02-08"
+      },
+      "world_consequences_additions": {
+        "major_choices_added": [
+          "Executed the Goldenglow Estate heist for the Thieves Guild: infiltrated silently, cleared Aringoth's safe, and delivered the take to Mercer.",
+          "Left Maven a message in smoke: three beehives burned at Goldenglow, pinning blame on 'unseen hands' rather than witnesses.",
+          "Recovered a Pale-linked paper trail from the safe that may intersect with Arisann's disappearance."
+        ]
+      }
+    }
+  },
+  "clock_updates": {
+    "data/clocks/faction_trust_clocks.json": {
+      "thieves_guild_trust.current_trust": 7,
+      "thieves_guild_trust.trust_level": "Champion"
+    },
+    "data/clocks/pc_extras_clocks.json": {
+      "insaerndel_search_for_arisann.current_progress": 3,
+      "insaerndel_respect_in_the_rift.current_progress": 1
+    }
+  },
+  "pc_updates": {
+    "data/pcs/pc_insaerndel.json": {
+      "gold": 5800,
+      "equipment.items_added": [
+        "Goldenglow Safe Papers (Black-Briar honey contracts + Pale-linked shipping note)",
+        "Jeweled trinket 'Honey-Drop Ring' (fenced later; small but clean value)"
+      ]
+    }
+  },
+  "world_state_updates": {
+    "data/world_state/current_state.json": {
+      "major_events_added": [
+        "Goldenglow Estate sabotaged: beehives burned; Aringoth's safe robbed"
+      ],
+      "rumors_added": [
+        "Goldenglow's beehives went up in flames — the Black-Briars are furious and quietly asking who did it.",
+        "Someone cleaned out Aringoth's safe without breaking the lock; whispers say 'mage-thief' work."
+      ],
+      "notes_append": "[2026-02-08] Goldenglow Estate hit: safe cleared; beehives burned; Mercer paid out; a Pale-linked paper trail recovered."
+    }
+  },
+  "gm_notes": [
+    "Scene A1-S9 'Loud and Clear' represents Insaerndel's major advancement within the Thieves Guild",
+    "Clean execution (no full alarm) demonstrates professional skill and earns Champion-level trust",
+    "Pale-linked shipping note is a significant lead toward finding Arisann (sister search clock +3)",
+    "Maven Black-Briar's message delivered through controlled arson of three beehives",
+    "Guild reputation in the Rift begins to build through whispers of the 'mage-thief' work",
+    "Next phase will involve Maven's direct demands and following the Pale lead",
+    "Gold increased by 600g from Guild payout (5200 -> 5800)"
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "name": "Brother Verulus",
+  "id": "brother_verulus",
+  "type": "Breton Priest of Arkay",
+  "location": "Hall of the Dead, Markarth",
+  "faction": "Priesthood of Arkay",
+  "aspects": {
+    "high_concept": "Devoted Priest of Arkay overseeing Markarth's Hall of the Dead",
+    "trouble": "Too Trusting for His Own Good – dangerously naive about the evils lurking in the city",
+    "other_aspects": [
+      "Compassionate Soul, Comforter of the Bereaved",
+      "Haunted by Unholy Rumors – disturbed by whispers of cannibals and profaned graves",
+      "Mild-Mannered in a Cruel City – maintains faith and kindness despite Markarth's harshness"
+    ]
+  },
+  "skills": {
+    "Great": ["Lore"],
+    "Good": ["Empathy", "Will"],
+    "Fair": ["Notice", "Rapport", "Survival"],
+    "Average": ["Stealth", "Medicine", "Resources", "Athletics"]
+  },
+  "stunts": [
+    "Soothing Prayer: +2 to Rapport when trying to calm down frightened or grieving individuals with religious comfort.",
+    "Rites of Arkay: +2 to Lore when identifying or dealing with the undead or performing funerary rituals.",
+    "Stoic Faith: Once per scenario, use Will to face a supernatural horror without fear, drawing on Arkay's protection."
+  ],
+  "stress": {
+    "physical": [false, false],
+    "mental": [false, false, false]
+  },
+  "consequences": {
+    "mild": null,
+    "moderate": null,
+    "severe": null
+  },
+  "refresh": 3,
+  "fate_points": 3,
+  "notes": "Brother Verulus is a gentle, soft-spoken man dedicated to the God of the Cycle of Life and Death. He tends the corpses and catacombs beneath Markarth with diligent care, saying prayers to guide souls to rest. Verulus truly cares for the people of the city – he provides comfort to families who have lost loved ones (all too common with the Forsworn attacks and dangerous mine work). Though born in High Rock, he has lived in Markarth for years and considers its people his flock. Lately, Verulus has been troubled: corpses have gone missing from the Hall of the Dead, and an unsettling feeling hangs in the air down in the crypt. His trusting nature made him slow to suspect anything beyond perhaps hungry skeevers... until a young woman named Eola approached him with talk of clearing an \"unclean presence.\" He is completely unaware that Eola herself is part of a dark cannibal cult of Namira. Should the truth come to light, Verulus's faith will be tested to its core. Despite his fears, if confronted with evil (like Namira's feast), Verulus's courage might manifest in self-sacrifice. He is willing to risk himself to purge darkness from the Hall, even if he is woefully out of his depth against such horrors.",
+  "relationships": {
+    "Jarl Igmund": "Grateful patron – Igmund has quietly supported the temple's upkeep. Verulus occasionally informs the Jarl of any unsettling events among the dead (such as the recent disturbances).",
+    "Eola": "Apparent ally turned predator – Eola gained Verulus's trust by claiming to help with the Hall of the Dead issues, but unknown to Verulus, she is leading him into a trap (Namira's cult).",
+    "Priesthood of Arkay (Solitude)": "Superiors and fellow priests – Verulus corresponds with other priests in Skyrim. He has written to the Hall of the Dead in Solitude seeking advice on the strange happenings, though he hasn't received a reply yet.",
+    "City Guards of Markarth": "Respectful acquaintances – Guards sometimes assist him in moving bodies or keeping the peace at graveside services. They also were the first he told when the Hall was initially closed due to 'unclean presence' (though they found nothing)."
+  },
+  "quests": [
+    "The Taste of Death (Daedric Quest – Namira's cult in Markarth)",
+    "General Temple Duties (ongoing minor tasks helping the community or dealing with undead)",
+    "Forsworn Victims – (not a formal quest, but Verulus often tends victims of Forsworn attacks, reinforcing his resolve to protect the dead)"
+  ],
+  "inventory": [
+    "Amulet of Arkay (holy symbol)",
+    "Priestly robes and a small prayer book",
+    "A few healing potions and herbs (for tending the sick or performing rites)"
+  ]
+}

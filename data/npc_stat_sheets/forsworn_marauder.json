@@ -1,0 +1,42 @@
+{
+  "name": "Forsworn Marauder",
+  "id": "npc_stat_forsworn_marauder",
+  "type": "Humanoid",
+  "category": "Enemy",
+  "location": "The Reach, Forsworn camps, ruins",
+  "faction": "Forsworn",
+  "aspects": {
+    "high_concept": "Fierce Reachman Warrior Fighting for Independence",
+    "trouble": "Hatred of Nords Blinds Judgment",
+    "other_aspects": [
+      "Blend of Warrior and Hedge Magic",
+      "Fight for the Old Ways",
+      "Loyal to Their Tribe"
+    ]
+  },
+  "skills": {
+    "Good": ["Fight", "Athletics"],
+    "Fair": ["Lore", "Stealth"],
+    "Average": ["Physique", "Will", "Notice"]
+  },
+  "stunts": [
+    "Berserker Rage: Once per scene, gain +2 to Fight for three exchanges but cannot defend (all defenses at -2)",
+    "Hedge Magic: Can cast one simple offensive spell per scene (frost, fire, or lightning bolt) using Lore instead of Fight",
+    "Ambush Training: +2 to Stealth when setting up ambushes in The Reach"
+  ],
+  "stress": {
+    "physical": [false, false, false],
+    "mental": [false, false]
+  },
+  "consequences": {
+    "mild": null,
+    "moderate": null
+  },
+  "refresh": 2,
+  "fate_points": 2,
+  "notes": "The Forsworn are Reachmen who violently oppose Nord rule in The Reach. They use a combination of warrior skills and hedge magic. Extremely hostile to Nords and anyone supporting them. They worship the Old Gods and consider themselves the rightful rulers of The Reach.",
+  "combat_tactics": "Forsworn prefer ambushes and hit-and-run tactics. They use terrain to their advantage and coordinate attacks. Some use magic to support melee fighters. They fight fanatically for their cause and rarely surrender.",
+  "scene_triggers": ["The Reach exploration", "Road ambushes", "Forsworn camps", "Quest: The Forsworn Conspiracy"],
+  "act_context": ["Act 1", "Act 2", "Act 3"],
+  "loot": ["Tribal weapons", "Forsworn armor pieces", "Alchemy ingredients"]
+}

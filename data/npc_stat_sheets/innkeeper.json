@@ -1,0 +1,57 @@
+{
+  "name": "Innkeeper",
+  "id": "npc_stat_innkeeper",
+  "type": "Ally",
+  "category": "Friendly NPC",
+  "location": "Inns across Skyrim",
+  "faction": "Independent / Local town",
+  "aspects": {
+    "high_concept": "Welcoming Keeper of Travelers' Rest",
+    "trouble": "Knows Too Many Secrets for Their Own Good",
+    "other_aspects": [
+      "Ear for Local Gossip",
+      "Provider of Warmth and Safety",
+      "Neutral Ground Keeper"
+    ]
+  },
+  "skills": {
+    "Good": ["Rapport", "Notice"],
+    "Fair": ["Empathy", "Resources"],
+    "Average": ["Will", "Contacts"]
+  },
+  "stunts": [
+    "Font of Rumors: +2 to Contacts when gathering information about local events, people, or opportunities",
+    "Comfortable Lodgings: Can provide aspect 'Well Rested' to guests (grants +1 to recovery from consequences)",
+    "Nobody Causes Trouble Here: +2 to Rapport when defusing conflicts in the inn"
+  ],
+  "stress": {
+    "physical": [false, false],
+    "mental": [false, false]
+  },
+  "consequences": {
+    "mild": null
+  },
+  "refresh": 2,
+  "fate_points": 2,
+  "trust_clock": {
+    "enabled": true,
+    "current": 0,
+    "max": 6,
+    "description": "How much the innkeeper trusts and favors the party"
+  },
+  "notes": "Innkeepers are vital sources of information and safe havens across Skyrim. They hear all the local gossip, know who's hiring, and can point travelers toward opportunities. Building trust with an innkeeper can provide regular updates on local events and preferential treatment.",
+  "relationships": {
+    "Local Hold": "Neutral supporter",
+    "Travelers": "Welcomes all with coin",
+    "Town Guards": "Cooperative",
+    "Thieves Guild": "May have arrangement (some locations)"
+  },
+  "personality_notes": {
+    "speaking_style": "Friendly, welcoming, uses terms of endearment like 'friend' or 'traveler'",
+    "motivations": ["Run a profitable business", "Maintain peaceful environment", "Stay neutral in conflicts"],
+    "fears": ["Violence in their establishment", "Losing their inn", "Angering powerful factions"],
+    "quirks": ["Always cleaning something", "Remembers faces and preferences", "Has a signature drink or meal"]
+  },
+  "scene_triggers": ["Arriving in new towns", "Information gathering", "Finding work", "Safe resting locations"],
+  "act_context": ["Act 1", "Act 2", "Act 3"]
+}

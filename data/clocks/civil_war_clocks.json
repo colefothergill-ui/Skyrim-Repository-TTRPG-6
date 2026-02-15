@@ -1,0 +1,155 @@
+{
+  "civil_war_clocks": {
+    "description": "Track the progression of the civil war between Imperials and Stormcloaks",
+    "last_updated": "2026-02-08",
+    "clocks": {
+      "imperial_military_dominance": {
+        "name": "Imperial Military Dominance",
+        "description": "Imperial Legion's progress toward winning the civil war through military victories",
+        "current_progress": 5,
+        "total_segments": 10,
+        "completion_effect": "Imperial Legion wins the civil war decisively",
+        "advancement_triggers": [
+          "Imperial victory in major battle (+1 to +2)",
+          "Strategic hold captured by Imperials (+2)",
+          "Successful defense of Imperial city (+1)",
+          "Key Stormcloak commander defeated (+1)"
+        ],
+        "setback_triggers": [
+          "Imperial defeat in battle (-1 to -2)",
+          "Hold lost to Stormcloaks (-2)",
+          "Major Imperial losses (-1)"
+        ]
+      },
+      "stormcloak_rebellion_momentum": {
+        "name": "Stormcloak Rebellion Momentum",
+        "description": "Stormcloak forces' progress toward independence and military victory",
+        "current_progress": 3,
+        "total_segments": 10,
+        "completion_effect": "Stormcloaks win the civil war and Skyrim gains independence",
+        "advancement_triggers": [
+          "Stormcloak victory in major battle (+1 to +2)",
+          "Strategic hold captured by Stormcloaks (+2)",
+          "Jarl switches allegiance to Stormcloaks (+1)",
+          "Successful propaganda/recruitment (+1)"
+        ],
+        "setback_triggers": [
+          "Stormcloak defeat in battle (-1 to -2)",
+          "Hold lost to Imperials (-2)",
+          "Ulfric's reputation damaged (-1)"
+        ]
+      },
+      "battle_of_whiterun_countdown": {
+        "name": "Battle of Whiterun Countdown",
+        "description": "Tension builds as both sides prepare for the pivotal Battle of Whiterun",
+        "current_progress": 8,
+        "total_segments": 8,
+        "completion_effect": "Battle of Whiterun occurs - Whiterun must choose a side or fall",
+        "advancement_triggers": [
+          "Player delays choosing sides (+1 per session)",
+          "Ulfric issues ultimatum to Balgruuf (+2)",
+          "Imperial reinforcements arrive in Whiterun (+1)",
+          "Stormcloak forces mass near Whiterun (+1)"
+        ],
+        "story_hooks": [
+          "At 4/8: Messengers from both sides pressure Balgruuf",
+          "At 6/8: Civilians begin evacuating Whiterun",
+          "At 8/8: Battle begins - party must participate or witness consequences"
+        ],
+        "gm_notes": "This clock creates urgency. The Battle of Whiterun is a major turning point that forces Balgruuf and potentially the party to choose sides."
+      },
+      "thalmor_civil_war_manipulation": {
+        "name": "Thalmor Civil War Manipulation",
+        "description": "Thalmor agents work to prolong the civil war and keep both sides weak",
+        "current_progress": 1,
+        "total_segments": 8,
+        "completion_effect": "Thalmor successfully prevent decisive victory, keeping Skyrim divided and weak",
+        "advancement_triggers": [
+          "Thalmor agents sabotage peace efforts (+1)",
+          "Intelligence given to weaker side to balance war (+2)",
+          "Assassination of moderate leaders (+1)",
+          "Diplomatic Immunity quest not completed (+1 per Act)"
+        ],
+        "setback_triggers": [
+          "Thalmor manipulation exposed (-2)",
+          "Party shares Thalmor documents from embassy (-3)",
+          "One side achieves decisive victory (-4)",
+          "Thalmor agents eliminated (-1 per agent)"
+        ],
+        "secret_objective": "Neither side should win quickly. The goal is prolonged conflict."
+      },
+      "civilian_war_weariness": {
+        "name": "Civilian War Weariness",
+        "description": "The toll of civil war on Skyrim's common people",
+        "current_progress": 6,
+        "total_segments": 8,
+        "completion_effect": "Mass civilian unrest, refugees flood major cities, economy collapses",
+        "advancement_triggers": [
+          "Major battle affects civilian areas (+2)",
+          "Trade routes disrupted (+1)",
+          "Food shortages develop (+1)",
+          "Conscription efforts (+1)"
+        ],
+        "setback_triggers": [
+          "Peace achieved or war concluded (-5)",
+          "Humanitarian aid provided (-1)",
+          "Dragon threat forces cooperation (-2)"
+        ],
+        "story_hooks": [
+          "At 4/8: Refugees begin appearing in cities",
+          "At 6/8: Food prices skyrocket, black markets flourish",
+          "At 7/8: Civil disobedience and protests",
+          "At 8/8: Riots and complete breakdown of order"
+        ]
+      }
+    },
+    "major_battles": {
+      "battle_of_whiterun": {
+        "status": "completed_imperial_victory",
+        "description": "The pivotal battle that will determine Whiterun's allegiance",
+        "importance": "Critical - Forces neutral parties to choose sides",
+        "outcome": "Imperial victory; Galmar Stone-Fist killed, Stormcloak chain-of-command and lines broken, Whiterun's Thalmor node neutralized, and the city held firmly for the Empire.",
+        "possible_outcomes": [
+          "Imperial victory - Whiterun remains neutral/Imperial",
+          "Stormcloak victory - Whiterun falls to Stormcloaks",
+          "Stalemate - Both sides weakened, Thalmor benefit"
+        ]
+      },
+      "siege_of_windhelm": {
+        "status": "not_started",
+        "description": "Imperial assault on Stormcloak capital",
+        "importance": "War-ending - Imperial victory condition",
+        "unlock_condition": "Imperial Military Dominance reaches 7+"
+      },
+      "siege_of_solitude": {
+        "status": "not_started",
+        "description": "Stormcloak assault on Imperial capital of Skyrim",
+        "importance": "War-ending - Stormcloak victory condition",
+        "unlock_condition": "Stormcloak Rebellion Momentum reaches 7+"
+      }
+    },
+    "current_territorial_control": {
+      "imperial_holds": [
+        "Haafingar (Solitude)",
+        "Falkreath Hold",
+        "The Reach (Markarth)",
+        "Hjaalmarch (Morthal)"
+      ],
+      "stormcloak_holds": [
+        "Eastmarch (Windhelm)",
+        "The Rift (Riften)",
+        "The Pale (Dawnstar)",
+        "Winterhold Hold"
+      ],
+      "neutral_contested": [
+        "Whiterun Hold (under pressure)"
+      ]
+    },
+    "gm_guidance": {
+      "pacing": "Advance civil war clocks every 2-3 sessions or after major story events",
+      "player_impact": "Player actions should significantly affect clock progression",
+      "integration": "Civil war events should intersect with main quest at key moments (Battle of Whiterun, Season Unending, The Fallen)",
+      "tension": "Keep both sides roughly balanced until party commits or Act III"
+    }
+  }
+}

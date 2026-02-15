@@ -1,0 +1,8 @@
+{
+  "date": "2026-02-12",
+  "changes": [
+    "Prepared Session 04 by adding Hroldar \"Whitefin\" (Ivory Thread courier node) stat sheet and NPC entry.",
+    "Added a dedicated Personal Arc quest file: quest_arisann_trail.json to track the Nightgate Pass lead.",
+    "Updated state/campaign_state.json to increment session_count for Session 04 and advance the active scene."
+  ]
+}

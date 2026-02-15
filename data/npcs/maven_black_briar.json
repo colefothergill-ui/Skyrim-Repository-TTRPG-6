@@ -1,0 +1,46 @@
+{
+  "name": "Maven Black-Briar",
+  "id": "maven_black_briar",
+  "type": "Noble (Crime Lord)",
+  "location": "Riften, Black-Briar Manor",
+  "faction": "Thieves Guild (Patron)",
+  "aspects": {
+    "high_concept": "Riften's Corrupt Powerbroker",
+    "trouble": "Ambition at Any Cost",
+    "other_aspects": [
+      "Black-Briar Meadery Matriarch",
+      "Unofficial Jarl of Riften",
+      "Pulls the Strings Behind the Scenes"
+    ]
+  },
+  "skills": {
+    "Great": ["Deceive"],
+    "Good": ["Resources", "Provoke"],
+    "Fair": ["Rapport", "Notice", "Will"],
+    "Average": ["Empathy", "Lore", "Physique", "Stealth"]
+  },
+  "stunts": [
+    "Silver Tongue: +2 to Deceive when manipulating city officials or guards with her authority.",
+    "Underworld Connections: Once per session, Maven can call in a favor from Riften's guards or the Thieves Guild to erase a minor problem (no roll required).",
+    "Mead Baroness: +2 to Resources when leveraging her Black-Briar Meadery profits for bribes or investments."
+  ],
+  "stress": {
+    "physical": [false, false, false],
+    "mental": [false, false]
+  },
+  "consequences": {
+    "mild": null,
+    "moderate": null,
+    "severe": null
+  },
+  "refresh": 3,
+  "fate_points": 3,
+  "notes": "Maven Black-Briar is the most influential woman in Riften. Cold, calculating, and utterly ruthless, she has her hands in every illicit transaction in the city. Officially a successful businesswoman (owner of the Black-Briar Meadery), she in fact controls Riften's economic and political life, making even the Jarl wary. Maven values loyalty only insofar as it serves her interests and is rumored to be willing to eliminate anyone who crosses her. Many believe that if the Empire takes Riften, Maven will be installed as Jarl—a prospect that frightens some and comforts others who already dance to her tune.",
+  "relationships": {
+    "Brynjolf": "Guild ally - she relies on Brynjolf and the Guild to do her dirty work quietly",
+    "Laila Law-Giver": "Nominally her Jarl - Maven outwardly supports Laila but secretly undermines or influences her decisions",
+    "Thieves Guild": "Patron and beneficiary - Maven provides cover and finances, the Guild ensures her rivals disappear"
+  },
+  "quests": ["Thieves Guild Questline", "Skooma Trade Investigation (optional involvement)"],
+  "inventory": ["Black-Briar Reserve Mead", "Ledger of bribery records", "Jeweled Dagger"]
+}

@@ -1,0 +1,56 @@
+{
+  "patch_id": "2026-02-08_conflict_resolution_skill_columns_contacts_plus2",
+  "created_at": "2026-02-08",
+  "scope": "rules_clarification_skill_advancement",
+  "summary": {
+    "highlights": [
+      "Campaign adopts Skill Column advancement rules (no pyramid reshaping required)",
+      "Significant Milestone skill point can raise any skill by +1 within current cap",
+      "Insaerndel uses banked Significant Milestone to advance Contacts from Average to Fair",
+      "Athletics remains at Fair (+2) - no demotion required under column rules",
+      "Rules documentation updated to explain column advancement in fate_core_skyrim.md"
+    ]
+  },
+  "rules_updates": {
+    "data/rules/fate_core_skyrim.md": {
+      "section": "Character Advancement - Significant Milestones",
+      "change": "Added clarification: 'This campaign uses Skill Column advancement: you may raise any one skill by +1 without reshaping other skills; the only limit is the current skill cap.'",
+      "rationale": "Eliminates pyramid maintenance complexity and allows more flexible character growth"
+    }
+  },
+  "pc_updates": {
+    "data/pcs/pc_insaerndel.json": {
+      "skills_before": {
+        "Great (+4)": ["Lore"],
+        "Good (+3)": ["Notice", "Stealth"],
+        "Fair (+2)": ["Athletics", "Deceive", "Will"],
+        "Average (+1)": ["Physique", "Contacts", "Burglary", "Resources"]
+      },
+      "skills_after": {
+        "Great (+4)": ["Lore"],
+        "Good (+3)": ["Notice", "Stealth"],
+        "Fair (+2)": ["Athletics", "Deceive", "Will", "Contacts"],
+        "Average (+1)": ["Physique", "Burglary", "Resources"]
+      },
+      "milestone_used": "Significant Milestone (banked from Battle of Whiterun resolution)",
+      "advancement_method": "Column advancement: Contacts raised from Average (+1) to Fair (+2)"
+    }
+  },
+  "gm_notes": [
+    "Column advancement rule allows skills to be raised without requiring pyramid reshaping",
+    "This change resolves potential confusion about whether Athletics needs to be demoted when Contacts is raised",
+    "Under column rules, the character can have multiple skills at the same rank without strict pyramid enforcement",
+    "The only limit is the current skill cap (typically +4 at character creation, can increase with Major Milestones)",
+    "This makes Significant Milestones more impactful and character growth more flexible",
+    "Insaerndel's skill distribution after advancement: 1 Great, 2 Good, 4 Fair, 3 Average",
+    "While this breaks the strict Fate Core pyramid (1/2/3/4), column advancement is a common Fate variant",
+    "Future skill advances will continue to use column rules rather than pyramid maintenance",
+    "This patch documents the campaign's explicit adoption of column advancement as the canonical rule"
+  ],
+  "design_notes": {
+    "why_column_advancement": "Column advancement reduces bookkeeping and allows more organic character growth",
+    "skill_cap_enforcement": "The current cap remains Great (+4) until a Major Milestone raises it to Superb (+5) or higher",
+    "pyramid_vs_column": "Column advancement is more forgiving and commonly used in Fate campaigns with extended play",
+    "backward_compatibility": "Previous milestone expenditures remain valid; this clarifies future advancement rules"
+  }
+}

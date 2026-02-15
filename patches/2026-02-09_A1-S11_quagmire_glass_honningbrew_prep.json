@@ -1,0 +1,71 @@
+{
+  "patch_id": "2026-02-09_A1-S11_quagmire_glass_honningbrew_prep",
+  "created_at": "2026-02-09",
+  "scope": "session_end_update",
+  "session_number": 3,
+  "summary": {
+    "scene_id": "A1-S11",
+    "location": "Riften — Ragged Flagon (Cistern)",
+    "highlights": [
+      "Mirror Trial: Glass completed; Spell of Glass unlocked",
+      "Dampened Spirits quest accepted from Delvin Mallory",
+      "Thalmor search heat increased (+2 from compels)",
+      "Spell Tome awakening progressed to 4/8 segments"
+    ]
+  },
+  "state_updates": {
+    "campaign_state": {
+      "session_count": 3,
+      "last_updated": "2026-02-09",
+      "current_scene_id": "A1-S11",
+      "current_location": "Riften — Ragged Flagon (Cistern)",
+      "current_objective": "Travel to Whiterun; execute 'Dampened Spirits' at Honningbrew Meadery (decide: expose or protect Mallus) while avoiding Thalmor attention.",
+      "scene_last_major_update": "2026-02-09",
+      "scene_flags_added": {
+        "dampened_spirits_accepted": true,
+        "delvin_dossier_honningbrew_obtained": true,
+        "compel_informants_everywhere_accepted": true,
+        "mirror_trial_glass_completed": true
+      }
+    }
+  },
+  "clock_updates": {
+    "data/clocks/pc_extras_clocks.json": {
+      "pc_extras_clocks.last_updated": "2026-02-09",
+      "insaerndel_thalmor_search_clock.current_progress": 2,
+      "insaerndel_spell_tome_of_quagmire_trials.current_progress": 4
+    }
+  },
+  "pc_updates": {
+    "data/pcs/pc_insaerndel.json": {
+      "fate_points": 7,
+      "extras.artifact_spell_tome_of_quagmire.progression.mirror_trials.completed": ["Phantoms", "Veils", "Glass"],
+      "extras.artifact_spell_tome_of_quagmire.progression.mirror_trials.available": ["Dread"],
+      "extras.artifact_spell_tome_of_quagmire.locked_spells_removed": ["mirror_trial_glass"],
+      "extras.artifact_spell_tome_of_quagmire.unlocked_spells_added": [
+        {
+          "spell_id": "spell_of_glass",
+          "name": "Spell of Glass",
+          "status": "unlocked",
+          "type": "stunt",
+          "frequency": "once per scene",
+          "mechanics": "Once per scene, use Lore to Create an Advantage representing a mirrored self-reflection or illusionary duplicate of yourself. On success, create the situational aspect 'Glass Double' with 1 free invoke; on Success with Style, gain 2 free invokes. The Glass Double can be invoked to redirect an attack, create confusion about your position, or allow you to appear in two places at once within the same zone. If you take Physical stress or a consequence while the Glass Double is active, it shatters and the aspect is removed (but invokes already spent remain spent). The double cannot take independent actions but responds to your movements as a perfect mirror."
+        }
+      ]
+    }
+  },
+  "world_state_updates": {
+    "data/world_state/current_state.json": {
+      "rumors_added": [
+        "An Altmer in a violet hood was spotted in the Ratway asking pointed questions about Whiterun and Honningbrew Meadery — some say he had the look of a scholar, others swear they saw a thief's keyring at his belt."
+      ]
+    }
+  },
+  "gm_notes": [
+    "Mirror Trial: Glass represents Insaerndel's deepening relationship with fragmented identity",
+    "Fate points increased from 5 to 7 (compel acceptance + trial completion award)",
+    "Thalmor search clock advanced to 2/8 via 'Informants Everywhere' compel",
+    "Spell Tome awakening clock advanced to 4/8 (halfway to full artifact awakening)",
+    "Honningbrew job sets up next session's infiltration and moral decision point"
+  ]
+}

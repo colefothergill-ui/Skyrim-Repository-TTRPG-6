@@ -1,0 +1,80 @@
+{
+  "name": "Imperial Legionnaire",
+  "id": "npc_stat_imperial_legionnaire",
+  "type": "Imperial Soldier",
+  "category": "Enemy",
+  "location": "Solitude, The Reach, Imperial forts",
+  "faction": "Imperial Legion",
+  "aspects": {
+    "high_concept": "Professional and Disciplined",
+    "trouble": "Far From Home in Hostile Land",
+    "other_aspects": [
+      "For the Empire",
+      "Superior Training and Equipment",
+      "Orders Above All"
+    ]
+  },
+  "skills": {
+    "Great": ["Fight"],
+    "Good": ["Shoot", "Will"],
+    "Fair": ["Athletics", "Notice"],
+    "Average": ["Physique", "Provoke"]
+  },
+  "stunts": [
+    "Testudo Formation: When fighting in formation with other Legionnaires, gain Armor:2 against ranged attacks",
+    "Imperial Discipline: +2 to Will when resisting fear or intimidation",
+    "Professional Soldier: +2 to Fight when defending a fortified position"
+  ],
+  "stress": {
+    "physical": [false, false, false],
+    "mental": [false, false, false]
+  },
+  "consequences": {
+    "mild": null,
+    "moderate": null
+  },
+  "refresh": 2,
+  "armor": 1,
+  "notes": "Imperial Legionnaires are professional soldiers of the Cyrodilic Empire. They are better trained and equipped than most Stormcloaks, with superior discipline and tactics. They excel at holding fortified positions and fighting in formation. Their armor provides base protection (Armor:1), and their Testudo formation grants additional defense against ranged attacks.",
+  "combat_tactics": "Legionnaires fight with discipline and coordination. They prefer shield walls and defensive formations, using archers to soften enemies before engagement. They follow orders precisely and retreat in good order if commanded. They're trained to hold ground and will fight to the last man if ordered.",
+  "scene_triggers": ["Guarding Imperial forts", "Holding territory in Solitude", "Patrolling The Reach", "Defending supply convoys", "Siege warfare", "Battle of Whiterun"],
+  "act_context": ["Act 1", "Act 2", "Act 3"],
+  "loot": {
+    "guaranteed": ["Imperial armor", "Steel weapon", "10-25 gold"],
+    "possible": ["Imperial orders", "Healing potion", "Map", "Imperial seal"],
+    "group_loot": "Imperial camps contain well-organized supplies worth 50-150 gold, superior weapons, and military intelligence"
+  },
+  "variants": [
+    {
+      "name": "Imperial Centurion",
+      "changes": "Increase Fight to Superb (+5), add stunt 'Tactical Commander: All allies within the same zone gain +1 to Fight', add fourth stress box"
+    },
+    {
+      "name": "Imperial Archer",
+      "changes": "Increase Shoot to Great (+4), replace Testudo with 'Suppressing Fire: +2 to Create Advantage using Shoot to pin down enemies'"
+    },
+    {
+      "name": "Legate",
+      "changes": "Increase all skills by +1, add stunt 'Voice of Authority: +3 to Provoke when giving orders to Imperial soldiers', becomes named NPC with full consequence slots"
+    }
+  ],
+  "social_interaction": "Legionnaires are professional and follow orders. They can be reasoned with using logic, appeals to law and order, or proper military protocol. They respect chain of command and duty. Generally neutral on Skyrim politics personally but will enforce Empire's will. Dislike the Thalmor but obey the Concordat.",
+  "relationships": {
+    "General Tullius": "Commanding officer",
+    "Legate Rikke": "Respected commander",
+    "Stormcloaks": "Enemy combatants",
+    "Thalmor": "Uneasy allies",
+    "Neutral civilians": "Protect and maintain order"
+  },
+  "personality_notes": {
+    "speaking_style": "Military, formal, uses ranks and protocol, pragmatic",
+    "motivations": ["Maintain Imperial order", "End the rebellion", "Serve with honor", "Protect civilians"],
+    "fears": ["Losing the war", "Thalmor influence growing", "Skyrim descending into chaos"],
+    "quirks": ["Salutes superior officers", "Maintains equipment meticulously", "Follows regulations strictly"]
+  },
+  "hold_context": {
+    "primary": ["Haafingar", "The Reach", "Hjaalmarch"],
+    "contested": ["Whiterun", "Falkreath"],
+    "rare": ["Eastmarch", "Winterhold", "The Rift", "The Pale"]
+  }
+}

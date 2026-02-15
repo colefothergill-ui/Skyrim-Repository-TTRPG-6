@@ -1,0 +1,276 @@
+{
+  "daedric_quests": [
+    {
+      "id": "azuras_star",
+      "name": "The Black Star",
+      "daedric_prince": "Azura",
+      "moral_alignment": "Good",
+      "starting_location": "The Frozen Hearth, Winterhold",
+      "trigger": "Speak to innkeeper about recent events",
+      "level_requirement": 2,
+      "description": "Azura tasks you with recovering her artifact and restoring it",
+      "objectives": [
+        "Speak to Aranea Ienith at the Shrine of Azura",
+        "Enter Ilinalta's Deep",
+        "Recover Azura's Star",
+        "Speak to Nelacar in Winterhold",
+        "Choose: Restore star to Azura OR corrupt it to hold black souls"
+      ],
+      "branching_choice": {
+        "restore_to_azura": {
+          "reward": "Azura's Star (infinite reusable soul gem for white souls)",
+          "moral": "Good choice, honor the Daedric Prince",
+          "relationship": "Azura favors you"
+        },
+        "create_black_star": {
+          "reward": "The Black Star (infinite reusable soul gem for black souls/humanoid)",
+          "moral": "Pragmatic but dishonors Azura",
+          "relationship": "Azura is displeased"
+        }
+      },
+      "themes": ["Balance", "Soul magic", "Moral choice"],
+      "difficulty": "Fair (+2)"
+    },
+    {
+      "id": "boethiahs_calling",
+      "name": "Boethiah's Calling",
+      "daedric_prince": "Boethiah",
+      "moral_alignment": "Evil",
+      "starting_location": "Sacellum of Boethiah",
+      "trigger": "Read the book 'Boethiah's Proving' or find cultists",
+      "level_requirement": 6,
+      "description": "Boethiah demands you prove your worth through betrayal and combat",
+      "objectives": [
+        "Lead a follower to the Sacellum",
+        "Sacrifice your follower on the Pillar of Sacrifice",
+        "Defeat the other cultists in ritual combat",
+        "Receive the Ebony Mail"
+      ],
+      "moral_dilemma": "Requires sacrificing a companion who trusts you",
+      "reward": "Ebony Mail (armor with silence and poison aura)",
+      "themes": ["Betrayal", "Proving strength", "Dark deed"],
+      "difficulty": "Good (+3)",
+      "gm_note": "This quest tests if players will betray companions for power"
+    },
+    {
+      "id": "a_daedras_best_friend",
+      "name": "A Daedra's Best Friend",
+      "daedric_prince": "Clavicus Vile",
+      "moral_alignment": "Neutral Evil",
+      "starting_location": "Falkreath",
+      "trigger": "Speak to Lod about a missing dog",
+      "level_requirement": 2,
+      "description": "Help Clavicus Vile reunite with his companion Barbas, but beware the monkey's paw",
+      "objectives": [
+        "Find Barbas the dog",
+        "Escort Barbas to Haemar's Shame",
+        "Retrieve the Rueful Axe",
+        "Return to Clavicus Vile's shrine",
+        "Choose: Kill Barbas for the axe OR spare Barbas for the Masque"
+      ],
+      "branching_choice": {
+        "kill_barbas": {
+          "reward": "Rueful Axe (powerful but not Daedric artifact)",
+          "moral": "Evil choice, kill innocent dog",
+          "consequence": "Clavicus Vile's power remains split"
+        },
+        "spare_barbas": {
+          "reward": "Masque of Clavicus Vile (improve Speech and prices)",
+          "moral": "Better choice, refuse cruel demand",
+          "consequence": "Clavicus reunited with Barbas"
+        }
+      },
+      "themes": ["Careful what you wish for", "Monkey's paw deals", "Best Friend"],
+      "difficulty": "Average (+1)"
+    },
+    {
+      "id": "discerning_the_transmundane",
+      "name": "Discerning the Transmundane",
+      "daedric_prince": "Hermaeus Mora",
+      "moral_alignment": "Neutral",
+      "starting_location": "Septimus Signus's Outpost",
+      "trigger": "Speak to Septimus Signus north of Winterhold",
+      "level_requirement": 4,
+      "description": "Hermaeus Mora demands you unlock the secrets of a Dwemer lockbox",
+      "objectives": [
+        "Speak to Septimus Signus",
+        "Harvest blood from different races",
+        "Return to Septimus with the blood",
+        "Unlock the Dwemer lockbox",
+        "Receive the Oghma Infinium"
+      ],
+      "reward": "Oghma Infinium (choose to permanently increase skills in Warrior, Mage, or Thief path)",
+      "themes": ["Forbidden knowledge", "Cost of learning", "Dark bargain"],
+      "difficulty": "Good (+3)",
+      "gm_note": "Ties into main quest and Elder Scroll retrieval"
+    },
+    {
+      "id": "ill_met_by_moonlight",
+      "name": "Ill Met By Moonlight",
+      "daedric_prince": "Hircine",
+      "moral_alignment": "True Neutral",
+      "starting_location": "Falkreath Jail",
+      "trigger": "Speak to Sinding in Falkreath Jail",
+      "level_requirement": 4,
+      "description": "Hunt a werewolf for Hircine or help the werewolf escape",
+      "objectives": [
+        "Speak to Sinding about his curse",
+        "Hunt Sinding in Bloated Man's Grotto",
+        "Choose: Kill Sinding OR help him kill the hunters"
+      ],
+      "branching_choice": {
+        "kill_sinding": {
+          "reward": "Savior's Hide (magic and poison resistance armor)",
+          "moral": "Hunt the beast",
+          "consequence": "Hircine is pleased"
+        },
+        "help_sinding": {
+          "reward": "Ring of Hircine (control werewolf transformations)",
+          "moral": "Show mercy to cursed man",
+          "consequence": "Hircine respects the hunt either way"
+        }
+      },
+      "themes": ["The hunt", "Predator vs prey", "Mercy or justice"],
+      "difficulty": "Fair (+2)"
+    },
+    {
+      "id": "the_cursed_tribe",
+      "name": "The Cursed Tribe",
+      "daedric_prince": "Malacath",
+      "moral_alignment": "Lawful Neutral",
+      "starting_location": "Largashbur (Orc Stronghold)",
+      "trigger": "Approach Largashbur during giant attack",
+      "level_requirement": 3,
+      "description": "Help an Orc stronghold regain Malacath's favor",
+      "objectives": [
+        "Defend Largashbur from giants",
+        "Speak to Chief Yamarz",
+        "Retrieve Troll Fat and Daedra Heart",
+        "Escort Yamarz to Fallowstone Cave",
+        "Defeat the giant chieftain",
+        "Return to shrine of Malacath"
+      ],
+      "reward": "Volendrung (Daedric warhammer that absorbs stamina)",
+      "themes": ["Honor", "Broken oaths", "Proving worth"],
+      "difficulty": "Fair (+2)"
+    },
+    {
+      "id": "pieces_of_the_past",
+      "name": "Pieces of the Past",
+      "daedric_prince": "Mehrunes Dagon",
+      "moral_alignment": "Chaotic Evil",
+      "starting_location": "Dawnstar",
+      "trigger": "Speak to Silus Vesuius at his house",
+      "level_requirement": 5,
+      "description": "Reassemble Mehrunes' Razor, but at what cost?",
+      "objectives": [
+        "Collect pieces of Mehrunes' Razor",
+        "Visit the Shrine of Mehrunes Dagon",
+        "Choose: Kill Silus for the dagger OR spare him and refuse"
+      ],
+      "branching_choice": {
+        "kill_silus": {
+          "reward": "Mehrunes' Razor (dagger with chance to instantly kill)",
+          "moral": "Evil choice, murder innocent historian",
+          "consequence": "Mehrunes Dagon is pleased"
+        },
+        "spare_silus": {
+          "reward": "Gold and moral high ground",
+          "moral": "Good choice, refuse daedric demand",
+          "consequence": "No artifact, but clear conscience"
+        }
+      },
+      "themes": ["Destruction", "Temptation of power", "Murder"],
+      "difficulty": "Fair (+2)"
+    },
+    {
+      "id": "the_whispering_door",
+      "name": "The Whispering Door",
+      "daedric_prince": "Mephala",
+      "moral_alignment": "Evil",
+      "starting_location": "Whiterun, Dragonsreach",
+      "trigger": "Speak to Hulda or Jarl's children",
+      "level_requirement": 5,
+      "description": "Mephala whispers of murder and betrayal in Whiterun",
+      "objectives": [
+        "Investigate the locked door in Dragonsreach",
+        "Get key from Farengar or Balgruuf",
+        "Speak to Mephala through the Whispering Door",
+        "Kill Balgruuf's son's contact (Nelkir)",
+        "Retrieve the Ebony Blade"
+      ],
+      "reward": "Ebony Blade (two-handed sword that absorbs health, grows stronger with betrayal)",
+      "themes": ["Whispers", "Manipulation", "Family strife"],
+      "difficulty": "Fair (+2)",
+      "gm_note": "Sword strengthens by killing friends/allies - ultimate betrayal weapon"
+    },
+    {
+      "id": "waking_nightmare",
+      "name": "Waking Nightmare",
+      "daedric_prince": "Vaermina",
+      "moral_alignment": "Evil",
+      "starting_location": "Dawnstar Inn",
+      "trigger": "Speak to Erandur at Windpeak Inn",
+      "level_requirement": 4,
+      "description": "End the nightmare plaguing Dawnstar",
+      "objectives": [
+        "Investigate the nightmares with Erandur",
+        "Enter Nightcaller Temple",
+        "Navigate the dream realm",
+        "Choose: Destroy the Skull of Corruption OR take it and kill Erandur"
+      ],
+      "branching_choice": {
+        "destroy_skull": {
+          "reward": "Erandur as follower",
+          "moral": "Good choice, refuse Vaermina",
+          "consequence": "No artifact but saved the town"
+        },
+        "take_skull": {
+          "reward": "Skull of Corruption (staff that steals dreams and deals damage)",
+          "moral": "Evil choice, betray Erandur",
+          "consequence": "Erandur dies, Vaermina pleased"
+        }
+      },
+      "themes": ["Nightmares", "Betrayal", "Redemption denied"],
+      "difficulty": "Fair (+2)"
+    },
+    {
+      "id": "the_house_of_horrors",
+      "name": "The House of Horrors",
+      "daedric_prince": "Molag Bal",
+      "moral_alignment": "Extremely Evil",
+      "starting_location": "Markarth",
+      "trigger": "Investigate the abandoned house",
+      "level_requirement": 4,
+      "description": "Molag Bal, the King of Rape, demands you corrupt a priest of Boethiah",
+      "objectives": [
+        "Enter the abandoned house",
+        "Speak to Molag Bal",
+        "Rescue the priest Logrolf",
+        "Return him to the house",
+        "Torture and kill Logrolf on the altar"
+      ],
+      "reward": "Mace of Molag Bal (absorbs stamina and magicka, soul traps)",
+      "themes": ["Corruption", "Torture", "Darkest deed"],
+      "difficulty": "Fair (+2)",
+      "gm_warning": "Most evil quest in game - involves torture. Handle with care."
+    }
+  ],
+  "daedric_quest_mechanics": {
+    "discovery": "Most are found through rumors, books, or NPC interactions",
+    "level_requirements": "Scaled appropriately for party level",
+    "moral_weight": "All Daedric quests involve moral choices - actions have consequences",
+    "artifacts": "Daedric artifacts are powerful but may have dark costs",
+    "reputation": "Dealing with Daedra affects how NPCs view the party"
+  },
+  "gm_guidance": {
+    "running_daedric_quests": [
+      "Emphasize moral weight of choices",
+      "Daedric Princes are alien and amoral",
+      "Artifacts are tempting but come with strings",
+      "Not all rewards are worth the cost",
+      "Let players face consequences of evil choices"
+    ],
+    "integration": "Daedric quests can run parallel to main quest and civil war"
+  }
+}

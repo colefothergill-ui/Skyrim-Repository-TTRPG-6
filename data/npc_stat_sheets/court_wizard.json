@@ -1,0 +1,59 @@
+{
+  "name": "Court Wizard",
+  "id": "npc_stat_court_wizard",
+  "type": "Ally",
+  "category": "Friendly NPC",
+  "location": "Jarl's palace, court chambers",
+  "faction": "Local Hold / College of Winterhold (sometimes)",
+  "aspects": {
+    "high_concept": "Learned Magical Advisor to the Jarl",
+    "trouble": "Caught Between Political Loyalty and Magical Truth",
+    "other_aspects": [
+      "Seeker of Arcane Knowledge",
+      "Bridge Between Magic and Politics",
+      "Access to Rare Tomes and Artifacts"
+    ]
+  },
+  "skills": {
+    "Great": ["Lore"],
+    "Good": ["Contacts", "Notice"],
+    "Fair": ["Will", "Rapport"],
+    "Average": ["Deceive", "Empathy", "Resources"]
+  },
+  "stunts": [
+    "Arcane Expertise: +2 to Lore when researching magical phenomena, artifacts, or ancient history",
+    "Enchanting Services: Can enchant items or teach enchanting basics (requires good trust relationship)",
+    "Court Connections: +2 to Contacts when leveraging position to access Jarl's resources or information"
+  ],
+  "stress": {
+    "physical": [false, false],
+    "mental": [false, false, false]
+  },
+  "consequences": {
+    "mild": null,
+    "moderate": null
+  },
+  "refresh": 3,
+  "fate_points": 3,
+  "trust_clock": {
+    "enabled": true,
+    "current": 0,
+    "max": 8,
+    "description": "Trust affects willingness to share research, provide magical assistance, and introduce to other mages"
+  },
+  "notes": "Court Wizards serve as magical advisors to Jarls across Skyrim. They research arcane matters, maintain magical defenses, and provide counsel on supernatural threats. They often have access to rare books, enchanting facilities, and connections to the College of Winterhold. Building relationships with Court Wizards can provide magical knowledge, enchanting services, and introductions to magical communities.",
+  "relationships": {
+    "Their Jarl": "Loyal advisor",
+    "College of Winterhold": "Alumni or associate",
+    "Other Court Wizards": "Professional network",
+    "Dragon Crisis": "Particularly interested in researching"
+  },
+  "personality_notes": {
+    "speaking_style": "Educated, scholarly, uses arcane terminology, balances formality with curiosity",
+    "motivations": ["Advance magical knowledge", "Serve their Jarl well", "Protect hold from magical threats", "Research dragons and ancient magic"],
+    "fears": ["Political interference in research", "Dangerous magical artifacts falling into wrong hands", "Being unable to stop magical threats"],
+    "quirks": ["Always reading or taking notes", "Excited about magical discoveries", "Maintains extensive library"]
+  },
+  "scene_triggers": ["Magical investigations", "Dragon research", "Enchanting requests", "Dungeon research", "Court interactions"],
+  "act_context": ["Act 1", "Act 2", "Act 3"]
+}

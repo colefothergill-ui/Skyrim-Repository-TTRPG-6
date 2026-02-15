@@ -1,0 +1,54 @@
+{
+  "name": "Bandit Marauder",
+  "id": "enemy_bandit_marauder",
+  "type": "Human Outlaw",
+  "category": "Enemy",
+  "location": "Roads, camps, abandoned forts",
+  "faction": "Bandits",
+  "aspects": {
+    "high_concept": "Ruthless Highwayman",
+    "trouble": "Wanted by Every Hold",
+    "other_aspects": [
+      "Takes What They Want",
+      "Coward When Outmatched"
+    ]
+  },
+  "skills": {
+    "Good": ["Fight", "Shoot"],
+    "Fair": ["Athletics", "Stealth"],
+    "Average": ["Notice", "Provoke"]
+  },
+  "stunts": [
+    "Ambush Tactics: +2 to Attack on first exchange if enemies are surprised",
+    "Dirty Fighter: Can use Deceive to create advantages in combat (feints, thrown dirt, etc.)"
+  ],
+  "stress": {
+    "physical": [false, false],
+    "mental": [false, false]
+  },
+  "consequences": {
+    "mild": null,
+    "moderate": null
+  },
+  "refresh": 1,
+  "notes": "Bandit marauders are experienced outlaws who prey on travelers and merchants. They're skilled fighters but lack honor or loyalty. When facing serious opposition, they'll flee rather than fight to the death. They often operate in groups and prefer ambush tactics.",
+  "combat_tactics": "Bandits prefer to ambush from concealment, using archers to soften targets before melee fighters rush in. If they take significant casualties or their leader falls, they'll attempt to flee. They fight dirty and will take hostages if cornered.",
+  "scene_triggers": ["Road ambushes", "Raiding merchant caravans", "Defending bandit camps", "Attacking isolated farms"],
+  "act_context": ["Act 1", "Act 2", "Act 3"],
+  "loot": {
+    "guaranteed": ["Worn weapon and armor", "Small amount of stolen goods (10-30 gold)"],
+    "possible": ["Lockpicks", "Skooma", "Stolen jewelry"],
+    "group_loot": "Bandit camps contain stockpiled goods worth 50-200 gold"
+  },
+  "variants": [
+    {
+      "name": "Bandit Chief",
+      "changes": "Increase Fight to Great (+4), add stunt 'Rally the Troops: +2 to Provoke when commanding bandits in combat'"
+    },
+    {
+      "name": "Bandit Archer",
+      "changes": "Replace Fight with Shoot at Good (+3), add stunt 'Aimed Shot: Spend a fate point to ignore one armor rating'"
+    }
+  ],
+  "social_interaction": "Bandits may negotiate if clearly outmatched. They respond to threats (Provoke) and bribes (Resources). Deceive can convince them there's easier prey elsewhere."
+}

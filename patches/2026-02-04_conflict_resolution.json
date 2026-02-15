@@ -1,0 +1,18 @@
+{
+  "type": "conflict_resolution",
+  "date": "2026-02-04",
+  "changes": [
+    {
+      "path": "state/campaign_state.json:scene_flags.hadvar_stabilized_by_restoration",
+      "action": "set",
+      "value": true,
+      "reason": "Player-confirmed: Hadvar was stabilized by Restoration magic during Battle of Whiterun."
+    },
+    {
+      "path": "data/npc_stat_sheets/hadvar.json:notes",
+      "action": "append",
+      "value": "Player-canon update: Hadvar was stabilized by Restoration magic (bleeding sealed; still seriously injured).",
+      "reason": "Align NPC condition with table canon."
+    }
+  ]
+}

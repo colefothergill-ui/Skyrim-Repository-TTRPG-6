@@ -1,0 +1,64 @@
+{
+  "name": "Draugr Overlord",
+  "id": "enemy_draugr_overlord",
+  "type": "Undead Warrior",
+  "category": "Enemy",
+  "location": "Ancient Nordic Ruins",
+  "faction": "Undead",
+  "aspects": {
+    "high_concept": "Ancient Nord Death Knight",
+    "trouble": "Bound to Guard This Tomb",
+    "other_aspects": [
+      "Immune to Fear and Pain",
+      "Master of Ancient Weapons",
+      "Channels Death Magic"
+    ]
+  },
+  "skills": {
+    "Superb": ["Fight"],
+    "Great": ["Physique", "Will"],
+    "Good": ["Athletics", "Lore"],
+    "Fair": ["Notice"]
+  },
+  "stunts": [
+    "Unrelenting Force: Once per scene, use Lore to create 'Knocked Back' situation aspect on all targets in zone (opposed by Physique)",
+    "Frost Cloak: Attackers in melee range take 1 stress automatically each exchange",
+    "Undead Resilience: Immune to mental attacks, poison, and disease. Armor: 2 against physical attacks",
+    "Summon Draugr: Once per encounter, summon 2-3 lesser draugr minions"
+  ],
+  "stress": {
+    "physical": [false, false, false, false],
+    "mental": []
+  },
+  "consequences": {
+    "mild": null,
+    "moderate": null,
+    "severe": null
+  },
+  "refresh": 0,
+  "notes": "Draugr Overlords are the most powerful of the ancient Nordic undead. They were once great warriors or priests who were entombed with powerful artifacts and sworn to guard them for eternity. They possess devastating combat prowess and can use ancient Thu'um (dragon shouts). They're intelligent enough to use tactics but are bound to their tombs by ancient magic.",
+  "special_mechanics": {
+    "armor": 2,
+    "immunities": ["Mental stress", "Poison", "Disease", "Fear effects"],
+    "weakness": "Fire damage ignores armor",
+    "shout_cooldown": "After using Unrelenting Force, cannot use again for 3 exchanges"
+  },
+  "combat_tactics": "Overlords open combat with Unrelenting Force to scatter enemies, then close to melee range where their Frost Cloak is effective. They'll summon lesser draugr if outnumbered. They fight to the death, as they cannot leave their assigned post.",
+  "scene_triggers": ["Final chamber of Nordic ruins", "Guarding word walls", "Protecting ancient artifacts", "Barrow boss encounters"],
+  "act_context": ["Act 1", "Act 2", "Act 3"],
+  "loot": {
+    "guaranteed": ["Ancient Nord weapon (Great quality)", "Ebony or better armor piece"],
+    "possible": ["Dragon soul absorption (if shout learned)", "Ancient coins (50-100)", "Enchanted jewelry"],
+    "location_specific": ["Word of Power (if near word wall)", "Quest item (if quest-related)"]
+  },
+  "variants": [
+    {
+      "name": "Draugr Deathlord",
+      "changes": "Replace Superb Fight with Fantastic (+6), add Ebony equipment"
+    },
+    {
+      "name": "Dragon Priest",
+      "changes": "Replace Fight focus with Lore (Superb), add multiple Thu'um abilities, dragon priest mask"
+    }
+  ]
+}

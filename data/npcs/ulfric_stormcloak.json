@@ -1,0 +1,227 @@
+{
+  "name": "Ulfric Stormcloak",
+  "id": "ulfric_stormcloak",
+  "type": "Jarl and Rebellion Leader",
+  "location": "Palace of the Kings, Windhelm",
+  "faction": "Stormcloaks",
+  "aspects": {
+    "high_concept": "Jarl of Windhelm and Leader of the Stormcloak Rebellion",
+    "trouble": "The Ghost of High King Torygg Haunts Me",
+    "other_aspects": [
+      "Master of the Thu'um",
+      "Skyrim Belongs to the Nords",
+      "Veteran of the Great War",
+      "Unfinished with the Thalmor",
+      "Reluctant Revolutionary Turned True Believer"
+    ]
+  },
+  "skills": {
+    "Great": ["Rapport", "Will"],
+    "Good": ["Fight", "Provoke", "Lore"],
+    "Fair": ["Notice", "Empathy", "Physique"],
+    "Average": ["Tactics", "Deceive"]
+  },
+  "stunts": [
+    "Voice of the High King: +2 to Rapport when inspiring Nords or giving speeches about freedom",
+    "Unrelenting Force: Once per scene, use Thu'um to create 'Knocked Down' or 'Disarmed' aspect on target (requires Will vs Physique check)",
+    "Great War Survivor: +2 to Will when resisting mental attacks or interrogation",
+    "True High King: Can use Rapport instead of Provoke when commanding Stormcloaks",
+    "Storm of Rebellion: When leading Stormcloak forces, grant all allies +1 to Fight"
+  ],
+  "stress": {
+    "physical": [false, false, false],
+    "mental": [false, false, false, false]
+  },
+  "consequences": {
+    "mild": null,
+    "moderate": null,
+    "severe": null
+  },
+  "refresh": 4,
+  "fate_points": 4,
+  "notes": "Ulfric Stormcloak killed High King Torygg in honorable combat and started a rebellion to free Skyrim from the Empire. A complex figure torn between duty, honor, and ambition. Trained in the Thu'um by the Greybeards but used it in combat, breaking his oath.",
+  "relationships": {
+    "Galmar Stone-Fist": "Trusted friend and military advisor",
+    "General Tullius": "Imperial oppressor who must be defeated",
+    "Jarl Balgruuf": "Disappointed ally turned neutral, wants his support",
+    "High King Torygg": "Murdered in duel, haunted by the act",
+    "Elenwen": "Thalmor torturer from his past, despises her",
+    "The Greybeards": "Complicated - broke his oath by using Thu'um in combat",
+    "Legate Rikke": "Former comrade, now enemy",
+    "Brunwulf Free-Winter": "Political opponent in Windhelm who questions his policies; potential replacement Jarl if deposed",
+    "Player Characters": "Potential champion of Skyrim's freedom"
+  },
+  "quests": ["Civil War Questline (Stormcloak)", "Season Unending"],
+  "inventory": ["Ulfric's Outfit", "Ancient Nordic Sword", "Symbol of Talos"],
+  "personality_notes": {
+    "speaking_style": "Passionate and eloquent. Speaks of honor, freedom, and tradition. Can be charismatic or brooding depending on situation.",
+    "motivations": [
+      "Free Skyrim from Imperial control",
+      "Restore Talos worship openly",
+      "Avenge years of Thalmor torture",
+      "Prove he's the rightful High King",
+      "Redeem himself for Markarth and Torygg"
+    ],
+    "fears": [
+      "That he killed Torygg for the wrong reasons",
+      "Becoming what the Thalmor wanted him to be - a divider",
+      "Skyrim falling to the Thalmor without Empire's protection",
+      "Being remembered as a traitor instead of a hero",
+      "His ambition overshadowing his principles"
+    ],
+    "quirks": [
+      "Broods on his throne when troubled",
+      "Quotes Nord sayings and traditions",
+      "Defensive about using Thu'um against Torygg",
+      "Passionate about Talos worship",
+      "Conflicted about the path he's chosen"
+    ]
+  },
+  "loyalty": 0,
+  "trust_clock": {
+    "current": 0,
+    "max": 10,
+    "advancement_triggers": [
+      "Join Stormcloaks (+4)",
+      "Win major battle for Stormcloaks (+1)",
+      "Complete critical missions for the rebellion (+1)",
+      "Demonstrate devotion to Nord traditions (+1)",
+      "Show respect for Talos (+1)",
+      "Prove yourself in honorable combat (+1)"
+    ],
+    "setback_triggers": [
+      "Join Imperial Legion (-10, irreversible)",
+      "Question his leadership or honor (-3)",
+      "Support the Empire (-3)",
+      "Show disrespect for Nord traditions (-2)",
+      "Defend Thalmor actions (-5)"
+    ]
+  },
+  "dialogue_trees": {
+    "initial_meeting": {
+      "greeting": "I am Jarl Ulfric Stormcloak. You stand in the Palace of the Kings. What do you seek?",
+      "responses": [
+        {
+          "option": "I want to fight for Skyrim's freedom",
+          "leads_to": "recruitment_path",
+          "loyalty_change": 5,
+          "quest_trigger": "joining_the_stormcloaks"
+        },
+        {
+          "option": "Tell me about the rebellion",
+          "leads_to": "rebellion_explanation",
+          "loyalty_change": 0
+        },
+        {
+          "option": "You murdered Torygg",
+          "leads_to": "defensive_response",
+          "loyalty_change": -5
+        },
+        {
+          "option": "I serve the Empire",
+          "leads_to": "hostile_response",
+          "loyalty_change": -10,
+          "relationship_change": "enemy"
+        }
+      ]
+    },
+    "recruitment_path": {
+      "dialogue": "Good. Skyrim needs strong warriors. Speak with Galmar Stone-Fist. Prove your worth, and you'll have a place in my army.",
+      "quest_activated": "joining_the_stormcloaks",
+      "faction_alignment": "stormcloaks"
+    },
+    "rebellion_explanation": {
+      "dialogue": "The Empire is weak. They bend to the Thalmor's every whim, ban our worship of Talos, and bleed us dry with taxes. Skyrim must be free to defend itself.",
+      "responses": [
+        {
+          "option": "The Empire protects us from the Thalmor",
+          "leads_to": "political_disagreement",
+          "loyalty_change": -3
+        },
+        {
+          "option": "I'm with you. Let me join",
+          "leads_to": "recruitment_path",
+          "loyalty_change": 5
+        },
+        {
+          "option": "What about High King Torygg?",
+          "leads_to": "torygg_defense",
+          "loyalty_change": -1
+        }
+      ]
+    },
+    "torygg_defense": {
+      "dialogue": "I challenged Torygg in honorable combat, as is the ancient Nord way. He accepted. I won. Some call it murder - I call it tradition.",
+      "note": "Ulfric becomes defensive about this topic",
+      "loyalty_change": 0
+    }
+  },
+  "branching_interactions": {
+    "if_stormcloak": "Primary quest giver and faction leader",
+    "if_imperial": "Major antagonist, final boss of Imperial questline",
+    "if_neutral": "Attempts recruitment through inspiring speeches",
+    "renowned_warrior": "Sees accomplished warriors as the champions Skyrim needs"
+  },
+  "decision_points": {
+    "civil_war_choice": {
+      "condition": "player_must_choose_side",
+      "options": ["stormcloak", "imperial", "delay"],
+      "consequences": {
+        "stormcloak": {
+          "loyalty_change": 15,
+          "unlocks": "stormcloak_questline",
+          "relationship": "ally"
+        },
+        "imperial": {
+          "loyalty_change": -20,
+          "unlocks": "becomes_enemy",
+          "relationship": "enemy"
+        },
+        "delay": {
+          "loyalty_change": -1,
+          "note": "Ulfric questions your conviction"
+        }
+      }
+    },
+    "season_unending": {
+      "condition": "peace_conference",
+      "options": ["compromise", "demand_markarth", "refuse_terms"],
+      "loyalty_impact": {
+        "compromise": "loyalty -2, disappointed",
+        "demand_markarth": "loyalty +2, respects strength",
+        "refuse_terms": "loyalty varies based on outcome"
+      }
+    },
+    "talos_worship": {
+      "condition": "discussing_religion",
+      "options": ["support_talos", "neutral", "oppose_talos"],
+      "consequences": {
+        "support_talos": {"loyalty_change": 5, "note": "Deeply appreciates devotion"},
+        "neutral": {"loyalty_change": 0, "note": "Expected but not impressed"},
+        "oppose_talos": {"loyalty_change": -10, "note": "Questions your allegiance"}
+      }
+    }
+  },
+  "thuum_abilities": {
+    "unrelenting_force": {
+      "mechanics": "Will vs Physique check, on success target is knocked down or disarmed",
+      "cooldown": "Once per scene",
+      "note": "Ulfric broke his Greybeard oath by using Thu'um in combat"
+    }
+  },
+  "combat_tactics": "Fights with sword and Thu'um. Uses Unrelenting Force to control battlefield. Leads from front when necessary but prefers strategic command. Honorable fighter - prefers single combat to ambush.",
+  "story_hooks": [
+    "Tortured by Thalmor during Great War - they manipulated him",
+    "Markarth Incident - promised religious freedom then betrayed by Empire",
+    "Killed High King Torygg with Thu'um, causing controversy",
+    "Broke Greybeard oath by using Voice for violence",
+    "Secretly questions if rebellion is what's best for Skyrim",
+    "Elenwen has a dossier on him from his torture",
+    "Used by Thalmor as unwitting asset to divide Skyrim"
+  ],
+  "dark_secrets": {
+    "thalmor_dossier": "Elenwen has files from his torture and interrogation after Great War. Ulfric doesn't know they consider him an 'asset' for dividing Skyrim.",
+    "torygg_regret": "Privately questions if killing Torygg was necessary or if he could have been convinced to rebel",
+    "markarth_shame": "Made promises of religious freedom he couldn't keep when Empire retook the city"
+  }
+}

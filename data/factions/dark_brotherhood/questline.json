@@ -1,0 +1,124 @@
+{
+  "questline": "Dark Brotherhood Questline",
+  "quests": [
+    {
+      "id": "db01_innocence_lost",
+      "name": "Innocence Lost",
+      "description": "A rumor in Windhelm speaks of a boy, Aventus Aretino, attempting the Black Sacrament to contact the Dark Brotherhood. Investigating this leads to the assassination of Grelod the Kind at Riften's Honorhall Orphanage, an act that draws the Brotherhood's attention.",
+      "objectives": [
+        "Travel to Windhelm and speak with Aventus Aretino",
+        "Fulfill Aventus's request: assassinate Grelod the Kind in Riften"
+      ],
+      "outcome": "Completing this murder sets the stage for the Dark Brotherhood to reach out to the player."
+    },
+    {
+      "id": "db02_friends_like_these",
+      "name": "With Friends Like These...",
+      "description": "Soon after Grelod's death, the player is abducted by Astrid, the Dark Brotherhood leader. In an abandoned shack, Astrid presents three captives and demands the player prove themselves by killing one (or more) of them. This is a test to join the Brotherhood.",
+      "objectives": [
+        "Awaken in the abandoned shack and listen to Astrid's instructions",
+        "Decide the fate of the three bound captives (choose one to kill, or eliminate all as you see fit)"
+      ],
+      "branching_choice": {
+        "join_brotherhood": "Kill at least one captive to satisfy Astrid and accept her invitation to join the Dark Brotherhood.",
+        "betray_brotherhood": "Instead attack Astrid. Branch: This triggers the alternate quest 'Destroy the Dark Brotherhood', where you align with Imperial forces to wipe out the faction."
+      }
+    },
+    {
+      "id": "db03_sanctuary_welcome",
+      "name": "Sanctuary",
+      "description": "Astrid welcomes the player to the Dark Brotherhood Sanctuary in Falkreath. The player meets the other members and is officially inducted. Nazir provides initial contracts to prove the new recruit's worth.",
+      "objectives": [
+        "Travel with Astrid to the Falkreath Sanctuary (or find it on your own if already discovered)",
+        "Meet Dark Brotherhood members: Nazir, Babette, etc.",
+        "Receive your first assassination contracts from Nazir"
+      ],
+      "rewards": [
+        "Formal membership in the Dark Brotherhood",
+        "Shrouded Armor set (Dark Brotherhood gear)",
+        "Access to Sanctuary services (alchemist, fence for stolen goods via Nazir, etc.)"
+      ]
+    },
+    {
+      "id": "db04_first_contracts",
+      "name": "First Contracts",
+      "description": "The player carries out a set of initial contracts given by Nazir to demonstrate efficiency and loyalty. Targets are minor (examples: a beggar in Markarth, an ex-miller in Ivarstead, a troublesome bard in Dawnstar).",
+      "objectives": [
+        "Assassinate the assigned targets (typically 2–3 minor contracts across Skyrim)",
+        "Return to Nazir after each kill for payment"
+      ],
+      "notes": "These contracts build the player's reputation within the Brotherhood. After completing them, the Brotherhood moves forward with more significant plans."
+    },
+    {
+      "id": "db05_cure_for_madness",
+      "name": "The Cure for Madness",
+      "description": "The Brotherhood's keeper, Cicero, turns traitor, attacking another member and fleeing to the Night Mother's coffin with the artifact. Astrid tasks the player to hunt down Cicero at the old Dawnstar Sanctuary.",
+      "objectives": [
+        "Investigate Cicero's quarters for clues (find his journal)",
+        "Pursue Cicero to the Dawnstar Sanctuary north of Windhelm",
+        "Confront Cicero in the Dawnstar Sanctuary"
+      ],
+      "branching_choice": {
+        "spare_cicero": "Show mercy and spare Cicero's life (he remains alive and repentant in the Sanctuary)",
+        "kill_cicero": "Eliminate Cicero for his betrayal"
+      },
+      "outcome": "Astrid's leadership remains unchallenged. The Night Mother (through events in Cicero's journals or whispers) names the player as the new Listener, introducing a divine element to the questline."
+    },
+    {
+      "id": "db06_recipe_for_disaster",
+      "name": "Recipe for Disaster",
+      "description": "With the Brotherhood refocused, the true prize is revealed: a contract to assassinate the Emperor himself. The player must set the stage by eliminating the gourmet chef and taking his identity to infiltrate a royal dinner in Solitude.",
+      "objectives": [
+        "Track down \"The Gourmet\" (a famous chef) and assassinate him discreetly",
+        "Acquire the Gourmet's writ of passage and signature cookbook",
+        "Attend the Emperor's banquet in Solitude disguised as the Gourmet and poison the Emperor's soup"
+      ],
+      "outcome": "The target at the dinner is revealed to be a decoy (the Emperor's double). Although the fake Emperor is killed, the Brotherhood realizes the plan was compromised, and the real Emperor is still alive and now alert."
+    },
+    {
+      "id": "db07_death_incarnate",
+      "name": "Death Incarnate",
+      "description": "Betrayal! The Penitus Oculatus (Imperial secret service) discover the Sanctuary's location. They stage an assault to eradicate the Brotherhood. The player arrives to find the Sanctuary in flames.",
+      "objectives": [
+        "Fight or sneak through the burning Falkreath Sanctuary as Imperial agents attack",
+        "Attempt to save any surviving Brotherhood members (Nazir, Babette, etc.)",
+        "Witness Astrid's last moments – she is mortally wounded and performs the Black Sacrament on herself to summon the Night Mother/player"
+      ],
+      "outcome": "Astrid, in a final act of contrition, sacrifices herself. She names the player as the new leader (Listener). Surviving members regroup. The Night Mother directs the player to finish the contract."
+    },
+    {
+      "id": "db08_hail_sithis",
+      "name": "Hail Sithis!",
+      "description": "The final contract: assassinate Emperor Titus Mede II. The player tracks the real Emperor to his guarded ship at Solitude's docks for the climactic kill.",
+      "objectives": [
+        "Infiltrate the Katariah (the Emperor's personal ship) or otherwise reach the Emperor's location",
+        "Eliminate Emperor Titus Mede II – fight through elite guards or stealth to the target",
+        "(Optional) Hear the Emperor's final words (he oddly accepts his fate, asking the player to kill the one who set this plot in motion)"
+      ],
+      "rewards": [
+        "Substantial gold payment from the contract giver (Amaund Motierre, if not dealt with separately)",
+        "The Dark Brotherhood's full resurgence under the player's leadership",
+        "Infamy across the Empire (the assassination sends shockwaves through Tamriel)"
+      ],
+      "outcome": "With the Emperor dead, the Dark Brotherhood fulfills its most illustrious contract. The Brotherhood lives on, rebuilding under the new Listener (the player)."
+    }
+  ],
+  "alternate_path": {
+    "id": "db_alt_destroy_brotherhood",
+    "name": "Destroy the Dark Brotherhood",
+    "description": "If the player chose to betray Astrid instead of joining, this quest triggers. Commander Maro of the Penitus Oculatus enlists the player to eliminate the Dark Brotherhood once and for all.",
+    "objectives": [
+      "Report Astrid's death and the Dark Brotherhood's existence to Commander Maro (Imperial agent)",
+      "Lead an assault squad to the Falkreath Sanctuary",
+      "Kill every Dark Brotherhood member in the Sanctuary (Astrid's remaining colleagues)",
+      "Ensure the Night Mother's crypt is destroyed or secured by the Empire"
+    ],
+    "rewards": [
+      "Hefty bounty reward from the Empire for wiping out the assassin threat",
+      "Praise and increased standing with Imperial authorities",
+      "Dark Brotherhood content is ended – no further assassination quests"
+    ],
+    "outcome": "The Dark Brotherhood faction is completely eliminated. This closes off the Brotherhood questline, altering the political balance (no Emperor assassination occurs). The player's actions will be hailed by some (Imperials) and quietly noted with fear by others."
+  },
+  "notes": "This questline should be integrated so that the triggers in the Falkreath Hold data and scripts respond appropriately. For example, completing 'Innocence Lost' should set `party_actions['innocence_lost_completed'] = True` to trigger Astrid's contact. The Sanctuary's state changes after 'Death Incarnate' (to destroyed) in the main path or immediately if the alternate path is taken. Ensure that faction trust (Dark Brotherhood trust clock) is increased as the player progresses (joining gives +3, each major quest +1 or +2, becoming Listener +5, etc.), and set to -10 if they choose to destroy the Brotherhood."
+}

@@ -1,0 +1,60 @@
+{
+  "name": "Housecarl",
+  "id": "npc_stat_housecarl",
+  "type": "Ally",
+  "category": "Friendly NPC",
+  "location": "Jarl's palace, player homes (if gifted)",
+  "faction": "Local Hold",
+  "aspects": {
+    "high_concept": "Elite Warrior Sworn to Protect Their Thane",
+    "trouble": "Duty Before All Else",
+    "other_aspects": [
+      "Unshakeable Loyalty",
+      "Trained in All Forms of Combat",
+      "Shield and Sword of Their Lord"
+    ]
+  },
+  "skills": {
+    "Great": ["Fight"],
+    "Good": ["Physique", "Athletics"],
+    "Fair": ["Will", "Notice"],
+    "Average": ["Provoke", "Rapport"]
+  },
+  "stunts": [
+    "Shield Tactics: +2 to defend with Fight when using a shield, can protect adjacent allies",
+    "Sworn Protector: Once per session, automatically succeed on defense roll to protect their thane from harm (taking damage themselves)",
+    "Versatile Warrior: No penalty when switching between melee and ranged combat styles"
+  ],
+  "stress": {
+    "physical": [false, false, false, false],
+    "mental": [false, false, false]
+  },
+  "consequences": {
+    "mild": null,
+    "moderate": null
+  },
+  "refresh": 3,
+  "fate_points": 3,
+  "trust_clock": {
+    "enabled": true,
+    "current": 0,
+    "max": 8,
+    "description": "Respect and loyalty - starts higher if player is appointed thane, grows with honorable actions"
+  },
+  "notes": "Housecarls are elite warriors assigned to protect thanes and important nobles. When a player earns the title of Thane in a hold, they are often assigned a housecarl. These warriors are intensely loyal, skilled in combat, and will follow their thane into battle. They can serve as companions, guards, and advisors on martial matters.",
+  "relationships": {
+    "Their Thane": "Sworn to protect and serve",
+    "Jarl": "Appointed by, loyal to",
+    "Other Guards": "Elite among peers",
+    "Enemies of Thane": "Hostile"
+  },
+  "personality_notes": {
+    "speaking_style": "Formal, military bearing, uses honorifics, direct when discussing duty",
+    "motivations": ["Fulfill oath to thane", "Uphold honor", "Protect those under their charge", "Prove worthy of position"],
+    "fears": ["Failing in duty", "Thane's death", "Dishonor", "Weakness"],
+    "quirks": ["Always armed and ready", "Stands at attention when addressing thane", "Maintains perfect equipment"]
+  },
+  "combat_tactics": "Housecarls are versatile fighters who excel with sword and shield but can adapt to any situation. They prioritize protecting their thane above all else, positioning themselves between their charge and danger. They coordinate well with others and never retreat unless ordered.",
+  "scene_triggers": ["Being appointed Thane", "Major battles", "Protecting home", "Guard duties"],
+  "act_context": ["Act 1", "Act 2", "Act 3"]
+}

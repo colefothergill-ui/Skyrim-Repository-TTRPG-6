@@ -1,0 +1,14 @@
+{
+  "date": "2026-02-08",
+  "scope": "Mid-session protocol update: Riften arrival, Veils stunt, trust/clocks, thieves guild quest pivot",
+  "changes": [
+    {"file": "state/campaign_state.json", "change": "Advance to A1-S8; location set to Riften — Ragged Flagon (Cistern); objective set to Thieves Guild 'Loud and Clear' prep; add current_npcs and scene_flags."},
+    {"file": "data/pcs/pc_insaerndel.json", "change": "Add Stunt: Spell of Veils; set fate_points to 5 (includes Dream-Mirror Descent compel)."},
+    {"file": "data/quests/quest_thieves_guild.json", "change": "Mark Brynjolf test + debt collections as Completed; set Goldenglow/Honningbrew and Footholds to In Progress; add progress notes for Whiterun and Goldenglow pivot."},
+    {"file": "data/clocks/faction_trust_clocks.json", "change": "Thieves Guild trust set to 6/10; Imperial Legion trust set to 6/10."},
+    {"file": "data/clocks/civil_war_clocks.json", "change": "Imperial dominance set to 5/10; Stormcloak momentum set to 3/10; Thalmor manipulation set to 1/8; Civilian weariness set to 6/8; mark Battle of Whiterun as completed_imperial_victory."},
+    {"file": "data/clocks/pc_extras_clocks.json", "change": "Search for Arisann set to 2/8."},
+    {"file": "data/npc_stat_sheets/*.json", "change": "Add stat sheets for Mercer Frey, Vex, Delvin Mallory, Maven Black-Briar, Aringoth, Karliah for upcoming Thieves Guild arc scenes."},
+    {"file": "logs/2026-02-08_session-02_LATEST.md", "change": "New session log covering Riften return + Thieves Guild pivot."}
+  ]
+}

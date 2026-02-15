@@ -1,0 +1,29 @@
+{
+  "quest_id": "quest_arisann_trail",
+  "name": "Arisann's Trail — The Ivory Thread",
+  "type": "Personal Arc",
+  "status": "Active",
+  "giver": "Maven Black-Briar (lead by proxy)",
+  "location": "Riften → Nightgate Pass (The Pale)",
+  "description": "Following Maven's lead, you pursue Arisann's movements through a courier lattice called the Ivory Thread. Your immediate objective is a controlled meeting with Hroldar 'Whitefin' at Nightgate Pass—where the wrong word can turn into an ambush, a tail, or a dead end.",
+  "objectives": [
+    { "description": "Reach Nightgate Pass without escalating Thalmor heat.", "status": "Active", "optional": false },
+    { "description": "Contact Hroldar 'Whitefin' using the agreed passphrase.", "status": "Active", "optional": false },
+    { "description": "Extract Arisann's last known relay, handler, or destination.", "status": "Active", "optional": false },
+    { "description": "Decide what to pay: coin, favor, leverage, or risk.", "status": "Active", "optional": false }
+  ],
+  "rewards": {
+    "experience": 0,
+    "gold": 0,
+    "items": [],
+    "reputation": "Varies by choices"
+  },
+  "notes": "This quest advances primarily via the clock insaerndel_search_for_arisann ('Search for Arisann (Sister)'). The Ivory Thread is not a faction—it's a lattice. Cutting one node rarely stops the flow; it just reroutes it.",
+  "related_npcs": ["Hroldar \"Whitefin\"", "Maven Black-Briar"],
+  "related_locations": ["Riften — Bee and Barb", "Nightgate Pass"],
+  "fate_core_notes": {
+    "aspects": ["Paper Trails Bleed", "The Pass Watches Back", "A Codephrase is a Knife"],
+    "compels": ["A checkpoint forces a choice between time and safety", "A courier demands a price you don't want to pay"],
+    "scene_aspects": ["Road Dust and Snow", "Too Many Eyes", "Wind Like Whispered Names"]
+  }
+}

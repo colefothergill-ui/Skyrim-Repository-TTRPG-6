@@ -1,0 +1,44 @@
+{
+  "name": "Necromancer",
+  "id": "npc_stat_necromancer",
+  "type": "Humanoid Mage",
+  "category": "Enemy",
+  "location": "Ruins, caves, isolated towers",
+  "faction": "Necromancers",
+  "aspects": {
+    "high_concept": "Dark Mage Who Commands the Dead",
+    "trouble": "Obsessed with Forbidden Knowledge",
+    "other_aspects": [
+      "Master of Death Magic",
+      "Surrounded by Undead Servants",
+      "Shunned by Civilized Society"
+    ]
+  },
+  "skills": {
+    "Great": ["Lore"],
+    "Good": ["Will", "Deceive"],
+    "Fair": ["Notice", "Stealth"],
+    "Average": ["Physique", "Fight"]
+  },
+  "stunts": [
+    "Raise Dead: Once per scene, summon 1-2 zombie thralls to fight. They have 2 physical stress and Fight at Fair",
+    "Death Bolt: +2 to Lore when attacking with necromantic magic that drains life force",
+    "Lich's Bargain: Once per session, when reduced to zero stress, automatically stabilize at 1 stress box by consuming a nearby corpse's essence"
+  ],
+  "stress": {
+    "physical": [false, false],
+    "mental": [false, false, false]
+  },
+  "consequences": {
+    "mild": null,
+    "moderate": null,
+    "severe": null
+  },
+  "refresh": 3,
+  "fate_points": 3,
+  "notes": "Necromancers are mages who practice the forbidden art of necromancy, raising and commanding the dead. They are hunted by law-abiding citizens and work in isolated locations. Often conduct dark experiments and seek ancient knowledge of death magic.",
+  "combat_tactics": "Necromancers stay at range, using raised undead as shields. They cast death magic spells to drain enemies and summon additional undead during battle. They flee if their undead servants are destroyed and they're cornered.",
+  "scene_triggers": ["Haunted locations", "Dark magic investigations", "College of Winterhold quests", "Isolated ruins"],
+  "act_context": ["Act 1", "Act 2", "Act 3"],
+  "loot": ["Necromancy spell tomes", "Soul gems (filled)", "Dark ritual components", "Enchanted robes"]
+}

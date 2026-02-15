@@ -1,0 +1,182 @@
+{
+  "name": "Elenwen",
+  "id": "npc_stat_elenwen",
+  "type": "High Elf Diplomat",
+  "category": "Hostile NPC",
+  "location": "Thalmor Embassy, Haafingar",
+  "faction": "Thalmor (Aldmeri Dominion)",
+  "role": "First Emissary to Skyrim and Chief Thalmor Operative",
+  "aspects": {
+    "high_concept": "First Emissary of the Aldmeri Dominion in Skyrim",
+    "trouble": "Maintaining the Illusion of Diplomatic Neutrality",
+    "other_aspects": [
+      "Master Manipulator and Spy mistress",
+      "The Concordat Is My Weapon",
+      "Sees Ten Moves Ahead",
+      "Cold, Calculating Perfection"
+    ]
+  },
+  "skills": {
+    "Superb": ["Deceive", "Contacts"],
+    "Great": ["Empathy", "Will"],
+    "Good": ["Investigate", "Lore", "Provoke"],
+    "Fair": ["Notice", "Rapport"],
+    "Average": ["Fight", "Magic"]
+  },
+  "stunts": [
+    "Web of Spies: +2 to Contacts when leveraging her intelligence network across Skyrim. Can declare that she has an agent anywhere except the most secure locations.",
+    "Diplomatic Immunity: +2 to Deceive when using her official position to deflect accusations or avoid consequences.",
+    "Read the Room: +2 to Empathy when assessing political situations or detecting lies in formal settings.",
+    "Master Manipulator: Once per scene, can compel an NPC's aspect for free if she has leverage over them.",
+    "Political Leverage: Can use Provoke instead of Fight when threatening someone with political or legal consequences."
+  ],
+  "stress": {
+    "physical": [false, false],
+    "mental": [false, false, false, false, false]
+  },
+  "consequences": {
+    "mild": null,
+    "moderate": null,
+    "severe": null
+  },
+  "refresh": 4,
+  "fate_points": 4,
+  "equipment": {
+    "weapon": "Ceremonial elven dagger (rarely used)",
+    "armor": "Elegant Thalmor diplomat robes with protective enchantments",
+    "special": "Diplomatic seal, encrypted correspondence, spy network contacts, dossiers on everyone important in Skyrim"
+  },
+  "personality_notes": {
+    "speaking_style": "Elegant, measured, politically savvy. Uses veiled threats and diplomatic double-speak. Never loses composure in public.",
+    "motivations": [
+      "Maintain Thalmor control over Skyrim through the Empire",
+      "Prolong the civil war to keep both sides weak",
+      "Eliminate all Talos worship",
+      "Gather intelligence on threats to the Dominion",
+      "Advance her own position within the Thalmor hierarchy"
+    ],
+    "fears": [
+      "The civil war ending decisively (either side winning too quickly)",
+      "Rising heroes becoming too powerful and independent",
+      "Embassy secrets being exposed",
+      "Failure reflecting poorly on the Aldmeri Dominion",
+      "A unified Skyrim turning against the Thalmor"
+    ],
+    "quirks": [
+      "Maintains perfect poise even under pressure",
+      "Collects information on everyone she meets",
+      "Uses wine and parties as intelligence gathering",
+      "Never shows genuine emotion publicly"
+    ]
+  },
+  "relationships": {
+    "Aldmeri Dominion": "Ambitious representative seeking advancement",
+    "General Tullius": "Necessary partner, secretly considers him weak",
+    "Ulfric Stormcloak": "Useful asset though he doesn't know it",
+    "Delphine": "Would love to capture and interrogate",
+    "Esbern": "High priority target for elimination",
+    "The Player": "Dangerous variable to be controlled or eliminated",
+    "Jarl Balgruuf": "Target for influence and manipulation",
+    "Ancano": "Fellow Thalmor operative at the College"
+  },
+  "trust_clock": {
+    "current": 0,
+    "max": 0,
+    "note": "Elenwen cannot be truly trusted. Any seeming cooperation is manipulation."
+  },
+  "embassy_party": {
+    "role": "Hostess and observer during Diplomatic Immunity quest",
+    "objectives": [
+      "Assess party members and identify threats",
+      "Maintain diplomatic facade",
+      "Determine if rising heroes are assets or threats",
+      "Gather intelligence through social manipulation"
+    ],
+    "if_discovered": "Will attempt to capture or kill party while maintaining plausible deniability"
+  },
+  "intelligence_operations": {
+    "civil_war_manipulation": "Provides intelligence to whichever side is losing to maintain balance",
+    "ulfric_file": "Knows Ulfric was questioned after Great War, considers him an 'asset' though contact is dormant",
+    "blades_hunting": "Coordinates Justiciar operations to eliminate remaining Blades",
+    "dragon_investigation": "Gathering intelligence on dragon crisis and emerging threats"
+  },
+  "combat_tactics": "Elenwen avoids direct combat. She'll use guards, Justiciars, and legal authority. If personally threatened, she'll use diplomacy and threats of consequences. Only fights if cornered, using limited combat magic and attempting escape. Her real power is political.",
+  "scene_triggers": [
+    "Battle of Whiterun observation",
+    "Diplomatic Immunity quest (primary antagonist)",
+    "Season Unending peace conference",
+    "Any investigation of Thalmor operations",
+    "Embassy aftermath if party exposed"
+  ],
+  "act_context": ["Act 1 (minor)", "Act 2 (major)", "Act 3 (supporting)"],
+  "dialogue_examples": [
+    "Welcome to my party. I do hope you'll find the wine... agreeable. (assessing threat)",
+    "The Aldmeri Dominion and the Empire enjoy a... mutually beneficial relationship. We wouldn't want anything to jeopardize that.",
+    "Accusations without proof are most undiplomatic. The Thalmor are here by treaty. We are your allies. (cold smile)",
+    "Rising heroes in the civil war. How... interesting. I wonder where your true loyalties lie?",
+    "General Tullius, surely you can see the wisdom in maintaining the Concordat? It's for the good of the Empire, after all."
+  ],
+  "dossiers_maintained": {
+    "ulfric_stormcloak": "Asset (uncooperative). Contact forbidden. Terminated due to impending High King murder",
+    "delphine": "Blades agent. Capture for interrogation priority. Use of force authorized.",
+    "esbern": "Last Blades historian. Elimination critical. Last seen in Riften.",
+    "civil_war_participants": "Rising champions and key actors. Status pending investigation. Assess influence and controllability."
+  },
+  "season_unending_role": {
+    "participation": "Attends as Aldmeri Dominion representative",
+    "objectives": [
+      "Prevent lasting peace if possible",
+      "Secure continued Talos worship ban",
+      "Maintain Thalmor presence in Skyrim",
+      "Identify leverage points for future manipulation"
+    ],
+    "demands": [
+      "Markarth must enforce Talos ban strictly (infamous incident)",
+      "Thalmor embassy remains",
+      "Concordat enforcement continues"
+    ],
+    "secret_goal": "Undermine any agreement that brings lasting peace"
+  },
+  "questline_role": {
+    "diplomatic_immunity": "Primary antagonist - party infiltrates her embassy",
+    "season_unending": "Political obstacle at peace conference",
+    "main_quest": "Background manipulator throughout"
+  },
+  "branching_interactions": {
+    "if_embassy_infiltrated": "Becomes active enemy, increases Thalmor operations",
+    "if_documents_stolen": "Major intelligence loss, temporarily disrupts operations",
+    "if_identity_unknown": "Continues subtle manipulation",
+    "if_openly_hostile": "Uses political pressure and Justiciars against party"
+  },
+  "story_hooks": [
+    "Observes major civil war battles to gather intelligence",
+    "Maintains dossiers on nearly everyone important in Skyrim",
+    "Secret goal is prolonging civil war, not helping either side win",
+    "Embassy contains critical intelligence on Thalmor operations",
+    "Could be forced to cooperate if leverage is found (extremely difficult)",
+    "Her failure could lead to a more aggressive Thalmor replacement"
+  ],
+  "alternatives_to_combat": {
+    "political_pressure": "Can be pressured with threats to expose her schemes, but very risky",
+    "blackmail": "If evidence of her manipulation is gathered, could force temporary cooperation",
+    "negotiation": "Will negotiate only if it serves Thalmor interests - always looking for advantage",
+    "deception": "Difficult to deceive - she's an expert manipulator herself"
+  },
+  "if_killed": {
+    "immediate_consequences": [
+      "Major diplomatic incident",
+      "Thalmor reinforcements sent to Skyrim",
+      "Price on party's heads across the Empire",
+      "Embassy locks down completely"
+    ],
+    "long_term_consequences": [
+      "New First Emissary appointed (possibly more aggressive)",
+      "Thalmor operations intensify",
+      "Empire forced to condemn party",
+      "Becomes legendary among Stormcloaks"
+    ],
+    "tactical_result": "Temporary disruption of Thalmor intelligence network"
+  },
+  "gm_notes": "Elenwen is the face of Thalmor manipulation in Skyrim. She's not a warrior but a spy mistress and politician. Her power comes from information, leverage, and legal authority. She should feel untouchable due to diplomatic immunity until party finds a way around it. Use her to show the Thalmor aren't just brutal enforcers - they're sophisticated manipulators. She keeps tabs on all rising heroes in the civil war and realizes certain parties are more significant than first thought.",
+  "memorable_quote": "The Thalmor wish to heal the wounds of the past. But make no mistake - we will not shy from defending our treaty rights."
+}

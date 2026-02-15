@@ -1,0 +1,15 @@
+{
+  "date": "2026-02-03",
+  "changes": [
+    "Updated Insaerndel PC sheet: FP 2→3, gold 100→1700 (1600 retainer), added 5 mission items, added Olfrid relationship, contract/safehouse notes",
+    "Updated appearance: eyes amber-gold→ember across visual_summary, recognition_tags, and first_impression_lines",
+    "Updated PC extras clocks: Thalmor search 0/8→1/8, last_updated to 2026-02-03",
+    "Updated Whiterun jobs: Guild Foothold activated 0/5→1/5, added Battle-Born Quiet Inquiry clock 2/4",
+    "Updated faction trust: Thieves Guild 3/10→4/10",
+    "Updated Brynjolf: trust 3/8→4/8, Whiterun mission marked completed",
+    "Added Thalmor ledger-clerk handler NPC stat sheet",
+    "Updated Whiterun hold: added Thieves Guild (Battle-Born Arcana) to factions_present and notes",
+    "Updated campaign_state: set Act 1 scene A1-S1, location Battle-Born Manor, added 5 scene flags, 3 major choices, 4 NPC first impressions",
+    "Appended mid-session checkpoint to session log with FP/gold/trust/clock snapshot"
+  ]
+}

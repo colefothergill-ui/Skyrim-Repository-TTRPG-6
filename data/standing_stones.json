@@ -1,0 +1,168 @@
+{
+  "standing_stones": [
+    {
+      "id": "warrior",
+      "name": "The Warrior Stone",
+      "guardian_constellation": "The Warrior",
+      "location": "South of Riverwood, near Lake Ilinalta",
+      "effect": {
+        "game_mechanic": "Once per session, gain +2 to Fight, Shoot, or Athletics in combat",
+        "narrative": "Blessed by the Warrior, combat prowess enhanced"
+      },
+      "best_for": ["Warriors", "Berserkers", "Soldiers", "Combat-focused characters"],
+      "lore": "The Warrior is one of the three Guardian Stones. Those under its sign are skilled in combat."
+    },
+    {
+      "id": "mage",
+      "name": "The Mage Stone",
+      "guardian_constellation": "The Mage",
+      "location": "South of Riverwood, near Lake Ilinalta",
+      "effect": {
+        "game_mechanic": "Once per session, gain +2 to Lore for magic or spellcasting",
+        "narrative": "Blessed by the Mage, magical power enhanced"
+      },
+      "best_for": ["Wizards", "Healers", "Scholars", "Magic-focused characters"],
+      "lore": "The Mage is one of the three Guardian Stones. Those under its sign are skilled in magic."
+    },
+    {
+      "id": "thief",
+      "name": "The Thief Stone",
+      "guardian_constellation": "The Thief",
+      "location": "South of Riverwood, near Lake Ilinalta",
+      "effect": {
+        "game_mechanic": "Once per session, gain +2 to Stealth, Deceive, or Notice",
+        "narrative": "Blessed by the Thief, stealth and cunning enhanced"
+      },
+      "best_for": ["Thieves", "Assassins", "Scouts", "Stealth-focused characters"],
+      "lore": "The Thief is one of the three Guardian Stones. Those under its sign are skilled in stealth."
+    },
+    {
+      "id": "ritual",
+      "name": "The Ritual Stone",
+      "guardian_constellation": "The Ritual",
+      "location": "East of Whiterun, northeast of Graywinter Watch",
+      "effect": {
+        "game_mechanic": "Once per session, reanimate dead within zone to fight for you for one scene",
+        "narrative": "Command over death, temporary necromancy"
+      },
+      "best_for": ["Necromancers", "Dark mages", "Control specialists"],
+      "lore": "Those born under the sign of the Ritual have a variety of abilities depending on the aspects of the moons and the Divines."
+    },
+    {
+      "id": "serpent",
+      "name": "The Serpent Stone",
+      "guardian_constellation": "The Serpent",
+      "location": "Northwest of Winterhold, on an island",
+      "effect": {
+        "game_mechanic": "Once per session, paralyze an enemy for one round (no defense roll)",
+        "narrative": "Strike like a serpent, immobilizing foes"
+      },
+      "best_for": ["Assassins", "Control specialists", "Tactical fighters"],
+      "lore": "Those born under the Serpent are the most blessed and the most cursed."
+    },
+    {
+      "id": "shadow",
+      "name": "The Shadow Stone",
+      "guardian_constellation": "The Shadow",
+      "location": "South of Riften, near the volcanic tundra",
+      "effect": {
+        "game_mechanic": "Once per session, become invisible for 60 seconds (one scene)",
+        "narrative": "Meld with shadows, become unseen"
+      },
+      "best_for": ["Thieves", "Spies", "Escape specialists"],
+      "lore": "The Shadow grants those under its sign the ability to blend into darkness."
+    },
+    {
+      "id": "steed",
+      "name": "The Steed Stone",
+      "guardian_constellation": "The Steed",
+      "location": "Northwest of Solitude, in the mountains",
+      "effect": {
+        "game_mechanic": "+1 to Athletics, ignore armor penalties to Stealth",
+        "narrative": "Swift as a horse, unburdened by armor"
+      },
+      "best_for": ["Mobile fighters", "Scouts", "Light armor users"],
+      "lore": "Those born under the sign of the Steed can move quickly and are not hindered by armor."
+    },
+    {
+      "id": "lord",
+      "name": "The Lord Stone",
+      "guardian_constellation": "The Lord",
+      "location": "East of Morthal, in the mountains",
+      "effect": {
+        "game_mechanic": "+1 to Defend against physical attacks, +1 to Will against magic",
+        "narrative": "Strong defenses, resistant to harm"
+      },
+      "best_for": ["Tanks", "Defenders", "Heavy armor users"],
+      "lore": "Those born under the sign of the Lord are stronger and more resistant to harm."
+    },
+    {
+      "id": "lady",
+      "name": "The Lady Stone",
+      "guardian_constellation": "The Lady",
+      "location": "West of Whiterun, near the Guardian Stones",
+      "effect": {
+        "game_mechanic": "Recover 1 additional physical stress box per scene",
+        "narrative": "Enhanced regeneration and stamina"
+      },
+      "best_for": ["Sustained fighters", "Tanks", "Endurance builds"],
+      "lore": "Those born under the sign of the Lady regenerate health and stamina more quickly."
+    },
+    {
+      "id": "lover",
+      "name": "The Lover Stone",
+      "guardian_constellation": "The Lover",
+      "location": "East of Markarth, near Kolskeggr Mine",
+      "effect": {
+        "game_mechanic": "15% bonus to milestone progress (faster advancement)",
+        "narrative": "Learn faster, adapt quicker"
+      },
+      "best_for": ["Versatile characters", "Jack-of-all-trades", "New players"],
+      "lore": "Those born under the sign of the Lover are more proficient in all skills."
+    },
+    {
+      "id": "atronach",
+      "name": "The Atronach Stone",
+      "guardian_constellation": "The Atronach",
+      "location": "South of Windhelm, near Cragslane Cavern",
+      "effect": {
+        "game_mechanic": "+2 to Lore for spellcasting, but magicka doesn't regenerate naturally (must absorb spells or use potions)",
+        "narrative": "Immense magical power with a cost"
+      },
+      "best_for": ["Power mages", "Risk-reward players", "Absorption builds"],
+      "lore": "Those born under the sign of the Atronach cannot regenerate magicka naturally but can absorb spells."
+    },
+    {
+      "id": "tower",
+      "name": "The Tower Stone",
+      "guardian_constellation": "The Tower",
+      "location": "Between Winterhold and Dawnstar, on the northern coast",
+      "effect": {
+        "game_mechanic": "Once per session, automatically open an Average difficulty lock",
+        "narrative": "Master of locks and barriers"
+      },
+      "best_for": ["Thieves", "Explorers", "Dungeon delvers"],
+      "lore": "Those born under the Tower have a knack for finding gold and opening locks."
+    },
+    {
+      "id": "apprentice",
+      "name": "The Apprentice Stone",
+      "guardian_constellation": "The Apprentice",
+      "location": "North of Solitude, near the coast",
+      "effect": {
+        "game_mechanic": "Magicka regenerates twice as fast, but take +1 stress from magical attacks",
+        "narrative": "Raw magical talent, vulnerable to magic"
+      },
+      "best_for": ["Spellcasters willing to take risks", "Glass cannon mages"],
+      "lore": "Those born under the Apprentice have increased magicka but are more vulnerable to magic."
+    }
+  ],
+  "game_mechanics": {
+    "changing_stones": {
+      "rule": "Players can change their Standing Stone blessing by visiting a different stone in-game",
+      "consequence": "Only one Standing Stone blessing can be active at a time",
+      "narrative": "Your character must physically travel to the stone and meditate/activate it"
+    },
+    "discovery": "Some stones are well-known (Guardian Stones), others require exploration to find"
+  }
+}

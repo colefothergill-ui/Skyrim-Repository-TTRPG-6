@@ -1,0 +1,254 @@
+{
+  "name": "Aela the Huntress",
+  "id": "aela_the_huntress",
+  "type": "Companion and Werewolf",
+  "location": "Jorrvaskr, Whiterun",
+  "faction": "The Companions (Inner Circle)",
+  "aspects": {
+    "high_concept": "Master Archer and Werewolf of the Circle",
+    "trouble": "The Hunt is Everything",
+    "other_aspects": [
+      "Blood of the Beast Runs Strong",
+      "Fierce and Proud Nord Warrior",
+      "Never Backs Down from a Challenge",
+      "The Huntress Never Misses Her Mark"
+    ]
+  },
+  "skills": {
+    "Great": ["Shoot"],
+    "Good": ["Notice", "Athletics"],
+    "Fair": ["Fight", "Survival", "Provoke"],
+    "Average": ["Physique", "Stealth"]
+  },
+  "stunts": [
+    "Master Archer: +2 to Shoot at long range, can make called shots",
+    "Hunter's Instinct: +2 to Notice when tracking prey or sensing danger",
+    "Werewolf Transformation: Can transform into werewolf form (separate stat block)",
+    "Pack Tactics: +2 to Fight when fighting alongside other Companions or wolves",
+    "Never Miss: Once per session, automatically succeed on a crucial Shoot roll"
+  ],
+  "stress": {
+    "physical": [false, false, false],
+    "mental": [false, false]
+  },
+  "consequences": {
+    "mild": null,
+    "moderate": null,
+    "severe": null
+  },
+  "refresh": 3,
+  "fate_points": 3,
+  "notes": "Aela is a master archer and proud member of the Companions' Inner Circle. She embraces her werewolf nature and has no interest in curing it. Fierce, confident, and dedicated to the hunt.",
+  "relationships": {
+    "Kodlak Whitemane": "Respected Harbinger, though disagrees about the beast blood",
+    "Vilkas": "Shield-brother, fellow Circle member",
+    "Farkas": "Shield-brother, fellow Circle member",
+    "Skjor": "Mentor and former lover (deceased)",
+    "Player": "Potential shield-sibling and companion",
+    "The Silver Hand": "Sworn enemies, werewolf hunters"
+  },
+  "quests": [
+    "Companions Questline",
+    "Animal Extermination (radiant quests)",
+    "Can marry after completing Companions questline"
+  ],
+  "inventory": [
+    "Aela's Hunting Bow (unique)",
+    "Ancient Nord Armor",
+    "Steel Arrows",
+    "Wolf Pelt"
+  ],
+  "personality_notes": {
+    "speaking_style": "Confident, direct, challenging. Speaks with pride about hunting and the Companions. Disdainful of weakness.",
+    "motivations": [
+      "Perfect the hunt",
+      "Honor the Companions and their traditions",
+      "Embrace and celebrate the beast blood",
+      "Protect Jorrvaskr and the Circle",
+      "Hunt worthy prey and enemies"
+    ],
+    "fears": [
+      "Losing the beast blood (considers it a gift)",
+      "The Companions becoming weak or civilized",
+      "Failing a hunt",
+      "Being captured by the Silver Hand"
+    ],
+    "quirks": [
+      "Speaks of hunting as sacred",
+      "Proudly displays war paint",
+      "Challenges others to prove themselves",
+      "Openly embraces werewolf nature",
+      "Respects strength and prowess"
+    ]
+  },
+  "loyalty": 50,
+  "companion_status": {
+    "available": "after_joining_companions",
+    "current_status": "ready",
+    "max_loyalty": 100,
+    "dismissal_location": "Jorrvaskr",
+    "marriage_available": true
+  },
+  "loyalty_modifiers": {
+    "positive": [
+      {"action": "Complete Companions quests", "change": 5},
+      {"action": "Hunt powerful creatures together", "change": 3},
+      {"action": "Accept beast blood", "change": 10},
+      {"action": "Fight Silver Hand", "change": 5},
+      {"action": "Show prowess in combat", "change": 2},
+      {"action": "Embrace werewolf nature", "change": 3}
+    ],
+    "negative": [
+      {"action": "Cure beast blood", "change": -15},
+      {"action": "Show cowardice", "change": -5},
+      {"action": "Refuse to hunt", "change": -2},
+      {"action": "Disrespect Companions", "change": -5},
+      {"action": "Attack her", "change": -20}
+    ]
+  },
+  "werewolf_form": {
+    "transformation": "Can transform once per day (or more with training)",
+    "duration": "2-5 minutes of game time",
+    "bonuses": {
+      "Fight": "+4",
+      "Physique": "+4",
+      "Athletics": "+3"
+    },
+    "limitations": [
+      "Cannot use items or weapons",
+      "Cannot communicate verbally",
+      "Feeding extends duration",
+      "Must feed on corpses to extend time"
+    ],
+    "special_abilities": [
+      "Howl of Terror: Frighten nearby enemies",
+      "Enhanced senses for tracking",
+      "Rapid health regeneration",
+      "Claw attacks deal massive damage"
+    ]
+  },
+  "dialogue_trees": {
+    "recruitment": {
+      "condition": "completed_companions_questline",
+      "greeting": "Need someone to watch your back? I'm always ready for a good hunt.",
+      "responses": [
+        {
+          "option": "Join me",
+          "leads_to": "accepts_companion",
+          "companion_status": "active"
+        },
+        {
+          "option": "Wait here",
+          "leads_to": "wait_mode",
+          "companion_status": "waiting"
+        }
+      ]
+    },
+    "beast_blood_discussion": {
+      "greeting": "The beast blood is a gift, not a curse. It makes us stronger, faster, better hunters.",
+      "responses": [
+        {
+          "option": "I agree, it's a gift",
+          "loyalty_change": 5,
+          "leads_to": "respect_response"
+        },
+        {
+          "option": "It's a curse we should cure",
+          "loyalty_change": -10,
+          "leads_to": "disappointed_response"
+        },
+        {
+          "option": "It's a tool to use",
+          "loyalty_change": 0,
+          "leads_to": "pragmatic_response"
+        }
+      ]
+    },
+    "high_loyalty": {
+      "condition": "loyalty >= 80",
+      "dialogue": "You're a true hunter. I'd follow you into any battle.",
+      "benefits": [
+        "Offers werewolf blood if not already transformed",
+        "Shares advanced hunting techniques",
+        "Marriage dialogue available"
+      ]
+    },
+    "post_cure": {
+      "condition": "player_cured_beast_blood",
+      "dialogue": "You gave up the gift? I can't understand that, but I respect your choice. The hunt goes on.",
+      "loyalty_change": -5,
+      "note": "Disappointed but still follows"
+    }
+  },
+  "companion_mechanics": {
+    "combat_style": "Ranged DPS - focuses on archery, switches to melee when necessary",
+    "preferred_tactics": "Hang back with bow, provide covering fire, engage in melee if overwhelmed",
+    "special_abilities": [
+      "Expert marksmanship",
+      "Can transform into werewolf during combat (if enabled)",
+      "Dual-wields in close combat",
+      "Tracking and survival skills"
+    ],
+    "werewolf_combat": "Becomes aggressive melee powerhouse, charges enemies, uses claws"
+  },
+  "branching_interactions": {
+    "companions_questline": "Central character, part of Inner Circle",
+    "beast_blood_accepted": "Maximum respect and loyalty",
+    "beast_blood_cured": "Disappointed, loyalty -15, but remains available",
+    "silver_hand_encounters": "Extremely aggressive, fights with fury",
+    "hunting_quests": "Enthusiastic participation, loyalty bonuses"
+  },
+  "decision_points": {
+    "beast_blood_choice": {
+      "condition": "offered_werewolf_transformation",
+      "accept": {
+        "loyalty_change": 10,
+        "dialogue": "Welcome to the Circle. The hunt begins!",
+        "unlocks": "werewolf_powers"
+      },
+      "refuse": {
+        "loyalty_change": -5,
+        "dialogue": "Your loss. The offer stands if you change your mind.",
+        "note": "Can still join Companions but with less respect"
+      }
+    },
+    "cure_kodlak": {
+      "condition": "after_kodlak_death",
+      "help_cure": {
+        "loyalty_change": 0,
+        "dialogue": "Kodlak wanted this. I'll help, but I'm keeping my gift."
+      }
+    },
+    "marriage_proposal": {
+      "condition": "loyalty >= 80 and wearing_amulet_of_mara",
+      "dialogue": "You and me? I like the idea. Let's make it official.",
+      "benefits": [
+        "Can live with player",
+        "Provides daily income",
+        "Provides Lover's Comfort bonus",
+        "Still available as follower"
+      ]
+    }
+  },
+  "story_hooks": [
+    "Part of ancient Nord warrior tradition",
+    "Embraces werewolf nature completely",
+    "Lost Skjor, her mentor and lover",
+    "Will never cure her beast blood",
+    "One of the few who can give werewolf blood",
+    "Master of archery and hunting",
+    "Fierce defender of Companions honor"
+  ],
+  "special_mechanics": {
+    "can_grant_lycanthropy": true,
+    "can_cure_lycanthropy": false,
+    "werewolf_ally": "If both player and Aela are werewolves, can hunt together in beast form",
+    "radiant_quests": "Offers animal extermination quests indefinitely"
+  },
+  "if_married": {
+    "lives_at": "Player's home or Jorrvaskr",
+    "income": "Daily random loot",
+    "dialogue": "More personal and affectionate",
+    "still_hunts": true
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "name": "Hagraven",
+  "id": "npc_stat_hagraven",
+  "type": "Corrupted Witch",
+  "category": "Enemy",
+  "location": "Forsworn camps, ancient ritual sites, wilderness",
+  "faction": "Forsworn / Coven",
+  "aspects": {
+    "high_concept": "Witch Transformed into Monstrous Bird-Woman",
+    "trouble": "Obsessed with Dark Bargains and Forbidden Magic",
+    "other_aspects": [
+      "Matriarch of Forsworn Tribes",
+      "Master of Curses and Dark Rituals",
+      "Collector of Eyes and Body Parts",
+      "Terrifying Presence"
+    ]
+  },
+  "skills": {
+    "Superb": ["Lore"],
+    "Great": ["Will", "Provoke"],
+    "Good": ["Fight", "Deceive"],
+    "Fair": ["Notice", "Physique"],
+    "Average": ["Athletics", "Stealth"]
+  },
+  "stunts": [
+    "Hex Magic: Can curse targets with Lore, creating lasting negative aspects like 'Withering Curse' or 'Eyes of Terror' (lasts entire scene)",
+    "Command Forsworn: Forsworn in her presence gain +1 to all rolls due to fanatical devotion and fear",
+    "Talons and Beak: In melee, can use Fight with +2 and attacks may cause 'Bleeding' aspect",
+    "Dark Pact: Once per session, offer a dark bargain to a player character (power in exchange for something precious). If accepted, both parties are bound by fate",
+    "Ritual Site Power: When fighting at her ritual site, gain +2 to all Lore rolls and can summon spectral allies"
+  ],
+  "stress": {
+    "physical": [false, false, false, false],
+    "mental": [false, false, false, false]
+  },
+  "consequences": {
+    "mild": null,
+    "moderate": null,
+    "severe": null
+  },
+  "refresh": 5,
+  "fate_points": 5,
+  "notes": "Hagravens are witches who have transformed themselves into monstrous bird-like creatures through dark magic. They serve as matriarchs of Forsworn tribes and conduct terrible rituals. They collect body parts for their magic and make dark pacts with those desperate enough to seek them out. Extremely dangerous both magically and in melee combat.",
+  "combat_tactics": "Hagravens prefer to let Forsworn warriors engage enemies while they cast destructive magic and curses from the rear. They use hexes to weaken strong enemies and empower their allies. If cornered, they fight viciously with talons and beak. They may offer bargains to strong enemies they cannot defeat, preferring to corrupt rather than be destroyed.",
+  "scene_triggers": ["Forsworn camps (as leaders)", "Dark ritual sites", "Witch groves", "Quest: The Heart of Dibella", "Daedric quests involving bargains"],
+  "act_context": ["Act 2", "Act 3"],
+  "loot": ["Hagraven feathers", "Hagraven claws", "Dark ritual components", "Powerful potions and poisons", "Enchanted jewelry", "Collection of eyes and body parts"]
+}

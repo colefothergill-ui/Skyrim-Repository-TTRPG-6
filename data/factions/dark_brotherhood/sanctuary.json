@@ -1,0 +1,51 @@
+{
+  "location_name": "Dark Brotherhood Sanctuary (Falkreath)",
+  "location_type": "Hidden Base",
+  "description": "A secret underground hideout for the Dark Brotherhood, nestled in the forests of Falkreath Hold. Its entrance is a Black Door carved into stone, which asks a cryptic question to test those who seek entry.",
+  "entrance_security": {
+    "black_door_passphrase": "Silence, my brother", 
+    "entry_requirements": "Dark Brotherhood membership or correct passphrase knowledge"
+  },
+  "status": {
+    "discovered": false,
+    "accessible": false,
+    "condition": "intact",
+    "condition_notes": "May change to 'destroyed' if the Sanctuary is attacked in the storyline."
+  },
+  "notable_members": [
+    "Astrid (Sanctuary leader)",
+    "Arnbjorn (Werewolf enforcer, Astrid's husband)",
+    "Nazir (Redguard assassin, handles contracts)",
+    "Babette (Child vampire, alchemist)",
+    "Festus Krex (Elder mage assassin)",
+    "Gabriella (Dunmer assassin, infiltration specialist)",
+    "Cicero (Keeper of the Night Mother, present only if not eliminated during questline)",
+    "Night Mother (corpse of the Dark Brotherhood's unholy matron, hidden in a coffin – becomes relevant later in questline)"
+  ],
+  "features": {
+    "training_area": "Space for combat practice in a side cavern",
+    "living_quarters": "Sleeping alcoves and a common room for members",
+    "night_mother_chamber": "A sealed chamber holding the Night Mother's coffin (initially, only Cicero interacts here)",
+    "escape_tunnel": "A hidden exit in case the Sanctuary is compromised"
+  },
+  "triggers": [
+    {
+      "trigger_id": "on_first_discovery",
+      "description": "Prints a scene with the Black Door's challenge (the door asks: 'What is the music of life?')."
+    },
+    {
+      "trigger_id": "on_entry_as_member",
+      "script_hook": "trigger_sanctuary_entry",
+      "description": "Prints a welcome scene with Brotherhood members greeting the player."
+    },
+    {
+      "trigger_id": "on_attack_event",
+      "description": "If the Sanctuary is attacked (e.g., Penitus Oculatus in 'Death Incarnate'), mark condition as 'destroyed' and describe burning chaos."
+    }
+  ],
+  "quest_association": [
+    "Dark Brotherhood main questline (from recruitment to 'Hail Sithis!')",
+    "Alternate quest 'Destroy the Dark Brotherhood' (if player chose to betray them)"
+  ],
+  "gm_notes": "The Sanctuary remains hidden to players until they either join the Dark Brotherhood or discover the Black Door through exploration and know the passphrase. It serves as a hub for assassination quests. The atmosphere inside is tense but familial among members. Ensure to update 'status.discovered' and 'status.accessible' in campaign state when players join or find the Sanctuary."
+}

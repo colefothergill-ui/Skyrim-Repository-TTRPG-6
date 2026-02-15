@@ -1,0 +1,71 @@
+{
+  "hold": "Hjaalmarch Hold",
+  "capital": "Morthal",
+  "jarl": "Jarl Idgrod Ravencrone (Imperial-aligned, cryptic seer)",
+  "steward": "Aslfur (husband and steward to Idgrod Ravencrone)",
+  "alternative_jarl": "Sorli the Builder (Stormcloak-aligned, installed if Stormcloaks take Hjaalmarch)",
+  "description": "A lowland coastal hold in northwestern Skyrim, half of it swathed in the vast Drajkmyr Marsh. The region is foggy and sparsely populated, with Morthal as its humble capital. Life here is quiet and grim—recent tragedies (like a mysterious house fire) fuel local superstitions and whispers of monsters in the mist. Jarl Idgrod Ravencrone, an elderly mystic loyal to the Empire, rules Hjaalmarch through visions and wisdom. Should the Stormcloaks seize the hold, Idgrod would be replaced by Sorli the Builder, a no-nonsense Nord whose focus is on practical matters over prophecy.",
+  "major_locations": [
+    {
+      "name": "Morthal",
+      "type": "City",
+      "description": "The capital of the hold. A small, fog-shrouded town at the edge of the marsh. Morthal has Highmoon Hall (the Jarl's longhouse), a modest inn, and a few stilted houses. The townsfolk live simple lives and are wary of outsiders—especially after a recent deadly house fire that left the community on edge."
+    },
+    {
+      "name": "Movarth's Lair",
+      "type": "Lair",
+      "hidden": true,
+      "unlock_requirement": "Uncovered during the 'Laid to Rest' investigation or by thorough exploration",
+      "description": "A cave hidden deep in Hjaalmarch's marshes, reputed to house an ancient vampire named Movarth and his brood. Within its dark, web-choked tunnels lie the remains of unfortunate prey. Locals are unaware of its exact location; it becomes known only if one follows the clues of Morthal's vampire mystery into the swamp."
+    },
+    {
+      "name": "Labyrinthian",
+      "type": "Nordic Ruins",
+      "description": "An extensive ruin of an ancient Nord city, located in the mountains southeast of Morthal. Labyrinthian (once the city of Bromjunaar) is a maze of icy tunnels and crumbling temples teeming with undead. Legends say a powerful artifact (the Staff of Magnus) lies within its depths, drawing mages and adventurers despite the deadly trials inside."
+    },
+    {
+      "name": "Fort Snowhawk",
+      "type": "Fort Ruins",
+      "description": "A decrepit stone fortress west of Morthal. Once garrisoned by the Imperial Legion, it has since been abandoned and overrun by necromancers who conduct foul experiments within its walls. Fort Snowhawk remains strategically important—should the civil war come to Hjaalmarch, this fort will be a key battleground for control of the region."
+    },
+    {
+      "name": "Stonehills",
+      "type": "Settlement",
+      "description": "A tiny mining hamlet on Hjaalmarch's eastern outskirts. A handful of miners work the rock under the supervision of Pactur and his wife Sorli the Builder. The settlement is rugged and self-sufficient. Sorli's capable management of Stonehills hints at her potential as Jarl (a role she takes if the Stormcloaks claim the hold)."
+    }
+  ],
+  "districts": [
+    {
+      "name": "Highmoon Hall",
+      "description": "The seat of power in Morthal, serving as Jarl Idgrod Ravencrone's longhouse and the hold's administrative center. It's a modest wooden hall dimly lit by torches and filled with herbal aromas, reflecting Idgrod's mystical practices. Idgrod holds court here, offering guidance often tinged with cryptic foresight. If the Stormcloaks take Hjaalmarch, Sorli the Builder would replace Idgrod in this hall and bring a far more practical tone to the seat of power."
+    },
+    {
+      "name": "Moorside Inn",
+      "description": "Morthal's lone tavern, a dim and smoky inn that provides refuge from the damp cold. Innkeeper Jonna serves simple hot meals and weak ale to locals and the occasional traveler. It's the best spot to catch murmured gossip—whether about the recent house fire, strange lights flitting over the marsh at night, or uneasy complaints about Falion, the resident wizard."
+    },
+    {
+      "name": "Morthal Swamp Perimeter",
+      "description": "The outskirts of Morthal where the village meets the marsh. Rickety wooden walkways connect a few outlying shacks above black bog water. Falion's house stands here on the fringe, isolated and often avoided due to his odd midnight rituals. Not far away lie the charred ruins of a burned-down home, a constant reminder of tragedy. After sundown, this perimeter is eerily silent, save for the occasional flicker of ghostly light in the foggy marsh beyond."
+    }
+  ],
+  "local_quest_hooks": [
+    {
+      "id": "hjaalmarch_laid_to_rest",
+      "quest": "Laid to Rest",
+      "giver": "Jarl Idgrod Ravencrone",
+      "description": "Idgrod Ravencrone has felt a dark presence behind a recent tragedy—the burning of Hroggar's home and the death of his family. She asks the party to investigate the incident and the rumors of a restless ghost. The investigation gradually reveals a vampiric conspiracy in Morthal: a local woman, Alva, is enthralled by the master vampire Movarth who plans to turn the town into his feeding ground. Ultimately, the party must confront Movarth in his lair and destroy his coven to put the dead to rest. Triumphing in this quest earns the Jarl's profound gratitude (and significantly advances the party toward becoming Thane of Hjaalmarch)."
+    },
+    {
+      "id": "hjaalmarch_idgrod_note",
+      "quest": "Idgrod's Note",
+      "giver": "Idgrod the Younger",
+      "description": "Idgrod the Younger privately asks the party to deliver a letter to Danica Pure-Spring, a healer in Whiterun. It details the failing health and eerie dreams of her little brother, Joric, hoping that Danica's wisdom might help cure his malady. This simple delivery quest underscores the personal struggles of Morthal's ruling family and, once completed, earns their gratitude and a modest reward."
+    },
+    {
+      "id": "hjaalmarch_falion_secret",
+      "quest": "Falion's Secret",
+      "giver": "Falion (Conjurer of Morthal)",
+      "description": "Morthal's reclusive mage, Falion, is rumored to conduct strange rituals in the dead of night. If the party follows his late-night excursions, they discover him at a circle of stones in the marsh performing a hidden rite. Falion is, in fact, conducting a ritual to cure vampirism using a filled Black Soul Gem at dawn. Uncovering this secret could be lifesaving if any party member contracts the vampiric curse. Gaining Falion's trust in the process also reveals insight into his knowledge of necromancy and Daedric lore, and could make him an invaluable (if cautious) ally."
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "name": "Thonar Silver-Blood",
+  "id": "thonar_silver_blood",
+  "type": "Nord Noble (Silver-Blood Treasurer)",
+  "location": "Treasury House, Markarth",
+  "faction": "Silver-Blood Family",
+  "aspects": {
+    "high_concept": "Ruthless financier of Markarth, pulling strings from the shadows",
+    "trouble": "Deals with the Devil – has made secret arrangements (Forsworn, bribery) that put him in peril when they unravel",
+    "other_aspects": [
+      "Money and Iron in Equal Measure – equally comfortable using wealth or brute force to get his way",
+      "Vengeful Family Man – the attack on his family (wife's murder) triggers ferocious retribution",
+      "Mine Boss of Cidhna – effectively runs Markarth's prison mine, profiting from prisoner labor"
+    ]
+  },
+  "skills": {
+    "Great": ["Resources"],
+    "Good": ["Provoke", "Contacts"],
+    "Fair": ["Fight", "Deceive", "Will"],
+    "Average": ["Rapport", "Notice", "Physique", "Lore"]
+  },
+  "stunts": [
+    "Bankroll Brawler: Thonar can spend 1 Fate point to call in a hired thug or guard as backup in a conflict (narrative advantage due to his wealth).",
+    "Cutthroat Negotiator: +2 to Provoke when threatening someone over a deal or debt – people know he can hire enforcers if crossed.",
+    "Silver Tongue (Family Funds): +2 to Resources when using bribes to influence outcomes in Markarth (e.g., paying off a guard or official)."
+  ],
+  "stress": {
+    "physical": [false, false],
+    "mental": [false, false, false]
+  },
+  "consequences": {
+    "mild": null,
+    "moderate": null,
+    "severe": null
+  },
+  "refresh": 3,
+  "fate_points": 3,
+  "notes": "Thonar is the darker half of the Silver-Blood equation. While his brother Thongvor handles public posturing and politics, Thonar operates behind closed doors to ensure the family's dominance. Middle-aged with a perpetual scowl, Thonar is often found in the Treasury House poring over ledgers or meeting discreetly with mercenaries and informants. He has orchestrated bribery of officials, suppression of evidence, and even assassinations to protect Silver-Blood interests. Notably, Thonar struck a clandestine bargain with the Forsworn: as long as Forsworn agents only attacked outsiders or his rivals (like certain merchants or Imperial supporters) and left Silver-Blood operations alone, he would use his influence to have Madanach and his network left relatively unmolested in Cidhna Mine. This dirty secret kept an uneasy peace in Markarth – until recently. The arrangement fell apart violently during the events of the Forsworn Conspiracy, where Forsworn assassins (secretly under Nepos's direction) killed Thonar's wife Betrid as retribution or collateral damage. Thonar's grief has turned to seething rage. He feels personally betrayed by Madanach and vows to exterminate the Forsworn at all costs now. Dangerous and cornered, Thonar can be unpredictable; he's equally likely to throw coin at a problem or pick up an axe himself. Despite his criminal edge, Thonar justifies his actions as doing what is necessary to keep Markarth 'running smoothly' (and to line his pockets). He is a man who has lost much and will cling to what remains – chiefly, his family's power – with an iron grip.",
+  "relationships": {
+    "Thongvor Silver-Blood": "Older brother and co-conspirator – Thonar works closely with Thongvor, though they squabble. Thonar handles the dirty work and bribes, while Thongvor fronts as the statesman. They share a goal: absolute control of Markarth.",
+    "Madanach": "Former secret partner, now hated foe – Thonar had a covert understanding with Madanach to manage Forsworn violence. After Betrid's death at Forsworn hands, Thonar feels utterly betrayed and wants Madanach dead, deal be damned.",
+    "Nepos the Nose": "Informant and pawn – Thonar was vaguely aware that Nepos was a point of contact with Forsworn in the city. He fed Nepos targets at times. After the conspiracy unraveled, Thonar realizes Nepos was playing him too; if Nepos still lived, Thonar would see him eliminated.",
+    "Jarl Igmund": "Official ally, unofficial headache – Igmund relies on the Silver-Bloods' financial clout, and Thonar feigns loyalty, but he often bypasses Igmund's authority. Still, Thonar keeps Igmund close to avoid scrutiny, even funding some of the Jarl's guard efforts.",
+    "Outside Investigators": "Potential threat – If adventurers or investigators poke around his affairs, Thonar initially tries bribes or polite dismissal. If pressed, he won't hesitate to remove the threat, by hiring thugs or leveraging guards. He's not above attempting to have nosy adventurers jailed on false charges."
+  },
+  "quests": [
+    "The Forsworn Conspiracy (Thonar is a key figure; confrontation in the Treasury House)",
+    "No One Escapes Cidhna Mine (Thonar's actions and fate diverge based on this quest's outcome – he can be killed or left alive with diminished power)",
+    "Civil War – Markarth's Transition (if Markarth changes hands, Thonar either flees, ingratiates himself with new rulers, or faces retribution depending on the scenario)"
+  ],
+  "inventory": [
+    "Key to Cidhna Mine and encrypted ledgers of Silver-Blood finances",
+    "Family ring with the Silver-Blood crest (symbol of his status)",
+    "Steel war axe (kept within arm's reach in the Treasury House, especially after recent threats to his life)",
+    "Pouch of coin for bribes at all times"
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "name": "Ice Wraith",
+  "id": "npc_stat_ice_wraith",
+  "type": "Elemental Spirit",
+  "category": "Enemy",
+  "location": "Snowy mountains, frozen tundra, glaciers",
+  "faction": "Elemental Spirits",
+  "aspects": {
+    "high_concept": "Serpentine Spirit of Frost and Cold",
+    "trouble": "Vulnerable to Fire and Heat",
+    "other_aspects": [
+      "Nearly Invisible in Snowstorms",
+      "Embodies the Killing Cold",
+      "Ethereal and Elusive"
+    ]
+  },
+  "skills": {
+    "Good": ["Fight", "Athletics"],
+    "Fair": ["Stealth", "Will"],
+    "Average": ["Notice"]
+  },
+  "stunts": [
+    "Frost Touch: Attacks deal cold damage and may create 'Frostbitten' aspect with one free invoke",
+    "Snow Camouflage: +2 to Stealth in snowy or blizzard conditions, nearly invisible",
+    "Ethereal Form: +2 to defend against non-magical physical attacks"
+  ],
+  "stress": {
+    "physical": [false, false],
+    "mental": [false, false]
+  },
+  "consequences": {
+    "mild": null
+  },
+  "refresh": 2,
+  "fate_points": 2,
+  "notes": "Ice wraiths are elemental spirits of frost that appear as serpentine creatures made of ice and mist. They are nearly invisible in snowstorms and attack with freezing cold. They are sought by Companions for the rite of passage to become full members. Extremely vulnerable to fire.",
+  "combat_tactics": "Ice wraiths use mobility and camouflage to their advantage, striking from unexpected angles. They fly and weave through the air, making them hard to hit. They flee from fire and concentrate on isolated targets.",
+  "scene_triggers": ["Mountain expeditions", "Companions quest: Glory of the Dead", "Frozen tundra exploration", "Blizzard encounters"],
+  "act_context": ["Act 1", "Act 2", "Act 3"],
+  "loot": ["Ice wraith teeth (highly valued by Companions)"]
+}

@@ -1,0 +1,97 @@
+{
+  "name": "Tolfdir",
+  "id": "npc_stat_tolfdir",
+  "type": "Nord Wizard",
+  "category": "Instructor",
+  "location": "College of Winterhold",
+  "faction": "College of Winterhold",
+  "aspects": {
+    "high_concept": "Wise and Patient Master Wizard",
+    "trouble": "Values Knowledge Over Politics",
+    "other_aspects": [
+      "Ancient Scholar of the Arcane",
+      "Believes in Hands-On Teaching",
+      "Suspicious of Ancano and Thalmor Influence"
+    ]
+  },
+  "skills": {
+    "Superb": ["Lore"],
+    "Great": ["Will"],
+    "Good": ["Notice", "Empathy"],
+    "Fair": ["Rapport", "Investigate", "Crafts"],
+    "Average": ["Physique", "Athletics"]
+  },
+  "stunts": [
+    "Master Instructor: +2 to Lore when teaching or explaining magical concepts",
+    "Ward Mastery: Can create powerful magical shields (Armor:2 against magic)",
+    "Detect Magic: +2 to Notice when sensing magical effects or enchantments"
+  ],
+  "stress": {
+    "physical": [false, false],
+    "mental": [false, false, false, false]
+  },
+  "consequences": {
+    "mild": null,
+    "moderate": null,
+    "severe": null
+  },
+  "refresh": 3,
+  "armor": 0,
+  "notes": "Tolfdir is one of the most senior members of the College of Winterhold, having studied magic for over a century. Despite his age and vast knowledge, he remains humble and patient, preferring hands-on teaching to lecturing. He's deeply concerned about the College's isolation from Skyrim's politics but believes magic should be studied for understanding rather than power. He's wary of the Thalmor presence at the College, particularly Ancano.",
+  "combat_tactics": "Tolfdir relies on defensive magic, using wards and protective spells while supporting allies. He prefers to disable enemies non-lethally when possible. His vast experience makes him adaptable to different magical threats.",
+  "scene_triggers": ["College of Winterhold", "Magical investigations", "Teaching scenes", "Saarthal expedition"],
+  "act_context": ["Act 1", "Act 2", "Act 3"],
+  "starting_equipment": {
+    "armor": "Master's Robes (Armor:0, +1 to Lore)",
+    "weapon": "Spell Focus Staff (Weapon:2, can cast spells through it)",
+    "other": ["Ancient tomes", "Magical components", "Detect magic scrolls"]
+  },
+  "social_interaction": "Tolfdir is warm, grandfatherly, and endlessly patient. He speaks with the wisdom of centuries but never condescends. He genuinely cares about his students and the pursuit of knowledge. While he can be absent-minded about practical matters, he's incredibly sharp when discussing magic. He treats everyone with respect regardless of their skill level.",
+  "relationships": {
+    "Savos Aren": "Arch-Mage, respects but concerned about his stress",
+    "Ancano": "Thalmor advisor, deeply suspicious of his motives",
+    "Mirabelle Ervine": "Master Wizard, trusts her judgment",
+    "J'zargo": "Student, appreciates his confidence but warns against arrogance",
+    "Brelyna Maryon": "Student, encourages her careful approach",
+    "Farengar Secret-Fire": "Former student, proud of his success as court wizard"
+  },
+  "personality_notes": {
+    "speaking_style": "Gentle and educational, uses metaphors and examples, often poses questions to encourage thinking",
+    "motivations": ["Preserve and expand magical knowledge", "Protect students", "Maintain College's independence", "Investigate magical mysteries", "Counter Thalmor influence"],
+    "fears": ["College becoming tool of politics", "Students misusing magic", "Loss of ancient knowledge", "Thalmor corruption of magical study"],
+    "quirks": ["Loses track of time when researching", "Treats ancient artifacts casually", "Offers impromptu lessons constantly"],
+    "character_growth": "Becomes more politically active when threats emerge, may take leadership role if needed"
+  },
+  "farengar_connection": {
+    "history": "Tolfdir taught Farengar years ago at the College",
+    "current_relationship": "Proud of Farengar's position but wishes he'd return to pure research",
+    "mission_context": "When College sends PC to assist Farengar, Tolfdir provides introduction and magical expertise"
+  },
+  "whiterun_research_mission": {
+    "objective": "The College has learned of a mysterious artifact in Bleak Falls Barrow. Tolfdir assigns the PC to assist Farengar Secret-Fire's research.",
+    "briefing": "Farengar is a capable wizard and an old student of mine. Help him investigate the dragon activity - it may be connected to ancient magic the College should understand.",
+    "complication": "PC arrives in Whiterun as the Battle begins, must choose sides before completing the research mission",
+    "significance": "This mission connects to main quest dragon investigation"
+  },
+  "story_hooks": [
+    "Primary instructor for new College members",
+    "Sends PC on expedition to Saarthal, uncovering ancient mysteries",
+    "Provides warnings about Ancano's suspicious activities",
+    "Can teach advanced magical techniques",
+    "Connects College storyline to dragon crisis through Farengar mission",
+    "Helps investigate the Eye of Magnus",
+    "Potential ally against Thalmor influence"
+  ],
+  "dialogue_samples": {
+    "greeting": "Ah, welcome! Always delightful to see eager minds seeking knowledge. Tell me, what draws you to the study of magic?",
+    "teaching": "Magic is not about power - it's about understanding. The Dwemer forgot this, and look what happened to them. Now, let me show you something fascinating...",
+    "farengar_mission": "I'm sending you to Whiterun to assist Farengar Secret-Fire. He was one of my students, you know - brilliant mind, if a bit too focused on practical applications. He's researching dragon activity. Help him, and report back what you learn.",
+    "thalmor_concern": "That Ancano... he watches everything too closely. The Thalmor claim to respect magical study, but I suspect they seek to control it. We must be cautious.",
+    "during_crisis": "In times like these, we must remember that magic transcends politics. Our duty is to knowledge and truth, not to any kingdom or empire."
+  },
+  "neutral_faction_integration": {
+    "starting_narrative": "Tolfdir recognizes your potential and, given the concerning reports about dragon activity, assigns you to assist Farengar Secret-Fire in Whiterun. 'This research is vital,' he explains. 'Dragons returning would affect all of Skyrim - the College must understand what's happening.'",
+    "transition_to_battle": "You arrive in Whiterun to find the city preparing for battle. Farengar is too absorbed in his research to notice the crisis unfolding. As Stormcloak forces approach, you must choose whether to stand with Hadvar and the Imperial defenders or Ralof and the Stormcloak attackers.",
+    "consequences": "Your choice affects the College's relationship with the winning faction and Farengar's ability to continue his research."
+  }
+}

@@ -1,0 +1,473 @@
+{
+  "campaign_id": "skyrim_fate_core_001",
+  "campaign_name": "The Elder Scrolls: Skyrim - Fate Core Campaign",
+  "started_date": "4E 201, 17th of Last Seed",
+  "current_act": 1,
+  "active_pc": "pc_insaerndel",
+  "active_pc_id": "pc_insaerndel",
+  "session_zero_completed": true,
+  "session_count": 4,
+  "last_updated": "2026-02-12",
+  "starting_location": "Whiterun",
+  "current_scene_id": "A1-S15",
+  "current_location": "The Pale — Nightgate Pass Approach (snow road)",
+  "active_hold": "The Pale",
+  "current_objective": "Reach Nightcaller Temple (overlooking Dawnstar) to find Hroldar 'Whitefin' and advance Arisann's trail (Ivory Thread lead).",
+  "current_npcs": [],
+  "scene_flags": {
+    "battle_of_whiterun_active": false,
+    "battle_of_whiterun_resolved": true,
+    "brynjolf_missive_delivered": true,
+    "battleborn_arcana_established": true,
+    "highborn_power_spent_this_session": true,
+    "steed_stone_blessing_active": true,
+    "thief_stone_blessing_spent_this_session": false,
+    "battleborn_arcana_deal_signed": true,
+    "battleborn_writ_of_privilege_received": true,
+    "contract_olfrid_3000g_active": true,
+    "battleborn_evac_route_temple_of_kynareth_secured": true,
+    "ledger_routed_to_irileth_via_guard_chain": true,
+    "western_gate_stabilized": true,
+    "stormcloak_survivor_arrow_to_knee": true,
+    "bannered_mare_handler_eliminated": true,
+    "thalmor_whiterun_node_neutralized": true,
+    "greymane_framejob_active": true,
+    "for_greymane_illusion_witnessed": true,
+    "parapet_flank_climbers_neutralized": true,
+    "stormcloak_sergeant_taken_out": true,
+    "compel_no_witnesses_accepted": true,
+    "hadvar_stabilized_by_restoration": true,
+    "stormcloak_infiltrator_neutralized": true,
+    "stormcloak_mage_possessed_and_killed": true,
+    "ice_hazard_dissipated": true,
+    "sigil_sealed_stairwell": true,
+    "galmar_stonefist_taken_out": true,
+    "galmar_death_witnessed": true,
+    "galmar_war_knot_signet_recovered": true,
+    "huscarls_conceded_and_retreated": true,
+    "chain_of_command_shattered": true,
+    "imperial_checkpoints_established": true,
+    "west_wall_secured": true,
+    "compel_famous_wrong_circles_accepted": true,
+    "battleborn_quiet_inquiry_completed": true,
+    "guild_foothold_whiterun_completed": true,
+    "olfrid_contract_paid": true,
+    "greymane_arrest_in_motion": true,
+    "insaerndel_alias_orinthelo_shared_with_hadvar": true,
+    "thieves_guild_loud_and_clear_active": false,
+    "thieves_guild_loud_and_clear_completed": true,
+    "goldenglow_estate_infiltrated": true,
+    "goldenglow_safe_cleared": true,
+    "goldenglow_beehives_burned": true,
+    "goldenglow_alarm_full": false,
+    "dampened_spirits_accepted": true,
+    "delvin_dossier_honningbrew_obtained": true,
+    "compel_informants_everywhere_accepted": true,
+    "mirror_trial_glass_completed": true,
+    "honningbrew_veiled_identity_active": true,
+    "compel_justiciar_checkpoint_accepted": true,
+    "eyes_of_the_dominion_present": true,
+    "mallus_escorting_to_basement": true,
+    "honningbrew_sabjorn_poison_kit_planted": true,
+    "honningbrew_seizure_imminent": true,
+    "phantom_weaponry_active_this_scene": true,
+    "honningbrew_shadow_ward_used": true,
+    "honningbrew_justiciar_failed_to_trace_magic": true,
+    "honningbrew_seizure_in_motion": true,
+    "honningbrew_mallus_led_discovery": true,
+    "honningbrew_boost_surgical_silence_consumed": true,
+    "thieves_guild_dampened_spirits_completed": true,
+    "honningbrew_vats_poisoned": true,
+    "honningbrew_evidence_staged": true,
+    "mallus_asset_preserved": true,
+    "ivory_thread_lead_acquired": true,
+    "arisann_lead_contact_hroldar_whitefin": true,
+    "arisann_meet_point_nightgate_pass": true,
+    "compel_justiciar_paper_trail_accepted": true,
+    "session04_started": true,
+    "session04_departed_riften": true,
+    "session04_justiciar_checkpoint_ambushed": true,
+    "session04_justiciar_and_squad_eliminated": true,
+    "session04_checkpoint_false_flag_stormcloak": true,
+    "session04_checkpoint_survivor_memory_rewritten": true,
+    "session04_thalmor_documents_acquired": true,
+    "session04_warhorse_acquired": true,
+    "session04_whitefin_location_divined": true,
+    "session04_nightcaller_temple_targeted": true
+  },
+  "scene_last_major_update": "2026-02-12",
+  "scene_aspects": {},
+  "scene_clocks": {},
+  "civil_war_state": {
+    "player_alliance": "imperial",
+    "whiterun_control": "imperial",
+    "battle_of_whiterun_status": "completed_imperial_victory",
+    "imperial_victories": 1,
+    "stormcloak_victories": 0,
+    "key_battles_completed": [
+      "battle_of_whiterun"
+    ],
+    "faction_relationship": {
+      "imperial_legion": 5,
+      "stormcloaks": 0
+    },
+    "battle_of_whiterun_modifiers": [
+      "galmar_stonefist_killed",
+      "imperial_checkpoints_established",
+      "west_wall_secured"
+    ]
+  },
+  "main_quest_state": {
+    "post_alduin_timeline": true,
+    "dragon_crisis_resolved": true,
+    "blades_status": "reformed",
+    "greybeards_relations": "respectful",
+    "timeline_notes": "Campaign occurs after Alduin's defeat. Dragon crisis has ended, focus is on civil war and Thalmor conspiracy."
+  },
+  "thalmor_arc": {
+    "thalmor_awareness_of_party": "low",
+    "embassy_infiltrated": false,
+    "elenwen_disposition": "neutral",
+    "thalmor_schemes_discovered": [],
+    "active_plots": [
+      {
+        "plot_id": "undermine_empire",
+        "description": "Thalmor seeks to prolong civil war to weaken both sides",
+        "progress": 0,
+        "clock_segments": 8
+      },
+      {
+        "plot_id": "eliminate_talos_worship",
+        "description": "Continue persecution of Talos worshippers",
+        "progress": 0,
+        "clock_segments": 10
+      }
+    ]
+  },
+  "branching_decisions": {
+    "civil_war_stance": "imperial (covert)",
+    "jarl_balgruuf_support": null,
+    "thalmor_embassy_approach": null,
+    "talos_worship_stance": null,
+    "civil_war_entry_contact": "Hadvar",
+    "battle_of_whiterun_choice": "defend_whiterun_for_empire"
+  },
+  "world_consequences": {
+    "towns_affected": [],
+    "npcs_killed": [
+      "thalmor_ledger_clerk_handler",
+      "thalmor_escort_1",
+      "thalmor_escort_2",
+      "stormcloak_west_gate_spearman",
+      "stormcloak_west_gate_charger",
+      "stormcloak_west_parapet_sergeant",
+      "stormcloak_assassin_parapet",
+      "stormcloak_ice_mage_parapet",
+      "stormcloak_assassin_operative",
+      "stormcloak_ice_mage",
+      "stormcloak_huscarl_1",
+      "stormcloak_huscarl_2",
+      "galmar_stonefist",
+      "thalmor_justiciar_checkpoint_rift",
+      "thalmor_soldier_checkpoint_1",
+      "thalmor_soldier_checkpoint_2",
+      "thalmor_archer_checkpoint"
+    ],
+    "npcs_befriended": [],
+    "major_choices": [
+      "Forged evidence trail framing Gray-Mane interests (and Companions tie-in) for the Silver Ring Ledger intrusion.",
+      "Secured Battle-Born Arcana as a Thieves Guild safehouse/front in Whiterun (20% revenue cut to Olfrid).",
+      "Accepted Battle-Born escort contingency contract for Temple of Kynareth evacuation if Whiterun is breached.",
+      "Sealed the stairwell with a keyed ward to protect Hadvar during the west-wall fight.",
+      "Used Quagmire clairvoyance and phantom weaponry to assassinate Galmar Stone-Fist on the west wall.",
+      "Chose rout-control over slaughter: issued battlefield command orders and forced Stormcloak retreat with proof of Galmar's death.",
+      "Accepted the 'Famous in the Wrong Circles' exposure cost; Thalmor net tightens (Dream Catcher Search +1).",
+      "Used dream-magic + battlefield deception to break Stormcloak cohesion; forced a retreat/surrender cascade.",
+      "Assassinated Galmar Stone-Fist during the Battle of Whiterun, crippling Stormcloak command.",
+      "Revealed the alias 'Orinthelo' (Penitus Oculatus) to Hadvar and secured his discretion.",
+      "Collected battlefield evidence (Galmar's signet/weapon, maps) to leverage future Imperial/Thalmor moves.",
+      "Executed the Goldenglow Estate heist for the Thieves Guild: infiltrated silently, cleared Aringoth's safe, and delivered the take to Mercer.",
+      "Left Maven a message in smoke: three beehives burned at Goldenglow, pinning blame on 'unseen hands' rather than witnesses.",
+      "Recovered a Pale-linked paper trail from the safe that may intersect with Arisann's disappearance.",
+      "Completed 'Dampened Spirits': infiltrated Honningbrew under Veils, secured Mallus's cooperation, stole incriminating documents, staged skeever evidence, and poisoned the vats to collapse Sabjorn.",
+      "Turned in to Maven with documents; earned deeper leverage and extracted a concrete Arisann lead tied to the Ivory Thread courier lattice.",
+      "Accepted Compel: 'Justiciar's Paper Trail' — Dominion bureaucracy begins cross-referencing anomalies; Thalmor net tightens on the Dream Catcher.",
+      "Ambushed a Thalmor Justiciar checkpoint en route to the Pale; staged a Stormcloak false-flag scene, rewrote the lone survivor's memory, seized Justiciar documents, and took the cart-horse as a mount."
+    ]
+  },
+  "active_story_arcs": [
+    {
+      "arc_name": "Civil War",
+      "status": "pending",
+      "progress": 0,
+      "next_milestone": "Choose faction alignment"
+    },
+    {
+      "arc_name": "Thalmor Conspiracy",
+      "status": "hidden",
+      "progress": 0,
+      "next_milestone": "Unknown"
+    }
+  ],
+  "companions": {
+    "active_companions": [],
+    "available_companions": [
+      {
+        "npc_id": "npc_stat_hadvar",
+        "name": "Hadvar",
+        "status": "available",
+        "loyalty": 50,
+        "location": "Riverwood or Whiterun",
+        "recruitment_condition": "Party encounters Hadvar and helps with Imperial-related task",
+        "faction_affinity": "imperial_legion"
+      },
+      {
+        "npc_id": "npc_stat_ralof",
+        "name": "Ralof",
+        "status": "available",
+        "loyalty": 50,
+        "location": "Riverwood or Stormcloak camps",
+        "recruitment_condition": "Party encounters Ralof and helps with Stormcloak-related task",
+        "faction_affinity": "stormcloaks"
+      }
+    ],
+    "dismissed_companions": [],
+    "companion_relationships": {},
+    "notes": "Companion loyalty ranges from 0-100."
+  },
+  "player_characters": [
+    {
+      "id": "pc_insaerndel",
+      "name": "Insaerndel",
+      "player": "Cole",
+      "race": "High Elf (Altmer)",
+      "standing_stone": "The Steed Stone",
+      "faction_alignment": "neutral"
+    }
+  ],
+  "starting_narrative": "The party arrives in Whiterun, trying to remain neutral in the civil war. They have not yet committed to either side in the conflict. Jarl Balgruuf the Greater has reluctantly sided with the Empire, and the Stormcloaks prepare to assault the city. The party may align with neutral factions like the Companions, who focus on honor over politics. The Battle of Whiterun approaches, and the party must navigate the conflict while maintaining their independence. They may encounter Hadvar or Ralof in Riverwood or Whiterun and decide whether to accept either as a companion.",
+  "faction_relationships": {
+    "companions": 20
+  },
+  "npc_first_impressions": {
+    "brynjolf": {
+      "pc_insaerndel": {
+        "timestamp": "2026-02-13T00:37:44.554042",
+        "disposition": "neutral",
+        "line": "That buckle—old Nocturnal style. You're either Guild… or you stole the right symbol from the wrong person.",
+        "source": "thieves_nocturnal_buckle",
+        "recognition_tags": [
+          "altmer",
+          "tall",
+          "lean",
+          "handsome",
+          "sharp cheekbones",
+          "amber eyes",
+          "ember eyes",
+          "long raven-black hair",
+          "wavy hair",
+          "trimmed goatee",
+          "trimmed mustache",
+          "hooded",
+          "violet hood",
+          "gold-trim hood",
+          "purple robe",
+          "gold trim",
+          "riften local vibe",
+          "riften patriot",
+          "thieves guild tells",
+          "keyring",
+          "leather pouches",
+          "silver belt buckle",
+          "eye-knot buckle motif",
+          "strange hip-tome",
+          "eye-sigil grimoire",
+          "illusion-magic vibe"
+        ]
+      }
+    },
+    "olfrid_battle_born": {
+      "pc_insaerndel": {
+        "timestamp": "2026-02-03T12:00:00",
+        "disposition": "neutral",
+        "line": "That hooded Altmer in violet—ember eyes like coin in torchlight. Doesn't look lost, just… calculating.",
+        "recognition_tags": [
+          "altmer",
+          "tall",
+          "lean",
+          "sharp features",
+          "ember eyes",
+          "long black hair",
+          "hooded",
+          "violet hood",
+          "purple cloak",
+          "gold trim",
+          "leather bracers",
+          "satchel",
+          "keyring",
+          "bookish",
+          "thief vibe"
+        ]
+      }
+    },
+    "battleborn_servant_unnamed": {
+      "pc_insaerndel": {
+        "timestamp": "2026-02-03T11:30:00",
+        "disposition": "negative",
+        "line": "An Altmer hiding under a hood in Skyrim? Convenient. Almost like you've got something to conceal.",
+        "recognition_tags": [
+          "altmer",
+          "tall",
+          "hooded",
+          "violet hood",
+          "purple cloak",
+          "suspicious",
+          "thief vibe"
+        ]
+      }
+    },
+    "thalmor_ledger_clerk_handler": {
+      "pc_insaerndel": {
+        "timestamp": "2026-02-03T10:00:00",
+        "disposition": "neutral",
+        "line": "A scholar's posture, a thief's belt. Those keys aren't for show.",
+        "recognition_tags": [
+          "altmer",
+          "tall",
+          "sharp features",
+          "ember eyes",
+          "hooded",
+          "keyring",
+          "bookish",
+          "calculating"
+        ]
+      }
+    },
+    "commander_caius_whiterun_guard": {
+      "pc_insaerndel": {
+        "timestamp": "2026-02-04T14:30:00",
+        "disposition": "positive",
+        "line": "That hooded Altmer who moves like a shadow—recognized him from the manor grounds. Took the ledger through proper channels even under siege. Professional.",
+        "recognition_tags": [
+          "altmer",
+          "tall",
+          "lean",
+          "hooded",
+          "violet hood",
+          "purple cloak",
+          "professional",
+          "chain-of-command respect",
+          "under siege composure"
+        ]
+      }
+    },
+    "brother_verulus": {
+      "pc_insaerndel": {
+        "timestamp": "2026-02-13T00:37:48.860465",
+        "disposition": "neutral",
+        "line": "Most would call it 'a strange grimoire.' I call it a warning: that sigil is Vaermina's, and it never shows up by accident.",
+        "source": "occult_vaermina_tome",
+        "recognition_tags": [
+          "altmer",
+          "tall",
+          "lean",
+          "handsome",
+          "sharp cheekbones",
+          "amber eyes",
+          "ember eyes",
+          "long raven-black hair",
+          "wavy hair",
+          "trimmed goatee",
+          "trimmed mustache",
+          "hooded",
+          "violet hood",
+          "gold-trim hood",
+          "purple robe",
+          "gold trim",
+          "riften local vibe",
+          "riften patriot",
+          "thieves guild tells",
+          "keyring",
+          "leather pouches",
+          "silver belt buckle",
+          "eye-knot buckle motif",
+          "strange hip-tome",
+          "eye-sigil grimoire",
+          "illusion-magic vibe"
+        ]
+      }
+    },
+    "balgruuf_the_greater": {
+      "pc_insaerndel": {
+        "timestamp": "2026-02-13T00:27:34.509316",
+        "disposition": "neutral",
+        "line": "There's a dark tome at his hip stamped with an eye-like sigil. Probably just scholar business… probably.",
+        "source": "default",
+        "recognition_tags": [
+          "altmer",
+          "tall",
+          "lean",
+          "handsome",
+          "sharp cheekbones",
+          "amber eyes",
+          "ember eyes",
+          "long raven-black hair",
+          "wavy hair",
+          "trimmed goatee",
+          "trimmed mustache",
+          "hooded",
+          "violet hood",
+          "gold-trim hood",
+          "purple robe",
+          "gold trim",
+          "riften local vibe",
+          "riften patriot",
+          "thieves guild tells",
+          "keyring",
+          "leather pouches",
+          "silver belt buckle",
+          "eye-knot buckle motif",
+          "strange hip-tome",
+          "eye-sigil grimoire",
+          "illusion-magic vibe"
+        ]
+      }
+    },
+    "general_tullius": {
+      "pc_insaerndel": {
+        "timestamp": "2026-02-13T00:37:53.809660",
+        "disposition": "positive",
+        "line": "You look like you belong here. Not as a tourist. As someone the city already decided to keep.",
+        "source": "default",
+        "recognition_tags": [
+          "altmer",
+          "tall",
+          "lean",
+          "handsome",
+          "sharp cheekbones",
+          "amber eyes",
+          "ember eyes",
+          "long raven-black hair",
+          "wavy hair",
+          "trimmed goatee",
+          "trimmed mustache",
+          "hooded",
+          "violet hood",
+          "gold-trim hood",
+          "purple robe",
+          "gold trim",
+          "riften local vibe",
+          "riften patriot",
+          "thieves guild tells",
+          "keyring",
+          "leather pouches",
+          "silver belt buckle",
+          "eye-knot buckle motif",
+          "strange hip-tome",
+          "eye-sigil grimoire",
+          "illusion-magic vibe"
+        ]
+      }
+    }
+  }
+}

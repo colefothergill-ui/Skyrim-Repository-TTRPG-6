@@ -1,0 +1,37 @@
+{
+  "hold": "Eastmarch Hold",
+  "capital": "Windhelm",
+  "jarl": "Ulfric Stormcloak",
+  "allegiance": "Stormcloak Rebellion",
+  "description": "The easternmost hold of Skyrim, a frigid region of steaming volcanic fields and snow-draped mountains. Eastmarch is Ulfric Stormcloak's domain and the heart of the rebellion against the Empire. Its capital Windhelm is an ancient city of stone, known for its harsh cold and equally cold politics. The hold stretches from the hot springs of the south up to the coastal flats near Winterhold, marked by crags, geysers, and the distant shadow of Morrowind beyond the eastern passes.",
+  "districts": [
+    {
+      "name": "Palace of the Kings",
+      "description": "Windhelm's keep and seat of power, an ancient stone palace where Jarl Ulfric holds court. The great hall's vaulted ceilings and eternal braziers speak to Windhelm's legendary past as Ysgramor's city. Stormcloak guards and officers bustle here, planning the next moves in the civil war. The air is heavy with the weight of rulership and rebellion."
+    },
+    {
+      "name": "Stone Quarter",
+      "description": "Windhelm's market district, a broad plaza surrounded by stone buildings. By day, stalls brim with goods despite the cold—fruits from the Rift, fresh smithing from Oengul's forge, and the warmth of Candlehearth Hall's ever-burning fire beckoning travelers. Nords gather here to trade and gossip under statues of departed heroes, while the Windhelm guard keeps a watchful eye."
+    },
+    {
+      "name": "Gray Quarter",
+      "description": "Also known historically as the Snow Quarter, this section of Windhelm has become the refuge of the city's Dark Elf immigrants. Its alleys are cramped and its buildings worn. Dunmer residents try to live their lives under the pall of distrust from the Nord majority. The scent of exotic Dunmer cooking mixes with wood smoke. Tensions simmer here, as decades of neglect have turned the Snow Quarter gray in more than name."
+    },
+    {
+      "name": "Windhelm Docks",
+      "description": "Outside the city's main walls on the White River, the Windhelm docks host river and sea trade. The East Empire Company's warehouse operates here, though piracy has slowed its business. A small Argonian assemblage works unloading ships, living in shacks by the water (as they're unwelcome inside the city). The icy water and creaking longboats paint a bleak, industrious picture at Skyrim's eastern trade post."
+    }
+  ],
+  "major_settlements": [
+    "Windhelm (City)",
+    "Kynesgrove (Village)",
+    "Darkwater Crossing (Mining Camp)"
+  ],
+  "factions_present": [
+    "Stormcloak Rebellion",
+    "Windhelm Guard",
+    "Gray Quarter Dunmer",
+    "East Empire Company"
+  ],
+  "notes": "Windhelm is the capital of Eastmarch and the stronghold of the Stormcloak rebellion. Ulfric's rule brings a fierce Nord pride but also oppression of Windhelm's minorities (Dunmer and Argonians). The hold's volcanic hot springs and the eastern mountain pass (Dunmeth Pass) to Morrowind are notable geographic features. In the civil war, Eastmarch is firmly Stormcloak-controlled, and its people are emboldened by Ulfric's cause."
+}

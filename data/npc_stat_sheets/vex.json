@@ -1,0 +1,77 @@
+{
+  "name": "Vex",
+  "id": "npc_stat_vex",
+  "type": "Imperial Thief",
+  "category": "Guild Officer",
+  "location": "Riften (Ragged Flagon - Cistern)",
+  "faction": "Thieves Guild",
+  "aspects": {
+    "high_concept": "Sharp-Tongued Master Infiltrator",
+    "trouble": "Trust No One - Not Even Yourself",
+    "other_aspects": [
+      "Skeptical of Newcomers",
+      "Expert in Urban Operations",
+      "Fiercely Loyal to the Guild (When Earned)"
+    ]
+  },
+  "skills": {
+    "Great": ["Stealth", "Burglary"],
+    "Good": ["Athletics", "Notice", "Deceive"],
+    "Fair": ["Fight", "Contacts", "Will"],
+    "Average": ["Shoot", "Resources", "Lore"]
+  },
+  "stunts": [
+    "Urban Shadow: +2 to Stealth when operating in cities or populated areas",
+    "Case the Joint: +2 to Notice when surveying a location for security weaknesses",
+    "Quick Exit: Once per scene, move two zones as a free action when escaping"
+  ],
+  "stress": {
+    "physical": [false, false, false],
+    "mental": [false, false, false]
+  },
+  "consequences": {
+    "mild": null,
+    "moderate": null,
+    "severe": null
+  },
+  "refresh": 3,
+  "armor": 0,
+  "notes": "Vex is one of the Thieves Guild's most skilled operatives, specializing in infiltration and urban heists. She's skeptical, abrasive, and doesn't trust easily - especially new recruits. Her sharp tongue and cynical attitude mask a deep loyalty to the guild and its members. She works closely with Delvin Mallory on city influence jobs and provides valuable intel and planning for major operations.",
+  "combat_tactics": "Vex avoids combat when possible, preferring to disappear into shadows. When forced to fight, she uses hit-and-run tactics, focusing on creating advantages and escaping rather than prolonged engagement.",
+  "scene_triggers": ["Ragged Flagon", "City influence jobs", "Heist planning", "Guild meetings"],
+  "act_context": ["Act 1", "Act 2", "Act 3"],
+  "starting_equipment": {
+    "armor": "Guild Armor (Armor:0, +1 to Stealth)",
+    "weapon": "Guild Dagger (Weapon:1, concealable)",
+    "other": ["Lockpicks x10", "City maps", "Contact lists", "100 gold"]
+  },
+  "social_interaction": "Vex is blunt, sarcastic, and often dismissive. She doesn't suffer fools and has little patience for small talk. Earning her respect requires proving yourself through actions, not words. Once you've earned her trust, she's a valuable ally who'll share insights freely.",
+  "relationships": {
+    "Brynjolf": "Respects him, though doesn't always agree with his optimism",
+    "Mercer Frey": "Professional respect, follows orders",
+    "Delvin Mallory": "Close working relationship, shares planning duties",
+    "Karliah": "Believes traitor story initially, later reconciles",
+    "New recruits": "Highly skeptical until proven otherwise"
+  },
+  "personality_notes": {
+    "speaking_style": "Sarcastic, blunt, uses cutting remarks, no-nonsense",
+    "motivations": ["Prove herself as best infiltrator", "Restore guild's reputation", "Complete jobs flawlessly", "Protect guild members she trusts"],
+    "fears": ["Guild's complete failure", "Being betrayed again", "Losing her edge", "Trusting the wrong person"],
+    "quirks": ["Always has an escape plan", "Critiques others' techniques", "Reluctant to give compliments"],
+    "character_growth": "Vex learns to trust again as player proves themselves, eventually becoming supportive of new leadership"
+  },
+  "story_hooks": [
+    "Provides city influence jobs for Whiterun, Markarth, Solitude, and Windhelm",
+    "Offers critical insights during heist planning",
+    "Initially skeptical of player but warms up over time",
+    "Can provide intel on security systems and guard patterns",
+    "Supports player's rise to Guild Master once trust is earned"
+  ],
+  "dialogue_samples": {
+    "greeting": "Great. Another new face. Try not to get yourself killed right away.",
+    "skeptical": "You think you're good? Prove it. Talk is cheap in this business.",
+    "job_offer": "I've got work in the cities. Infiltration, theft, the usual. You think you can handle it without making a mess?",
+    "warming_up": "Not bad. You might actually know what you're doing. Don't let it go to your head.",
+    "trusted": "You've earned your place here. The guild's lucky to have you."
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "name": "Falmer",
+  "id": "npc_stat_falmer",
+  "type": "Corrupted Mer",
+  "category": "Enemy",
+  "location": "Dwemer ruins, deep underground",
+  "faction": "Falmer",
+  "aspects": {
+    "high_concept": "Blind Underground Predator - Twisted Snow Elf",
+    "trouble": "Relies on Sound and Echolocation",
+    "other_aspects": [
+      "Savage and Feral",
+      "Masters of Their Dark Domain",
+      "Accompanied by Chaurus"
+    ]
+  },
+  "skills": {
+    "Good": ["Fight", "Notice"],
+    "Fair": ["Stealth", "Athletics"],
+    "Average": ["Physique", "Will"]
+  },
+  "stunts": [
+    "Echolocation: Despite being blind, suffer no penalty in darkness. Automatically detect movement in same zone",
+    "Poison Weapons: Weapons are coated with paralytic poison. Successful hits may create 'Slowed' aspect",
+    "Underground Ambusher: +2 to Stealth in underground environments, especially Dwemer ruins"
+  ],
+  "stress": {
+    "physical": [false, false, false],
+    "mental": [false]
+  },
+  "consequences": {
+    "mild": null,
+    "moderate": null
+  },
+  "refresh": 2,
+  "fate_points": 2,
+  "notes": "The Falmer are corrupted Snow Elves who have been twisted by centuries of underground slavery and exposure to toxic fungi. Though blind, they navigate perfectly using echolocation. They are savage and hostile to all surface dwellers. Often accompanied by Chaurus insects.",
+  "combat_tactics": "Falmer ambush from darkness, using their superior hearing to locate prey. They attack in coordinated groups and use poison. Some cast magic. They never flee and fight to the death, defending their territory fanatically.",
+  "scene_triggers": ["Dwemer ruins exploration", "Deep underground quests", "Blackreach", "Ancient technology dungeons"],
+  "act_context": ["Act 2", "Act 3"],
+  "loot": ["Falmer ears", "Chaurus eggs", "Dwemer artifacts (in their lairs)", "Falmer weapons"]
+}

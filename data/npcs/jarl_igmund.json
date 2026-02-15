@@ -1,0 +1,57 @@
+{
+  "name": "Jarl Igmund",
+  "id": "jarl_igmund",
+  "type": "Nord Noble (Jarl of Markarth)",
+  "location": "Understone Keep, Markarth",
+  "faction": "Imperial Legion (ally)",
+  "aspects": {
+    "high_concept": "Young Jarl of the Reach, striving to protect Markarth under Imperial rule",
+    "trouble": "Pressure from all sides – Forsworn rebels, Stormcloak partisans, and wealthy schemers",
+    "other_aspects": [
+      "Legacy of Markarth's Bloody Past – remembers Ulfric's liberation and the Forsworn uprising",
+      "Dependent on the Empire's Aid – his hold's security tied to Imperial support",
+      "Silver-Blood Influence – nominally allies in running the city, but their wealth undermines his authority"
+    ]
+  },
+  "skills": {
+    "Great": ["Will"], 
+    "Good": ["Lore", "Rapport"],
+    "Fair": ["Resources", "Empathy", "Notice"],
+    "Average": ["Fight", "Tactics", "Athletics", "Deceive"]
+  },
+  "stunts": [
+    "Jarl's Command: +2 to Rapport when giving orders or making official proclamations in his hold.",
+    "Stalwart Defender: +2 to Will when resisting intimidation or manipulation that could threaten Markarth.",
+    "Dwemer Scholar (Situational): +2 to Lore when recalling or leveraging knowledge of Markarth's Dwemer history and artifacts."
+  ],
+  "stress": {
+    "physical": [false, false], 
+    "mental": [false, false, false]
+  },
+  "consequences": {
+    "mild": null,
+    "moderate": null,
+    "severe": null
+  },
+  "refresh": 3,
+  "fate_points": 3,
+  "notes": "Igmund is the son of the late Jarl who reclaimed Markarth after the Reachmen uprising. Thrust into rule at a relatively young age, he carries the weight of his father's legacy and the trauma of the Markarth Incident. He vividly recalls that Ulfric Stormcloak once helped rid Markarth of the Forsworn, yet now Igmund remains loyal to the Empire that brokered peace with the Thalmor. This puts him in a conflicted position: he respects Ulfric's prowess but cannot support the Stormcloak rebellion. Igmund is earnest and dutiful, if a bit overwhelmed. He truly wants the best for his people but is often cornered by circumstances – the Forsworn attacks that terrorize the hold, the manipulations of the Silver-Blood family within his court, and the looming civil war demanding he pick a side (he leans Imperial out of both loyalty and necessity). He often seeks counsel from his steward and his court wizard Calcelmo, and prays quietly to the Divines for guidance to keep Markarth safe. Despite his challenges, Igmund has moments of courage and resolve – especially when the lives of his subjects are at stake, the young Jarl's determination can shine through his uncertainty.",
+  "relationships": {
+    "General Tullius": "Imperial governor – Igmund keeps regular correspondence and follows Tullius's advice to hold Markarth for the Empire.",
+    "Ulfric Stormcloak": "Former savior of Markarth, now rebel – Igmund is torn between gratitude to Ulfric for the past and duty to oppose his rebellion.",
+    "Thongvor Silver-Blood": "Head of Markarth's wealthiest family – ostensibly a supporter of Igmund's court but a Stormcloak sympathizer; Igmund senses Thongvor is poised to replace him if the city falls to the Stormcloaks.",
+    "Thonar Silver-Blood": "Powerful banker and political player in Markarth – Igmund relies on Thonar for economic stability but mistrusts the family's stranglehold on the city's silver and their secretive ways.",
+    "Madanach": "Imprisoned King of the Forsworn – Igmund regards him as a dangerous symbol; Madanach's Forsworn murdered Igmund's father's men and threaten the Reach to this day.",
+    "Brother Verulus": "Priest of Arkay in Markarth – Igmund sympathizes with Verulus's troubles (like the incident in the Hall of the Dead) and ensures the city gives some support to the temple in hard times."
+  },
+  "quests": [
+    "Civil War – Imperial Side (Protecting Markarth for the Empire)",
+    "The Forsworn Conspiracy (Markarth's corruption upheaval)",
+    "No One Escapes Cidhna Mine (aftermath in Markarth)"
+  ],
+  "inventory": [
+    "Jarl's fine clothes and circlet of the Reach",
+    "Ancestral Nordic sword (ceremonial, kept at side)",
+    "Key to Understone Keep and Markarth city"
+  ]
+}

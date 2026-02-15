@@ -1,0 +1,22 @@
+{
+  "date": "2026-02-12",
+  "scope": "Session 04 mid-session: left Riften; ambushed Dominion checkpoint; staged Stormcloak false-flag; seized papers + warhorse; divined Whitefin at Nightcaller Temple",
+  "changes": [
+    {
+      "file": "state/campaign_state.json",
+      "change": "Set session_count=4; move scene to A1-S15; location -> The Pale — Nightgate Pass Approach; active_hold -> The Pale; objective -> reach Nightcaller Temple to find Whitefin/Arisann; add session04 scene_flags; append npc kills + major choice."
+    },
+    {
+      "file": "data/clocks/pc_extras_clocks.json",
+      "change": "Advance Search for Arisann 5/8→6/8 (clairvoyance lead). Add note to Thalmor Search clock about false-flag volatility; last_updated=2026-02-12."
+    },
+    {
+      "file": "data/pcs/pc_insaerndel.json",
+      "change": "Append equipment items: Justiciar documentation, stamped travel writ, warhorse. Append note about Whitefin divination."
+    },
+    {
+      "file": "logs/2026-02-12_session-04_LATEST.md",
+      "change": "Create Session 04 log capturing checkpoint ambush, false-flag, mount acquisition, and clairvoyance target."
+    }
+  ]
+}

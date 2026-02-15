@@ -1,0 +1,63 @@
+{
+  "name": "Companion Member",
+  "id": "npc_stat_companion_member",
+  "type": "Ally",
+  "category": "Friendly NPC",
+  "location": "Jorrvaskr, Whiterun",
+  "faction": "The Companions",
+  "aspects": {
+    "high_concept": "Honored Warrior of the Companions Brotherhood",
+    "trouble": "Beast Blood Runs in Our Veins",
+    "other_aspects": [
+      "Shield-Sibling and Battle-Brother",
+      "Glory Through Honorable Combat",
+      "Legacy of Ysgramor",
+      "May Carry the Curse of Lycanthropy"
+    ]
+  },
+  "skills": {
+    "Great": ["Fight"],
+    "Good": ["Athletics", "Physique"],
+    "Fair": ["Provoke", "Notice"],
+    "Average": ["Will", "Rapport", "Intimidate"]
+  },
+  "stunts": [
+    "Shield-Sibling: +2 to Fight when fighting alongside another Companion",
+    "Warrior's Pride: +2 to Provoke when challenged about honor or combat prowess",
+    "Beast Form (some): If a werewolf, can transform once per session into beast form (gain +3 to all physical skills but lose mental acuity)"
+  ],
+  "stress": {
+    "physical": [false, false, false, false],
+    "mental": [false, false, false]
+  },
+  "consequences": {
+    "mild": null,
+    "moderate": null
+  },
+  "refresh": 3,
+  "fate_points": 3,
+  "trust_clock": {
+    "enabled": true,
+    "current": 0,
+    "max": 8,
+    "description": "Brotherhood bond - grows through shared battles and completing Companions quests"
+  },
+  "notes": "The Companions are Skyrim's most renowned warrior guild, descended from Ysgramor's legendary 500. They take contracts for protection, monster hunting, and combat support. Many members are secretly werewolves, having accepted Hircine's gift through the Circle. They value honor, martial prowess, and brotherhood. Members can become loyal companions and allies to proven warriors.",
+  "relationships": {
+    "Kodlak Whitemane": "Harbinger and leader (deeply respected)",
+    "The Circle": "Inner circle of leaders",
+    "Jorrvaskr": "Sacred hall and home",
+    "Silver Hand": "Mortal enemies (hunt werewolves)",
+    "Hircine": "Complex relationship through beast blood"
+  },
+  "personality_notes": {
+    "speaking_style": "Direct, values strength, uses warrior metaphors, honorable speech",
+    "motivations": ["Prove worth in battle", "Honor Ysgramor's legacy", "Protect shield-siblings", "Find glory", "Manage/cure beast blood"],
+    "fears": ["Losing control to beast blood", "Dishonor", "Weakness", "Silver weapons (if werewolf)"],
+    "quirks": ["Tests others' mettle", "Drinks mead enthusiastically", "Tells battle stories", "May have tells when full moon approaches"]
+  },
+  "combat_tactics": "Companions fight with aggressive, honorable tactics. They prefer melee combat and direct confrontation. Those with beast blood may transform if the battle is desperate. They never abandon shield-siblings and fight to protect their brothers and sisters.",
+  "scene_triggers": ["Companions questline", "Jorrvaskr visits", "Honorable combat contracts", "Werewolf storyline"],
+  "act_context": ["Act 1", "Act 2", "Act 3"],
+  "loot": ["Quality steel weapons", "Companion armor pieces"]
+}

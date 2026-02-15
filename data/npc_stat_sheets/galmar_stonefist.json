@@ -1,0 +1,152 @@
+{
+  "name": "Galmar Stone-Fist",
+  "id": "npc_stat_galmar_stonefist",
+  "type": "Nord Military Commander",
+  "category": "Hostile NPC",
+  "location": "Palace of the Kings, Windhelm / Stormcloak command posts",
+  "faction": "Stormcloaks",
+  "role": "Housecarl to Ulfric Stormcloak and Chief Military Strategist",
+  "aspects": {
+    "high_concept": "Ulfric's Trusted War Chief and Stone-Fisted Strategist",
+    "trouble": "My Hatred for the Empire Blinds Me",
+    "other_aspects": [
+      "The Old Ways Are the True Ways",
+      "Skyrim Belongs to the Nords",
+      "Unshakeable Loyalty to Ulfric",
+      "Veteran of the Great War"
+    ]
+  },
+  "skills": {
+    "Superb": ["Fight"],
+    "Great": ["Will", "Physique"],
+    "Good": ["Tactics", "Provoke"],
+    "Fair": ["Notice", "Intimidate"],
+    "Average": ["Athletics", "Lore"]
+  },
+  "stunts": [
+    "Stone-Fist Crush: When using bare hands or gauntlets, +2 to Fight and can create situational aspects like 'Broken Bones' or 'Dazed'",
+    "Master Tactician: +2 to Tactics when planning military operations or reading battlefield situations",
+    "Rally the Rebellion: Once per scene, grant all allied Stormcloaks in the zone +2 to their next action through a rousing war cry",
+    "Great War Veteran: Because of extensive combat experience, gain +1 to Fight when leading troops and can ignore first mild consequence per session",
+    "True Nord's Fury: When fighting Imperials or Thalmor, invoke 'Skyrim Belongs to the Nords' for free once per scene"
+  ],
+  "stress": {
+    "physical": [false, false, false, true],
+    "mental": [false, false, false]
+  },
+  "consequences": {
+    "mild": null,
+    "moderate": null,
+    "severe": null
+  },
+  "refresh": 3,
+  "fate_points": 3,
+  "equipment": {
+    "weapon": "Steel battleaxe or war hammer",
+    "armor": "Stormcloak officer's armor (heavy)",
+    "special": "Ulfric's seal of authority, battle maps"
+  },
+  "personality_notes": {
+    "speaking_style": "Gruff, direct, uses military terms. Respectful to Ulfric but blunt with everyone else. Dismissive of Imperial 'softness' and political maneuvering.",
+    "motivations": [
+      "Free Skyrim from Imperial rule",
+      "Serve Ulfric Stormcloak unto death",
+      "Expel all Thalmor from Skyrim",
+      "Restore traditional Nord values and Talos worship"
+    ],
+    "fears": [
+      "Ulfric being wrong about the rebellion",
+      "Skyrim becoming weak without the Empire's protection",
+      "His hatred leading Skyrim to ruin"
+    ],
+    "quirks": [
+      "Refers to Imperials as 'milk drinkers'",
+      "Tests warrior NPCs with physical challenges",
+      "Suspicious of magic and mages",
+      "Deeply traditional - dislikes change"
+    ]
+  },
+  "relationships": {
+    "Ulfric Stormcloak": "Absolute loyalty - friend, advisor, housecarl",
+    "Legate Rikke": "Former comrade turned bitter enemy",
+    "General Tullius": "Imperial tyrant who must be defeated",
+    "Thalmor": "Hated enemies who destroyed the Empire",
+    "Jarl Balgruuf": "Disappointed in his neutrality, wants him as ally",
+    "Brunwulf Free-Winter": "Views him with suspicion as an 'Imperial lover' who undermines Ulfric",
+    "The Player": "Respects as warrior, wants allegiance for Stormcloaks"
+  },
+  "trust_clock": {
+    "current": 0,
+    "max": 8,
+    "advancement_triggers": [
+      "Join Stormcloaks (+3)",
+      "Win major battle for Stormcloaks (+1)",
+      "Complete Galmar's personal requests (+1)",
+      "Prove martial prowess (+1)",
+      "Show devotion to Nord traditions (+1)"
+    ],
+    "setback_triggers": [
+      "Join Imperial Legion (-10, irreversible)",
+      "Question Ulfric's leadership (-2)",
+      "Show weakness in combat (-1)",
+      "Defend the Empire (-2)"
+    ],
+    "trust_benefits": {
+      "3": "Galmar respects you as a warrior",
+      "5": "Galmar shares tactical intelligence and gives you command roles",
+      "7": "Galmar considers you Ulfric's finest champion and trusts you with critical missions",
+      "8": "Galmar would follow you into Oblivion itself"
+    }
+  },
+  "combat_tactics": "Galmar fights on the front lines, leading by example. He uses his stone-fist technique to break enemy morale and formations. Prefers direct confrontation over stealth or subterfuge. Will sacrifice himself to save Ulfric. Commands troops with efficient, brutal tactics learned from the Great War.",
+  "scene_triggers": [
+    "Joining the Stormcloaks questline",
+    "Military planning meetings in Windhelm",
+    "The Jagged Crown quest",
+    "Battle of Whiterun (Stormcloak side)",
+    "Major civil war battles",
+    "Final assault on Solitude"
+  ],
+  "act_context": ["Act 1", "Act 2", "Act 3"],
+  "dialogue_examples": [
+    "The Empire's nothing but a shell. The Thalmor are calling the shots now.",
+    "Ulfric is the true High King. What right does the Empire have to say otherwise?",
+    "You got some stones showing up here. You looking to fight for Skyrim's freedom, or are you another milk-drinking Imperial?",
+    "We will win this war. We will drive the Empire from our lands and reclaim what is ours!",
+    "I've fought enough battles to know when we've got the advantage. And we do."
+  ],
+  "questline_role": {
+    "civil_war_stormcloak": "Primary quest giver and military commander",
+    "key_quests": [
+      "Joining the Stormcloaks",
+      "The Jagged Crown",
+      "Message to Whiterun",
+      "Battle for Whiterun",
+      "Liberation of Skyrim",
+      "Battle for Solitude"
+    ]
+  },
+  "branching_interactions": {
+    "if_imperial": "Becomes sworn enemy, will personally lead forces against party",
+    "if_stormcloak": "Becomes mentor and ally, opens up strategic missions",
+    "if_neutral": "Pressures party to join, sees neutrality as cowardice",
+    "if_renowned": "Respects martial prowess but insists warriors must choose a side"
+  },
+  "story_hooks": [
+    "Galmar has history with Legate Rikke - they fought together in the Great War",
+    "He is absolutely loyal to Ulfric but sometimes questions tactics privately",
+    "Deeply traditional Nord - suspicious of anything non-Nord",
+    "His stone-fist technique is legendary among Stormcloaks",
+    "May reveal doubts about the rebellion in private moments of vulnerability"
+  ],
+  "gm_notes": "Galmar is the heart of the Stormcloak military. Unlike Ulfric who has political motivations, Galmar is purely focused on freeing Skyrim through force. He represents the traditional Nord warrior culture. Can be used to show the costs of war and the complexity of the rebellion - he's not evil, just deeply committed to his cause. His relationship with Rikke adds tragedy to the civil war.\nWHT-10: SEEING STARS applied (2 free invokes against Galmar). Spent 1 FP to invoke Veteran of the Great War on an attack.",
+  "loot_if_defeated": {
+    "guaranteed": ["Galmar's battleaxe (enchanted)", "Stormcloak officer armor", "Strategic battle plans"],
+    "campaign_impact": "Defeating Galmar is a major blow to Stormcloak morale and military efficiency"
+  },
+  "alternatives_to_combat": {
+    "negotiation": "Very difficult unless Ulfric is somehow convinced. Galmar follows Ulfric's lead absolutely.",
+    "intimidation": "Respects strength but will never back down from a worthy fight",
+    "deception": "Galmar is straightforward and direct - hard to deceive but not impossible with good lies about Imperial treachery"
+  }
+}

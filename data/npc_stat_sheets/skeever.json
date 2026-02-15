@@ -1,0 +1,38 @@
+{
+  "name": "Skeever",
+  "id": "npc_stat_skeever",
+  "type": "Beast",
+  "category": "Enemy",
+  "location": "Caves, sewers, ruins, cities",
+  "faction": "Wildlife",
+  "aspects": {
+    "high_concept": "Disease-Ridden Giant Rat of Skyrim",
+    "trouble": "Weak and Easily Dispatched",
+    "other_aspects": [
+      "Pack Scavenger",
+      "Carrier of Disease",
+      "Found in Dark Places"
+    ]
+  },
+  "skills": {
+    "Fair": ["Fight", "Stealth"],
+    "Average": ["Athletics", "Notice"]
+  },
+  "stunts": [
+    "Disease Carrier: When successfully biting with Fight, target may contract 'Ataxia' (aspect) if they fail a Fair Will defense",
+    "Swarm Tactics: +1 to Fight for each additional skeever in the same zone (max +3)",
+    "Scurry Away: +2 to Athletics when fleeing from combat"
+  ],
+  "stress": {
+    "physical": [false],
+    "mental": []
+  },
+  "consequences": {},
+  "refresh": 1,
+  "fate_points": 0,
+  "notes": "Skeevers are large, aggressive rats found throughout Skyrim. They typically travel in packs and can spread disease. Individually weak, they become more dangerous in groups. Common in sewers, caves, and abandoned areas.",
+  "combat_tactics": "Skeevers attack in groups, swarming targets with quick bites. They flee if their numbers are reduced. They prefer to ambush from hiding spots. Not brave fighters individually.",
+  "scene_triggers": ["Sewer exploration", "Cave entrances", "City underbelly", "Abandoned buildings"],
+  "act_context": ["Act 1", "Act 2", "Act 3"],
+  "loot": ["Skeever tail", "Minor disease cure ingredients"]
+}

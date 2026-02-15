@@ -1,0 +1,93 @@
+{
+  "name": "Frost Dragon",
+  "id": "enemy_frost_dragon",
+  "type": "Dragon",
+  "category": "Enemy",
+  "location": "Dragon lairs, word walls, random encounters",
+  "faction": "Dragons",
+  "aspects": {
+    "high_concept": "Ancient Dov of Ice and Sky",
+    "trouble": "Arrogance of an Apex Predator",
+    "other_aspects": [
+      "Master of the Thu'um",
+      "Scales Like Armor",
+      "Wings of Terror",
+      "Hunger for Dominion"
+    ]
+  },
+  "skills": {
+    "Fantastic": ["Fight"],
+    "Superb": ["Lore", "Physique"],
+    "Great": ["Notice", "Will"],
+    "Good": ["Athletics", "Provoke"],
+    "Fair": ["Investigate"]
+  },
+  "stunts": [
+    "Frost Breath (Thu'um): Use Lore to attack all targets in zone. On hit, creates 'Frozen' aspect (difficulty +2 to physical actions)",
+    "Aerial Superiority: +2 to all actions while airborne against ground-based targets",
+    "Tail Sweep: Attack all adjacent targets at -1",
+    "Dragon Fear: Use Provoke to create 'Terrified' aspect on all nearby enemies (opposed by Will)",
+    "Impenetrable Scales: Armor: 3 against physical attacks",
+    "Powerful Wings: Can create 'Knocked Prone' aspect with athletics, affecting entire zone"
+  ],
+  "stress": {
+    "physical": [false, false, false, false, false, false],
+    "mental": [false, false, false, false]
+  },
+  "consequences": {
+    "mild": null,
+    "moderate": null,
+    "severe": null
+  },
+  "refresh": 0,
+  "notes": "Frost dragons are ancient, intelligent beings. While Alduin has been defeated, scattered dragons still exist in Skyrim. They are proud, arrogant, and utterly convinced of their superiority. They view mortals as food or playthings. A dragon encounter is still an epic and dangerous event, representing remaining threats from the dragon crisis.",
+  "special_mechanics": {
+    "armor": 3,
+    "flight": "Can switch between airborne and grounded states as a free action",
+    "shout_cooldown": "After using breath weapon, cannot use again for 2 exchanges",
+    "dragon_soul": "When killed by those with dragon blood, the soul may be absorbed (optional mechanic)",
+    "word_wall": "Often guards or is near a word wall",
+    "phases": [
+      {
+        "name": "Aerial Phase",
+        "description": "Dragon strafes with breath attacks and stays airborne",
+        "tactics": "Use Frost Breath and Aerial Superiority, avoid melee",
+        "transition": "After taking moderate consequence or when physical stress half-filled"
+      },
+      {
+        "name": "Ground Phase", 
+        "description": "Dragon lands and engages in melee",
+        "tactics": "Use Fight, Tail Sweep, and Wing attacks. Use Frost Breath when recharged",
+        "transition": "Fights to the death on ground"
+      }
+    ]
+  },
+  "combat_tactics": "Dragons begin combat airborne, using Frost Breath to weaken and scatter enemies. They'll use Dragon Fear to break morale. Once significantly wounded, they land and fight with physical attacks, using their superior strength and armor. Dragons are intelligent and will taunt enemies, boast of their power, and mock 'joor' (mortals).",
+  "scene_triggers": ["Rare world encounters with remaining dragons", "Ancient dragon lairs", "Word wall guardians", "Optional legendary encounters"],
+  "act_context": ["Act 2", "Act 3"],
+  "dialogue": {
+    "on_encounter": "Zu'u unslaad! Zu'u nis oblaan! (I am eternal! I cannot die!)",
+    "during_combat": ["Puny mortal!", "You are no match for a Dov!", "Your bones will feed my hunger!"],
+    "when_wounded": "Impossible! How do you harm a god?!",
+    "on_death": "Dovahkiin... No... (or generic dragon death roar)"
+  },
+  "loot": {
+    "guaranteed": ["Dragon bones (2-4)", "Dragon scales (3-6)"],
+    "possible": ["Enchanted weapon", "Large amount of gold (100-300)", "Ancient Nord armor"],
+    "location_specific": ["Word of Power (if near word wall)"]
+  },
+  "variants": [
+    {
+      "name": "Elder Dragon",
+      "changes": "Increase all skills by +1, add 2 more stress boxes, Armor: 4"
+    },
+    {
+      "name": "Ancient Dragon",
+      "changes": "Increase all skills by +2, add 4 more stress boxes, Armor: 4, additional shout ability"
+    },
+    {
+      "name": "Blood Dragon",
+      "changes": "Replace Frost Breath with Fire Breath (creates 'Burning' aspect)"
+    }
+  ]
+}

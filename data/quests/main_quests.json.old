@@ -1,0 +1,1130 @@
+{
+  "campaign_structure": {
+    "name": "Elder Scrolls TTRPG Campaign Module",
+    "description": "The return of the dragons and the prophecy of the Dragonborn - A three-act epic campaign",
+    "acts": {
+      "act_i": {
+        "name": "The Dragon Crisis Begins",
+        "description": "Dragons return to Skyrim. The party discovers their destiny as Dragonborn while the civil war threatens to divide the realm. The Battle of Whiterun forces all to take sides.",
+        "themes": ["Discovery", "Survival", "Choice"],
+        "estimated_sessions": "4-6",
+        "key_events": [
+          "Escape from Helgen",
+          "First dragon soul absorbed",
+          "Greybeards summon the Dragonborn",
+          "Battle of Whiterun (civil war hook)"
+        ]
+      },
+      "act_ii": {
+        "name": "Shadows and Secrets",
+        "description": "The Thalmor's web of manipulation is revealed. Ancient secrets emerge as the Blades return. The civil war escalates while Alduin continues resurrecting dragons.",
+        "themes": ["Conspiracy", "Ancient Knowledge", "Divided Loyalties"],
+        "estimated_sessions": "6-8",
+        "key_events": [
+          "Thalmor Embassy infiltration",
+          "Sky Haven Temple discovered",
+          "Elder Scroll retrieval",
+          "Civil war reaches critical point"
+        ]
+      },
+      "act_iii": {
+        "name": "The World-Eater's Return",
+        "description": "The final confrontation with Alduin approaches. The party must unite Skyrim or navigate its divisions to save the world from the World-Eater.",
+        "themes": ["Sacrifice", "Unity", "Destiny"],
+        "estimated_sessions": "4-6",
+        "key_events": [
+          "Season Unending peace council (if civil war unresolved)",
+          "Journey to Sovngarde",
+          "Final battle with Alduin",
+          "Resolution of civil war consequences"
+        ]
+      }
+    }
+  },
+  "main_questline": {
+    "name": "The Elder Scrolls Main Quest",
+    "description": "The return of the dragons and the prophecy of the Dragonborn",
+    "quests": [
+      {
+        "id": "unbound",
+        "name": "Unbound",
+        "act": "Act I",
+        "description": "Escape from Helgen during the dragon attack",
+        "prerequisites": [],
+        "objectives": [
+          "Survive the dragon attack",
+          "Escape Helgen",
+          "Choose to follow either Ralof or Hadvar"
+        ],
+        "rewards": {
+          "experience": 100,
+          "items": ["Basic equipment from chosen companion"]
+        },
+        "branching_choice": {
+          "choice": "Follow Ralof (Stormcloak) or Hadvar (Imperial)",
+          "consequences": "Affects initial faction standing and tutorial experience"
+        },
+        "story_hooks": [
+          "Alduin's return marks the beginning of the prophecy",
+          "Civil war tensions are immediate - must choose Ralof or Hadvar",
+          "Thalmor observers (Elenwen) present at Helgen - tracking key prisoners"
+        ],
+        "gm_notes": "This quest establishes the tone and introduces the civil war conflict. The player's choice of companion affects early faction standing.",
+        "status": "completed",
+        "next_quest": "before_the_storm"
+      },
+      {
+        "id": "before_the_storm",
+        "name": "Before the Storm",
+        "act": "Act I",
+        "description": "Deliver news of the dragon attack to Jarl Balgruuf in Whiterun",
+        "prerequisites": ["unbound"],
+        "objectives": [
+          "Travel to Whiterun",
+          "Speak to Jarl Balgruuf",
+          "Deliver warning about dragons"
+        ],
+        "rewards": {
+          "experience": 50,
+          "unlocks": "Access to Dragonsreach"
+        },
+        "story_hooks": [
+          "Jarl Balgruuf is under pressure from both Imperials and Stormcloaks",
+          "The Battle of Whiterun is brewing - factions are positioning",
+          "Proventus Avenicci and Irileth debate the response to dragons"
+        ],
+        "faction_dynamics": {
+          "whiterun": "Neutral but under pressure to choose sides",
+          "imperials": "Want Balgruuf's allegiance",
+          "stormcloaks": "Preparing to attack if Balgruuf sides with Empire"
+        },
+        "gm_notes": "This quest introduces the political situation. Balgruuf's neutrality won't last. The dragon threat and civil war will soon collide.",
+        "status": "available",
+        "next_quest": "bleak_falls_barrow"
+      },
+      {
+        "id": "bleak_falls_barrow",
+        "name": "Bleak Falls Barrow",
+        "act": "Act I",
+        "description": "Retrieve the Dragonstone for Farengar Secret-Fire",
+        "prerequisites": ["before_the_storm"],
+        "objectives": [
+          "Explore Bleak Falls Barrow",
+          "Recover the Dragonstone",
+          "Learn the Word of Power: Fus",
+          "Return to Farengar"
+        ],
+        "enemies": ["npc_stat_draugr", "enemy_draugr_overlord", "frostbite_spider"],
+        "npcs": ["npc_stat_court_wizard"],
+        "rewards": {
+          "experience": 150,
+          "gold": 400,
+          "items": ["Dragonstone"],
+          "shout": "First word of Unrelenting Force"
+        },
+        "story_hooks": [
+          "First Word Wall encounter - introduces Thu'um mechanics",
+          "Farengar is working with someone (Delphine) on dragon research",
+          "The Dragonstone maps dragon burial sites - critical intelligence"
+        ],
+        "gm_notes": "This dungeon introduces Word Walls and the power of the Thu'um. Players should feel the ancient power calling to them.",
+        "status": "available",
+        "next_quest": "dragon_rising"
+      },
+      {
+        "id": "dragon_rising",
+        "name": "Dragon Rising",
+        "act": "Act I",
+        "description": "Help defend Whiterun from a dragon attack at the Western Watchtower",
+        "prerequisites": ["bleak_falls_barrow"],
+        "objectives": [
+          "Meet Irileth at the Western Watchtower",
+          "Defeat the dragon Mirmulnir",
+          "Absorb your first dragon soul",
+          "Use the Unrelenting Force shout"
+        ],
+        "enemies": ["enemy_frost_dragon"],
+        "npcs": ["npc_stat_whiterun_guard"],
+        "rewards": {
+          "experience": 200,
+          "dragon_soul": 1,
+          "recognition": "Revealed as Dragonborn to Whiterun"
+        },
+        "reveals": "Player is the Dragonborn",
+        "story_hooks": [
+          "The Greybeards summon the Dragonborn - Thu'um shakes the mountain",
+          "Word spreads rapidly - you are Dragonborn, prophesied hero",
+          "Battle of Whiterun setup: This victory solidifies Balgruuf's position temporarily",
+          "Thalmor spies begin tracking the Dragonborn"
+        ],
+        "faction_dynamics": {
+          "whiterun": "Balgruuf owes the Dragonborn a great debt",
+          "thalmor": "Increased interest in the Dragonborn",
+          "greybeards": "Summon the Dragonborn to High Hrothgar"
+        },
+        "gm_notes": "This is the 'I am Dragonborn' moment. Make it epic. The civil war implications should be clear - all factions now want the Dragonborn's allegiance.",
+        "status": "locked",
+        "next_quest": "the_way_of_the_voice"
+      },
+      {
+        "id": "the_way_of_the_voice",
+        "name": "The Way of the Voice",
+        "act": "Act I",
+        "description": "Answer the summons of the Greybeards and travel to High Hrothgar",
+        "prerequisites": ["dragon_rising"],
+        "objectives": [
+          "Travel to High Hrothgar",
+          "Meet the Greybeards",
+          "Learn the three words of Unrelenting Force",
+          "Demonstrate your Thu'um",
+          "Retrieve the Horn of Jurgen Windcaller"
+        ],
+        "npcs": ["npc_stat_greybeard"],
+        "rewards": {
+          "experience": 150,
+          "shout_words": ["Ro", "Dah (Unrelenting Force)"]
+        },
+        "story_hooks": [
+          "Begin training in the Way of the Voice",
+          "Learn of the ancient Blades (foreshadowing)",
+          "Civil war continues below - the mountain is a sanctuary from conflict"
+        ],
+        "gm_notes": "High Hrothgar represents peace and contemplation - contrast this with the chaos below.",
+        "status": "locked",
+        "next_quest": "the_horn_of_jurgen_windcaller"
+      },
+      {
+        "id": "the_horn_of_jurgen_windcaller",
+        "name": "The Horn of Jurgen Windcaller",
+        "act": "Act I",
+        "description": "Retrieve the Horn of Jurgen Windcaller from Ustengrav",
+        "prerequisites": ["the_way_of_the_voice"],
+        "objectives": [
+          "Travel to Ustengrav",
+          "Navigate the tomb",
+          "Discover the Horn was taken",
+          "Meet the mysterious messenger in Riverwood",
+          "Return the Horn to the Greybeards"
+        ],
+        "enemies": ["npc_stat_draugr", "enemy_draugr_overlord"],
+        "npcs": ["npc_stat_greybeard", "npc_stat_innkeeper"],
+        "rewards": {
+          "experience": 150,
+          "new_shout": "Learn Whirlwind Sprint"
+        },
+        "introduces": "Delphine and the Blades",
+        "story_hooks": [
+          "Delphine reveals herself - last of the Blades",
+          "Introduces the conflict between Blades and Greybeards",
+          "Delphine knows about dragon burial sites (Dragonstone connection)"
+        ],
+        "gm_notes": "Delphine's introduction is crucial. She represents action and vengeance vs. the Greybeards' contemplation.",
+        "status": "locked",
+        "next_quest": "a_blade_in_the_dark"
+      },
+      {
+        "id": "a_blade_in_the_dark",
+        "name": "A Blade in the Dark",
+        "act": "Act I",
+        "description": "Help Delphine investigate dragon burial mounds",
+        "prerequisites": ["the_horn_of_jurgen_windcaller"],
+        "objectives": [
+          "Meet Delphine at the Sleeping Giant Inn",
+          "Travel to Kynesgrove",
+          "Witness Alduin resurrecting a dragon",
+          "Defeat the dragon Sahloknir",
+          "Return to Delphine"
+        ],
+        "rewards": {
+          "experience": 200,
+          "dragon_soul": 1
+        },
+        "reveals": "Alduin is resurrecting dragons",
+        "story_hooks": [
+          "Alduin's true power revealed - he can raise the dead dragons",
+          "The threat is greater than anyone imagined",
+          "Transition point: Act I ends with the realization of Alduin's plan",
+          "Delphine proposes infiltrating the Thalmor Embassy"
+        ],
+        "act_transition": "This quest concludes Act I and sets up Act II's conspiracy focus",
+        "gm_notes": "The sight of Alduin should be awe-inspiring and terrifying. This is the moment players realize the true scale of the threat.",
+        "status": "locked",
+        "next_quest": "battle_of_whiterun"
+      },
+      {
+        "id": "battle_of_whiterun",
+        "name": "Battle of Whiterun",
+        "act": "Act I/II Transition",
+        "description": "The civil war erupts in Whiterun as either the Imperials defend or the Stormcloaks attack. The Dragonborn must choose sides or broker peace.",
+        "prerequisites": ["a_blade_in_the_dark"],
+        "objectives": [
+          "Witness escalating tensions in Whiterun",
+          "Choose to join Imperial defense, Stormcloak assault, or stay neutral",
+          "Participate in the battle for Whiterun's fate",
+          "Deal with the aftermath and new Jarl if applicable"
+        ],
+        "branching_choice": {
+          "choice": "Support Imperials, Support Stormcloaks, or Remain Neutral",
+          "consequences": {
+            "imperial": "Balgruuf remains Jarl, Whiterun joins Empire, Stormcloak relations -20",
+            "stormcloak": "Vignar Gray-Mane becomes Jarl, Whiterun joins Stormcloaks, Imperial relations -20",
+            "neutral": "Attempt to broker temporary peace, all factions suspicious, unlocks Season Unending earlier"
+          }
+        },
+        "scene_triggers": [
+          {
+            "trigger": "Entering Whiterun after completing A Blade in the Dark",
+            "scene": "Irileth stops the party - tensions are high. Stormcloaks are preparing an assault.",
+            "npc_present": ["Irileth", "Jarl Balgruuf"]
+          },
+          {
+            "trigger": "Imperial version - Battle begins",
+            "scene": "Stormcloak forces assault the main gate. Defend the barricades alongside Whiterun guards.",
+            "combat_waves": [
+              {
+                "wave": 1,
+                "enemies": "Stormcloak Infantry (6-8 soldiers)",
+                "difficulty": "Fair (+2)"
+              },
+              {
+                "wave": 2,
+                "enemies": "Stormcloak Archers and Mages (4-6 mixed)",
+                "difficulty": "Good (+3)"
+              },
+              {
+                "wave": 3,
+                "enemies": "Stormcloak Commander and Elite Guard (2-3)",
+                "difficulty": "Great (+4)"
+              }
+            ],
+            "environmental_aspects": ["Barricades Provide Cover", "City Streets: Defensive Advantage", "Citizens in Danger"]
+          },
+          {
+            "trigger": "Stormcloak version - Battle begins",
+            "scene": "Join the Stormcloak assault force. Breach the gates and fight to Dragonsreach.",
+            "combat_waves": [
+              {
+                "wave": 1,
+                "enemies": "Gate Guards and Archers (6-8)",
+                "difficulty": "Fair (+2)"
+              },
+              {
+                "wave": 2,
+                "enemies": "Whiterun Guard reinforcements (8-10)",
+                "difficulty": "Good (+3)"
+              },
+              {
+                "wave": 3,
+                "enemies": "Irileth and Elite Guards at Dragonsreach (3-4)",
+                "difficulty": "Great (+4)"
+              }
+            ],
+            "environmental_aspects": ["Gate Chokepoint", "Burning Buildings", "Civilians Fleeing"]
+          },
+          {
+            "trigger": "Thalmor observers arrive mid-battle",
+            "scene": "Thalmor Justiciars led by Elenwen arrive to 'observe.' They're taking notes and seem pleased by the bloodshed.",
+            "npc_present": ["Elenwen", "Thalmor Justiciars"],
+            "player_discovery": "Spot Thalmor handing intelligence to the losing side to prolong the battle"
+          },
+          {
+            "trigger": "Battle conclusion",
+            "scene": "Victory is achieved. The new or retained Jarl addresses the hold. The party's role is recognized.",
+            "outcomes": {
+              "imperial_victory": "Balgruuf thanks the party. Whiterun now firmly Imperial.",
+              "stormcloak_victory": "Vignar Gray-Mane installed. Balgruuf exiled to Solitude.",
+              "neutral_intervention": "Temporary ceasefire. Both sides resentful but respectful of Dragonborn's power."
+            }
+          }
+        ],
+        "rewards": {
+          "experience": 300,
+          "faction_rank_increase": true,
+          "items": ["Weapon of Whiterun (enchanted)"],
+          "world_consequence": "Whiterun's allegiance is decided"
+        },
+        "faction_dynamics": {
+          "imperial": {
+            "if_supported": "Reputation +30, Rank up to Quaestor",
+            "if_opposed": "Reputation -40, Marked as enemy"
+          },
+          "stormcloak": {
+            "if_supported": "Reputation +30, Rank up to Bone-Breaker",
+            "if_opposed": "Reputation -40, Marked as traitor"
+          },
+          "thalmor": {
+            "reaction": "Increased surveillance. Begin planning to control or eliminate Dragonborn.",
+            "clock_progress": "Perpetual War clock +2, Dragon Investigation clock +1"
+          },
+          "whiterun_citizens": {
+            "reaction": "Mixed - grateful for protection but mourning losses",
+            "world_aspect": "Whiterun Bears Battle Scars"
+          }
+        },
+        "story_hooks": [
+          "The Thalmor are benefiting from the civil war - evidence of their manipulation",
+          "Delphine urges focus on the Thalmor Embassy infiltration",
+          "The battle has demonstrated the Dragonborn's power to all factions",
+          "Elenwen personally takes interest in tracking the party"
+        ],
+        "gm_notes": "This is a pivotal moment. The Battle of Whiterun forces the party to take a stand on the civil war. The Thalmor subplot should be introduced here if players are observant. Allow creative solutions like trying to minimize casualties or exposing Thalmor interference.",
+        "status": "locked",
+        "next_quest": "thalmor_sabotage"
+      },
+      {
+        "id": "thalmor_sabotage",
+        "name": "Shadows in the Aftermath",
+        "act": "Act II",
+        "type": "Side Mission / Main Quest Path",
+        "description": "Evidence suggests Thalmor agents are sabotaging both sides of the civil war. Investigate their activities before infiltrating the Embassy.",
+        "prerequisites": ["battle_of_whiterun"],
+        "objectives": [
+          "Investigate reports of suspicious activities",
+          "Track Thalmor agents in the field",
+          "Intercept Thalmor supply lines to the losing side",
+          "Gather evidence of Thalmor manipulation",
+          "Prevent a Thalmor-orchestrated massacre"
+        ],
+        "optional": true,
+        "branching_choice": {
+          "choice": "Confront Thalmor publicly, Work with faction intelligence, or Gather evidence quietly",
+          "consequences": {
+            "public_confrontation": "Thalmor become openly hostile. Elenwen sends assassins. Evidence lost but moral stand taken.",
+            "faction_cooperation": "Share intel with chosen faction. They're grateful but Thalmor go deeper underground.",
+            "quiet_investigation": "Gather damning evidence for Embassy infiltration. Thalmor don't realize you're onto them."
+          }
+        },
+        "scene_triggers": [
+          {
+            "trigger": "Three days after Battle of Whiterun",
+            "scene": "A messenger from Delphine arrives: 'Meet me in Riverwood. I've learned something about the Thalmor's role in the battle.'",
+            "npc_present": ["Delphine"]
+          },
+          {
+            "trigger": "Meeting Delphine at Sleeping Giant Inn",
+            "scene": "Delphine shows you intercepted communications. Thalmor were supplying intelligence to keep the battle balanced.",
+            "investigation_start": true,
+            "evidence": "Encrypted Thalmor dispatch orders"
+          },
+          {
+            "trigger": "Investigating Thalmor caravan",
+            "scene": "Disguised Thalmor agents transporting weapons and gold to a secret drop point. Ambush opportunity.",
+            "combat_encounter": {
+              "enemies": "Thalmor Justiciars (3-4) + Soldiers (4-6)",
+              "difficulty": "Good (+3)",
+              "environmental_aspect": "Forest Ambush Site - Limited Visibility"
+            },
+            "loot": "Thalmor supply manifest, encrypted orders, gold (1000 septims)"
+          },
+          {
+            "trigger": "Following the trail to a secret meeting",
+            "scene": "Thalmor agents meet with a double agent from the losing side's faction. Plans for sabotage discussed.",
+            "stealth_challenge": {
+              "difficulty": "Good (+3)",
+              "failure_consequence": "Agents flee, Thalmor alerted to investigation"
+            },
+            "player_discovery": "Names of traitors, locations of next sabotage targets, Thalmor timetable"
+          },
+          {
+            "trigger": "Prevented sabotage target",
+            "scene": "Thalmor-backed operatives plan to poison food supplies or assassinate peace negotiators. Intervene to stop the attack.",
+            "combat_encounter": {
+              "enemies": "Thalmor Assassins (2-3) + Hired Mercenaries (3-4)",
+              "difficulty": "Great (+4)",
+              "time_pressure": "Must stop them before they complete mission"
+            }
+          },
+          {
+            "trigger": "Confrontation with Thalmor officer",
+            "scene": "A Thalmor Justiciar named Rulindil confronts the party. He knows you're investigating.",
+            "npc_present": ["Justiciar Rulindil"],
+            "social_encounter": {
+              "rulindil_goals": "Intimidate party, gauge their knowledge, eliminate if necessary",
+              "party_options": ["Fight", "Bluff", "Extract information", "Flee and set trap"]
+            }
+          },
+          {
+            "trigger": "Quest completion - Return to Delphine",
+            "scene": "Delphine reviews evidence. 'This is worse than I thought. We need to get into that Embassy.'",
+            "unlocks": "diplomatic_immunity quest with additional context and evidence"
+          }
+        ],
+        "rewards": {
+          "experience": 250,
+          "items": ["Thalmor intelligence dossier", "Enchanted Thalmor weapon", "Gold (1200)"],
+          "intel": "Evidence of Thalmor manipulation usable in Embassy mission",
+          "bonus_for_diplomatic_immunity": "+2 to investigation rolls at Embassy if evidence gathered"
+        },
+        "faction_dynamics": {
+          "thalmor": {
+            "reputation": -30,
+            "status": "Actively hostile. Assassins and sabotage attempts likely.",
+            "clock_progress": "Dragon Investigation +2 (they know you're a threat)"
+          },
+          "chosen_civil_war_faction": {
+            "if_shared_intel": "Reputation +15, Gratitude for exposing traitors"
+          },
+          "blades": {
+            "delphine_trust": "+20, Critical ally for main quest"
+          }
+        },
+        "story_hooks": [
+          "Thalmor are playing both sides - their goal is endless war",
+          "Elenwen is the mastermind but operates with diplomatic immunity",
+          "The Embassy holds more secrets about their plans",
+          "They're also investigating the dragon return and the Dragonborn",
+          "Some Thalmor may defect if approached correctly"
+        ],
+        "gm_notes": "This mission ties the civil war and Thalmor conspiracy together. Players should feel clever discovering the plot. Allow multiple approaches. If players skip this, they miss valuable intel for the Embassy but can still proceed. The Thalmor become recurring antagonists.",
+        "status": "locked",
+        "next_quest": "diplomatic_immunity"
+      },
+      {
+        "id": "diplomatic_immunity",
+        "name": "Diplomatic Immunity",
+        "act": "Act II",
+        "description": "Infiltrate the Thalmor Embassy with Delphine to uncover their true agenda",
+        "prerequisites": ["a_blade_in_the_dark"],
+        "optional_prerequisites": ["battle_of_whiterun", "thalmor_sabotage"],
+        "objectives": [
+          "Meet with Delphine and plan the infiltration",
+          "Prepare for the party (gather equipment, arrange smuggling)",
+          "Attend Elenwen's party at the Thalmor Embassy",
+          "Blend in and gather intelligence socially",
+          "Sneak into the restricted archives",
+          "Discover Thalmor documents about dragons, civil war, and the Blades",
+          "Escape before being caught"
+        ],
+        "scene_triggers": [
+          {
+            "trigger": "Meeting Delphine for planning",
+            "scene": "Delphine explains the plan. Malborn, a Wood Elf who hates the Thalmor, will smuggle equipment in. You'll attend as a guest.",
+            "npc_present": ["Delphine", "Malborn"],
+            "preparation_phase": "Choose what gear to smuggle (limited), what to wear, and cover story"
+          },
+          {
+            "trigger": "Arriving at the Embassy party",
+            "scene": "Elenwen's grand party in full swing. Nobles, diplomats, and military officers mingling. Elenwen recognizes you.",
+            "npc_present": ["Elenwen", "Various nobles", "Thalmor guards"],
+            "social_challenges": [
+              "Convince Elenwen you're just a guest (Deceive vs Great +4)",
+              "Pump nobles for information (Rapport)",
+              "Avoid drawing suspicion while exploring"
+            ],
+            "time_pressure": "Limited time before absence is noticed"
+          },
+          {
+            "trigger": "Sneaking away from the party",
+            "scene": "Create a distraction or slip away unnoticed. Malborn leads you to the service entrance.",
+            "stealth_challenge": {
+              "difficulty": "Good (+3)",
+              "failure": "Guards become alert, higher difficulty for rest of mission"
+            }
+          },
+          {
+            "trigger": "Infiltrating the archives",
+            "scene": "Locked rooms filled with dossiers and intelligence reports. Find documents about dragons, civil war manipulation, and Blades targets.",
+            "investigation_checks": [
+              "Pick lock or find key (Fair +2)",
+              "Search efficiently without alerting guards (Good +3)",
+              "Read and understand documents quickly (Average +1)"
+            ],
+            "documents_found": [
+              "Thalmor Dossier: Ulfric Stormcloak - Asset turned uncooperative",
+              "Civil War Strategy: Prolong conflict, prevent decisive victory",
+              "Dragon Investigation Report: No connection found, investigating Dragonborn",
+              "Blades Extermination List: Delphine and Esbern locations targeted",
+              "Esbern's Location: Hidden in the Ratway, Riften"
+            ]
+          },
+          {
+            "trigger": "Discovery by Thalmor",
+            "scene": "Alarm raised! Thalmor guards rush the area. Must fight or flee to extraction point.",
+            "combat_encounter": {
+              "enemies": "Thalmor Soldiers (6-8) + Wizard (1)",
+              "difficulty": "Great (+4)",
+              "reinforcements": "More guards arrive every 2 rounds"
+            },
+            "escape_options": ["Fight through", "Create magical distraction", "Use environment (fire, ice)", "Malborn's secret passage"]
+          },
+          {
+            "trigger": "Escape sequence",
+            "scene": "Race through the Embassy to Malborn's escape route. The entire Embassy is on alert.",
+            "chase_scene": {
+              "obstacles": ["Locked doors", "Guard patrols", "Courtyard exposure"],
+              "time_limit": "5 rounds before overwhelming force arrives"
+            }
+          },
+          {
+            "trigger": "Confrontation with Elenwen (optional)",
+            "scene": "If players are bold, Elenwen blocks the exit. She knows who you are and what you've done.",
+            "npc_present": ["Elenwen", "Elite Guard"],
+            "elenwen_dialogue": "'So, the Dragonborn plays spy. How disappointing. You could have been useful to the Dominion.'",
+            "options": ["Fight (Superb +5 difficulty)", "Bluff your way out (Legendary +6)", "Use Thu'um to escape"],
+            "consequences": "Elenwen becomes personal nemesis. Thalmor assassins dispatched."
+          },
+          {
+            "trigger": "Debriefing with Delphine",
+            "scene": "Back in Riverwood. Delphine reviews the documents. The conspiracy is worse than imagined.",
+            "reveals": [
+              "Thalmor want neither faction to win the civil war",
+              "Ulfric was manipulated, possibly mind-controlled",
+              "Esbern is alive and in Riften",
+              "Thalmor know almost nothing about the dragon return - they fear it",
+              "Party is now on Thalmor hit list"
+            ]
+          }
+        ],
+        "rewards": {
+          "experience": 300,
+          "intel": "Complete Thalmor dossiers on key figures",
+          "items": ["Thalmor weapon or armor from escape"],
+          "reputation": "Infamous among Thalmor, Respected by both civil war factions (if intel shared)"
+        },
+        "reveals": "Thalmor are manipulating the civil war. They fear the dragon return and the Dragonborn.",
+        "branching_choice": {
+          "choice": "Share Thalmor intel with civil war factions or keep it secret",
+          "consequences": {
+            "share_with_imperials": "Imperial reputation +20, Better positioned to end war quickly",
+            "share_with_stormcloaks": "Stormcloak reputation +20, Ulfric questions his own judgment",
+            "share_with_both": "Both factions grateful but neither trusts you fully, Peace talks possible",
+            "keep_secret": "Use as leverage later, Thalmor don't know how much you learned"
+          }
+        },
+        "faction_dynamics": {
+          "thalmor": {
+            "reputation": -50,
+            "status": "Shoot on sight. Assassins and sabotage active.",
+            "elenwen_reaction": "Personal vendetta. Will appear in future confrontations.",
+            "clock_progress": "Dragon Investigation +3, Blades Elimination +2"
+          },
+          "blades": {
+            "delphine_trust": "Maximum. She owes you her life.",
+            "malborn_status": "If saved, loyal ally. If abandoned, dead."
+          },
+          "civil_war_factions": {
+            "if_intel_shared": "Awareness of Thalmor manipulation. May affect war strategy.",
+            "reputation_boost": "+20 to chosen faction"
+          },
+          "greybeards": {
+            "reaction": "Disapprove of violent methods but understand necessity"
+          }
+        },
+        "story_hooks": [
+          "Thalmor are now personal enemies hunting the party",
+          "Civil war is being manipulated - can this knowledge change anything?",
+          "Ulfric may have been mind-controlled during the Great War",
+          "Must find Esbern in Riften's criminal underworld",
+          "Thalmor fear dragons as much as anyone - temporary common enemy?"
+        ],
+        "gm_notes": "This is the major conspiracy reveal. The Thalmor are the true villains pulling strings. Allow creative infiltration approaches. The escape should feel tense and dangerous. Elenwen becomes a recurring antagonist. The intel changes the political landscape if shared wisely.",
+        "status": "locked",
+        "next_quest": "a_cornered_rat"
+      },
+      {
+        "id": "a_cornered_rat",
+        "name": "A Cornered Rat",
+        "act": "Act II",
+        "description": "Track down Esbern in the Ratway",
+        "prerequisites": ["diplomatic_immunity"],
+        "objectives": [
+          "Locate Esbern in the Ratway",
+          "Escort Esbern safely out",
+          "Return to Riverwood"
+        ],
+        "rewards": {
+          "experience": 150
+        },
+        "introduces": "Esbern, Blades historian",
+        "story_hooks": [
+          "Esbern has been hiding from the Thalmor for decades",
+          "He knows about Alduin's Wall and the prophecy",
+          "Thalmor are actively hunting remaining Blades members"
+        ],
+        "gm_notes": "Esbern is paranoid but knowledgeable. He's been waiting for the Dragonborn.",
+        "status": "locked",
+        "next_quest": "alduin_s_wall"
+      },
+      {
+        "id": "alduin_s_wall",
+        "name": "Alduin's Wall",
+        "act": "Act II",
+        "description": "Discover the prophecy of the Dragonborn at Sky Haven Temple",
+        "prerequisites": ["a_cornered_rat"],
+        "objectives": [
+          "Travel to Sky Haven Temple with Delphine and Esbern",
+          "Gain entrance to the temple",
+          "Examine Alduin's Wall",
+          "Learn about Dragonrend"
+        ],
+        "rewards": {
+          "experience": 200
+        },
+        "reveals": "Need to learn Dragonrend to defeat Alduin",
+        "story_hooks": [
+          "Alduin's Wall depicts the ancient battle and prophecy",
+          "Dragonrend shout is the key to defeating Alduin",
+          "The Blades' headquarters can be rebuilt here",
+          "Must find the Elder Scroll to learn Dragonrend"
+        ],
+        "gm_notes": "This quest reveals the solution to defeating Alduin. The prophecy comes full circle.",
+        "status": "locked",
+        "next_quest": "the_throat_of_the_world"
+      },
+      {
+        "id": "the_throat_of_the_world",
+        "name": "The Throat of the World",
+        "act": "Act II",
+        "description": "Meet Paarthurnax and learn about Dragonrend",
+        "prerequisites": ["alduin_s_wall"],
+        "objectives": [
+          "Climb to the summit of the Throat of the World",
+          "Meet Paarthurnax",
+          "Learn the Clear Skies shout",
+          "Meditate on a Word of Power",
+          "Use the Elder Scroll to witness the past"
+        ],
+        "rewards": {
+          "experience": 250,
+          "new_shout": "Dragonrend"
+        },
+        "branching_point": "Introduces conflict between Blades and Greybeards over Paarthurnax",
+        "story_hooks": [
+          "Paarthurnax is a dragon who teaches the Way of the Voice",
+          "He betrayed Alduin in ancient times",
+          "Blades will demand Paarthurnax's death",
+          "Greybeards refuse to help if Paarthurnax is killed",
+          "Major choice: Blades or Greybeards?"
+        ],
+        "faction_dynamics": {
+          "blades": "Will demand Paarthurnax's death",
+          "greybeards": "Defend Paarthurnax",
+          "dragonborn": "Must choose between ancient allies"
+        },
+        "gm_notes": "This is a major moral choice. Paarthurnax represents redemption. The Blades represent justice. Neither is wrong.",
+        "status": "locked",
+        "next_quest": "elder_knowledge"
+      },
+      {
+        "id": "elder_knowledge",
+        "name": "Elder Knowledge",
+        "act": "Act II",
+        "description": "Find the Elder Scroll to learn Dragonrend",
+        "prerequisites": ["the_throat_of_the_world"],
+        "objectives": [
+          "Investigate the Elder Scroll",
+          "Travel to the College of Winterhold or other sources",
+          "Learn the location of the Elder Scroll",
+          "Navigate Blackreach and Alftand",
+          "Retrieve the Elder Scroll from Tower of Mzark"
+        ],
+        "rewards": {
+          "experience": 300,
+          "items": ["Elder Scroll (Dragon)"]
+        },
+        "story_hooks": [
+          "The College of Winterhold has information on Elder Scrolls",
+          "Dwemer ruins hold ancient secrets",
+          "Blackreach is a hidden underground world",
+          "The Falmer are victims of Dwemer cruelty"
+        ],
+        "gm_notes": "Blackreach should feel alien and wondrous. The Dwemer left mysteries that may never be solved.",
+        "status": "locked",
+        "next_quest": "the_fallen"
+      },
+      {
+        "id": "the_fallen",
+        "name": "The Fallen",
+        "act": "Act II/III Transition",
+        "description": "Trap a dragon in Dragonsreach to learn Alduin's location. The civil war may need to be paused first.",
+        "prerequisites": ["elder_knowledge"],
+        "objectives": [
+          "Approach Jarl Balgruuf about using Dragonsreach",
+          "Negotiate peace conference if civil war is unresolved (Season Unending)",
+          "Prepare the dragon trap at Dragonsreach",
+          "Use Dragonrend to lure Odahviing",
+          "Trap Odahviing in the great porch",
+          "Question Odahviing about Alduin's location",
+          "Gain Odahviing as an ally",
+          "Learn the way to Sovngarde"
+        ],
+        "branching_point": "Civil war status determines if Season Unending is required",
+        "scene_triggers": [
+          {
+            "trigger": "Requesting Balgruuf's permission",
+            "scene": "Balgruuf is hesitant. Using Dragonsreach as a trap is dangerous. If civil war rages, he refuses unless truce is arranged.",
+            "npc_present": ["Jarl Balgruuf", "Irileth", "Proventus Avenicci"],
+            "balgruuf_conditions": {
+              "civil_war_active": "Requires Season Unending peace conference first",
+              "civil_war_resolved": "Reluctantly agrees if convinced (Rapport Great +4)"
+            }
+          },
+          {
+            "trigger": "Season Unending required (civil war unresolved)",
+            "scene": "Greybeards agree to host peace talks at High Hrothgar. Both sides must attend.",
+            "next_scene": "season_unending_conference",
+            "mandatory": "If civil war still active"
+          },
+          {
+            "trigger": "Preparing Dragonsreach trap",
+            "scene": "Work with the guards to set the trap. The great porch will be used to ensnare the dragon.",
+            "npc_present": ["Irileth", "Whiterun Guards"],
+            "preparation": "Place bait, ensure chains and winch are ready, position guards"
+          },
+          {
+            "trigger": "Calling Odahviing",
+            "scene": "Climb to the top of Dragonsreach. Use Dragonrend to force Odahviing down. He lands in fury.",
+            "combat_encounter": {
+              "enemy": "Odahviing (Superb +5)",
+              "objective": "Use Dragonrend and lure him into the trap",
+              "difficulty": "Epic - Must use Thu'um effectively"
+            }
+          },
+          {
+            "trigger": "Odahviing trapped",
+            "scene": "The dragon is caught! He roars in rage, then gradually calms. Respect grows in his eyes.",
+            "npc_present": ["Odahviing", "Jarl Balgruuf", "Irileth", "Guards"],
+            "odahviing_attitude": "Initially hostile, shifts to respect when not killed"
+          },
+          {
+            "trigger": "Interrogating Odahviing",
+            "scene": "Odahviing speaks. He admires strength. Alduin has grown arrogant, hiding in Sovngarde.",
+            "dialogue_options": [
+              "Ask about Alduin's location",
+              "Ask about Alduin's weaknesses",
+              "Ask why he serves Alduin",
+              "Offer alliance against Alduin"
+            ],
+            "odahviing_reveals": [
+              "Alduin retreats to Sovngarde to feast on souls",
+              "Only way to reach Sovngarde is through Skuldafn portal",
+              "Skuldafn is heavily guarded by dragon priests",
+              "Odahviing respects the Dragonborn's power",
+              "Offers to fly party to Skuldafn if freed"
+            ]
+          },
+          {
+            "trigger": "Releasing Odahviing",
+            "scene": "Balgruuf is shocked you'd release a dragon. But Odahviing pledges aid. 'Call when ready, Dovahkiin.'",
+            "faction_reaction": {
+              "whiterun": "Balgruuf trusts Dragonborn but fears consequences",
+              "dragons": "Odahviing becomes permanent ally"
+            },
+            "world_aspect": "Dragons Can Be Allies"
+          },
+          {
+            "trigger": "Thalmor interference (optional)",
+            "scene": "Thalmor agents attempt to sabotage the trap or assassinate the Dragonborn during preparations.",
+            "npc_present": ["Thalmor Assassins (3-4)"],
+            "combat_encounter": {
+              "difficulty": "Great (+4)",
+              "environmental_aspect": "Whiterun Guards Provide Support"
+            },
+            "story_impact": "Thalmor still trying to eliminate Dragonborn threat"
+          }
+        ],
+        "rewards": {
+          "experience": 300,
+          "ally": "Odahviing - dragon transport and combat support",
+          "knowledge": "Location of Skuldafn and path to Sovngarde"
+        },
+        "faction_dynamics": {
+          "civil_war": {
+            "if_season_unending_required": "Temporary truce established. Both sides resentful but cooperative.",
+            "imperial": "Reputation +10 for bringing peace (temporary)",
+            "stormcloak": "Reputation +10 for bringing peace (temporary)"
+          },
+          "whiterun": {
+            "balgruuf_trust": "Maximum. You've saved his city multiple times.",
+            "citizens": "Awed by dragon trap. Dragonborn is legendary."
+          },
+          "dragons": {
+            "odahviing_loyalty": "High. Respects strength and honor.",
+            "other_dragons": "Some begin questioning Alduin's rule"
+          },
+          "greybeards": {
+            "if_season_unending_held": "Grateful for bringing peace, even if temporary"
+          },
+          "thalmor": {
+            "reaction": "Alarmed by Dragonborn's growing power. Assassination attempts intensify."
+          }
+        },
+        "story_hooks": [
+          "Civil war is paused (if unresolved) - both sides watching",
+          "Dragons can be reasoned with - not all serve Alduin willingly",
+          "Sovngarde awaits - the realm of the dead",
+          "Thalmor fear the Dragonborn more than ever",
+          "Final confrontation with Alduin approaches",
+          "What happens to the civil war truce after Alduin is defeated?"
+        ],
+        "act_transition": "This quest ends Act II and begins the final push in Act III",
+        "gm_notes": "This is where everything converges. Civil war, dragons, and prophecy collide. If Season Unending happens, it's a major diplomatic moment. Odahviing should be a memorable NPC - proud, honorable, and dangerous. The alliance with a dragon is a powerful moment.",
+        "status": "locked",
+        "next_quest": "season_unending_or_the_world_eater_s_eyrie"
+      },
+      {
+        "id": "season_unending",
+        "name": "Season Unending",
+        "act": "Act II/III Transition",
+        "type": "Conditional Quest - Civil War Resolution",
+        "description": "Broker a temporary peace between the Empire and Stormcloaks so the dragon threat can be addressed.",
+        "prerequisites": ["the_fallen"],
+        "required_if": "Civil war is still unresolved",
+        "objectives": [
+          "Convince both sides to attend peace talks",
+          "Meet at High Hrothgar with the Greybeards",
+          "Negotiate terms of the truce",
+          "Balance concessions between factions",
+          "Secure agreement for temporary ceasefire"
+        ],
+        "scene_triggers": [
+          {
+            "trigger": "Greybeards summon the factions",
+            "scene": "Arngeir invites both Imperial and Stormcloak leaders to High Hrothgar. The Greybeards' authority is respected.",
+            "npc_present": ["Arngeir", "Other Greybeards"]
+          },
+          {
+            "trigger": "Factions arrive",
+            "scene": "General Tullius, Legate Rikke, Ulfric Stormcloak, and Galmar Stone-Fist arrive. Tension is palpable.",
+            "npc_present": ["General Tullius", "Legate Rikke", "Ulfric Stormcloak", "Galmar Stone-Fist"],
+            "conditional_npcs": [
+              {
+                "name": "Jarl Balgruuf",
+                "condition": "if Whiterun is neutral in civil war"
+              },
+              {
+                "name": "Elenwen",
+                "condition": "arrives uninvited shortly after"
+              }
+            ],
+            "initial_conflict": "Both sides blame each other for the war"
+          },
+          {
+            "trigger": "Elenwen's arrival",
+            "scene": "Elenwen arrives uninvited, claiming Thalmor interest in peace. Ulfric becomes enraged.",
+            "branching_choice": {
+              "choice": "Allow Elenwen to stay or demand she leaves",
+              "consequences": {
+                "elenwen_stays": "Ulfric is furious (-10 Stormcloak relations), Tullius grateful (+10 Imperial)",
+                "elenwen_expelled": "Tullius is annoyed (-5 Imperial), Ulfric pleased (+10 Stormcloak), Thalmor deeply offended"
+              }
+            },
+            "recommended": "Expel Elenwen to show independence from Thalmor"
+          },
+          {
+            "trigger": "Negotiating terms - Round 1",
+            "scene": "Discuss territorial concessions. Each side wants holds.",
+            "negotiation_mechanics": [
+              "Trade holds and fortresses",
+              "Balance power between factions",
+              "Both sides must feel they gained something",
+              "Neither side can feel they lost too much"
+            ],
+            "social_challenges": "Multiple Rapport, Empathy, and Deceive checks (Great +4)"
+          },
+          {
+            "trigger": "Markarth Incident discussion",
+            "scene": "Ulfric demands recognition of the Markarth Incident where he was betrayed. Tullius refuses to acknowledge Imperial wrongdoing.",
+            "tension_point": "Can escalate to walking out if not managed",
+            "resolution_options": [
+              "Acknowledge both sides have grievances",
+              "Focus on the dragon threat as common enemy",
+              "Offer compromise: public acknowledgment without admission of guilt"
+            ]
+          },
+          {
+            "trigger": "Talos worship debate",
+            "scene": "Ulfric demands freedom to worship Talos. Tullius bound by White-Gold Concordat.",
+            "critical_point": "Thalmor manipulation revealed if intel was gathered",
+            "branching_paths": {
+              "reveal_thalmor_intel": "Show evidence Thalmor manipulated conflict. Both sides shocked. (+20 to negotiation)",
+              "private_compromise": "Agree to unofficially allow worship",
+              "table_the_issue": "Defer to after dragon crisis"
+            }
+          },
+          {
+            "trigger": "Dragon attack during negotiations (optional)",
+            "scene": "A dragon attacks High Hrothgar mid-negotiation! Both sides must fight together.",
+            "combat_encounter": {
+              "enemy": "Frost Dragon (Great +4)",
+              "allies": "Imperial and Stormcloak forces fight together"
+            },
+            "story_impact": "Demonstrates need for unity against dragons. +10 to final negotiation."
+          },
+          {
+            "trigger": "Final agreement",
+            "scene": "Terms are set. Both sides grudgingly agree to temporary truce. Greybeards witness the pact.",
+            "terms_agreed": [
+              "Ceasefire until dragon threat ended",
+              "Territorial exchanges balanced",
+              "Prisoner exchanges",
+              "No offensive operations",
+              "Both sides aid against dragons"
+            ],
+            "fragile_peace": "Truce will hold only while dragon threat persists"
+          },
+          {
+            "trigger": "Private conversation with faction leaders",
+            "scene": "After official talks, leaders speak privately with Dragonborn.",
+            "ulfric_message": "'This changes nothing in the long run. But you've earned my respect, Dragonborn.'",
+            "tullius_message": "'Temporary measure. Once the dragons are dealt with, we finish this war.'",
+            "future_hook": "Civil war will resume after main quest unless fully resolved"
+          }
+        ],
+        "rewards": {
+          "experience": 350,
+          "reputation": "+15 with both Imperial Legion and Stormcloaks",
+          "temporary_peace": "Civil war paused until dragons defeated"
+        },
+        "branching_outcomes": {
+          "successful_negotiation": "Balanced peace, both sides cooperate against dragons",
+          "biased_toward_imperials": "Imperials gain advantage, Stormcloaks resentful",
+          "biased_toward_stormcloaks": "Stormcloaks gain advantage, Imperials resentful",
+          "failed_negotiation": "No peace achieved. Must find another way to use Dragonsreach."
+        },
+        "faction_dynamics": {
+          "imperials": {
+            "tullius_respect": "+20 if balanced deal",
+            "future_stance": "Will remember who you favored"
+          },
+          "stormcloaks": {
+            "ulfric_respect": "+20 if balanced deal",
+            "future_stance": "Will remember who you favored"
+          },
+          "thalmor": {
+            "elenwen_reaction": "If expelled, -30 reputation. Personal enemy.",
+            "manipulation_exposed": "If intel revealed, Thalmor influence weakened across Skyrim"
+          },
+          "greybeards": {
+            "arngeir_pride": "Proud you used diplomacy. +30 reputation.",
+            "way_of_the_voice": "Demonstrates power of words over violence"
+          }
+        },
+        "story_hooks": [
+          "First time in decades both sides sat at same table",
+          "Thalmor manipulation can be exposed with evidence from Embassy",
+          "Temporary peace is fragile - will it hold after Alduin?",
+          "Both leaders respect Dragonborn but war will resume",
+          "Diplomatic solution sets precedent - words can be as powerful as Thu'um"
+        ],
+        "gm_notes": "Season Unending is a pure diplomatic mission. No combat (unless dragon attacks). Let players feel weight of their choices. The negotiations should feel tense and earned. Balance is key - favor one side too much and the other walks out. This quest only triggers if civil war is unresolved when The Fallen begins.",
+        "status": "conditional",
+        "next_quest": "the_world_eater_s_eyrie"
+      },
+      {
+        "id": "the_world_eater_s_eyrie",
+        "name": "The World-Eater's Eyrie",
+        "act": "Act III",
+        "description": "Travel to Skuldafn with Odahviing",
+        "prerequisites": ["the_fallen"],
+        "objectives": [
+          "Ride Odahviing to Skuldafn",
+          "Fight through the ruins",
+          "Reach the portal to Sovngarde"
+        ],
+        "rewards": {
+          "experience": 300
+        },
+        "story_hooks": [
+          "Skuldafn is Alduin's base of operations",
+          "Dragon priests guard the portal",
+          "Final preparations before facing Alduin",
+          "Point of no return - make sure party is ready"
+        ],
+        "gm_notes": "This is the beginning of the end. The party is entering the realm of the dead. Let them prepare.",
+        "status": "locked",
+        "next_quest": "sovngarde"
+      },
+      {
+        "id": "sovngarde",
+        "name": "Sovngarde",
+        "act": "Act III",
+        "description": "Enter the Nordic afterlife and confront Alduin",
+        "prerequisites": ["the_world_eater_s_eyrie"],
+        "objectives": [
+          "Navigate Sovngarde",
+          "Find the heroes of old",
+          "Use Clear Skies to reveal Alduin",
+          "Defeat Alduin with the ancient heroes",
+          "Return to Tamriel as the savior"
+        ],
+        "rewards": {
+          "experience": 500,
+          "legendary_status": "Defeated Alduin the World-Eater"
+        },
+        "story_hooks": [
+          "Sovngarde is the Nordic heaven - meet legendary heroes",
+          "Tsun guards the Hall of Valor",
+          "The ancient heroes aid in the final battle",
+          "Alduin's defeat saves the world",
+          "The civil war and other conflicts remain - the world still needs heroes"
+        ],
+        "gm_notes": "This is the epic finale. Make it memorable. After defeating Alduin, the party returns to a world still in conflict. The civil war awaits resolution.",
+        "campaign_impact": {
+          "main_quest": "Completed",
+          "civil_war": "Still ongoing if not resolved",
+          "dragonborn_status": "Legendary hero, savior of the world",
+          "faction_reactions": "All factions want the Dragonborn's support"
+        },
+        "status": "locked",
+        "is_final_quest": true
+      }
+    ]
+  },
+  "quest_metadata": {
+    "total_quests": 18,
+    "estimated_sessions": "18-26",
+    "difficulty": "Epic",
+    "themes": ["Prophecy", "Destiny", "Dragon threat", "Ancient powers", "Civil War", "Thalmor Conspiracy", "Faction Politics", "Moral Choices"],
+    "act_breakdown": {
+      "act_i": {
+        "quests": ["unbound", "before_the_storm", "bleak_falls_barrow", "dragon_rising", "the_way_of_the_voice", "the_horn_of_jurgen_windcaller", "a_blade_in_the_dark"],
+        "estimated_sessions": "4-6"
+      },
+      "act_i_ii_transition": {
+        "quests": ["battle_of_whiterun", "thalmor_sabotage"],
+        "estimated_sessions": "2-4",
+        "description": "Civil war and Thalmor conspiracy intersect"
+      },
+      "act_ii": {
+        "quests": ["diplomatic_immunity", "a_cornered_rat", "alduin_s_wall", "the_throat_of_the_world", "elder_knowledge", "the_fallen", "season_unending"],
+        "estimated_sessions": "7-10",
+        "note": "Season Unending is conditional - only if civil war unresolved"
+      },
+      "act_iii": {
+        "quests": ["the_world_eater_s_eyrie", "sovngarde"],
+        "estimated_sessions": "5-6"
+      }
+    },
+    "new_features": {
+      "battle_of_whiterun": "Fully implemented as explicit quest with branching choices for Imperial defense, Stormcloak assault, or neutral mediation",
+      "thalmor_sabotage": "New side mission exposing Thalmor manipulation of civil war with multiple investigation paths",
+      "season_unending": "Detailed peace conference mechanics with negotiation system and branching outcomes",
+      "scene_triggers": "All major quests now include detailed scene triggers with NPCs, environmental aspects, and combat encounters",
+      "enhanced_faction_dynamics": "Comprehensive faction relationship tracking with reputation changes and clock progression"
+    },
+    "integration_notes": {
+      "civil_war": "The Battle of Whiterun is now a full quest during Act I/II transition. Forces players to choose sides or broker peace. Civil war questline runs parallel to main quest with multiple intersection points.",
+      "thalmor_arc": "Introduced with optional sabotage investigation before Diplomatic Immunity. Thalmor presence throughout campaign as recurring antagonists. Evidence gathering affects later encounters.",
+      "faction_dynamics": "All major factions (Imperial, Stormcloak, Thalmor, Blades, Greybeards, Whiterun) want Dragonborn's allegiance. Player choices have immediate and long-term consequences affecting reputation, available quests, and world state.",
+      "branching_points": [
+        "Helgen escape companion (Ralof vs Hadvar) - Initial faction allegiance",
+        "Battle of Whiterun outcome (Imperial defense, Stormcloak assault, or neutral mediation)",
+        "Thalmor sabotage investigation approach (public confrontation, faction cooperation, or quiet gathering)",
+        "Diplomatic Immunity intel sharing (which factions receive Thalmor evidence)",
+        "Civil war alliance (Imperial vs Stormcloak vs Neutral throughout campaign)",
+        "Season Unending negotiations (balanced peace vs favoring one faction)",
+        "Paarthurnax decision (Blades vs Greybeards)",
+        "Final quest approach (how civil war resolution affects Alduin confrontation)"
+      ],
+      "scene_trigger_system": "Each major quest includes detailed scene triggers with specific NPCs, environmental aspects, combat encounters, and branching dialogue options. GMs can use these as structured encounters or adapt based on player choices.",
+      "thalmor_recurring_threat": "Thalmor agents appear throughout campaign after Battle of Whiterun, escalating from observation to active sabotage and assassination attempts. Player reputation with Thalmor directly affects encounter frequency and difficulty."
+    },
+    "gm_guidance": {
+      "pacing": "Battle of Whiterun should occur after A Blade in the Dark. Thalmor Sabotage is optional but adds depth to conspiracy narrative. Season Unending only triggers if civil war remains unresolved by The Fallen quest.",
+      "difficulty_scaling": "Combat encounters scale from Fair (+2) in Act I to Epic (+7) in Act III. Social encounters similarly scale. Scene triggers include suggested difficulties.",
+      "faction_balance": "Track faction reputation carefully. Extreme actions toward one faction create permanent enemies. Neutral paths are possible but require careful diplomacy.",
+      "thalmor_as_villains": "Thalmor serve as intelligent recurring antagonists who adapt to player actions. They remember, plan, and retaliate. Not all encounters are combat - some are social manipulation or sabotage."
+    }
+  }
+}

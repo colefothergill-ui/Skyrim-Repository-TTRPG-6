@@ -1,0 +1,212 @@
+{
+  "name": "Hadvar",
+  "id": "npc_stat_hadvar",
+  "type": "Nord Imperial Soldier",
+  "category": "Companion",
+  "location": "Whiterun",
+  "faction": "Imperial Legion",
+  "aspects": {
+    "high_concept": "Pragmatic Imperial Soldier with a Heart",
+    "trouble": "Caught Between Duty and Conscience",
+    "other_aspects": [
+      "Nephew of Alvor the Blacksmith",
+      "Compassionate Despite the Uniform",
+      "Believes in Imperial Order and Stability"
+    ]
+  },
+  "skills": {
+    "Great": [
+      "Fight"
+    ],
+    "Good": [
+      "Physique",
+      "Will"
+    ],
+    "Fair": [
+      "Athletics",
+      "Notice",
+      "Rapport"
+    ],
+    "Average": [
+      "Crafts",
+      "Resources",
+      "Empathy"
+    ]
+  },
+  "stunts": [
+    "Imperial Training: +2 to Fight when defending a position or ally",
+    "Steady Under Fire: +2 to Will when resisting fear or intimidation in combat",
+    "Shield Brother: When fighting alongside an ally, both gain +1 to defend actions"
+  ],
+  "stress": {
+    "physical": [
+      false,
+      false,
+      false
+    ],
+    "mental": [
+      false,
+      false,
+      false
+    ]
+  },
+  "consequences": {
+    "mild": null,
+    "moderate": "Ribcage Raked Open (Bleeding Hard)",
+    "severe": "Cracked Shield Arm (conceded reserve knot to protect wounded)"
+  },
+  "refresh": 3,
+  "armor": 1,
+  "notes": "Hadvar is a professional Imperial soldier who recruits promising warriors to the Legion cause. Unlike many Imperials, he shows compassion and pragmatism, willing to help civilians regardless of their allegiance. As Alvor's nephew, he has connections in Riverwood. He's conflicted about the civil war but believes the Empire provides stability that Skyrim needs. His combat style focuses on defensive tactics and protecting allies. Player-canon update: Hadvar was stabilized by Restoration magic (bleeding sealed; still seriously injured).",
+  "combat_tactics": "Hadvar fights defensively, prioritizing protection of allies over aggressive offense. He uses his shield effectively and coordinates with party members. In battle, he'll position himself between enemies and weaker party members, using his Imperial Training to hold the line.",
+  "scene_triggers": [
+    "Imperial recruitment",
+    "Riverwood arrival",
+    "Early Act 1 quests",
+    "Whiterun defense preparations",
+    "Battle of Whiterun (Imperial side)"
+  ],
+  "act_context": [
+    "Act 1",
+    "Act 2"
+  ],
+  "starting_equipment": {
+    "armor": "Imperial Light Armor (Armor:1)",
+    "weapon": "Imperial Sword (Weapon:2)",
+    "shield": "Imperial Shield (Defend +1)",
+    "other": [
+      "Healing Potion x2",
+      "Imperial Orders",
+      "20 gold"
+    ]
+  },
+  "social_interaction": "Hadvar is calm, professional, and pragmatic. He treats people with respect regardless of race or background. While loyal to the Empire, he questions orders that seem cruel or unjust. He's protective of civilians and values honor. He can discuss the civil war rationally, acknowledging valid points from both sides while maintaining his belief that the Empire is necessary for Skyrim's survival against greater threats like the Thalmor.",
+  "relationships": {
+    "Alvor": "Uncle, close family bond",
+    "Sigrid": "Aunt by marriage",
+    "Dorthe": "Young cousin, protective of her",
+    "General Tullius": "Commanding officer, respects but questions some tactics",
+    "Legate Rikke": "Direct commander, admires her leadership",
+    "Ulfric Stormcloak": "Enemy commander, respects as warrior but opposes rebellion",
+    "Stormcloaks": "Enemy combatants, but tries to minimize civilian casualties",
+    "Player": "Recruited them to the cause, feels responsible for their safety"
+  },
+  "personality_notes": {
+    "speaking_style": "Professional but warm, uses military terms naturally, tries to be reassuring in crisis",
+    "motivations": [
+      "Protect innocent people",
+      "Serve the Empire with honor",
+      "End the civil war with minimal bloodshed",
+      "Look out for family in Riverwood"
+    ],
+    "fears": [
+      "Skyrim descending into chaos",
+      "Failing to protect those he cares about",
+      "Becoming as brutal as some Imperial commanders",
+      "Thalmor gaining more control"
+    ],
+    "quirks": [
+      "Checks his sword and armor habitually",
+      "Mentions uncle Alvor frequently",
+      "Tries to find common ground with Stormcloak supporters"
+    ],
+    "character_growth": "Can question orders more openly, develop stronger stance on Imperial-Thalmor relationship, learn to balance duty with morality"
+  },
+  "companion_mechanics": {
+    "recruitment_trigger": "Player aligns with Imperials or meets Hadvar during recruitment",
+    "starting_loyalty": 60,
+    "loyalty_increases": [
+      {
+        "trigger": "Defend innocent civilians",
+        "amount": 5
+      },
+      {
+        "trigger": "Complete Imperial Legion quests",
+        "amount": 10
+      },
+      {
+        "trigger": "Visit Riverwood and check on family",
+        "amount": 5
+      },
+      {
+        "trigger": "Make pragmatic, honorable decisions",
+        "amount": 3
+      },
+      {
+        "trigger": "Stand up against Thalmor oppression",
+        "amount": 5
+      },
+      {
+        "trigger": "Show mercy to defeated Stormcloaks",
+        "amount": 3
+      }
+    ],
+    "loyalty_decreases": [
+      {
+        "trigger": "Attack Imperial soldiers",
+        "amount": -20
+      },
+      {
+        "trigger": "Join Stormcloaks",
+        "amount": -50
+      },
+      {
+        "trigger": "Harm civilians",
+        "amount": -15
+      },
+      {
+        "trigger": "Act dishonorably",
+        "amount": -5
+      },
+      {
+        "trigger": "Ignore family in Riverwood",
+        "amount": -3
+      }
+    ],
+    "loyalty_thresholds": {
+      "80+": "Will sacrifice himself for party, offers personal quests about his family",
+      "60-79": "Reliable companion, shares Imperial intelligence",
+      "40-59": "Professional but distant, questions party decisions",
+      "20-39": "Considers leaving, refuses dangerous or dishonorable orders",
+      "0-19": "Leaves party, may become enemy if party joins Stormcloaks"
+    },
+    "companion_quests": [
+      {
+        "loyalty_required": 70,
+        "name": "Protecting Riverwood",
+        "description": "Help Hadvar protect Riverwood from bandits/threats",
+        "reward": "Hadvar loyalty +10, Alvor provides free smithing services"
+      },
+      {
+        "loyalty_required": 80,
+        "name": "The Right Side of History",
+        "description": "Hadvar shares concerns about Thalmor influence, asks party to investigate",
+        "reward": "Access to Imperial intelligence, Hadvar loyalty +15"
+      }
+    ]
+  },
+  "story_hooks": [
+    "Hadvar can provide introduction to Alvor in Riverwood, giving party access to smithing and rest",
+    "His Imperial connections provide entry to Dragonsreach and Jarl Balgruuf",
+    "Can share intelligence about Imperial troop movements and strategy",
+    "Personal stake in Battle of Whiterun - protecting his home region",
+    "Conflicted about Thalmor presence, potential ally in anti-Thalmor activities",
+    "If loyalty is high, may provide warning before major Imperial operations"
+  ],
+  "whiterun_integration": "In Whiterun, Hadvar can use his Imperial credentials to gain audience with Jarl Balgruuf. During the Battle of Whiterun, if fighting for Imperials, he provides tactical bonuses to party. He knows many Whiterun guards from joint operations. His presence makes Imperial-aligned NPCs more cooperative.",
+  "dialogue_samples": {
+    "greeting": "Good to see you again. After what we've been through together in the civil war, I'd say we're bound by more than just circumstance.",
+    "combat_start": "Form up! Protect the vulnerable and watch your flanks!",
+    "low_health": "I'm hurt, but I can still fight! Keep going!",
+    "victory": "Well fought. Let's help the wounded and regroup.",
+    "civil_war_discussion": "I serve the Empire because I believe in order and stability. Not because I love every decision they make. The Thalmor... they're the real enemy. Sometimes I wonder if Ulfric sees that.",
+    "personal": "My uncle Alvor taught me that a smith shapes more than metal - he shapes the tools that build civilization. That's what the Empire does, ideally. We provide the structure that lets people live in peace."
+  },
+  "variants": [
+    {
+      "name": "Hadvar (Veteran)",
+      "changes": "After several battles: Increase Fight to Superb (+5), add mental stress box, add stunt 'Battle-Hardened: Ignore first mild consequence in combat'",
+      "trigger": "After participating in 3+ major battles"
+    }
+  ]
+}

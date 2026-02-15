@@ -1,0 +1,17 @@
+{
+  "date": "2026-02-05",
+  "type": "mid_session_checkpoint",
+  "title": "Whiterun Victory — Galmar Down, Hadvar Stabilized, Foothold Secured",
+  "summary": [
+    "Insaerndel assassinated Galmar Stone-Fist during the Battle of Whiterun, breaking Stormcloak command.",
+    "Stormcloak line collapsed/retreated; Whiterun held for the Empire.",
+    "Hadvar was stabilized by Restoration and entrusted with the alias 'Orinthelo' (Penitus Oculatus asset).",
+    "Thalmor handler already eliminated; Whiterun Thalmor node neutralized; false trails planted.",
+    "Battle-Born contract paid; Whiterun Thieves Guild foothold completed."
+  ],
+  "milestones_awarded": {
+    "minor": 1,
+    "significant": 1,
+    "notes": "Banked pending player spend."
+  }
+}

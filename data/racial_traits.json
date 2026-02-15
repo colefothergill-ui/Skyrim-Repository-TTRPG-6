@@ -1,0 +1,343 @@
+{
+  "races": [
+    {
+      "id": "nord",
+      "name": "Nord",
+      "description": "The native people of Skyrim, hardy warriors with resistance to cold",
+      "homeland": "Skyrim",
+      "appearance": "Tall, fair-skinned, light hair common",
+      "racial_ability": {
+        "name": "Resist Frost",
+        "effect": "+2 to defend against cold/frost damage"
+      },
+      "racial_power": {
+        "name": "Battle Cry",
+        "effect": "Once per session, cause enemies within zone to flee for one round",
+        "usage": "Shout of Nordic fury"
+      },
+      "skill_bonuses": [
+        "Two-Handed",
+        "Block",
+        "One-Handed",
+        "Light Armor",
+        "Smithing",
+        "Speech"
+      ],
+      "starting_aspect": "Proud Nord Warrior",
+      "cultural_traits": [
+        "Value honor and tradition",
+        "Suspicious of magic",
+        "Strong connection to Skyrim",
+        "Proud of Nordic heritage",
+        "Often worship Talos despite ban"
+      ],
+      "optional_extras": [
+        {
+          "name": "Voice of the Nord (Thu'um)",
+          "cost": "1 Refresh",
+          "description": "Access to the ancient Nordic tradition of the Thu'um (Dragon Shouts). See data/rules/thuum_system.json for complete mechanics.",
+          "benefit": "Can learn and use Dragon Shouts. Choose ONE shout at character creation from: Unrelenting Force, Whirlwind Sprint, or Kyne's Peace. You know ONE word of this shout and start with 2/8 segments on its mastery clock.",
+          "lore": "The Voice is an ancient Nordic tradition passed down through generations. While rare, some Nords still learn fragments of this power from elders or discover it through heritage.",
+          "mechanical_notes": "Uses Fate Point initially, mastery clock reduces to once per scene. See thuum_system.json for full details."
+        }
+      ]
+    },
+    {
+      "id": "imperial",
+      "name": "Imperial",
+      "description": "Cosmopolitan humans from Cyrodiil, skilled diplomats and traders",
+      "homeland": "Cyrodiil",
+      "appearance": "Mediterranean features, olive to light skin",
+      "racial_ability": {
+        "name": "Voice of the Emperor",
+        "effect": "Once per session, gain +2 to Rapport or Deceive in social situations"
+      },
+      "skill_bonuses": [
+        "Block",
+        "Heavy Armor",
+        "One-Handed",
+        "Enchanting",
+        "Restoration",
+        "Destruction"
+      ],
+      "starting_aspect": "Imperial Diplomat",
+      "cultural_traits": [
+        "Value law and civilization",
+        "Natural merchants and negotiators",
+        "Loyal to the Empire",
+        "Cosmopolitan worldview"
+      ],
+      "optional_extras": [
+        {
+          "name": "Way of the Voice (Thu'um - Advanced Study)",
+          "cost": "1 Refresh",
+          "description": "Through disciplined study and dedication, you've gained access to the Thu'um. Imperials learn through structured training rather than heritage.",
+          "benefit": "Can learn and use Dragon Shouts through gameplay. Cannot choose shout at character creation - must learn through Greybeard training, Word Walls, or meditation. Mastery clocks have 10 segments instead of 8.",
+          "lore": "While Thu'um is a Nordic tradition, disciplined Imperials can learn it through rigorous study, particularly from the Greybeards who respect dedication over heritage.",
+          "mechanical_notes": "Slower mastery (+2 segments) but gain +1 segment when training with masters due to disciplined approach. See thuum_system.json for full details."
+        }
+      ]
+    },
+    {
+      "id": "breton",
+      "name": "Breton",
+      "description": "Human-elf hybrids from High Rock with natural magic resistance",
+      "homeland": "High Rock",
+      "appearance": "Slight build, sharp features",
+      "racial_ability": {
+        "name": "Magic Resistance",
+        "effect": "+2 to defend against magical attacks"
+      },
+      "racial_power": {
+        "name": "Dragonskin",
+        "effect": "Once per session, absorb 50% of magic directed at you for one scene",
+        "usage": "Activate to become magic-resistant"
+      },
+      "skill_bonuses": [
+        "Conjuration",
+        "Alchemy",
+        "Illusion",
+        "Restoration",
+        "Alteration",
+        "Speech"
+      ],
+      "starting_aspect": "Breton Spellsword",
+      "cultural_traits": [
+        "Natural affinity for magic",
+        "Feudal society background",
+        "Clever and adaptable",
+        "Mixed human-elf heritage"
+      ],
+      "optional_extras": [
+        {
+          "name": "Scholarly Voice (Thu'um - Magical Study)",
+          "cost": "1 Refresh",
+          "description": "Your magical aptitude allows you to understand Thu'um as a form of magic-adjacent power. You approach the Voice through academic study.",
+          "benefit": "Can learn and use Dragon Shouts through gameplay. Cannot choose shout at character creation - must learn through study, Word Walls, or meditation. Mastery clocks have 10 segments. +1 difficulty on learning from Word Walls, but +2 to learning from texts/scrolls due to scholarly nature.",
+          "lore": "Bretons, with their mixed heritage and natural magical talent, can understand Thu'um as a linguistic magic rather than purely spiritual power.",
+          "mechanical_notes": "Slower mastery but excels at book learning. See thuum_system.json for full details."
+        }
+      ]
+    },
+    {
+      "id": "redguard",
+      "name": "Redguard",
+      "description": "Dark-skinned humans from Hammerfell, master swordsmen",
+      "homeland": "Hammerfell",
+      "appearance": "Dark skin, athletic build",
+      "racial_ability": {
+        "name": "Resist Poison",
+        "effect": "+2 to resist poison and disease"
+      },
+      "racial_power": {
+        "name": "Adrenaline Rush",
+        "effect": "Once per session, gain +2 to all physical actions for one scene",
+        "usage": "Activate during combat"
+      },
+      "skill_bonuses": [
+        "One-Handed",
+        "Archery",
+        "Block",
+        "Smithing",
+        "Destruction",
+        "Alteration"
+      ],
+      "starting_aspect": "Redguard Sword-Singer",
+      "cultural_traits": [
+        "Master warriors, especially with swords",
+        "Independent and proud",
+        "Hammerfell seceded from Empire",
+        "Desert warriors"
+      ]
+    },
+    {
+      "id": "high_elf",
+      "name": "High Elf (Altmer)",
+      "description": "Tall elves from Summerset Isle, naturally gifted with magic",
+      "homeland": "Summerset Isle",
+      "appearance": "Tall, golden skin, angular features",
+      "racial_ability": {
+        "name": "Highborn",
+        "effect": "Once per session, regenerate all magicka instantly"
+      },
+      "skill_bonuses": [
+        "Illusion",
+        "Conjuration",
+        "Enchanting",
+        "Destruction",
+        "Restoration",
+        "Alteration"
+      ],
+      "starting_aspect": "Highborn Mage",
+      "cultural_traits": [
+        "Supremacist attitudes (many, not all)",
+        "Extremely long-lived",
+        "Natural magical talent",
+        "Association with Thalmor (problematic in Skyrim)",
+        "Sophisticated culture"
+      ],
+      "social_note": "High Elves face prejudice in Skyrim due to Thalmor"
+    },
+    {
+      "id": "wood_elf",
+      "name": "Wood Elf (Bosmer)",
+      "description": "Small elves from Valenwood, expert hunters and archers",
+      "homeland": "Valenwood",
+      "appearance": "Short, nimble, tan skin",
+      "racial_ability": {
+        "name": "Resist Disease",
+        "effect": "+2 to resist disease and poison"
+      },
+      "racial_power": {
+        "name": "Command Animal",
+        "effect": "Once per session, make animals fight for you for one scene",
+        "usage": "Affects natural beasts"
+      },
+      "skill_bonuses": [
+        "Archery",
+        "Alchemy",
+        "Light Armor",
+        "Lockpicking",
+        "Pickpocket",
+        "Sneak"
+      ],
+      "starting_aspect": "Bosmer Hunter",
+      "cultural_traits": [
+        "Expert archers and scouts",
+        "Green Pact (carnivorous diet, no harming plants in Valenwood)",
+        "Nimble and stealthy",
+        "Connection to nature"
+      ]
+    },
+    {
+      "id": "dark_elf",
+      "name": "Dark Elf (Dunmer)",
+      "description": "Gray-skinned elves from Morrowind, refugees in Skyrim",
+      "homeland": "Morrowind (now refugees)",
+      "appearance": "Gray or blue skin, red eyes",
+      "racial_ability": {
+        "name": "Resist Fire",
+        "effect": "+2 to defend against fire damage"
+      },
+      "racial_power": {
+        "name": "Ancestor's Wrath",
+        "effect": "Once per session, cloak yourself in fire that damages adjacent enemies for one scene",
+        "usage": "Activate to create fire aura"
+      },
+      "skill_bonuses": [
+        "Destruction",
+        "Illusion",
+        "Alteration",
+        "Light Armor",
+        "Sneak",
+        "Alchemy"
+      ],
+      "starting_aspect": "Dunmer Refugee",
+      "cultural_traits": [
+        "Displaced after Red Year",
+        "Treated poorly in Skyrim (especially Windhelm)",
+        "Strong culture and traditions",
+        "Worship Tribunal or Daedra",
+        "Proud despite hardships"
+      ]
+    },
+    {
+      "id": "orc",
+      "name": "Orc (Orsimer)",
+      "description": "Strong warriors with stronghold communities",
+      "homeland": "Orsinium (High Rock/Hammerfell border) and strongholds",
+      "appearance": "Green skin, tusks, muscular build",
+      "racial_ability": {
+        "name": "Berserker Rage",
+        "effect": "Once per session, gain +3 to all physical attacks for two rounds, but take +1 stress from attacks",
+        "usage": "Activate during combat"
+      },
+      "skill_bonuses": [
+        "Heavy Armor",
+        "Enchanting",
+        "Block",
+        "Two-Handed",
+        "One-Handed",
+        "Smithing"
+      ],
+      "starting_aspect": "Orcish Warrior",
+      "cultural_traits": [
+        "Honor-bound warrior culture",
+        "Stronghold tribal society",
+        "Master smiths",
+        "Worship Malacath",
+        "Respect earned through strength"
+      ]
+    },
+    {
+      "id": "khajiit",
+      "name": "Khajiit",
+      "description": "Cat-like people from Elsweyr, traders and thieves",
+      "homeland": "Elsweyr",
+      "appearance": "Feline features, fur-covered, varied sub-species",
+      "racial_ability": {
+        "name": "Night Eye",
+        "effect": "Can see perfectly in darkness, no penalties for low light"
+      },
+      "racial_power": {
+        "name": "Claw Attack",
+        "effect": "Unarmed attacks deal +2 damage",
+        "usage": "Always active"
+      },
+      "skill_bonuses": [
+        "Sneak",
+        "Lockpicking",
+        "Pickpocket",
+        "One-Handed",
+        "Archery",
+        "Alchemy"
+      ],
+      "starting_aspect": "Khajiit Wanderer",
+      "cultural_traits": [
+        "Natural thieves and traders",
+        "Banned from cities (caravans only)",
+        "Face heavy prejudice",
+        "Connected to moon cycles",
+        "Diverse sub-species"
+      ],
+      "social_note": "Khajiit are not allowed in cities due to prejudice"
+    },
+    {
+      "id": "argonian",
+      "name": "Argonian",
+      "description": "Reptilian people from Black Marsh, adapted to water",
+      "homeland": "Black Marsh",
+      "appearance": "Lizard-like features, scales, various colorations",
+      "racial_ability": {
+        "name": "Resist Disease",
+        "effect": "+2 to resist disease and poison, can breathe underwater"
+      },
+      "racial_power": {
+        "name": "Histskin",
+        "effect": "Once per session, rapidly regenerate health (clear all stress boxes)",
+        "usage": "Activate when injured"
+      },
+      "skill_bonuses": [
+        "Lockpicking",
+        "Pickpocket",
+        "Sneak",
+        "Light Armor",
+        "Restoration",
+        "Alteration"
+      ],
+      "starting_aspect": "Argonian from the Marsh",
+      "cultural_traits": [
+        "Connected to Hist trees",
+        "Mysterious and alien to outsiders",
+        "Treated as second-class in Skyrim",
+        "Natural swimmers",
+        "Resistance to disease"
+      ]
+    }
+  ],
+  "racial_notes": {
+    "discrimination": "Certain races face prejudice in Skyrim (especially Khajiit, Argonians, Dark Elves, High Elves)",
+    "starting_equipment": "All races start with same basic equipment options",
+    "cultural_roleplay": "Players should consider cultural background in character decisions"
+  }
+}

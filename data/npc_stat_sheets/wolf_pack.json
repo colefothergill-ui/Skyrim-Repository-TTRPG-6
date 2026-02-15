@@ -1,0 +1,40 @@
+{
+  "name": "Wolf Pack",
+  "id": "npc_stat_wolf_pack",
+  "type": "Beast",
+  "category": "Enemy",
+  "location": "Forests and Tundra",
+  "faction": "Wildlife",
+  "aspects": {
+    "high_concept": "Pack of Hungry Wolves",
+    "trouble": "Feral Cunning, Fear of Fire",
+    "other_aspects": [
+      "Coordinated Pack Hunters",
+      "Territorial Predators"
+    ]
+  },
+  "skills": {
+    "Fair": ["Fight"],
+    "Average": ["Athletics", "Notice"]
+  },
+  "stunts": [
+    "Pack Tactics: For each additional wolf beyond the first, the pack gains +1 to create an advantage or overcome when acting together (max +3)",
+    "Howling Dread: Once per scene, the pack's howls impose a temporary aspect \"Instinctual Fear\" on prey"
+  ],
+  "stress": {
+    "physical": [false, false], 
+    "notes": "Treat each stress box as one wolf taken out (e.g., a pack of 2 wolves has 2 stress boxes)"
+  },
+  "consequences": {
+    "mild": null,
+    "moderate": null,
+    "severe": null
+  },
+  "refresh": 1,
+  "fate_points": 1,
+  "notes": "Wolf packs are common predators throughout Skyrim's forests and tundra. This stat block represents a coordinated pack acting as a single adversary using Fate Core conventions for nameless group enemies. Each stress box represents one wolf taken out. Packs use coordinated tactics and howling to intimidate prey. They fear fire and will flee if their pack is significantly reduced.",
+  "combat_tactics": "Wolf packs surround targets and attack from multiple angles, using Pack Tactics to gain advantages. They target the weakest-looking member of a group. The pack uses Howling Dread early in combat to impose fear. If more than half the pack is defeated, survivors flee. Fire-based attacks cause the pack to scatter immediately.",
+  "scene_triggers": ["Wilderness travel", "Forest encounters", "Road encounters", "Nighttime encounters", "Tundra exploration"],
+  "act_context": ["Act 1", "Act 2", "Act 3"],
+  "loot": ["Wolf pelt", "Wolf meat"]
+}

@@ -1,0 +1,78 @@
+{
+  "name": "Mercer Frey",
+  "id": "npc_stat_mercer_frey",
+  "type": "Breton Thief",
+  "category": "Faction Leader",
+  "location": "Riften (Ragged Flagon - Cistern)",
+  "faction": "Thieves Guild",
+  "aspects": {
+    "high_concept": "Guild Master with a Dark Secret",
+    "trouble": "Greed Corrupts Even the Greatest Thieves",
+    "other_aspects": [
+      "Master of the Skeleton Key",
+      "Cold, Calculating, and Ruthless",
+      "Betrayer Wearing a Trusted Mask"
+    ]
+  },
+  "skills": {
+    "Superb": ["Deceive"],
+    "Great": ["Stealth", "Burglary"],
+    "Good": ["Notice", "Fight", "Will"],
+    "Fair": ["Athletics", "Lore", "Contacts"],
+    "Average": ["Shoot", "Resources"]
+  },
+  "stunts": [
+    "Shadow Vault: +2 to Burglary when dealing with complex locks or traps",
+    "Master Deceiver: May use Deceive to defend against Empathy or Notice attempts to read intentions",
+    "Skeleton Key's Blessing: Once per session, automatically succeed at any Burglary roll to open a lock"
+  ],
+  "stress": {
+    "physical": [false, false, false],
+    "mental": [false, false, false, false]
+  },
+  "consequences": {
+    "mild": null,
+    "moderate": null,
+    "severe": null
+  },
+  "refresh": 3,
+  "armor": 1,
+  "notes": "Mercer Frey is the Guild Master of the Thieves Guild in Riften. Outwardly professional and dedicated to the guild's success, he secretly embezzled vast sums using the Skeleton Key. He betrayed and murdered his former partner Gallus, then framed Karliah for the crime. Mercer is cold, calculating, and utterly ruthless when his secrets are threatened. He maintains an air of authority and control, but his paranoia grows as the truth begins to surface.",
+  "combat_tactics": "Mercer fights dirty, using poisons, sneak attacks, and environmental hazards. He prioritizes escape over direct confrontation but will not hesitate to kill witnesses. In his final confrontation, he uses the Skeleton Key's power and the environment of Irkngthand to his advantage.",
+  "scene_triggers": ["Thieves Guild headquarters", "Guild briefings", "Loud and Clear planning", "Snow Veil Sanctum betrayal", "Irkngthand final confrontation"],
+  "act_context": ["Act 1", "Act 2"],
+  "starting_equipment": {
+    "armor": "Guild Master's Armor (Armor:1, +1 to Stealth)",
+    "weapon": "Chillrend (Weapon:2, frost damage)",
+    "other": ["Skeleton Key (Daedric Artifact)", "Lockpicks", "Poison vials", "500 gold"]
+  },
+  "social_interaction": "Mercer presents himself as stern but fair, a leader who demands excellence. He speaks with authority and doesn't waste words. He's dismissive of sentiment and focuses on results. Beneath this facade, he's paranoid and will eliminate threats without hesitation.",
+  "relationships": {
+    "Brynjolf": "Second-in-command, trusts Mercer completely (unaware of betrayal)",
+    "Karliah": "Former guild member, framed for Gallus's murder",
+    "Gallus": "Former partner, murdered by Mercer",
+    "Nocturnal": "Patron of the guild, betrayed by keeping the Skeleton Key",
+    "Maven Black-Briar": "Business associate and patron"
+  },
+  "personality_notes": {
+    "speaking_style": "Direct, authoritative, no-nonsense, dismissive of emotions",
+    "motivations": ["Accumulate personal wealth", "Maintain control of the guild", "Protect his secret betrayal", "Exploit the Skeleton Key's power"],
+    "fears": ["Being exposed as traitor", "Losing the Skeleton Key", "Nocturnal's wrath", "Loss of control"],
+    "quirks": ["Always calculating exits", "Paranoid about loyalty", "Obsessed with the Eyes of the Falmer"],
+    "character_growth": "Mercer's arc is one of falling - his greed and betrayal spiral into desperation as the player uncovers his crimes. His final stand shows a man who chose power over honor and paid the ultimate price."
+  },
+  "story_hooks": [
+    "Plans the Goldenglow Estate job as Guild Master",
+    "Assigns player to investigate Honningbrew Meadery",
+    "Becomes suspicious of player's success and growing influence",
+    "Betrays player and Karliah at Snow Veil Sanctum",
+    "Final confrontation at Irkngthand where truth is revealed"
+  ],
+  "dialogue_samples": {
+    "greeting": "You're the new recruit Brynjolf keeps going on about. Let's see if you're worth the trouble.",
+    "briefing": "The job is simple. Get in, handle the problem, get out. No witnesses, no mistakes. Understood?",
+    "suspicious": "You've been asking a lot of questions lately. I hope you remember where your loyalties lie.",
+    "betrayal": "You should have stayed out of this. The guild is mine, and I won't let anyone take it from me.",
+    "final_words": "Everything I did, I did for myself. And I'd do it all again."
+  }
+}

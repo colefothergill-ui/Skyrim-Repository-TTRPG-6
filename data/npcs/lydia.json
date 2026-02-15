@@ -1,0 +1,182 @@
+{
+  "name": "Lydia",
+  "id": "lydia",
+  "type": "Housecarl",
+  "location": "Dragonsreach, Whiterun (or following the Thane)",
+  "faction": "Whiterun Court",
+  "aspects": {
+    "high_concept": "Sworn Housecarl and Loyal Protector",
+    "trouble": "Duty-Bound to the Point of Self-Sacrifice",
+    "other_aspects": [
+      "I Am Sworn to Carry Your Burdens",
+      "Shield-Maiden of Whiterun",
+      "Honor Through Service",
+      "Quietly Observant"
+    ]
+  },
+  "skills": {
+    "Great": ["Fight"],
+    "Good": ["Physique", "Notice"],
+    "Fair": ["Athletics", "Will", "Provoke"],
+    "Average": ["Shoot", "Rapport"]
+  },
+  "stunts": [
+    "Shield-Maiden: +2 to Fight when defending an ally or using a shield",
+    "Burden Bearer: Can carry extra equipment without penalty and +2 to Physique for carrying/lifting",
+    "Sworn Protector: Once per session, can take a consequence meant for the Thane",
+    "Vigilant Guard: +2 to Notice when watching for threats to her charge"
+  ],
+  "stress": {
+    "physical": [false, false, false],
+    "mental": [false, false]
+  },
+  "consequences": {
+    "mild": null,
+    "moderate": null,
+    "severe": null
+  },
+  "refresh": 2,
+  "fate_points": 2,
+  "notes": "Lydia is assigned as housecarl when a character becomes Thane of Whiterun. She is a skilled warrior who takes her oath of service seriously, willing to follow into any danger.",
+  "relationships": {
+    "Thane/Player": "Sworn to serve and protect",
+    "Jarl Balgruuf": "Loyal to her Jarl, assigned by him",
+    "Irileth": "Fellow warrior, trained together",
+    "Proventus Avenicci": "Steward who handles logistics",
+    "Other Housecarls": "Professional respect"
+  },
+  "quests": ["Available as follower after becoming Thane of Whiterun"],
+  "inventory": ["Steel Sword", "Steel Shield", "Steel Armor", "Hunting Bow"],
+  "personality_notes": {
+    "speaking_style": "Professional, sometimes sarcastic in a dry way. 'I am sworn to carry your burdens' said with varying degrees of enthusiasm.",
+    "motivations": [
+      "Fulfill her oath to serve her Thane",
+      "Protect those she's sworn to guard",
+      "Bring honor to Whiterun",
+      "Prove herself as a capable warrior"
+    ],
+    "fears": [
+      "Failing in her duty",
+      "Her charge being killed while she lives",
+      "Being dismissed as inadequate",
+      "Letting down Jarl Balgruuf"
+    ],
+    "quirks": [
+      "Stoic and professional most of the time",
+      "Occasionally shows dry humor",
+      "Takes 'carry your burdens' literally and figuratively",
+      "Quietly loyal, actions speak louder than words"
+    ]
+  },
+  "loyalty": 60,
+  "companion_status": {
+    "available": true,
+    "current_status": "ready",
+    "max_loyalty": 100,
+    "dismissal_location": "Dragonsreach"
+  },
+  "loyalty_modifiers": {
+    "positive": [
+      {"action": "Complete quest together", "change": 2},
+      {"action": "Protect her in combat", "change": 3},
+      {"action": "Make noble/honorable choices", "change": 1},
+      {"action": "Praise her service", "change": 1},
+      {"action": "Include her in important decisions", "change": 2}
+    ],
+    "negative": [
+      {"action": "Friendly fire / attack her", "change": -10},
+      {"action": "Dismiss her rudely", "change": -5},
+      {"action": "Treat her as mere pack mule", "change": -2},
+      {"action": "Make dishonorable choices", "change": -3},
+      {"action": "Leave her to die in combat", "change": -15}
+    ]
+  },
+  "dialogue_trees": {
+    "recruitment": {
+      "greeting": "I am your housecarl. I am sworn to carry your burdens.",
+      "responses": [
+        {
+          "option": "Follow me",
+          "leads_to": "accepts_companion",
+          "companion_status": "active"
+        },
+        {
+          "option": "Wait here",
+          "leads_to": "wait_mode",
+          "companion_status": "waiting"
+        },
+        {
+          "option": "Go home",
+          "leads_to": "dismiss",
+          "companion_status": "dismissed"
+        }
+      ]
+    },
+    "high_loyalty": {
+      "condition": "loyalty >= 80",
+      "dialogue": "I would follow you anywhere, my Thane. Your enemies are mine.",
+      "benefits": ["Will never refuse dangerous missions", "Better combat bonuses", "Shares personal thoughts"]
+    },
+    "low_loyalty": {
+      "condition": "loyalty <= 30",
+      "dialogue": "I am sworn to serve... but must it always be like this?",
+      "consequences": ["May hesitate in combat", "Complains more", "Risk of leaving service"]
+    }
+  },
+  "companion_mechanics": {
+    "combat_style": "Tank - frontline fighter with sword and shield",
+    "preferred_tactics": "Aggressive defense, protect allies, engage strongest enemies",
+    "carry_capacity": "High - can carry significant loot",
+    "special_abilities": [
+      "Shield bash to stagger enemies",
+      "Can take hits meant for player",
+      "Reliable in most combat situations"
+    ]
+  },
+  "branching_interactions": {
+    "civil_war_imperial": "Approves, Whiterun leans Imperial",
+    "civil_war_stormcloak": "Conflicted but follows duty",
+    "civil_war_neutral": "Supports Jarl Balgruuf's neutrality",
+    "dark_brotherhood": "Disapproves of assassin work, loyalty -5",
+    "honorable_quests": "Approves, loyalty +2"
+  },
+  "decision_points": {
+    "battle_of_whiterun": {
+      "condition": "if_following_during_battle",
+      "stormcloak_side": {
+        "dialogue": "I serve you, my Thane, but this... this is attacking my home.",
+        "loyalty_change": -10,
+        "may_refuse": true
+      },
+      "imperial_side": {
+        "dialogue": "I will defend Whiterun to my last breath!",
+        "loyalty_change": 5,
+        "combat_bonus": 2
+      }
+    },
+    "dangerous_mission": {
+      "condition": "facing_dragon_or_deadly_threat",
+      "high_loyalty": "Follows without question",
+      "medium_loyalty": "Expresses concern but follows",
+      "low_loyalty": "May refuse if seems suicidal"
+    }
+  },
+  "story_hooks": [
+    "Trained as warrior by Whiterun guard",
+    "Takes her oath very seriously",
+    "Can become marry-able after long service",
+    "One of the most reliable companions",
+    "Will sacrifice herself to protect the Thane",
+    "Her 'burdens' line is famous but she means it sincerely"
+  ],
+  "if_dismissed": {
+    "location": "Returns to Dragonsreach",
+    "availability": "Can be recruited again anytime",
+    "attitude": "Professional, awaits your return"
+  },
+  "if_killed": {
+    "jarl_balgruuf_reaction": "Disappointed and saddened",
+    "replacement": "No replacement housecarl assigned",
+    "consequence": "Loss of reliable companion"
+  }
+}

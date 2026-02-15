@@ -1,0 +1,114 @@
+{
+  "name": "Brynjolf",
+  "id": "npc_stat_brynjolf",
+  "type": "Nord Thief",
+  "category": "Faction Leader",
+  "location": "Riften (Marketplace and Ragged Flagon)",
+  "faction": "Thieves Guild",
+  "aspects": {
+    "high_concept": "Charismatic Thieves Guild Lieutenant",
+    "trouble": "Loyal to a Fault - Even When Betrayed",
+    "other_aspects": [
+      "Silver Tongue of the Ragged Flagon",
+      "Dreams of Restoring Guild Glory",
+      "Sees Potential in Unlikely People"
+    ]
+  },
+  "skills": {
+    "Great": ["Deceive"],
+    "Good": ["Stealth", "Rapport"],
+    "Fair": ["Notice", "Burglary", "Contacts"],
+    "Average": ["Athletics", "Fight", "Resources"]
+  },
+  "stunts": [
+    "Fast Talker: +2 to Deceive when creating advantages through distraction or misdirection",
+    "Shadow Step: Once per scene, move two zones without being detected",
+    "Guild Connections: +2 to Contacts when seeking information in criminal underworld"
+  ],
+  "stress": {
+    "physical": [false, false, false],
+    "mental": [false, false, false, false]
+  },
+  "consequences": {
+    "mild": null,
+    "moderate": null,
+    "severe": null
+  },
+  "refresh": 3,
+  "armor": 0,
+  "notes": "Brynjolf is the second-in-command of the Thieves Guild, a charismatic Nord with a silver tongue and keen eye for talent. He operates openly in Riften's marketplace, recruiting promising thieves while maintaining the guild's operations. Despite the guild's decline, he remains fiercely loyal and works tirelessly to restore its former glory. He has a natural ability to read people and often sees potential in unlikely candidates.\n\n[Update] Insaerndel secured Battle-Born Arcana as a sanctioned Whiterun front/safehouse; Brynjolf receives Olfrid's sealed reply tonight.",
+  "trust_clock": {
+    "enabled": true,
+    "current": 4,
+    "max": 8,
+    "description": "Brynjolf's personal trust in Insaerndel (separate from overall guild standing).",
+    "gain_triggers": [
+      "+1: clean heist with no collateral fallout",
+      "+1: protecting guild secrecy under pressure",
+      "+2: major score that strengthens Riften operations",
+      "+1: taking heat off the guild (without dragging innocents into it)"
+    ],
+    "loss_triggers": [
+      "-1: sloppy job that brings guard attention",
+      "-2: betraying a guild secret",
+      "-2: letting a witness identify the guild",
+      "-3: cooperating with authorities against guild interests"
+    ],
+    "milestones": {
+      "4": "Brynjolf treats PC as reliable inner-circle muscle/brain",
+      "6": "Brynjolf shares sensitive guild intel without hesitation",
+      "8": "Brynjolf is ride-or-die: major favors, personal risks taken"
+    }
+  },
+  "combat_tactics": "Brynjolf avoids direct combat when possible, preferring stealth and misdirection. When forced to fight, he uses hit-and-run tactics, exploiting environmental advantages and his Shadow Step ability to stay mobile. He'll talk his way out of situations before resorting to violence.",
+  "scene_triggers": ["Riften marketplace", "Thieves Guild recruitment", "Whiterun mission", "Guild questline"],
+  "act_context": ["Act 1", "Act 2", "Act 3"],
+  "starting_equipment": {
+    "armor": "Guild Master's Armor (Armor:0, +1 to Stealth)",
+    "weapon": "Guild Dagger (Weapon:1, concealable)",
+    "other": ["Lockpicks x5", "Thieves Guild emblem", "50 gold", "Contact list"]
+  },
+  "social_interaction": "Brynjolf is smooth, confident, and charming. He speaks with a warm Nordic accent and has a way of making people feel special and capable. He's excellent at reading people and adjusting his approach accordingly. While he operates outside the law, he has his own code of honor - he doesn't kill unnecessarily and protects guild members fiercely. He's pragmatic but optimistic about the guild's future.",
+  "relationships": {
+    "Mercer Frey": "Guild Master, trusts completely (unaware of betrayal)",
+    "Karliah": "Former guild member, believes traitor story",
+    "Vex": "Fellow guild member, professional respect",
+    "Delvin Mallory": "Longtime friend and colleague",
+    "Maven Black-Briar": "Powerful ally and patron of the guild",
+    "Olfrid Battle-Born": "Contact in Whiterun for guild operations"
+  },
+  "personality_notes": {
+    "speaking_style": "Smooth and charismatic, uses terms like 'lass' and 'lad', friendly but professional",
+    "motivations": ["Restore Thieves Guild to former glory", "Recruit talented individuals", "Maintain guild operations and income", "Protect guild members"],
+    "fears": ["Guild's complete collapse", "Losing more members", "Being unable to restore guild's luck", "Betraying Nocturnal's trust"],
+    "quirks": ["Always sizing people up for potential", "Refers to guild as 'family'", "Maintains optimism despite setbacks"],
+    "character_growth": "Eventually discovers Mercer's betrayal, must reconcile faith with reality, learns to trust his own judgment over authority"
+  },
+  "whiterun_mission": {
+    "status": "completed",
+    "context": "During neutral faction starts, Brynjolf sends PC to Whiterun to deliver a message to Olfrid Battle-Born regarding guild business during the civil war tensions (COMPLETED: Whiterun safehouse secured; reply obtained).",
+    "objective": "Establish guild presence in Whiterun, gather intelligence on civil war situation",
+    "complications": "Battle of Whiterun erupts during mission, forcing PC to choose sides",
+    "connection_to_main_plot": "This mission puts the PC in position for Hadvar/Ralof encounter"
+  },
+  "story_hooks": [
+    "Recruits PC for Thieves Guild with his signature job test",
+    "Sends PC on missions across Skyrim to restore guild influence",
+    "Provides connections to criminal underworld in major cities",
+    "Eventually becomes crucial ally in uncovering Mercer's betrayal",
+    "Can facilitate entry to Riften's black market and Maven Black-Briar's operations",
+    "Whiterun mission serves as neutral faction entry point to Battle of Whiterun"
+  ],
+  "dialogue_samples": {
+    "greeting": "Well, well. You've got the look of someone who can handle themselves. I've got an opportunity for someone with your skills.",
+    "recruitment": "I've got my eye on you, and I like what I see. The guild could use someone like you - someone who isn't afraid to take risks.",
+    "whiterun_mission": "I need you to head to Whiterun. Find Olfrid Battle-Born and deliver this message. With the war heating up, we need to ensure our operations there stay... profitable.",
+    "during_crisis": "Stay sharp out there. The civil war's making everything complicated, but that also means opportunities for those clever enough to see them.",
+    "personal": "The guild's been down on its luck lately, but I haven't lost faith. We'll return to our former glory - I can feel it. Just need the right people."
+  },
+  "neutral_faction_integration": {
+    "starting_narrative": "Brynjolf approaches you in Riften after hearing of your skills. He offers a place in the Thieves Guild and immediately sends you to Whiterun with an urgent message for Olfrid Battle-Born. The guild needs to secure its operations before the civil war tears everything apart.",
+    "transition_to_battle": "You arrive in Whiterun to find tensions at a breaking point. As you deliver Brynjolf's message to Olfrid, news arrives that Stormcloak forces are approaching. The Battle of Whiterun is about to begin, and you must choose where you stand.",
+    "consequences": "Your choice during the battle will affect Thieves Guild operations in Whiterun and your relationship with Olfrid, who has strong political connections."
+  }
+}

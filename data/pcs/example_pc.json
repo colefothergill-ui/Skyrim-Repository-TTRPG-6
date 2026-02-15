@@ -1,0 +1,86 @@
+{
+  "name": "Erich Stormblade",
+  "id": "pc_001",
+  "player": "Player Name",
+  "race": "Nord",
+  "class": "Warrior",
+  "level": 3,
+  "aspects": {
+    "high_concept": "Nord Warrior Seeking Redemption",
+    "trouble": "Haunted by Past Mistakes",
+    "other_aspects": [
+      "Defender of the Weak",
+      "Descendant of Ancient Heroes",
+      "Distrusts Magic Users"
+    ]
+  },
+  "skills": {
+    "Great (+4)": [
+      "Fight"
+    ],
+    "Good (+3)": [
+      "Athletics",
+      "Physique"
+    ],
+    "Fair (+2)": [
+      "Will",
+      "Notice",
+      "Rapport"
+    ],
+    "Average (+1)": [
+      "Shoot",
+      "Stealth",
+      "Lore",
+      "Empathy"
+    ]
+  },
+  "stunts": [
+    "Whirlwind Attack: Once per scene, attack all enemies in your zone",
+    "Battle Fury: +2 to Fight when you take a consequence",
+    "Unbreakable: Gain +2 to defend against physical attacks when you invoke an aspect"
+  ],
+  "stress": {
+    "physical": [
+      false,
+      false,
+      false,
+      false
+    ],
+    "mental": [
+      false,
+      false,
+      false
+    ]
+  },
+  "consequences": {
+    "mild": null,
+    "moderate": null,
+    "severe": null
+  },
+  "refresh": 3,
+  "fate_points": 3,
+  "experience": 150,
+  "milestones": [
+    "Minor: Defeated bandits at Valtheim Towers",
+    "Significant: Cleared Bleak Falls Barrow",
+    "Major: Became Thane of Whiterun"
+  ],
+  "equipment": [
+    "Iron Greatsword",
+    "Hide Armor",
+    "Healing Potion x3",
+    "Lockpicks x5"
+  ],
+  "gold": 250,
+  "relationships": {
+    "Lydia": "Trusted companion",
+    "Jarl Balgruuf": "Ally and patron",
+    "Ulfric Stormcloak": "Suspicious of motives"
+  },
+  "quests": [
+    "Active: Investigate rumors of unrest",
+    "Active: Support the civil war effort",
+    "Completed: Retrieved Dragonstone from Bleak Falls Barrow"
+  ],
+  "notes": "Erich is a Nord warrior who recently became Thane of Whiterun. He is rising as a hero in the Civil War while trying to atone for past mistakes."
+}

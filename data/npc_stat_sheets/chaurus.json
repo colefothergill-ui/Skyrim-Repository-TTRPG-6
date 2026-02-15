@@ -1,0 +1,42 @@
+{
+  "name": "Chaurus",
+  "id": "npc_stat_chaurus",
+  "type": "Insect",
+  "category": "Enemy",
+  "location": "Dwemer ruins, Falmer lairs, deep caves",
+  "faction": "Falmer (enslaved)",
+  "aspects": {
+    "high_concept": "Giant Subterranean Insect Predator",
+    "trouble": "Slow and Clumsy on Surface",
+    "other_aspects": [
+      "Deadly Poison Spit",
+      "Bred and Controlled by Falmer",
+      "Armored Chitin Shell"
+    ]
+  },
+  "skills": {
+    "Good": ["Fight"],
+    "Fair": ["Physique", "Notice"],
+    "Average": ["Athletics"]
+  },
+  "stunts": [
+    "Poison Spit: Can attack at range using Fight skill. Successful hits create 'Poisoned' aspect with two free invokes",
+    "Armored Shell: +2 to defend against physical attacks with blades (not blunt weapons or magic)",
+    "Falmer Bond: When fighting alongside Falmer, both gain +1 to Fight"
+  ],
+  "stress": {
+    "physical": [false, false, false],
+    "mental": []
+  },
+  "consequences": {
+    "mild": null,
+    "moderate": null
+  },
+  "refresh": 1,
+  "fate_points": 1,
+  "notes": "Chaurus are giant insects that live in underground environments, particularly in Falmer-controlled areas. The Falmer breed and use them as guard animals and livestock. They attack with poisonous spit and powerful mandibles. Their armored shells make them difficult to damage.",
+  "combat_tactics": "Chaurus spit poison at range when possible, then close for melee. They are slow but relentless. Often fight alongside Falmer as guard creatures. They don't retreat and fight until destroyed.",
+  "scene_triggers": ["Dwemer ruins", "Falmer lairs", "Deep underground exploration", "Chaurus breeding grounds"],
+  "act_context": ["Act 2", "Act 3"],
+  "loot": ["Chaurus eggs", "Chaurus chitin", "Chaurus poison glands"]
+}

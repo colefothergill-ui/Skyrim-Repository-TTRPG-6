@@ -1,0 +1,80 @@
+{
+  "name": "Vampire",
+  "id": "enemy_vampire",
+  "type": "Undead Humanoid",
+  "category": "Enemy",
+  "location": "Caves, ruins, cities (disguised)",
+  "faction": "Vampires",
+  "aspects": {
+    "high_concept": "Immortal Blood-Drinker",
+    "trouble": "Sunlight Burns Away Power",
+    "other_aspects": [
+      "Predator Among Sheep",
+      "Centuries of Experience",
+      "Thralls Do My Bidding"
+    ]
+  },
+  "skills": {
+    "Great": ["Deceive", "Fight"],
+    "Good": ["Lore", "Stealth", "Will"],
+    "Fair": ["Athletics", "Notice", "Rapport"],
+    "Average": ["Empathy", "Provoke"]
+  },
+  "stunts": [
+    "Vampiric Drain: Use Lore to attack and heal (on successful attack, heal 1 stress box per 2 shifts)",
+    "Supernatural Speed: +2 to Athletics when dodging or pursuing",
+    "Mesmerizing Gaze: Use Rapport to create 'Enthralled' aspect (victim cannot attack vampire for one exchange)",
+    "Raise Thrall: Spend fate point to have a dominated human servant appear to aid vampire",
+    "Night Vision: No penalties for darkness"
+  ],
+  "stress": {
+    "physical": [false, false, false],
+    "mental": [false, false, false]
+  },
+  "consequences": {
+    "mild": null,
+    "moderate": null,
+    "severe": null
+  },
+  "refresh": 2,
+  "notes": "Vampires are cursed undead who feed on blood. They're intelligent, often sophisticated, and can pass as mortal in cities. They're vulnerable to sunlight and fire but possess supernatural abilities including speed, strength, magic, and the power to drain life. Many vampires maintain a facade of normalcy while secretly feeding on victims. They're often centuries old with vast knowledge and resources.",
+  "special_mechanics": {
+    "sunlight_vulnerability": {
+      "description": "In direct sunlight, vampire loses all supernatural abilities and takes 2 stress per exchange",
+      "indoor_safe": "Vampires are safe indoors or in shade",
+      "night_power": "At night or underground, vampires are at full power"
+    },
+    "fire_weakness": "Fire attacks ignore armor and do +2 stress",
+    "regeneration": "At start of vampire's turn, heal 1 physical stress if not in sunlight and not at full health",
+    "disease": "Victims who survive vampire attacks must resist Sanguinare Vampiris (disease that turns them into vampires if untreated for 3 days)"
+  },
+  "combat_tactics": "Vampires prefer ambush and subterfuge. They'll use Mesmerizing Gaze to isolate victims, then drain them with Vampiric Drain. They fight intelligently, using stealth and terrain. If seriously threatened, they'll summon thralls or flee to fight another night. They avoid sunlight at all costs.",
+  "scene_triggers": ["Night encounters in cities", "Cave lairs", "Murders with drained bodies", "Vampire clan missions", "Disguised as nobles or merchants"],
+  "act_context": ["Act 1", "Act 2", "Act 3"],
+  "social_interaction": "Vampires can be reasoned with - they're intelligent and often prefer not to fight unnecessarily. They respond to Deceive (they're master liars themselves), Rapport (they can be charming), and sometimes bribery. They may offer deals but rarely keep them unless magically bound.",
+  "loot": {
+    "guaranteed": ["Vampire dust (alchemy ingredient)", "Some gold (50-100)"],
+    "possible": ["Fine clothes", "Jewelry", "Blood potions", "Enchanted weapons"],
+    "lair_loot": "Vampire lairs contain accumulated wealth from victims and centuries of living"
+  },
+  "variants": [
+    {
+      "name": "Vampire Fledgling",
+      "changes": "Reduce all skills by -1, no Raise Thrall stunt, recently turned and less experienced"
+    },
+    {
+      "name": "Vampire Nightlord",
+      "changes": "Increase skills by +1, add additional magic abilities (invisibility, ice magic), more thralls available"
+    },
+    {
+      "name": "Vampire Master",
+      "changes": "All skills at Superb or higher, multiple fate points, ancient knowledge, powerful political connections, possibly leads vampire clan"
+    }
+  ],
+  "clan_affiliations": {
+    "description": "Vampires often belong to clans with different philosophies",
+    "volkihar_clan": "Ancient, powerful, seek to blot out the sun",
+    "cyrodiil_order": "More civilized, maintain cover in cities",
+    "feral_vampires": "Given in to beast nature, more savage, less intelligent"
+  }
+}

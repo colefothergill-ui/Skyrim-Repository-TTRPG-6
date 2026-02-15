@@ -1,0 +1,99 @@
+{
+  "quest_id": "quest_002",
+  "name": "Bleak Falls Barrow",
+  "type": "Side Quest / Main Quest Path",
+  "status": "Pending",
+  "giver": "Farengar Secret-Fire (Court Wizard)",
+  "location": "Bleak Falls Barrow",
+  "description": "Farengar Secret-Fire, the court wizard of Whiterun, needs you to retrieve an ancient Nordic artifact from Bleak Falls Barrow for his research on Nordic history and magic.",
+  "objectives": [
+    {
+      "description": "Travel to Bleak Falls Barrow",
+      "status": "Pending",
+      "optional": false
+    },
+    {
+      "description": "Retrieve the ancient tablet",
+      "status": "Pending",
+      "optional": false
+    },
+    {
+      "description": "Return the tablet to Farengar",
+      "status": "Pending",
+      "optional": false
+    },
+    {
+      "description": "Deal with Arvel the Swift",
+      "status": "Pending",
+      "optional": true
+    }
+  ],
+  "rewards": {
+    "experience": 75,
+    "gold": 400,
+    "items": ["Lesser Soul Gem", "Random enchanted weapon"],
+    "reputation": "+15 with Whiterun"
+  },
+  "prerequisites": ["Complete: Before the Storm"],
+  "consequences": {
+    "success": "Gain favor with Farengar, learn about Nordic history",
+    "failure": "Farengar's research is delayed"
+  },
+  "complications": [
+    "Bandits have occupied the exterior of the barrow",
+    "Ancient Draugr guard the interior",
+    "Giant spiders infest the tunnels",
+    "Arvel the Swift may betray the party",
+    "Powerful Draugr Overlord guards the ancient tablet"
+  ],
+  "enemies": [
+    {
+      "name": "Bandit Sentries",
+      "quantity": "3-5",
+      "difficulty": "Average"
+    },
+    {
+      "name": "Giant Spiders",
+      "quantity": "2-4",
+      "difficulty": "Fair"
+    },
+    {
+      "name": "Draugr Warriors",
+      "quantity": "6-8",
+      "difficulty": "Fair to Good"
+    },
+    {
+      "name": "Draugr Overlord",
+      "quantity": "1",
+      "difficulty": "Great",
+      "special": "Can use Unrelenting Force shout"
+    }
+  ],
+  "loot": [
+    "Ancient Nordic Tablet (quest item)",
+    "Golden Claw (can be returned to Lucan in Riverwood)",
+    "Various potions and gold",
+    "Ancient Nord weapons",
+    "Word Wall: Unrelenting Force (Fus)"
+  ],
+  "notes": "This quest introduces players to Nordic ruins, Draugr, and ancient Nordic magic. The Draugr Overlord should be a challenging but fair boss fight. Players may learn their first word of power from the word wall. Note: In the post-Alduin timeline, this is a research mission rather than crisis preparation.",
+  "related_npcs": ["Farengar Secret-Fire", "Arvel the Swift", "Lucan Valerius (optional)"],
+  "related_locations": ["Bleak Falls Barrow", "Dragonsreach", "Riverwood (optional)"],
+  "fate_core_notes": {
+    "aspects": [
+      "Ancient Nord Ruins: Trapped and Deadly",
+      "Restless Dead: The Draugr Stir",
+      "Sacred Word Wall: Power Awaits"
+    ],
+    "compels": [
+      "Dungeon is dark - hard to notice traps",
+      "Draugr rise from their coffins unexpectedly",
+      "Ancient mechanisms may malfunction"
+    ],
+    "scene_aspects": [
+      "Narrow Corridors: Movement restricted",
+      "Swinging Blade Trap: Active",
+      "Spider Webs: Difficult terrain"
+    ]
+  }
+}

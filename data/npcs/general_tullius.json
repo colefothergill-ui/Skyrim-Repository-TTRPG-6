@@ -1,0 +1,179 @@
+{
+  "name": "General Tullius",
+  "id": "general_tullius",
+  "type": "Imperial Commander",
+  "location": "Castle Dour, Solitude",
+  "faction": "Imperial Legion",
+  "aspects": {
+    "high_concept": "Disciplined Imperial General Sent to Quell the Rebellion",
+    "trouble": "Underestimates Nord Culture and Traditions",
+    "other_aspects": [
+      "By the Book Military Commander",
+      "Loyal to the Emperor Above All",
+      "Pragmatic and Results-Oriented",
+      "War is Politics by Other Means"
+    ]
+  },
+  "skills": {
+    "Great": ["Tactics", "Will"],
+    "Good": ["Fight", "Notice", "Command"],
+    "Fair": ["Physique", "Shoot", "Resources"],
+    "Average": ["Lore", "Rapport"]
+  },
+  "stunts": [
+    "Legion Commander: +2 to Tactics when commanding Imperial forces in battle",
+    "Tactical Superiority: Once per scene, grant all allied Imperials in the zone +2 to their next action",
+    "Veteran Officer: +2 to Will when resisting intimidation or demoralization",
+    "Strategic Mind: Can use Tactics instead of Notice to assess threats and opportunities"
+  ],
+  "stress": {
+    "physical": [false, false, false],
+    "mental": [false, false, false, false]
+  },
+  "consequences": {
+    "mild": null,
+    "moderate": null,
+    "severe": null
+  },
+  "refresh": 3,
+  "fate_points": 3,
+  "notes": "General Tullius is a career soldier from Cyrodiil sent to pacify Skyrim. He sees the Stormcloak rebellion as an unnecessary distraction from the real threat - the Aldmeri Dominion. Efficient and pragmatic, but struggles to understand Nord culture. Skills note: 'Tactics' and 'Command' are custom Skyrim campaign skills appropriate for military leaders - Tactics for strategic planning, Command for direct troop leadership.",
+  "relationships": {
+    "Emperor Titus Mede II": "Absolute loyalty",
+    "Legate Rikke": "Trusted second-in-command",
+    "Ulfric Stormcloak": "Dangerous rebel to be executed",
+    "Elenwen": "Necessary ally but distrusted",
+    "Jarl Balgruuf": "Potential ally if convinced",
+    "Jarl Elisif": "Supports as legitimate High Queen",
+    "Player Characters": "Assets if loyal to Empire"
+  },
+  "quests": ["Civil War Questline (Imperial)", "Season Unending"],
+  "inventory": ["Imperial General's Armor", "Fine Imperial Sword", "Strategic Maps"],
+  "personality_notes": {
+    "speaking_style": "Direct, military precision, formal. Impatient with politics.",
+    "motivations": [
+      "End the Stormcloak rebellion swiftly",
+      "Maintain Imperial control of Skyrim",
+      "Prepare Skyrim for the next war with the Thalmor",
+      "Prove his worth to the Emperor"
+    ],
+    "fears": [
+      "The rebellion lasting too long and weakening the Empire",
+      "Thalmor using the civil war to their advantage",
+      "Being recalled in disgrace",
+      "Skyrim falling into chaos"
+    ],
+    "quirks": [
+      "Dismisses local customs as irrelevant",
+      "Relies heavily on Legate Rikke for cultural insight",
+      "Frustrated by Thalmor interference",
+      "Prefers direct military solutions to political maneuvering"
+    ]
+  },
+  "loyalty": 0,
+  "trust_clock": {
+    "current": 0,
+    "max": 8,
+    "advancement_triggers": [
+      "Join Imperial Legion (+3)",
+      "Win major battle for Empire (+1)",
+      "Complete critical military missions (+1)",
+      "Demonstrate tactical competence (+1)",
+      "Show loyalty to Empire (+1)"
+    ],
+    "setback_triggers": [
+      "Join Stormcloaks (-10, irreversible)",
+      "Question Imperial authority (-2)",
+      "Fail critical missions (-2)",
+      "Aid Ulfric or Stormcloaks (-3)"
+    ]
+  },
+  "dialogue_trees": {
+    "initial_meeting": {
+      "greeting": "You have the look of a soldier. Perhaps you'll prove useful to the Empire.",
+      "responses": [
+        {
+          "option": "I want to join the Legion",
+          "leads_to": "recruitment_path",
+          "loyalty_change": 5,
+          "quest_trigger": "joining_the_legion"
+        },
+        {
+          "option": "Tell me about the war",
+          "leads_to": "war_explanation",
+          "loyalty_change": 0
+        },
+        {
+          "option": "I support the Stormcloaks",
+          "leads_to": "hostile_response",
+          "loyalty_change": -10,
+          "relationship_change": "enemy"
+        }
+      ]
+    },
+    "recruitment_path": {
+      "dialogue": "Good. Report to Legate Rikke. We need every able body to crush this rebellion.",
+      "quest_activated": "joining_the_legion",
+      "faction_alignment": "imperial_legion"
+    },
+    "war_explanation": {
+      "dialogue": "Ulfric Stormcloak murdered the High King and started this rebellion. It's treason, plain and simple. We will restore order.",
+      "responses": [
+        {
+          "option": "The Stormcloaks have valid grievances",
+          "leads_to": "political_disagreement",
+          "loyalty_change": -2
+        },
+        {
+          "option": "How can I help?",
+          "leads_to": "recruitment_path",
+          "loyalty_change": 3
+        }
+      ]
+    }
+  },
+  "branching_interactions": {
+    "if_imperial": "Primary quest giver and military commander",
+    "if_stormcloak": "Major antagonist, will personally oversee execution if captured",
+    "if_neutral": "Attempts recruitment, sees neutrality as wasted potential",
+    "respected_warrior": "Respects martial prowess and dedication to causes"
+  },
+  "decision_points": {
+    "civil_war_choice": {
+      "condition": "player_must_choose_side",
+      "options": ["imperial", "stormcloak", "delay"],
+      "consequences": {
+        "imperial": {
+          "loyalty_change": 10,
+          "unlocks": "imperial_questline",
+          "relationship": "ally"
+        },
+        "stormcloak": {
+          "loyalty_change": -20,
+          "unlocks": "becomes_enemy",
+          "relationship": "enemy"
+        },
+        "delay": {
+          "loyalty_change": -2,
+          "note": "Tullius becomes impatient"
+        }
+      }
+    },
+    "battle_strategy": {
+      "condition": "during_major_battle",
+      "options": ["aggressive", "defensive", "flanking"],
+      "skill_check": "tactics",
+      "success": "loyalty +2, tactical advantage",
+      "failure": "loyalty -1, strategic setback"
+    }
+  },
+  "combat_tactics": "Commands from rear with strategic overview. Uses Legion formations and discipline. Will personally fight if pressed but prefers to direct troops. Focuses on weak points and overwhelming force.",
+  "story_hooks": [
+    "Sent from Cyrodiil specifically to end the rebellion",
+    "Frustrated by Thalmor interference in Imperial affairs",
+    "Relies on Legate Rikke to understand Nord culture",
+    "Sees Ulfric as a traitor, not a freedom fighter",
+    "Believes Empire is Skyrim's only defense against Thalmor",
+    "Personal honor tied to success in Skyrim"
+  ]
+}

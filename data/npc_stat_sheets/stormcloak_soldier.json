@@ -1,0 +1,73 @@
+{
+  "name": "Stormcloak Soldier",
+  "id": "npc_stat_stormcloak_soldier",
+  "type": "Nord Rebel",
+  "category": "Enemy",
+  "location": "Eastmarch, forts, Stormcloak territory",
+  "faction": "Stormcloaks",
+  "aspects": {
+    "high_concept": "Devoted to Skyrim's Freedom",
+    "trouble": "Outnumbered by Imperial Forces",
+    "other_aspects": [
+      "True Sons of Skyrim",
+      "Die for Talos",
+      "Strength in Brotherhood"
+    ]
+  },
+  "skills": {
+    "Good": ["Fight", "Physique"],
+    "Fair": ["Will", "Athletics"],
+    "Average": ["Notice", "Provoke"]
+  },
+  "stunts": [
+    "Battle Cry: +2 to Attack when fighting alongside other Stormcloaks",
+    "For Skyrim: Once per scene, ignore one consequence to continue fighting",
+    "Squad Tactics: When fighting as a group (3+), each soldier gains +1 to Fight"
+  ],
+  "stress": {
+    "physical": [false, false, false],
+    "mental": [false, false]
+  },
+  "consequences": {
+    "mild": null,
+    "moderate": null
+  },
+  "refresh": 2,
+  "notes": "Stormcloak soldiers are passionate Nord rebels fighting for Skyrim's independence. They gain strength from fighting together and their devotion to their cause makes them fearless. Individually they have +1 to combat skills, but when fighting as a squad (3 or more), they gain +2 bonuses due to coordinated tactics and morale.",
+  "combat_tactics": "Stormcloaks fight aggressively, using their Battle Cry to inspire allies. They prefer melee combat and shield walls. When outnumbered, they'll regroup at defensible positions. They never surrender if their Jarl or commanding officer is present.",
+  "scene_triggers": ["Fort defense", "Fort assault", "Patrol encounters in Eastmarch/Winterhold/Rift", "Ambushing Imperial supply lines", "Battle of Whiterun"],
+  "act_context": ["Act 1", "Act 2", "Act 3"],
+  "loot": {
+    "guaranteed": ["Stormcloak armor", "Iron/Steel weapon", "5-15 gold"],
+    "possible": ["Healing potion", "Stormcloak orders", "Map of Imperial positions"],
+    "group_loot": "Stormcloak camps contain supplies worth 30-100 gold and weapons cache"
+  },
+  "variants": [
+    {
+      "name": "Stormcloak Officer",
+      "changes": "Increase Fight to Great (+4), add stunt 'Rally the Troops: +2 to Provoke when commanding Stormcloaks in battle', add third mental stress box"
+    },
+    {
+      "name": "Stormcloak Scout",
+      "changes": "Replace Physique with Stealth at Good (+3), add stunt 'Quick Retreat: +2 to Athletics when disengaging from combat'"
+    }
+  ],
+  "social_interaction": "Stormcloaks are passionate about Skyrim's freedom and hate the Empire and Thalmor. They respect strength and honor. Can be reasoned with using arguments about Skyrim's sovereignty or Talos worship. They distrust outsiders but respect fellow Nords.",
+  "relationships": {
+    "Ulfric Stormcloak": "Sworn to serve",
+    "Imperial Legion": "Mortal enemies",
+    "Thalmor": "Hated oppressors",
+    "Neutral Jarls": "Trying to recruit"
+  },
+  "personality_notes": {
+    "speaking_style": "Direct, uses Norse-inspired phrases, passionate about freedom",
+    "motivations": ["Free Skyrim from Imperial rule", "Restore Talos worship", "Prove Nord strength"],
+    "fears": ["Thalmor victory", "Skyrim becoming a vassal state", "Betrayal by fellow Nords"],
+    "quirks": ["Often invokes Talos in speech", "Salutes with fist over heart", "Sings battle songs"]
+  },
+  "hold_context": {
+    "primary": ["Eastmarch", "Winterhold", "The Rift", "The Pale"],
+    "contested": ["Whiterun", "Falkreath"],
+    "rare": ["Haafingar", "The Reach"]
+  }
+}

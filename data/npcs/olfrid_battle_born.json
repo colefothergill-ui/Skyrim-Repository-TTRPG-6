@@ -1,0 +1,76 @@
+{
+  "name": "Olfrid Battle-Born",
+  "id": "olfrid_battle_born",
+  "type": "Merchant",
+  "location": "Whiterun - Wind District",
+  "faction": "Battle-Born Clan",
+  "aspects": {
+    "high_concept": "Wealthy Patriarch of the Battle-Born Clan and Imperial Loyalist",
+    "trouble": "Proud and Politically Entangled – Puts Family and Empire Above All",
+    "other_aspects": [
+      "Influential Elder of Whiterun (Pulls Strings Behind the Scenes)",
+      "Quick to Bribe or Bully to Maintain His Family's Status",
+      "Secret Thieves Guild Benefactor (covertly aids their foothold in Whiterun)"
+    ]
+  },
+  "skills": {
+    "Great": ["Resources", "Deceive"],
+    "Good": ["Rapport", "Contacts"],
+    "Fair": ["Empathy", "Notice"],
+    "Average": ["Provoke", "Fight"]
+  },
+  "stunts": [
+    "Well-Connected: +2 to Contacts when finding information or leverage in Whiterun or Imperial circles.",
+    "Gold Greases Wheels: +2 to Resources when attempting to bribe officials or pay for a favor."
+  ],
+  "stress": {
+    "physical": [false, false],
+    "mental": [false, false]
+  },
+  "consequences": {
+    "mild": null,
+    "moderate": null,
+    "severe": null
+  },
+  "refresh": 2,
+  "fate_points": 2,
+  "trust_clock": {
+    "enabled": true,
+    "current": 0,
+    "max": 6,
+    "description": "Represents Olfrid's trust in (or dependence on) the party – completing jobs for him or aiding Imperial cause raises this."
+  },
+  "relationships": {
+    "Battle-Born Clan": "Patriarch (family comes first; includes son Idolaf and others)",
+    "Gray-Mane Clan": "Bitter rivals in Whiterun (deep feud, especially over Thorald's fate)",
+    "Imperial Legion": "Strong supporter and informant (his family favors the Empire in the Civil War)",
+    "Thieves Guild": "Discreet business partner (provides cover and contacts, expects a cut of profits)",
+    "Jarl Balgruuf": "Political ally, tries to influence the Jarl to favor the Empire"
+  },
+  "personality_notes": {
+    "speaking_style": "Confident, boisterous when among friends, but condescending toward those of lower status. He often boasts of his connections and wealth. Can be charming in a transactional way.",
+    "motivations": [
+      "Keep the Battle-Born clan in power and wealth within Whiterun",
+      "See Skyrim firmly aligned with the Empire (both for ideology and profit)",
+      "Undermine the Gray-Manes and any Stormcloak sympathizers in the hold"
+    ],
+    "fears": [
+      "Stormcloaks triumphing and stripping his family of privilege",
+      "Losing any of his children or family honor in the conflict",
+      "His secret dealings (with the Thieves Guild, etc.) coming to light and ruining his reputation"
+    ],
+    "quirks": [
+      "Frequently polishes a family signet ring on his finger while talking, especially when scheming",
+      "Casually drops names of powerful friends (\"General Tullius and I…\") to impress listeners",
+      "Adopts a grandfatherly tone with young people he wants to sway, calling men 'lad' and women 'lass'"
+    ]
+  },
+  "combat_tactics": "Olfrid avoids direct combat whenever possible—he's no glory-seeking warrior. If cornered, he is surprisingly handy with a sword (having trained in younger days as most Nords do), but will more likely attempt to bargain or threaten using his influence. In a fight, he might call for guards or try to escape. He's far more dangerous in a political arena than on a battlefield.",
+  "scene_triggers": [
+    "Battle-Born vs Gray-Mane argument when the party first visits Whiterun's market",
+    "Seeking his help or information (he will help for a price or favor in return)",
+    "Thieves Guild job hand-offs or negotiations (if the party works with the Guild in Whiterun)",
+    "Civil War allegiance discussions (Olfrid lobbying for Imperial support in Whiterun)"
+  ],
+  "act_context": ["Act 1", "Act 2"]
+}

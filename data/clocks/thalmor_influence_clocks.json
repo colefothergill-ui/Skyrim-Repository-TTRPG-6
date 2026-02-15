@@ -1,0 +1,798 @@
+{
+  "thalmor_influence_clocks": {
+    "description": "Track Thalmor schemes and influence operations across Skyrim",
+    "last_updated": "2026-02-05",
+    "clocks": {
+      "thalmor_influence_skyrim": {
+        "name": "Thalmor Influence in Skyrim",
+        "description": "Overall Thalmor control and influence across Skyrim",
+        "current_progress": 2,
+        "total_segments": 10,
+        "completion_effect": "Thalmor achieve dominant influence, Empire becomes puppet state",
+        "advancement_triggers": [
+          "Successful manipulation of civil war (+1)",
+          "Talos worship suppressed (+1)",
+          "Thalmor agent network expanded (+1)",
+          "Imperial cooperation secured (+2)"
+        ],
+        "setback_triggers": [
+          "Embassy infiltrated and documents stolen (-2)",
+          "Thalmor schemes exposed publicly (-2)",
+          "Agent network compromised (-1 per major agent lost)",
+          "Decisive end to civil war (-2)"
+        ]
+      },
+      "talos_persecution_campaign": {
+        "name": "Talos Persecution Campaign",
+        "description": "Thalmor efforts to eliminate Talos worship and enforce the White-Gold Concordat",
+        "current_progress": 5,
+        "total_segments": 10,
+        "completion_effect": "Talos worship completely suppressed, shrines destroyed, worshippers imprisoned",
+        "advancement_triggers": [
+          "Talos shrine destroyed (+1)",
+          "Worshippers arrested or killed (+1)",
+          "Imperial cooperation in enforcement (+2)",
+          "Public recantation by notable Nord (+2)"
+        ],
+        "setback_triggers": [
+          "Underground Talos worship spreads (-1)",
+          "Thalmor Justiciars killed (-2)",
+          "Stormcloak victory protects Talos worship (-5)",
+          "Public defiance of ban (-1)"
+        ],
+        "story_hooks": [
+          "At 5/10: Thalmor Justiciars patrol main roads",
+          "At 7/10: Bounties on Talos priests",
+          "At 9/10: Secret trials and executions",
+          "At 10/10: All public Talos worship eliminated"
+        ]
+      },
+      "intelligence_network": {
+        "name": "Thalmor Intelligence Network",
+        "description": "Spy network gathering intelligence on threats to Aldmeri Dominion",
+        "current_progress": 5,
+        "total_segments": 8,
+        "completion_effect": "Comprehensive spy network, Thalmor know everything happening in Skyrim",
+        "advancement_triggers": [
+          "Recruit new agent or informant (+1)",
+          "Successfully gather critical intelligence (+1)",
+          "Compromise Imperial official (+2)",
+          "Establish safe house or dead drop (+1)"
+        ],
+        "setback_triggers": [
+          "Agent exposed or killed (-1 per agent)",
+          "Embassy infiltrated (Diplomatic Immunity) (-3)",
+          "Safe house discovered (-1)",
+          "Double agent feeds false intel (-2)"
+        ],
+        "current_assets": [
+          "Elenwen (First Emissary) - Leadership",
+          "Multiple Justiciars - Enforcement",
+          "Informants in major cities",
+          "Embassy as central hub"
+        ]
+      },
+      "blades_elimination": {
+        "name": "Blades Elimination",
+        "description": "Hunt down and destroy the remaining Blades members",
+        "current_progress": 7,
+        "total_segments": 10,
+        "completion_effect": "The Blades are extinct, no organized resistance to Thalmor remains",
+        "advancement_triggers": [
+          "Blades member located (+1)",
+          "Blades member killed (+2)",
+          "Blades hideout discovered (+1)"
+        ],
+        "setback_triggers": [
+          "Esbern rescued by party (-2)",
+          "Sky Haven Temple discovered by Blades (-3)",
+          "Blades recruitment begins (-1 per recruit)",
+          "Delphine kills Thalmor agent (-1)"
+        ],
+        "story_hooks": [
+          "Thalmor actively hunting Esbern",
+          "Dossiers on remaining Blades at embassy",
+          "Paarthurnax seen as Blades ally (indirectly)",
+          "Thalmor want influential heroes to kill Paarthurnax"
+        ],
+        "gm_notes": "This connects to main quest. If party sides with Blades, they become direct Thalmor enemies."
+      },
+      "dragon_crisis_investigation": {
+        "name": "Dragon Crisis Investigation",
+        "description": "Thalmor attempts to understand and potentially exploit the dragon crisis",
+        "current_progress": 2,
+        "total_segments": 8,
+        "completion_effect": "Thalmor understand dragon crisis and seek to manipulate it for Dominion benefit",
+        "advancement_triggers": [
+          "Intelligence gathered on dragons (+1)",
+          "Rising champions investigated (+2)",
+          "Ancient texts/prophecies discovered (+1)",
+          "Dragon captured or controlled (+3)"
+        ],
+        "setback_triggers": [
+          "Investigation team killed by dragons (-1)",
+          "Party conceals information (-1)",
+          "Alduin defeats Thalmor operatives (-1)"
+        ],
+        "story_hooks": [
+          "Thalmor dossier on 'The Dragon Crisis' at embassy",
+          "No evidence Thalmor caused dragons (but investigated)",
+          "Thalmor want to know if rising champions are controllable",
+          "Dragons don't distinguish between factions"
+        ]
+      },
+      "ulfric_manipulation": {
+        "name": "Ulfric Manipulation",
+        "description": "Thalmor's covert influence over Ulfric Stormcloak to prolong civil war",
+        "current_progress": 6,
+        "total_segments": 8,
+        "completion_effect": "Ulfric becomes unwitting Thalmor asset, civil war continues indefinitely",
+        "advancement_triggers": [
+          "Ulfric takes aggressive action (+1)",
+          "Peace negotiations sabotaged (+2)",
+          "Ulfric refuses compromise (+1)"
+        ],
+        "setback_triggers": [
+          "Ulfric learns of Thalmor manipulation (-4)",
+          "Party shares embassy documents about Ulfric (-5)",
+          "Civil war ends decisively (-3)",
+          "Ulfric allies with Imperials against Thalmor (-6)"
+        ],
+        "secret_information": {
+          "dossier_contents": "Ulfric is an 'asset' - questioned after Great War, released to cause instability. Contact established but dormant. Status: Uncooperative. Direct contact forbidden.",
+          "thalmor_goal": "Ulfric's rebellion serves Thalmor interests even though he opposes them",
+          "risk": "If Ulfric discovers manipulation, he may unite with Empire against Thalmor"
+        },
+        "gm_notes": "This is revealed in Diplomatic Immunity. Ulfric is NOT a willing agent, but his rebellion benefits Thalmor."
+      }
+    },
+    "thalmor_operations": {
+      "diplomatic_immunity_response": {
+        "status": "pending",
+        "description": "Thalmor response if embassy is infiltrated",
+        "triggers": "Party completes Diplomatic Immunity quest",
+        "consequences": [
+          "Increased Thalmor patrols and scrutiny",
+          "Price on party's heads (if discovered)",
+          "Elenwen becomes active antagonist",
+          "Intelligence network temporarily disrupted"
+        ]
+      },
+      "champion_assessment": {
+        "status": "ongoing",
+        "description": "Evaluate if rising champions can be controlled or must be eliminated",
+        "current_assessment": "Under observation",
+        "factors": [
+          "Faction allegiances",
+          "Response to Thalmor presence",
+          "Power level and influence",
+          "Relationship with Blades"
+        ],
+        "possible_outcomes": [
+          "Attempt recruitment (if neutral/cooperative)",
+          "Attempt elimination (if openly hostile)",
+          "Continued manipulation (if predictable)"
+        ]
+      }
+    },
+    "hold_influence": {
+      "description": "Track Thalmor influence and control in each of Skyrim's nine holds",
+      "haafingar": {
+        "hold_name": "Haafingar (Solitude)",
+        "capital": "Solitude",
+        "influence_level": 7,
+        "max_influence": 10,
+        "status": "High Influence",
+        "imperial_alliance": true,
+        "key_factors": [
+          "Thalmor Embassy located in hold (+3)",
+          "Imperial capital - diplomatic access (+2)",
+          "General Tullius cooperation (+1)",
+          "Blue Palace connections (+1)"
+        ],
+        "thalmor_assets": [
+          "Thalmor Embassy (headquarters)",
+          "Diplomatic staff and guards",
+          "Network of informants in Solitude",
+          "Direct access to Imperial leadership"
+        ],
+        "advancement_triggers": [
+          "Secure more Imperial cooperation (+1)",
+          "Establish additional safehouses (+1)",
+          "Compromise key officials (+2)"
+        ],
+        "setback_triggers": [
+          "Embassy infiltrated (Diplomatic Immunity) (-3)",
+          "Imperial officials resist Thalmor pressure (-1)",
+          "Stormcloaks take Solitude (-5)"
+        ],
+        "player_neglect_consequences": [
+          "At influence 8+: Thalmor gain unrestricted movement in Solitude",
+          "At influence 9+: Public arrests increase, civilians fearful",
+          "At influence 10: Complete control, puppet government established"
+        ],
+        "neutral_status": false
+      },
+      "eastmarch": {
+        "hold_name": "Eastmarch (Windhelm)",
+        "capital": "Windhelm",
+        "influence_level": 2,
+        "max_influence": 10,
+        "status": "Minimal Influence",
+        "imperial_alliance": false,
+        "key_factors": [
+          "Ulfric's Stormcloak capital - hostile territory",
+          "Strong Nord nationalism prevents infiltration",
+          "Open Talos worship",
+          "Few opportunities for agents"
+        ],
+        "thalmor_assets": [
+          "Occasional spies (deep cover)",
+          "Intelligence from travelers",
+          "Monitoring Ulfric's actions"
+        ],
+        "advancement_triggers": [
+          "Ulfric continues rebellion (benefits Thalmor indirectly) (+1)",
+          "Plant deep cover agent (+2)",
+          "Imperials take Windhelm (+4)"
+        ],
+        "setback_triggers": [
+          "Agents discovered and executed (-2)",
+          "Ulfric learns of manipulation (-3)",
+          "Stormcloaks win civil war (-5)"
+        ],
+        "player_neglect_consequences": [
+          "At influence 5+: Thalmor establish hidden safehouse",
+          "At influence 7+: Assassination attempts on Stormcloak leaders",
+          "At influence 9+: Internal sabotage weakens Windhelm defenses"
+        ],
+        "neutral_status": false
+      },
+      "the_pale": {
+        "hold_name": "The Pale (Dawnstar)",
+        "capital": "Dawnstar",
+        "influence_level": 3,
+        "max_influence": 10,
+        "status": "Low Influence",
+        "imperial_alliance": false,
+        "key_factors": [
+          "Stormcloak-aligned but remote",
+          "Smaller population limits opportunities",
+          "Nightmares plague citizens (Vaermina quest)",
+          "Mining town - economic leverage possible"
+        ],
+        "thalmor_assets": [
+          "Limited intelligence network",
+          "Occasional patrol presence"
+        ],
+        "advancement_triggers": [
+          "Exploit nightmare crisis for control (+2)",
+          "Economic pressure through trade disruption (+1)",
+          "Imperials take Dawnstar (+3)"
+        ],
+        "setback_triggers": [
+          "Party resolves nightmare crisis (-1)",
+          "Strong Stormcloak presence maintained (-1)",
+          "Thalmor agents exposed (-2)"
+        ],
+        "player_neglect_consequences": [
+          "At influence 6+: Thalmor manipulate nightmare crisis for control",
+          "At influence 8+: Mining operations disrupted, economy suffers",
+          "At influence 10: Dawnstar becomes Thalmor-controlled enclave"
+        ],
+        "neutral_status": false
+      },
+      "winterhold": {
+        "hold_name": "Winterhold Hold",
+        "capital": "Winterhold (ruins)",
+        "influence_level": 5,
+        "max_influence": 10,
+        "status": "Moderate Influence",
+        "imperial_alliance": false,
+        "key_factors": [
+          "Ancano at College of Winterhold (+3)",
+          "Sparsely populated, easier to monitor",
+          "College provides cover for magical research",
+          "Jarl is weak and isolated"
+        ],
+        "thalmor_assets": [
+          "Ancano (until College questline resolved)",
+          "College monitoring operation",
+          "Small intelligence presence"
+        ],
+        "advancement_triggers": [
+          "Ancano seizes Eye of Magnus (+5)",
+          "Compromise College faculty (+2)",
+          "Imperials take hold (+2)"
+        ],
+        "setback_triggers": [
+          "Ancano defeated/expelled (-4)",
+          "College rejects Thalmor presence (-2)",
+          "Party becomes Arch-Mage and opposes Thalmor (-3)"
+        ],
+        "player_neglect_consequences": [
+          "At influence 7+: Ancano gains more control over College research",
+          "At influence 9+: College becomes Thalmor satellite institution",
+          "At influence 10: Magical artifacts seized, College under Dominion control"
+        ],
+        "neutral_status": false
+      },
+      "the_rift": {
+        "hold_name": "The Rift (Riften)",
+        "capital": "Riften",
+        "influence_level": 4,
+        "max_influence": 10,
+        "status": "Moderate Influence",
+        "imperial_alliance": false,
+        "key_factors": [
+          "Stormcloak-aligned but corrupt leadership",
+          "Black-Briar family connections",
+          "Thieves Guild operates here",
+          "Maven Black-Briar has Imperial ties"
+        ],
+        "thalmor_assets": [
+          "Maven Black-Briar as potential asset",
+          "Intelligence network through criminal contacts",
+          "Border proximity to Morrowind"
+        ],
+        "advancement_triggers": [
+          "Leverage Maven's Imperial ambitions (+2)",
+          "Exploit Thieves Guild for intelligence (+1)",
+          "Imperials take Riften (+3)"
+        ],
+        "setback_triggers": [
+          "Maven loses power (-1)",
+          "Corruption exposed, leadership changes (-2)",
+          "Party gains strong Thieves Guild loyalty (-1)"
+        ],
+        "player_neglect_consequences": [
+          "At influence 6+: Maven becomes full Thalmor collaborator",
+          "At influence 8+: Thalmor use criminal networks for assassinations",
+          "At influence 10: Riften becomes covert Thalmor operations hub"
+        ],
+        "neutral_status": false
+      },
+      "whiterun_hold": {
+        "hold_name": "Whiterun Hold",
+        "capital": "Whiterun",
+        "influence_level": 0,
+        "max_influence": 10,
+        "status": "Neutralized",
+        "imperial_alliance": false,
+        "neutral_status": true,
+        "key_factors": [
+          "Balgruuf tries to stay neutral",
+          "Strategic central location",
+          "Dragon crisis creates opportunities",
+          "Mixed population (Imperial and Nord)",
+          "Thalmor handler eliminated; node destroyed"
+        ],
+        "thalmor_assets": [
+          "Intelligence gathering in cosmopolitan city (NEUTRALIZED)",
+          "Monitoring dragon crisis (DISRUPTED)",
+          "Pressure on Balgruuf's neutrality (COMPROMISED)"
+        ],
+        "advancement_triggers": [
+          "Balgruuf forced to choose Empire (+2)",
+          "Exploit dragon crisis chaos (+1)",
+          "Plant agent in Dragonsreach (+2)"
+        ],
+        "setback_triggers": [
+          "Balgruuf resists Thalmor pressure (-1)",
+          "Stormcloaks take Whiterun (-3)",
+          "Party becomes Thane and opposes Thalmor (-2)",
+          "Handler eliminated and evidence destroyed (-3)"
+        ],
+        "player_neglect_consequences": [
+          "At influence 6+: Thalmor agents embedded in Whiterun guard",
+          "At influence 8+: Balgruuf pressured into Thalmor cooperation",
+          "At influence 10: Whiterun becomes surveillance state under Thalmor watch"
+        ],
+        "notes": "Whiterun node neutralized via handler elimination + evidence burn during Battle of Whiterun (2026-02-04). Local operations crippled."
+      },
+      "falkreath_hold": {
+        "hold_name": "Falkreath Hold",
+        "capital": "Falkreath",
+        "influence_level": 4,
+        "max_influence": 10,
+        "status": "Moderate Influence",
+        "imperial_alliance": true,
+        "key_factors": [
+          "Imperial-aligned hold",
+          "Border with Cyrodiil - Thalmor pressure from south",
+          "Weak Jarl, easily influenced",
+          "Strategic for controlling southern access"
+        ],
+        "thalmor_assets": [
+          "Intelligence from Cyrodiil border",
+          "Influence over Jarl Siddgeir",
+          "Patrol routes through southern Skyrim"
+        ],
+        "advancement_triggers": [
+          "Increase pressure on Jarl Siddgeir (+1)",
+          "Establish border checkpoints (+2)",
+          "Control trade routes from Cyrodiil (+1)"
+        ],
+        "setback_triggers": [
+          "Jarl replaced with stronger leader (-2)",
+          "Stormcloaks take Falkreath (-4)",
+          "Party exposes Thalmor manipulation (-2)"
+        ],
+        "player_neglect_consequences": [
+          "At influence 6+: Thalmor Justiciars freely operate in hold",
+          "At influence 8+: Border becomes checkpoint for Talos persecution",
+          "At influence 10: Falkreath becomes Thalmor forward base"
+        ],
+        "neutral_status": false
+      },
+      "the_reach": {
+        "hold_name": "The Reach (Markarth)",
+        "capital": "Markarth",
+        "influence_level": 6,
+        "max_influence": 10,
+        "status": "High Influence",
+        "imperial_alliance": true,
+        "key_factors": [
+          "Ondolemar stationed in Markarth (+2)",
+          "Imperial-aligned, Silver-Blood cooperation",
+          "Active Talos persecution (+2)",
+          "Forsworn conflict provides cover",
+          "Silver-Blood family vulnerable to pressure"
+        ],
+        "thalmor_assets": [
+          "Ondolemar and Justiciar squad",
+          "Understone Keep presence",
+          "Intelligence network in city",
+          "Talos shrine destroyed"
+        ],
+        "advancement_triggers": [
+          "Execute more Talos worshippers (+1)",
+          "Leverage Silver-Blood cooperation (+1)",
+          "Exploit Forsworn chaos (+1)"
+        ],
+        "setback_triggers": [
+          "Ondolemar killed (-3)",
+          "Talos worship returns openly (-2)",
+          "Stormcloaks take Markarth (-4)",
+          "Silver-Bloods lose power (-1)"
+        ],
+        "player_neglect_consequences": [
+          "At influence 7+: Mass arrests of suspected Talos worshippers",
+          "At influence 9+: Markarth becomes model for total Concordat enforcement",
+          "At influence 10: Reach becomes Thalmor-administered territory"
+        ],
+        "neutral_status": false
+      },
+      "hjaalmarch": {
+        "hold_name": "Hjaalmarch (Morthal)",
+        "capital": "Morthal",
+        "influence_level": 3,
+        "max_influence": 10,
+        "status": "Low Influence",
+        "imperial_alliance": true,
+        "key_factors": [
+          "Imperial-aligned but remote",
+          "Smallest hold, isolated",
+          "Vampire activity creates distractions",
+          "Jarl Idgrod has mystical insight (harder to deceive)"
+        ],
+        "thalmor_assets": [
+          "Minimal presence",
+          "Occasional intelligence gathering"
+        ],
+        "advancement_triggers": [
+          "Exploit vampire crisis for control (+2)",
+          "Replace Jarl Idgrod with more malleable leader (+3)",
+          "Establish hidden base in swamps (+1)"
+        ],
+        "setback_triggers": [
+          "Party resolves vampire threat (-1)",
+          "Jarl Idgrod sees through Thalmor schemes (-2)",
+          "Stormcloaks take Morthal (-3)"
+        ],
+        "player_neglect_consequences": [
+          "At influence 6+: Thalmor establish covert operations in marsh",
+          "At influence 8+: Morthal leadership compromised",
+          "At influence 10: Hold becomes testing ground for dark Thalmor experiments"
+        ],
+        "neutral_status": false
+      }
+    },
+    "covert_operations": {
+      "description": "Multi-segment tracking for specific Thalmor operations with discovery, progress, and resolution states",
+      "operation_northern_silence": {
+        "operation_name": "Operation Northern Silence",
+        "objective": "Systematically eliminate all Blades survivors in Skyrim",
+        "priority": "High",
+        "current_phase": "progress",
+        "discovery_state": {
+          "segments": 4,
+          "current": 2,
+          "description": "How much players know about this operation",
+          "revelations": [
+            "Segment 1: Hear rumors of Thalmor hunting someone",
+            "Segment 2: Find dossier mentioning 'Blades elimination'",
+            "Segment 3: Intercept kill order for specific Blade",
+            "Segment 4: Full operation plan discovered at Embassy"
+          ],
+          "current_player_knowledge": "Players know Thalmor seek someone, not yet identified as Blades hunt"
+        },
+        "progress_state": {
+          "segments": 8,
+          "current": 4,
+          "description": "Thalmor progress toward eliminating all Blades",
+          "milestones": [
+            "Segment 2: Located Delphine in Riverwood (completed)",
+            "Segment 4: Located Esbern in Riften (completed)",
+            "Segment 5: Assassination attempt on identified Blade (pending)",
+            "Segment 6: Sky Haven Temple discovered (pending)",
+            "Segment 8: All known Blades eliminated (completion)"
+          ]
+        },
+        "resolution_state": {
+          "segments": 6,
+          "current": 0,
+          "description": "Player actions to stop operation",
+          "milestones": [
+            "Segment 2: Rescue Esbern before capture",
+            "Segment 4: Protect Sky Haven Temple location",
+            "Segment 6: Eliminate Thalmor kill teams, operation abandoned"
+          ]
+        },
+        "triggers": {
+          "advancement": [
+            "Players ignore Thalmor activity (+1 progress)",
+            "Blades location revealed (+2 progress)",
+            "Time passes without intervention (+1 progress per 3 sessions)"
+          ],
+          "resolution_advancement": [
+            "Rescue Blades members (+1 resolution)",
+            "Eliminate Thalmor agents (+1 resolution)",
+            "Secure Sky Haven Temple (+2 resolution)",
+            "Expose operation publicly (+1 resolution)"
+          ],
+          "completion_thalmor": "If progress reaches 8: Blades extinct",
+          "completion_player": "If resolution reaches 6: Operation fails, Blades protected"
+        }
+      },
+      "operation_jagged_crown": {
+        "operation_name": "Operation Jagged Crown",
+        "objective": "Ensure civil war continues without decisive victory",
+        "priority": "Critical",
+        "current_phase": "progress",
+        "discovery_state": {
+          "segments": 5,
+          "current": 0,
+          "description": "How much players know about Thalmor manipulating civil war",
+          "revelations": [
+            "Segment 1: Notice Thalmor presence during civil war events",
+            "Segment 2: Find evidence of Thalmor supplying both sides",
+            "Segment 3: Discover Ulfric dossier at Embassy",
+            "Segment 4: Intercept orders to sabotage peace talks",
+            "Segment 5: Full manipulation scheme revealed"
+          ]
+        },
+        "progress_state": {
+          "segments": 10,
+          "current": 4,
+          "description": "Success in prolonging civil war",
+          "milestones": [
+            "Segment 3: War continues past first year (completed)",
+            "Segment 5: Peace talks sabotaged (pending)",
+            "Segment 7: Moderate leaders eliminated (pending)",
+            "Segment 10: Perpetual stalemate achieved"
+          ]
+        },
+        "resolution_state": {
+          "segments": 8,
+          "current": 0,
+          "description": "Player actions to expose and stop manipulation",
+          "milestones": [
+            "Segment 2: Share Ulfric dossier with Stormcloaks",
+            "Segment 4: Protect peace negotiators",
+            "Segment 6: Expose Thalmor to both sides publicly",
+            "Segment 8: Both sides unite against Thalmor threat"
+          ]
+        },
+        "triggers": {
+          "advancement": [
+            "Civil war battles occur without resolution (+1 progress)",
+            "Peace talks fail (+2 progress)",
+            "Key moderate leaders die (+1 progress)",
+            "Players don't investigate Thalmor involvement (+1 progress per 2 sessions)"
+          ],
+          "resolution_advancement": [
+            "Expose Ulfric dossier (+2 resolution)",
+            "Prevent assassination of peace advocates (+1 resolution)",
+            "Facilitate peace talks (+2 resolution)",
+            "Eliminate Thalmor saboteurs (+1 resolution)"
+          ]
+        }
+      },
+      "operation_white_gold": {
+        "operation_name": "Operation White-Gold",
+        "objective": "Total enforcement of White-Gold Concordat - eliminate Talos worship",
+        "priority": "High",
+        "current_phase": "progress",
+        "discovery_state": {
+          "segments": 3,
+          "current": 3,
+          "description": "Players aware of Talos persecution",
+          "revelations": [
+            "Segment 1: See Justiciar patrols (completed)",
+            "Segment 2: Witness arrest of Talos worshipper (completed)",
+            "Segment 3: Understand full scope of persecution (completed)"
+          ],
+          "current_player_knowledge": "Fully aware of Talos persecution campaign"
+        },
+        "progress_state": {
+          "segments": 10,
+          "current": 5,
+          "description": "Success in suppressing Talos worship",
+          "milestones": [
+            "Segment 3: Openly questioned in cities (completed)",
+            "Segment 5: Public shrines destroyed (completed)",
+            "Segment 7: Underground worship hunted (pending)",
+            "Segment 10: Total suppression achieved"
+          ]
+        },
+        "resolution_state": {
+          "segments": 6,
+          "current": 0,
+          "description": "Player actions to protect Talos worship",
+          "milestones": [
+            "Segment 2: Protect Talos worshippers from arrest",
+            "Segment 4: Establish underground worship network",
+            "Segment 6: Public defiance, worship returns openly"
+          ]
+        },
+        "triggers": {
+          "advancement": [
+            "Time passes without intervention (+1 progress per 4 sessions)",
+            "Talos worshippers arrested (+1 progress)",
+            "Shrines destroyed (+1 progress)",
+            "Imperial cooperation increases (+1 progress)"
+          ],
+          "resolution_advancement": [
+            "Rescue arrested worshippers (+1 resolution)",
+            "Defeat Justiciar patrols (+1 resolution)",
+            "Restore public Talos shrine (+2 resolution)",
+            "Stormcloaks win civil war (+3 resolution)"
+          ]
+        }
+      },
+      "operation_rising_champions": {
+        "operation_name": "Operation Rising Champions",
+        "objective": "Assess and control or eliminate rising champions in Skyrim",
+        "priority": "Escalating",
+        "current_phase": "discovery",
+        "discovery_state": {
+          "segments": 5,
+          "current": 1,
+          "description": "Thalmor awareness and understanding of regional champions",
+          "revelations": [
+            "Segment 1: Reports of powerful warriors emerging (completed)",
+            "Segment 2: Champion identities and capabilities confirmed",
+            "Segment 3: Assess champion faction allegiances",
+            "Segment 4: Determine threat level to Dominion",
+            "Segment 5: Formulate containment or recruitment plan"
+          ]
+        },
+        "progress_state": {
+          "segments": 8,
+          "current": 0,
+          "description": "Success in controlling or eliminating regional champions",
+          "milestones": [
+            "Segment 2: Surveillance network established",
+            "Segment 4: Initial contact/assessment made",
+            "Segment 6: Recruitment attempt or assassination ordered",
+            "Segment 8: Champions neutralized or recruited"
+          ]
+        },
+        "resolution_state": {
+          "segments": 6,
+          "current": 0,
+          "description": "Champions successfully resist Thalmor influence",
+          "milestones": [
+            "Segment 2: Become aware of surveillance",
+            "Segment 4: Reject Thalmor overtures/survive attempts",
+            "Segment 6: Become active Thalmor enemy"
+          ]
+        },
+        "triggers": {
+          "discovery_advancement": [
+            "Dragon killed publicly (+1 discovery)",
+            "Champion identity becomes known (+2 discovery)",
+            "Major faction joined (+1 discovery)",
+            "Embassy infiltrated - champions learn they're watched (+1 discovery)"
+          ],
+          "progress_advancement": [
+            "Surveillance successfully tracks champions (+1 progress)",
+            "Champions show weakness or vulnerability (+1 progress)",
+            "Opportunity for recruitment or elimination arises (+2 progress)"
+          ],
+          "resolution_advancement": [
+            "Detect and evade surveillance (+1 resolution)",
+            "Kill Thalmor agents hunting you (+1 resolution)",
+            "Openly defy Thalmor (+2 resolution)",
+            "Destroy major Thalmor asset (+2 resolution)"
+          ]
+        }
+      }
+    },
+    "thalmor_agents": {
+      "elenwen": {
+        "role": "First Emissary to Skyrim",
+        "location": "Thalmor Embassy",
+        "threat_level": "High - Leadership",
+        "status": "Active",
+        "objectives": [
+          "Oversee Talos persecution",
+          "Manage civil war manipulation",
+          "Coordinate intelligence operations",
+          "Assess dragon crisis"
+        ]
+      },
+      "justiciars": {
+        "role": "Enforcement and persecution",
+        "locations": "Patrols across Skyrim",
+        "threat_level": "Medium - Combat",
+        "count": "Multiple squads",
+        "objectives": [
+          "Hunt Talos worshippers",
+          "Eliminate Blades",
+          "Gather intelligence",
+          "Enforce Concordat"
+        ]
+      },
+      "ancano": {
+        "role": "Operative at College of Winterhold",
+        "location": "College of Winterhold",
+        "threat_level": "High - Magical",
+        "status": "Active (until College questline)",
+        "objectives": [
+          "Monitor magical research",
+          "Investigate Eye of Magnus",
+          "Potential sabotage or theft"
+        ],
+        "connection": "College of Winterhold questline antagonist"
+      }
+    },
+    "gm_guidance": {
+      "thalmor_as_villains": "The Thalmor are sophisticated antagonists - not cartoon villains. They have legitimate grievances against the Empire and believe in High Elf superiority.",
+      "moral_complexity": "Some Thalmor truly believe they're bringing order. Others are cruel fanatics. Variety makes them interesting.",
+      "player_interaction": "Thalmor can be enemies, obstacles, or even temporary allies against greater threats (dragons). Their schemes should feel pervasive but not omnipotent.",
+      "integration_points": [
+        "Diplomatic Immunity (Act II) - Major reveal",
+        "Random encounters - Justiciars on roads",
+        "Civil war - Background manipulators",
+        "Blades questline - Direct conflict",
+        "College questline - Ancano's schemes"
+      ],
+      "clock_progression": "Advance Thalmor clocks slowly but steadily. Their plans are long-term. Major setbacks require significant player action.",
+      "hold_influence_usage": "Track Thalmor influence per hold to create regional variations. High influence holds have more patrols, arrests, and Thalmor presence. Players should notice difference between holds.",
+      "multi_segment_tracking": "Use discovery/progress/resolution states for operations. Discovery = what players know, Progress = Thalmor advancement, Resolution = player countermeasures. Allows operations to progress even when partially exposed.",
+      "neglect_consequences": "If players ignore Thalmor activities, consequences escalate automatically. Each hold has specific neglect triggers at influence levels 6, 8, and 10.",
+      "script_compatibility": {
+        "story_manager": "Use 'update_thalmor_clock()' for main clock progression",
+        "faction_logic": "Hold influence integrates with faction trust system",
+        "gm_tools": "All clocks and operations visible through GM clock viewer",
+        "data_structure": "Two formats coexist: (1) Traditional clocks in 'clocks' section use 'current_progress'/'total_segments' for backward compatibility. (2) Covert operations in 'covert_operations' section use cleaner 'current'/'segments' naming. Both are independently parseable."
+      },
+      "balancing_tips": [
+        "Don't advance all holds simultaneously - focus on 2-3 per arc",
+        "Use covert operations as story arcs spanning multiple sessions",
+        "Discovery state can advance even if progress is blocked",
+        "Resolution and progress states should oppose each other",
+        "Hold influence reflects both civil war outcomes and player action",
+        "Thalmor remember player interference - adjust tactics accordingly"
+      ],
+      "player_agency": "Players should feel their actions matter. Rescuing Blades, exposing schemes, or defeating agents should have visible impact on clocks. Conversely, neglect should have consequences.",
+      "pacing_guidance": {
+        "act_1": "Establish Thalmor presence through patrols and minor incidents. Discovery states begin advancing.",
+        "act_2": "Diplomatic Immunity reveals scope of schemes. Progress states advance unless countered. Hold influence becomes more visible.",
+        "act_3": "Consequences of player choices manifest. Operations reach resolution or completion. Final confrontations possible."
+      }
+    }
+  }
+}

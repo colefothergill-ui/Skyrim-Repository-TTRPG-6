@@ -1,0 +1,68 @@
+{
+  "whiterun_jobs": {
+    "description": "Track Thieves Guild operations and jobs in Whiterun",
+    "last_updated": "2026-02-05",
+    "clocks": {
+      "guild_foothold_whiterun": {
+        "name": "Guild Foothold in Whiterun",
+        "description": "Establishing a permanent Thieves Guild presence in Whiterun",
+        "current": 5,
+        "max": 5,
+        "completion_effect": "Permanent Thieves Guild operations established in Whiterun with local fence and safe house access. Arcana front officially sanctioned via Battle-Born charter; backroom safehouse protected.",
+        "advancement_triggers": [
+          "Build relationships with corrupt guards (+1)",
+          "Complete jobs for Battle-Born contacts (+1)",
+          "Earn Olfrid's endorsement by aiding Ralof during the Battle of Whiterun (+1; unlock cap)",
+          "Establish reliable fence relationship (+1)",
+          "Secure safe house location (+1)"
+        ],
+        "setback_triggers": [
+          "Jobs go wrong and attract attention (-1)",
+          "Contact relationships damaged (-1)",
+          "Guild operations discovered by authorities (-2)"
+        ],
+        "gate": {
+          "type": "conditional_progress_cap",
+          "cap_until_condition_met": 4,
+          "condition": "state.branching_decisions.civil_war_entry_contact in ['Ralof','Hadvar'] || state.civil_war_state.player_alliance in ['stormcloak','imperial']",
+          "note": "Olfrid fully opens the Whiterun door once you prove your value during the Battle of Whiterun—on either side—so long as he benefits and your cover holds."
+        },
+        "status": "completed",
+        "continuity_note": "This clock is for Thieves Guild story and can be activated when a PC pursues that path."
+      },
+      "battleborn_quiet_inquiry": {
+        "name": "Battle-Born Quiet Inquiry",
+        "description": "Olfrid quietly verifies the hooded Altmer and traces the new Arcana front; internal investigation before outsiders.",
+        "current": 1,
+        "max": 4,
+        "completion_effect": "Battle-Born channels produce a usable description/route-of-travel trail; risk of sale/leak to guards or Dominion contacts.",
+        "advancement_triggers": [
+          "Any staff member is left frightened/angry and talks (+1)",
+          "You are seen entering/leaving Battle-Born Arcana (+1)",
+          "Olfrid catches a lie or inconsistency (+2)"
+        ],
+        "setback_triggers": [
+          "Provide a clean, verifiable cover identity (-1)",
+          "Plant convincing counter-inquiry paperwork (-1)",
+          "Deliver on a high-value promise to Olfrid (-1)"
+        ],
+        "status": "completed"
+      },
+      "battleborn_strongbox": {
+        "name": "Battle-Born Strongbox Job",
+        "description": "Retrieve the iron-banded strongbox from Battle-Born Manor for Olfrid",
+        "current": 0,
+        "max": 3,
+        "completion_effect": "Job completed, payment received (250 gold + intel), Guild reputation with Whiterun contacts increased",
+        "phases": [
+          "Phase 0: Gain access to Battle-Born Manor",
+          "Phase 1: Locate and breach the concealed wall safe",
+          "Phase 2: Extract strongbox from manor grounds",
+          "Phase 3: Deliver to Olfrid or arrange hand-off"
+        ],
+        "status": "inactive",
+        "continuity_note": "This clock is for Thieves Guild story and can be activated when a PC pursues that path."
+      }
+    }
+  }
+}

@@ -1,0 +1,194 @@
+{
+  "thalmor_overarching_arc": {
+    "name": "The Thalmor Conspiracy",
+    "description": "The Aldmeri Dominion's sinister long-term plans for Skyrim and the Empire",
+    "timeline": "Ongoing throughout campaign",
+    "threat_level": "High",
+    "primary_antagonist": "Elenwen, First Emissary",
+    "arcs": [
+      {
+        "arc_id": "perpetual_war",
+        "name": "Perpetual Warfare",
+        "description": "The Thalmor secretly work to ensure neither the Empire nor Stormcloaks achieve decisive victory",
+        "phases": [
+          {
+            "phase": 1,
+            "name": "Intelligence Gathering",
+            "objectives": [
+              "Monitor both Imperial and Stormcloak movements",
+              "Identify key leaders and weak points",
+              "Establish spy network in major holds"
+            ],
+            "player_discovery": "Can be discovered by infiltrating Thalmor Embassy",
+            "clock_progress": 3,
+            "clock_max": 8
+          },
+          {
+            "phase": 2,
+            "name": "Subtle Interference",
+            "objectives": [
+              "Sabotage peace talks",
+              "Provide intelligence to weaker side",
+              "Eliminate moderate voices calling for peace"
+            ],
+            "player_discovery": "Documents found at embassy or intercepted communications",
+            "clock_progress": 0,
+            "clock_max": 10
+          },
+          {
+            "phase": 3,
+            "name": "Direct Action",
+            "objectives": [
+              "Assassinate key leaders if one side gains advantage",
+              "Supply weapons to losing faction",
+              "Incite atrocities to harden positions"
+            ],
+            "player_discovery": "Witness Thalmor agents working with enemies",
+            "clock_progress": 0,
+            "clock_max": 8
+          }
+        ],
+        "consequences": {
+          "if_completed": "Civil war drags on for years, Skyrim and Empire both weakened",
+          "if_stopped": "One side wins decisively, Skyrim becomes stronger"
+        }
+      },
+      {
+        "arc_id": "talos_eradication",
+        "name": "The Talos Heresy",
+        "description": "Systematic elimination of Talos worship as required by White-Gold Concordat",
+        "phases": [
+          {
+            "phase": 1,
+            "name": "Surveillance",
+            "objectives": [
+              "Identify secret Talos worshippers",
+              "Document violations of the Concordat",
+              "Build case files on heretics"
+            ],
+            "player_discovery": "Find Thalmor dossiers on citizens",
+            "clock_progress": 5,
+            "clock_max": 10
+          },
+          {
+            "phase": 2,
+            "name": "Arrest and Interrogation",
+            "objectives": [
+              "Arrest known Talos worshippers",
+              "Extract confessions",
+              "Identify underground worship networks"
+            ],
+            "player_discovery": "Witness arrests or meet imprisoned worshippers",
+            "clock_progress": 2,
+            "clock_max": 8
+          },
+          {
+            "phase": 3,
+            "name": "Total Suppression",
+            "objectives": [
+              "Destroy all Talos shrines in Skyrim",
+              "Execute unrepentant heretics",
+              "Make example of high-profile believers"
+            ],
+            "player_discovery": "Public executions, destroyed shrines",
+            "clock_progress": 0,
+            "clock_max": 12
+          }
+        ],
+        "consequences": {
+          "if_completed": "Talos worship driven completely underground, Nordic culture suppressed",
+          "if_stopped": "Talos worship remains, Thalmor influence weakened"
+        }
+      },
+      {
+        "arc_id": "blades_elimination",
+        "name": "Eradicating the Blades",
+        "description": "Complete the purge of the Blades begun during the Great War",
+        "phases": [
+          {
+            "phase": 1,
+            "name": "Hunt for Survivors",
+            "objectives": [
+              "Locate remaining Blades in hiding",
+              "Monitor known Blades safehouses",
+              "Interrogate those who might know their locations"
+            ],
+            "player_discovery": "Find execution orders or interrogation records",
+            "clock_progress": 4,
+            "clock_max": 10
+          },
+          {
+            "phase": 2,
+            "name": "Elimination",
+            "objectives": [
+              "Assassinate identified Blades members",
+              "Destroy Sky Haven Temple if discovered",
+              "Prevent Blades reformation"
+            ],
+            "player_discovery": "Assassination attempts on Delphine and Esbern",
+            "clock_progress": 0,
+            "clock_max": 8
+          }
+        ],
+        "consequences": {
+          "if_completed": "Blades permanently destroyed, dragon-hunting knowledge lost",
+          "if_stopped": "Blades survive and can rebuild"
+        }
+      }
+    ]
+  },
+  "thalmor_npcs": {
+    "elenwen": {
+      "name": "Elenwen",
+      "title": "First Emissary to Skyrim",
+      "role": "Primary antagonist, mastermind",
+      "personality": "Cold, calculating, supremacist",
+      "goals": "Execute all Thalmor objectives in Skyrim",
+      "combat_stats": "Great (+4) Deceive, Good (+3) Will, Good (+3) Lore"
+    },
+    "ancano": {
+      "name": "Ancano",
+      "title": "Thalmor Advisor at College of Winterhold",
+      "role": "Secondary antagonist, magical threat",
+      "personality": "Ambitious, power-hungry, overconfident",
+      "goals": "Seize the Eye of Magnus for the Dominion",
+      "combat_stats": "Superb (+5) Lore (magic), Good (+3) Will"
+    },
+    "ondolemar": {
+      "name": "Ondolemar",
+      "title": "Thalmor Justiciar in Markarth",
+      "role": "Talos persecution leader",
+      "personality": "Zealous, cruel, lawful evil",
+      "goals": "Root out Talos worship in the Reach",
+      "combat_stats": "Good (+3) Fight, Good (+3) Notice"
+    },
+    "thalmor_soldiers": {
+      "name": "Thalmor Soldiers/Justiciars",
+      "role": "Enforcers and agents",
+      "typical_stats": "Fair (+2) Fight, Fair (+2) Shoot, Average (+1) Stealth"
+    }
+  },
+  "gm_guidance": {
+    "running_thalmor_arc": [
+      "Thalmor should feel like ever-present threat, not just random encounters",
+      "Make players discover plots gradually through investigation",
+      "Allow players to disrupt Thalmor plans but with consequences",
+      "Elenwen should be difficult to reach - protected by diplomatic immunity",
+      "Thalmor are intelligent - they adapt to player actions"
+    ],
+    "discovery_methods": [
+      "Documents found during Diplomatic Immunity quest",
+      "Intercepted communications",
+      "Interrogating Thalmor prisoners",
+      "Informants who defect or are turned",
+      "Observing Thalmor activities"
+    ],
+    "balancing_threat": [
+      "Thalmor work behind the scenes, not open warfare",
+      "Players should feel clever when disrupting plots",
+      "Some plots may succeed despite player efforts",
+      "Thalmor remember player actions - create ongoing antagonism",
+      "Post-dragon crisis: Thalmor refocus entirely on civil war manipulation"
+    ]
+  }
+}

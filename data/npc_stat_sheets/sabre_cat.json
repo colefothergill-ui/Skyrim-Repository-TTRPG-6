@@ -1,0 +1,43 @@
+{
+  "name": "Sabre Cat",
+  "id": "npc_stat_sabre_cat",
+  "type": "Beast",
+  "category": "Enemy",
+  "location": "Mountains, wilderness, tundra",
+  "faction": "Wildlife",
+  "aspects": {
+    "high_concept": "Apex Predator with Razor-Sharp Fangs",
+    "trouble": "Solitary and Territorial",
+    "other_aspects": [
+      "Ambush Hunter",
+      "Powerful Pounce",
+      "Mountain Stalker"
+    ]
+  },
+  "skills": {
+    "Great": ["Fight"],
+    "Good": ["Athletics", "Stealth"],
+    "Fair": ["Notice", "Physique"],
+    "Average": ["Will"]
+  },
+  "stunts": [
+    "Pounce Attack: When attacking from stealth or higher ground, gain +2 to Fight and may create 'Pinned' aspect with one free invoke",
+    "Rending Claws: When successfully attacking with Fight, inflict an additional mild consequence 'Deep Lacerations' if target takes stress",
+    "Mountain Born: +2 to Athletics when moving through rocky or mountainous terrain"
+  ],
+  "stress": {
+    "physical": [false, false, false],
+    "mental": [false]
+  },
+  "consequences": {
+    "mild": null,
+    "moderate": null
+  },
+  "refresh": 2,
+  "fate_points": 2,
+  "notes": "Sabre cats are among Skyrim's most dangerous predators. They are solitary hunters that ambush prey from elevated positions. Their powerful jaws and claws can quickly overwhelm unwary travelers.",
+  "combat_tactics": "Sabre cats prefer to ambush from hiding, using elevated terrain when possible. They focus on a single target, attempting to bring them down quickly with powerful attacks. They fight to the death when defending territory.",
+  "scene_triggers": ["Mountain passes", "Wilderness travel", "High-altitude encounters", "Tundra exploration"],
+  "act_context": ["Act 1", "Act 2", "Act 3"],
+  "loot": ["Sabre cat pelt", "Sabre cat tooth", "Sabre cat eye"]
+}

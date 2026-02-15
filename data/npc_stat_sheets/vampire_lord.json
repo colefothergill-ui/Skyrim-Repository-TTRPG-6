@@ -1,0 +1,48 @@
+{
+  "name": "Vampire Lord",
+  "id": "npc_stat_vampire_lord",
+  "type": "Undead Noble",
+  "category": "Enemy",
+  "location": "Ancient castles, vampire lairs, hidden sanctuaries",
+  "faction": "Vampires",
+  "aspects": {
+    "high_concept": "Ancient Vampire of Terrible Power",
+    "trouble": "Vulnerable to Sunlight and Fire",
+    "other_aspects": [
+      "Commands Lesser Vampires and Thralls",
+      "Centuries of Dark Knowledge",
+      "Aristocratic and Cunning",
+      "Bloodthirsty but Sophisticated"
+    ]
+  },
+  "skills": {
+    "Superb": ["Will"],
+    "Great": ["Lore", "Deceive"],
+    "Good": ["Fight", "Rapport"],
+    "Fair": ["Notice", "Athletics", "Physique"],
+    "Average": ["Stealth", "Provoke"]
+  },
+  "stunts": [
+    "Vampiric Drain: When successfully attacking with Lore, drain health to heal own physical stress (1-for-1 exchange)",
+    "Dominate Mind: Once per scene, use Will to create 'Enthralled' aspect on target with three free invokes. Target must obey reasonable commands",
+    "Vampire Lord Form: Once per session, transform into monstrous form granting +2 to all physical skills for entire scene",
+    "Regeneration: At start of turn, clear one physical stress box unless in sunlight or recently burned by fire",
+    "Ancient Cunning: May use Deceive instead of Fight to defend in social combat or when using trickery"
+  ],
+  "stress": {
+    "physical": [false, false, false, false, false],
+    "mental": [false, false, false, false]
+  },
+  "consequences": {
+    "mild": null,
+    "moderate": null,
+    "severe": null
+  },
+  "refresh": 5,
+  "fate_points": 5,
+  "notes": "Vampire Lords are ancient and powerful vampires who have perfected their dark gifts over centuries. They command lesser vampires, possess tremendous magical power, and can transform into monstrous forms. Highly intelligent and cunning, they are master manipulators as well as deadly combatants. Sunlight weakens them severely, and fire can prevent their regeneration.",
+  "combat_tactics": "Vampire Lords are strategic fighters who use thralls and lesser vampires as shields. They employ powerful magic, particularly life-drain spells. If threatened, they transform into Vampire Lord form for devastating melee attacks. They avoid sunlight at all costs and retreat if facing certain destruction to regenerate later.",
+  "scene_triggers": ["Vampire lair infiltration", "Dawnguard questline", "Ancient vampire investigations", "Blood ritual interruptions"],
+  "act_context": ["Act 2", "Act 3"],
+  "loot": ["Powerful enchanted weapons", "Ancient vampire armor", "Blood magic tomes", "Rare soul gems", "Accumulated wealth from centuries"]
+}

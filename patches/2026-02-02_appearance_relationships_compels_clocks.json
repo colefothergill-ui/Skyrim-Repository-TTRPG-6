@@ -1,0 +1,10 @@
+{
+  "date": "2026-02-02",
+  "changes": [
+    "Added PC appearance bark file for first_impression system (insaerndel_appearance.json)",
+    "Updated Thieves Guild trust to reflect existing membership and early rapport",
+    "Added Brynjolf relationship notes and optional trust clock on npc_stat sheet",
+    "Added Trouble compel_library hooks for scene generation",
+    "Added personal clocks: Arisann search, Rift respect, Thalmor search clock"
+  ]
+}

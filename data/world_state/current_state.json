@@ -1,0 +1,76 @@
+{
+  "game_date": "17th of Last Seed, 4E 201",
+  "in_game_days_passed": 7,
+  "current_era": "Fourth Era",
+  "major_events": [
+    "Civil war between Imperials and Stormcloaks intensifies",
+    "High King Torygg was killed by Ulfric Stormcloak",
+    "Thalmor influence in Skyrim grows stronger",
+    "Battle of Whiterun underway (West Wall breach attempt repelled)",
+    "Galmar Stone-Fist slain during the Battle of Whiterun (witnessed)",
+    "Goldenglow Estate sabotaged: beehives burned; Aringoth's safe robbed"
+  ],
+  "political_situation": {
+    "skyrim_status": "Civil War in progress",
+    "imperial_control": [
+      "Solitude",
+      "Whiterun",
+      "Falkreath",
+      "Morthal"
+    ],
+    "stormcloak_control": [
+      "Windhelm",
+      "Dawnstar",
+      "Winterhold",
+      "Riften"
+    ],
+    "neutral": [
+      "Markarth (contested)"
+    ]
+  },
+  "post_dragon_crisis": {
+    "status": "Dragons are largely inactive",
+    "timeline_note": "Ancient dragon lore speaks of their return, but none have been seen recently",
+    "dragon_knowledge": "Dragons are creatures of legend, with few recent sightings",
+    "blades_status": "Nearly extinct, few remain in hiding"
+  },
+  "faction_standings": {
+    "Imperial Legion": {
+      "strength": 60,
+      "morale": 55,
+      "public_support": 45
+    },
+    "Stormcloaks": {
+      "strength": 55,
+      "morale": 70,
+      "public_support": 50
+    },
+    "Whiterun": {
+      "strength": 40,
+      "morale": 65,
+      "public_support": 75
+    }
+  },
+  "weather_and_season": "Late summer, generally pleasant weather",
+  "rumors_and_news": [
+    "An Altmer in a violet hood was spotted in the Ratway asking pointed questions about Whiterun and Honningbrew Meadery — some say he had the look of a scholar, others swear they saw a thief's keyring at his belt.",
+    "Goldenglow's beehives went up in flames — the Black-Briars are furious and quietly asking who did it.",
+    "Someone cleaned out Aringoth's safe without breaking the lock; whispers say 'mage-thief' work.",
+    "Word spreads: Galmar Stone-Fist fell in the west-wall fog—some claim an 'Altmer witch' struck him down.",
+    "Stormcloaks retreat from the west approach after chain-of-command collapse.",
+    "Battle-Born whispers intensify about the hooded Altmer tied to the Arcana front.",
+    "Civil war tensions rise as both sides prepare for battle",
+    "Jarl Balgruuf refuses to take sides in the civil war",
+    "Thalmor Justiciars are becoming more aggressive",
+    "Bandits are becoming bolder on the roads",
+    "Strange reports of dragon sightings in distant lands"
+  ],
+  "active_threats": [
+    "Thalmor net tightening around the 'Dream Catcher of Dusk'",
+    "Civil war escalation",
+    "Thalmor interference and manipulation",
+    "Bandit activity on trade routes",
+    "Political instability in neutral holds"
+  ],
+  "notes": "Campaign Focus: The civil war between Imperials and Stormcloaks dominates Skyrim. The Thalmor work behind the scenes to keep both sides weak. Jarls are being forced to choose sides, and the common people are caught in the middle. The Battle of Whiterun will be a pivotal moment.\n[2026-02-08] Goldenglow Estate hit: safe cleared; beehives burned; Mercer paid out; a Pale-linked paper trail recovered."
+}

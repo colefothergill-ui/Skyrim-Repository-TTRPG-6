@@ -1,0 +1,85 @@
+{
+  "name": "Tonilia",
+  "id": "npc_stat_tonilia",
+  "type": "Nord Thief",
+  "category": "Friendly NPC",
+  "role": "Fence",
+  "location": "Riften (Ragged Flagon - Cistern)",
+  "faction": "Thieves Guild",
+  "aspects": {
+    "high_concept": "No-Nonsense Guild Fence and Quartermaster",
+    "trouble": "Trust No One - Not Even Guild Members",
+    "other_aspects": [
+      "Eyes for Value, Nose for Trouble",
+      "Guild Armor Specialist",
+      "Riften's Best-Kept Secret"
+    ]
+  },
+  "skills": {
+    "Great": ["Resources"],
+    "Good": ["Notice", "Contacts"],
+    "Fair": ["Deceive", "Will", "Burglary"],
+    "Average": ["Rapport", "Fight", "Stealth"]
+  },
+  "stunts": [
+    "Appraiser's Eye: +2 to Resources when evaluating stolen goods or determining market value",
+    "Fence Network: +2 to Contacts when seeking buyers for hot merchandise",
+    "Guild Quartermaster: Can provide guild members with specialized equipment at fair prices"
+  ],
+  "stress": {
+    "physical": [false, false],
+    "mental": [false, false, false]
+  },
+  "consequences": {
+    "mild": null,
+    "moderate": null,
+    "severe": null
+  },
+  "refresh": 3,
+  "armor": 0,
+  "notes": "Tonilia is the Thieves Guild's fence and quartermaster, operating from the Ragged Flagon Cistern in Riften. She's a practical, no-nonsense Nord who knows the value of everything and trusts almost no one. She handles the guild's stolen goods, converting hot merchandise into cold coin, and also maintains the guild's armor and equipment supply. While she's not the warmest person in the guild, she's reliable and efficient, making her invaluable to operations. She has extensive contacts in Riften's black market and knows how to move goods without attracting attention.",
+  "combat_tactics": "Tonilia avoids combat when possible, preferring to stay in the safety of the Cistern. If forced to fight, she relies on quick strikes and then retreating to more defensible positions. She's competent but not a warrior.",
+  "scene_triggers": ["Thieves Guild Cistern", "Fencing stolen goods", "Guild armor upgrades", "Guild business transactions"],
+  "act_context": ["Act 1", "Act 2", "Act 3"],
+  "starting_equipment": {
+    "armor": "Leather Armor (Armor:0)",
+    "weapon": "Iron Dagger (Weapon:1)",
+    "other": ["Lockpicks x3", "Guild ledger", "300 gold", "Appraisal tools"]
+  },
+  "social_interaction": "Tonilia is direct and businesslike. She doesn't waste time on pleasantries and gets straight to the point. She's skeptical of newcomers and watches them carefully, but will warm up slightly to those who prove reliable. Her speaking style is clipped and efficient, though she occasionally shows dry humor. She respects competence and dislikes sloppiness.",
+  "relationships": {
+    "Mercer Frey": "Guild Master, professional respect",
+    "Brynjolf": "Second-in-command, cooperative working relationship",
+    "Delvin Mallory": "Fellow fence, friendly competition",
+    "Vex": "Guild member, mutual respect for professionalism"
+  },
+  "personality_notes": {
+    "speaking_style": "Direct, businesslike, slightly suspicious, dry humor",
+    "motivations": ["Keep guild finances healthy", "Move merchandise efficiently", "Protect guild's financial interests", "Maintain fence network"],
+    "fears": ["Guard raids on the Cistern", "Bad deals that bring heat", "Losing valuable contacts", "Guild collapse"],
+    "quirks": ["Always counting or appraising something", "Suspicious of new members", "Keeps detailed ledgers"],
+    "character_growth": "As the guild recovers, Tonilia becomes slightly more trusting and takes pride in the improved operation"
+  },
+  "story_hooks": [
+    "Primary fence for stolen goods in Act 1-3",
+    "Provides guild armor upgrades as player advances",
+    "Can offer information about valuable targets through her contacts",
+    "May provide side jobs involving fence network maintenance"
+  ],
+  "dialogue_samples": {
+    "greeting": "You need something? Make it quick - I've got merchandise to move.",
+    "fencing": "Let's see what you've got. I hope it's clean work - I don't need the heat.",
+    "approval": "Not bad. Keep bringing me quality goods like this and we'll get along fine.",
+    "disapproval": "This is sloppy work. Heat like this costs me contacts. Do better.",
+    "personal": "Trust is earned in the guild, not given. Prove yourself and we'll talk business."
+  },
+  "fence_mechanics": {
+    "base_gold": 1000,
+    "upgrades_available": true,
+    "special_perks": [
+      "Guild armor sets for sale",
+      "Higher prices for guild members in good standing",
+      "Special orders for rare items"
+    ]
+  }
+}

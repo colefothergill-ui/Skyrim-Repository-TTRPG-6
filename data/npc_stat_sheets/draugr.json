@@ -1,0 +1,41 @@
+{
+  "name": "Draugr",
+  "id": "npc_stat_draugr",
+  "type": "Undead",
+  "category": "Enemy",
+  "location": "Nordic ruins",
+  "faction": "Undead",
+  "aspects": {
+    "high_concept": "Ancient Nord Guardian Risen from Death",
+    "trouble": "Mindless Devotion to Long-Dead Dragon Priests",
+    "other_aspects": [
+      "Resist Cold, Vulnerable to Fire",
+      "Bound to Their Tombs",
+      "Armed with Ancient Nordic Weapons"
+    ]
+  },
+  "skills": {
+    "Good": ["Fight"],
+    "Fair": ["Physique", "Notice"],
+    "Average": ["Athletics"]
+  },
+  "stunts": [
+    "Undead Resilience: +2 to defend against poison and disease",
+    "Frost Resistance: +2 to defend against cold-based attacks",
+    "Disarm Shout: Once per scene, use an ancient shout to force enemy to drop weapon (requires Good or better Fight roll)"
+  ],
+  "stress": {
+    "physical": [false, false, false],
+    "mental": []
+  },
+  "consequences": {
+    "mild": null
+  },
+  "refresh": 1,
+  "fate_points": 1,
+  "notes": "Draugr are reanimated ancient Nords who guard Nordic tombs and ruins. They retain some combat skills from life but are now mindless guardians. They often wield ancient weapons and can use basic shouts. Vulnerable to fire damage.",
+  "combat_tactics": "Draugr attack relentlessly in melee, using ancient Nordic weapons. Some can use frost magic or shouts. They don't retreat and fight until destroyed. They often attack in groups from alcoves in ruins.",
+  "scene_triggers": ["Nordic ruins exploration", "Tomb delving", "Draugr barrow quests", "Main quest: Bleak Falls Barrow"],
+  "act_context": ["Act 1", "Act 2", "Act 3"],
+  "loot": ["Ancient Nordic weapons", "Minor gold", "Soul gems (occasional)"]
+}

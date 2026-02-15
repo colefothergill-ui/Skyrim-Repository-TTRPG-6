@@ -1,0 +1,43 @@
+{
+  "name": "Troll",
+  "id": "npc_stat_troll",
+  "type": "Monster",
+  "category": "Enemy",
+  "location": "Mountains, caves, wilderness",
+  "faction": "Wildlife",
+  "aspects": {
+    "high_concept": "Massive Regenerating Mountain Predator",
+    "trouble": "Vulnerable to Fire Damage",
+    "other_aspects": [
+      "Savage Claws and Teeth",
+      "Rapid Regeneration",
+      "Territorial and Aggressive"
+    ]
+  },
+  "skills": {
+    "Great": ["Fight"],
+    "Good": ["Physique"],
+    "Fair": ["Athletics", "Notice"],
+    "Average": ["Will"]
+  },
+  "stunts": [
+    "Regeneration: At the start of each turn, clear one physical stress box (unless recently hit by fire damage)",
+    "Powerful Swipe: When successfully attacking with Fight, may create aspect 'Knocked Down' with one free invoke",
+    "Thick Hide: +2 to defend against physical attacks with weapons (not including fire)"
+  ],
+  "stress": {
+    "physical": [false, false, false, false],
+    "mental": [false]
+  },
+  "consequences": {
+    "mild": null,
+    "moderate": null
+  },
+  "refresh": 2,
+  "fate_points": 2,
+  "notes": "Trolls are dangerous predators found in mountainous regions of Skyrim. Their regenerative abilities make them formidable opponents, but they are extremely vulnerable to fire. They attack with powerful claws and can quickly regenerate damage.",
+  "combat_tactics": "Trolls charge into melee and use their superior strength to overpower enemies. They rely on their regeneration to survive prolonged combat. When set on fire, they may flee. They prioritize the nearest target and fight aggressively.",
+  "scene_triggers": ["Mountain travel", "Cave exploration", "Wilderness encounters", "The Rift region"],
+  "act_context": ["Act 1", "Act 2", "Act 3"],
+  "loot": ["Troll fat", "Troll skull"]
+}

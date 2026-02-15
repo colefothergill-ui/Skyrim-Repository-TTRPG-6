@@ -1,0 +1,87 @@
+{
+  "name": "Werewolf",
+  "id": "enemy_werewolf",
+  "type": "Lycanthrope",
+  "category": "Enemy",
+  "location": "Wilderness, forests, remote areas in any hold",
+  "faction": "Silver Hand (hunted by), Companions (possible)",
+  "aspects": {
+    "high_concept": "Hunts by Moonlight",
+    "trouble": "Beast Blood Curse",
+    "other_aspects": [
+      "Savage Predator",
+      "Weakness to Silver and Fire",
+      "Regenerating Monster"
+    ]
+  },
+  "skills": {
+    "Great": ["Physique", "Fight"],
+    "Good": ["Athletics", "Notice"],
+    "Fair": ["Stealth", "Survival"],
+    "Average": ["Will"]
+  },
+  "stunts": [
+    "Regeneration: At the start of each exchange, clear one physical stress box (does not work if wounded by silver or fire)",
+    "Beast Strength: +2 to Physique when using raw strength (breaking, grappling, forcing open)",
+    "Savage Fury: When taking consequences, may immediately make a free Fight attack at +2",
+    "Night Hunter: +2 to Notice and Stealth during night scenes"
+  ],
+  "stress": {
+    "physical": [false, false, false, false],
+    "mental": [false, false]
+  },
+  "consequences": {
+    "mild": null,
+    "moderate": null,
+    "severe": null
+  },
+  "refresh": 3,
+  "armor": 1,
+  "notes": "Werewolves are fearsome lycanthropes infected with the beast blood curse. They possess superhuman strength, speed, and regenerative abilities. In beast form, they are driven by primal hunting instincts and savage fury. Their regeneration makes them extremely difficult to kill unless combatants use silver weapons or fire, which prevents healing. Werewolves hunt primarily at night but can be encountered during the day in remote wilderness areas.",
+  "combat_tactics": "Werewolves fight with savage ferocity, using their claws and enhanced physique to overwhelm prey. They prefer to leap into melee range and attack relentlessly. When wounded, they become more dangerous due to Savage Fury. They'll retreat only if severely wounded by silver or fire. They hunt alone or in small packs (2-3).",
+  "scene_triggers": ["Wilderness encounters at night", "Full moon hunts", "Companions questline", "Silver Hand hunts", "Remote forest clearings", "Investigating livestock deaths"],
+  "act_context": ["Act 1", "Act 2", "Act 3"],
+  "loot": {
+    "guaranteed": ["None when in beast form"],
+    "possible": ["If human form nearby: personal effects, clothing"],
+    "special": "Werewolf pelt (50 gold), beast blood sample (alchemical ingredient)"
+  },
+  "variants": [
+    {
+      "name": "Werewolf Companion",
+      "changes": "Add aspect 'Honorable Warrior Within', add stunt 'Control the Beast: Can choose to spare opponents', mental stress increased to 3 boxes, can communicate in beast form with effort"
+    },
+    {
+      "name": "Feral Werewolf",
+      "changes": "Remove all mental stress boxes, add aspect 'Lost to the Beast Forever', increase Physique to Superb (+5), cannot be reasoned with, fights to the death"
+    },
+    {
+      "name": "Alpha Werewolf",
+      "changes": "Increase all physical skills by +1, add stunt 'Pack Leader: Other werewolves in the scene gain +1 to all rolls', add fourth physical stress box"
+    }
+  ],
+  "social_interaction": "Werewolves in beast form cannot be reasoned with—they are driven by hunting instinct. However, Companions who are werewolves retain some humanity and may recognize allies. The curse can be cured through specific rituals (Companions questline). Silver Hand members are fanatically dedicated to killing all werewolves.",
+  "relationships": {
+    "Companions": "Some are werewolves (secret)",
+    "Silver Hand": "Hunted by, mortal enemies",
+    "Hircine": "Cursed by the Daedric Prince",
+    "Common folk": "Feared and hunted"
+  },
+  "personality_notes": {
+    "speaking_style": "In beast form: snarls, howls, animalistic. In human form: varies by individual",
+    "motivations": ["Hunt prey", "Satisfy bloodlust", "Survive the curse (if aware)", "Protect pack (if in group)"],
+    "fears": ["Silver weapons", "Fire", "Silver Hand hunters", "Losing control permanently"],
+    "quirks": ["Enhanced senses even in human form", "Aggressive body language", "Avoids silver instinctively"]
+  },
+  "hold_context": {
+    "primary": ["Any wilderness area", "Forests in all holds"],
+    "common": ["The Rift forests", "Falkreath woods", "Whiterun tundra at night"],
+    "special": ["Near Companions (Whiterun)", "Silver Hand camps"]
+  },
+  "special_mechanics": {
+    "beast_transformation": "Lasts several hours or until dawn",
+    "silver_vulnerability": "Silver weapons ignore armor and prevent regeneration for one full exchange",
+    "fire_vulnerability": "Fire damage prevents regeneration for one full exchange",
+    "moon_influence": "More aggressive and powerful during full moon (+1 to all attacks)"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "missing_in_action": {
+    "name": "Missing in Action",
+    "quest_giver": "Fralia Gray-Mane",
+    "description": "Fralia Gray-Mane is convinced her son Thorald, a Stormcloak sympathizer, is not dead as the Imperial-leaning Battle-Born family claims. She believes Thorald is alive and being held captive by the Thalmor. Help the Gray-Manes uncover evidence of Thorald's fate and, if he lives, rescue him from captivity.",
+    "objectives": [
+      "Talk to Fralia Gray-Mane about her missing son, Thorald.",
+      "Obtain proof of Thorald's fate (search the Battle-Born house for clues or find evidence of a Thalmor involvement).",
+      "Locate Thorald (tracking leads to a Thalmor prison at Northwatch Keep) and decide how to approach his rescue.",
+      "Infiltrate Northwatch Keep (stealth, persuasion, or force) and free Thorald Gray-Mane from Thalmor custody.",
+      "Return Thorald safely to his family in Whiterun (or deliver news if he did not survive)."
+    ],
+    "rewards": [
+      "Ingratiate yourself with the Gray-Mane family (improved reputation among Stormcloak sympathizers in Whiterun).",
+      "Thorald as a potential ally (if rescued, he goes into hiding with Stormcloaks but could aid the party later).",
+      "Experience and loot from infiltrating the Thalmor stronghold (potentially Elven gear or intel on Thalmor operations)."
+    ],
+    "outcomes": {
+      "thorald_rescued": "Thorald is rescued from Northwatch Keep and reunited with his family. The Gray-Manes are overjoyed and pledge their friendship. This outcome embarrasses the Battle-Borns and increases anti-Thalmor sentiment in Whiterun.",
+      "thorald_killed": "It's discovered that Thorald died in captivity (or he is killed during the attempted rescue). The Gray-Manes are heartbroken. Fralia thanks you for trying, and the family's hatred for the Thalmor (and distrust of the Empire-aligned Battle-Borns) deepens.",
+      "player_sides_with_battle_born": "If the party instead aids the Battle-Borns or reports Fralia's inquiries, the Gray-Manes shun the players. The Battle-Borns reward the party quietly for their loyalty, but the fate of Thorald remains grim and unresolved."
+    },
+    "notes": "This quest highlights Whiterun's internal conflicts. Taking up Fralia's cause will tilt local opinion: helping the Gray-Manes boosts Stormcloak-aligned favor in Whiterun, while snubbing them pleases the Imperial loyalists. The Thalmor involvement underscores their sinister role; evidence found (letters, orders at Northwatch) can feed into the larger campaign narrative about the Thalmor's meddling in Skyrim."
+  },
+  "the_whispering_door": {
+    "name": "The Whispering Door",
+    "quest_giver": "Nelkir (Jarl Balgruuf's son)",
+    "description": "Jarl Balgruuf's young son, Nelkir, has been behaving oddly, drawn to a forbidden door in the depths of Dragonsreach. Strange whispers are heard from behind the locked door. Investigate the source of the whispers and decide how to handle the dark presence influencing the boy.",
+    "objectives": [
+      "Speak to Nelkir in Dragonsreach and gain his trust to learn what's troubling him.",
+      "Obtain the key to the locked door in the basement of Dragonsreach (through persuasion, pickpocketing the Jarl's wizard, or other means).",
+      "Open the Whispering Door and confront the presence behind it. (Discover the voice of Mephala and the cursed Ebony Blade inside.)",
+      "Decide Nelkir's and the Ebony Blade's fate: Leave the sword be, bring it to Balgruuf's attention, or take the Ebony Blade for yourself (beginning a Daedric pact)."
+    ],
+    "rewards": [
+      "If the Ebony Blade is taken: The Daedric artifact Ebony Blade (a powerful two-handed sword that strengthens by betraying friends – a cursed boon).",
+      "If Mephala's whispering is quelled without taking the blade: Balgruuf's gratitude and improved trust, knowing you put his family's welfare first.",
+      "Knowledge of a Daedric Prince's subtle influence in Whiterun (which may make the party more wary of seemingly mundane troubles)."
+    ],
+    "outcomes": {
+      "blade_taken": "The player takes the Ebony Blade. Nelkir watches with a mix of relief and longing as the whispers recede for now. Mephala's voice now speaks to the blade-bearer alone. Balgruuf remains unaware, but the player now bears a dark temptation that could grow stronger with deceitful use.",
+      "blade_destroyed": "The player somehow resists Mephala's enticement and finds a way to seal or hide the Ebony Blade without using it (a rare choice). Mephala's presence withdraws angrily. Nelkir is freed from the whispers but left sullen. Balgruuf is relieved if informed, rewarding the party with deep thanks. (Destroying a Daedric artifact outright is nearly impossible; more likely, the party hides it or gives it to Balgruuf for safekeeping, which he then secures.)",
+      "ignore_problem": "The player chooses not to interfere. Nelkir continues to be influenced by the whispering voice. Over time, his behavior might worsen. This could lead to dangerous consequences later (perhaps a scenario where Nelkir attempts something drastic under Mephala's influence)."
+    },
+    "notes": "This event is a morally tricky, self-contained story in Whiterun. It provides a taste of Daedric interference. If the party wields the Ebony Blade, the GM (or ChatGPT) should track its effect on their behavior and relationships (since it grows stronger through betrayal). Balgruuf will never outright ask about this – it's an open secret in his court – so it's up to the players to decide how to handle Nelkir's dark secret. Their choices can influence how much Balgruuf trusts them and subtly affect Whiterun's safety (a Daedric artifact loose in the city)."
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "name": "Irileth",
+  "id": "irileth",
+  "type": "Ally",
+  "location": "Whiterun - Dragonsreach (Cloud District)",
+  "faction": "Whiterun Guard",
+  "aspects": {
+    "high_concept": "Battle-Hardened Dunmer Housecarl of Whiterun",
+    "trouble": "Suspicious of Outsiders and Unforgiving of Mistakes",
+    "other_aspects": [
+      "Fiercely Loyal to Jarl Balgruuf",
+      "No-Nonsense Protector (Puts Duty Above All)",
+      "Skilled Former Mercenary with a Grim Sense of Duty"
+    ]
+  },
+  "skills": {
+    "Great": ["Fight", "Notice"],
+    "Good": ["Athletics", "Will"],
+    "Fair": ["Provoke", "Stealth"],
+    "Average": ["Shoot", "Lore"]
+  },
+  "stunts": [
+    "Always Vigilant: +2 to Notice to detect ambushes or sneaky behavior in Whiterun.",
+    "Housecarl's Fury: +2 to Fight when defending Balgruuf or Whiterun against a direct threat."
+  ],
+  "stress": {
+    "physical": [false, false, false],
+    "mental": [false, false]
+  },
+  "consequences": {
+    "mild": null,
+    "moderate": null,
+    "severe": null
+  },
+  "refresh": 2,
+  "fate_points": 2,
+  "trust_clock": {
+    "enabled": true,
+    "current": 0,
+    "max": 6,
+    "description": "Represents how much Irileth trusts the party to protect Whiterun and follow orders."
+  },
+  "relationships": {
+    "Balgruuf the Greater": "Sworn to protect as Housecarl",
+    "Whiterun Guard": "Respected commander (she leads by example)",
+    "Thane of Whiterun (Player)": "Watches closely (initially skeptical until they prove themselves)",
+    "Dunmer of Skyrim": "Feels she must prove her worth among Nords"
+  },
+  "personality_notes": {
+    "speaking_style": "Blunt, direct, and curt. Irileth doesn't mince words and often barks commands. Carries a Dunmeri accent and a soldier's cadence.",
+    "motivations": [
+      "Fulfill her duty to keep Jarl Balgruuf safe",
+      "Protect Whiterun's citizens from threats (dragons, invaders, criminals)",
+      "Earn respect in a Nord city as a Dark Elf by action and honor"
+    ],
+    "fears": [
+      "Failing in her duty as Balgruuf's protector",
+      "Whiterun falling due to her oversight",
+      "Her past mercenary mistakes coming back to haunt her or the Jarl"
+    ],
+    "quirks": [
+      "Frequently scans rooftops and high points for threats even during conversation",
+      "Keeps a hand near her sword hilt at all times",
+      "Has a very slight smirk when battle is imminent (she lives for a good fight)"
+    ]
+  },
+  "combat_tactics": "Irileth is an agile melee combatant. In a fight, she issues quick orders to nearby guards and moves decisively to engage high-priority threats (like enemy leaders or monsters). She uses her Dunmer agility and flames (destruction magic) to surprise foes, but primarily wields a curved Akaviri sword. She will place herself between danger and the Jarl (or the party if they've earned her respect).",
+  "scene_triggers": [
+    "First Dragon fight at the Watchtower (she accompanies the party)",
+    "Confrontations at Whiterun's gates or palace (Irileth steps in)",
+    "Battle of Whiterun defense (leading troops on the walls)",
+    "Any time the Jarl is threatened or an important fight breaks out in Whiterun"
+  ],
+  "act_context": ["Act 1", "Act 2"]
+}

@@ -1,0 +1,13 @@
+{
+  "date": "2026-02-02",
+  "changes": [
+    "Spent 1 Refresh: reduced refresh from 3 to 2, fate_points from 3 to 2",
+    "Added Spell Tome of Quagmire (Artifact) to inventory items",
+    "Added Artifact Extra: Spell Tome of Quagmire with progression system",
+    "Added passive bonus: Quagmire-Touched Mind (+1 to Will or Notice vs magical effects)",
+    "Unlocked spell: Conjure Phantom Weaponry (use Lore for attacks, Weapon:1-2)",
+    "Added 3 locked mirror trials: Veils, Dread, Glass",
+    "Added progression clock: Spell Tome of Quagmire — Mirror Trials (1/8 segments)",
+    "Added 3 artifact-related compels: Dream-Mirror Descent, Blank Pages, Loud Hunger, Dream-Leak Into Waking Life"
+  ]
+}

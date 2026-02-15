@@ -1,0 +1,291 @@
+{
+  "system_name": "Thu'um (Dragon Shout) System",
+  "description": "Post-Alduin Thu'um mechanics available to Nords and select other races through study and training, not Dragonborn-exclusive powers.",
+  "lore_compliance": {
+    "removed_mechanics": [
+      "Dragonborn-exclusive absorption of dragon souls",
+      "Automatic soul absorption on dragon death",
+      "Dragonborn protagonist requirements"
+    ],
+    "new_approach": "Thu'um is an ancient Nordic tradition that can be learned through dedication, training, and discovering Word Walls. While rare, skilled Nords (and some Imperials/Bretons) can master the Voice through discipline."
+  },
+  "available_races": {
+    "primary": ["Nord"],
+    "secondary": ["Breton", "Imperial"],
+    "notes": "Nords have natural affinity. Bretons and Imperials can learn but require additional dedication (longer mastery clocks or higher Fate Point costs)."
+  },
+  "core_mechanics": {
+    "initial_cost": {
+      "description": "Using a Thu'um initially requires spending a Fate Point",
+      "cost": 1,
+      "type": "Fate Point"
+    },
+    "mastery_clock": {
+      "name": "Shout Mastery Clock",
+      "segments": 8,
+      "description": "Each shout has its own mastery clock. As you use and practice a shout, fill segments. Once complete, the shout becomes 'once per scene' without Fate Point cost.",
+      "advancement": [
+        "Fill 1 segment: Use shout successfully in meaningful situation",
+        "Fill 1 segment: Practice/meditation (requires RP scene)",
+        "Fill 2 segments: Use shout in critical/dramatic moment",
+        "Fill 1 segment: Receive training from master (Greybeards, Ulfric, etc.)"
+      ],
+      "completion_benefit": "Shout can be used once per scene without Fate Point cost. Still subject to cooldown."
+    },
+    "cooldown": {
+      "description": "Prevents overuse of Thu'um in rapid succession",
+      "standard": "Once per scene for mastered shouts",
+      "unmastered": "Once per session without special circumstances (must spend Fate Point each use)",
+      "reduced_cooldown": "With GM permission and appropriate aspect invocation, may use twice per scene"
+    }
+  },
+  "available_shouts": [
+    {
+      "name": "Unrelenting Force (Fus Ro Dah)",
+      "words": ["Fus (Force)", "Ro (Balance)", "Dah (Push)"],
+      "effect": "Knock foes back and potentially off their feet",
+      "mechanics": {
+        "action_type": "Overcome vs. Target's Athletics or Physique (defender's choice)",
+        "one_word": "Weapon:1 attack, pushes target to adjacent zone on success",
+        "two_words": "Weapon:2 attack, pushes target two zones away, target takes -1 to actions next exchange",
+        "three_words": "Weapon:3 attack, pushes all targets in zone back, creates 'Knocked Down' situation aspect"
+      },
+      "mastery_benefits": "Mastered version: Targets hit by 3-word shout must overcome Great (+4) difficulty or be stunned (skip next action)",
+      "cooldown": "Once per scene (mastered) or costs 1 Fate Point (unmastered)",
+      "training_locations": ["High Hrothgar (Greybeards)", "Bleak Falls Barrow Word Wall"]
+    },
+    {
+      "name": "Whirlwind Sprint (Wuld Nah Kest)",
+      "words": ["Wuld (Whirlwind)", "Nah (Fury)", "Kest (Tempest)"],
+      "effect": "Move with supernatural speed across distances",
+      "mechanics": {
+        "action_type": "Movement/Overcome",
+        "one_word": "Move one additional zone instantly (beyond normal movement)",
+        "two_words": "Move up to three zones instantly, +2 to Athletics to overcome movement obstacles",
+        "three_words": "Move up to five zones instantly, ignore all ground-based obstacles, gain +1 to defend until end of exchange"
+      },
+      "mastery_benefits": "Mastered version: Can use as a reaction to avoid attacks, gaining +2 to defend",
+      "cooldown": "Once per scene (mastered) or costs 1 Fate Point (unmastered)",
+      "training_locations": ["Dead Men's Respite", "Volskygge Word Wall"]
+    },
+    {
+      "name": "Elemental Fury (Su Grah Dun)",
+      "words": ["Su (Air)", "Grah (Battle)", "Dun (Grace)"],
+      "effect": "Enhance attack speed and ferocity temporarily",
+      "mechanics": {
+        "action_type": "Create Advantage on self",
+        "one_word": "Create 'Swift Strikes' aspect with one free invoke, +1 to Fight this exchange",
+        "two_words": "Create 'Furious Assault' aspect with two free invokes, +2 to Fight for two exchanges",
+        "three_words": "Create 'Supernatural Speed' aspect with three free invokes, +2 to Fight and +1 to defend for entire scene (max 3 exchanges)"
+      },
+      "mastery_benefits": "Mastered version: Gain an extra attack action during first exchange of effect",
+      "cooldown": "Once per scene (mastered) or costs 1 Fate Point (unmastered)",
+      "notes": "Only works with physical weapons, not magic",
+      "training_locations": ["Kilkreath Ruins", "Shriekwind Bastion Word Wall"]
+    },
+    {
+      "name": "Frost Breath (Fo Krah Diin)",
+      "words": ["Fo (Frost)", "Krah (Cold)", "Diin (Freeze)"],
+      "effect": "Breathe freezing cold that damages and slows enemies",
+      "mechanics": {
+        "action_type": "Attack (Lore or Will)",
+        "one_word": "Weapon:2 attack, create 'Chilled' aspect on target",
+        "two_words": "Weapon:3 attack to all in zone, create 'Frozen Slowed' aspect, targets take -1 to Athletics",
+        "three_words": "Weapon:4 attack to all in zone and adjacent zone, create 'Deep Freeze' aspect, targets must overcome Fair (+2) to take physical actions"
+      },
+      "mastery_benefits": "Mastered version: Frozen targets take additional 1 stress on successful attacks against them",
+      "cooldown": "Once per scene (mastered) or costs 1 Fate Point (unmastered)",
+      "training_locations": ["Bonestrewn Crest", "Skyborn Altar Word Wall"]
+    },
+    {
+      "name": "Fire Breath (Yol Toor Shul)",
+      "words": ["Yol (Fire)", "Toor (Inferno)", "Shul (Sun)"],
+      "effect": "Breathe searing flames at enemies",
+      "mechanics": {
+        "action_type": "Attack (Lore or Will)",
+        "one_word": "Weapon:2 fire attack to single target",
+        "two_words": "Weapon:3 fire attack to all in zone, create 'On Fire' aspect",
+        "three_words": "Weapon:4 fire attack to all in zone, create 'Burning' lasting aspect (1 stress per exchange for 2 exchanges unless extinguished)"
+      },
+      "mastery_benefits": "Mastered version: Burning aspect lasts 3 exchanges and deals 2 stress per exchange",
+      "cooldown": "Once per scene (mastered) or costs 1 Fate Point (unmastered)",
+      "training_locations": ["Dustman's Cairn", "Sunderstone Gorge Word Wall"]
+    },
+    {
+      "name": "Become Ethereal (Feim Zii Gron)",
+      "words": ["Feim (Fade)", "Zii (Spirit)", "Gron (Bind)"],
+      "effect": "Become incorporeal and immune to harm temporarily",
+      "mechanics": {
+        "action_type": "Overcome/Defend",
+        "one_word": "Gain +3 to defend against one attack, take no consequence if you would be taken out",
+        "two_words": "Become incorporeal for one exchange: immune to physical damage, cannot attack, can move through obstacles",
+        "three_words": "Become incorporeal for two exchanges: immune to all damage, cannot attack, can move freely, survive any fall"
+      },
+      "mastery_benefits": "Mastered version: Can attack during final exchange of ethereal state at -2 penalty",
+      "cooldown": "Twice per scene (mastered) or costs 1 Fate Point (unmastered)",
+      "notes": "Cannot deal damage while ethereal. Excellent for escapes and environmental hazards.",
+      "training_locations": ["Ironbind Barrow", "Ustengrav Word Wall"]
+    },
+    {
+      "name": "Dragonrend (Joor Zah Frul)",
+      "words": ["Joor (Mortal)", "Zah (Finite)", "Frul (Temporary)"],
+      "effect": "Forces flying creatures to land and makes dragons vulnerable",
+      "mechanics": {
+        "action_type": "Overcome vs. Target's Will",
+        "three_words_only": "Force target dragon or flying creature to land immediately. Create 'Grounded' aspect with two free invokes. Dragon takes -2 to all actions for one exchange due to existential shock.",
+        "special": "This is the only shout that REQUIRES all three words. Cannot be used incrementally."
+      },
+      "mastery_benefits": "Mastered version: Grounded duration extends to two exchanges, -3 penalty to dragon actions",
+      "cooldown": "Once per session (even when mastered), or costs 2 Fate Points (unmastered)",
+      "lore_note": "Created by ancient mortals specifically to combat dragons. Incredibly powerful but rare. Must be learned from specific quest/story event.",
+      "training_locations": ["Quest reward only - learn from ancient Nord heroes' spirits or special story event"]
+    },
+    {
+      "name": "Kyne's Peace (Kaan Drem Ov)",
+      "words": ["Kaan (Kyne)", "Drem (Peace)", "Ov (Trust)"],
+      "effect": "Pacify animals and make them non-hostile",
+      "mechanics": {
+        "action_type": "Overcome vs. Target's Will (animals only)",
+        "one_word": "Calm one animal, make non-hostile for scene",
+        "two_words": "Calm all animals in zone, make non-hostile for scene",
+        "three_words": "Calm all animals in zone and adjacent zones, make non-hostile for session, can give simple commands"
+      },
+      "mastery_benefits": "Mastered version: Animals become temporarily friendly and may assist party",
+      "cooldown": "Once per scene (mastered) or costs 1 Fate Point (unmastered)",
+      "notes": "Only works on natural animals (wolves, bears, etc.), not daedric creatures or undead",
+      "training_locations": ["Ragnvald", "Shriekwind Bastion"]
+    },
+    {
+      "name": "Aura Whisper (Laas Yah Nir)",
+      "words": ["Laas (Life)", "Yah (Seek)", "Nir (Hunt)"],
+      "effect": "Sense living beings through walls and obstacles",
+      "mechanics": {
+        "action_type": "Create Advantage (Notice)",
+        "one_word": "Detect all living beings in current zone, create 'Sensed Presence' aspect",
+        "two_words": "Detect all living beings in current and adjacent zones, learn their approximate type (humanoid, creature, etc.)",
+        "three_words": "Detect all living beings within three zones, learn their type and hostile/neutral intent, create 'Perfect Awareness' aspect with two free invokes"
+      },
+      "mastery_benefits": "Mastered version: Also detect undead and magical wards",
+      "cooldown": "Once per scene (mastered) or costs 1 Fate Point (unmastered)",
+      "training_locations": ["Northwind Summit", "Volunruud Word Wall"]
+    },
+    {
+      "name": "Disarm (Zun Haal Viik)",
+      "words": ["Zun (Weapon)", "Haal (Hand)", "Viik (Defeat)"],
+      "effect": "Force enemies to drop their weapons",
+      "mechanics": {
+        "action_type": "Overcome vs. Target's Physique",
+        "one_word": "Force one target to drop weapon, must use action to retrieve it",
+        "two_words": "Force up to two targets to drop weapons, weapons fly one zone away",
+        "three_words": "All enemies in zone drop weapons and shields, items fly to random adjacent zones, create 'Disarmed' situation aspect"
+      },
+      "mastery_benefits": "Mastered version: Disarmed opponents also take -2 to defend until rearmed",
+      "cooldown": "Once per scene (mastered) or costs 1 Fate Point (unmastered)",
+      "training_locations": ["Eldersblood Peak", "Snow Veil Sanctum Word Wall"]
+    },
+    {
+      "name": "Storm Call (Strun Bah Qo)",
+      "words": ["Strun (Storm)", "Bah (Wrath)", "Qo (Lightning)"],
+      "effect": "Summon a devastating lightning storm (outdoor use only)",
+      "mechanics": {
+        "action_type": "Create Advantage/Attack",
+        "three_words_only": "Call down a storm that strikes random targets (friend or foe) with lightning for next 3 exchanges. Each exchange, roll 4dF: on + or ++, lightning strikes (Weapon:4 attack) a random target in area. Create 'Raging Storm' aspect.",
+        "special": "Can only be used outdoors. Affects everyone in encounter, including party members. Lasts 3 exchanges once called."
+      },
+      "mastery_benefits": "Mastered version: Can direct one lightning strike per exchange to chosen target",
+      "cooldown": "Once per session (mastered) or costs 2 Fate Points (unmastered)",
+      "lore_note": "Extremely powerful but dangerous to all. Use with caution.",
+      "training_locations": ["High Gate Ruins", "Forelhost Word Wall"]
+    }
+  ],
+  "learning_mechanics": {
+    "at_character_creation": {
+      "nord_racial_extra": {
+        "name": "Voice of the Nord",
+        "description": "As a Nord, you've been taught one word of the Thu'um by elders or discovered it through heritage.",
+        "benefit": "Choose ONE 3-word shout from: Unrelenting Force, Whirlwind Sprint, or Kyne's Peace. You know ONE word of this shout at character creation. Start with 2 segments filled on its mastery clock."
+      },
+      "other_races": "Bretons and Imperials cannot start with Thu'um at creation but can learn through gameplay."
+    },
+    "learning_methods": [
+      {
+        "method": "Word Walls",
+        "description": "Ancient walls inscribed with words of power throughout Skyrim",
+        "mechanics": "Discovering a Word Wall teaches one word of a specific shout. Must pass Lore check (difficulty varies) to understand and internalize the word. Adds 1 word to known shout or teaches new shout.",
+        "locations": "Various dungeons, mountaintops, and ancient ruins across Skyrim"
+      },
+      {
+        "method": "Greybeard Training",
+        "description": "Join or petition the Greybeards at High Hrothgar",
+        "mechanics": "Complete pilgrimage to High Hrothgar. Must prove dedication through trials. Greybeards can teach one word per major milestone or significant dedication. Gain +2 segments on mastery clock for any shout they teach.",
+        "requirements": "Must show respect for the Way of the Voice, pass tests of character"
+      },
+      {
+        "method": "Teacher (Ulfric Stormcloak)",
+        "description": "Ulfric learned from Greybeards but used Thu'um in war",
+        "mechanics": "If aligned with Stormcloaks and gain high reputation, Ulfric may teach Unrelenting Force. Teaches practical, combat-focused approach. Gain +1 segment on mastery clock but takes longer to master (9 segments instead of 8) due to aggressive use.",
+        "requirements": "High loyalty to Stormcloaks, complete significant quests, must specifically request training"
+      },
+      {
+        "method": "Meditation and Practice",
+        "description": "Dedicated roleplay and practice to unlock latent knowledge",
+        "mechanics": "Create a 10-segment 'Meditation Clock' for learning a new word. Fill segments through: dedicated RP scenes, spending Fate Points for insight (1 FP = 1 segment), major breakthroughs in story (2 segments), Lore checks during downtime. When filled, learn one word of chosen shout.",
+        "requirements": "Must already know at least one word of the shout, dedicated in-character effort"
+      },
+      {
+        "method": "Ancient Texts and Scrolls",
+        "description": "Rare books or scrolls contain Thu'um knowledge",
+        "mechanics": "Discovering specific texts (GM-determined rare finds) can teach understanding of shouts. Requires Great (+4) Lore check and one week of study time. Success grants one word of a shout.",
+        "examples": "College of Winterhold archives, Dragonborn Gallery, ancient Nordic tombs"
+      },
+      {
+        "method": "Absorbing Dragon Souls (Alternative Rule)",
+        "description": "OPTIONAL: If GM allows dragons in post-Alduin campaign",
+        "mechanics": "When party defeats a dragon, any character with at least one known word of Thu'um may attempt Will check (Superb +5) to absorb a fragment of dragon soul. Success grants instant understanding of one word of any shout. Can only be done once per dragon.",
+        "lore_note": "This is the Dragonborn method but extremely difficult for non-Dragonborn. Most characters will fail this check. Reserved for epic moments."
+      }
+    ]
+  },
+  "racial_differences": {
+    "nord": {
+      "base_affinity": "Natural connection to Thu'um through heritage",
+      "mechanics": "Standard mastery clocks (8 segments), can choose one shout at creation, -1 difficulty on Lore checks to learn from Word Walls"
+    },
+    "breton": {
+      "base_affinity": "Magical aptitude helps understand Thu'um as magic-adjacent",
+      "mechanics": "Mastery clocks have 10 segments (slower mastery), cannot start with Thu'um, +1 difficulty on learning from Word Walls BUT +2 to learning from texts/study due to scholarly nature"
+    },
+    "imperial": {
+      "base_affinity": "Disciplined study allows learning but requires dedication",
+      "mechanics": "Mastery clocks have 10 segments, cannot start with Thu'um, standard difficulty on learning but excels at Greybeard training due to discipline (+1 segment when training with masters)"
+    }
+  },
+  "integration_with_fate_core": {
+    "as_stunts": "Each known shout can be represented as a stunt in character creation/advancement. Cost: 1 Refresh per shout known (all three words).",
+    "as_extras": "Thu'um can be taken as an Extra, granting access to the entire system. Cost: 1 Refresh for the Extra, then individual shouts cost Fate Points or are earned through story.",
+    "recommended_approach": "Extra system - take 'Way of the Voice' Extra for 1 Refresh, gain ability to learn and use shouts. Individual shouts don't cost additional Refresh but require story justification to learn.",
+    "aspect_invocations": "Can invoke appropriate aspects to reduce Fate Point cost, extend cooldown, or boost effect. Example: Invoke 'True Son of Skyrim' to use Unrelenting Force without Fate Point once per session."
+  },
+  "gm_guidance": {
+    "balance_concerns": "Thu'um is powerful but limited by Fate Points and cooldowns. Don't allow spam. Respect the rarity and significance of the Voice.",
+    "story_integration": "Learning Thu'um should be a significant character journey, not casual skill acquisition. Create memorable moments around discovery and mastery.",
+    "word_wall_placement": "Place Word Walls in dungeons and locations as quest rewards. Make discovery feel earned.",
+    "npc_reactions": "Most NPCs are awed or frightened by Thu'um use. Greybeards disapprove of casual combat use. Ulfric's supporters admire it. Imperials may be intimidated.",
+    "power_level": "Thu'um can swing difficult battles but shouldn't trivialize challenges. Use cooldowns and Fate Point costs to maintain balance.",
+    "lore_respect": "The Voice is sacred to Nords. Using it frivolously or for evil purposes should have social consequences."
+  },
+  "example_character_progression": {
+    "session_0": "Nord warrior chooses 'Voice of the Nord' Extra, learns one word of Unrelenting Force (Fus), starts with 2/8 mastery segments",
+    "session_3": "Discovers Word Wall in Bleak Falls Barrow, learns second word (Ro), now has 3/8 segments",
+    "session_7": "Uses Unrelenting Force in climactic battle against dragon priest, GM awards 2 mastery segments (now 5/8)",
+    "session_10": "Spends downtime meditating, roleplay training, fills 1 segment (6/8)",
+    "session_15": "Receives training from Greybeard, fills 2 segments (8/8), mastery complete! Can now use Unrelenting Force once per scene without Fate Point",
+    "session 20": "Finds third word (Dah) at another Word Wall, starts new mastery clock for 3-word version (0/8 segments)"
+  },
+  "variant_rules": {
+    "simplified_mastery": "Instead of 8-segment clocks, use 4-segment clocks for faster progression",
+    "no_fate_point_cost": "Remove Fate Point requirement entirely, rely only on cooldowns. Good for lower-power campaigns.",
+    "hardcore_learning": "Require completing specific quests to learn each word, not just finding Word Walls. Makes Thu'um much rarer.",
+    "voice_of_power": "Allow spending 2 Fate Points to use a mastered shout twice in same scene, ignoring cooldown."
+  }
+}

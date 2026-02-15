@@ -1,0 +1,120 @@
+{
+  "name": "Kodlak Whitemane",
+  "id": "npc_stat_kodlak_whitemane",
+  "type": "Nord Warrior",
+  "category": "Faction Leader",
+  "location": "Jorrvaskr (Whiterun)",
+  "faction": "The Companions",
+  "aspects": {
+    "high_concept": "Wise Harbinger of the Companions",
+    "trouble": "Cursed with Beast Blood, Yearns for Peace",
+    "other_aspects": [
+      "Seeks Sovngarde with an Honorable Death",
+      "Mentor to the Next Generation",
+      "Rejects the Werewolf Gift as a Curse"
+    ]
+  },
+  "skills": {
+    "Superb": ["Fight"],
+    "Great": ["Will", "Rapport"],
+    "Good": ["Lore", "Empathy", "Notice"],
+    "Fair": ["Athletics", "Physique", "Investigate"],
+    "Average": ["Contacts", "Resources"]
+  },
+  "stunts": [
+    "Master of Combat: +2 to Fight when teaching or demonstrating combat techniques",
+    "Voice of the Harbinger: +2 to Rapport when inspiring or leading Companions",
+    "Ancient Wisdom: +2 to Lore when recalling warrior traditions or history"
+  ],
+  "stress": {
+    "physical": [false, false, false],
+    "mental": [false, false, false, false]
+  },
+  "consequences": {
+    "mild": "Aging body growing weary",
+    "moderate": null,
+    "severe": null
+  },
+  "refresh": 3,
+  "armor": 1,
+  "notes": "Kodlak Whitemane is the Harbinger of the Companions, the ancient warrior guild based in Jorrvaskr. Old and wise, he leads with honor and wisdom rather than brute strength. Unlike many Companions, he views their werewolf curse as a burden that prevents them from reaching Sovngarde. He's a mentor figure who values honor above all else and seeks to cure the beast blood before his death. Despite his age, he remains a formidable warrior and commands deep respect from all Companions.",
+  "combat_tactics": "Kodlak fights with the skill of decades of experience. While age has slowed him, his technique is flawless. He's defensive and strategic, using positioning and timing rather than brute force. He won't transform into werewolf form, as he rejects the beast blood.",
+  "scene_triggers": ["Companions recruitment", "Jorrvaskr leadership", "Beast blood storyline", "Honor quests"],
+  "act_context": ["Act 1", "Act 2"],
+  "starting_equipment": {
+    "armor": "Ancient Nord Armor (Armor:1, heirloom piece)",
+    "weapon": "Wuuthrad Replica (Weapon:3, legendary greatsword)",
+    "other": ["Harbinger's journal", "Ysgramor's writings", "Cure research notes"]
+  },
+  "social_interaction": "Kodlak is warm, grandfatherly, and deeply wise. He speaks with measured authority but always makes people feel heard. He values honor and sees potential in others. He's patient with mistakes but firm about principles. He often speaks in parables or references to old warrior traditions. With his inner circle, he shares his burden about the curse and his fears about dying with beast blood.",
+  "relationships": {
+    "Vilkas": "Companion, respects his strength but worries about his temper",
+    "Farkas": "Companion, appreciates his simple honor",
+    "Aela the Huntress": "Companion, respects her skill but disagrees about beast blood",
+    "Skjor": "Companion, concerned about his embrace of beast blood",
+    "Ria": "New Companion, sees potential",
+    "Torvar": "Companion, values his loyalty despite drinking",
+    "Athis": "Companion, respects his dedication",
+    "Njada Stonearm": "Companion, appreciates her discipline",
+    "Eorlund Gray-Mane": "Master smith and old friend",
+    "Silver Hand": "Enemies of Companions, understands their hatred of werewolves"
+  },
+  "personality_notes": {
+    "speaking_style": "Calm, wise, uses warrior metaphors, speaks of honor and tradition, encouraging but firm",
+    "motivations": ["Cure the beast blood for all Companions", "Lead with honor until death", "Reach Sovngarde as a true warrior, not beast", "Mentor next generation", "Preserve Companions' honorable traditions", "Protect Whiterun"],
+    "fears": ["Dying with beast blood and being denied Sovngarde", "Companions losing their honor", "Being remembered as a cursed creature rather than warrior", "Failing to cure the lycanthropy"],
+    "quirks": ["Sits in his chair gazing at fire contemplatively", "Quotes Ysgramor and ancient heroes", "Refuses to discuss his werewolf form", "Wakes early for dawn training"],
+    "character_growth": "May find peace through curing curse, pass leadership to worthy successor, or die with honor"
+  },
+  "werewolf_curse": {
+    "origin": "Companions bear beast blood from ancient pact with Daedric Prince Hircine",
+    "kodlak_view": "Views it as curse that denies access to Sovngarde",
+    "inner_circle": "Only inner circle members share the beast blood",
+    "cure_research": "Been searching for cure for years, has leads in witch covens",
+    "secret_shame": "Deeply troubled by curse, wants to die as man not beast",
+    "aela_conflict": "Disagrees with Aela who embraces beast blood as gift"
+  },
+  "companions_leadership": {
+    "style": "Leads by example and wisdom, not authority",
+    "values": "Honor in combat, protecting the weak, fair pay for fair work",
+    "recruitment": "Carefully evaluates new members for honor and skill",
+    "training": "Personally mentors promising Companions",
+    "reputation": "Maintains Companions' reputation as honorable mercenaries",
+    "politics": "Keeps Companions neutral in civil war - honor matters, not politics"
+  },
+  "whiterun_deployment_mission": {
+    "context": "Jarl Balgruuf requests Companions' help defending Whiterun",
+    "kodlak_response": "Sees this as honorable cause - protecting city and people",
+    "assignment": "Sends skilled Companion (PC if recently joined) to assist in defense",
+    "briefing": "This is not about taking sides in the civil war. This is about protecting innocent people in Whiterun. The Companions have always defended those who cannot defend themselves. Go to Whiterun, find out what threatens the city, and help stop it.",
+    "timing": "PC arrives just as Battle of Whiterun begins"
+  },
+  "story_hooks": [
+    "Recruits PC into Companions after proving themselves",
+    "Assigns honor-based contracts and missions",
+    "Reveals beast blood secret to trusted members",
+    "Sends PC to find cure for lycanthropy",
+    "Provides wisdom and mentorship on difficult choices",
+    "Can send PC to assist Whiterun during civil war crisis",
+    "Death triggers succession storyline and quest to cure him posthumously",
+    "Connection to ancient warrior traditions and Ysgramor's legacy"
+  ],
+  "dialogue_samples": {
+    "greeting": "Welcome to Jorrvaskr, friend. The Companions have stood for honor and strength for thousands of years. What brings you to our hall?",
+    "recruitment": "I see potential in you. The heart of a warrior, the spirit of honor. But potential means nothing without action. Prove yourself to my Shield-Siblings, and we'll see if you're worthy of joining our family.",
+    "whiterun_mission": "Jarl Balgruuf has requested aid defending Whiterun. This isn't about the civil war - Imperials and Stormcloaks both bleed the same when cut. This is about protecting people who can't protect themselves. That's what the Companions do. Go to Whiterun, assess the situation, and help defend the city. Fight with honor.",
+    "beast_blood": "The beast blood... it grants great power, yes. But at what cost? I've lived with this curse for decades, and I tell you truly - it's not a gift. It's a chain that binds us to Hircine and denies us Sovngarde. I will find a cure, even if it comes too late for me.",
+    "honor": "Honor is everything. Gold, glory, fame - these fade with time. But a man's honor, his integrity, his word - these echo through eternity. Live honorably, die honorably, and the songs will remember you.",
+    "mentoring": "You have the strength, yes. But strength without discipline is just violence. Learn control, learn wisdom, learn when *not* to fight. That's what separates a warrior from a brute."
+  },
+  "neutral_faction_integration": {
+    "starting_narrative": "You've proven yourself worthy to join the Companions, and Kodlak Whitemane himself speaks with you. 'Jarl Balgruuf has sent word that Whiterun faces a threat,' he explains, his weathered face serious. 'The Companions will not stand idle when innocent people need protection. I'm sending you to Whiterun. This isn't about choosing sides in the civil war - this is about honor. Go, assess the situation, and defend those who cannot defend themselves.'",
+    "transition_to_battle": "You arrive in Whiterun expecting to help with local threats, but find the city preparing for the Battle of Whiterun. Stormcloak forces approach, and Imperial forces are gathering. In the chaos, you see both Hadvar and Ralof - two warriors from opposing sides, each trying to rally defenders. Kodlak's words echo: 'This isn't about taking sides.' But now you must choose.",
+    "consequences": {
+      "fight_imperial": "You defended Whiterun against Stormcloak attack - honorable. Companions approve of protecting the city.",
+      "fight_stormcloak": "You joined the attack on Whiterun - complicated. Companions question attacking a city, but respect strength.",
+      "seek_peace": "You try to find peaceful solution - idealistic but ultimately futile as battle begins. Must choose eventually."
+    },
+    "kodlak_response": "When you return, Kodlak will ask about your choice. He cares less about which side you chose and more about whether you fought with honor and tried to protect innocents."
+  }
+}

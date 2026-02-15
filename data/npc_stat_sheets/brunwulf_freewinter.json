@@ -1,0 +1,70 @@
+{
+  "name": "Brunwulf Free-Winter",
+  "id": "npc_stat_brunwulf_freewinter",
+  "type": "Nord Veteran and Windhelm Citizen",
+  "category": "Friendly NPC",
+  "location": "Windhelm (Palace or City)",
+  "faction": "Windhelm (Imperial Sympathizer)",
+  "role": "Former Legionnaire, Advocate for Dunmer and the disenfranchised",
+  "aspects": {
+    "high_concept": "Open-Minded Nord War Veteran of Windhelm",
+    "trouble": "Caught Between Skyrim's Traditions and His Conscience",
+    "other_aspects": [
+      "Great War Survivor Turned Peacekeeper",
+      "Believes Skyrim Is Home to All Races",
+      "Respected by Windhelm's Downtrodden"
+    ]
+  },
+  "skills": {
+    "Great": ["Rapport", "Fight"],
+    "Good": ["Empathy", "Physique"],
+    "Fair": ["Lore", "Shoot"],
+    "Average": ["Will", "Notice"]
+  },
+  "stunts": [
+    "Voice of Reason: +2 to Rapport when trying to defuse racial tension or persuade Nords to be more accepting",
+    "Warrior of the Empire: +2 to Fight when battling Thalmor or defending others, owing to his Legion training",
+    "Streetwise Veteran: Once per scene, Brunwulf can use Empathy instead of Intimidate to quell a brewing conflict by invoking his reputation"
+  ],
+  "stress": {
+    "physical": [false, false, false],
+    "mental": [false, false, false]
+  },
+  "consequences": {
+    "mild": null,
+    "moderate": null,
+    "severe": null
+  },
+  "refresh": 3,
+  "equipment": {
+    "weapon": "Steel Sword",
+    "armor": "Worn Legionnaire Armor (kept from his service)",
+    "misc": "Amulet of Talos (he honors all gods)"
+  },
+  "personality_notes": {
+    "speaking_style": "Calm, steady, with the gravelly tone of a seasoned soldier. He often sounds tired of conflict, but determined when discussing injustice.",
+    "motivations": [
+      "Protect Windhelm's vulnerable citizens (Dunmer, Argonians) from abuse",
+      "End the civil war with minimal bloodshed",
+      "Prove that honor isn't exclusive to the Stormcloak cause"
+    ],
+    "fears": [
+      "Windhelm tearing itself apart from within due to hatred",
+      "Being seen as a traitor by his fellow Nords",
+      "That his efforts to help others will amount to nothing"
+    ],
+    "quirks": [
+      "Patrols the Gray Quarter on his own initiative to keep the peace",
+      "Offers a respectful nod to Dunmer elders and Argonian workers alike",
+      "Refuses to drink Nord mead out of protest when Dunmer friends aren't allowed in certain taverns"
+    ]
+  },
+  "relationships": {
+    "Ulfric Stormcloak": "Respects Ulfric's love for Skyrim but deeply disagrees with his prejudices; could become Jarl if Ulfric is deposed.",
+    "Galmar Stone-Fist": "Galmar views him with suspicion as an 'Imperial lover'",
+    "Windhelm Dunmer Families": "Trusted ally – they know Brunwulf speaks for them when few Nords will",
+    "Imperial Legion": "Former comrade-in-arms; still in touch with old Legion friends clandestinely"
+  },
+  "quests": ["Blood on the Ice (ally outcome)", "Civil War (Imperial side, Jarl transition)"],
+  "notes": "Brunwulf Free-Winter fought for the Empire in the past (a veteran of the Great War) and now lives in Windhelm, quietly pushing back against Ulfric's more extreme nationalist policies. If the player aligns with the Empire or takes up causes to help the downtrodden, Brunwulf can become a valuable ally and even the new Jarl of Eastmarch should the Empire win. He represents a more inclusive vision for Skyrim."
+}

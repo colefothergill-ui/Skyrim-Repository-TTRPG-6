@@ -1,0 +1,97 @@
+{
+  "name": "Olfrid Battle-Born",
+  "id": "npc_stat_olfrid_battle-born",
+  "type": "Nord Merchant",
+  "category": "Political Contact",
+  "location": "Whiterun (Battle-Born House)",
+  "faction": "Neutral (Imperial-leaning)",
+  "aspects": {
+    "high_concept": "Proud Patriarch of Battle-Born Clan",
+    "trouble": "Family Honor Above All Else",
+    "other_aspects": [
+      "Secret Imperial Sympathizer",
+      "Business Connections Throughout Skyrim",
+      "Ancient Grudge with Gray-Mane Family"
+    ]
+  },
+  "skills": {
+    "Great": ["Resources"],
+    "Good": ["Rapport", "Contacts"],
+    "Fair": ["Deceive", "Notice", "Will"],
+    "Average": ["Empathy", "Lore", "Fight"]
+  },
+  "stunts": [
+    "Merchant Prince: +2 to Resources when conducting trade or business negotiations",
+    "Well Connected: +2 to Contacts in Whiterun and surrounding holds",
+    "Family Reputation: Once per session, invoke Battle-Born name for advantage in social situations"
+  ],
+  "stress": {
+    "physical": [false, false],
+    "mental": [false, false, false]
+  },
+  "consequences": {
+    "mild": null,
+    "moderate": null,
+    "severe": null
+  },
+  "refresh": 3,
+  "armor": 0,
+  "notes": "Olfrid Battle-Born is the patriarch of one of Whiterun's oldest and most influential families. Wealthy and well-connected, he maintains business relationships throughout Skyrim, including with the Thieves Guild. While publicly neutral, he secretly supports the Imperial Legion. His family's ancient feud with the Gray-Manes has intensified with the civil war, as the Gray-Manes openly support the Stormcloaks.",
+  "combat_tactics": "Olfrid is not a warrior and will avoid combat at all costs. He relies on hired guards and his social influence to resolve conflicts. If cornered, he'll attempt to talk his way out or flee to safety.",
+  "scene_triggers": ["Whiterun political events", "Thieves Guild missions", "Battle of Whiterun", "Family feud encounters"],
+  "act_context": ["Act 1", "Act 2"],
+  "starting_equipment": {
+    "armor": "Fine Nordic Clothing (Armor:0, +1 to Rapport in social settings)",
+    "weapon": "None (relies on guards)",
+    "other": ["Family signet ring", "Business ledgers", "100 gold", "Silver tongue"]
+  },
+  "social_interaction": "Olfrid is proud, dignified, and somewhat pompous. He speaks with authority and expects respect due to his family name. He's shrewd in business but his family pride can cloud his judgment. While he maintains public neutrality, his Imperial sympathies slip through in private conversations. He's dismissive of the Gray-Manes and quick to defend Battle-Born honor.",
+  "relationships": {
+    "Idolaf Battle-Born": "Son, shares Imperial sympathies",
+    "Jon Battle-Born": "Son, worries about his friendship with Gray-Mane girl",
+    "Bergritte Battle-Born": "Wife, supports family position",
+    "Gray-Mane Family": "Ancient rivals, intensified by civil war",
+    "Brynjolf": "Secret business contact through Thieves Guild",
+    "Imperial Legion": "Secret supporter, provides information",
+    "Jarl Balgruuf": "Respects but questions his neutrality"
+  },
+  "personality_notes": {
+    "speaking_style": "Formal and dignified, often mentions family legacy, condescending to those of lower status",
+    "motivations": ["Preserve Battle-Born legacy and wealth", "Support Imperial victory discreetly", "Maintain business empire", "Crush Gray-Mane influence"],
+    "fears": ["Family ruin or disgrace", "Gray-Mane triumph", "Stormcloak victory", "Business collapse"],
+    "quirks": ["Constantly invokes family name", "Judges people by lineage and wealth", "Keeps detailed records of slights"],
+    "character_growth": "May learn humility through war's consequences, could reconcile with Gray-Manes, or become more bitter"
+  },
+  "thieves_guild_connection": {
+    "role": "Secret patron and fence for guild operations in Whiterun hold",
+    "services": "Provides market intelligence, storage for goods, political cover",
+    "motivation": "Profits from guild arrangements and gains intelligence network",
+    "vulnerability": "If exposed, could damage both family reputation and Imperial connections"
+  },
+  "battle_of_whiterun_role": {
+    "before_battle": "Receives intelligence from both sides, prepares family assets",
+    "during_battle": "Secretly aids Imperial forces while maintaining public neutrality",
+    "after_battle": "Seeks to profit from reconstruction, may openly declare for winner",
+    "player_interaction": "If PC delivers Brynjolf's message during battle preparations, Olfrid may provide intelligence or request PC's help protecting family interests"
+  },
+  "story_hooks": [
+    "Contact point for Thieves Guild operations in Whiterun",
+    "Source of political intelligence about Whiterun and civil war",
+    "Can provide introduction to Imperial sympathizers",
+    "Family feud creates dramatic tension and side quests",
+    "May request PC help protecting business interests during battle",
+    "Potential patron for mercenary work"
+  ],
+  "dialogue_samples": {
+    "greeting": "The Battle-Born name has stood for honor and prosperity for generations. What brings you to our door?",
+    "thieves_guild_contact": "Ah, Brynjolf's associate. Good. We must be discreet - these are delicate times. My family's reputation must remain... unblemished.",
+    "civil_war_discussion": "Publicly, I remain neutral as Jarl Balgruuf does. But between us... the Empire represents order and civilization. Ulfric's rabble would tear Skyrim apart.",
+    "gray-mane_mention": "The Gray-Manes? Stormcloak sympathizers and traitors, the lot of them. Their 'honor' is nothing but stubborn pride.",
+    "during_battle": "My family has endured for centuries. We will survive this war, no matter which side claims victory. Though I have... preferences."
+  },
+  "neutral_faction_integration": {
+    "thieves_guild_start": "When Brynjolf sends the PC to Whiterun, they find Olfrid anxious about the approaching battle. He needs the guild's help securing valuable goods before fighting begins.",
+    "meeting_location": "Battle-Born house or discreet meeting at market",
+    "leads_to_encounter": "While meeting with Olfrid, the Battle of Whiterun erupts, forcing PC to choose between Hadvar (Imperial) and Ralof (Stormcloak)"
+  }
+}

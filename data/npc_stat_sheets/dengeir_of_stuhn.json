@@ -1,0 +1,49 @@
+{
+  "name": "Dengeir of Stuhn",
+  "id": "npc_stat_dengeir",
+  "type": "Nord Veteran (Elder)",
+  "category": "Friendly NPC",
+  "location": "Falkreath",
+  "faction": "Stormcloak-sympathizer (Former Jarl of Falkreath)",
+  "aspects": {
+    "high_concept": "Ousted Jarl and Wary Old Nord",
+    "trouble": "Paranoid and Bitter About Loss of Title",
+    "other_aspects": [
+      "Stormcloak Loyalist at Heart",
+      "Keen Nose for Conspiracy",
+      "Old Warrior with Fading Strength"
+    ]
+  },
+  "skills": {
+    "Great": ["Notice"],
+    "Good": ["Lore", "Will"],
+    "Fair": ["Fight", "Rapport"],
+    "Average": ["Investigate", "Empathy", "Stealth"]
+  },
+  "stunts": [
+    "Seen It All: +2 to Will when defending against fear or intimidation, due to Dengeir's seasoned nerves.",
+    "Old Nordic Wisdom: Once per session, can use Lore in place of Contacts to recall an old connection or piece of historical info that can help in the present situation."
+  ],
+  "stress": {
+    "physical": [false, false],
+    "mental": [false, false, false]
+  },
+  "consequences": {
+    "mild": null,
+    "moderate": null,
+    "severe": null
+  },
+  "refresh": 2,
+  "notes": "Dengeir is an elderly Nord noble who ruled Falkreath in the past. He stepped down (or was pressured out) in favor of his nephew Siddgeir, a change he suspects was orchestrated by Imperial supporters. Dengeir is proud and possesses a soldier's memory of past wars. He often mutters about 'Thalmor plots' or unseen threats. Though age has slowed him, his mind is still sharp in matters of intrigue.",
+  "personality_traits": {
+    "motivations": ["Regain honor and influence", "Protect Falkreath from hidden threats (vampires, conspiracies)", "See Skyrim free of Thalmor and Imperial meddling"],
+    "attitude_towards_players": "Cautiously hopeful. If players show respect or share information, he warms up, seeing them as potential allies to right wrongs. Skeptical of those aligned with the Empire.",
+    "voice_style": "Gravelly and low, often hushed as if someone might be listening. Carries an undercurrent of resentment when speaking of current authorities."
+  },
+  "relationships": {
+    "Jarl Siddgeir": "Nephew. Dengeir feels Siddgeir is unfit and only in power due to Imperial bribes. Relations are strained at best.",
+    "Thalmor": "Deep hatred; he believes the Thalmor (and their concordat) indirectly led to his removal. Blames them for many of Skyrim's woes.",
+    "Stormcloaks": "Allies; he quietly supports the Stormcloak cause and Ulfric Stormcloak, hoping they will restore him as Jarl.",
+    "Steward Nenya": "Wary respect; acknowledges her capability but suspects her of being too loyal to Siddgeir or the Empire."
+  }
+}

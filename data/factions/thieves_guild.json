@@ -1,0 +1,50 @@
+{
+  "name": "Thieves Guild",
+  "id": "thieves_guild",
+  "type": "Guild",
+  "leader": "Mercer Frey (Guildmaster)",
+  "headquarters": "The Ragged Flagon, Riften",
+  "alignment": "Neutral (Criminal)",
+  "description": "Once Skyrim's most influential criminal organization, the Thieves Guild now survives as a shadow of its former self. Centered in Riften's ratway tunnels, the guild is struggling – jobs are scarce, coin is low, and its luck is said to be cursed. Members still stick together under the leadership of Mercer Frey, pulling pickpocketing, burglary, and smuggling jobs where they can. The guild operates in secrecy, dealing in stolen goods and information. With the right leadership and a bit of luck, they hope to restore their prominence across Skyrim's cities.",
+  "goals": [
+    "Rebuild the Guild's wealth and influence in each major city",
+    "Uncover and exploit lucrative opportunities (heists, cons, smuggling routes)",
+    "Protect guild members and their secrets from outsiders",
+    "Appease Nocturnal and lift the curse on the Guild's luck"
+  ],
+  "resources": {
+    "military_strength": "None",
+    "wealth": "Low",
+    "influence": "Moderate"
+  },
+  "clock": {
+    "name": "Guild Restoration",
+    "progress": 0,
+    "segments": 8,
+    "description": "Progress toward restoring the Thieves Guild to its former glory across Skyrim"
+  },
+  "relationships": {
+    "Black-Briar Family": "Allied - Maven Black-Briar offers political protection and jobs, for a cut of the profits",
+    "Riften Guard": "Hostile - the city guard would love to jail every guild member if they could find proof",
+    "Dark Brotherhood": "Neutral - an understanding exists to respect each other's turf; they occasionally trade information",
+    "City Merchants": "Mixed - some secretly cooperate for kickbacks, others fear and despise the Guild's thefts"
+  },
+  "notable_members": [
+    "Mercer Frey (Guildmaster, Nightingale)",
+    "Brynjolf (Second-in-command recruiter)",
+    "Delvin Mallory (Fence and fixer)",
+    "Vex (Infiltration specialist)",
+    "Karliah (Exiled Nightingale, in hiding)",
+    "Galathil (Guild member, face changer - if applicable)",
+    "Tonilia (Fence, Ragged Flagon)"
+  ],
+  "status": "Struggling and disorganized at present",
+  "joinable": true,
+  "ranks": [
+    "Initiate",
+    "Member",
+    "Elite",
+    "Guild Master"
+  ],
+  "notes": "The Thieves Guild uses a reputation system: as the player completes jobs and quests for the guild, their standing (and the guild's prosperity) improves. Advancement through ranks (Initiate to Guild Master) unlocks new benefits (fences pay more, access to Guild resources, etc.). Nocturnal's favor is tied to the Guild's success; the ultimate goal is to return the Skeleton Key to its shrine to lift the curse affecting their luck."
+}

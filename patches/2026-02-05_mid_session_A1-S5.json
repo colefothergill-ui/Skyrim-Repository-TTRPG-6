@@ -1,0 +1,117 @@
+{
+  "patch_id": "2026-02-05_mid_session_A1-S5",
+  "created_at": "2026-02-05",
+  "scope": "mid_session_protocol",
+  "summary": {
+    "scene_from": "A1-S4",
+    "scene_to": "A1-S5",
+    "location": "Whiterun — West Wall Checkpoints (Fog Line)",
+    "highlights": [
+      "Hadvar stabilized and protected behind Sigil-Sealed Stairwell ward.",
+      "Galmar Stone-Fist slain in west-wall fog; authority signet evidence recovered.",
+      "Stormcloak west approach routed; Imperial checkpoints established.",
+      "Public battlefield speech forces retreat; exposure cost accepted."
+    ]
+  },
+  "state_updates": {
+    "campaign_state": {
+      "last_updated": "2026-02-05",
+      "current_scene_id": "A1-S5",
+      "current_location": "Whiterun — West Wall Checkpoints (Fog Line)",
+      "current_objective": "Exploit Stormcloak rout; lock Imperial checkpoints; keep Hadvar alive; manage Battle-Born inquiry fallout.",
+      "civil_war_state": {
+        "player_alliance": "neutral",
+        "whiterun_control": "imperial",
+        "battle_of_whiterun_status": "imperial_breakthrough_west_wall_secured",
+        "imperial_victories": 1,
+        "stormcloak_victories": 0,
+        "key_battles_completed": [],
+        "faction_relationship": {
+          "imperial_legion": 0,
+          "stormcloaks": 0
+        },
+        "battle_of_whiterun_modifiers": [
+          "galmar_stonefist_killed",
+          "imperial_checkpoints_established",
+          "west_wall_secured"
+        ]
+      },
+      "branching_decisions": {
+        "civil_war_stance": "neutral_publicly_imperial_operational",
+        "battle_of_whiterun_choice": "imperial_support_covert"
+      },
+      "scene_flags_added": {
+        "stormcloak_infiltrator_neutralized": true,
+        "stormcloak_mage_possessed_and_killed": true,
+        "ice_hazard_dissipated": true,
+        "sigil_sealed_stairwell": true,
+        "galmar_stonefist_taken_out": true,
+        "galmar_death_witnessed": true,
+        "galmar_war_knot_signet_recovered": true,
+        "huscarls_conceded_and_retreated": true,
+        "chain_of_command_shattered": true,
+        "imperial_checkpoints_established": true,
+        "west_wall_secured": true,
+        "compel_famous_wrong_circles_accepted": true,
+        "battleborn_quiet_inquiry_completed": true
+      },
+      "world_consequences_additions": {
+        "npcs_killed_added": [
+          "stormcloak_assassin_parapet",
+          "stormcloak_ice_mage_parapet",
+          "galmar_stonefist"
+        ],
+        "major_choices_added": [
+          "Sealed the stairwell with a keyed ward to protect Hadvar during the west-wall fight.",
+          "Used Quagmire clairvoyance and phantom weaponry to assassinate Galmar Stone-Fist on the west wall.",
+          "Chose rout-control over slaughter: issued battlefield command orders and forced Stormcloak retreat with proof of Galmar's death.",
+          "Accepted the 'Famous in the Wrong Circles' exposure cost; Thalmor net tightens (Dream Catcher Search +1)."
+        ]
+      }
+    }
+  },
+  "clock_updates": {
+    "data/clocks/civil_war_clocks.json": {
+      "imperial_military_dominance": 3,
+      "stormcloak_rebellion_momentum": 4,
+      "major_battles.battle_of_whiterun.status": "active"
+    },
+    "data/clocks/faction_trust_clocks.json": {
+      "imperial_legion_trust.current_trust": 5
+    },
+    "data/clocks/pc_extras_clocks.json": {
+      "insaerndel_thalmor_search_clock.current_progress": 2
+    },
+    "data/clocks/whiterun_jobs.json": {
+      "battleborn_quiet_inquiry.current": 4,
+      "battleborn_quiet_inquiry.status": "completed"
+    }
+  },
+  "pc_updates": {
+    "data/pcs/pc_insaerndel.json": {
+      "fate_points": 1,
+      "equipment.items_added": [
+        "Galmar war-knot haft wrap (authority signet) — blooded leather with Stormcloak command knot",
+        "Wax strip (field authority mark) — Galmar's command wax, cracked",
+        "Vellum scrap (battle map fragment) — west approach notations"
+      ],
+      "notes_append": "Mid-session: Slew Galmar Stone-Fist in west-wall fog; recovered his war-knot signet wrap and field marks; Stormcloak line routed."
+    }
+  },
+  "world_state_updates": {
+    "data/world_state/current_state.json": {
+      "major_events_added": [
+        "Battle of Whiterun underway (West Wall breach attempt repelled)",
+        "Galmar Stone-Fist slain during the Battle of Whiterun (witnessed)"
+      ],
+      "rumors_added": [
+        "Word spreads: Galmar Stone-Fist fell in the west-wall fog—some claim an 'Altmer witch' struck him down.",
+        "Stormcloaks retreat from the west approach after chain-of-command collapse.",
+        "Battle-Born whispers intensify about the hooded Altmer tied to the Arcana front."
+      ],
+      "active_threats_added": [
+        "Thalmor net tightening around the 'Dream Catcher of Dusk'"
+      ]
+    }
+  }
+}

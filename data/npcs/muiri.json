@@ -1,0 +1,56 @@
+{
+  "name": "Muiri",
+  "id": "muiri",
+  "type": "Breton Apothecary Assistant",
+  "location": "The Hag's Cure, Markarth",
+  "faction": "Civilian (Dark Brotherhood client)",
+  "aspects": {
+    "high_concept": "Disgraced alchemist's apprentice seeking bloody revenge",
+    "trouble": "Haunted by Betrayal and Shame – her heartbreak and ruin drive her to desperate acts",
+    "other_aspects": [
+      "Quiet and Unassuming Exterior – appears meek, concealing a vengeful anger",
+      "Skilled Herbalist – knowledge of potions and poisons both healing and harmful",
+      "Once Trusting, Now Jaded – used to be gentle-hearted, but suffering has hardened her"
+    ]
+  },
+  "skills": {
+    "Great": ["Crafts"],
+    "Good": ["Stealth", "Empathy"],
+    "Fair": ["Deceive", "Notice", "Lore"],
+    "Average": ["Rapport", "Will", "Resources", "Fight"]
+  },
+  "stunts": [
+    "Alchemical Adept: +2 to Crafts when brewing poisons or remedies (Muiri's potions are notably potent).",
+    "Innocent Facade: +2 to Deceive when pretending to be harmless or uninvolved, as others tend to underestimate her.",
+    "Bitter Determination: +2 to Will when resisting intimidation or fear if it relates to facing those who wronged her."
+  ],
+  "stress": {
+    "physical": [false, false],
+    "mental": [false, false]
+  },
+  "consequences": {
+    "mild": null,
+    "moderate": null,
+    "severe": null
+  },
+  "refresh": 3,
+  "fate_points": 3,
+  "notes": "Muiri came to Markarth from Windhelm, sent to apprentice under her aunt Bothela at The Hag's Cure. In her youth, Muiri was bright, friendly, and eager to please. That changed after she fell in with a charismatic Breton bandit named Alain Dufont. Alain seduced Muiri and involved her in a plot to rob her friend's family (the Shatter-Shields of Windhelm). When the plan was foiled, Muiri was disgraced and cast out by everyone she cared about. She returned to Markarth in shame – a pariah in her own mind, clinging to the refuge of her aunt's apothecary shop. But inside her, resentment festered. Quietly, Muiri reached out to the only people who she thought could help settle the score: the Dark Brotherhood. Now, behind her polite customer service demeanor, Muiri anxiously awaits news of the assassins she hired. She feels a mix of guilt and vindictive thrill knowing Alain (and optionally Nilsine Shatter-Shield) will pay with blood. Muiri often appears lost in thought, absently grinding herbs while replaying her betrayals in her mind. If confronted about her troubles by someone she trusts, the hurt pours out of her. She is not evil by nature, but pain has pushed her to sanction dark deeds. Muiri's story is a caution in Markarth that even the seemingly innocent harbor deep wounds.",
+  "relationships": {
+    "Bothela": "Mentor and aunt – Bothela, the proprietor of The Hag's Cure, cares for Muiri and suspects she's depressed but doesn't know Muiri contracted assassins. Muiri feels she's let Bothela down and is determined to hide her involvement with the Dark Brotherhood.",
+    "Alain Dufont": "Ex-lover and betrayer – Alain's deceit and cruelty shattered Muiri's life. Her hatred for him is the driving force behind her hiring the Dark Brotherhood to kill him.",
+    "Nilsine Shatter-Shield": "Former friend – Muiri also holds Nilsine partly responsible for her humiliation (believing Nilsine turned on her after the robbery incident). If the opportunity arises, Muiri wants her dead as well, though this desire is tinged with guilt.",
+    "Dark Brotherhood": "Hidden contacts – Muiri has made a clandestine contract with this assassin guild. She has passed along gold and names, entrusting them to exact her revenge. Should the Brotherhood fulfill the contract, Muiri will feel both relief and the heavy weight of being complicit in murder.",
+    "Dragonborn/Player": "Potential confidant – If the player (as a Brotherhood member or otherwise) speaks with Muiri, she might cautiously open up. If they complete her contract, Muiri becomes notably warmer to them, perhaps even offering her alchemy skills as thanks."
+  },
+  "quests": [
+    "Dark Brotherhood – Mourning Never Comes (Muiri's contract to kill Alain Dufont and optionally Nilsine Shatter-Shield)",
+    "Local Troubles – Helping at The Hag's Cure (minor roleplay interactions as an alchemist in Markarth)",
+    "Post-Assassination – Muiri's Gratitude (if her contracts are fulfilled, a personal subplot of her trying to move on)"
+  ],
+  "inventory": [
+    "Satchel of alchemy ingredients (nightshade, deathbell, healing herbs, etc.)",
+    "A locket with an old picture (a memento from before her betrayal, often clutched in regret)",
+    "Modest clothing with an apron (work attire at the shop), sometimes stained with alchemical reagents"
+  ]
+}

@@ -1,0 +1,178 @@
+{
+  "name": "Legate Rikke",
+  "id": "npc_stat_legate_rikke",
+  "type": "Nord Imperial Officer",
+  "category": "Hostile NPC",
+  "location": "Castle Dour, Solitude / Imperial command posts",
+  "faction": "Imperial Legion",
+  "role": "Legate and General Tullius's Chief Tactical Officer",
+  "current_status": {
+    "status": "escaped",
+    "notes": "Conceded the perimeter clash; withdrew to preserve her command function. Left behind dispatch case under duress.",
+    "sanies_lupinus_exposure": true
+  },
+  "aspects": {
+    "high_concept": "Imperial Legate Torn Between Empire and Skyrim",
+    "trouble": "Secretly Sympathetic to Skyrim's Plight",
+    "other_aspects": [
+      "Veteran of the Great War",
+      "A Nord Who Serves Rome",
+      "Tactical Brilliance Hides a Heavy Heart",
+      "Talos Worshipper in Secret"
+    ]
+  },
+  "skills": {
+    "Superb": ["Tactics"],
+    "Great": ["Fight", "Will"],
+    "Good": ["Empathy", "Notice"],
+    "Fair": ["Physique", "Command"],
+    "Average": ["Lore", "Investigate"]
+  },
+  "stunts": [
+    "Master Strategist: +2 to Tactics when planning military operations. Can create tactical advantages that last multiple exchanges.",
+    "Nord Blood: Despite serving the Empire, Rikke respects Nord traditions. +2 to Empathy when dealing with Nords who understand her conflict.",
+    "Inspiring Commander: Once per scene, remove one consequence from an ally through a rousing speech or tactical adjustment.",
+    "Great War Survivor: Because of extensive combat experience, +2 to Will against fear or intimidation, and can reroll one failed Fight check per session.",
+    "Hidden Faith: Can invoke secret Talos worship to connect with traditional Nords, but risks Thalmor discovery."
+  ],
+  "stress": {
+    "physical": [false, false, false],
+    "mental": [false, false, false, false]
+  },
+  "consequences": {
+    "mild": null,
+    "moderate": null,
+    "severe": "Bitten Hand — Sanies Lupinus Exposure (Beast-Blood Seeded)"
+  },
+  "refresh": 3,
+  "fate_points": 3,
+  "equipment": {
+    "weapon": "Imperial sword (masterwork)",
+    "armor": "Imperial heavy armor (officer's variant)",
+    "special": "Battle maps, imperial orders, hidden Talos amulet"
+  },
+  "personality_notes": {
+    "speaking_style": "Professional, tactical, but with hints of Nord warmth. Uses military efficiency but shows compassion. Quotes Talos occasionally (subtle references only).",
+    "motivations": [
+      "End the civil war to protect Skyrim from the Thalmor",
+      "Serve the Empire while honoring her Nord heritage",
+      "Keep Skyrim strong through Imperial unity",
+      "Secretly preserve Nord traditions within the Legion"
+    ],
+    "fears": [
+      "The Thalmor discovering her secret Talos worship",
+      "Skyrim being destroyed by the civil war",
+      "Having to kill fellow Nords like Galmar",
+      "The Empire betraying Skyrim completely to the Thalmor"
+    ],
+    "quirks": [
+      "Touches hidden Talos amulet when stressed",
+      "Occasionally slips into Nord idioms",
+      "Shows respect to worthy Stormcloak opponents",
+      "Conflicted when fighting fellow Nords"
+    ]
+  },
+  "relationships": {
+    "General Tullius": "Loyal subordinate, but wishes he understood Skyrim better",
+    "Galmar Stone-Fist": "Former brother-in-arms, now bitter enemy - the relationship pains her",
+    "Ulfric Stormcloak": "Respects as a warrior but sees him as misguided and dangerous",
+    "Thalmor": "Despises them but must work alongside them",
+    "Jarl Balgruuf": "Hopes he stays loyal to the Empire",
+    "The Player": "Sees as potential to end the war, respects capable warriors"
+  },
+  "trust_clock": {
+    "current": 0,
+    "max": 8,
+    "advancement_triggers": [
+      "Join Imperial Legion (+3)",
+      "Win major battle for Imperials (+1)",
+      "Show respect for Nord traditions (+1)",
+      "Complete Rikke's missions honorably (+1)",
+      "Understand her inner conflict (+2)"
+    ],
+    "setback_triggers": [
+      "Join Stormcloaks (-10, irreversible)",
+      "Disrespect Nord traditions (-2)",
+      "Reveal her Talos worship to Thalmor (-5)",
+      "Question her loyalty to Empire (-1)"
+    ],
+    "trust_benefits": {
+      "3": "Rikke sees you as a reliable soldier",
+      "5": "Rikke shares her tactical wisdom and gives you important missions",
+      "6": "Rikke reveals her inner conflict and secret Talos faith",
+      "8": "Rikke considers you a true comrade and trusts you completely"
+    }
+  },
+  "combat_tactics": "Rikke fights with tactical precision, using terrain and squad positioning. Commands from the front but makes smart use of cover and advantage. More cerebral than Galmar but equally deadly. Will try to minimize casualties on both sides when possible. Uses hit-and-run tactics against superior forces.",
+  "scene_triggers": [
+    "Joining the Imperial Legion questline",
+    "Military briefings at Castle Dour",
+    "The Jagged Crown quest (Imperial side)",
+    "Battle of Whiterun (Imperial side)",
+    "Major civil war battles",
+    "Final assault on Windhelm"
+  ],
+  "act_context": ["Act 1", "Act 2", "Act 3"],
+  "dialogue_examples": [
+    "Ulfric Stormcloak is a hero to some. To others, a villain. But he's a man who will do what he believes is right. Even if it destroys us all.",
+    "Talos guide you. (quietly, when Tullius isn't around)",
+    "I'm a Nord. Born and bred. But I serve the Empire because I know it's the only thing keeping the Thalmor from completely controlling us.",
+    "Galmar... he was like a brother to me once. Now look at us.",
+    "We're all Nords here. This war is tearing apart families, friendships. I pray for the day it ends."
+  ],
+  "secret_talos_worship": {
+    "discovery_risk": "If Thalmor discover her faith, she faces arrest or execution",
+    "revelation_scene": "At high trust (6+), Rikke may reveal her Talos amulet to party",
+    "impact": "Shows the complexity of the civil war - even Imperial officers resent the Thalmor",
+    "story_hook": "Can be used to demonstrate that not all Imperials are Thalmor puppets"
+  },
+  "questline_role": {
+    "civil_war_imperial": "Primary quest giver and field commander",
+    "key_quests": [
+      "Joining the Legion",
+      "The Jagged Crown",
+      "Message to Whiterun (Imperial version)",
+      "Battle for Whiterun",
+      "Reunification of Skyrim",
+      "Battle for Windhelm"
+    ]
+  },
+  "branching_interactions": {
+    "if_stormcloak": "Becomes enemy but shows reluctance to fight a worthy Nord warrior",
+    "if_imperial": "Becomes mentor and tactical advisor, shows her true Nord heart",
+    "if_neutral": "Tries to recruit with appeals to protecting Skyrim from Thalmor",
+    "if_renowned_warrior": "Sees capable warriors as potential to end the conflict"
+  },
+  "story_hooks": [
+    "Rikke worships Talos in secret - a massive risk in her position",
+    "She and Galmar fought together in the Great War - now enemies",
+    "Conflicted about the Thalmor presence in the Legion",
+    "Genuinely wants what's best for Skyrim, not just the Empire",
+    "May refuse orders that would unnecessarily harm Skyrim or its people",
+    "Could be a bridge between Imperial and Stormcloak if the war ends"
+  ],
+  "inner_conflict": {
+    "empire_vs_skyrim": "Believes Empire is best for Skyrim but hates how it's achieved",
+    "duty_vs_faith": "Must hide Talos worship to serve effectively",
+    "former_friends": "Faces friends from the Great War as enemies now",
+    "thalmor_presence": "Despises working alongside Thalmor but must for the mission"
+  },
+  "gm_notes": "Legate Rikke is the moral complexity of the Imperial side. She's a Nord who genuinely loves Skyrim but believes unity with the Empire is the only way to eventually defeat the Thalmor. Her secret Talos worship should be a powerful reveal that demonstrates not all Imperials are Thalmor sympathizers. She and Galmar represent the tragedy of the civil war - former comrades now enemies. Use her to show that good people can be on opposite sides of a conflict.",
+  "loot_if_defeated": {
+    "guaranteed": ["Imperial officer's sword", "Imperial armor", "Strategic plans"],
+    "special": "Talos amulet (hidden) - reveals her secret faith",
+    "campaign_impact": "Defeating Rikke severely damages Imperial tactical capability and Nord-Imperial relations"
+  },
+  "alternatives_to_combat": {
+    "negotiation": "Possible if peace benefits Skyrim - she'll listen to reason",
+    "appeal_to_nord_heritage": "Effective - she's conflicted about fighting fellow Nords",
+    "reveal_thalmor_schemes": "She already knows and hates them - may create common ground",
+    "peace_conference": "Would support Season Unending or similar peace efforts"
+  },
+  "season_unending_role": {
+    "participation": "Key Imperial representative at peace council",
+    "attitude": "Genuinely wants peace if it protects Skyrim",
+    "flexibility": "More flexible than Tullius, understands Nord concerns",
+    "secret_hope": "Civil war ends so Empire can focus on Thalmor threat"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "name": "Spriggan",
+  "id": "npc_stat_spriggan",
+  "type": "Nature Spirit",
+  "category": "Enemy",
+  "location": "Forests, groves, wilderness",
+  "faction": "Nature Spirits",
+  "aspects": {
+    "high_concept": "Ancient Guardian Spirit of Skyrim's Forests",
+    "trouble": "Vulnerable to Fire and Civilization",
+    "other_aspects": [
+      "Command over Animals and Plants",
+      "Regenerates Near Nature",
+      "Hostile to Those Who Harm the Wilds"
+    ]
+  },
+  "skills": {
+    "Good": ["Fight", "Will"],
+    "Fair": ["Lore", "Notice"],
+    "Average": ["Athletics", "Physique"]
+  },
+  "stunts": [
+    "Nature's Ally: Once per scene, summon 2-3 woodland animals (wolves, bears) to aid in combat",
+    "Healing Aura: When in natural outdoor environments, regenerate one physical stress at start of turn",
+    "Swarm of Insects: Create aspect 'Swarmed by Insects' in target zone (two free invokes, causes distraction)"
+  ],
+  "stress": {
+    "physical": [false, false, false],
+    "mental": [false, false]
+  },
+  "consequences": {
+    "mild": null,
+    "moderate": null
+  },
+  "refresh": 2,
+  "fate_points": 2,
+  "notes": "Spriggans are nature spirits that protect Skyrim's forests. They can summon animals to their aid and regenerate in natural settings. Extremely hostile to those who harm nature. Vulnerable to fire damage.",
+  "combat_tactics": "Spriggans use nature magic and summon animals to fight for them. They stay mobile, using the terrain to their advantage. In forests, they regenerate quickly. They prioritize fire-wielding enemies.",
+  "scene_triggers": ["Forest encounters", "Sacred groves", "Nature vs. civilization conflicts", "Daedric quests involving nature"],
+  "act_context": ["Act 1", "Act 2", "Act 3"],
+  "loot": ["Spriggan sap", "Taproot"]
+}

@@ -1,0 +1,27 @@
+{
+  "patch_id": "2026-02-03_session0_sheet_readjustments",
+  "date": "2026-02-03",
+  "type": "session0_character_edit",
+  "pc_id": "pc_insaerndel",
+  "summary": "Session 0 cleanup: swap skills (Survival->Burglary, Empathy->Resources, Crafts->Contacts). Replace Spell of Muffle with Spell of Shadow Ward. Add Spell of Clairvoyance (spend 1 Refresh).",
+  "changes": [
+    {
+      "path": "data/pcs/pc_insaerndel.json",
+      "type": "modify",
+      "edits": [
+        "skills.Average (+1): replace Crafts, Survival, Empathy with Contacts, Burglary, Resources",
+        "stunts: replace 'Spell of Muffle' with 'Spell of Shadow Ward'",
+        "stunts: add 'Spell of Clairvoyance'",
+        "refresh: 2 -> 1",
+        "fate_points: kept at 3 (unchanged)"
+      ]
+    },
+    {
+      "path": "logs/2026-02-02_session-00_Session-Zero.md",
+      "type": "append",
+      "edits": [
+        "Add a 'Sheet Readjustment' note documenting the swaps and stunt changes."
+      ]
+    }
+  ]
+}

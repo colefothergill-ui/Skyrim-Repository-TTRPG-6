@@ -1,0 +1,57 @@
+{
+  "name": "Thongvor Silver-Blood",
+  "id": "thongvor_silver_blood",
+  "type": "Nord Noble (Silver-Blood Patriarch)",
+  "location": "Markarth (Silver-Blood Manor)",
+  "faction": "Stormcloaks (financier/supporter)",
+  "aspects": {
+    "high_concept": "Ambitious patriarch of the Silver-Blood clan, de facto power broker of Markarth",
+    "trouble": "Blinded by Greed and Ambition – will risk stability of the Reach to increase his family's power",
+    "other_aspects": [
+      "Stormcloak Benefactor – backs Ulfric's cause to install himself as Jarl",
+      "Wealth Equals Influence – believes everyone and everything has a price",
+      "Proud Son of the Reach – despises the Forsworn and resents Imperial restrictions, sees himself as the rightful ruler"
+    ]
+  },
+  "skills": {
+    "Great": ["Resources"],
+    "Good": ["Provoke", "Contacts"],
+    "Fair": ["Rapport", "Fight", "Will"],
+    "Average": ["Deceive", "Empathy", "Physique", "Lore"]
+  },
+  "stunts": [
+    "Money Talks: Thongvor can use Resources instead of Contacts when bribing or influencing NPCs in Markarth.",
+    "Nordic Veteran: +2 to Fight when rallying or leading Markarth militia or Silver-Blood mercenaries in battle.",
+    "Intimidating Presence: +2 to Provoke when he invokes his family name to cow someone into submission."
+  ],
+  "stress": {
+    "physical": [false, false, false],
+    "mental": [false, false]
+  },
+  "consequences": {
+    "mild": null,
+    "moderate": null,
+    "severe": null
+  },
+  "refresh": 3,
+  "fate_points": 3,
+  "notes": "Thongvor is the elder of the Silver-Blood brothers and the calculated face of the clan's power. Middle-aged but still imposing, he dresses in fine velvets with silver jewelry, openly displaying his wealth. He spends his days in the Markarth Keep's court ostensibly as an advisor – in reality, he's constantly pushing Jarl Igmund and others to favor Silver-Blood business interests. Thongvor's public demeanor is bluff and hearty, playing the role of a concerned noble. Privately, he's ruthless: he views Markarth as his family's city and will stop at nothing to control it. Unlike his brother Thonar (who manages the illicit deals), Thongvor focuses on the political arena. He bitterly disdains the Imperial Empire's influence and has secretly aligned with the Stormcloaks; he is convinced Ulfric's victory would elevate him to Jarl. Thongvor harbors a personal hatred for the Forsworn insurgents – both because they threaten his mines and due to old Reachman-Nord animosity. If the city falls under Stormcloak control, Thongvor wastes no time claiming the throne of Markarth for himself, promising \"Nord justice\" and purges of Forsworn sympathizers. Despite his bluster about Nord pride, greed is his true compass, and even Ulfric knows to be wary of how much power the Silver-Bloods would hold in an independent Reach.",
+  "relationships": {
+    "Thonar Silver-Blood": "Younger brother and co-ruler behind the scenes – Thongvor relies on Thonar to manage the family's criminal dealings and finances, though he sometimes has to rein in Thonar's temper.",
+    "Jarl Igmund": "Nominal liege – Thongvor maintains a veneer of respect but secretly works to undermine Igmund's rule. He intends to replace Igmund given the chance.",
+    "Ulfric Stormcloak": "Ally of convenience – Thongvor provides gold and influence to the Stormcloak rebellion, expecting that Ulfric will reward him with the Jarlship of Markarth. They share anti-Imperial sentiment, though Thongvor ultimately prioritizes his family's gain.",
+    "General Tullius": "Enemy – Thongvor loathes Imperial officials; he sees Tullius's policies and the Empire's laws as obstacles to the Silver-Bloods' complete control. He would celebrate driving the Empire out of the Reach.",
+    "Madanach (Forsworn King)": "Despised adversary – Thongvor views Madanach and the Forsworn as murderous rebels who threaten his mines and city. He supports harsh measures to eradicate the Forsworn, and if he becomes Jarl, he'd happily see Madanach executed (or exploited if useful).",
+    "Elisif the Fair": "Political disdain – (As a prominent Imperial-aligned Jarl of Solitude) Thongvor dismisses pro-Imperial Skyrim nobles like Elisif as weak. Though he rarely deals with her directly, her influence on the High King's court is another reason he sides with Ulfric."
+  },
+  "quests": [
+    "Civil War – Stormcloak Path (installs Thongvor as Jarl of Markarth)",
+    "The Forsworn Conspiracy (background player, pushing for tougher crackdowns)",
+    "No One Escapes Cidhna Mine (aftermath if Forsworn riot; he demands order be restored)"
+  ],
+  "inventory": [
+    "Fine Silver-Blood family attire with emblazoned ram's head brooch",
+    "War axe with carved silver inlays (ceremonial, can be used in battle)",
+    "Ledger books and promissory notes controlling many Reach mines"
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "name": "Madanach",
+  "id": "madanach",
+  "type": "Breton Reach-King (Forsworn Leader)",
+  "location": "Cidhna Mine, Markarth",
+  "faction": "Forsworn",
+  "aspects": {
+    "high_concept": "\"King in Rags\" – Imprisoned but unbroken leader of the Forsworn uprising",
+    "trouble": "Chained Vengeance – his body is captive, but his desire for revenge and freedom burns fiercely, driving dangerous plans",
+    "other_aspects": [
+      "Charismatic Revolutionary – inspires fierce loyalty among Reachmen with his vision of an independent Reach",
+      "Dabbler in the Old Ways – versed in druidic/ancient Reach magic taught by Hagravens, adding menace to his leadership",
+      "Haunted by Defeat – remembers the taste of ruling Markarth briefly and the agony of its loss; every moment in the mines steels his resolve to never be subjugated again"
+    ]
+  },
+  "skills": {
+    "Great": ["Rapport"], 
+    "Good": ["Provoke", "Lore"],
+    "Fair": ["Fight", "Will", "Survival"],
+    "Average": ["Notice", "Stealth", "Athletics", "Empathy"]
+  },
+  "stunts": [
+    "King of the Reach: +2 to Rapport when addressing or rallying Forsworn and Reach natives – his words can ignite rebellion.",
+    "Fire in the Heart: +2 to Provoke when inciting hatred or anger in others (e.g., urging prisoners to riot or taunting his enemies).",
+    "Forsworn Druidry: Madanach has knowledge of hedge-magic. Once per scene, he can use Lore to create an advantage representing a minor Reachman spell or ritual (e.g., a distraction, a sudden gust of wind, a fleeting vision to unnerve a foe)."
+  ],
+  "stress": {
+    "physical": [false, false, false],
+    "mental": [false, false, false]
+  },
+  "consequences": {
+    "mild": null,
+    "moderate": null,
+    "severe": null
+  },
+  "refresh": 3,
+  "fate_points": 3,
+  "notes": "Madanach was once the Jarl of an independent Reach. During the chaos of the Great War, he united the downtrodden Reachmen under the Forsworn banner and seized Markarth, ruling for two brief years as a king. That ended when Ulfric Stormcloak and his militia stormed the city – Madanach was captured instead of executed, at the behest of certain influential parties, and thrown into Cidhna Mine. Decades later, Madanach remains a prisoner, but far from idle. In the depths of the mine, among the dark and filth, he has become a legend to his people – the King in Rags, who still plots to free the Reach. Madanach is surprisingly educated and soft-spoken in person; he can come across as reasonable and even gentle, until one sees the cold fervor in his eyes. He has struck uneasy deals (like tolerating Thonar Silver-Blood's exploitation in exchange for limited freedom for his Forsworn inside the mine), all as means to an end. Every Forsworn cell across the Reach ultimately answers to him. Through messages smuggled out via bribed guards or released prisoners, he coordinates uprisings. In the mine, he has gathered a circle of loyal Forsworn inmates and keeps their hope alive with promises of eventual escape and vengeance. Madanach genuinely cares for the Reachmen common folk – he sees himself as their champion – but this empathy does not extend to Nords or Imperials. He is utterly convinced that any atrocity is justified to reclaim his homeland. When the opportunity comes, Madanach won't hesitate to spill blood for the cause, whether it's leading a prison break or unleashing a wave of Forsworn fury upon Markarth's streets.",
+  "relationships": {
+    "Ulfric Stormcloak": "Arch-enemy – Ulfric personally ended Madanach's reign in Markarth. Madanach's hatred for Ulfric is deep and personal, surpassed only by his hatred for the Empire that let Reachmen be marginalized. Ironically, Ulfric's rebellion indirectly aids Madanach by weakening Imperial hold on the Reach.",
+    "Thonar Silver-Blood": "Tenuous collaborator turned enemy – Madanach and Thonar had a secret arrangement: Forsworn violence would be channeled away from Silver-Blood interests in exchange for leniency. Madanach always intended to use this arrangement to his advantage. After the Forsworn Conspiracy left Thonar's wife dead, any 'alliance' is broken; if Madanach escapes, he might target the Silver-Bloods next.",
+    "Nepos the Nose": "Trusted lieutenant – Nepos was Madanach's man in Markarth's city proper. Madanach chose Nepos for his cunning and placed great trust in him to direct Forsworn agents outside the mine. He will be grieved and angered if Nepos is killed in the Conspiracy fallout, and that loss fuels his resolve.",
+    "Kaie": "Forsworn agent – Kaie is one of Madanach's closest allies in the mine (as seen during the escape, she's by his side). He trusts her combat prowess and counsel; she is instrumental in any breakout plan.",
+    "Borkul the Beast": "Forsworn bodyguard – Borkul guards Madanach within Cidhna Mine, acting as enforcer. Madanach treats Borkul almost like a son or favored student of violence. Borkul's loyalty is absolute, as Madanach's charisma even tamed this savage killer to a cause.",
+    "Jarl Igmund": "Distant adversary – The current Jarl of Markarth is just another Nord usurper in Madanach's eyes, a puppet of the Empire occupying the Reach. Madanach has never met Igmund face-to-face, but he curses his name as one more oppressor of his people."
+  },
+  "quests": [
+    "No One Escapes Cidhna Mine (Madanach's pivotal quest – he either escapes to lead the Forsworn or is killed, depending on the player's choices)",
+    "The Forsworn Conspiracy (indirectly, as the events leading to the prison break revolve around him and his network)",
+    "Civil War (if Markarth is in turmoil, any scenario where law and order break down might allow Madanach's Forsworn to temporarily seize control of the city or parts of the Reach)"
+  ],
+  "inventory": [
+    "Tattered prison clothes (King in Rags namesake)",
+    "Bone amulet of Hagraven make (secretly carries a small totem that he believes connects him to the old gods of the Reach)",
+    "Hidden Shiv (a small improvised blade kept concealed – symbol of both his captivity and readiness to fight at any moment)",
+    "If freed: He regains the Armor of the Old Gods (a set of Forsworn armor bestowed for his leadership) and a ceremonial Forsworn sword."
+  ]
+}

@@ -1,0 +1,120 @@
+{
+  "name": "Delphine",
+  "id": "npc_stat_delphine",
+  "type": "Breton Blade",
+  "category": "Faction Leader",
+  "location": "Riverwood (Sleeping Giant Inn, secret identity as innkeeper)",
+  "faction": "The Blades",
+  "aspects": {
+    "high_concept": "Last Guardian of the Blades",
+    "trouble": "Paranoid from Years of Hiding",
+    "other_aspects": [
+      "Former Dragon Hunter in Hiding",
+      "Deeply Distrustful of the Thalmor",
+      "Will Sacrifice Anything to Restore the Blades"
+    ]
+  },
+  "skills": {
+    "Superb": ["Fight"],
+    "Great": ["Notice", "Stealth"],
+    "Good": ["Will", "Investigate"],
+    "Fair": ["Athletics", "Deceive", "Contacts"],
+    "Average": ["Physique", "Lore", "Burglary"]
+  },
+  "stunts": [
+    "Blade Training: +2 to Fight against dragons or when using katana",
+    "Eternal Vigilance: +2 to Notice when detecting threats or surveillance",
+    "Underground Network: Despite Thalmor persecution, maintains secret contacts across Skyrim for intelligence gathering"
+  ],
+  "stress": {
+    "physical": [false, false, false],
+    "mental": [false, false, false]
+  },
+  "consequences": {
+    "mild": null,
+    "moderate": null,
+    "severe": null
+  },
+  "refresh": 3,
+  "armor": 1,
+  "notes": "Delphine is one of the last surviving members of the Blades, the legendary dragon hunters and protectors of the Empire's emperors. After the Thalmor nearly destroyed the Blades, she went into hiding in Riverwood, posing as an innkeeper while maintaining her secret identity. She's paranoid, ruthless, and completely dedicated to rebuilding the Blades and fighting dragons. She's been investigating dragon activity and has connections with scholars like Farengar Secret-Fire.",
+  "combat_tactics": "Delphine fights like a trained soldier, using her katana with deadly precision. She's aggressive against dragons and Thalmor, more cautious with others. She fights to win and won't hesitate to use underhanded tactics if needed. Years of survival have made her adaptable and dangerous.",
+  "scene_triggers": ["Riverwood scenes", "Dragon investigation", "Blades recruitment", "Sky Haven Temple", "Thalmor confrontations"],
+  "act_context": ["Act 1", "Act 2", "Act 3"],
+  "starting_equipment": {
+    "armor": "Blades Armor (Armor:1, ancient but well-maintained)",
+    "weapon": "Blades Katana (Weapon:3, masterwork)",
+    "other": ["Blades history texts", "Dragon research notes", "False identity papers", "Secret map to Sky Haven Temple"]
+  },
+  "social_interaction": "Delphine is guarded, suspicious, and intense. As 'the innkeeper,' she's polite but distant. When revealing her true identity, she's commanding and expects immediate obedience. She tests people constantly, watching for signs of betrayal or Thalmor influence. She softens slightly around those who prove themselves but never fully relaxes. She's passionate about dragons and the Blades' purpose.",
+  "relationships": {
+    "Esbern": "Fellow Blade in hiding, searching for him",
+    "Farengar Secret-Fire": "Contact for dragon research, feeds him information without revealing identity",
+    "Thalmor": "Sworn enemies who destroyed the Blades, will kill on sight",
+    "Orgnar": "Employee at inn, unaware of her true identity",
+    "Paarthurnax": "Views as dragon who must die, regardless of redemption",
+    "The Player": "Potential ally for defeating dragons or rebuilding Blades"
+  },
+  "personality_notes": {
+    "speaking_style": "Direct, commanding, sometimes harsh, uses military terms, suspicious questions to test loyalty",
+    "motivations": ["Destroy all dragons", "Rebuild the Blades", "Defeat the Thalmor", "Protect Skyrim from draconic threat", "Find and rescue Esbern", "Restore Blades' honor"],
+    "fears": ["Thalmor discovering her", "Dragons winning", "Blades dying out completely", "Betrayal", "Failing the Blades' ancient purpose"],
+    "quirks": ["Checks exits constantly", "Tests new people aggressively", "Keeps weapons within reach always", "Speaks reverently of Blades history"],
+    "character_growth": "May learn to trust again, could soften stance on Paarthurnax debate, might accept worthy warriors' leadership"
+  },
+  "blades_identity": {
+    "cover": "Operates Sleeping Giant Inn in Riverwood as 'just an innkeeper'",
+    "truth": "Last active Blade, maintaining dragon vigil and researching their return",
+    "secret_room": "Hidden chamber beneath inn with Blades armor, weapons, and research",
+    "network": "Maintains covert contacts despite Thalmor persecution",
+    "mission": "Investigating dragon sightings, preparing for their return"
+  },
+  "dragon_investigation": {
+    "research": "Has been tracking dragon burial sites and ancient dragon lore",
+    "farengar_connection": "Feeds information to Farengar without revealing she's a Blade",
+    "dragonstone": "Knows about Bleak Falls Barrow Dragonstone, sent thugs to retrieve it",
+    "urgency": "Recent dragon activity and civil war chaos have accelerated the threat",
+    "goal": "Find and kill dragons before they become unstoppable threat"
+  },
+  "whiterun_research_mission": {
+    "setup": "Delphine needs to investigate Farengar's dragon research personally",
+    "cover_story": "Poses as researcher or Farengar's contact",
+    "real_goal": "Assess dragon threat level and look for dragon burial sites",
+    "escort_mission": "If PC is Blades-aligned, she requests escort to Whiterun for 'research collaboration' with Farengar",
+    "complication": "Arrives during Battle of Whiterun preparations"
+  },
+  "battle_of_whiterun_role": {
+    "before_battle": "In Whiterun to meet Farengar about dragon research",
+    "during_battle": "Will fight for Imperials if forced to choose (old Blades loyalty)",
+    "priority": "Protecting dragon research data over choosing sides",
+    "pc_escort": "If escorting Delphine, she expects PC to protect her during chaos",
+    "consequence": "PC's choice affects her trust and willingness to recruit them into Blades"
+  },
+  "story_hooks": [
+    "Reveals herself as Blade and recruits PC for dragon investigation",
+    "Sends PC to infiltrate Thalmor Embassy for information",
+    "Leads expedition to Sky Haven Temple to restore Blades headquarters",
+    "Requests PC kill Paarthurnax (creates moral dilemma)",
+    "Can train PC in dragon combat techniques",
+    "Provides Blades armor and weapons to worthy recruits",
+    "Connection to main quest dragon crisis",
+    "Anti-Thalmor operations and intelligence"
+  ],
+  "dialogue_samples": {
+    "innkeeper_cover": "Welcome to the Sleeping Giant Inn. Bed and board, clean and quiet. Keep your business your own, and we'll get along fine.",
+    "revealing_identity": "Enough games. I'm Delphine, one of the last of the Blades. You've seen dragons return - I've been preparing for this. Now, I need to know if you're someone I can trust.",
+    "recruitment": "The Blades were dragon hunters long before we served the Empire. That's our true purpose. With dragons returning, we need that purpose again. You have the skills and courage - that makes you someone worth recruiting.",
+    "whiterun_mission": "I need to get to Whiterun and see what Farengar's really discovered about the dragons. My research says there's something critical in his data. Will you escort me? I can't risk the Thalmor catching me on the road alone.",
+    "during_battle": "This civil war is a distraction! Dragons are the real threat! But if we must fight, then fight smart. Choose your side and stick with it.",
+    "thalmor_hatred": "The Thalmor destroyed the Blades, hunted us down like animals. They call it 'justice.' I call it murder. And I remember every single one of my fallen comrades."
+  },
+  "neutral_faction_integration": {
+    "starting_narrative": "Delphine finds you in Riverwood and reveals her true identity as a Blade. 'Dragons have returned,' she says urgently. 'I've been tracking them for years. I need someone I can trust to escort me to Whiterun - Farengar Secret-Fire has research I need to see. The Thalmor are watching, and I can't risk traveling alone.'",
+    "transition_to_battle": "You arrive in Whiterun with Delphine as the Battle erupts. She curses the timing - dragon research will have to wait. 'Pick a side and fight,' she commands. 'We need to survive this before we can deal with the real threat.' In the chaos, you see both Hadvar and Ralof rallying forces.",
+    "consequences": {
+      "fight_imperial": "Delphine approves - old Blades loyalty to Empire. Trust increases.",
+      "fight_stormcloak": "Delphine is disappointed but pragmatic - survival matters most. Trust neutral.",
+      "try_to_escape": "Delphine forces you to choose - cowardice is not the Blades' way."
+    }
+  }
+}

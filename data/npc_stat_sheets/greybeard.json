@@ -1,0 +1,67 @@
+{
+  "name": "Greybeard",
+  "id": "npc_stat_greybeard",
+  "type": "Ally",
+  "category": "Friendly NPC",
+  "location": "High Hrothgar",
+  "faction": "Greybeards",
+  "aspects": {
+    "high_concept": "Ancient Master of the Voice in Service of the Way",
+    "trouble": "Sworn to Pacifism and Contemplation",
+    "other_aspects": [
+      "Centuries of Wisdom",
+      "Voice That Shakes Mountains",
+      "Masters of the Ancient Way",
+      "Follower of Jurgen Windcaller's Teachings"
+    ]
+  },
+  "skills": {
+    "Legendary": ["Will"],
+    "Superb": ["Lore"],
+    "Great": ["Empathy", "Notice"],
+    "Good": ["Rapport", "Physique"],
+    "Fair": ["Fight"],
+    "Average": ["Athletics"]
+  },
+  "stunts": [
+    "Master of Thu'um: Can use the Voice (dragon shouts) with devastating power. +4 to any roll involving the Thu'um",
+    "Unrelenting Force: Can use powerful version of Fus Ro Dah to knock back enemies or clear obstacles (Legendary difficulty to resist)",
+    "Ancient Wisdom: +2 to Lore when advising on dragon lore, ancient history, or the Way of the Voice",
+    "Meditative Discipline: +2 to Will when resisting mental attacks, compulsions, or maintaining focus",
+    "Teacher of Shouts: Can teach worthy students limited words of power (requires exceptional circumstances)"
+  ],
+  "stress": {
+    "physical": [false, false, false],
+    "mental": [false, false, false, false, false]
+  },
+  "consequences": {
+    "mild": null,
+    "moderate": null,
+    "severe": null
+  },
+  "refresh": 5,
+  "fate_points": 5,
+  "trust_clock": {
+    "enabled": true,
+    "current": 0,
+    "max": 10,
+    "description": "Respect and acceptance - grows with demonstrations of understanding the Way of the Voice"
+  },
+  "notes": "The Greybeards are ancient masters of the Thu'um who live in seclusion at High Hrothgar. They are sworn to pacifism and use the Voice only for worship and meditation, except in the most dire circumstances. They are scholars of dragon lore and the ancient Nord traditions. Most communicate only through sign language, having taken vows of silence. Only Arngeir speaks regularly. They possess incredible power but restrain it through discipline and philosophy.",
+  "relationships": {
+    "Paarthurnax": "Master and leader",
+    "Scholars of the Voice": "Potential students of worthy character",
+    "Blades": "Philosophical opposition",
+    "Dragons": "Complex - enemies yet respect the Voice",
+    "Ulfric Stormcloak": "Disappointment - misused Thu'um"
+  },
+  "personality_notes": {
+    "speaking_style": "Silent (except Arngeir), when speaking: measured, profound, ancient wisdom",
+    "motivations": ["Preserve the Way of the Voice", "Guard ancient knowledge", "Prevent misuse of Thu'um", "Maintain peace"],
+    "fears": ["Thu'um being used for war", "Dragon threat destroying world", "Way of Voice being lost"],
+    "quirks": ["Communicate through gestures and simple shouts", "Meditate for hours", "Move with slow deliberation"]
+  },
+  "combat_tactics": "Greybeards almost never fight. If forced to defend High Hrothgar, they use Thu'um with devastating but controlled precision. They prefer to disarm and disable rather than kill. Their shouts can level buildings and move mountains.",
+  "scene_triggers": ["Main quest: The Way of the Voice", "Learning new shouts", "Seeking wisdom about dragons", "High Hrothgar visits"],
+  "act_context": ["Act 1", "Act 2", "Act 3"]
+}

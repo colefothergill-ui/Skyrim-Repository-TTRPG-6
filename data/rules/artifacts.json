@@ -1,0 +1,468 @@
+{
+  "system_name": "Artifacts and Enchanted Equipment System",
+  "description": "Comprehensive system for enchanted artifacts and their mechanical implementation in Fate Core Skyrim.",
+  "version": "1.0",
+  "artifact_categories": {
+    "legendary_artifacts": {
+      "description": "Unique, named items of great power with significant story importance",
+      "power_level": "High",
+      "examples": ["Wuuthrad", "Mehrunes' Razor", "The Masque of Clavicus Vile"]
+    },
+    "enchanted_equipment": {
+      "description": "Standard magical items with various enchantments",
+      "power_level": "Medium",
+      "examples": ["Enchanted swords", "Magical armor", "Enchanted rings"]
+    },
+    "artifacts_of_power": {
+      "description": "Items tied to specific quests or factions",
+      "power_level": "Medium-High",
+      "examples": ["Staff of Magnus", "Auriel's Bow", "Savior's Hide"]
+    }
+  },
+  "mechanical_framework": {
+    "equipment_rating": {
+      "description": "Base mechanical bonus from equipment",
+      "weapon_scale": {
+        "0": "Improvised (fists, bottles)",
+        "1": "Basic (iron sword, hunting bow)",
+        "2": "Quality (steel sword, imperial armor)",
+        "3": "Superior (orcish, elven equipment)",
+        "4": "Exceptional (ebony, daedric equipment)"
+      },
+      "armor_scale": {
+        "0": "Unarmored (clothes)",
+        "1": "Light protection (leather, fur)",
+        "2": "Medium protection (steel, imperial)",
+        "3": "Heavy protection (orcish, ebony)",
+        "4": "Maximum protection (daedric, dragonplate)"
+      }
+    },
+    "enchantment_bonuses": {
+      "minor_enchantment": "+1 to specific skill or +1 damage/armor in specific situation",
+      "moderate_enchantment": "+2 to specific skill or +1 damage/armor always, plus situational benefit",
+      "major_enchantment": "+2 to skill or damage/armor, plus special ability (once per scene)",
+      "legendary_enchantment": "+3 bonus, aspect creation, special abilities (multiple uses)"
+    },
+    "aspects_from_equipment": {
+      "description": "Enchanted items can create aspects that define them",
+      "examples": [
+        "'Fiery Vengeance' on a fire-enchanted sword",
+        "'Lightweight Elven Craftsmanship' on elven armor",
+        "'Blessed by Talos' on a holy amulet"
+      ],
+      "usage": "Can be invoked for +2 or reroll when aspect is relevant"
+    }
+  },
+  "legendary_artifacts": [
+    {
+      "name": "Wuuthrad",
+      "category": "Legendary Weapon",
+      "origin": "Ysgramor's legendary battleaxe",
+      "location": "Companions questline reward, Ysgramor's Tomb",
+      "description": "A massive ancient Nordic battleaxe that has slain countless elves throughout history.",
+      "mechanical_stats": {
+        "weapon_rating": 4,
+        "base_bonus": "+3 to Fight when wielding",
+        "special_bonus": "+3 additional vs. elves (High Elves, Wood Elves, Dark Elves)",
+        "aspect": "Ysgramor's Legacy",
+        "special_ability": {
+          "name": "Ancient Fury",
+          "effect": "Once per session, invoke Ysgramor's wrath to automatically succeed on a Fight roll against elven opponent.",
+          "cost": "1 Fate Point"
+        }
+      },
+      "requirements": "Two-handed weapon skill, usually requires Companions Harbinger status",
+      "lore_significance": "Ysgramor used this weapon to drive elves from Skyrim in ancient times. Highly symbolic to Nords.",
+      "story_impact": "Wielding Wuuthrad affects how elven NPCs react (fear, hatred) and how Nords view PC (respect, hero status)"
+    },
+    {
+      "name": "Mehrunes' Razor",
+      "category": "Daedric Artifact",
+      "origin": "Daedric Prince Mehrunes Dagon",
+      "location": "Mehrunes Dagon's quest",
+      "description": "A wickedly sharp dagger with the power to kill instantly.",
+      "mechanical_stats": {
+        "weapon_rating": 3,
+        "base_bonus": "+2 to Fight",
+        "aspect": "Daedric Instant Death",
+        "special_ability": {
+          "name": "Instant Kill",
+          "effect": "On successful attack with Mehrunes' Razor, spend 2 Fate Points to force target to immediately mark their highest available consequence. If no consequence available, target is taken out.",
+          "cost": "2 Fate Points",
+          "limitation": "Once per session, only works on living mortals (not daedra, undead, or constructs)"
+        }
+      },
+      "requirements": "One-handed weapon skill",
+      "corruption_risk": "Daedric artifact. Extended use may draw Mehrunes Dagon's attention or corrupt wielder.",
+      "story_impact": "Possession marks PC as someone who deals with Daedric Princes. Some NPCs fear or distrust this."
+    },
+    {
+      "name": "The Staff of Magnus",
+      "category": "Legendary Staff",
+      "origin": "Created by the god Magnus",
+      "location": "College of Winterhold questline",
+      "description": "A powerful staff capable of absorbing magical energy.",
+      "mechanical_stats": {
+        "weapon_rating": 2,
+        "base_bonus": "+2 to Lore when casting spells",
+        "aspect": "Magnus' Power",
+        "special_ability": {
+          "name": "Absorb Magic",
+          "effect": "When targeted by magical attack, can use staff to absorb it. Spend 1 Fate Point to negate attack completely and gain 1 mental stress box recovery.",
+          "cost": "1 Fate Point",
+          "limitation": "Twice per session"
+        },
+        "secondary_ability": {
+          "name": "Drain Magicka",
+          "effect": "Attack action targeting enemy spellcaster. On hit, target cannot cast spells next exchange.",
+          "cost": "Free action",
+          "limitation": "Once per scene"
+        }
+      },
+      "requirements": "Lore skill, College of Winterhold membership usually required",
+      "lore_significance": "Central to controlling the Eye of Magnus. One of the most powerful magical artifacts in Tamriel.",
+      "story_impact": "College of Winterhold members show immense respect. Other mages covet this item."
+    },
+    {
+      "name": "Auriel's Bow",
+      "category": "Divine Artifact",
+      "origin": "Elven god Auriel (Aedric artifact)",
+      "location": "Dawnguard questline (if available)",
+      "description": "Ancient elven bow with the power of the sun.",
+      "mechanical_stats": {
+        "weapon_rating": 4,
+        "base_bonus": "+3 to Shoot",
+        "aspect": "Blessed by the Sun",
+        "special_ability": {
+          "name": "Sunhallowed Arrows",
+          "effect": "When using special sunhallowed arrows, create 'Sunburst' zone aspect. All undead in zone take +2 stress from all sources.",
+          "cost": "Special arrows required",
+          "limitation": "Arrows must be blessed at Auriel's shrine"
+        },
+        "anti_undead": "+2 additional damage vs. undead always"
+      },
+      "requirements": "Archery skill, typically requires Dawnguard questline",
+      "story_impact": "Especially powerful against vampires and undead. Vampire NPCs fear this weapon."
+    },
+    {
+      "name": "Savior's Hide",
+      "category": "Daedric Artifact",
+      "origin": "Daedric Prince Hircine",
+      "location": "Ill Met by Moonlight quest",
+      "description": "A magical hide armor blessed by Hircine, providing magical and poison resistance.",
+      "mechanical_stats": {
+        "armor_rating": 2,
+        "base_bonus": "Armor: 2",
+        "aspect": "Hircine's Blessing",
+        "special_bonus": "+2 to defend against poison and disease, +1 to defend against magic",
+        "special_ability": {
+          "name": "Hunter's Endurance",
+          "effect": "Once per session, can automatically shake off one mild or moderate consequence related to poison, disease, or magic.",
+          "cost": "1 Fate Point"
+        }
+      },
+      "requirements": "Light armor skill",
+      "lycanthropy_synergy": "If PC is werewolf, provides +1 additional bonus while in beast form",
+      "story_impact": "Mark of Hircine's favor. Hunters and werewolves respect this."
+    },
+    {
+      "name": "Ring of Hircine",
+      "category": "Daedric Artifact",
+      "origin": "Daedric Prince Hircine",
+      "location": "Ill Met by Moonlight quest (spare Sinding)",
+      "description": "A Daedric ring that grants its wearer greater control over lycanthropy, allowing transformation at will.",
+      "mechanical_stats": {
+        "armor_rating": 0,
+        "base_bonus": "Ring slot",
+        "aspect": "Hircine's Ring-Bearer",
+        "special_ability": {
+          "name": "Master the Beast",
+          "effect": "If the wearer is a lycanthrope, they can transform into beast form at will outside of full moons. The transformation lasts as long as desired and can be controlled. Non-lycanthropes gain +1 to Physique when facing beasts or werewolves.",
+          "cost": "Free action for lycanthropes, once per session",
+          "limitation": "Primary benefit only applies to lycanthropes"
+        }
+      },
+      "requirements": "None, but most powerful for lycanthropes",
+      "lycanthropy_synergy": "Allows complete control over werewolf transformations - can transform at will and maintain control",
+      "corruption_risk": "The ring hungers for the hunt. Can be compelled to seek worthy prey or engage in risky hunts.",
+      "story_impact": "Mark of Hircine's favor. Werewolves recognize the ring's power. Can be given to Companion werewolves as a gift."
+    },
+    {
+      "name": "The Masque of Clavicus Vile",
+      "category": "Daedric Artifact",
+      "origin": "Daedric Prince Clavicus Vile",
+      "location": "A Daedra's Best Friend quest",
+      "description": "A face-mask that enhances the wearer's charm and persuasiveness.",
+      "mechanical_stats": {
+        "armor_rating": 1,
+        "base_bonus": "Armor: 1 (helmet slot)",
+        "aspect": "Daedric Charm",
+        "special_bonus": "+3 to Rapport and Deceive checks",
+        "special_ability": {
+          "name": "Irresistible Persuasion",
+          "effect": "Once per session, automatically succeed on a social check (Rapport, Deceive, or Provoke) regardless of opposition.",
+          "cost": "1 Fate Point"
+        }
+      },
+      "requirements": "Willingness to deal with Clavicus Vile",
+      "corruption_risk": "Clavicus Vile is god of bargains and trickery. Wearing his mask may lead to unwanted deals.",
+      "story_impact": "NPCs may notice the unsettling mask. Some are charmed, others deeply disturbed."
+    },
+    {
+      "name": "Volendrung",
+      "category": "Daedric Artifact",
+      "origin": "Daedric Prince Malacath",
+      "location": "The Cursed Tribe quest",
+      "description": "A massive warhammer that absorbs stamina from enemies.",
+      "mechanical_stats": {
+        "weapon_rating": 4,
+        "base_bonus": "+3 to Fight",
+        "aspect": "Malacath's Hammer",
+        "special_ability": {
+          "name": "Stamina Drain",
+          "effect": "On successful hit, target loses 1 physical stress box AND you gain +1 to your next action.",
+          "cost": "Automatic on hit",
+          "limitation": "Works once per target per scene"
+        }
+      },
+      "requirements": "Two-handed weapon skill",
+      "orc_synergy": "Orcs show great respect to wielder of Malacath's artifact",
+      "story_impact": "Orcs treat wielder with honor. Completing The Cursed Tribe quest highly respected."
+    },
+    {
+      "name": "Spellbreaker",
+      "category": "Daedric Artifact",
+      "origin": "Daedric Prince Peryite",
+      "location": "The Only Cure quest",
+      "description": "A dwarven shield that can block magical attacks.",
+      "mechanical_stats": {
+        "armor_rating": 2,
+        "base_bonus": "+2 to defend",
+        "aspect": "Magic Ward",
+        "special_ability": {
+          "name": "Spell Ward",
+          "effect": "When using defend action against magical attack, gain +3 instead of +2. Can completely negate spell on success with style.",
+          "cost": "Automatic when defending against magic"
+        }
+      },
+      "requirements": "Block skill",
+      "story_impact": "One of the best defensive items against mages. Highly valued by warriors facing spellcasters."
+    },
+    {
+      "name": "Spear of Bitter Mercy",
+      "category": "Daedric Artifact",
+      "origin": "Daedric Prince Hircine",
+      "location": "Unknown — may be awarded during campaign",
+      "description": "A spear that hums with the Huntsman's will. It embodies the moment prey's struggle ends—mercy, delivered with finality.",
+      "mechanical_stats": {
+        "weapon_rating": 3,
+        "base_bonus": "+2 to Fight when wielding (when the spear's aspect is relevant)",
+        "aspect": "The New Moon (New Cycle)",
+        "special_ability": {
+          "name": "Bitter Mercy",
+          "effect": "When the spear helps you inflict a Mild Consequence, the target gains the situation aspect 'Bitter Mercy'. Until that target is taken out, your stress dealt to them counts as Weapon:1.",
+          "cost": "Narrative permission (spear must be the vector of the consequence).",
+          "limitation": "Level 1 dormant—full awakening tracked by clock."
+        }
+      },
+      "corruption_risk": "Daedric influence. The spear can be compelled to demand worthy prey, risky timing, or merciless escalation.",
+      "story_impact": "Marks the wielder as Hircine-touched. Hunters fear/respect; Thalmor categorize as an anomaly; Companions take interest. At Level 4 awakening, the spear marks its wielder as an apex predator to beasts and lycanthropes."
+    }
+  ],
+  "standard_enchantments": {
+    "weapon_enchantments": [
+      {
+        "name": "Fire Damage",
+        "power_levels": {
+          "minor": "+1 damage vs. frost-vulnerable enemies, creates 'Burning' aspect on critical hit",
+          "moderate": "+2 damage always, +1 stress over time for one exchange on hit",
+          "major": "+2 damage, create 'Ablaze' lasting aspect (1 stress per exchange) on targets"
+        },
+        "cost_to_enchant": "Fire salts, soul gem"
+      },
+      {
+        "name": "Frost Damage",
+        "power_levels": {
+          "minor": "+1 damage vs. fire-vulnerable enemies, slows target (-1 to Athletics next exchange)",
+          "moderate": "+2 damage, creates 'Chilled' aspect reducing enemy speed",
+          "major": "+2 damage, create 'Frozen' aspect (target must overcome Fair +2 to move zones)"
+        },
+        "cost_to_enchant": "Frost salts, soul gem"
+      },
+      {
+        "name": "Shock Damage",
+        "power_levels": {
+          "minor": "+1 damage, drains 1 mental stress from spellcasters",
+          "moderate": "+2 damage, prevents target from casting spells next exchange",
+          "major": "+2 damage, create 'Stunned' aspect on spellcasters"
+        },
+        "cost_to_enchant": "Void salts, soul gem"
+      },
+      {
+        "name": "Soul Trap",
+        "power_levels": {
+          "minor": "On killing blow, capture soul in empty soul gem (requires gem equipped)",
+          "moderate": "Automatically captures souls, +1 to capturing higher quality souls",
+          "major": "Captures souls and provides +1 damage for each soul stored (max +3)"
+        },
+        "cost_to_enchant": "Soul gem (consumed)",
+        "mechanical_note": "Captured souls used for enchanting or recharging enchanted items"
+      },
+      {
+        "name": "Absorb Health",
+        "power_levels": {
+          "minor": "On hit, recover 1 physical stress",
+          "moderate": "On hit, recover 2 physical stress",
+          "major": "On hit, recover 2 stress and can downgrade one mild consequence"
+        },
+        "cost_to_enchant": "Grand soul gem",
+        "balance_note": "Powerful but requires high-level enchanting"
+      }
+    ],
+    "armor_enchantments": [
+      {
+        "name": "Fortify Health",
+        "power_levels": {
+          "minor": "+1 physical stress box",
+          "moderate": "+2 physical stress boxes",
+          "major": "+2 stress boxes and +1 to Physique"
+        },
+        "cost_to_enchant": "Bear claws, soul gem"
+      },
+      {
+        "name": "Fortify Magicka",
+        "power_levels": {
+          "minor": "+1 mental stress box",
+          "moderate": "+2 mental stress boxes",
+          "major": "+2 stress boxes and +1 to Lore"
+        },
+        "cost_to_enchant": "Briar heart, soul gem"
+      },
+      {
+        "name": "Resist Fire/Frost/Shock",
+        "power_levels": {
+          "minor": "+1 to defend against specific element",
+          "moderate": "+2 to defend against specific element",
+          "major": "+2 to defend, can ignore first stress from that element per scene"
+        },
+        "cost_to_enchant": "Elemental salts, soul gem"
+      },
+      {
+        "name": "Fortify Skill",
+        "power_levels": {
+          "minor": "+1 to specific skill (Fight, Stealth, etc.)",
+          "moderate": "+2 to specific skill",
+          "major": "+2 to skill, aspect 'Master of [Skill]' with one free invoke per session"
+        },
+        "cost_to_enchant": "Skill-appropriate ingredient, soul gem"
+      },
+      {
+        "name": "Muffle",
+        "power_levels": {
+          "minor": "+1 to Stealth",
+          "moderate": "+2 to Stealth, movement makes no sound",
+          "major": "+3 to Stealth, aspect 'Silent as Shadow'"
+        },
+        "cost_to_enchant": "Nightshade, soul gem",
+        "thief_favorite": "Highly valued by Thieves Guild"
+      }
+    ],
+    "jewelry_enchantments": [
+      {
+        "name": "Fortify Destruction/Restoration/etc.",
+        "effect": "+1 or +2 to specific magic school",
+        "slot": "Ring or necklace",
+        "cost_to_enchant": "School-appropriate ingredient, soul gem"
+      },
+      {
+        "name": "Resist Magic",
+        "effect": "+1 to +3 to defend against all magical attacks",
+        "slot": "Ring or necklace",
+        "cost_to_enchant": "Hagraven claw, soul gem"
+      },
+      {
+        "name": "Waterbreathing",
+        "effect": "Can breathe underwater indefinitely",
+        "slot": "Ring or necklace",
+        "cost_to_enchant": "Histcarp, soul gem"
+      }
+    ]
+  },
+  "artifact_creation_system": {
+    "player_enchanting": {
+      "requirements": [
+        "Crafts skill (Fair +2 or better)",
+        "Access to enchanting table",
+        "Soul gems (power level determines enchantment strength)",
+        "Ingredient components",
+        "Knowledge of enchantment (learned from disenchanting items)"
+      ],
+      "process": {
+        "step_1": "Select item to enchant (weapon, armor, jewelry)",
+        "step_2": "Choose enchantment from known list",
+        "step_3": "Select soul gem (determines power: petty=minor, grand=major)",
+        "step_4": "Make Crafts check vs. difficulty (Fair +2 for minor, Great +4 for major)",
+        "step_5": "On success, item gains enchantment. On failure, soul gem consumed but item unenchanted."
+      },
+      "learning_enchantments": {
+        "method": "Disenchant magical items at enchanting table",
+        "mechanic": "Destroy enchanted item permanently to learn its enchantment",
+        "benefit": "Can then apply that enchantment to other items"
+      }
+    },
+    "finding_artifacts": {
+      "quest_rewards": "Major artifacts typically earned through completing faction or Daedric quests",
+      "dungeon_loot": "Enchanted equipment found in boss chests, hidden areas, or quest locations",
+      "purchasing": "Can buy minor enchanted items from court wizards and specialist merchants (expensive)",
+      "crafting": "Players can create their own using enchanting system"
+    }
+  },
+  "game_balance": {
+    "limiting_power": [
+      "Only one enchantment per item (Fate Core simplification)",
+      "Recharging: Enchanted weapons drain charge. Require soul gems to recharge after extended use.",
+      "Multiple items: Wearing multiple enchanted items is possible but GM may limit total bonuses to prevent power creep",
+      "Legendary uniqueness: Only one of each legendary artifact exists. If PC has it, no one else does."
+    ],
+    "suggested_limits": {
+      "total_enchantment_bonus": "GM may cap total skill bonuses from equipment at +3 to +4",
+      "artifact_attunement": "Optional rule: Can only benefit from 3-4 enchanted items at once. Must choose which to 'attune'",
+      "rare_components": "High-level enchanting requires rare components found in dangerous locations"
+    }
+  },
+  "story_integration": {
+    "artifact_quests": "Major artifacts should require significant quests to obtain, not just gold",
+    "npc_reactions": "NPCs react to visible artifacts (Daedric items cause fear, ancient Nord items inspire respect)",
+    "faction_items": "Some artifacts tied to specific factions (Companions, College, etc.)",
+    "moral_choices": "Daedric artifacts often require morally gray or evil acts to obtain",
+    "consequences": "Wielding certain artifacts has long-term story consequences (Daedric Prince attention, faction reactions)"
+  },
+  "gm_tools": {
+    "custom_artifacts": {
+      "template": {
+        "name": "[Artifact Name]",
+        "category": "[Type]",
+        "origin": "[Who made it/where from]",
+        "mechanical_stats": {
+          "rating": "[Weapon/Armor rating]",
+          "base_bonus": "[+X to relevant skill]",
+          "aspect": "[Artifact's defining aspect]",
+          "special_ability": {
+            "name": "[Ability name]",
+            "effect": "[What it does]",
+            "cost": "[Fate Points or limitation]"
+          }
+        },
+        "requirements": "[What's needed to use it]",
+        "story_impact": "[How it affects narrative]"
+      },
+      "design_tips": [
+        "Give artifact a unique aspect that can be invoked",
+        "Special abilities should be powerful but limited (once per session, cost Fate Points)",
+        "Tie artifacts to story and character development",
+        "Balance power with drawbacks or costs",
+        "Make acquiring artifact a memorable story moment"
+      ]
+    }
+  }
+}

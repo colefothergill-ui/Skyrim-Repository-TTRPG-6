@@ -1,0 +1,177 @@
+{
+  "races": [
+    {
+      "name": "Nord",
+      "description": "Natives of Skyrim, hardy and resistant to cold",
+      "racial_ability": {
+        "name": "Resist Frost",
+        "effect": "+2 to Physique rolls to resist cold damage or freezing conditions"
+      },
+      "power": {
+        "name": "Battle Cry",
+        "effect": "Once per session, create advantage 'Frightened Enemies' with one free invoke (enemies within close range)"
+      },
+      "skill_bonuses": [
+        "Fight (+1)",
+        "Athletics (+1)"
+      ],
+      "starting_aspect": "Hardy Child of Skyrim"
+    },
+    {
+      "name": "Imperial",
+      "description": "Well-educated and well-spoken, native to Cyrodiil",
+      "racial_ability": {
+        "name": "Voice of the Emperor",
+        "effect": "Once per session, automatically succeed at Rapport roll to calm a hostile NPC or avoid combat"
+      },
+      "skill_bonuses": [
+        "Rapport (+1)",
+        "Will (+1)"
+      ],
+      "starting_aspect": "Diplomatic Imperial"
+    },
+    {
+      "name": "Breton",
+      "description": "Magically gifted humans from High Rock",
+      "racial_ability": {
+        "name": "Resist Magic",
+        "effect": "+2 to Will rolls to resist magical effects"
+      },
+      "power": {
+        "name": "Dragonskin",
+        "effect": "Once per session, absorb one magical attack completely (negate all stress and effects)"
+      },
+      "skill_bonuses": [
+        "Lore (+1)",
+        "Will (+1)"
+      ],
+      "starting_aspect": "Magically-Attuned Breton"
+    },
+    {
+      "name": "Redguard",
+      "description": "Warriors from Hammerfell, naturally skilled with weapons",
+      "racial_ability": {
+        "name": "Resist Poison",
+        "effect": "+2 to Physique rolls to resist poison"
+      },
+      "power": {
+        "name": "Adrenaline Rush",
+        "effect": "Once per session, ignore all stress boxes for one scene"
+      },
+      "skill_bonuses": [
+        "Fight (+1)",
+        "Physique (+1)"
+      ],
+      "starting_aspect": "Warrior of Hammerfell"
+    },
+    {
+      "name": "High Elf (Altmer)",
+      "description": "Tall elves from Summerset Isles, gifted with magic",
+      "racial_ability": {
+        "name": "Highborn Heritage",
+        "effect": "+1 to all Lore rolls related to magic or spellcasting"
+      },
+      "power": {
+        "name": "Highborn",
+        "effect": "Once per session, gain +2 to all Lore rolls for one entire scene"
+      },
+      "skill_bonuses": [
+        "Lore (+1)",
+        "Notice (+1)"
+      ],
+      "starting_aspect": "Highborn Altmer Mage"
+    },
+    {
+      "name": "Wood Elf (Bosmer)",
+      "description": "Agile elves from Valenwood, natural archers",
+      "racial_ability": {
+        "name": "Resist Disease",
+        "effect": "+2 to Physique rolls to resist disease and poison"
+      },
+      "power": {
+        "name": "Command Animal",
+        "effect": "Once per session, befriend or calm any one animal, creating aspect 'Animal Ally' with two free invokes"
+      },
+      "skill_bonuses": [
+        "Shoot (+1)",
+        "Stealth (+1)"
+      ],
+      "starting_aspect": "Bosmer Hunter"
+    },
+    {
+      "name": "Dark Elf (Dunmer)",
+      "description": "Elves from Morrowind, resistant to fire",
+      "racial_ability": {
+        "name": "Resist Fire",
+        "effect": "+2 to Physique rolls to resist fire damage"
+      },
+      "power": {
+        "name": "Ancestor's Wrath",
+        "effect": "Once per session, surround self with flame aura that deals 2 stress to all enemies in melee range for one exchange"
+      },
+      "skill_bonuses": [
+        "Lore (+1)",
+        "Stealth (+1)"
+      ],
+      "starting_aspect": "Cunning Dunmer"
+    },
+    {
+      "name": "Orc",
+      "description": "Strong and tough warriors, known for their smithing",
+      "racial_ability": {
+        "name": "Warrior's Blood",
+        "effect": "+1 to Physique for determining stress boxes"
+      },
+      "power": {
+        "name": "Berserker Rage",
+        "effect": "Once per session, double all stress dealt and taken for one scene"
+      },
+      "skill_bonuses": [
+        "Fight (+1)",
+        "Crafts (+1)"
+      ],
+      "starting_aspect": "Proud Orsimer Warrior"
+    },
+    {
+      "name": "Khajiit",
+      "description": "Cat-like people from Elsweyr, agile and stealthy",
+      "racial_ability": {
+        "name": "Night Eye",
+        "effect": "Never suffer penalties from darkness or poor lighting"
+      },
+      "power": {
+        "name": "Claws",
+        "effect": "Unarmed attacks deal normal stress (instead of reduced damage)"
+      },
+      "skill_bonuses": [
+        "Stealth (+1)",
+        "Athletics (+1)"
+      ],
+      "starting_aspect": "Sly Khajiit Wanderer"
+    },
+    {
+      "name": "Argonian",
+      "description": "Reptilian people from Black Marsh, immune to many ailments",
+      "racial_ability": {
+        "name": "Resist Disease and Poison",
+        "effect": "Automatically succeed at all Physique rolls to resist disease or poison"
+      },
+      "power": {
+        "name": "Histskin",
+        "effect": "Once per session, rapidly regenerate health - recover all physical stress immediately"
+      },
+      "skill_bonuses": [
+        "Survival (+1)",
+        "Stealth (+1)"
+      ],
+      "starting_aspect": "Adaptable Argonian"
+    }
+  ],
+  "character_creation_rules": {
+    "race_selection": "Choose one race during Session Zero",
+    "racial_ability": "Racial abilities are always active",
+    "racial_power": "Racial powers can be used once per session (refreshes at start of new session)",
+    "skill_bonuses": "Add racial skill bonuses to base skill ratings during character creation",
+    "starting_aspect": "Use suggested starting aspect or create custom aspect that reflects racial heritage"
+  }
+}

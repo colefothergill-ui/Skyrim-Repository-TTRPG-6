@@ -1,0 +1,94 @@
+{
+  "name": "Mallus Maccius",
+  "id": "npc_stat_mallus_maccius",
+  "type": "Imperial Saboteur",
+  "category": "Hostile NPC",
+  "role": "Spy/Saboteur",
+  "location": "Whiterun (Honningbrew Meadery)",
+  "faction": "Maven Black-Briar (secretly)",
+  "aspects": {
+    "high_concept": "Maven's Plant Inside Honningbrew Meadery",
+    "trouble": "One Discovery Away from Being Caught",
+    "other_aspects": [
+      "Loyal Saboteur for the Right Price",
+      "Trusted Employee Hiding Dark Secrets",
+      "Skeever Breeder in the Basement"
+    ]
+  },
+  "skills": {
+    "Great": ["Deceive"],
+    "Good": ["Stealth", "Crafts"],
+    "Fair": ["Notice", "Burglary", "Contacts"],
+    "Average": ["Will", "Resources", "Fight"]
+  },
+  "stunts": [
+    "Master of Sabotage: +2 to Crafts when poisoning or contaminating products",
+    "Innocent Face: +2 to Deceive when deflecting suspicion about workplace problems",
+    "Pest Handler: +2 to Crafts when breeding or controlling skeevers"
+  ],
+  "stress": {
+    "physical": [false, false],
+    "mental": [false, false, false]
+  },
+  "consequences": {
+    "mild": null,
+    "moderate": null,
+    "severe": null
+  },
+  "refresh": 3,
+  "armor": 0,
+  "notes": "Mallus Maccius is an Imperial working at Honningbrew Meadery, but he's secretly Maven Black-Briar's agent. His job is to systematically sabotage the meadery by breeding skeevers in the basement, poisoning mead batches, and ensuring quality problems persist. He presents himself as a loyal, hardworking employee to Sabjorn while undermining the business from within. Maven's goal is to drive Honningbrew into bankruptcy so she can acquire it cheaply. Mallus is methodical, careful, and has been successfully deceiving Sabjorn for months. He's nervous about discovery but confident in his cover. If caught, he'll try to talk his way out or flee to Riften where Maven can protect him.",
+  "combat_tactics": "Mallus avoids direct combat. If cornered, he'll try to negotiate, bribe, or flee. He might use skeevers as a distraction or weapon of last resort. He carries a small knife but is not a skilled fighter.",
+  "scene_triggers": ["Honningbrew Meadery", "Dampened Spirits quest", "Basement skeever nest", "Maven Black-Briar meetings"],
+  "act_context": ["Act 1"],
+  "starting_equipment": {
+    "armor": "None (Armor:0)",
+    "weapon": "Iron Dagger (Weapon:1)",
+    "other": ["Meadery keys", "Poison vials", "Skeever breeding notes", "Maven's payment (50 gold)", "Lockpicks x2"]
+  },
+  "social_interaction": "Mallus presents as a helpful, dedicated employee. He's deferential to Sabjorn and expresses concern about the meadery's problems while secretly causing them. He's an excellent liar with a talent for deflecting suspicion. When exposed or threatened, his facade drops and he becomes calculating and desperate. He'll offer bribes, threaten with Maven's name, or beg based on what he thinks will work.",
+  "relationships": {
+    "Sabjorn": "Employer, deceiving successfully for months",
+    "Maven Black-Briar": "Secret employer and patron, reports to regularly",
+    "Honningbrew Guards": "Maintains friendly cover, deflects their suspicions",
+    "Thieves Guild": "May recognize guild members as potential threats or allies depending on situation"
+  },
+  "personality_notes": {
+    "speaking_style": "Helpful and innocent as cover, calculating and desperate when exposed",
+    "motivations": ["Complete Maven's sabotage mission", "Collect payment from Maven", "Avoid discovery and arrest", "Secure future employment with Black-Briar family"],
+    "fears": ["Being caught and imprisoned", "Maven's wrath if he fails", "Losing his lucrative position", "The Thieves Guild interfering"],
+    "quirks": ["Constantly checking for witnesses", "Over-explains when nervous", "Mentions how hard he works"],
+    "character_growth": "None - Mallus is a tool of Maven's ambition and will remain loyal to whoever pays him"
+  },
+  "story_hooks": [
+    "Primary antagonist/target in Dampened Spirits quest",
+    "Evidence of his sabotage hidden in meadery basement",
+    "Can be exposed, killed, bribed, or recruited depending on PC approach",
+    "Connection to Maven Black-Briar's larger schemes",
+    "May flee to Riften if warned or suspicious"
+  ],
+  "dialogue_samples": {
+    "cover": "I've been working day and night trying to solve these pest problems. Poor Sabjorn is at his wit's end.",
+    "deflecting": "Skeevers? Oh, they must be coming from the walls. Old building, you know. Lots of cracks.",
+    "when_cornered": "Now wait! Let's talk about this. I'm just trying to make a living. Maven pays well - she could pay you too.",
+    "threatening": "You don't want to cross Maven Black-Briar. She owns half of Riften and has friends everywhere.",
+    "desperate": "Please! I'll give you everything Maven paid me! Just let me go and you'll never see me again!"
+  },
+  "dampened_spirits_context": {
+    "role": "Maven's saboteur destroying Honningbrew from within",
+    "evidence_location": "Basement breeding operation and poisoning supplies",
+    "exposure_consequences": [
+      "Arrested by Whiterun guards",
+      "Killed by PC",
+      "Bribed to leave or switch sides",
+      "Flees to Riften and Maven's protection"
+    ],
+    "rewards": "Maven may pay PC for protecting Mallus or ensuring Honningbrew's failure"
+  },
+  "maven_connection": {
+    "payment": "50 gold per week plus bonus for major sabotage",
+    "instructions": "Keep breeding skeevers, poison random batches, ensure quality stays poor",
+    "protection": "Maven will shield him if he reaches Riften, but won't risk exposure",
+    "betrayal_consequence": "If Mallus betrays Maven, she'll send guild members or worse after him"
+  }
+}

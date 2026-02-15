@@ -1,0 +1,9 @@
+{
+  "date": "2026-02-02",
+  "changes": [
+    "Set active_pc_id to pc_insaerndel in state/campaign_state.json",
+    "Polished typos and name consistency in pc_insaerndel.json",
+    "Clarified Thief Stone mechanical benefit on PC sheet",
+    "Rebalanced Spell of Muffle to Create Advantage + free invokes (optional)"
+  ]
+}

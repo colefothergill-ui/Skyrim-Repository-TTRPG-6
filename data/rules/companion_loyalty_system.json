@@ -1,0 +1,383 @@
+{
+  "system_name": "Companion Trust and Loyalty System",
+  "description": "Comprehensive mechanics for tracking companion relationships, loyalty, and unique benefits based on trust levels.",
+  "version": "2.0",
+  "core_concepts": {
+    "loyalty_score": {
+      "range": "0-100",
+      "description": "Numerical representation of companion's trust and dedication to the party",
+      "starting_value": "Varies by companion (typically 40-60)",
+      "modification": "Increases and decreases based on party actions and decisions"
+    },
+    "loyalty_thresholds": {
+      "0-19": {
+        "status": "Disloyal/Leaving",
+        "description": "Companion is ready to leave or has already departed",
+        "effects": ["Will not follow party", "May refuse to help", "Could become antagonistic"]
+      },
+      "20-39": {
+        "status": "Uncertain",
+        "description": "Companion questions their place with the party",
+        "effects": ["Refuses dangerous orders", "Argues with party decisions", "May leave if pushed"]
+      },
+      "40-59": {
+        "status": "Professional",
+        "description": "Companion works with party but maintains distance",
+        "effects": ["Follows basic orders", "Provides standard assistance", "Limited personal sharing"]
+      },
+      "60-79": {
+        "status": "Trusted Ally",
+        "description": "Companion trusts party and fights alongside them reliably",
+        "effects": ["Shares intelligence/secrets", "Provides tactical bonuses", "Offers personal quests"]
+      },
+      "80-100": {
+        "status": "Loyal Companion/Shield-Sibling",
+        "description": "Deep bond, companion would sacrifice for party",
+        "effects": ["Maximum combat bonuses", "Shares faction secrets", "Personal storylines unlock", "May sacrifice self for party"]
+      }
+    }
+  },
+  "loyalty_modification_triggers": {
+    "universal_positive": [
+      {"action": "Save companion's life in combat", "loyalty_change": 10, "frequency": "per occurrence"},
+      {"action": "Complete companion's personal quest", "loyalty_change": 15, "frequency": "once"},
+      {"action": "Respect companion's values/beliefs", "loyalty_change": 3, "frequency": "per significant decision"},
+      {"action": "Include companion in important decisions", "loyalty_change": 2, "frequency": "per session"},
+      {"action": "Gift meaningful item", "loyalty_change": "1-5", "frequency": "occasional"},
+      {"action": "Defend companion from insults/accusations", "loyalty_change": 5, "frequency": "per occurrence"}
+    ],
+    "universal_negative": [
+      {"action": "Leave companion to die/abandon in danger", "loyalty_change": -20, "frequency": "per occurrence"},
+      {"action": "Betray companion's faction without warning", "loyalty_change": -30, "frequency": "once"},
+      {"action": "Insult or demean companion", "loyalty_change": -5, "frequency": "per occurrence"},
+      {"action": "Ignore companion for multiple sessions", "loyalty_change": -2, "frequency": "per session ignored"},
+      {"action": "Violate companion's core values", "loyalty_change": -10, "frequency": "per major violation"},
+      {"action": "Attack companion or their allies", "loyalty_change": -25, "frequency": "per occurrence"}
+    ],
+    "companion_specific": "Each companion has unique loyalty triggers based on their personality, faction, and values. See individual companion files."
+  },
+  "battle_stunts_system": {
+    "description": "Loyal companions provide tactical advantages in combat based on trust level",
+    "unlock_requirement": "Loyalty 60+",
+    "mechanics": "Companions at 60+ loyalty unlock special battle stunts usable once per scene",
+    "stunt_categories": [
+      {
+        "name": "Shield-Sibling (60-79 Loyalty)",
+        "description": "Moderate tactical bonuses reflecting teamwork",
+        "examples": [
+          {
+            "name": "Coordinated Strike",
+            "effect": "Once per scene, companion and PC can combine attacks against single target. Both roll, take higher result +2.",
+            "usable_by": "Any martial companion"
+          },
+          {
+            "name": "Covering Fire",
+            "effect": "Companion provides suppressing fire/defense. Allies in same zone gain +1 to defend for one exchange.",
+            "usable_by": "Ranged companions (Aela, etc.)"
+          },
+          {
+            "name": "Tactical Positioning",
+            "effect": "Companion creates advantageous situation aspect with one free invoke through battlefield awareness.",
+            "usable_by": "Experienced warriors (Hadvar, Ralof, etc.)"
+          }
+        ]
+      },
+      {
+        "name": "Unbreakable Bond (80+ Loyalty)",
+        "description": "Powerful combat bonuses reflecting deep trust",
+        "examples": [
+          {
+            "name": "Die For You",
+            "effect": "Once per session, companion can take a consequence meant for PC, reducing it by one level (Severe becomes Moderate, etc.)",
+            "usable_by": "All companions at 80+ loyalty"
+          },
+          {
+            "name": "Perfect Synchronization",
+            "effect": "Once per scene, PC and companion move and act as one. Both can take full actions on PC's turn for one exchange.",
+            "usable_by": "Combat-focused companions"
+          },
+          {
+            "name": "Inspiring Presence",
+            "effect": "Companion's dedication inspires party. All allies gain +1 to all rolls for one exchange.",
+            "usable_by": "Charismatic companions (Ralof, Ulfric when allied)"
+          },
+          {
+            "name": "Last Stand",
+            "effect": "When PC would be taken out, companion can spend all stress boxes to keep PC at 1 stress. Companion is then taken out but stable.",
+            "usable_by": "All companions at 90+ loyalty"
+          }
+        ]
+      }
+    ],
+    "activation": "Player declares use of battle stunt at appropriate moment. GM adjudicates if situation fits. No additional cost beyond once-per-scene/session limits."
+  },
+  "gear_bonuses_system": {
+    "description": "Loyal companions who trust the PC provide equipment benefits",
+    "unlock_requirement": "Loyalty 70+",
+    "types": [
+      {
+        "name": "Shared Equipment",
+        "loyalty_required": 70,
+        "benefit": "Companion shares their signature equipment with PC during critical moments",
+        "examples": [
+          "Aela loans her unique Hunting Bow (Weapon:3, +1 to Shoot at long range) for important hunt",
+          "Hadvar provides access to Imperial armory, granting +1 Armor rating for major battle",
+          "Ralof shares Stormcloak supply caches, providing healing potions and rations"
+        ],
+        "mechanical_effect": "Temporary equipment access, typically for one significant encounter or quest"
+      },
+      {
+        "name": "Crafting Assistance",
+        "loyalty_required": 75,
+        "benefit": "Companion helps craft better equipment or provides materials",
+        "examples": [
+          "Lydia assists in armor maintenance, granting +1 to Crafts check for repairs",
+          "Farkas shares Companions' smithing secrets, reducing time/cost for weapon crafting",
+          "Teldryn Sero knows traders, providing 10% discount on equipment purchases"
+        ],
+        "mechanical_effect": "Bonuses to Crafts checks, reduced costs, or access to rare materials"
+      },
+      {
+        "name": "Enchanting Support",
+        "loyalty_required": 80,
+        "benefit": "Companion facilitates enchanting or provides enchanted gifts",
+        "examples": [
+          "Serana uses vampire knowledge to enhance necromancy-related enchantments (+2 to Lore for such enchanting)",
+          "J'zargo (if available) offers College connections for enchanting supplies",
+          "Loyal companion gifts personally enchanted item (minor +1 bonus to relevant skill)"
+        ],
+        "mechanical_effect": "Access to enchanting resources, bonuses to enchanting checks, or unique enchanted items"
+      },
+      {
+        "name": "Signature Gift",
+        "loyalty_required": 85,
+        "benefit": "Companion presents PC with unique, personal equipment gift",
+        "examples": [
+          "Aela gifts wolf pelt cloak (Armor:1, +1 to Survival in wilderness)",
+          "Hadvar presents PC with family heirloom sword from uncle Alvor (Weapon:2, aspect 'Riverwood's Protection')",
+          "Ralof commissions Stormcloak-blessed amulet (+1 to resist fear, creates aspect 'Talos Watches')"
+        ],
+        "mechanical_effect": "Permanent unique equipment with both mechanical bonus and aspect that can be invoked"
+      }
+    ],
+    "gm_guidance": "Gear bonuses should feel personal and story-driven, not just mechanical upgrades. Tie gifts to companion's background and player's actions."
+  },
+  "companion_specific_benefits": {
+    "description": "Each companion provides unique advantages based on their skills, faction, and personality",
+    "examples": [
+      {
+        "companion": "Hadvar",
+        "faction": "Imperial Legion",
+        "loyalty_60_benefit": {
+          "name": "Imperial Connections",
+          "effect": "Provides introductions to Imperial officers, +2 to Rapport with Imperial NPCs"
+        },
+        "loyalty_80_benefit": {
+          "name": "Legion Intelligence",
+          "effect": "Shares Imperial troop movements and strategy, grants situational aspects in civil war encounters"
+        }
+      },
+      {
+        "companion": "Ralof",
+        "faction": "Stormcloaks",
+        "loyalty_60_benefit": {
+          "name": "Stormcloak Network",
+          "effect": "Connects PC to Stormcloak sympathizers, +2 to Contacts in Nord-majority holds"
+        },
+        "loyalty_80_benefit": {
+          "name": "Ulfric's Ear",
+          "effect": "Can arrange meeting with Ulfric Stormcloak, may provide Thu'um training opportunity"
+        }
+      },
+      {
+        "companion": "Aela the Huntress",
+        "faction": "The Companions",
+        "loyalty_60_benefit": {
+          "name": "Hunt Master",
+          "effect": "Teaches hunting techniques, +1 to Survival and tracking rolls"
+        },
+        "loyalty_80_benefit": {
+          "name": "Gift of the Beast",
+          "effect": "Offers werewolf blood transformation (if PC desires), provides werewolf tactical advice"
+        }
+      },
+      {
+        "companion": "Lydia",
+        "faction": "Whiterun (Housecarl)",
+        "loyalty_60_benefit": {
+          "name": "Housecarl's Duty",
+          "effect": "Manages PC's home/equipment efficiently, always has relevant supplies ready"
+        },
+        "loyalty_80_benefit": {
+          "name": "Unbreakable Loyalty",
+          "effect": "Will never leave PC's side, automatically succeeds at 'protect PC' actions at cost of own safety"
+        }
+      }
+    ]
+  },
+  "dialogue_and_relationship_progression": {
+    "description": "As loyalty increases, companions share more personal information and engage in deeper conversations",
+    "progression_stages": [
+      {
+        "loyalty_range": "0-39",
+        "dialogue_style": "Professional, distant, minimal personal sharing",
+        "topics_available": ["Basic tactical discussion", "Surface-level faction talk", "Mission objectives"]
+      },
+      {
+        "loyalty_range": "40-59",
+        "dialogue_style": "Friendly but guarded, some personal details",
+        "topics_available": ["Faction philosophy", "Some personal history", "Opinions on party decisions", "Basic values"]
+      },
+      {
+        "loyalty_range": "60-79",
+        "dialogue_style": "Open and trusting, shares deeper thoughts",
+        "topics_available": ["Personal fears and hopes", "Deep faction secrets", "Family/background stories", "Philosophical discussions", "Personal quests unlock"]
+      },
+      {
+        "loyalty_range": "80-100",
+        "dialogue_style": "Intimate trust, considers PC as family/shield-sibling",
+        "topics_available": ["Deepest secrets", "Personal vulnerabilities", "Long-term dreams", "Willingness to discuss difficult topics", "Marriage/bonding ceremonies (where appropriate)"]
+      }
+    ],
+    "special_conversations": [
+      {
+        "trigger": "Loyalty reaches 70",
+        "type": "Heart-to-Heart",
+        "description": "Companion initiates conversation sharing something deeply personal, strengthens bond"
+      },
+      {
+        "trigger": "Loyalty reaches 85",
+        "type": "Shield-Sibling Ceremony",
+        "description": "Companion proposes formal bond (Nord tradition) or equivalent, grants permanent +5 loyalty and special title/aspect"
+      },
+      {
+        "trigger": "PC betrays trust (loyalty drops 20+ in single action)",
+        "type": "Confrontation",
+        "description": "Companion confronts PC about betrayal, chance to explain/apologize or relationship may end"
+      }
+    ]
+  },
+  "faction_interaction_system": {
+    "description": "Companion loyalty affects how their faction treats PC",
+    "high_loyalty_benefits": [
+      {
+        "loyalty_required": 75,
+        "effect": "Faction members respect PC's bond with companion",
+        "examples": [
+          "Imperial soldiers treat PC better if Hadvar trusts them",
+          "Stormcloaks offer side quests if Ralof vouches for PC",
+          "Companions offer membership path if Aela respects PC"
+        ]
+      },
+      {
+        "loyalty_required": 85,
+        "effect": "Companion actively advocates for PC within faction",
+        "examples": [
+          "Hadvar speaks to General Tullius on PC's behalf, granting audience",
+          "Ralof convinces Ulfric to trust PC with sensitive missions",
+          "Aela nominates PC for Companions Inner Circle consideration"
+        ]
+      }
+    ],
+    "low_loyalty_consequences": [
+      {
+        "loyalty_threshold": "Below 40",
+        "effect": "Companion stops vouching for PC with faction",
+        "examples": [
+          "Hadvar's Imperial contacts no longer extend courtesy to PC",
+          "Ralof's Stormcloak network becomes unavailable",
+          "Companions treat PC as outsider again"
+        ]
+      },
+      {
+        "loyalty_threshold": "Below 20",
+        "effect": "Companion may speak negatively of PC to faction",
+        "examples": [
+          "Hadvar warns Imperial commanders about PC's unreliability",
+          "Ralof tells Stormcloaks PC cannot be trusted",
+          "Aela blocks PC's Companions membership"
+        ]
+      }
+    ]
+  },
+  "companion_departure_and_return": {
+    "description": "What happens when loyalty becomes too low or circumstances force separation",
+    "departure_triggers": [
+      {
+        "trigger": "Loyalty drops to 0-19",
+        "outcome": "Companion leaves party, will not rejoin without significant story event"
+      },
+      {
+        "trigger": "PC joins opposed faction",
+        "outcome": "Companion may leave immediately (Hadvar if join Stormcloaks, Ralof if join Imperials)"
+      },
+      {
+        "trigger": "Major value betrayal",
+        "outcome": "Companion leaves angrily, may become enemy in extreme cases"
+      }
+    ],
+    "redemption_mechanics": [
+      {
+        "requirement": "Complete personal quest for departed companion",
+        "effect": "Opportunity to reconcile, loyalty reset to 40 if successful"
+      },
+      {
+        "requirement": "Major story event (save companion's life, save their faction, etc.)",
+        "effect": "Companion may forgive and return, loyalty starts at 50"
+      },
+      {
+        "requirement": "Multiple sessions of making amends",
+        "effect": "GM may allow gradual reconciliation through RP and actions supporting companion's values"
+      }
+    ]
+  },
+  "gm_tools": {
+    "tracking_loyalty": [
+      "Keep loyalty score in NPC stat sheet or session notes",
+      "Update after each session based on PC actions",
+      "Note major loyalty changes (±10 or more) in session log",
+      "Share current loyalty range (not exact number) with players occasionally"
+    ],
+    "showing_loyalty_changes": [
+      "Describe companion's reactions to reflect loyalty: cold vs. warm, distant vs. friendly",
+      "Have companions comment on PC's decisions in ways that show their feelings",
+      "Show loyalty through combat: high loyalty = companion protects PC, low loyalty = companion hangs back",
+      "Use dialogue changes: address PC differently based on loyalty (by name vs. by title)"
+    ],
+    "balancing_multiple_companions": [
+      "If party has multiple companions, each tracks loyalty independently",
+      "PC actions may affect companions differently (joining Imperials: Hadvar +loyalty, Ralof -loyalty)",
+      "Don't overwhelm players with too many loyalty tracks - focus on 1-2 primary companions per arc",
+      "Consider 'party companions' vs. 'temporary allies' - not everyone needs full loyalty tracking"
+    ],
+    "story_integration": [
+      "Use companion loyalty as story fuel: high loyalty = opportunities, low loyalty = complications",
+      "Create dramatic moments around loyalty thresholds (reaching 80 = special scene, dropping below 40 = confrontation)",
+      "Companion personal quests should tie to loyalty progression",
+      "Let companions' loyalty affect major story outcomes (loyal companion's faction support vs. departed companion's faction opposition)"
+    ]
+  },
+  "optional_rules": {
+    "simplified_loyalty": {
+      "description": "Use 5-tier system instead of 0-100 scale",
+      "tiers": ["Hostile", "Uncertain", "Neutral", "Friendly", "Loyal"],
+      "advancement": "Move up/down one tier based on major story events",
+      "benefit": "Easier to track, less number-crunching"
+    },
+    "loyalty_aspects": {
+      "description": "Companions gain aspects reflecting relationship status",
+      "examples": [
+        "At 60 loyalty: companion gains 'Trusted Ally of [PC Name]' aspect",
+        "At 80 loyalty: companion gains 'Would Die For [PC Name]' aspect",
+        "Below 40: companion gains 'Doubts [PC Name]' aspect"
+      ],
+      "benefit": "Integrate loyalty into Fate's aspect system, can be invoked/compelled"
+    },
+    "no_numbers_loyalty": {
+      "description": "Purely narrative loyalty tracking",
+      "method": "GM tracks major events affecting relationship, determines loyalty tier based on overall story",
+      "benefit": "Maximum flexibility, suits narrative-focused groups",
+      "drawback": "Less clear progression, harder to predict consequences"
+    }
+  }
+}

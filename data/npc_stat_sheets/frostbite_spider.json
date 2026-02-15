@@ -1,0 +1,41 @@
+{
+  "name": "Frostbite Spider",
+  "id": "npc_stat_frostbite_spider",
+  "type": "Beast",
+  "category": "Enemy",
+  "location": "Caves, ruins, dungeons",
+  "faction": "Wildlife",
+  "aspects": {
+    "high_concept": "Giant Venomous Arachnid of Skyrim's Depths",
+    "trouble": "Slow and Vulnerable to Fire",
+    "other_aspects": [
+      "Web Spinner",
+      "Ambush Predator",
+      "Pack Hunter"
+    ]
+  },
+  "skills": {
+    "Good": ["Fight"],
+    "Fair": ["Notice", "Stealth"],
+    "Average": ["Athletics", "Physique"]
+  },
+  "stunts": [
+    "Poison Bite: When successfully attacking with Fight, inflict sticky aspect 'Poisoned' (one free invoke for allies)",
+    "Web Spit: Once per scene, create aspect 'Entangled in Webs' on target zone with two free invokes",
+    "Cave Dweller: +2 to Notice in dark environments"
+  ],
+  "stress": {
+    "physical": [false, false],
+    "mental": []
+  },
+  "consequences": {
+    "mild": null
+  },
+  "refresh": 1,
+  "fate_points": 1,
+  "notes": "Frostbite Spiders are giant spiders common in Skyrim's caves and ruins. They attack with venomous bites and can spit webbing to trap prey. Often found in small groups. Vulnerable to fire.",
+  "combat_tactics": "Spiders prefer ambush tactics, hiding on ceilings or in dark corners. They use webs to immobilize targets before closing for melee attacks. In groups, they coordinate to surround prey.",
+  "scene_triggers": ["Cave exploration", "Dungeon delving", "Bandit hideouts", "Nordic ruins"],
+  "act_context": ["Act 1", "Act 2", "Act 3"],
+  "loot": ["Spider venom", "Frostbite venom sac"]
+}

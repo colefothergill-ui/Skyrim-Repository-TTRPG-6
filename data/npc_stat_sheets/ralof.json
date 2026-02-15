@@ -1,0 +1,133 @@
+{
+  "name": "Ralof",
+  "id": "npc_stat_ralof",
+  "type": "Nord Stormcloak Soldier",
+  "category": "Companion",
+  "location": "Whiterun",
+  "faction": "Stormcloaks",
+  "aspects": {
+    "high_concept": "Passionate Stormcloak Freedom Fighter",
+    "trouble": "Rebel Against an Empire That Won't Let Go",
+    "other_aspects": [
+      "Brother of Gerdur, Family Man",
+      "True Son of Skyrim",
+      "Survivor and Freedom Fighter"
+    ]
+  },
+  "skills": {
+    "Great": ["Fight"],
+    "Good": ["Athletics", "Provoke"],
+    "Fair": ["Physique", "Will", "Notice"],
+    "Average": ["Survival", "Contacts", "Empathy"]
+  },
+  "stunts": [
+    "For Skyrim!: Once per scene, rally allies with a battle cry, granting all allies in zone +1 to attack for one exchange",
+    "Nord's Fury: +2 to Fight when fighting Imperial forces",
+    "Unbreakable Spirit: Once per session, automatically succeed on a Will roll to resist intimidation or continue fighting"
+  ],
+  "stress": {
+    "physical": [false, true, false],
+    "mental": [false, false, false]
+  },
+  "consequences": {
+    "mild": null,
+    "moderate": null,
+    "severe": null
+  },
+  "refresh": 3,
+  "armor": 1,
+  "notes": "Ralof is a devoted Stormcloak soldier who recruits promising warriors to the rebellion cause. He's passionate about Skyrim's independence and the right to worship Talos. As Gerdur's brother, he has family connections in Riverwood. He's friendly and brotherhood-oriented, treating fellow Nords (and allies) like family. His combat style is aggressive and inspirational, rallying allies and striking fear into Imperial enemies. He believes the gods favor Skyrim's cause for freedom.",
+  "combat_tactics": "Ralof fights aggressively and inspirationally. He leads charges, uses battle cries to motivate allies, and focuses on breaking enemy morale. He takes calculated risks and never backs down from Imperial forces. His presence boosts allied morale and coordination.",
+  "scene_triggers": ["Stormcloak recruitment", "Riverwood arrival", "Early Act 1 quests", "Stormcloak recruitment", "Battle of Whiterun (Stormcloak side)"],
+  "act_context": ["Act 1", "Act 2"],
+  "starting_equipment": {
+    "armor": "Stormcloak Armor (Armor:1)",
+    "weapon": "Nord Battle Axe (Weapon:2)",
+    "shield": "Stormcloak Shield (Defend +1)",
+    "other": ["Healing Potion x2", "Talos Amulet", "15 gold"]
+  },
+  "social_interaction": "Ralof is warm, passionate, and fiercely loyal to those he considers friends. He speaks openly about Skyrim's right to independence and Talos worship. While he's dedicated to the Stormcloak cause, he's not blindly hateful - he respects honorable opponents and questions cruelty. He's protective of civilians and treats fellow Nords like extended family. He can be hotheaded when discussing the Empire or Thalmor, but he listens to friends he trusts.",
+  "relationships": {
+    "Gerdur": "Sister, deeply protective of her",
+    "Hod": "Brother-in-law, respects him",
+    "Frodnar": "Nephew, wants to protect his future",
+    "Ulfric Stormcloak": "Jarl and leader, unwavering loyalty",
+    "Galmar Stone-Fist": "Commander, respects as warrior",
+    "Imperial Legion": "Enemies, tried to execute him unjustly",
+    "Thalmor": "Hated oppressors, primary motivation for rebellion",
+    "General Tullius": "Enemy commander, sees as foreign tyrant",
+    "Player": "Recruited them to the cause, considers them battle-forged kin"
+  },
+  "personality_notes": {
+    "speaking_style": "Direct, passionate, uses Nordic expressions, frequently invokes Talos and Skyrim",
+    "motivations": ["Free Skyrim from Imperial control", "Restore Talos worship openly", "Protect family in Riverwood", "See Ulfric crowned High King"],
+    "fears": ["Skyrim becoming a Thalmor puppet state", "Losing family to the war", "Talos worship being completely erased", "Dying without seeing Skyrim free"],
+    "quirks": ["Touches his Talos amulet when stressed", "Speaks passionately of Skyrim's freedom and divine favor", "Shares mead and stories enthusiastically with friends"],
+    "character_growth": "Can learn to see good Imperials as potential allies against Thalmor, develop more nuanced view of the war, become more strategic rather than purely passionate"
+  },
+  "companion_mechanics": {
+    "recruitment_trigger": "Player aligns with Stormcloaks or meets Ralof during recruitment",
+    "starting_loyalty": 60,
+    "loyalty_increases": [
+      {"trigger": "Complete Stormcloak quests", "amount": 10},
+      {"trigger": "Defend Talos worship or shrines", "amount": 5},
+      {"trigger": "Visit Riverwood and check on family", "amount": 5},
+      {"trigger": "Stand against the Thalmor", "amount": 10},
+      {"trigger": "Show respect for Nord traditions", "amount": 3},
+      {"trigger": "Fight honorably in battle", "amount": 3}
+    ],
+    "loyalty_decreases": [
+      {"trigger": "Attack Stormcloak soldiers", "amount": -20},
+      {"trigger": "Join Imperial Legion", "amount": -50},
+      {"trigger": "Disrespect Talos or Nordic culture", "amount": -10},
+      {"trigger": "Harm civilians", "amount": -15},
+      {"trigger": "Cooperate with Thalmor", "amount": -20},
+      {"trigger": "Ignore family in Riverwood", "amount": -3}
+    ],
+    "loyalty_thresholds": {
+      "80+": "Will die for party, considers them true brothers/sisters, shares Stormcloak secrets",
+      "60-79": "Trusted companion, fights fiercely alongside party",
+      "40-59": "Professional but questioning loyalty, argues about party decisions",
+      "20-39": "Considers leaving, refuses to fight Stormcloaks",
+      "0-19": "Leaves party, may become enemy if party joins Imperials"
+    },
+    "companion_quests": [
+      {
+        "loyalty_required": 70,
+        "name": "Protecting Riverwood",
+        "description": "Help Ralof protect Riverwood from bandits/Imperial scouts",
+        "reward": "Ralof loyalty +10, Gerdur provides shelter and supplies"
+      },
+      {
+        "loyalty_required": 80,
+        "name": "The Talos Legacy",
+        "description": "Help Ralof find and protect hidden Talos shrine from Thalmor",
+        "reward": "Blessing of Talos bonus, Ralof loyalty +15, unique Talos amulet"
+      }
+    ]
+  },
+  "story_hooks": [
+    "Ralof provides introduction to Gerdur in Riverwood, giving party access to lumber mill and supplies",
+    "His Stormcloak connections provide entry to Ulfric's court in Windhelm",
+    "Can share intelligence about Stormcloak strategy and movements",
+    "Personal stake in Battle of Whiterun - wants to liberate it for Skyrim",
+    "Strong anti-Thalmor sentiment makes him natural ally in disrupting Thalmor schemes",
+    "If loyalty is high, may provide advance warning of Stormcloak operations"
+  ],
+  "whiterun_integration": "In Whiterun, Ralof maintains contacts with Gray-Mane clan and other Nord traditionalists. During Battle of Whiterun, if fighting for Stormcloaks, he provides morale bonuses to party and allied troops. His presence makes Stormcloak-sympathetic NPCs more open. He can identify which Whiterun residents secretly support Ulfric.",
+  "dialogue_samples": {
+    "greeting": "Look who it is! My friend from the cause. We're fighting for Skyrim together - that makes us kin in my book.",
+    "combat_start": "For Skyrim! Show these bastards what true Nords are made of!",
+    "low_health": "By Talos, they'll have to do better than that! I won't fall again!",
+    "victory": "That's how we do it! Skyrim's freedom is worth every drop of blood!",
+    "civil_war_discussion": "The Empire? They're puppets dancing on Thalmor strings. They bent the knee and outlawed our gods. Skyrim belongs to the Nords, and we'll fight until we're free or dead. Those are the only two options I see.",
+    "personal": "My sister Gerdur and her family... that's what I'm fighting for. I want my nephew Frodnar to grow up free, able to worship Talos openly, proud to be a Nord. The Empire wants to take that away. I can't let them."
+  },
+  "variants": [
+    {
+      "name": "Ralof (Veteran)",
+      "changes": "After several battles: Increase Fight to Superb (+5), add mental stress box, add stunt 'War Hero: Once per session, inspire all allies in scene with +2 to all rolls for one exchange'",
+      "trigger": "After participating in 3+ major battles"
+    }
+  ]
+}

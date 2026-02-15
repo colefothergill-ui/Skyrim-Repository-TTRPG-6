@@ -1,0 +1,235 @@
+{
+  "hidden_paths": {
+    "description": "Secret content, alternative paths, and easter eggs for deep exploration",
+    "categories": [
+      "secret_locations",
+      "alternate_solutions",
+      "hidden_questlines",
+      "easter_eggs"
+    ]
+  },
+  "secret_locations": [
+    {
+      "id": "blackreach",
+      "name": "Blackreach",
+      "type": "Hidden Dwemer City",
+      "discovery": "Access through Alftand, Mzinchaleft, or Raldbthar",
+      "description": "Vast underground cavern with glowing mushrooms, Dwemer ruins, and Falmer",
+      "secrets": [
+        "Crimson Nirnroot collection quest",
+        "Hidden dragon (Vulthuryol) summoned by attacking the giant glowing orb",
+        "Numerous Dwemer artifacts",
+        "Giant mushroom forest"
+      ],
+      "difficulty": "Great (+4)",
+      "rewards": "Unique alchemy ingredients, Dwemer artifacts, dragon soul"
+    },
+    {
+      "id": "forgotten_vale",
+      "name": "Forgotten Vale",
+      "type": "Ancient Snow Elf Sanctuary",
+      "discovery": "Dawnguard DLC, accessed through Darkfall Cave",
+      "description": "Hidden valley untouched by time, ancient Snow Elf temples",
+      "secrets": [
+        "Auriel's Bow location",
+        "Ancient Snow Elf architecture",
+        "Shellbugs and rare fauna",
+        "Frozen lakes with underwater treasures"
+      ],
+      "difficulty": "Superb (+5)",
+      "lore_significance": "Last refuge of Snow Elves before they became Falmer"
+    },
+    {
+      "id": "shalidor_insights",
+      "name": "Shalidor's Insights",
+      "type": "Hidden Knowledge",
+      "discovery": "College of Winterhold radiant quest",
+      "description": "Recover writings of the legendary mage Shalidor",
+      "secrets": [
+        "Permanent spell learning",
+        "Rare magic knowledge",
+        "Connection to Labyrinthian"
+      ],
+      "difficulty": "Good (+3)"
+    },
+    {
+      "id": "sovngarde_before_quest",
+      "name": "Early Sovngarde Glimpses",
+      "type": "Lore Discovery",
+      "discovery": "Find Nord heroes in various locations",
+      "description": "Meet heroes who will appear in Sovngarde before final battle",
+      "secrets": [
+        "Tsun shrine near Whiterun",
+        "Hero ghosts in ancient tombs",
+        "Prophecies about Sovngarde"
+      ]
+    }
+  ],
+  "alternate_solutions": [
+    {
+      "quest": "Diplomatic Immunity",
+      "standard": "Sneak through Thalmor Embassy",
+      "alternatives": [
+        "Create distraction with drunk party guests",
+        "Use illusion magic to pass unnoticed",
+        "Disguise as Thalmor agent (requires preparation)",
+        "Bribe guards with right connections",
+        "Fight your way out (loud but possible)"
+      ]
+    },
+    {
+      "quest": "Bleak Falls Barrow",
+      "standard": "Fight through draugr to the end",
+      "alternatives": [
+        "Stealth past most enemies",
+        "Use draugr weakness to fire",
+        "Turn undead to clear path",
+        "Speed run to the end with high athletics"
+      ]
+    },
+    {
+      "quest": "The Forsworn Conspiracy",
+      "standard": "Investigate murders, get arrested",
+      "alternatives": [
+        "Kill conspirators before they complete plan",
+        "Warn Jarl Igmund early (might be disbelieved)",
+        "Join the Forsworn willingly",
+        "Expose corruption but avoid prison"
+      ]
+    },
+    {
+      "quest": "Season Unending",
+      "standard": "Negotiate truce between factions",
+      "alternatives": [
+        "Complete civil war first (quest becomes unnecessary)",
+        "Favor one side heavily in negotiations",
+        "Balance perfectly for best outcome",
+        "Refuse to negotiate (consequences)"
+      ]
+    },
+    {
+      "quest": "Paarthurnax Dilemma",
+      "standard": "Kill Paarthurnax OR refuse Blades",
+      "alternatives": [
+        "Never tell Blades about Paarthurnax",
+        "Mod/homebrew: Convince Delphine to spare him with high Speech",
+        "Ignore Blades permanently",
+        "Kill Paarthurnax reluctantly (moral weight)"
+      ]
+    }
+  ],
+  "hidden_questlines": [
+    {
+      "id": "ancient_technology",
+      "name": "Ancient Technology",
+      "trigger": "Collect Dwemer artifacts and bring to Calcelmo",
+      "description": "Study Dwemer technology with Calcelmo",
+      "rewards": "Dwemer knowledge, special schematics",
+      "hidden": true
+    },
+    {
+      "id": "lights_out",
+      "name": "Lights Out!",
+      "trigger": "Speak to Jaree-Ra in Solitude",
+      "description": "Piracy quest involving lighthouse sabotage",
+      "moral_choice": "Criminal activity with innocent casualties",
+      "rewards": "Gold, access to Blackblood Marauders"
+    },
+    {
+      "id": "the_wolf_queen_awakened",
+      "name": "The Wolf Queen Awakened",
+      "trigger": "Complete 'The Man Who Cried Wolf' in Solitude",
+      "description": "Stop the resurrection of Potema, the Wolf Queen",
+      "lore_significance": "Connects to Elder Scrolls III lore",
+      "rewards": "Potema's powerful remains, unique shield"
+    },
+    {
+      "id": "unfathomable_depths",
+      "name": "Unfathomable Depths",
+      "trigger": "Find From-Deepest-Fathoms in Riften",
+      "description": "Return a Dwemer artifact to its resting place",
+      "rewards": "Ancient Knowledge (permanent smithing bonus)",
+      "easy_to_miss": true
+    },
+    {
+      "id": "kyne_sacred_trials",
+      "name": "Kyne's Sacred Trials",
+      "trigger": "Speak to Froki Whetted-Blade",
+      "description": "Hunt sacred animals to honor Kyne",
+      "rewards": "Kyne's Token, unique bow",
+      "theme": "Nordic religion, hunting"
+    }
+  ],
+  "easter_eggs": [
+    {
+      "name": "Notched Pickaxe",
+      "location": "Top of Throat of the World",
+      "reference": "Minecraft reference (Notch)",
+      "description": "Mining pickaxe on top of highest mountain"
+    },
+    {
+      "name": "The Lusty Argonian Maid",
+      "location": "Various locations",
+      "reference": "Running joke from Morrowind",
+      "description": "Scandalous 'play' found throughout Skyrim"
+    },
+    {
+      "name": "M'aiq the Liar",
+      "location": "Random encounter, northern Skyrim",
+      "reference": "Recurring character from previous games",
+      "description": "Khajiit who makes meta-commentary on game features"
+    },
+    {
+      "name": "Headless Horseman",
+      "location": "Roads at night",
+      "reference": "Classic horror legend",
+      "description": "Ghost rider who leads to Hamvir's Rest"
+    },
+    {
+      "name": "Kolbjorn Barrow",
+      "location": "Solstheim",
+      "reference": "Raiders of the Lost Ark",
+      "description": "Archaeological dig with traps and treasures"
+    }
+  ],
+  "secret_mechanics": [
+    {
+      "mechanic": "Werewolf vs Vampire",
+      "description": "Can only be one at a time, must cure to switch",
+      "hidden_detail": "Werewolf makes you immune to disease (including vampirism)"
+    },
+    {
+      "mechanic": "Dragon Priest Masks",
+      "description": "Collect all 8 masks to unlock the 9th",
+      "hidden_location": "Labyrinthian for final mask",
+      "reward": "Konahrik mask with best powers"
+    },
+    {
+      "mechanic": "Stones of Barenziah",
+      "description": "Collect 24 gems scattered across Skyrim",
+      "difficulty": "Very hard to find all",
+      "reward": "Massively increased gem drops from containers"
+    },
+    {
+      "mechanic": "Black Books",
+      "description": "Hermaeus Mora's books grant unique powers",
+      "location": "Solstheim, DLC location",
+      "powers": "Choose one permanent bonus per book"
+    }
+  ],
+  "gm_integration": {
+    "using_hidden_paths": [
+      "Reward exploration with discoveries",
+      "Don't force players down hidden paths",
+      "Give subtle hints about secrets",
+      "Make alternative solutions viable",
+      "Easter eggs are fun but not essential"
+    ],
+    "balancing_secrets": [
+      "Hidden paths should feel earned",
+      "Not all secrets need to be found",
+      "Some secrets can be campaign-specific",
+      "Reward clever problem-solving"
+    ]
+  }
+}

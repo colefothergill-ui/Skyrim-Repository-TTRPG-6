@@ -1,0 +1,59 @@
+{
+  "name": "Whiterun Guard",
+  "id": "npc_stat_whiterun_guard",
+  "type": "Ally",
+  "category": "Friendly NPC",
+  "location": "Whiterun",
+  "faction": "Whiterun Guard",
+  "aspects": {
+    "high_concept": "Loyal Defender of Whiterun",
+    "trouble": "Overworked and Understaffed",
+    "other_aspects": [
+      "Follow Orders Without Question",
+      "Pride in the Hold",
+      "Suspicious of Outsiders"
+    ]
+  },
+  "skills": {
+    "Good": ["Fight", "Notice"],
+    "Fair": ["Physique", "Will"],
+    "Average": ["Athletics", "Provoke"]
+  },
+  "stunts": [
+    "Shield Wall: +2 to Defend when fighting alongside other guards",
+    "Alert: +2 to Notice when on patrol duty",
+    "Loyal to the Jarl: Once per session, automatically succeed on a Will defense against intimidation"
+  ],
+  "stress": {
+    "physical": [false, false],
+    "mental": [false, false]
+  },
+  "consequences": {
+    "mild": null,
+    "moderate": null
+  },
+  "refresh": 2,
+  "fate_points": 2,
+  "trust_clock": {
+    "enabled": true,
+    "current": 0,
+    "max": 6,
+    "description": "Represents how much the guard trusts the party"
+  },
+  "notes": "Standard Whiterun guards are professional soldiers dedicated to protecting the city. They're loyal to Jarl Balgruuf and take their duties seriously. While initially suspicious of strangers, they can become valuable allies if the party proves themselves.",
+  "relationships": {
+    "Jarl Balgruuf": "Sworn to serve",
+    "Irileth": "Takes orders from",
+    "Citizens of Whiterun": "Protects",
+    "Criminals": "Hostile"
+  },
+  "personality_notes": {
+    "speaking_style": "Direct, professional, uses military terminology",
+    "motivations": ["Protect Whiterun", "Maintain order", "Serve the Jarl"],
+    "fears": ["Dragon attacks", "Civil war reaching Whiterun", "Failing in duty"],
+    "quirks": ["Uses 'citizen' frequently", "Stands at attention when addressing superiors"]
+  },
+  "combat_tactics": "Guards prefer to fight in formation with shields raised. They'll call for backup if outnumbered and prioritize protecting civilians.",
+  "scene_triggers": ["City patrols", "Gate duty", "Investigating disturbances", "Escorting important NPCs"],
+  "act_context": ["Act 1", "Act 2", "Act 3"]
+}

@@ -1,0 +1,32 @@
+{
+  "patch_id": "2026-02-03_standing_stone_swap_steed",
+  "date": "2026-02-03",
+  "type": "session0_character_edit",
+  "pc_id": "pc_insaerndel",
+  "summary": "Session 0 tiny patch: Standing Stone swapped from The Thief Stone to The Steed Stone; update blessing text/effect accordingly.",
+  "changes": [
+    {
+      "path": "data/pcs/pc_insaerndel.json",
+      "type": "modify",
+      "edits": [
+        "standing_stone: The Thief Stone -> The Steed Stone",
+        "standing_stone_benefit.name -> Blessing of the Steed Stone",
+        "standing_stone_benefit.effect -> +1 to Athletics, ignore armor penalties to Stealth"
+      ]
+    },
+    {
+      "path": "state/campaign_state.json",
+      "type": "modify",
+      "edits": [
+        "player_characters[pc_insaerndel].standing_stone: The Thief Stone -> The Steed Stone"
+      ]
+    },
+    {
+      "path": "logs/2026-02-02_session-00_Session-Zero.md",
+      "type": "append",
+      "edits": [
+        "Add note: Standing Stone swapped to The Steed Stone (Session 0 adjustment)"
+      ]
+    }
+  ]
+}

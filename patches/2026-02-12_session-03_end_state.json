@@ -1,0 +1,13 @@
+{
+  "date": "2026-02-12",
+  "scope": "Session 03 end-state: Dampened Spirits completed; Maven turn-in; Arisann lead advanced; Paper Trail compel accepted",
+  "changes": [
+    { "file": "state/campaign_state.json", "change": "Advance to A1-S13; set location to Riften — Bee and Barb; new objective: Ivory Thread / Nightgate Pass; add scene_flags; thalmor awareness set to low; append major choices." },
+    { "file": "data/clocks/pc_extras_clocks.json", "change": "Search for Arisann 5/8; Respect in the Rift 2/8; Thalmor Search 2/8; last_updated set." },
+    { "file": "data/clocks/faction_trust_clocks.json", "change": "Thieves Guild trust set to 8/10; last_updated set." },
+    { "file": "data/pcs/pc_insaerndel.json", "change": "Fate Points set to 4; add Honningbrew packet + Ivory Thread contact notes to equipment." },
+    { "file": "data/quests/quest_dampened_spirits.json", "change": "New quest file created and marked Completed." },
+    { "file": "data/quests/quest_thieves_guild.json", "change": "Append notes reflecting Dampened Spirits completion + Ivory Thread lead." },
+    { "file": "logs/2026-02-12_session-03_LATEST.md", "change": "New session log added." }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "name": "Keerava",
+  "id": "keerava",
+  "type": "Innkeeper",
+  "location": "Riften (The Bee and Barb)",
+  "faction": "Riften Merchants",
+  "aspects": {
+    "high_concept": "Hardworking Innkeeper Under Shadow of the Guild",
+    "trouble": "Owes Money to the Wrong People",
+    "other_aspects": [
+      "Fiercely Protective of Talen-Jei",
+      "Tough Exterior, Caring Heart",
+      "Trying to Make an Honest Living in a Corrupt City"
+    ]
+  },
+  "skills": {
+    "Great": ["Rapport"],
+    "Good": ["Empathy", "Will"],
+    "Fair": ["Resources", "Notice", "Deceive"],
+    "Average": ["Physique", "Contacts", "Provoke", "Fight"]
+  },
+  "stunts": [
+    "Innkeeper's Charm: +2 to Rapport when serving customers or negotiating room rates at the Bee and Barb.",
+    "Iron Will: +2 to Will when resisting intimidation or threats (though she may eventually give in to protect loved ones).",
+    "Business Sense: +2 to Resources when managing the inn's finances or negotiating with suppliers."
+  ],
+  "stress": {
+    "physical": [false, false, false],
+    "mental": [false, false]
+  },
+  "consequences": {
+    "mild": null,
+    "moderate": null,
+    "severe": null
+  },
+  "refresh": 3,
+  "fate_points": 3,
+  "notes": "Keerava is an Argonian innkeeper who runs the Bee and Barb with her partner Talen-Jei. She is hardworking and takes pride in her establishment, but like many in Riften, she's fallen on hard times and owes money to dangerous people. The Thieves Guild and Maven Black-Briar's influence weigh heavily on her business. Keerava puts up a tough front and initially resists intimidation, but her love for Talen-Jei makes her vulnerable—she'll do anything to protect him. Despite the pressures she faces, Keerava maintains her dignity and tries to provide a welcoming atmosphere for travelers and locals alike. She is part of Riften's small Argonian community and looks out for her fellow Argonians.",
+  "relationships": {
+    "Talen-Jei": "Romantic partner - they run the inn together, deeply cares for him and will protect him at all costs",
+    "Madesi": "Fellow Argonian - friendly and supportive of each other",
+    "Brynjolf": "Fearful - he represents the Guild's extortion",
+    "Thieves Guild": "Pays protection money under duress",
+    "Maven Black-Briar": "Terrified of her power and influence",
+    "Haelga": "Fellow business owner - casual acquaintance"
+  },
+  "quests": ["Taking Care of Business (Thieves Guild quest - player is sent to collect debt from her)", "Talen-Jei's related quests"],
+  "inventory": ["Inn Ledgers", "Gold (business funds)", "Keys to the Bee and Barb", "Argonian Ale"],
+  "personality_notes": {
+    "speaking_style": "Direct and businesslike, with occasional warmth for regular customers. Can be sharp when irritated. Shows vulnerability when Talen-Jei is threatened.",
+    "motivations": [
+      "Keep the Bee and Barb running successfully",
+      "Protect Talen-Jei from harm",
+      "Pay off her debts and escape Guild control",
+      "Maintain her dignity in a city that disrespects Argonians"
+    ],
+    "fears": [
+      "Harm coming to Talen-Jei",
+      "Losing the inn to debt or Guild takeover",
+      "Maven's wrath if she fails to pay",
+      "Being driven out of Riften"
+    ],
+    "quirks": [
+      "Stands up to intimidation initially but breaks when loved ones are threatened",
+      "Protective of her inn and its reputation",
+      "Softer when speaking with Talen-Jei",
+      "Maintains pride despite difficult circumstances"
+    ]
+  }
+}

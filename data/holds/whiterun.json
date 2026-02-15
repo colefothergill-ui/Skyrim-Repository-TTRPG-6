@@ -1,0 +1,34 @@
+{
+  "hold": "Whiterun Hold",
+  "capital": "Whiterun",
+  "jarl": "Balgruuf the Greater",
+  "allegiance": "Neutral (leaning Imperial)",
+  "description": "A central hold of Skyrim, known as the trading hub of the province. Whiterun Hold encompasses the fertile plains around the capital city of Whiterun, including small settlements like Riverwood and Rorikstead. The hold is culturally rich and strategically vital, caught in the middle of the Civil War yet initially neutral under Jarl Balgruuf.",
+  "districts": [
+    {
+      "name": "Plains District",
+      "description": "The lowest district of Whiterun, closest to the plains outside the city. This bustling area contains the main marketplace, shops, and the city gates. Visitors entering Whiterun first pass through the Plains District, greeted by merchants' stalls, the Bannered Mare inn, and the warm smoke of the local smithy (Warmaiden's). It's a lively hub of trade and daily life."
+    },
+    {
+      "name": "Wind District",
+      "description": "The central residential district of Whiterun, named for the strong mountain winds that blow through the city's heart. Here lies the Gildergreen tree and the Temple of Kynareth, surrounded by the homes of Whiterun's citizens. Jorrvaskr, the legendary mead hall of the Companions, sits in this district as well—an enduring reminder of Whiterun's warrior heritage. The Wind District is quieter than the markets below, characterized by family estates like those of the Battle-Borns and Gray-Manes."
+    },
+    {
+      "name": "Cloud District",
+      "description": "The smallest and highest district, perched atop the bluff of Whiterun. Dominated by Dragonsreach, the Jarl's grand palace, this district is so named for its lofty elevation (\"closer to the clouds\"). The Cloud District is an exclusive area housing the seat of power—Jarl Balgruuf's court and administrative quarters. Only those with official business (or the rare invited guest) venture here, often greeted by the imposing sight of Whiterun's throne and the legendary dragon skull adorning the hall."
+    }
+  ],
+  "major_settlements": [
+    "Whiterun (City)",
+    "Riverwood",
+    "Rorikstead"
+  ],
+  "factions_present": [
+    "Whiterun Guard",
+    "The Companions",
+    "Battle-Born Clan",
+    "Gray-Mane Clan",
+    "Thieves Guild (Battle-Born Arcana front)"
+  ],
+  "notes": "Whiterun City is divided into three main districts as above. The hold's neutrality in the Civil War is tenuous; its central location makes it a strategic prize for both Imperials and Stormcloaks. The presence of the Companions in Jorrvaskr and influential families (Battle-Born and Gray-Mane) adds to Whiterun's unique political dynamics.\n\n- New front/safehouse: 'Battle-Born Arcana' magic shop (Plains District) with backroom used as a Thieves Guild safehouse. Publicly sanctioned by Olfrid Battle-Born; privately a guild foothold."
+}

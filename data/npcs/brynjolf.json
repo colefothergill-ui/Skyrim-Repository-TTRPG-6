@@ -1,0 +1,69 @@
+{
+  "name": "Brynjolf",
+  "id": "brynjolf",
+  "type": "Thieves Guild Operative",
+  "location": "Riften (Ragged Flagon / Marketplace)",
+  "faction": "Thieves Guild",
+  "aspects": {
+    "high_concept": "Silver-Tongued Guild Recruiter",
+    "trouble": "Loyal to the Guild, No Matter the Cost",
+    "other_aspects": [
+      "Mercer's Right Hand (Until the Betrayal)",
+      "Master of the Con",
+      "Charismatic Mentor to New Recruits"
+    ]
+  },
+  "skills": {
+    "Great": ["Deceive"],
+    "Good": ["Rapport", "Stealth"],
+    "Fair": ["Contacts", "Notice", "Burglary"],
+    "Average": ["Fight", "Athletics", "Will", "Resources"]
+  },
+  "stunts": [
+    "Smooth Talker: +2 to Deceive when running a con or deflecting suspicion from guards.",
+    "Quick Fingers: +2 to Burglary when picking pockets in crowded areas like the marketplace.",
+    "Guild Network: Once per session, Brynjolf can call upon Thieves Guild contacts to gather information or arrange a meeting (no roll required)."
+  ],
+  "stress": {
+    "physical": [false, false, false],
+    "mental": [false, false]
+  },
+  "consequences": {
+    "mild": null,
+    "moderate": null,
+    "severe": null
+  },
+  "refresh": 3,
+  "fate_points": 3,
+  "notes": "Brynjolf is a charming and cunning thief who serves as the public face of the Thieves Guild in Riften. With his red hair and rakish grin, he scouts for promising talent in the marketplace while running small-time scams to keep coin flowing. Loyal to the Guild and particularly to its leader Mercer Frey (at least initially), Brynjolf takes pride in his work and believes in the Guild's code of honor among thieves. When Mercer's betrayal is revealed, Brynjolf's world is shaken, but his commitment to rebuilding the Guild never wavers. He becomes a trusted mentor and friend to those who prove themselves worthy.",
+  "relationships": {
+    "Mercer Frey": "Guild Master and mentor - initially trusts him completely, later devastated by his betrayal",
+    "Maven Black-Briar": "Patron - respects her power and follows her orders when they align with Guild interests",
+    "Player (Guild Member)": "Recruiter and later trusted ally - mentors the player through Guild ranks",
+    "Vex": "Fellow Guild member - professional respect and friendly banter",
+    "Delvin Mallory": "Fellow Guild member - old friend and partner in crime"
+  },
+  "quests": ["A Chance Arrangement (Thieves Guild recruitment)", "Taking Care of Business", "Loud and Clear", "Thieves Guild Questline"],
+  "inventory": ["Thieves Guild Armor", "Lockpicks", "Stolen Goods for Trade", "Pouch of Gold"],
+  "personality_notes": {
+    "speaking_style": "Smooth and persuasive with a hint of roguish charm. Uses phrases like 'lad' or 'lass' casually. Quick with a joke or a flattering word.",
+    "motivations": [
+      "Restore the Thieves Guild to its former glory",
+      "Maintain the Guild's code and honor",
+      "Protect fellow Guild members",
+      "Serve the Guild's interests above all else"
+    ],
+    "fears": [
+      "The Guild's complete collapse",
+      "Losing more members to betrayal",
+      "Maven withdrawing her patronage",
+      "Being exposed and arrested by Riften authorities"
+    ],
+    "quirks": [
+      "Always has a scheme or angle in mind",
+      "Protective of Guild traditions and reputation",
+      "Loyal to those who earn his trust",
+      "Devastated by Mercer's betrayal but doesn't show it openly"
+    ]
+  }
+}

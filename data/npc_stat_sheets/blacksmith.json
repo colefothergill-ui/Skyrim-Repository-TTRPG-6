@@ -1,0 +1,58 @@
+{
+  "name": "Blacksmith",
+  "id": "npc_stat_blacksmith",
+  "type": "Ally",
+  "category": "Friendly NPC",
+  "location": "Town forges, city smithies",
+  "faction": "Independent / Local craftsmen",
+  "aspects": {
+    "high_concept": "Master Craftsman of Steel and Fire",
+    "trouble": "Pride in Work Can Cloud Judgment",
+    "other_aspects": [
+      "Respect for Well-Made Weapons",
+      "Strong as Their Steel",
+      "Knowledge of Ancient Smithing Techniques"
+    ]
+  },
+  "skills": {
+    "Great": ["Crafts"],
+    "Good": ["Lore", "Physique"],
+    "Fair": ["Resources", "Notice"],
+    "Average": ["Fight", "Will"]
+  },
+  "stunts": [
+    "Master Smith: +2 to Crafts when forging, repairing, or improving weapons and armor",
+    "Appraise Metalwork: +2 to Notice when evaluating quality, origin, or enchantments on metal items",
+    "Access to Materials: Can source rare metals and materials through contacts (once per session, locate specific material)"
+  ],
+  "stress": {
+    "physical": [false, false, false],
+    "mental": [false, false]
+  },
+  "consequences": {
+    "mild": null
+  },
+  "refresh": 2,
+  "fate_points": 2,
+  "trust_clock": {
+    "enabled": true,
+    "current": 0,
+    "max": 6,
+    "description": "Trust level - affects quality of work, prices, and willingness to take special requests"
+  },
+  "notes": "Blacksmiths are crucial for maintaining equipment and creating custom gear. They can repair damaged items, improve existing equipment, and craft new weapons and armor. Earning a blacksmith's trust can lead to access to special materials, better prices, and masterwork creations. Many blacksmiths have knowledge of ancient Nord smithing techniques.",
+  "relationships": {
+    "Local Jarl": "Supplies guard equipment",
+    "Adventurers": "Valued customers",
+    "Merchants": "Trade partner for materials",
+    "Companions": "May have special relationship (some smiths)"
+  },
+  "personality_notes": {
+    "speaking_style": "Direct, practical, uses smithing metaphors, proud of craft",
+    "motivations": ["Create finest weapons and armor", "Preserve smithing traditions", "Earn reputation", "Support local warriors"],
+    "fears": ["Inferior materials", "Losing forge to war", "Craft being forgotten"],
+    "quirks": ["Always checking weapons for quality", "Tells stories through items they've made", "Bears burn scars from forge work"]
+  },
+  "scene_triggers": ["Equipment maintenance", "Crafting requests", "Learning about legendary weapons", "Smithing quests"],
+  "act_context": ["Act 1", "Act 2", "Act 3"]
+}

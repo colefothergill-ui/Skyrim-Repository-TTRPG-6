@@ -1,0 +1,619 @@
+{
+  "system_name": "Faction Benefits and Allegiance System",
+  "description": "Mechanical advantages for aligning with major factions in Skyrim, providing unique benefits based on faction philosophy and resources.",
+  "version": "1.0",
+  "core_concept": {
+    "description": "Each faction provides specific advantages to loyal members, reflecting their resources, tactics, and values. Benefits scale with reputation/rank within the faction.",
+    "reputation_scale": {
+      "0-20": "Outsider - No benefits",
+      "21-40": "Recruit - Basic benefits",
+      "41-60": "Member - Standard benefits",
+      "61-80": "Veteran - Enhanced benefits",
+      "81-100": "Hero/Champion - Maximum benefits"
+    },
+    "earning_reputation": [
+      "Complete faction quests (+10 per major quest)",
+      "Defeat faction enemies (+5 per significant battle)",
+      "Donate resources/gold (+1 per significant donation)",
+      "Recruit new members (+5 per recruit)",
+      "Advance faction goals (+10 per strategic objective)"
+    ]
+  },
+  "major_factions": {
+    "imperial_legion": {
+      "name": "Imperial Legion",
+      "philosophy": "Order, discipline, superior equipment, and military tactics",
+      "headquarters": "Castle Dour, Solitude",
+      "reputation_benefits": {
+        "recruit_21_40": {
+          "name": "Legion Training",
+          "benefits": [
+            {
+              "name": "Basic Military Discipline",
+              "effect": "+1 to Fight or Shoot when following orders from superior officer",
+              "description": "Imperial training emphasizes following command structure"
+            },
+            {
+              "name": "Legion Rations",
+              "effect": "Free basic meals and lodging at any Imperial camp or garrison",
+              "description": "Legion takes care of its soldiers"
+            }
+          ]
+        },
+        "member_41_60": {
+          "name": "Legion Arsenal Access",
+          "benefits": [
+            {
+              "name": "Imperial Armory Discount",
+              "effect": "Purchase Imperial equipment at 50% cost. Can access Imperial armor (Armor:2) and weapons (Weapon:2) earlier than standard progression.",
+              "description": "Superior equipment is a hallmark of Imperial military",
+              "mechanical_note": "Allows PC to upgrade gear ahead of typical milestone"
+            },
+            {
+              "name": "Legion Support Network",
+              "effect": "+2 to Resources checks when in Imperial-controlled territory. Can requisition supplies for missions.",
+              "description": "The Empire's logistics network is unmatched"
+            },
+            {
+              "name": "Tactical Training",
+              "effect": "Once per session, can invoke 'Imperial Tactics' for free to create battlefield advantage",
+              "description": "Learn superior military strategy"
+            }
+          ]
+        },
+        "veteran_61_80": {
+          "name": "Officer Privileges",
+          "benefits": [
+            {
+              "name": "Command Authority",
+              "effect": "Can command lower-ranked Imperial soldiers (up to 5 NPCs). They follow orders and provide combat assistance (+1 per soldier, max +3).",
+              "description": "Rank brings responsibility and resources"
+            },
+            {
+              "name": "Advanced Equipment Access",
+              "effect": "Access to specialized Imperial gear: enchanted officer's armor (Armor:2, +1 to Rapport with Imperials), superior weapons (Weapon:3). Can request specific equipment for missions.",
+              "description": "Officers receive the best the Legion offers"
+            },
+            {
+              "name": "Strategic Intelligence",
+              "effect": "Access to Imperial intelligence reports. Know enemy positions, supply routes, and strategic plans. Gain situation aspects in civil war encounters.",
+              "description": "Knowledge is power in warfare"
+            },
+            {
+              "name": "Legion Medic Support",
+              "effect": "Can call for Legion medic in any Imperial-controlled area. Medic provides healing (clear 2 physical stress boxes or downgrade one consequence).",
+              "description": "The Legion protects its veterans"
+            }
+          ]
+        },
+        "champion_81_100": {
+          "name": "Hero of the Legion",
+          "benefits": [
+            {
+              "name": "General's Favor",
+              "effect": "Direct audience with General Tullius. Can request Legion assistance for important missions (up to 10 soldiers or specialized support).",
+              "description": "The highest military honor"
+            },
+            {
+              "name": "Imperial Champion Equipment",
+              "effect": "Receive unique enchanted Imperial equipment set: Champion's Armor (Armor:3, +1 to all physical actions), Champion's Blade (Weapon:3, +2 vs. Stormcloaks). Can create aspect 'Hero of the Empire' usable in any social situation with Imperials.",
+              "description": "Legendary equipment befitting a hero"
+            },
+            {
+              "name": "Unlimited Requisitions",
+              "effect": "Can requisition any non-magical Imperial equipment without cost. Access to Legion's full resources for planning operations.",
+              "description": "The Empire's treasury is yours"
+            },
+            {
+              "name": "Political Influence",
+              "effect": "+3 to all social checks with Imperial-aligned Jarls and officials. Can influence Imperial policy decisions.",
+              "description": "Your word carries weight in the Empire"
+            }
+          ]
+        }
+      },
+      "special_faction_abilities": [
+        {
+          "name": "Testudo Formation",
+          "unlock": "Reputation 50+",
+          "effect": "When fighting alongside 2+ Imperial allies, can form shield wall. All participants gain Armor:+1 and +2 to defend while maintaining formation.",
+          "limitation": "Requires shields and coordination, movement restricted"
+        },
+        {
+          "name": "Imperial Reinforcements",
+          "unlock": "Reputation 70+",
+          "cost": "1 Fate Point",
+          "effect": "Once per session, call for Imperial reinforcements. 1d6 Imperial soldiers arrive in 1-2 exchanges to assist.",
+          "limitation": "Only in Imperial territory or near Imperial forces"
+        }
+      ],
+      "faction_philosophy_bonus": {
+        "name": "Disciplined Warfare",
+        "effect": "Imperial Legion members can invoke the aspect 'Imperial Discipline' once per scene without spending Fate Point when following orders or executing planned tactics"
+      }
+    },
+    "stormcloaks": {
+      "name": "Stormcloak Rebellion",
+      "philosophy": "Freedom, guerrilla tactics, Nord fury, and righteous cause",
+      "headquarters": "Palace of the Kings, Windhelm",
+      "reputation_benefits": {
+        "recruit_21_40": {
+          "name": "Son/Daughter of Skyrim",
+          "benefits": [
+            {
+              "name": "Nord Solidarity",
+              "effect": "+2 to Rapport with Nords in Stormcloak-sympathetic holds. Nord traditionalists offer assistance.",
+              "description": "Fight for Skyrim, and Skyrim fights for you"
+            },
+            {
+              "name": "Guerrilla Training",
+              "effect": "+1 to Stealth and Survival when operating in Skyrim wilderness",
+              "description": "Learn to live off the land and strike from shadows"
+            }
+          ]
+        },
+        "member_41_60": {
+          "name": "Freedom Fighter",
+          "benefits": [
+            {
+              "name": "Stormcloak Tactics",
+              "effect": "Once per session, can use guerrilla tactics to gain +2 on ambush or surprise attack. Can create 'Ambush Position' aspect with free invoke.",
+              "description": "The rebellion excels at hit-and-run warfare"
+            },
+            {
+              "name": "Underground Network",
+              "effect": "+2 to Contacts in all holds. Stormcloak sympathizers provide safe houses, supplies, and information.",
+              "description": "Even in enemy territory, allies aid the cause"
+            },
+            {
+              "name": "Talos Blessing",
+              "effect": "Can openly worship at hidden Talos shrines maintained by Stormcloaks. Gain +1 to Will checks and remove one mental stress box once per day after prayer.",
+              "description": "Faith in Talos strengthens the spirit"
+            },
+            {
+              "name": "Scavenged Equipment",
+              "effect": "Stormcloaks share looted Imperial equipment. Can acquire gear at 75% normal cost through 'liberated' supplies.",
+              "description": "One Nord's plunder is another's armory"
+            }
+          ]
+        },
+        "veteran_61_80": {
+          "name": "Ulfric's Chosen",
+          "benefits": [
+            {
+              "name": "Guerrilla Master",
+              "effect": "+2 to all Stealth checks when conducting raids or ambushes. Enemy forces have -2 to Notice Stormcloak ambushes led by PC.",
+              "description": "You've mastered the art of rebellion"
+            },
+            {
+              "name": "Battle Fury",
+              "effect": "Once per session, can inspire nearby Stormcloak allies with battle cry. All Stormcloak allies in scene gain +2 to Fight for one exchange.",
+              "description": "Your fury ignites others' courage"
+            },
+            {
+              "name": "Hidden Caches",
+              "effect": "Know locations of Stormcloak supply caches across Skyrim. Can resupply (healing potions, weapons, armor) in any hold.",
+              "description": "The rebellion prepares for all contingencies"
+            },
+            {
+              "name": "Jarl's Favor",
+              "effect": "Stormcloak-aligned Jarls grant audience and assistance. Can request aid from Jarl's forces for important missions.",
+              "description": "The Jarls recognize true heroes of Skyrim"
+            },
+            {
+              "name": "Thu'um Training Opportunity",
+              "effect": "If PC has Thu'um ability, Ulfric Stormcloak may offer personal training. Gain +2 segments on Unrelenting Force mastery clock.",
+              "description": "Ulfric teaches the Voice to worthy warriors"
+            }
+          ]
+        },
+        "champion_81_100": {
+          "name": "Hero of Skyrim",
+          "benefits": [
+            {
+              "name": "Ulfric's Trust",
+              "effect": "Personal bond with Ulfric Stormcloak. He will fight alongside PC in critical battles. Can request Ulfric's tactical advice (gain situation aspect with 2 free invokes).",
+              "description": "The future High King calls you shield-sibling"
+            },
+            {
+              "name": "True Nord's Equipment",
+              "effect": "Receive legendary Nordic equipment: Ancient Nord Hero's Armor (Armor:3, +1 to resist cold and fear), Hero's Battleaxe (Weapon:3, +2 vs. Imperials and Thalmor). Aspect: 'Legend of Skyrim'.",
+              "description": "Equipment worthy of saga"
+            },
+            {
+              "name": "Skyrim United",
+              "effect": "All Stormcloak holds provide support. Can move freely through Stormcloak territory with full protection. +3 to all social checks with Nords.",
+              "description": "All of Skyrim knows and honors your name"
+            },
+            {
+              "name": "Revolutionary Leader",
+              "effect": "Can command up to 15 Stormcloak soldiers. Your tactical decisions influence rebellion strategy. GM may ask for input on Stormcloak operations.",
+              "description": "You shape the future of Skyrim"
+            }
+          ]
+        }
+      },
+      "special_faction_abilities": [
+        {
+          "name": "Hit and Run",
+          "unlock": "Reputation 50+",
+          "effect": "After successful attack, can immediately move one zone without penalty. Perfect for guerrilla tactics.",
+          "limitation": "Once per scene"
+        },
+        {
+          "name": "Rally for Skyrim",
+          "unlock": "Reputation 70+",
+          "cost": "1 Fate Point",
+          "effect": "Shout battle cry invoking Talos and Skyrim's freedom. All allies gain +2 to all rolls for one exchange. Enemies must make Will check or become shaken (-1 to actions).",
+          "limitation": "Once per session"
+        }
+      ],
+      "faction_philosophy_bonus": {
+        "name": "Freedom or Death",
+        "effect": "Stormcloak members can invoke 'Fighting for Freedom' aspect once per scene without spending Fate Point when defending Skyrim or resisting oppression"
+      }
+    },
+    "companions": {
+      "name": "The Companions (Neutral Faction)",
+      "philosophy": "Honor in battle, ancient warrior tradition, neutral in politics",
+      "headquarters": "Jorrvaskr, Whiterun",
+      "reputation_benefits": {
+        "recruit_21_40": {
+          "name": "Whelp",
+          "benefits": [
+            {
+              "name": "Companions Training",
+              "effect": "+1 to Fight when training at Jorrvaskr. Can spar with veteran warriors to improve skills.",
+              "description": "Learn from Skyrim's greatest warriors"
+            },
+            {
+              "name": "Jorrvaskr Hospitality",
+              "effect": "Free lodging and meals at Jorrvaskr. Companions treat you as family.",
+              "description": "Jorrvaskr's mead hall is always open to shield-siblings"
+            }
+          ]
+        },
+        "member_41_60": {
+          "name": "Companion",
+          "benefits": [
+            {
+              "name": "Honor Code",
+              "effect": "Create aspect 'Honored Companion' usable with any honorable warrior or Nord. +2 to Rapport with those who respect warrior tradition.",
+              "description": "The Companions' reputation precedes you"
+            },
+            {
+              "name": "Quest Network",
+              "effect": "Companions provide steady work. Receive radiant quests with good pay (10-50 gold each) and combat experience.",
+              "description": "Companions always have work for capable warriors"
+            },
+            {
+              "name": "Warrior's Wisdom",
+              "effect": "Once per session, can seek advice from Kodlak Whitemane or other veterans. Gain tactical insight (situation aspect with free invoke).",
+              "description": "Experience teaches what books cannot"
+            }
+          ]
+        },
+        "veteran_61_80": {
+          "name": "Circle Member (Inner Circle)",
+          "benefits": [
+            {
+              "name": "Beast Blood Gift",
+              "effect": "Offered lycanthropy transformation. Gain werewolf powers (see separate werewolf mechanics). Major decision point.",
+              "description": "The Circle shares its ancient secret"
+            },
+            {
+              "name": "Pack Tactics",
+              "effect": "When fighting alongside other Companions, all participants gain +1 to Fight and defend actions.",
+              "description": "The pack is stronger than the wolf"
+            },
+            {
+              "name": "Legendary Reputation",
+              "effect": "+2 to Provoke when intimidating enemies. Enemies know the Companions' fearsome reputation. Can create 'Fear of the Companions' aspect.",
+              "description": "Your name inspires fear in the wicked"
+            },
+            {
+              "name": "Master's Training",
+              "effect": "Receive training from masters: Vilkas (two-handed), Aela (archery), Farkas (heavy armor). Gain +1 in chosen skill.",
+              "description": "Learn from the best warriors in Skyrim"
+            }
+          ]
+        },
+        "champion_81_100": {
+          "name": "Harbinger",
+          "benefits": [
+            {
+              "name": "Leader of the Companions",
+              "effect": "Command the Companions. Can call upon any Companion for aid. Jorrvaskr's resources are yours.",
+              "description": "You lead the most honored warrior guild in Skyrim"
+            },
+            {
+              "name": "Wuuthrad's Legacy",
+              "effect": "Wield Wuuthrad, legendary battleaxe of Ysgramor (Weapon:4, +3 vs. elves, magical). Aspect: 'Ysgramor's Heir'.",
+              "description": "The greatest weapon of the greatest warrior"
+            },
+            {
+              "name": "Sovngarde's Blessing",
+              "effect": "Once per session, when you would be taken out in combat, you remain standing with 1 stress. The spirits of Companions past protect you.",
+              "description": "The dead watch over their Harbinger"
+            },
+            {
+              "name": "Universal Respect",
+              "effect": "+3 to Rapport with all warriors and martial NPCs. Even enemies respect your position. Can negotiate truces or honorable combat.",
+              "description": "All warriors honor the Harbinger"
+            }
+          ]
+        }
+      },
+      "special_faction_abilities": [
+        {
+          "name": "Werewolf Transformation",
+          "unlock": "Inner Circle member",
+          "effect": "Transform into werewolf once per day. Gain massive combat bonuses but lose equipment use. See werewolf rules.",
+          "limitation": "Must accept beast blood, carries social stigma if discovered"
+        },
+        {
+          "name": "Call the Pack",
+          "unlock": "Reputation 70+ and Circle member",
+          "cost": "1 Fate Point",
+          "effect": "Summon 2-4 Companion members to assist in combat. They arrive in 1-2 exchanges.",
+          "limitation": "Once per session, only in Whiterun hold unless special circumstances"
+        }
+      ],
+      "faction_philosophy_bonus": {
+        "name": "Honor Above All",
+        "effect": "Companions can invoke 'Honored Warrior' aspect once per scene without Fate Point when acting with honor or facing worthy opponent"
+      }
+    },
+    "thieves_guild": {
+      "name": "Thieves Guild (Neutral Faction)",
+      "philosophy": "Stealth, cunning, wealth redistribution, shadows",
+      "headquarters": "The Ragged Flagon, Riften",
+      "reputation_benefits": {
+        "recruit_21_40": {
+          "name": "Guild Initiate",
+          "benefits": [
+            {
+              "name": "Fence Access",
+              "effect": "Can sell stolen goods through guild fences at 75% value (normal merchants pay 25%).",
+              "description": "The Guild has contacts everywhere"
+            },
+            {
+              "name": "Safe Houses",
+              "effect": "Access to Thieves Guild safe houses in major cities. Can hide from law enforcement.",
+              "description": "Shadows protect their own"
+            }
+          ]
+        },
+        "member_41_60": {
+          "name": "Guild Member",
+          "benefits": [
+            {
+              "name": "Guild Training",
+              "effect": "+1 to Stealth, Lockpicking, or Pickpocket. Can train with guild specialists.",
+              "description": "Learn from master thieves"
+            },
+            {
+              "name": "Information Network",
+              "effect": "+2 to Contacts for finding targets, guards' schedules, or valuable items. Guild gathers intelligence constantly.",
+              "description": "Knowledge is the greatest treasure"
+            },
+            {
+              "name": "Guild Equipment",
+              "effect": "Access to thieves' tools, lockpicks, and special equipment at discount. Can requisition infiltration gear.",
+              "description": "Proper tools for proper work"
+            }
+          ]
+        },
+        "veteran_61_80": {
+          "name": "Guild Elite",
+          "benefits": [
+            {
+              "name": "Shadow's Blessing",
+              "effect": "+2 to all Stealth checks. Once per session, can automatically succeed on Stealth check to remain undetected.",
+              "description": "You are one with shadows"
+            },
+            {
+              "name": "Master Fence",
+              "effect": "Can sell stolen goods at 90% value. Guild fences will buy anything, including hot items.",
+              "description": "The Guild's reach extends far"
+            },
+            {
+              "name": "Nightingale Path",
+              "effect": "May be invited to join Nightingales, elite Thieves Guild agents blessed by Nocturnal. Gain access to Nightingale equipment and powers.",
+              "description": "Serve the Lady of Shadows"
+            }
+          ]
+        },
+        "champion_81_100": {
+          "name": "Guild Master",
+          "benefits": [
+            {
+              "name": "Master of Shadows",
+              "effect": "Command entire Thieves Guild. Can order operations, assign thieves to tasks, access Guild's accumulated wealth.",
+              "description": "The shadows answer to you"
+            },
+            {
+              "name": "Guild Master's Armor",
+              "effect": "Unique enchanted armor (Armor:2, +2 to Stealth, +1 to all thievery skills, muffle effect). Aspect: 'Master Thief'.",
+              "description": "The Guild's greatest equipment"
+            },
+            {
+              "name": "Criminal Empire",
+              "effect": "Guild operations generate passive income (50-100 gold per session). +3 to Resources checks. Contacts in every city.",
+              "description": "Crime pays well when organized"
+            },
+            {
+              "name": "Nocturnal's Favor",
+              "effect": "Once per session, Lady Luck smiles upon you. Reroll any failed roll and take better result.",
+              "description": "The Daedric Prince of Night watches over you"
+            }
+          ]
+        }
+      },
+      "special_faction_abilities": [
+        {
+          "name": "Shadow Step",
+          "unlock": "Reputation 60+",
+          "effect": "Once per scene, teleport to any shadowed area within two zones you can see.",
+          "limitation": "Must be in shadows to activate"
+        },
+        {
+          "name": "Guild Distraction",
+          "unlock": "Reputation 50+",
+          "cost": "1 Fate Point",
+          "effect": "Call on guild members to create distraction (fire, brawl, etc.) drawing attention away from your activities. +4 to Stealth for one action.",
+          "limitation": "Only in cities with Guild presence"
+        }
+      ],
+      "faction_philosophy_bonus": {
+        "name": "Shadows and Fortune",
+        "effect": "Guild members can invoke 'Luck of the Shadows' aspect once per scene without Fate Point when relying on stealth or fortune"
+      }
+    },
+    "college_of_winterhold": {
+      "name": "College of Winterhold (Neutral Faction)",
+      "philosophy": "Magical knowledge, research, arcane mastery",
+      "headquarters": "College of Winterhold",
+      "reputation_benefits": {
+        "recruit_21_40": {
+          "name": "Apprentice",
+          "benefits": [
+            {
+              "name": "Basic Spell Training",
+              "effect": "Learn apprentice-level spells in all schools. Access to College's spell tomes.",
+              "description": "The College teaches all magical traditions"
+            },
+            {
+              "name": "Arcane University Access",
+              "effect": "+2 to Lore checks when researching magic at College library. Can access restricted texts with permission.",
+              "description": "The greatest magical library in Skyrim"
+            }
+          ]
+        },
+        "member_41_60": {
+          "name": "Adept Mage",
+          "benefits": [
+            {
+              "name": "Advanced Magical Training",
+              "effect": "+1 to Lore for spellcasting. Can learn expert-level spells. Trainers provide specialized instruction.",
+              "description": "Master mages share their knowledge"
+            },
+            {
+              "name": "Enchanting Access",
+              "effect": "Use College's enchanting facilities for free. +2 to Crafts checks when enchanting items. Access to soul gems at discount.",
+              "description": "The College's arcane forges are yours"
+            },
+            {
+              "name": "Magical Equipment",
+              "effect": "Access to mage robes (Armor:1, +1 to spellcasting), staves, and enchanted items at reduced cost.",
+              "description": "Proper attire for proper mages"
+            }
+          ]
+        },
+        "veteran_61_80": {
+          "name": "Master Wizard",
+          "benefits": [
+            {
+              "name": "Master Spell Access",
+              "effect": "Learn master-level spells in specialized schools. Can research new spell variations with GM approval.",
+              "description": "The pinnacle of magical education"
+            },
+            {
+              "name": "Arcane Authority",
+              "effect": "+2 to Rapport with mages and magical beings. Other mages respect your expertise. Can represent College in negotiations.",
+              "description": "Your magical prowess is renowned"
+            },
+            {
+              "name": "Research Assistant",
+              "effect": "Once per session, can call on College resources to research any magical topic. Automatically succeed on Lore check to find information.",
+              "description": "The College's collective knowledge assists you"
+            },
+            {
+              "name": "Staff of Magnus Path",
+              "effect": "May undertake quest to recover Staff of Magnus and other powerful artifacts. Access to College's most dangerous missions.",
+              "description": "Great power comes with great responsibility"
+            }
+          ]
+        },
+        "champion_81_100": {
+          "name": "Arch-Mage",
+          "benefits": [
+            {
+              "name": "Leader of the College",
+              "effect": "Command the College of Winterhold. Direct research, assign mages, access all resources. Can recruit mages to assist missions.",
+              "description": "The College answers to you"
+            },
+            {
+              "name": "Arch-Mage's Robes",
+              "effect": "Legendary robes (Armor:2, +2 to all spellcasting, regenerate 1 mental stress per exchange). Aspect: 'Master of the Arcane'.",
+              "description": "The Arch-Mage's regalia"
+            },
+            {
+              "name": "Arcane Supremacy",
+              "effect": "+3 to Lore for all magical activities. Can cast any spell in College's library. Automatically succeed on routine magical tasks.",
+              "description": "You are one of Skyrim's most powerful mages"
+            },
+            {
+              "name": "Magnus' Blessing",
+              "effect": "Once per session, tap into the power of Magnus. Gain +4 to spellcasting for one exchange, or cast spell without stress/consequence cost.",
+              "description": "The god of magic favors you"
+            }
+          ]
+        }
+      },
+      "special_faction_abilities": [
+        {
+          "name": "Arcane Ward",
+          "unlock": "Reputation 50+",
+          "effect": "Create magical ward as defend action. Gain +2 to defend against magical attacks, can absorb stress into ward.",
+          "limitation": "Requires concentration"
+        },
+        {
+          "name": "Teleport to College",
+          "unlock": "Reputation 70+",
+          "cost": "2 Fate Points",
+          "effect": "Once per session, teleport instantly to College of Winterhold from anywhere in Skyrim.",
+          "limitation": "Ritual takes one full action"
+        }
+      ],
+      "faction_philosophy_bonus": {
+        "name": "Knowledge is Power",
+        "effect": "College members can invoke 'Arcane Mastery' aspect once per scene without Fate Point when using magic or magical knowledge"
+      }
+    }
+  },
+  "cross_faction_considerations": {
+    "imperial_vs_stormcloak": {
+      "conflict": "Joining one faction locks out the other and may cause companions from opposite faction to leave",
+      "neutral_path": "Can delay choosing side to maintain access to both faction's benefits at lower tiers, but eventually must choose"
+    },
+    "neutral_factions": {
+      "advantage": "Companions, Thieves Guild, and College don't conflict with civil war choice. Can belong to all.",
+      "note": "Neutral factions provide diverse skill sets and resources without political consequences"
+    },
+    "multiple_membership": {
+      "recommended": "Players can join 1 civil war faction + 2-3 neutral factions without conflict",
+      "managing_benefits": "Track reputation separately for each faction. Benefits stack unless contradictory."
+    }
+  },
+  "gm_guidance": {
+    "implementing_benefits": [
+      "Grant benefits as story rewards, not just mechanical upgrades",
+      "Make players earn reputation through meaningful actions",
+      "Show faction benefits through NPC reactions and support",
+      "Use faction benefits to open new story opportunities"
+    ],
+    "balancing_power": [
+      "Faction benefits are powerful but situational",
+      "High-level benefits should feel earned after significant investment",
+      "Don't let faction benefits overshadow PC abilities",
+      "Benefits work best when enhancing PC's chosen playstyle"
+    ],
+    "story_integration": [
+      "Faction membership should affect how world reacts to PC",
+      "NPCs treat faction members differently",
+      "Faction quests should tie into main campaign",
+      "Reputation losses should have consequences (demotions, loss of trust)"
+    ]
+  }
+}

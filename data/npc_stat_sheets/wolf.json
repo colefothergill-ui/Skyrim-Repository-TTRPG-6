@@ -1,0 +1,41 @@
+{
+  "name": "Wolf",
+  "id": "npc_stat_wolf",
+  "type": "Beast",
+  "category": "Enemy",
+  "location": "Wilderness, forests, roads",
+  "faction": "Wildlife",
+  "aspects": {
+    "high_concept": "Cunning Pack Predator of Skyrim's Wilds",
+    "trouble": "Flees When Outnumbered or Wounded",
+    "other_aspects": [
+      "Pack Tactics",
+      "Keen Senses",
+      "Swift and Agile"
+    ]
+  },
+  "skills": {
+    "Good": ["Fight", "Athletics"],
+    "Fair": ["Notice"],
+    "Average": ["Stealth", "Physique"]
+  },
+  "stunts": [
+    "Pack Tactics: +1 to Fight for each allied wolf in the same zone (max +3)",
+    "Bring Down Prey: When successfully attacking with Fight against a target with physical stress, may create aspect 'Hamstrung' with one free invoke",
+    "Keen Nose: +2 to Notice when tracking by scent"
+  ],
+  "stress": {
+    "physical": [false, false],
+    "mental": []
+  },
+  "consequences": {
+    "mild": null
+  },
+  "refresh": 1,
+  "fate_points": 1,
+  "notes": "Wolves are common predators throughout Skyrim. They hunt in packs and use coordinated tactics to bring down prey. They avoid obviously stronger opponents and flee when the pack is reduced.",
+  "combat_tactics": "Wolves attack in coordinated packs, surrounding targets and attacking from multiple angles. They target the weakest-looking member of a group. If more than half the pack is defeated, survivors flee.",
+  "scene_triggers": ["Wilderness travel", "Road encounters", "Forest exploration", "Nighttime encounters"],
+  "act_context": ["Act 1", "Act 2", "Act 3"],
+  "loot": ["Wolf pelt", "Wolf meat"]
+}

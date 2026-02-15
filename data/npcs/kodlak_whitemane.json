@@ -1,0 +1,77 @@
+{
+  "name": "Kodlak Whitemane",
+  "id": "kodlak_whitemane",
+  "type": "Ally",
+  "location": "Whiterun - Jorrvaskr (Wind District)",
+  "faction": "The Companions",
+  "aspects": {
+    "high_concept": "Wise Harbinger of the Companions",
+    "trouble": "Burdened by the Curse of Lycanthropy and His Impending Fate",
+    "other_aspects": [
+      "Mentor and Father Figure to Skyrim's Warriors",
+      "Honorable Veteran Seeking Redemption",
+      "Calm Leader in Turbulent Times"
+    ]
+  },
+  "skills": {
+    "Great": ["Will", "Fight"],
+    "Good": ["Rapport", "Lore"],
+    "Fair": ["Notice", "Empathy"],
+    "Average": ["Physique", "Athletics"]
+  },
+  "stunts": [
+    "Harbinger's Wisdom: Once per session, Kodlak can use his deep insight (Rapport) in place of Lore to guide a Companion or player through a moral dilemma.",
+    "Inner Beast Tamed: +2 to Will when resisting bloodlust or the influence of his lycanthropy during tense situations."
+  ],
+  "stress": {
+    "physical": [false, false, false],
+    "mental": [false, false]
+  },
+  "consequences": {
+    "mild": null,
+    "moderate": null,
+    "severe": null
+  },
+  "refresh": 3,
+  "fate_points": 3,
+  "trust_clock": {
+    "enabled": true,
+    "current": 0,
+    "max": 6,
+    "description": "Represents Kodlak's trust and respect for the party, increased by deeds of honor and helping the Companions."
+  },
+  "relationships": {
+    "The Companions": "Harbinger (leader and caretaker of this warrior guild)",
+    "Aela the Huntress": "Trusted member of the Circle (like a daughter to him)",
+    "Vilkas and Farkas": "His protégés and spiritual sons",
+    "Player (as Companion)": "Evaluating as a potential successor (if the player joins the Companions)",
+    "Silver Hand": "Bitter enemies (they target his family of Companions)",
+    "Jarl Balgruuf": "Respects the Jarl, maintains a cordial relationship with Whiterun's leadership"
+  },
+  "personality_notes": {
+    "speaking_style": "Soft-spoken, reflective, and authoritative. Kodlak often sounds more like a sage than a warrior, with a Nord's gravelly undertone tempered by great patience.",
+    "motivations": [
+      "Guide the Companions to live honorably and uphold their legacy",
+      "Find a cure for the Circle's lycanthropy and his own soul's peace",
+      "Ensure the Companions stay out of petty politics and focus on honor"
+    ],
+    "fears": [
+      "Dying without curing himself and the Circle (being claimed by Hircine instead of entering Sovngarde)",
+      "The Companions losing their way or honor after he is gone",
+      "His werewolf nature causing harm to those he cares about or innocent people"
+    ],
+    "quirks": [
+      "Frequently gazes into the flame of the Jorrvaskr hearth while in thought",
+      "Polishes old weapons or armor while telling stories of past heroes",
+      "Has a faraway look when talk of Sovngarde or the afterlife comes up"
+    ]
+  },
+  "combat_tactics": "Kodlak fights only when necessary; as an elder warrior he is still formidable. In battle, he prefers a greatsword or battleaxe, using measured, powerful strikes. If utterly forced, he can call upon his beast blood (werewolf form), but he considers it a last resort and is ashamed to use it. He coordinates with his fellow Companions, trusting younger fighters to take point while he bolsters them and strikes decisive blows.",
+  "scene_triggers": [
+    "Introducing the player to the Companions (if they seek to join)",
+    "Companion quests briefing or advice scenes at Jorrvaskr",
+    "The moment the Silver Hand strike or when a Circle member dies (his personal quest trigger)",
+    "Battle of Whiterun involvement if the Companions step in to defend the city's people"
+  ],
+  "act_context": ["Act 1", "Act 2"]
+}

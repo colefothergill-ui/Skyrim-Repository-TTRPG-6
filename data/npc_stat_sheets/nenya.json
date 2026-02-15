@@ -1,0 +1,49 @@
+{
+  "name": "Nenya",
+  "id": "npc_stat_nenya",
+  "type": "Bosmer (Wood Elf) Steward",
+  "category": "Friendly NPC",
+  "location": "Falkreath",
+  "faction": "Falkreath Court",
+  "aspects": {
+    "high_concept": "Dutiful Steward Keeping Falkreath Afloat",
+    "trouble": "Caught Between Factions (Loyalty vs. Pragmatism)",
+    "other_aspects": [
+      "Sharp-Minded Administrator",
+      "Outsider in a Nord's Role (Bosmer in Skyrim)",
+      "Calm Voice of Reason in Falkreath's Court"
+    ]
+  },
+  "skills": {
+    "Great": ["Lore"], 
+    "Good": ["Empathy", "Rapport"],
+    "Fair": ["Resources", "Notice"],
+    "Average": ["Will", "Stealth", "Shoot"]
+  },
+  "stunts": [
+    "Steward's Acumen: +2 to Lore when handling administrative or logistical challenges (e.g., allocating resources, organizing the hold's defenses).",
+    "Diplomat's Grace: +2 to Rapport when negotiating or calming tensions between conflicting parties (useful in hold politics)."
+  ],
+  "stress": {
+    "physical": [false, false],
+    "mental": [false, false, false, false]
+  },
+  "consequences": {
+    "mild": null,
+    "moderate": null,
+    "severe": null
+  },
+  "refresh": 3,
+  "notes": "Nenya has served as Falkreath's steward through multiple administrations. As a Wood Elf, she's an unusual sight in a Nord hold court, but her competence is unquestioned. She manages everything from finances to diplomatic correspondence, often compensating for Jarl Siddgeir's inattention. Nenya is polite, even-tempered, and focused on stability in Falkreath.",
+  "personality_traits": {
+    "motivations": ["Maintain order and prosperity in Falkreath Hold", "Serve the sitting Jarl faithfully, but prevent his excesses from harming the hold", "Avoid open conflict – prefers negotiation and subtle influence"],
+    "attitude_towards_players": "Courteous and helpful, especially if they assist Falkreath. She may gently recruit them to solve problems Siddgeir ignores. If players create chaos in Falkreath, she will firmly but diplomatically intervene.",
+    "voice_style": "Soft-spoken, clear enunciation with a hint of an Elven accent. Always composed, even under stress."
+  },
+  "relationships": {
+    "Jarl Siddgeir": "Her liege; she handles the duties he neglects. She advises him as much as he'll allow and works to keep him out of trouble.",
+    "Dengeir of Stuhn": "Respects the elder's experience but is wary of his paranoia. She keeps a neutral tone with him, aware he distrusts her Bosmer heritage and Imperial ties.",
+    "Imperial Administration": "As an effective steward, she corresponds with Imperial officials to ensure Falkreath's needs are met. They trust her bookkeeping and reports.",
+    "Citizens of Falkreath": "Generally well-liked. Locals know Nenya is the one who actually listens to their concerns. Many approach her before bothering the Jarl."
+  }
+}

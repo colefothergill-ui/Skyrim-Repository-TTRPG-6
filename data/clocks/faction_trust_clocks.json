@@ -1,0 +1,493 @@
+{
+  "faction_trust_clocks": {
+    "description": "Track party standing and trust with all major factions in Skyrim",
+    "last_updated": "2026-02-12",
+    "trust_scale": {
+      "0-2": {
+        "level": "Stranger",
+        "description": "Faction is neutral or suspicious of the party",
+        "benefits": "None or minimal",
+        "access": "Public areas only"
+      },
+      "3-5": {
+        "level": "Ally",
+        "description": "Faction trusts the party and offers aid",
+        "benefits": "Quest access, basic faction support, trading privileges",
+        "access": "Restricted areas, faction resources"
+      },
+      "6-8": {
+        "level": "Champion",
+        "description": "Faction considers the party heroes and valued members",
+        "benefits": "Advanced quests, significant support in conflicts, special rewards",
+        "access": "Inner circles, strategic planning, faction secrets"
+      },
+      "9-10": {
+        "level": "Legend",
+        "description": "Faction's highest honor - party members are living legends",
+        "benefits": "Leadership influence, faction mobilizes for party, unique artifacts",
+        "access": "All faction resources, can influence faction decisions"
+      }
+    },
+    "clocks": {
+      "imperial_legion_trust": {
+        "faction": "Imperial Legion",
+        "current_trust": 6,
+        "max_trust": 10,
+        "trust_level": "Champion",
+        "advancement_triggers": {
+          "join_legion": "+3 (Joining the Legion quest)",
+          "major_battle_victory": "+2 per victory",
+          "strategic_objective": "+1 to +2",
+          "defend_imperial_city": "+2",
+          "deliver_critical_intelligence": "+1",
+          "complete_civil_war_for_imperials": "+5"
+        },
+        "setback_triggers": {
+          "join_stormcloaks": "-10 (Irreversible)",
+          "attack_imperials": "-3",
+          "aid_stormcloaks": "-2",
+          "betray_imperial_trust": "-4",
+          "fail_critical_mission": "-1"
+        },
+        "trust_benefits": {
+          "3": [
+            "Imperial Legion membership",
+            "Access to Imperial camps",
+            "Purchase Imperial gear"
+          ],
+          "5": [
+            "Command small units in battle",
+            "Intel on Stormcloak movements",
+            "Safe passage in Imperial holds"
+          ],
+          "7": [
+            "Tactical planning meetings",
+            "Legate Rikke's confidence",
+            "Imperial reinforcements on call"
+          ],
+          "9": [
+            "Influence General Tullius",
+            "Command major operations",
+            "Imperial Hero status"
+          ]
+        },
+        "incompatible_with": [
+          "stormcloaks"
+        ],
+        "notes": "Cannot have high trust with both Imperial Legion and Stormcloaks simultaneously"
+      },
+      "stormcloak_rebellion_trust": {
+        "faction": "Stormcloak Rebellion",
+        "current_trust": 0,
+        "max_trust": 10,
+        "trust_level": "Stranger",
+        "advancement_triggers": {
+          "join_stormcloaks": "+3 (Joining the Stormcloaks quest)",
+          "major_battle_victory": "+2 per victory",
+          "strategic_objective": "+1 to +2",
+          "defend_stormcloak_city": "+2",
+          "prove_nord_loyalty": "+1",
+          "complete_civil_war_for_stormcloaks": "+5"
+        },
+        "setback_triggers": {
+          "join_imperials": "-10 (Irreversible)",
+          "attack_stormcloaks": "-3",
+          "aid_imperials": "-2",
+          "betray_stormcloak_trust": "-4",
+          "cooperate_with_thalmor": "-5"
+        },
+        "trust_benefits": {
+          "3": [
+            "Stormcloak membership",
+            "Access to Stormcloak camps",
+            "Ulfric's ear (occasionally)"
+          ],
+          "5": [
+            "Galmar's respect",
+            "Lead raids",
+            "Safe passage in Stormcloak holds"
+          ],
+          "7": [
+            "Strategic planning role",
+            "Command significant forces",
+            "Inner circle access"
+          ],
+          "9": [
+            "Influence Ulfric's decisions",
+            "Hero of the Rebellion status",
+            "Thane of Windhelm"
+          ]
+        },
+        "incompatible_with": [
+          "imperial_legion"
+        ],
+        "notes": "Stormcloaks value Nord heritage and Talos worship. Non-Nords may face initial suspicion."
+      },
+      "companions_trust": {
+        "faction": "The Companions",
+        "current_trust": 0,
+        "max_trust": 10,
+        "trust_level": "Stranger",
+        "advancement_triggers": {
+          "complete_proving_honor": "+2",
+          "complete_companion_quest": "+1 to +2",
+          "accept_beast_blood": "+3 (Inner Circle)",
+          "defeat_silver_hand": "+1",
+          "honor_kodlak_memory": "+2",
+          "cure_beast_blood": "+2 (Redemption path)"
+        },
+        "setback_triggers": {
+          "refuse_beast_blood": "-1 (Some members disappointed)",
+          "attack_companions": "-5",
+          "ally_with_silver_hand": "-10",
+          "dishonor_kodlak": "-3",
+          "criminal_behavior_in_whiterun": "-1"
+        },
+        "trust_benefits": {
+          "2": [
+            "Join the Companions",
+            "Sleep in Jorrvaskr",
+            "Training from members"
+          ],
+          "4": [
+            "Inner Circle potential",
+            "Beast blood offered",
+            "Companion backup in Whiterun"
+          ],
+          "6": [
+            "Werewolf form mastery",
+            "Vilkas/Farkas as close allies",
+            "Radiant contract access"
+          ],
+          "9": [
+            "Harbinger candidacy",
+            "Reform the Companions",
+            "Legend status"
+          ]
+        },
+        "special_mechanics": {
+          "beast_blood": "Major choice at trust 4-5. Accepting grants immediate +3, refusing causes -1.",
+          "kodlak_questline": "Completing 'Glory of the Dead' is crucial for max trust",
+          "neutral_in_civil_war": "Companions don't take sides, won't lose trust based on civil war choices"
+        }
+      },
+      "thieves_guild_trust": {
+        "faction": "Thieves Guild",
+        "current_trust": 8,
+        "max_trust": 10,
+        "trust_level": "Champion",
+        "advancement_triggers": {
+          "join_guild": "+2",
+          "complete_major_heist": "+2",
+          "expand_city_influence": "+1 per city",
+          "expose_mercer_frey": "+3",
+          "restore_nocturnal_blessing": "+4",
+          "become_guild_master": "+5"
+        },
+        "setback_triggers": {
+          "refuse_to_join": "-5",
+          "betray_guild": "-10",
+          "kill_guild_members": "-3",
+          "fail_heist_badly": "-1",
+          "work_with_guards_against_guild": "-4"
+        },
+        "trust_benefits": {
+          "2": [
+            "Guild membership",
+            "Fence access",
+            "Ragged Flagon sanctuary"
+          ],
+          "4": [
+            "Special equipment",
+            "Multiple city fences",
+            "Intel network"
+          ],
+          "6": [
+            "City influence jobs",
+            "Guild backup for heists",
+            "Nocturnal's minor blessings"
+          ],
+          "9": [
+            "Guild Master authority",
+            "All cities under influence",
+            "Nocturnal's Luck blessing"
+          ]
+        },
+        "special_mechanics": {
+          "city_influence": "Must complete city influence jobs to reach max trust",
+          "skeleton_key": "Keeping Skeleton Key blocks max trust with Nocturnal/Guild",
+          "merchant_connections": "High trust enables special trade deals across Skyrim"
+        },
+        "notes": "PC begins as an active guild member with established rapport in Riften; early trust set above recruitment baseline."
+      },
+      "college_of_winterhold_trust": {
+        "faction": "College of Winterhold",
+        "current_trust": 0,
+        "max_trust": 10,
+        "trust_level": "Stranger",
+        "advancement_triggers": {
+          "join_college": "+2",
+          "complete_college_quest": "+1 to +2",
+          "discover_eye_of_magnus": "+2",
+          "defeat_ancano": "+4",
+          "become_arch_mage": "+5"
+        },
+        "setback_triggers": {
+          "fail_admission_test": "-2",
+          "attack_college_members": "-5",
+          "misuse_college_resources": "-1",
+          "side_with_ancano": "-10",
+          "steal_from_arcanaeum": "-2"
+        },
+        "trust_benefits": {
+          "2": [
+            "College membership",
+            "Arcanaeum access",
+            "Basic spell training"
+          ],
+          "4": [
+            "Advanced spell training",
+            "Enchanting/alchemy facilities",
+            "Expert mage mentors"
+          ],
+          "6": [
+            "Master spells",
+            "Faculty respect",
+            "Research collaborations"
+          ],
+          "9": [
+            "Arch-Mage authority",
+            "College resources at command",
+            "Legendary arcane knowledge"
+          ]
+        },
+        "special_mechanics": {
+          "magic_required": "Must demonstrate magical ability to join",
+          "political_neutrality": "College stays out of civil war",
+          "thalmor_presence": "Ancano creates tension - defeating him is major trust gain"
+        }
+      },
+      "greybeards_trust": {
+        "faction": "The Greybeards",
+        "current_trust": 0,
+        "max_trust": 10,
+        "trust_level": "Stranger",
+        "advancement_triggers": {
+          "complete_way_of_voice": "+3",
+          "meditate_on_words": "+1 per meditation",
+          "respect_paarthurnax": "+2",
+          "follow_way_of_voice_philosophy": "+1",
+          "bring_peace": "+2"
+        },
+        "setback_triggers": {
+          "kill_paarthurnax": "-10 (Irreversible betrayal)",
+          "abuse_thuum": "-2",
+          "ignore_greybeard_teachings": "-1",
+          "aggressive_use_of_shouts": "-1"
+        },
+        "trust_benefits": {
+          "3": [
+            "Extended Thu'um training",
+            "Word Wall locations",
+            "Arngeir's counsel"
+          ],
+          "5": [
+            "Advanced shout knowledge",
+            "Paarthurnax meetings",
+            "Throat of the World sanctuary"
+          ],
+          "7": [
+            "Master of the Voice status",
+            "All shout words taught",
+            "Greybeard backing"
+          ],
+          "9": [
+            "True Voice master",
+            "Paarthurnax's deepest teachings",
+            "Peace through the Voice"
+          ]
+        },
+        "incompatible_with": [
+          "blades_paarthurnax_conflict"
+        ],
+        "special_mechanics": {
+          "paarthurnax_choice": "Killing Paarthurnax destroys all trust permanently",
+          "philosophy_matters": "Greybeards care how you use the Voice, not just that you have it",
+          "not_joinable": "Can't formally join but can achieve high respect"
+        }
+      },
+      "blades_trust": {
+        "faction": "The Blades",
+        "current_trust": 0,
+        "max_trust": 10,
+        "trust_level": "Stranger",
+        "advancement_triggers": {
+          "complete_horn_quest": "+2",
+          "infiltrate_thalmor_embassy": "+3",
+          "find_esbern": "+2",
+          "discover_sky_haven": "+2",
+          "kill_paarthurnax": "+4",
+          "recruit_blade_followers": "+1 per recruit",
+          "slay_dragons": "+1 per dragon"
+        },
+        "setback_triggers": {
+          "refuse_paarthurnax_kill": "-4 (Relationship strained)",
+          "side_with_greybeards": "-3",
+          "ignore_blades": "-1 per Act",
+          "fail_to_hunt_dragons": "-1"
+        },
+        "trust_benefits": {
+          "2": [
+            "Blades training",
+            "Delphine/Esbern as allies",
+            "Dragon hunting intel"
+          ],
+          "4": [
+            "Sky Haven Temple access",
+            "Dragonbane sword",
+            "Blade armor"
+          ],
+          "6": [
+            "Recruit Blades followers",
+            "Dragon hunting parties",
+            "Ancient Blades knowledge"
+          ],
+          "9": [
+            "Reform the Blades",
+            "Dragonslayer Legion",
+            "Legendary Blade status"
+          ]
+        },
+        "incompatible_with": [
+          "greybeards_if_paarthurnax_lives"
+        ],
+        "special_mechanics": {
+          "paarthurnax_ultimatum": "Blades refuse to fully help until Paarthurnax dies",
+          "rebuilding_order": "High trust means rebuilding this ancient order",
+          "dragon_hunters": "Focused on dragon extermination, unlike Greybeards"
+        }
+      },
+      "whiterun_trust": {
+        "faction": "Whiterun Hold (Jarl Balgruuf)",
+        "current_trust": 0,
+        "max_trust": 10,
+        "trust_level": "Stranger",
+        "advancement_triggers": {
+          "deliver_dragon_warning": "+1",
+          "retrieve_dragonstone": "+1",
+          "defeat_dragon_at_watchtower": "+3 (Hero revealed)",
+          "defend_whiterun_in_battle": "+4",
+          "become_thane": "+2",
+          "help_whiterun_citizens": "+1 per major help"
+        },
+        "setback_triggers": {
+          "attack_whiterun_forces": "-5",
+          "side_against_balgruuf_in_war": "-8",
+          "criminal_activity_in_whiterun": "-1",
+          "fail_to_defend_from_dragons": "-2"
+        },
+        "trust_benefits": {
+          "2": [
+            "Welcome in Whiterun",
+            "Dragonsreach access",
+            "Jarl's gratitude"
+          ],
+          "4": [
+            "Thane of Whiterun",
+            "Housecarl Lydia",
+            "Breezehome purchase"
+          ],
+          "6": [
+            "Balgruuf's confidence",
+            "Whiterun guard support",
+            "Political influence"
+          ],
+          "9": [
+            "Balgruuf's inner circle",
+            "Whiterun mobilizes for party",
+            "Hero of Whiterun"
+          ]
+        },
+        "special_mechanics": {
+          "neutrality_tension": "Balgruuf tries to stay neutral but is pressured",
+          "battle_of_whiterun": "Major trust shift based on party's choices",
+          "dragon_defense": "Party's role in dragon attacks heavily impacts trust"
+        }
+      },
+      "dark_brotherhood_trust": {
+        "faction": "Dark Brotherhood",
+        "current_trust": 0,
+        "max_trust": 10,
+        "trust_level": "Stranger",
+        "advancement_triggers": {
+          "perform_black_sacrament": "+1",
+          "join_brotherhood": "+3",
+          "complete_contracts": "+1 to +2 per contract",
+          "complete_questline": "+5",
+          "become_listener": "+4"
+        },
+        "setback_triggers": {
+          "destroy_brotherhood": "-10 and ends faction",
+          "fail_contracts": "-2",
+          "betray_secrets": "-5",
+          "kill_brotherhood_members": "-3"
+        },
+        "trust_benefits": {
+          "3": [
+            "Brotherhood membership",
+            "Sanctuary access",
+            "Assassination contracts"
+          ],
+          "5": [
+            "Dark Brotherhood armor",
+            "Spectral Assassin",
+            "Shadowy contacts"
+          ],
+          "7": [
+            "Major contract access",
+            "Brotherhood backing",
+            "Listener candidate"
+          ],
+          "9": [
+            "Listener authority",
+            "Night Mother's chosen",
+            "Command the Brotherhood"
+          ]
+        },
+        "special_mechanics": {
+          "optional_destruction": "Can destroy Brotherhood instead of joining",
+          "secret_society": "Membership is hidden from public",
+          "evil_faction": "Actions are objectively evil, moral consequences"
+        }
+      }
+    },
+    "trust_action_examples": {
+      "gaining_trust": [
+        "Complete faction questlines",
+        "Defend faction members or holdings",
+        "Make choices aligned with faction values",
+        "Donate resources or gold",
+        "Resolve conflicts favorably",
+        "Recruit members (where applicable)",
+        "Achieve faction objectives"
+      ],
+      "losing_trust": [
+        "Attack or kill faction members",
+        "Steal from faction",
+        "Betray faction secrets",
+        "Aid rival factions",
+        "Fail critical missions",
+        "Make choices opposed to faction values",
+        "Ignore faction in time of need"
+      ]
+    },
+    "gm_guidance": {
+      "tracking": "Update trust clocks after significant faction interactions or at session end",
+      "transparency": "Players should generally know their standing (though exact numbers can be hidden)",
+      "consequences": "Trust level should noticeably affect NPC reactions and available options",
+      "balance": "Players can't maximize all factions - some are mutually exclusive",
+      "storytelling": "Use trust levels to create dramatic moments and tough choices",
+      "flexibility": "These are guidelines - adjust based on player creativity and campaign needs"
+    }
+  }
+}

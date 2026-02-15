@@ -1,0 +1,81 @@
+{
+  "hold": "Falkreath Hold",
+  "capital": "Falkreath",
+  "jarl": "Jarl Siddgeir (Imperial-aligned, young and indulgent)",
+  "steward": "Nenya (Bosmer steward to Jarl Siddgeir)",
+  "alternative_jarl": "Dengeir of Stuhn (Stormcloak-aligned, reinstated if Stormcloaks take Falkreath)",
+  "description": "A small wooded hold in southwest Skyrim, known for its enormous graveyard and somber atmosphere. Falkreath Hold is largely wilderness, with tall pines, misty valleys, and secrets hidden among ancient barrows. Currently under Imperial influence, but its people quietly remember when Dengeir of Stuhn ruled as Jarl before political maneuvers replaced him with his nephew Siddgeir.",
+  "major_locations": [
+    {
+      "name": "Falkreath",
+      "type": "City",
+      "description": "The capital of the hold. A modest town famous for its sprawling cemetery. It has a Jarl's longhouse, a small market, an inn, and a blacksmith, all shrouded in perpetual mourning fog."
+    },
+    {
+      "name": "Dark Brotherhood Sanctuary",
+      "type": "Hideout",
+      "hidden": true,
+      "unlock_requirement": "Dark Brotherhood initiation or passphrase",
+      "description": "A secret underground sanctuary of the Dark Brotherhood, nestled in the forests west of Falkreath behind a black door that asks a question. Initially locked to outsiders, it becomes accessible once the party earns the Dark Brotherhood's trust or discovers it via special events."
+    },
+    {
+      "name": "Helgen",
+      "type": "Ruins",
+      "description": "The ruined fort-town at Falkreath's northeastern border. Destroyed by a dragon in the recent past, Helgen now stands abandoned and ashen, a haunting reminder of the dragon crisis."
+    },
+    {
+      "name": "Half-Moon Mill",
+      "type": "Settlement",
+      "description": "A tiny settlement on the shore of Lake Ilinalta. Primarily a lumber mill with a couple of residents, it's quiet by day and eerily dark by night. Some say the owners have unsettling secrets."
+    },
+    {
+      "name": "Ancient Barrows",
+      "type": "Nordic Ruins",
+      "description": "The forests of Falkreath Hold hide numerous ancient tombs and barrow mounds. Bandits, necromancers, or worse have taken up residence in these ruins, which hold both danger and potential clues to dark rituals affecting the hold."
+    }
+  ],
+  "districts": [
+    {
+      "name": "Falkreath Graveyard",
+      "description": "One of Skyrim's largest graveyards, filling much of Falkreath. Tombstones and freshly dug graves dot the landscape. Locals visit often to mourn lost family, and the Priests of Arkay maintain a constant vigil here."
+    },
+    {
+      "name": "Jarl's Longhouse",
+      "description": "The seat of power in Falkreath, a longhouse that serves as both Jarl Siddgeir's residence and the hold's administrative center. It's modest compared to other holds. Siddgeir holds court here, often attended by his steward Nenya. If the Stormcloaks seize Falkreath, Dengeir of Stuhn would preside in this hall instead."
+    },
+    {
+      "name": "Dead Man's Drink Inn",
+      "description": "The local inn and tavern, named in morbid Falkreath fashion. It's a gathering place for townsfolk and travelers. Rumors are easily heard here—tales of recent deaths, whispers of a child performing a dark ritual in Windhelm, or bounties posted by the Jarl."
+    },
+    {
+      "name": "Falkreath Barracks & Jail",
+      "description": "A small barracks housing the Falkreath guards and a humble jail. Currently, a man named Sinding (cursed by lycanthropy) is imprisoned here for a brutal killing, which has stirred fear among townsfolk. The jail is also where one might encounter unusual prisoners tied to dark quests."
+    }
+  ],
+  "local_quest_hooks": [
+    {
+      "id": "falkreath_bandit_bounty",
+      "quest": "Jarl's Bounty: Bilegulch Mine Bandits",
+      "giver": "Jarl Siddgeir",
+      "description": "Siddgeir is too comfortable to handle problems himself. He might ask capable adventurers to clear out a bandit camp (such as Bilegulch Mine) in exchange for gold and favor. Completing it could earn the title of Thane in Falkreath if the party also helps enough townsfolk."
+    },
+    {
+      "id": "falkreath_dengeir_vampire",
+      "quest": "Dengeir's Suspicion",
+      "giver": "Dengeir of Stuhn",
+      "description": "Dengeir, whether as an ousted noble or reinstated Jarl, is paranoid about a vampire lurking in Falkreath. He tasks the party with investigating a suspected vampire lairing in Bloodlet Throne (or another local ruin) and eliminating the threat. This quest reflects Dengeir's distrust of recent events and could win his trust."
+    },
+    {
+      "id": "falkreath_runil_journal",
+      "quest": "Runil's Request",
+      "giver": "Runil (Priest of Arkay)",
+      "description": "Runil, keeper of Falkreath's graveyard, lost his personal journal in a nearby dungeon (likely south of town). He asks the adventurers to retrieve it. While simple, this quest offers insight into Runil's past (a former soldier haunted by memories) and deepens the somber tone of Falkreath's storyline."
+    },
+    {
+      "id": "falkreath_sinding_moonlight",
+      "quest": "Ill Met By Moonlight",
+      "giver": "Sinding (cursed prisoner in Falkreath Jail)",
+      "description": "A jailed werewolf pleads for aid with a Daedric curse. Help Sinding either end his beastly curse or defy Hircine's hunt, leading to a deadly confrontation under the moon."
+    }
+  ]
+}

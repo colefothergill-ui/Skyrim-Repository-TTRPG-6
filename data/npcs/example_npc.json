@@ -1,0 +1,45 @@
+{
+  "name": "Lydia",
+  "id": "npc_001",
+  "type": "Companion",
+  "location": "Whiterun",
+  "faction": "Whiterun Guard",
+  "aspects": {
+    "high_concept": "Sworn Shield of the Thane",
+    "trouble": "Duty Before Personal Desires",
+    "other_aspects": [
+      "Loyal to a Fault",
+      "Trained in Nordic Combat",
+      "Haunted by Past Failures"
+    ]
+  },
+  "skills": {
+    "Great": ["Fight"],
+    "Good": ["Physique", "Will"],
+    "Fair": ["Notice", "Athletics", "Shoot"],
+    "Average": ["Stealth", "Lore", "Rapport"]
+  },
+  "stunts": [
+    "Shield Wall: +2 to Defend with Fight when using a shield",
+    "Hardy: Gain an extra mild consequence slot",
+    "Weapon Specialist (Sword): +2 to attack with one-handed swords"
+  ],
+  "stress": {
+    "physical": [false, false, false],
+    "mental": [false, false]
+  },
+  "consequences": {
+    "mild": null,
+    "moderate": null,
+    "severe": null
+  },
+  "refresh": 3,
+  "fate_points": 3,
+  "notes": "Lydia is a trusted companion, assigned to protect the Thane after they earned Jarl Balgruuf's favor. She takes her duty seriously and is always ready for battle.",
+  "relationships": {
+    "Jarl Balgruuf": "Loyal servant",
+    "Player Characters": "Sworn protector"
+  },
+  "quests": ["Protect the Thane", "Investigate Thalmor Activity"],
+  "inventory": ["Steel Sword", "Steel Shield", "Steel Armor", "Health Potion x2"]
+}

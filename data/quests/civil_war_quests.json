@@ -1,0 +1,202 @@
+{
+  "civil_war_questline": {
+    "name": "The Civil War",
+    "description": "Choose a side in Skyrim's bloody conflict between the Imperial Legion and the Stormcloaks",
+    "sides": ["imperial", "stormcloak"],
+    "branching_structure": "Quests differ based on chosen faction",
+    "quests": {
+      "shared": [
+        {
+          "id": "joining_the_legion",
+          "name": "Joining the Legion",
+          "faction": "imperial",
+          "description": "Join the Imperial Legion under General Tullius",
+          "prerequisites": [],
+          "location": "Solitude, Castle Dour",
+          "objectives": [
+            "Speak to General Tullius or Legate Rikke",
+            "Complete the oath of service",
+            "Receive orders"
+          ],
+          "rewards": {
+            "experience": 100,
+            "faction_rank": "Auxiliary"
+          },
+          "next_quest": "the_jagged_crown_imperial"
+        },
+        {
+          "id": "joining_the_stormcloaks",
+          "name": "Joining the Stormcloaks",
+          "faction": "stormcloak",
+          "description": "Join the Stormcloak Rebellion under Ulfric Stormcloak",
+          "prerequisites": [],
+          "location": "Windhelm, Palace of the Kings",
+          "objectives": [
+            "Speak to Ulfric Stormcloak or Galmar Stone-Fist",
+            "Prove your worth (clear a fort)",
+            "Take the oath"
+          ],
+          "rewards": {
+            "experience": 150,
+            "faction_rank": "Unblooded"
+          },
+          "next_quest": "the_jagged_crown_stormcloak"
+        }
+      ],
+      "battle_of_whiterun": {
+        "imperial_version": {
+          "id": "battle_for_whiterun_imperial",
+          "name": "Battle for Whiterun (Imperial)",
+          "description": "Defend Whiterun from Stormcloak assault",
+          "prerequisites": ["message_to_whiterun_imperial"],
+          "objectives": [
+            "Man the barricades",
+            "Defend against waves of Stormcloak attackers",
+            "Protect Jarl Balgruuf",
+            "Defeat the Stormcloak commander",
+            "Secure the city"
+          ],
+          "combat_encounters": [
+            {
+              "wave": 1,
+              "description": "Stormcloak infantry assault the main gate",
+              "difficulty": "Average",
+              "enemies": ["enemy_bandit_marauder"]
+            },
+            {
+              "wave": 2,
+              "description": "Stormcloak archers and mages attack",
+              "difficulty": "Fair",
+              "enemies": ["enemy_bandit_marauder", "npc_stat_hostile_mage"]
+            },
+            {
+              "wave": 3,
+              "description": "Stormcloak commander leads final push",
+              "difficulty": "Good",
+              "enemies": ["enemy_bandit_marauder", "npc_stat_housecarl"]
+            }
+          ],
+          "npcs": ["npc_stat_whiterun_guard", "npc_stat_housecarl"],
+          "companion_support": {
+            "hadvar": {
+              "role": "Provides tactical support and morale boost",
+              "bonuses": "+1 to all defend actions when fighting alongside Hadvar",
+              "special_ability": "Shield Brother stunt applies to all party members in his zone",
+              "dialogue": "Hadvar fights alongside the party, using his Imperial training to coordinate defenses and inspire troops"
+            }
+          },
+          "rewards": {
+            "experience": 300,
+            "faction_rank": "Quaestor",
+            "consequence": "Whiterun now supports the Empire",
+            "hadvar_loyalty": "+15 if Hadvar is present and survives"
+          },
+          "world_changes": {
+            "whiterun_control": "imperial",
+            "jarl_balgruuf_status": "remains_in_power",
+            "stormcloak_morale": -10
+          }
+        },
+        "stormcloak_version": {
+          "id": "battle_for_whiterun_stormcloak",
+          "name": "Battle for Whiterun (Stormcloak)",
+          "description": "Attack Whiterun and take the city for the Stormcloaks",
+          "prerequisites": ["message_to_whiterun_stormcloak"],
+          "objectives": [
+            "Join the assault force",
+            "Breach the city gates",
+            "Fight through Imperial defenders",
+            "Confront Jarl Balgruuf",
+            "Claim the city for Ulfric"
+          ],
+          "combat_encounters": [
+            {
+              "wave": 1,
+              "description": "Breach the main gate under fire",
+              "difficulty": "Fair"
+            },
+            {
+              "wave": 2,
+              "description": "Fight through the city streets",
+              "difficulty": "Fair"
+            },
+            {
+              "wave": 3,
+              "description": "Storm Dragonsreach",
+              "difficulty": "Good"
+            }
+          ],
+          "companion_support": {
+            "ralof": {
+              "role": "Provides morale boost and rallying support",
+              "bonuses": "+1 to all attack actions when fighting alongside Ralof",
+              "special_ability": "For Skyrim! stunt can be used twice in this battle",
+              "dialogue": "Ralof leads charges alongside the party, rallying Stormcloak troops and demonstrating Nord fury in combat"
+            }
+          },
+          "rewards": {
+            "experience": 300,
+            "faction_rank": "Bone-Breaker",
+            "consequence": "Whiterun now supports the Stormcloaks",
+            "ralof_loyalty": "+15 if Ralof is present and survives"
+          },
+          "world_changes": {
+            "whiterun_control": "stormcloak",
+            "jarl_balgruuf_status": "exiled_to_solitude",
+            "new_jarl": "Vignar Gray-Mane",
+            "imperial_morale": -10
+          }
+        }
+      },
+      "major_battles": [
+        {
+          "id": "the_jagged_crown",
+          "name": "The Jagged Crown",
+          "description": "Retrieve the ancient crown of Skyrim's High Kings",
+          "location": "Korvanjund",
+          "significance": "Symbol of legitimacy for either faction",
+          "branching": "Imperial or Stormcloak version"
+        },
+        {
+          "id": "rescue_from_fort_neugrad",
+          "name": "Rescue from Fort Neugrad",
+          "description": "Rescue prisoners from enemy fort",
+          "type": "liberation_mission"
+        },
+        {
+          "id": "compelling_tribute",
+          "name": "Compelling Tribute",
+          "description": "Intimidate neutral Jarls into supporting your faction",
+          "type": "political_mission"
+        },
+        {
+          "id": "battle_for_fort_dunstad",
+          "name": "Battle for Fort Dunstad",
+          "description": "Capture or defend a strategic fort",
+          "type": "military_objective"
+        },
+        {
+          "id": "battle_for_solitude",
+          "name": "Battle for Solitude (Stormcloak ending)",
+          "description": "Final assault on the Imperial capital of Skyrim",
+          "faction": "stormcloak",
+          "is_final": true
+        },
+        {
+          "id": "battle_for_windhelm",
+          "name": "Battle for Windhelm (Imperial ending)",
+          "description": "Final assault on the Stormcloak capital",
+          "faction": "imperial",
+          "is_final": true
+        }
+      ]
+    }
+  },
+  "quest_structure_notes": {
+    "branching_point": "Battle of Whiterun is the major turning point",
+    "parallel_quests": "Each side has mirror quests with different perspectives",
+    "estimated_sessions": "8-12 sessions to complete civil war",
+    "integration_with_main_quest": "Can be completed before, during, or after main quest",
+    "peace_option": "Season Unending quest offers temporary truce"
+  }
+}

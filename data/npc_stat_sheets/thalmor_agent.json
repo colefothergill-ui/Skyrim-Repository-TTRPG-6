@@ -1,0 +1,66 @@
+{
+  "name": "Thalmor Agent",
+  "id": "npc_stat_thalmor_agent",
+  "type": "Faction Leader",
+  "category": "Hostile NPC",
+  "location": "Various (Embassy, patrols)",
+  "faction": "Thalmor",
+  "aspects": {
+    "high_concept": "Elite Aldmeri Dominion Operative",
+    "trouble": "Arrogance Blinds to Local Threats",
+    "other_aspects": [
+      "Superiority Complex",
+      "Ruthlessly Efficient",
+      "Eyes and Ears Everywhere"
+    ]
+  },
+  "skills": {
+    "Great": ["Deceive", "Lore"],
+    "Good": ["Notice", "Fight", "Empathy"],
+    "Fair": ["Will", "Contacts", "Investigate"],
+    "Average": ["Rapport", "Provoke"]
+  },
+  "stunts": [
+    "Master of Lies: +2 to Deceive when maintaining cover identity",
+    "Arcane Knowledge: +2 to Lore when dealing with magical threats",
+    "Network of Spies: Once per session, declare that you have an informant who knows relevant information",
+    "Lightning Bolt: Can use Lore to make magical attacks (2 stress on hit)"
+  ],
+  "stress": {
+    "physical": [false, false, false],
+    "mental": [false, false, false]
+  },
+  "consequences": {
+    "mild": null,
+    "moderate": null,
+    "severe": null
+  },
+  "refresh": 3,
+  "fate_points": 3,
+  "trust_clock": {
+    "enabled": false,
+    "description": "Thalmor agents are adversaries and typically cannot be trusted"
+  },
+  "notes": "Thalmor agents are highly trained operatives of the Aldmeri Dominion. They operate in Skyrim to enforce the White-Gold Concordat, hunt Talos worshippers, and gather intelligence. They're intelligent, dangerous, and utterly devoted to their cause. They view Nords and most humans as inferior.",
+  "relationships": {
+    "Aldmeri Dominion": "Fanatically loyal",
+    "Talos Worshippers": "Hunt relentlessly",
+    "Stormcloaks": "Primary targets",
+    "Imperial Legion": "Uneasy alliance",
+    "Common Nords": "Contemptuous"
+  },
+  "personality_notes": {
+    "speaking_style": "Formal, condescending, eloquent with veiled threats",
+    "motivations": ["Enforce the Concordat", "Suppress Talos worship", "Gather intelligence", "Advance Dominion interests"],
+    "fears": ["Failure reporting to superiors", "Being exposed", "The Empire turning against the Dominion"],
+    "quirks": ["Refers to humans as 'lesser races'", "Always impeccably dressed", "Uses diplomatic language even when threatening"]
+  },
+  "combat_tactics": "Thalmor agents prefer to fight from range using destruction magic. They'll attempt to deceive or talk their way out before resorting to combat. If outmatched, they'll retreat and return with reinforcements.",
+  "scene_triggers": ["Embassy encounters", "Road patrols", "Investigating Talos shrines", "Diplomatic missions", "Interrogations"],
+  "act_context": ["Act 1", "Act 2", "Act 3"],
+  "faction_mechanics": {
+    "awareness_increase": "Each hostile encounter with party increases Thalmor awareness by +1",
+    "reinforcements": "Can call for backup if near Embassy or patrol route",
+    "political_immunity": "Killing Thalmor has significant diplomatic consequences"
+  }
+}

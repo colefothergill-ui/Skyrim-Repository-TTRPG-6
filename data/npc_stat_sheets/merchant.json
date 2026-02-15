@@ -1,0 +1,57 @@
+{
+  "name": "Merchant",
+  "id": "npc_stat_merchant",
+  "type": "Ally",
+  "category": "Friendly NPC",
+  "location": "Market stalls, shops, trading posts",
+  "faction": "Merchant's Guild / Independent",
+  "aspects": {
+    "high_concept": "Shrewd Trader with Goods for Every Need",
+    "trouble": "Always Looking for the Better Deal",
+    "other_aspects": [
+      "Well-Connected in Trade Networks",
+      "Eye for Quality and Value",
+      "'I Have What You Need... For a Price'"
+    ]
+  },
+  "skills": {
+    "Good": ["Resources", "Contacts"],
+    "Fair": ["Rapport", "Notice"],
+    "Average": ["Will", "Deceive", "Empathy"]
+  },
+  "stunts": [
+    "Merchant Network: +2 to Contacts when locating rare or specific items through trading connections",
+    "Haggling Expert: +2 to Rapport when negotiating prices (works both ways - getting better deals and defending prices)",
+    "Quality Assessment: +2 to Notice when evaluating item authenticity, quality, or value"
+  ],
+  "stress": {
+    "physical": [false, false],
+    "mental": [false, false]
+  },
+  "consequences": {
+    "mild": null
+  },
+  "refresh": 2,
+  "fate_points": 2,
+  "trust_clock": {
+    "enabled": true,
+    "current": 0,
+    "max": 6,
+    "description": "Level of trust - affects prices and willingness to trade rare items"
+  },
+  "notes": "Merchants are essential for acquiring equipment, selling loot, and accessing trade networks. Good relationships with merchants can provide better prices, access to rare items, and information about other traders. They're typically neutral but pragmatic, willing to deal with anyone who has coin.",
+  "relationships": {
+    "Local Hold": "Pays taxes, follows trade laws",
+    "Other Merchants": "Professional competition",
+    "Thieves Guild": "Wary but may fence items (some)",
+    "Adventurers": "Valuable customers"
+  },
+  "personality_notes": {
+    "speaking_style": "Business-focused, persuasive, uses sales terminology",
+    "motivations": ["Maximize profit", "Expand trade routes", "Build reputation", "Acquire rare inventory"],
+    "fears": ["Theft", "Civil war disrupting trade", "Competing merchants", "Bandits on roads"],
+    "quirks": ["Appraises everything", "Has favorite catchphrase about goods", "Knows price of everything"]
+  },
+  "scene_triggers": ["Buying/selling equipment", "Looking for rare items", "Fencing stolen goods", "Trade route quests"],
+  "act_context": ["Act 1", "Act 2", "Act 3"]
+}

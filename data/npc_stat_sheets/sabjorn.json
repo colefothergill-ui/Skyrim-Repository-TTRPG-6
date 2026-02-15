@@ -1,0 +1,87 @@
+{
+  "name": "Sabjorn",
+  "id": "npc_stat_sabjorn",
+  "type": "Nord Merchant",
+  "category": "Friendly NPC",
+  "role": "Business Owner",
+  "location": "Whiterun (Honningbrew Meadery)",
+  "faction": "None (Independent Merchant)",
+  "aspects": {
+    "high_concept": "Struggling Meadery Owner Fighting Sabotage",
+    "trouble": "Desperate to Save My Family's Legacy",
+    "other_aspects": [
+      "Honest Nord Trying to Play by the Rules",
+      "Pride Before Pragmatism",
+      "Maven Black-Briar's Unwitting Victim"
+    ]
+  },
+  "skills": {
+    "Great": ["Resources"],
+    "Good": ["Rapport", "Crafts"],
+    "Fair": ["Notice", "Will", "Contacts"],
+    "Average": ["Deceive", "Physique", "Fight"]
+  },
+  "stunts": [
+    "Master Brewer: +2 to Crafts when creating or evaluating mead quality",
+    "Merchant's Instinct: +2 to Notice when detecting fraud or sabotage in business dealings",
+    "Family Reputation: +2 to Rapport when dealing with traditional Nords who respect old families"
+  ],
+  "stress": {
+    "physical": [false, false],
+    "mental": [false, false, false]
+  },
+  "consequences": {
+    "mild": null,
+    "moderate": null,
+    "severe": null
+  },
+  "refresh": 3,
+  "armor": 0,
+  "notes": "Sabjorn is the owner of Honningbrew Meadery, a struggling business that's been systematically sabotaged by Maven Black-Briar's agent Mallus Maccius. He's an honest, hardworking Nord trying to maintain his family's brewing legacy, but he's desperate and increasingly willing to bend the rules to save the meadery. He doesn't know that Mallus is the source of his problems - he thinks skeever infestations and quality issues are just bad luck. Maven's goal is to drive him to ruin so she can buy the meadery cheap and eliminate competition for Black-Briar Mead. Sabjorn is proud and stubborn, which makes him vulnerable to manipulation.",
+  "combat_tactics": "Sabjorn is not a fighter. If threatened, he'll try to talk his way out or flee. He might grab a brewing tool as an improvised weapon but would rather call for guards.",
+  "scene_triggers": ["Honningbrew Meadery", "Dampened Spirits quest", "Merchant meetings", "Whiterun marketplace"],
+  "act_context": ["Act 1"],
+  "starting_equipment": {
+    "armor": "None (Armor:0)",
+    "weapon": "None (unarmed or improvised tools)",
+    "other": ["Keys to Honningbrew Meadery", "Brewing equipment", "Ledger book", "100 gold"]
+  },
+  "social_interaction": "Sabjorn is initially proud but becomes increasingly desperate and anxious. He's friendly to potential customers and allies, but stress makes him short-tempered. He speaks with Nordic directness and takes pride in his family's brewing traditions. He'll eagerly accept help but is slow to trust when it comes to business rivals. His desperation makes him vulnerable to exploitation.",
+  "relationships": {
+    "Mallus Maccius": "Employee, unaware of his betrayal",
+    "Maven Black-Briar": "Business rival, doesn't know she's orchestrating his downfall",
+    "Whiterun Guards": "Cooperative, seeks their help with pest problems",
+    "Commander Caius": "Seeks contracts for guard mead supply"
+  },
+  "personality_notes": {
+    "speaking_style": "Nordic, proud, increasingly desperate, traditional values",
+    "motivations": ["Save the family meadery", "Maintain quality brewing traditions", "Win the guard mead contract", "Restore the business to profitability"],
+    "fears": ["Losing the meadery", "Failing his family legacy", "Bankruptcy", "Being outcompeted by Black-Briar"],
+    "quirks": ["Obsesses over mead quality", "Clings to family pride", "Blames bad luck rather than sabotage"],
+    "character_growth": "If the pest problem is solved, he may discover Mallus's treachery and become more suspicious and cautious in business"
+  },
+  "story_hooks": [
+    "Central NPC in Dampened Spirits quest",
+    "May hire PC to investigate pest problems in meadery",
+    "Unwitting victim of Maven Black-Briar's schemes",
+    "Potential ally if saved from sabotage",
+    "May become informant against Maven if properly motivated"
+  ],
+  "dialogue_samples": {
+    "greeting": "Welcome to Honningbrew Meadery! The finest mead in Skyrim - or it will be once I sort out these cursed pest problems.",
+    "desperate": "I don't understand it. The quality drops, the pests multiply... it's as if someone's cursing this place.",
+    "proud": "My family's been brewing mead for three generations. I won't let that legacy die, no matter what it takes.",
+    "seeking_help": "I'm willing to pay good coin for someone who can solve this pest problem. The guard contract depends on it.",
+    "after_discovery": "Mallus? But he's been with me for years! How could he... Maven Black-Briar. Of course. That viper."
+  },
+  "dampened_spirits_context": {
+    "problem": "Skeever infestation and mead poisoning orchestrated by Mallus Maccius",
+    "stakes": "Guard mead contract and meadery survival",
+    "vulnerability": "Desperate enough to accept suspicious help",
+    "resolution_paths": [
+      "PC helps clear pests and exposes Mallus",
+      "PC helps Maven's sabotage succeed",
+      "PC extorts Sabjorn for personal gain"
+    ]
+  }
+}

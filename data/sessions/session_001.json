@@ -1,0 +1,52 @@
+{
+  "session_number": 1,
+  "date": "2026-01-15",
+  "title": "Journey to Whiterun",
+  "gm": "Game Master Name",
+  "players_present": ["Player 1", "Player 2", "Player 3"],
+  "characters_present": ["pc_001", "pc_002"],
+  "session_summary": "The party traveled from Riverwood to Whiterun, encountering signs of civil war tension along the road. They met with Jarl Balgruuf and learned about the political situation in Skyrim.",
+  "key_events": [
+    "Departure from Riverwood",
+    "Encounter with Imperial patrol on the road",
+    "Arrival in Whiterun",
+    "Meeting with Jarl Balgruuf",
+    "Learning about the civil war and Thalmor presence"
+  ],
+  "npcs_encountered": [
+    "Alvor - Blacksmith of Riverwood",
+    "Imperial Patrol - Road guards",
+    "Jarl Balgruuf - Jarl of Whiterun",
+    "Irileth - Housecarl"
+  ],
+  "locations_visited": [
+    "Riverwood",
+    "Road to Whiterun",
+    "Whiterun",
+    "Dragonsreach"
+  ],
+  "quests_updated": [
+    {
+      "quest": "Before the Storm",
+      "status": "Completed"
+    },
+    {
+      "quest": "Bleak Falls Barrow",
+      "status": "Active"
+    }
+  ],
+  "loot_acquired": [
+    "Iron Sword",
+    "Hide Armor",
+    "50 gold",
+    "Health Potions x2"
+  ],
+  "experience_gained": 50,
+  "fate_points_awarded": 1,
+  "notes": "Great session! Players were engaged with the political intrigue and made good choices in how to approach the Jarl. Next session will focus on exploring Bleak Falls Barrow.",
+  "next_session_prep": [
+    "Prepare Bleak Falls Barrow dungeon",
+    "Design Draugr encounters",
+    "Develop civil war subplot hooks"
+  ]
+}

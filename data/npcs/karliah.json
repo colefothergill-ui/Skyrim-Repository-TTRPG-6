@@ -1,0 +1,46 @@
+{
+  "name": "Karliah",
+  "id": "karliah",
+  "type": "Nightingale Agent",
+  "location": "Skyrim (In Hiding)",
+  "faction": "Thieves Guild (former Nightingale)",
+  "aspects": {
+    "high_concept": "Exiled Dunmer Nightingale Seeking Justice",
+    "trouble": "Fugitive Blamed for a Crime She Didn't Commit",
+    "other_aspects": [
+      "Nocturnal's Favored Shadow",
+      "Master Marksman of the Twilight",
+      "Haunted by Loss and Betrayal"
+    ]
+  },
+  "skills": {
+    "Great": ["Stealth", "Shoot"],
+    "Good": ["Athletics", "Notice"],
+    "Fair": ["Lore", "Rapport", "Will"],
+    "Average": ["Deceive", "Physique", "Empathy", "Survival"]
+  },
+  "stunts": [
+    "Nightingale Stride: +2 to Stealth in darkness or low-light conditions, as Karliah moves almost like a specter.",
+    "Eagle Eye: +2 to Shoot when Karliah takes a moment to aim from hiding (sniper's patience).",
+    "Cloak of Nocturnal: Once per session, Karliah can activate a Nightingale power to become invisible for a brief moment or automatically avoid one detection or attack."
+  ],
+  "stress": {
+    "physical": [false, false, false],
+    "mental": [false, false]
+  },
+  "consequences": {
+    "mild": null,
+    "moderate": null,
+    "severe": null
+  },
+  "refresh": 3,
+  "fate_points": 3,
+  "notes": "Karliah is a Dunmer thief and one of the three Nightingales who swore an oath to serve Nocturnal. After Mercer Frey betrayed the Guild and murdered Gallus (the previous Guild Master and Karliah's beloved), he framed Karliah for the crime, forcing her into exile. For years Karliah lived in the shadows, gathering evidence and waiting for a chance to clear her name and avenge Gallus. She is quiet, patient, and deliberate, with a deep reserve of courage and resolve honed by hardship. As a crack shot with a bow and unparalleled in stealth, Karliah can eliminate threats before they ever know she's there. Despite her cold exterior, the injustice she endured fuels her determination to set things right. She eventually allies with the player and Brynjolf to take down Mercer and restore the honor of the Thieves Guild (and the Skeleton Key).",
+  "relationships": {
+    "Mercer Frey": "Betrayer - he killed her love (Gallus) and ruined her reputation; Karliah is determined to end Mercer's treachery",
+    "Brynjolf": "Ally - though initially distrustful, Brynjolf becomes a vital ally in helping her reveal the truth",
+    "Nocturnal": "Patron - Karliah remains bound to Nocturnal and feels the weight of having the Skeleton Key stolen on her watch"
+  },
+  "quests": ["Thieves Guild Questline (Revenge and Restoration)"],
+  "inventory": ["Nightingale Bow (enchanted)", "Invisibility potion x2", "Nightingale Armor (enhances stealth)", "Gallus's Encoded Journal (evidence)"]
+}

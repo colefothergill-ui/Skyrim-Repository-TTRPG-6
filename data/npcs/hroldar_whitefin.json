@@ -1,0 +1,17 @@
+{
+  "name": "Hroldar \"Whitefin\"",
+  "id": "hroldar_whitefin",
+  "type": "Courier / Smuggler",
+  "location": "Nightgate Pass (The Pale)",
+  "faction": "Neutral (Ivory Thread)",
+  "aspects": {
+    "high_concept": "Ivory Thread Courier Node",
+    "trouble": "Everyone Wants Him Quiet",
+    "other_aspects": [
+      "Dead Drops and False Bottoms",
+      "Border Runner",
+      "Coded Words, Coded Lives"
+    ]
+  },
+  "notes": "Contact tied to Arisann's trail. Operates via passphrase exchange and layered countersigns. Treat as a choke-point NPC: he can redirect the investigation, introduce a rival courier, or demand a price."
+}

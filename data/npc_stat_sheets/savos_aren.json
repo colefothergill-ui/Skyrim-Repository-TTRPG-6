@@ -1,0 +1,108 @@
+{
+  "name": "Savos Aren",
+  "id": "npc_stat_savos_aren",
+  "type": "Dunmer Arch-Mage",
+  "category": "Faction Leader",
+  "location": "College of Winterhold (Arch-Mage's Quarters)",
+  "faction": "College of Winterhold",
+  "aspects": {
+    "high_concept": "Burdened Arch-Mage of Winterhold",
+    "trouble": "Haunted by Saarthal's Dark Secret",
+    "other_aspects": [
+      "Keeper of the College's Ancient Knowledge",
+      "Forced to Accept Thalmor Presence",
+      "The Weight of Leadership Alone"
+    ]
+  },
+  "skills": {
+    "Superb": ["Lore", "Will"],
+    "Great": ["Notice"],
+    "Good": ["Rapport", "Investigate"],
+    "Fair": ["Deceive", "Empathy", "Crafts"],
+    "Average": ["Resources", "Athletics"]
+  },
+  "stunts": [
+    "Arcane Authority: +2 to Rapport when commanding respect as Arch-Mage",
+    "Forbidden Knowledge: Once per session, recall obscure magical lore that provides critical advantage",
+    "Master of All Schools: Can cast spells from any magical school with +1 bonus"
+  ],
+  "stress": {
+    "physical": [false, false],
+    "mental": [false, false, false, false]
+  },
+  "consequences": {
+    "mild": null,
+    "moderate": null,
+    "severe": null
+  },
+  "refresh": 3,
+  "armor": 0,
+  "notes": "Savos Aren is the Arch-Mage of the College of Winterhold, a position he holds with great burden. Decades ago, he and a group of students ventured into Saarthal and encountered something terrible. He was the only survivor, and the experience haunts him. He's a powerful mage but politically weakened, forced to accept the Thalmor advisor Ancano as the price of the College's continued operation. He's increasingly isolated and stressed by his responsibilities.",
+  "combat_tactics": "Savos uses high-level destruction magic and protective wards. He's experienced and versatile but his guilt and stress may make him hesitate. He'll prioritize protecting the College and its students over his own safety.",
+  "scene_triggers": ["College leadership scenes", "Magical crises", "Confrontations with Ancano", "Saarthal revelations"],
+  "act_context": ["Act 1", "Act 2", "Act 3"],
+  "starting_equipment": {
+    "armor": "Arch-Mage's Robes (Armor:1, +2 to Lore)",
+    "weapon": "Staff of Magnus replica (Weapon:3, legendary artifact copy)",
+    "other": ["Arch-Mage's key", "Ancient College tomes", "Sigil of the College"]
+  },
+  "social_interaction": "Savos appears calm and authoritative but carries deep weariness. He's diplomatic and thoughtful, choosing words carefully. With those he trusts, hints of his burden show through. He respects magical scholarship and judges people by their dedication to knowledge. He's frustrated by political necessities that distract from the College's true purpose.",
+  "relationships": {
+    "Tolfdir": "Senior wizard, one of few he trusts completely",
+    "Mirabelle Ervine": "Master Wizard, relies on her for daily operations",
+    "Ancano": "Thalmor advisor, forced to tolerate, deeply distrusts",
+    "Atmah": "Fellow student who died in Saarthal, guilt over their death",
+    "Takes-In-Light": "Fellow student who died in Saarthal, guilt over their death",
+    "Elvali Veren": "Fellow student who died in Saarthal, guilt over their death",
+    "Girduin": "Fellow student who died in Saarthal, guilt over their death",
+    "Hafnar Ice-Fist": "Fellow student who died in Saarthal, guilt over their death"
+  },
+  "personality_notes": {
+    "speaking_style": "Measured and formal, sometimes distant, shows warmth when discussing magical theory",
+    "motivations": ["Protect the College from external threats", "Prevent anyone else from suffering Saarthal's fate", "Maintain College's independence", "Advance magical knowledge safely", "Atone for Saarthal survivors' deaths"],
+    "fears": ["Saarthal's horror being unleashed", "More deaths under his leadership", "Thalmor taking control of College", "The Eye of Magnus falling into wrong hands"],
+    "quirks": ["Studies late into the night", "Avoids discussing his past", "Checks College wards obsessively"],
+    "character_growth": "May finally share Saarthal burden, find peace through mentoring successor, or sacrifice himself to protect College"
+  },
+  "saarthal_secret": {
+    "event": "Years ago, led expedition to Saarthal with five students",
+    "discovery": "Encountered powerful magical entity/artifact that killed all students except Savos",
+    "survivor_guilt": "Blames himself for their deaths, sealed away what they found",
+    "current_threat": "Knows that the Eye of Magnus could bring similar catastrophe",
+    "burden": "Cannot share full truth without revealing College's dangerous secrets"
+  },
+  "college_leadership_role": {
+    "public_face": "Maintains College's reputation and independence in hostile Skyrim",
+    "internal_role": "Oversees research, approves expeditions, maintains ancient wards",
+    "political_burden": "Must negotiate with Jarls, Thalmor, and skeptical Nords",
+    "thalmor_compromise": "Allowed Ancano as advisor to prevent College being shut down",
+    "delegation": "Relies heavily on Mirabelle for day-to-day operations due to stress"
+  },
+  "whiterun_mission_connection": {
+    "objective": "Savos approves Tolfdir's mission to send PC to assist Farengar, seeing dragon crisis as potentially catastrophic magical event",
+    "concern": "Dragons returning suggests massive magical disturbance - College must understand and prepare",
+    "resources": "Authorizes PC to use College resources and authority when working with Farengar",
+    "hope": "PC might be capable enough to handle threats without suffering like his students did"
+  },
+  "story_hooks": [
+    "Grants access to restricted sections of College library",
+    "Reveals information about ancient magical threats",
+    "Opposes Ancano's increasing influence",
+    "May request PC investigate Saarthal when ready",
+    "Provides powerful magical items from College vault in emergencies",
+    "Could appoint PC as successor if he falls",
+    "Connection to Eye of Magnus storyline"
+  ],
+  "dialogue_samples": {
+    "greeting": "Welcome to the College of Winterhold. I am Savos Aren, Arch-Mage. The pursuit of magical knowledge is our highest calling - but it must be tempered with wisdom.",
+    "approving_mission": "Tolfdir speaks highly of you. These dragon sightings... they concern me deeply. Magic of that magnitude doesn't simply reappear without cause. Go to Whiterun, assist Farengar Secret-Fire, and learn what you can. The College must understand what's happening.",
+    "burden": "Leadership is... heavier than I imagined when I was young. Every decision affects so many lives. One must be cautious, thoughtful. Mistakes... mistakes can be devastating.",
+    "ancano": "The Thalmor 'advisor' is a necessary inconvenience. The College's survival sometimes requires... compromises. But I watch him carefully.",
+    "saarthal_hint": "Some knowledge is dangerous. Some places should remain sealed. I learned this truth at great cost, long ago."
+  },
+  "neutral_faction_integration": {
+    "starting_narrative": "Arch-Mage Savos Aren personally approves your assignment to Whiterun. 'The return of dragons is no coincidence,' he tells you gravely. 'This could threaten all of Skyrim. The College must be involved. Go to Farengar - learn what he's discovered, and report back.'",
+    "transition_to_battle": "When the Battle of Whiterun erupts during your mission, Savos's words echo in your mind about threats that transcend politics. Yet now you must choose a side.",
+    "consequences": "Your choice affects how the winning faction views the College and whether they'll support or oppose magical research in their territory."
+  }
+}

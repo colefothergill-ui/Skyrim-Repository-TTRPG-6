@@ -1,0 +1,56 @@
+{
+  "name": "Nepos \"the Nose\"",
+  "id": "nepos_the_nose",
+  "type": "Breton Elder (Secret Forsworn Handler)",
+  "location": "Nepos's House, Markarth",
+  "faction": "Forsworn (undercover)",
+  "aspects": {
+    "high_concept": "Aging Markarth noble secretly pulling the strings for the Forsworn within the city",
+    "trouble": "Living a Double Life – constant fear of exposure as he balances polite society and rebellion",
+    "other_aspects": [
+      "Cunning as a Fox in Winter – decades of experience make him shrewd and patient",
+      "Soft Spoken, Iron Will – outwardly frail, inwardly fanatical for the Reachmen's cause",
+      "Web of Informants – maintains a quiet network of servants and sympathizers feeding him information"
+    ]
+  },
+  "skills": {
+    "Great": ["Deceive"],
+    "Good": ["Lore", "Contacts"],
+    "Fair": ["Empathy", "Will", "Provoke"],
+    "Average": ["Stealth", "Rapport", "Fight", "Notice"]
+  },
+  "stunts": [
+    "Harmless Old Man Act: +2 to Deceive when portraying himself as a senile or insignificant elder to deflect suspicion.",
+    "Unbroken Faith: +2 to Will to resist attempts to scare or coerce him into betraying the Forsworn cause.",
+    "Hidden Daggers: Use Contacts instead of Fight once per conflict to reflect calling on hidden Forsworn agents or traps (narrative advantage rather than direct combat)."
+  ],
+  "stress": {
+    "physical": [false, false],
+    "mental": [false, false, false]
+  },
+  "consequences": {
+    "mild": null,
+    "moderate": null,
+    "severe": null
+  },
+  "refresh": 3,
+  "fate_points": 3,
+  "notes": "Few would suspect that kindly Nepos, with his trembling hands pouring tea by the fire, is one of the Forsworn's key operatives in Markarth. Publicly, Nepos earned the nickname 'the Nose' for his perceptiveness in politics and gossip – he served as a minor advisor in the Jarl's court years ago and now claims to be enjoying a quiet retirement. Privately, he is Madanach's eyes and ears in the city. A native Reachman of mixed blood who remembers when the Forsworn ruled Markarth for a brief time, Nepos is utterly devoted to the cause. In his modest home, he covertly meets young Forsworn sympathizers (like the late Weylin who carried out a recent attack) and relays orders that arrive via smuggled letters from the King in Rags. Nepos hides his fanaticism behind a grandfatherly smile. The dual life weighs on him – he knows if the Markarth guard or Silver-Bloods discover his identity, he will be executed or worse. Still, he believes in restoring the Reach to his people. He keeps a journal (written in code) of all his secret dealings. In conversation, Nepos is polite, almost self-effacing, but occasionally a steely edge shines through, especially if someone questions the Forsworn or the suffering of the natives. He is willing to die for Madanach's plan if necessary, but until then he will play his part as the harmless old Nose, sniffing out every piece of information for the rebellion.",
+  "relationships": {
+    "Madanach": "Absolute loyalty – as the Forsworn King in Rags, Madanach is Nepos's true leader. Nepos communicates with Madanach through messengers and ensures his orders (attacks, assassinations) are carried out in Markarth.",
+    "Thonar Silver-Blood": "Unwitting collaborator and enemy – Nepos has a secret arrangement funneling information to Thonar in exchange for the Forsworn being allowed to eliminate certain targets. Nepos hates the Silver-Bloods but used Thonar's greed to the Forsworn's advantage until things went sour.",
+    "Weylin": "Now-deceased Forsworn agent – Nepos was Weylin's handler, directing him to strike at the market (the incident that kicks off the Forsworn Conspiracy). Nepos feels some guilt over Weylin's death but views him as a martyr for the cause.",
+    "Markarth City Guard": "Threat – The guards, especially those loyal to Igmund and the Empire, are constantly sniffing around for Forsworn plots. Nepos makes sure to appear friendly and feeble around them, offering them wine and tales of his youth to seem innocuous.",
+    "Player Characters/Investigators": "Annoyance and danger – If adventurers come asking questions about recent Forsworn activity, Nepos will play coy and hospitable. He'll offer them nothing... until it becomes clear his cover is blown, at which point he's ready to have his household fight to the death to protect the mission."
+  },
+  "quests": [
+    "The Forsworn Conspiracy (Nepos's role as an antagonist who is confronted in his home)",
+    "Background Forsworn operations in Markarth (he's involved in any secret plots by Reachmen within the city)",
+    "No One Escapes Cidhna Mine (mentioned, as the fallout of the conspiracy leads to the Forsworn prison break if events align)"
+  ],
+  "inventory": [
+    "Personal journal written in cipher (detailing Forsworn communications)",
+    "An ornate dagger (kept tucked in his robes for emergencies)",
+    "Fine but old-fashioned clothes – he dresses like a wealthy elder, including a warm shawl, aiding his benign image"
+  ]
+}

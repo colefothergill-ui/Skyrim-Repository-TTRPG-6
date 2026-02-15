@@ -1,0 +1,94 @@
+{
+  "name": "Thalmor Justiciar",
+  "id": "npc_stat_thalmor_justiciar",
+  "type": "High Elf Enforcer",
+  "category": "Hostile NPC",
+  "location": "Roads, Thalmor Embassy, hunting Talos worshippers",
+  "faction": "Thalmor (Aldmeri Dominion)",
+  "role": "Enforcer of the White-Gold Concordat and Talos persecution",
+  "aspects": {
+    "high_concept": "Merciless Thalmor Enforcer of the Ban",
+    "trouble": "Nord Hatred Makes Me a Target Everywhere",
+    "other_aspects": [
+      "High Elf Superiority Complex",
+      "The Concordat Must Be Enforced",
+      "Backed by Dominion Authority"
+    ]
+  },
+  "skills": {
+    "Great": ["Magic (Destruction)", "Intimidate"],
+    "Good": ["Will", "Investigate"],
+    "Fair": ["Fight", "Notice"],
+    "Average": ["Lore", "Empathy"]
+  },
+  "stunts": [
+    "Lightning Bolts: +2 to Magic (Destruction) when using shock spells. Can create 'Paralyzed' aspects.",
+    "Thalmor Authority: +2 to Intimidate when invoking Imperial law and the White-Gold Concordat.",
+    "Tactical Arrest: When attempting to capture rather than kill, +2 to overcome actions.",
+    "Arcane Shield: Once per scene, can use Will instead of Physique to defend against physical attacks."
+  ],
+  "stress": {
+    "physical": [false, false, false],
+    "mental": [false, false, false]
+  },
+  "consequences": {
+    "mild": null,
+    "moderate": null
+  },
+  "refresh": 2,
+  "fate_points": 2,
+  "equipment": {
+    "weapon": "Elven sword",
+    "armor": "Hooded Thalmor robes (light magical protection)",
+    "special": "Thalmor dossiers, arrest warrants, shock spell focus"
+  },
+  "personality_notes": {
+    "speaking_style": "Cultured but condescending. Uses formal speech. Constantly reminds others of Thalmor authority and High Elf superiority.",
+    "motivations": [
+      "Enforce the ban on Talos worship",
+      "Maintain Aldmeri Dominion control",
+      "Hunt down Blades remnants",
+      "Prove High Elf superiority"
+    ],
+    "fears": [
+      "Losing authority or being killed by angry Nords",
+      "Failure being reported to Elenwen",
+      "The Empire regaining strength"
+    ],
+    "quirks": [
+      "Refers to Nords as 'primitives' or 'barbarians'",
+      "Always travels with Thalmor soldiers",
+      "Keeps detailed dossiers on suspects"
+    ]
+  },
+  "relationships": {
+    "Elenwen": "Reports to First Emissary",
+    "Talos worshippers": "Targets for arrest or elimination",
+    "Stormcloaks": "Enemies of the Dominion",
+    "Imperial Legion": "Uncomfortable allies"
+  },
+  "combat_tactics": "Justiciars prefer shock magic to paralyze targets for arrest. They fight from range using destruction magic while Thalmor soldiers engage in melee. Will attempt to capture Talos worshippers alive for interrogation.",
+  "scene_triggers": [
+    "Random road encounters (patrolling for Talos worship)",
+    "Investigating Talos shrines",
+    "Diplomatic Immunity quest",
+    "Hunting Blades members"
+  ],
+  "act_context": ["Act 1", "Act 2", "Act 3"],
+  "typical_squad_composition": {
+    "leader": "1 Justiciar (this stat block)",
+    "soldiers": "2-3 Thalmor Soldiers",
+    "tactics": "Justiciar stays back using magic, soldiers engage in melee"
+  },
+  "dialogue_examples": [
+    "Halt! By authority of the Aldmeri Dominion, you are under arrest for heresy!",
+    "Talos worship is forbidden. The Concordat will be enforced.",
+    "You Nords cling to your false god.",
+    "Resist and you will be made an example of."
+  ],
+  "loot": {
+    "guaranteed": ["Thalmor robes", "Elven weapon", "20-40 gold"],
+    "possible": ["Shock spell tome", "Thalmor orders", "Arrest warrants", "Prisoner dossiers"]
+  },
+  "gm_notes": "Thalmor Justiciars are designed to be disliked. They represent oppression and foreign occupation. Use them sparingly for maximum impact."
+}

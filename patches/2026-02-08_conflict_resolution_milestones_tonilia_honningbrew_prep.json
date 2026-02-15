@@ -1,0 +1,67 @@
+{
+  "patch_id": "2026-02-08_conflict_resolution_milestones_tonilia_honningbrew_prep",
+  "created_at": "2026-02-08",
+  "scope": "milestone_advancement_and_quest_prep",
+  "summary": {
+    "scene_id": "A1-S10",
+    "location": "Riften — Ragged Flagon (Cistern)",
+    "highlights": [
+      "Insaerndel fences the Honey-Drop Ring with Tonilia (+250g)",
+      "Aspects updated to reflect Penitus Oculatus background (CODE NAME: Phantom Blade)",
+      "Skills advanced via Significant Milestone: Contacts raised to Fair (+2) using column advancement",
+      "Scene advances to Tonilia/Mercer beat for Dampened Spirits job assignment",
+      "NPC stat sheets created for Honningbrew Meadery NPCs (Tonilia, Sabjorn, Mallus Maccius, Guard)",
+      "Thieves Guild roster updated to include Tonilia as fence"
+    ]
+  },
+  "state_updates": {
+    "campaign_state": {
+      "current_scene_id": "A1-S10",
+      "current_location": "Riften — Ragged Flagon (Cistern)",
+      "active_hold": "The Rift",
+      "current_objective": "Thieves Guild: Fence Goldenglow loot with the Guild fence, then accept Mercer's next mainline job (Honningbrew / 'Dampened Spirits').",
+      "last_updated": "2026-02-08"
+    }
+  },
+  "pc_updates": {
+    "data/pcs/pc_insaerndel.json": {
+      "aspects.other_aspects[1]": "Great War Veteran - Former Penitus Oculatus. CODE NAME: Phantom Blade Insaerndel. ALIAS: Orinthelo. (Past Acts of Infamy).",
+      "skills.Fair (+2)": ["Athletics", "Deceive", "Will", "Contacts"],
+      "skills.Average (+1)": ["Physique", "Burglary", "Resources"],
+      "gold": 6050,
+      "equipment.items_removed": [
+        "Jeweled trinket 'Honey-Drop Ring' (fenced later; small but clean value)"
+      ],
+      "notes_append": "[2026-02-08] Fenced Honey-Drop Ring with Tonilia (+250g); Contacts skill advanced to Fair (+2) via column advancement rule; aspects updated to reveal Penitus Oculatus background (CODE NAME: Phantom Blade, ALIAS: Orinthelo)."
+    }
+  },
+  "world_state_updates": {
+    "data/factions/thieves_guild.json": {
+      "notable_members_added": [
+        "Tonilia (Fence, Ragged Flagon)"
+      ]
+    }
+  },
+  "npc_additions": [
+    "data/npc_stat_sheets/tonilia.json - Guild fence and quartermaster",
+    "data/npc_stat_sheets/sabjorn.json - Honningbrew Meadery owner",
+    "data/npc_stat_sheets/mallus_maccius.json - Maven's saboteur at Honningbrew",
+    "data/npc_stat_sheets/honningbrew_guard.json - Whiterun guard on pest duty"
+  ],
+  "rules_updates": {
+    "data/rules/fate_core_skyrim.md": {
+      "significant_milestones_clarification": "Updated to explain Skill Column advancement: raise any one skill by +1 without reshaping other skills; only limit is current skill cap"
+    }
+  },
+  "gm_notes": [
+    "Scene A1-S10 represents the transition from Goldenglow debrief to Dampened Spirits job assignment",
+    "Insaerndel's Penitus Oculatus background is now explicitly revealed in aspects (CODE NAME: Phantom Blade, ALIAS: Orinthelo)",
+    "Contacts skill raised from Average (+1) to Fair (+2) using Significant Milestone and column advancement rules",
+    "Athletics remains at Fair (+2) - column advancement does not require pyramid reshaping",
+    "Fencing transaction with Tonilia converts Honey-Drop Ring to +250g (5800 → 6050)",
+    "Tonilia is now formally introduced as the guild fence NPC",
+    "Dampened Spirits prep complete: all required Honningbrew NPCs created (Sabjorn, Mallus, Guard)",
+    "Next beat: Mercer assigns Honningbrew job; PC travels to Whiterun to investigate Sabjorn's pest problem",
+    "Skill column advancement rule now documented in fate_core_skyrim.md under Significant Milestones"
+  ]
+}

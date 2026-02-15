@@ -1,0 +1,45 @@
+{
+  "quest_id": "quest_001",
+  "name": "Before the Storm",
+  "type": "Main Quest",
+  "status": "Active",
+  "giver": "Alvor the Blacksmith",
+  "location": "Riverwood / Whiterun",
+  "description": "Alvor has asked you to bring news of the civil war escalation to the Jarl of Whiterun. Tensions are rising and the neutral hold needs to be warned.",
+  "objectives": [
+    {
+      "description": "Travel to Whiterun",
+      "status": "Active",
+      "optional": false
+    },
+    {
+      "description": "Speak to the Jarl of Whiterun",
+      "status": "Pending",
+      "optional": false
+    },
+    {
+      "description": "Report on the civil war situation",
+      "status": "Pending",
+      "optional": false
+    }
+  ],
+  "rewards": {
+    "experience": 50,
+    "gold": 0,
+    "items": ["Jarl's favor"],
+    "reputation": "+10 with Whiterun"
+  },
+  "prerequisites": ["Arrive in Riverwood"],
+  "consequences": {
+    "success": "Gain access to Jarl Balgruuf and unlock further quests",
+    "failure": "Whiterun remains uninformed about escalating tensions"
+  },
+  "complications": [
+    "Bandits on the road to Whiterun",
+    "Guards may be suspicious of newcomers",
+    "Civil war tensions in the city"
+  ],
+  "notes": "This quest introduces the player to Whiterun and the civil war storyline. Post-Alduin timeline: Focus is on political tensions rather than dragon crisis.",
+  "related_npcs": ["Alvor", "Jarl Balgruuf", "Irileth"],
+  "related_locations": ["Riverwood", "Whiterun", "Dragonsreach"]
+}

@@ -1,0 +1,133 @@
+{
+  "name": "Werebear (Boss Encounter)",
+  "id": "boss_werebear",
+  "type": "Lycanthrope (Rare)",
+  "category": "Enemy",
+  "location": "Deep wilderness in The Rift, Falkreath forests, near Standing Stones",
+  "faction": "None (solitary)",
+  "aspects": {
+    "high_concept": "Lone Protector of the Forest",
+    "trouble": "Ancient Curse of the Beast",
+    "other_aspects": [
+      "Territorial Guardian",
+      "Primal Earth Magic",
+      "Wisdom of Ages",
+      "Weakness to Silver and Fire"
+    ]
+  },
+  "skills": {
+    "Superb": ["Physique"],
+    "Great": ["Fight", "Will"],
+    "Good": ["Notice", "Survival", "Lore"],
+    "Fair": ["Athletics", "Intimidate"],
+    "Average": ["Stealth"]
+  },
+  "stunts": [
+    "Regeneration (Boss): At the start of each exchange, clear up to two physical stress boxes (does not work if wounded by silver or fire this exchange)",
+    "Earthshaker: Once per scene, create the aspect 'Trembling Ground' with two free invokes by slamming the ground, affecting all enemies in the zone",
+    "Roar of the Wild: Use Intimidate to attack all enemies in the zone simultaneously, those who take stress are also pushed to an adjacent zone",
+    "Ancient Strength: +3 to Physique when using raw strength, can lift/throw massive objects",
+    "Forest Lord: In forest terrain, gain +2 to all defense rolls and can move through difficult terrain freely",
+    "Savage Critical: When succeeding with style on a Fight attack, deal an additional mild consequence instead of a boost"
+  ],
+  "stress": {
+    "physical": [false, false, false, false, false, false],
+    "mental": [false, false, false, false]
+  },
+  "consequences": {
+    "mild": null,
+    "mild_2": null,
+    "moderate": null,
+    "severe": null
+  },
+  "refresh": 5,
+  "armor": 2,
+  "fate_points": 5,
+  "notes": "Werebears are extremely rare and powerful lycanthropes, far more formidable than common werewolves. They are ancient beings who often take on the role of forest guardians, protecting sacred sites like Standing Stones and maintaining the balance of nature. Unlike werewolves, werebears retain much of their intelligence and wisdom in beast form. They possess enhanced regeneration, can manipulate the battlefield with earth magic, and are capable of devastating area attacks. This is a boss-level encounter suitable for a full party of experienced adventurers.",
+  "combat_tactics": "Werebears are intelligent combatants who use the terrain to their advantage. They begin combat with Roar of the Wild to scatter enemies, then use Earthshaker to create difficult terrain. They focus on the most dangerous opponent while using their enhanced strength to throw objects or enemies. When wounded, they become more aggressive but will strategically retreat to better positions. They fight to protect their territory but may negotiate if convinced the party means no harm.",
+  "scene_triggers": [
+    "Side quest: investigate Standing Stone disturbances",
+    "Exploring deep wilderness in The Rift",
+    "Falkreath forest encounters near ancient sites",
+    "Companion questline variant (discovering other beast forms)",
+    "Protecting sacred groves from logging/desecration",
+    "Random encounter when party reaches high level (Level 8+)"
+  ],
+  "act_context": ["Act 2", "Act 3"],
+  "loot": {
+    "guaranteed": ["Werebear pelt (250 gold, rare crafting material)", "Ancient beast claw (enchanting ingredient)"],
+    "possible": ["Druidic trinket", "Map to hidden Standing Stone", "Nature spirit totem", "Rare alchemical plants from its lair"],
+    "lair_treasure": "Werebear lairs contain treasures from those who threatened the forest: 200-500 gold, enchanted weapons, druidic artifacts, ancient Nord relics"
+  },
+  "variants": [
+    {
+      "name": "Druid Werebear",
+      "changes": "Add magic skills: Fair Lore becomes Good, add stunt 'Nature's Wrath: Can cast elemental magic (frost, lightning) at Good (+3) using Lore', can communicate with animals and plants"
+    },
+    {
+      "name": "Corrupted Werebear",
+      "changes": "Replace 'Lone Protector' aspect with 'Corrupted by Dark Magic', remove negotiation options, increase aggression, add Hagraven or necromancer alliance, fights to the death"
+    }
+  ],
+  "social_interaction": "Werebears are intelligent and can communicate through gestures and limited speech in beast form. They understand common languages and may speak if they choose. They are protective of nature and Standing Stones but not inherently hostile. Can be negotiated with using Rapport or Lore (showing respect for nature). They may become allies if party proves themselves worthy protectors of the wild. Offering to help cleanse corruption or protect sacred sites can turn them into powerful allies.",
+  "relationships": {
+    "Hircine": "Blessed/cursed by the Daedric Prince of the Hunt",
+    "Kynareth": "Reveres the goddess of nature",
+    "Standing Stones": "Protects and guards",
+    "Spriggans": "Allies in protecting nature",
+    "Loggers/Poachers": "Enemies who desecrate the forest",
+    "Hagravens": "Complex relationship (both tied to nature magic)"
+  },
+  "personality_notes": {
+    "speaking_style": "Deep, rumbling voice. Speaks in short, profound statements. Refers to itself as 'guardian' or 'keeper'. Uses natural metaphors.",
+    "motivations": ["Protect the forest and sacred sites", "Maintain balance of nature", "Guard Standing Stones", "Test worthy warriors"],
+    "fears": ["Corruption of the wild", "Silver weapons", "Losing territory to civilization", "Hircine's displeasure"],
+    "quirks": ["Marks territory with claw marks on trees", "Collects shiny objects in lair", "Respects strong warriors", "Meditates near Standing Stones"]
+  },
+  "hold_context": {
+    "primary": ["The Rift", "Falkreath"],
+    "possible": ["Whiterun", "Any hold with Standing Stones"],
+    "rare": ["Haafingar", "Urban areas"]
+  },
+  "special_mechanics": {
+    "boss_encounter": {
+      "party_level": "Recommended for party of 4 level 7+ characters",
+      "phases": [
+        {
+          "phase": 1,
+          "trigger": "Combat start",
+          "tactics": "Roar of the Wild to scatter party, then focus on ranged attackers"
+        },
+        {
+          "phase": 2,
+          "trigger": "First consequence taken",
+          "tactics": "Earthshaker to control battlefield, use terrain to separate party members"
+        },
+        {
+          "phase": 3,
+          "trigger": "Severe consequence or reduced to 2 stress",
+          "tactics": "Berserker rage - all attacks at +2, ignores first mild consequence, fights desperately"
+        }
+      ],
+      "environmental_aspects": [
+        "Ancient Forest (free invoke for werebear)",
+        "Sacred Ground (can be invoked by either side with appropriate justification)",
+        "Massive Trees (can be knocked down by Earthshaker)"
+      ]
+    },
+    "beast_transformation": "Permanent beast form for most werebears; ancient curse prevents return to human form",
+    "silver_vulnerability": "Silver weapons bypass armor and prevent regeneration for two exchanges",
+    "fire_vulnerability": "Fire damage prevents regeneration for two exchanges and deals +2 damage",
+    "standing_stone_connection": "If fought near a Standing Stone, werebear can invoke the stone's power once per encounter for a major effect (GM discretion based on stone type)"
+  },
+  "victory_rewards": {
+    "reputation": "Gain respect in The Rift/Falkreath as powerful beast slayers",
+    "quest_hooks": [
+      "Discover why werebear became aggressive (possibly corruption that needs cleansing)",
+      "Find map to hidden Standing Stone",
+      "Learn about other rare beast forms in Skyrim",
+      "Gain blessing from Kynareth for protecting sacred sites"
+    ],
+    "alternative_victory": "If negotiated with rather than killed, werebear can become recurring ally, providing wilderness knowledge, safe haven, or aid against greater threats"
+  }
+}

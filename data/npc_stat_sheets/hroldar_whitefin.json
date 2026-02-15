@@ -1,0 +1,67 @@
+{
+  "name": "Hroldar \"Whitefin\"",
+  "id": "npc_stat_hroldar_whitefin",
+  "type": "Nord Courier / Smuggler",
+  "category": "Friendly NPC",
+  "role": "Ivory Thread Courier Node",
+  "location": "Nightgate Pass (The Pale)",
+  "faction": "Neutral (Ivory Thread)",
+  "aspects": {
+    "high_concept": "Knife-Smart Courier Node for the Ivory Thread",
+    "trouble": "Everyone Wants Him Quiet",
+    "other_aspects": [
+      "Knows the Passes, Knows the Prices",
+      "Dead Drops and False Bottoms",
+      "A Smile That Never Reaches the Eyes"
+    ]
+  },
+  "skills": {
+    "Great": ["Contacts"],
+    "Good": ["Deceive", "Stealth"],
+    "Fair": ["Notice", "Resources", "Shoot"],
+    "Average": ["Rapport", "Will", "Athletics"]
+  },
+  "stunts": [
+    "Dead-Drop Protocol: +2 to Contacts when arranging or locating a hidden exchange point (dead drop, coded pickup, relay handoff).",
+    "Border Runner: Once per scene, ignore a single minor obstacle from terrain/patrol routing when traveling (treat as having an appropriate tool/route).",
+    "Codephrase Cutter: +2 to Deceive to confirm identity or intent using passphrases, countersigns, or layered meanings."
+  ],
+  "stress": {
+    "physical": [false, false],
+    "mental": [false, false]
+  },
+  "consequences": {
+    "mild": null,
+    "moderate": null,
+    "severe": null
+  },
+  "refresh": 2,
+  "armor": 0,
+  "notes": "Hroldar \"Whitefin\" is a Pale-born courier who operates as a node in the Ivory Thread—an off-book delivery lattice that moves people, paper, and secrets through Skyrim's seams. He's not loyal to causes; he's loyal to survival, leverage, and whoever pays without bringing heat to his doorstep. Maven uses people like him when she wants plausible deniability. The Arisann lead points to him as a controlled choke-point: he either knows where Arisann went, who hired the transfer, or which relay received the next handoff.",
+  "combat_tactics": "Avoids straight fights. Uses the environment, retreats, takes a shot only if it clears his escape. Will bargain mid-conflict if it buys him time.",
+  "scene_triggers": [
+    "Nightgate Pass meet",
+    "Passphrase exchange",
+    "Courier negotiation",
+    "Ambush bait / tail detection"
+  ],
+  "act_context": ["Act 1", "Act 2", "Act 3"],
+  "starting_equipment": {
+    "armor": "Travel Leathers (Armor:0)",
+    "weapon": "Hunting Bow (Weapon:2), Iron Dagger (Weapon:1)",
+    "other": ["False-bottom satchel", "Wax seals (blank)", "Coded route slips", "30 gold", "Small vial of lamp-oil"]
+  },
+  "social_interaction": "Low-voice, transactional, tests you with half-truths. He respects competence and punishes sloppiness. If you sound like you know the underworld, he opens up; if you sound like a hero, he weaponizes that.",
+  "relationships": {
+    "Maven Black-Briar": "Client-by-proxy; respects her reach, fears her attention",
+    "Thieves Guild": "Occasional overlap; keeps distance",
+    "Thalmor": "Avoids at all costs; assumes they always pay in blood"
+  },
+  "dialogue_samples": {
+    "greeting": "If you're here for a story, find a bard. If you're here for a delivery… choose your words carefully.",
+    "passphrase_prompt": "Say it. The line you were given. Then I'll decide if you're worth the air you're spending.",
+    "approval": "Alright. You're not stupid. That's rarer than gold these days.",
+    "warning": "If you brought heat to my door, I'll sell you to the cold just to watch you shiver.",
+    "offer": "Information costs. Silence costs more. Which one are you buying?"
+  }
+}

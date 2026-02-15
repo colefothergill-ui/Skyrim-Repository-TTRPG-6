@@ -1,0 +1,55 @@
+{
+  "name": "Balgruuf the Greater",
+  "id": "npc_002",
+  "type": "Jarl",
+  "location": "Dragonsreach, Whiterun",
+  "faction": "Whiterun Court",
+  "aspects": {
+    "high_concept": "Wise Jarl of Whiterun",
+    "trouble": "Pressured to Choose Sides in the Civil War",
+    "other_aspects": [
+      "Protector of the People",
+      "Commands Respect and Loyalty",
+      "Burden of Leadership Weighs Heavy"
+    ]
+  },
+  "skills": {
+    "Great": ["Rapport", "Will"],
+    "Good": ["Lore", "Notice", "Empathy"],
+    "Fair": ["Fight", "Deceive", "Contacts"],
+    "Average": ["Physique", "Resources"]
+  },
+  "stunts": [
+    "Voice of Authority: +2 to Rapport when giving orders",
+    "Political Acumen: +2 to Notice when assessing political situations",
+    "Unwavering: Once per session, ignore a mental consequence"
+  ],
+  "stress": {
+    "physical": [false, false],
+    "mental": [false, false, false]
+  },
+  "consequences": {
+    "mild": null,
+    "moderate": null,
+    "severe": null
+  },
+  "refresh": 3,
+  "fate_points": 3,
+  "notes": "Jarl Balgruuf is a fair and just ruler who has kept Whiterun neutral in the civil war. He values honor and loyalty above all else and must navigate the difficult politics of a divided Skyrim.",
+  "relationships": {
+    "Ulfric Stormcloak": "Suspicious rival",
+    "General Tullius": "Cautious ally",
+    "Irileth": "Trusted advisor",
+    "Proventus Avenicci": "Loyal steward",
+    "The Companions": "Respected warriors",
+    "Player Characters": "Potential allies"
+  },
+  "quests": ["Before the Storm", "Bleak Falls Barrow", "Civil War Decisions"],
+  "inventory": ["Fine Clothes", "Silver Ring", "Wine"],
+  "personality_notes": {
+    "speaking_style": "Formal but warm, speaks with authority and wisdom",
+    "motivations": ["Protect Whiterun", "Maintain independence", "Navigate civil war pressures"],
+    "fears": ["Civil war consuming Skyrim", "Thalmor manipulation", "Making the wrong choice"],
+    "quirks": ["Often leans on his throne when thinking", "Calls people 'friend' when pleased"]
+  }
+}

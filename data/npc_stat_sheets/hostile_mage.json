@@ -1,0 +1,44 @@
+{
+  "name": "Hostile Mage",
+  "id": "npc_stat_hostile_mage",
+  "type": "Humanoid Mage",
+  "category": "Enemy",
+  "location": "Ruins, towers, caves, dungeons",
+  "faction": "Various (bandits, cultists, rogue mages)",
+  "aspects": {
+    "high_concept": "Destructive Spellcaster with Arcane Power",
+    "trouble": "Fragile in Close Combat",
+    "other_aspects": [
+      "Master of Elemental Magic",
+      "Relies on Magical Wards",
+      "Arrogant About Magical Superiority"
+    ]
+  },
+  "skills": {
+    "Great": ["Lore"],
+    "Good": ["Will", "Notice"],
+    "Fair": ["Deceive", "Athletics"],
+    "Average": ["Physique", "Fight"]
+  },
+  "stunts": [
+    "Elemental Mastery: Choose one element (fire, frost, lightning). Gain +2 to Lore attacks with that element",
+    "Magical Ward: Once per scene, create a magical barrier aspect 'Protected by Ward' with two free invokes to defend against attacks",
+    "Spell Surge: Spend a fate point to cast two spells in one turn instead of one"
+  ],
+  "stress": {
+    "physical": [false, false],
+    "mental": [false, false, false]
+  },
+  "consequences": {
+    "mild": null,
+    "moderate": null,
+    "severe": null
+  },
+  "refresh": 3,
+  "fate_points": 3,
+  "notes": "Hostile mages are spellcasters who use their power for personal gain or evil purposes. They may be rogue College students, bandit mages, or cultists. They rely on destructive magic and protective wards, but are vulnerable in melee combat.",
+  "combat_tactics": "Mages maintain distance and use destructive spells. They erect magical wards for protection and use terrain for cover. If enemies close to melee range, they try to create distance or use paralyze spells. They may flee if overwhelmed.",
+  "scene_triggers": ["Bandit camps with mages", "Rogue mage encounters", "Magical towers", "Cultist hideouts"],
+  "act_context": ["Act 1", "Act 2", "Act 3"],
+  "loot": ["Spell tomes", "Magical scrolls", "Enchanted jewelry", "Soul gems", "Alchemical ingredients"]
+}

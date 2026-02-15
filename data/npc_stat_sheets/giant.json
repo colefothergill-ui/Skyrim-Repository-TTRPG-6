@@ -1,0 +1,60 @@
+{
+  "name": "Giant",
+  "id": "enemy_giant",
+  "type": "Giant Humanoid",
+  "category": "Enemy",
+  "location": "Tundra, giant camps with mammoth herds",
+  "faction": "Giants",
+  "aspects": {
+    "high_concept": "Towering Herdsman of the Plains",
+    "trouble": "Peaceful Unless Provoked",
+    "other_aspects": [
+      "Tremendous Strength",
+      "Protector of Mammoths",
+      "Simple but Not Stupid"
+    ]
+  },
+  "skills": {
+    "Superb": ["Physique"],
+    "Great": ["Fight"],
+    "Good": ["Notice", "Will"],
+    "Fair": ["Athletics"]
+  },
+  "stunts": [
+    "Massive Club: Weapon: 3. On successful hit with style (3+ shifts), target is launched into the air (automatic severe consequence 'Skyrim Space Program')",
+    "Stomping Charge: Move up to two zones and attack in the same action at +2",
+    "Thick Hide: Armor: 2 against physical attacks",
+    "Mammoth Bond: Can call nearby mammoths to aid in combat (if at giant camp)"
+  ],
+  "stress": {
+    "physical": [false, false, false, false, false],
+    "mental": [false, false]
+  },
+  "consequences": {
+    "mild": null,
+    "moderate": null,
+    "severe": null
+  },
+  "refresh": 0,
+  "notes": "Giants are massive humanoids who live peacefully with their mammoth herds. They're generally non-aggressive unless their camps or mammoths are threatened. Despite their size and power, giants are intelligent and have their own society. They're one of the oldest inhabitants of Skyrim. Attacking a giant unprovoked often ends badly for the attacker.",
+  "special_mechanics": {
+    "armor": 2,
+    "massive_size": "Takes up 2 zones worth of space, can attack adjacent zones freely",
+    "launch_attack": "If attack succeeds with 3+ shifts, target is physically launched (takes falling damage, moved 2-3 zones away)",
+    "non_aggressive": "Giants won't attack unless provoked or camp is threatened within 2 zones"
+  },
+  "combat_tactics": "Giants prefer to avoid conflict but will defend their territory and mammoths fiercely. They use overwhelming strength and reach. Their club attacks are devastating and can launch targets into the air. They're straightforward fighters with no tricks, relying on raw power. Will stop fighting if threat retreats from their territory.",
+  "scene_triggers": ["Approaching giant camps", "Threatening mammoths", "Bounty quests", "Defending territory"],
+  "act_context": ["Act 1", "Act 2", "Act 3"],
+  "social_interaction": "Giants understand some Nordic language but rarely speak. They respond to non-threatening behavior and can be peacefully bypassed if party doesn't approach camp or mammoths. Offering tribute (food, painted cow) may gain safe passage.",
+  "loot": {
+    "guaranteed": ["Giant's toe (valuable alchemy ingredient)", "Mammoth cheese (if at camp)"],
+    "possible": ["Large sum of gold (50-150)", "Mammoth tusk", "Various alchemy ingredients"],
+    "camp_loot": "Giant camps contain chests with treasure, painted decorations, and mammoth products"
+  },
+  "relationship_mechanics": {
+    "with_mammoths": "Giants always fight alongside their mammoths. Killing a mammoth enrages giants (+2 to all rolls)",
+    "with_players": "Giants remember groups who harmed them or their herds. Will be hostile on future encounters",
+    "with_holds": "Sometimes holds put bounties on giants who wander too close to farms"
+  }
+}
