@@ -1,0 +1,14 @@
+{
+  "patch_id": "2026-02-15_whiterun_status_alignment",
+  "date": "2026-02-15",
+  "type": "canon_alignment",
+  "source": "Player clarification + campaign_state precedence",
+  "summary": "Battle of Whiterun has NOT occurred yet; Whiterun remains neutral (Imperial-leaning). Align world_state summary to match campaign_state.",
+  "canon_reference": [
+    "state/campaign_state.json -> civil_war_state.whiterun_control == neutral",
+    "state/campaign_state.json -> civil_war_state.battle_of_whiterun_status == approaching"
+  ],
+  "files_touched": [
+    "data/world_state/current_state.json"
+  ]
+}
