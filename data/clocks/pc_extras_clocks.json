@@ -1,7 +1,40 @@
 {
   "pc_extras_clocks": {
     "description": "Clocks tied to PC extras, artifact awakening, and persistent consequences created mid-session.",
-    "last_updated": "2026-02-02",
-    "clocks": {}
+    "last_updated": "2026-02-15",
+    "clocks": {
+      "pc_oskern_staff_of_cinders_awakening": {
+        "name": "Staff of Cinders — Awakening",
+        "description": "Unlock additional locked trait/stunt slots as the staff reawakens through mythic use, study, and story milestones.",
+        "current": 0,
+        "max": 6,
+        "completion_effect": "Unlock one locked trait OR one locked stunt slot on the Staff of Cinders (GM picks based on narrative).",
+        "advancement_triggers": [
+          "Use the staff in a pivotal scene tied to Clan Cindershroud legend (+1)",
+          "Meditate on a Word Wall while holding the staff (+1)",
+          "Defeat a named foe using fire magic while invoking the staff's aspect (+1)",
+          "Earn recognition from a Greybeard / master of the Voice (+1)",
+          "Survive a mythic consequence caused by your own power (+1)",
+          "Recover lost lore about Hakon Cindershroud (+1)"
+        ],
+        "setback_triggers": [
+          "Staff is stolen/confiscated (-2)",
+          "Public scandal damages the staff's legend (-1)"
+        ]
+      },
+      "pc_oskern_fire_breath_mastery": {
+        "name": "Shout Mastery — Fire Breath (Yol Toor Shul)",
+        "description": "Mastery clock for Fire Breath shout.",
+        "current": 8,
+        "max": 8,
+        "completion_effect": "Fire Breath can be used once per scene without Fate Point cost (still respects cooldown).",
+        "advancement_triggers": [
+          "Use Fire Breath successfully in meaningful situation (+1 segment)",
+          "Meditation/training scene (+1 segment)",
+          "Critical dramatic use (+2 segments)",
+          "Training from a master (Greybeards, Ulfric, etc.) (+1 segment)"
+        ]
+      }
+    }
   }
 }

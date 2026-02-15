@@ -1,0 +1,156 @@
+{
+  "pc_id": "pc_oskern_cindershroud",
+  "name": "Oskern Cindershroud",
+  "summary": "Imperial noble-turned-College adept; a controlled pyromancer with a dragon-headed staff and a gaze that says he has survived politics and war.",
+  "recognition_tags": [
+    "college_of_winterhold",
+    "imperial_noble",
+    "pyromancer",
+    "thuum_user",
+    "atronach_stone_blessed",
+    "cindershroud_name",
+    "staff_of_cinders"
+  ],
+  "first_impression_lines": {
+    "neutral": [
+      "College robes in my town? Keep the flames polite, mage.",
+      "Imperial accent, Nord winters... that's an ambitious mix.",
+      "That staff looks expensive. Try not to make it someone else's problem.",
+      "You carry yourself like a lord, but you dress like a scholar. Interesting.",
+      "Snow's falling and you're holding fire like it's a lantern. Show-off... useful, though.",
+      "Blue eyes, steady hands. Either you're disciplined... or dangerously confident."
+    ],
+    "positive": [
+      "Fire in the palm, calm in the eyes. I'll take that over a trembling apprentice any day.",
+      "College of Winterhold? Good. Skyrim needs minds that can actually finish a spell.",
+      "Cindershroud... I've heard stories. If you're half as capable, we'll get along.",
+      "That's a practiced stance. You've seen trouble and didn't blink.",
+      "A mage who can walk into a blizzard and argue it into leaving. Respect.",
+      "Your flame is clean - no wild sputter. You've done this before."
+    ],
+    "negative": [
+      "Keep your magic leashed. I've seen what 'controlled' fire does when it gets ideas.",
+      "College mages make promises. I care about results - and collateral.",
+      "Noble posture, mage hands... that's how trouble walks into a room.",
+      "If you're here to impress people, save it. Skyrim eats pride for breakfast.",
+      "That staff screams danger. Don't make me find out the hard way.",
+      "You've got the look of someone with secrets. Secrets make enemies."
+    ]
+  },
+  "conditional_first_impression_lines": [
+    {
+      "id": "college_recognition",
+      "if_npc_id_in": ["tolfdir", "savos_aren", "npc_stat_tolfdir", "npc_stat_savos_aren"],
+      "lines": {
+        "positive": [
+          "Oskern Cindershroud... the College hears your footsteps before you arrive. Good - now prove you deserve the echo.",
+          "Adept already, hm? Then you understand: talent is cheap; discipline is rare. Let's see which you have."
+        ],
+        "neutral": [
+          "College robes are not a shield. In the Hall of Attainment, your work speaks for you.",
+          "If you're here for titles, turn around. If you're here for knowledge, welcome."
+        ],
+        "negative": [
+          "Do not bring politics into my College. I'm tired of war trying to learn magic.",
+          "If you burn anything that isn't a lesson, you'll answer to me."
+        ]
+      }
+    },
+    {
+      "id": "thalmor_dislike",
+      "if_npc_blob_any": ["thalmor", "justiciar", "elenwen"],
+      "lines": {
+        "negative": [
+          "The College is watched, mage. Make your choices carefully - and quietly.",
+          "Ah. Another flame-bearer. Try not to set fire to treaties as well as halls."
+        ],
+        "neutral": [
+          "Imperial blood does not excuse recklessness. Nor does scholarship.",
+          "We have an interest in Winterhold's research. Do not obstruct it."
+        ]
+      }
+    },
+    {
+      "id": "ulfric_personal",
+      "if_npc_id_in": ["ulfric_stormcloak"],
+      "lines": {
+        "positive": [
+          "Cindershroud. The boy with the fire-breath. Good - Skyrim needs your spine as much as your spellcraft.",
+          "Nephew... you've grown sharper. Don't let the College dull you."
+        ],
+        "neutral": [
+          "You stand like your father. Decide what you stand for, and stand for it fully.",
+          "I taught you to shout, not to hesitate. Choose your path."
+        ]
+      }
+    },
+    {
+      "id": "imperial_command",
+      "if_npc_id_in": ["general_tullius"],
+      "lines": {
+        "positive": [
+          "Lord Cindershroud. If your magic is as disciplined as your manners, we'll have no problems.",
+          "A mage who understands duty? Rare. Don't waste it."
+        ],
+        "neutral": [
+          "Keep your talent available. Skyrim doesn't reward spectators.",
+          "I don't care about titles. I care about outcomes."
+        ]
+      }
+    },
+    {
+      "id": "cindershroud_artifact_recognition_scholars",
+      "if_npc_blob_any": ["bard", "skald", "historian", "lorekeeper", "loremaster", "scribe", "scholar", "college", "archive", "song", "saga"],
+      "lines": {
+        "neutral": [
+          "Hold on—those runes… that can't be… is that the Staff of Cinders?",
+          "That staff carries old stories. The kind that get people killed for asking questions."
+        ],
+        "positive": [
+          "By the Divines… the Staff of Cinders. You're walking history, my lord.",
+          "I know that craft. Dragon-scale petrified, ebony core… and runes of the Voice. That's real."
+        ],
+        "negative": [
+          "Put that relic away. Artifacts like that attract knives—and worse.",
+          "That staff has a legend. Legends come with debts."
+        ]
+      }
+    },
+    {
+      "id": "cindershroud_artifact_recognition_nords",
+      "if_npc_blob_any": ["nord", "stormcloak", "skyrim", "thane", "jarl", "shield-brother", "mead", "sovngarde"],
+      "lines": {
+        "neutral": [
+          "…I've heard that tale. Staff of Cinders. You're either brave—or you've lost your mind.",
+          "That's a saga-piece, that is. People used to whisper about it like it could hear them."
+        ],
+        "positive": [
+          "By Shor… the Staff of Cinders. Dragon of Haafingar blood still walks, then.",
+          "Ooooh, gods—yeah. That's the staff. That's the real one."
+        ],
+        "negative": [
+          "If that's the Staff of Cinders… then trouble's following you like wolves in snow.",
+          "Keep your heirloom close. Skyrim loves heroes… right up until it doesn't."
+        ]
+      }
+    },
+    {
+      "id": "cindershroud_artifact_named_npcs",
+      "if_npc_id_in": ["ulfric_stormcloak", "general_tullius", "tolfdir", "savos_aren"],
+      "lines": {
+        "neutral": [
+          "The Staff of Cinders… so the stories were true.",
+          "That staff changes the weight of a room. Be mindful where you carry it."
+        ],
+        "positive": [
+          "You've inherited more than wood and metal—you've inherited a symbol. Use it well.",
+          "That relic belongs in legend… but it's in your hands. Make it mean something."
+        ],
+        "negative": [
+          "Do you understand what people will do for that staff?",
+          "Power like that invites attention. Some of it will be deadly."
+        ]
+      }
+    }
+  ]
+}

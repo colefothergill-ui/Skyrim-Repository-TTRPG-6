@@ -267,6 +267,36 @@
       },
       "corruption_risk": "Daedric influence. The spear can be compelled to demand worthy prey, risky timing, or merciless escalation.",
       "story_impact": "Marks the wielder as Hircine-touched. Hunters fear/respect; Thalmor categorize as an anomaly; Companions take interest. At Level 4 awakening, the spear marks its wielder as an apex predator to beasts and lycanthropes."
+    },
+    {
+      "name": "Staff of Cinders",
+      "category": "Legendary Artifact (Staff)",
+      "origin": "Heirloom of Clan Cindershroud; forged from petrified dragon-scale, ebony, and true dragonfire. Runes along the shaft preserve Words of Power.",
+      "location": "Inherited by Oskern Cindershroud (PC-linked artifact)",
+      "description": "A dragon-headed staff with ember-bright runes. Its presence turns whispers into legends—especially among Nords, bards, and scholars of the Old Tongue.",
+      "mechanical_stats": {
+        "equipment_rating": 3,
+        "aspect": "Heirloom of the Dragon of Haafingar",
+        "major_enchantment": {
+          "name": "Runes of the Voice",
+          "effect": "Once per scene, when the wielder uses Lore to (a) Attack with the Thu'um, (b) Overcome to learn a Word of Power, or (c) Create Advantage via meditative contemplation of a shout, gain +2 on the roll.",
+          "limits": "Once per scene; requires Lore (not Will) to benefit."
+        },
+        "stunts_granted": [
+          {
+            "name": "Dragon Fire",
+            "text": "When using Lore to cast fire-based spells (Destruction-style effects), once per scene you may reroll your 4dF on an Attack or Create Advantage. This reroll does NOT apply to Thu'um by default."
+          }
+        ],
+        "locked_slots": {
+          "traits_locked": 1,
+          "stunts_locked": 3,
+          "unlock_method": "GM discretion via story milestones / artifact awakening clock"
+        }
+      },
+      "requirements": "Belongs to Clan Cindershroud; culturally recognized in Nordic oral tradition and by scholars of the Voice.",
+      "lore_significance": "Associated with Archmage Hakon Cindershroud and the title 'Dragon of Haafingar'.",
+      "story_impact": "Nords and lorekeepers may react with reverence or fear; bards may seek songs; Thalmor and rival mages may covet or surveil."
     }
   ],
   "standard_enchantments": {

@@ -1,0 +1,19 @@
+{
+  "pc_id": "pc_oskern_cindershroud",
+  "name": "Oskern Cindershroud",
+  "portrait": {
+    "path": "docs/assets/pcs/oskern_cindershroud.jpg",
+    "alt": "Oskern Cindershroud: hooded Imperial College adept conjuring fire, wielding a dragon-headed staff etched with ember runes."
+  },
+  "trigger_outputs": {
+    "Zone-In": "short",
+    "First Impression": "detailed",
+    "Winterhold": "detailed",
+    "College of Winterhold": "detailed",
+    "Combat": "short"
+  },
+  "appearance": {
+    "short": "A hooded Imperial mage in grey-blue College robes with gold trim, ash-brown cloak and scarf, dark hair and a trimmed beard, ice-blue eyes; carries a rune-lit dragon-headed staff and keeps a firespell ready.",
+    "detailed": "Tall and composed, Oskern moves like a man who learned court etiquette and battlefield caution in the same year. A grey-blue College robe (gold-edged) hangs under an ash-brown hood and scarf, the fabric weathered by Winterhold wind and travel. Dark hair frames his face; a neat beard sharpens his jaw; his eyes stay a steady, pale blue that reads people before it reads rooms. Leather cross-straps hold a satchel and pouches at his hips - ink, reagents, and the kind of small necessities mages pretend aren't contraband. In his right hand rests a staff carved into a dragon's head, ember-orange runes pulsing down the shaft like a contained furnace. His left hand habitually kindles a flame - not wild, but controlled - more signal than threat, and a reminder that he can heat the air (or the situation) on command."
+  }
+}
