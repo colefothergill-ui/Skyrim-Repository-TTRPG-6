@@ -41,7 +41,7 @@
       {
         "id": "oskern_politics_noble_obligation",
         "pillar": "politics",
-        "source_aspect_hint": "Nobility / courtly ties",
+        "source_aspect_hint": "nobility / courtly ties",
         "title": "Noble Obligation: You Don't Get to Stay Neutral",
         "when_to_offer": "When a leader asks for support, when refugees/guards petition you, or when a decision impacts a hold.",
         "the_push": "People treat you like a leader—because you *are* one, whether you want it or not.",
@@ -53,7 +53,7 @@
       {
         "id": "oskern_politics_knife_in_the_smile",
         "pillar": "politics",
-        "source_aspect_hint": "Courtier instincts",
+        "source_aspect_hint": "courtier instincts",
         "title": "Knife in the Smile",
         "when_to_offer": "When diplomacy is possible but you have leverage—and using it would be… sharp.",
         "the_push": "You can't resist playing the angle: insinuation, status pressure, strategic humiliation.",
@@ -77,7 +77,7 @@
       {
         "id": "oskern_prodigy_academic_arrogance",
         "pillar": "prodigy",
-        "source_aspect_hint": "Smart-mouth brainiac",
+        "source_aspect_hint": "academic arrogance",
         "title": "Correcting the Room",
         "when_to_offer": "When a professor, Jarl, officer, or elder states something wrong—or simplistically true.",
         "the_push": "You cannot let misinformation live. Your mouth moves before diplomacy does.",
@@ -89,7 +89,7 @@
       {
         "id": "oskern_winterhold_collapse_blame",
         "pillar": "winterhold",
-        "source_aspect_hint": "College membership",
+        "source_aspect_hint": "college membership",
         "title": "They Blame the College",
         "when_to_offer": "When dealing with Winterhold townsfolk, guards, Korir's court, or during local crises.",
         "the_push": "No matter what you do, someone spits 'Collapse' like it's your surname.",
@@ -125,7 +125,7 @@
       {
         "id": "oskern_korir_wants_the_dragon",
         "pillar": "winterhold",
-        "source_aspect_hint": "Noble lineage / Korir court",
+        "source_aspect_hint": "noble lineage / Korir court",
         "title": "Korir's Leverage: 'Dragon of Haafingar' as a Political Weapon",
         "when_to_offer": "When meeting Korir, discussing hold policy, or when Winterhold needs help.",
         "the_push": "Korir tries to parade your name and artifact as propaganda—either against the College or to strengthen his own legitimacy.",
