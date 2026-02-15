@@ -15,10 +15,23 @@
     ]
   },
   "skills": {
-    "Great": ["Deceive"],
-    "Good": ["Stealth", "Rapport"],
-    "Fair": ["Notice", "Burglary", "Contacts"],
-    "Average": ["Athletics", "Fight", "Resources"]
+    "Great": [
+      "Deceive"
+    ],
+    "Good": [
+      "Stealth",
+      "Rapport"
+    ],
+    "Fair": [
+      "Notice",
+      "Burglary",
+      "Contacts"
+    ],
+    "Average": [
+      "Athletics",
+      "Fight",
+      "Resources"
+    ]
   },
   "stunts": [
     "Fast Talker: +2 to Deceive when creating advantages through distraction or misdirection",
@@ -26,8 +39,17 @@
     "Guild Connections: +2 to Contacts when seeking information in criminal underworld"
   ],
   "stress": {
-    "physical": [false, false, false],
-    "mental": [false, false, false, false]
+    "physical": [
+      false,
+      false,
+      false
+    ],
+    "mental": [
+      false,
+      false,
+      false,
+      false
+    ]
   },
   "consequences": {
     "mild": null,
@@ -36,12 +58,12 @@
   },
   "refresh": 3,
   "armor": 0,
-  "notes": "Brynjolf is the second-in-command of the Thieves Guild, a charismatic Nord with a silver tongue and keen eye for talent. He operates openly in Riften's marketplace, recruiting promising thieves while maintaining the guild's operations. Despite the guild's decline, he remains fiercely loyal and works tirelessly to restore its former glory. He has a natural ability to read people and often sees potential in unlikely candidates.\n\n[Update] Insaerndel secured Battle-Born Arcana as a sanctioned Whiterun front/safehouse; Brynjolf receives Olfrid's sealed reply tonight.",
+  "notes": "Brynjolf is the second-in-command of the Thieves Guild, a charismatic Nord with a silver tongue and keen eye for talent. He operates openly in Riften's marketplace, recruiting promising thieves while maintaining the guild's operations. Despite the guild's decline, he remains fiercely loyal and works tirelessly to restore its former glory. He has a natural ability to read people and often sees potential in unlikely candidates.",
   "trust_clock": {
     "enabled": true,
-    "current": 4,
+    "current": 0,
     "max": 8,
-    "description": "Brynjolf's personal trust in Insaerndel (separate from overall guild standing).",
+    "description": "Brynjolf's personal trust in the PC (separate from overall guild standing).",
     "gain_triggers": [
       "+1: clean heist with no collateral fallout",
       "+1: protecting guild secrecy under pressure",
@@ -61,12 +83,26 @@
     }
   },
   "combat_tactics": "Brynjolf avoids direct combat when possible, preferring stealth and misdirection. When forced to fight, he uses hit-and-run tactics, exploiting environmental advantages and his Shadow Step ability to stay mobile. He'll talk his way out of situations before resorting to violence.",
-  "scene_triggers": ["Riften marketplace", "Thieves Guild recruitment", "Whiterun mission", "Guild questline"],
-  "act_context": ["Act 1", "Act 2", "Act 3"],
+  "scene_triggers": [
+    "Riften marketplace",
+    "Thieves Guild recruitment",
+    "Whiterun mission",
+    "Guild questline"
+  ],
+  "act_context": [
+    "Act 1",
+    "Act 2",
+    "Act 3"
+  ],
   "starting_equipment": {
     "armor": "Guild Master's Armor (Armor:0, +1 to Stealth)",
     "weapon": "Guild Dagger (Weapon:1, concealable)",
-    "other": ["Lockpicks x5", "Thieves Guild emblem", "50 gold", "Contact list"]
+    "other": [
+      "Lockpicks x5",
+      "Thieves Guild emblem",
+      "50 gold",
+      "Contact list"
+    ]
   },
   "social_interaction": "Brynjolf is smooth, confident, and charming. He speaks with a warm Nordic accent and has a way of making people feel special and capable. He's excellent at reading people and adjusting his approach accordingly. While he operates outside the law, he has his own code of honor - he doesn't kill unnecessarily and protects guild members fiercely. He's pragmatic but optimistic about the guild's future.",
   "relationships": {
@@ -79,9 +115,23 @@
   },
   "personality_notes": {
     "speaking_style": "Smooth and charismatic, uses terms like 'lass' and 'lad', friendly but professional",
-    "motivations": ["Restore Thieves Guild to former glory", "Recruit talented individuals", "Maintain guild operations and income", "Protect guild members"],
-    "fears": ["Guild's complete collapse", "Losing more members", "Being unable to restore guild's luck", "Betraying Nocturnal's trust"],
-    "quirks": ["Always sizing people up for potential", "Refers to guild as 'family'", "Maintains optimism despite setbacks"],
+    "motivations": [
+      "Restore Thieves Guild to former glory",
+      "Recruit talented individuals",
+      "Maintain guild operations and income",
+      "Protect guild members"
+    ],
+    "fears": [
+      "Guild's complete collapse",
+      "Losing more members",
+      "Being unable to restore guild's luck",
+      "Betraying Nocturnal's trust"
+    ],
+    "quirks": [
+      "Always sizing people up for potential",
+      "Refers to guild as 'family'",
+      "Maintains optimism despite setbacks"
+    ],
     "character_growth": "Eventually discovers Mercer's betrayal, must reconcile faith with reality, learns to trust his own judgment over authority"
   },
   "whiterun_mission": {

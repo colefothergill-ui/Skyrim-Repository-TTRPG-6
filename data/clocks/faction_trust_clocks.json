@@ -1,7 +1,7 @@
 {
   "faction_trust_clocks": {
     "description": "Track party standing and trust with all major factions in Skyrim",
-    "last_updated": "2026-02-12",
+    "last_updated": "2026-02-02",
     "trust_scale": {
       "0-2": {
         "level": "Stranger",
@@ -31,9 +31,9 @@
     "clocks": {
       "imperial_legion_trust": {
         "faction": "Imperial Legion",
-        "current_trust": 6,
+        "current_trust": 0,
         "max_trust": 10,
-        "trust_level": "Champion",
+        "trust_level": "Stranger",
         "advancement_triggers": {
           "join_legion": "+3 (Joining the Legion quest)",
           "major_battle_victory": "+2 per victory",
@@ -173,9 +173,9 @@
       },
       "thieves_guild_trust": {
         "faction": "Thieves Guild",
-        "current_trust": 8,
+        "current_trust": 0,
         "max_trust": 10,
-        "trust_level": "Champion",
+        "trust_level": "Stranger",
         "advancement_triggers": {
           "join_guild": "+2",
           "complete_major_heist": "+2",

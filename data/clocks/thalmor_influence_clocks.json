@@ -1,12 +1,12 @@
 {
   "thalmor_influence_clocks": {
     "description": "Track Thalmor schemes and influence operations across Skyrim",
-    "last_updated": "2026-02-05",
+    "last_updated": "2026-02-02",
     "clocks": {
       "thalmor_influence_skyrim": {
         "name": "Thalmor Influence in Skyrim",
         "description": "Overall Thalmor control and influence across Skyrim",
-        "current_progress": 2,
+        "current_progress": 0,
         "total_segments": 10,
         "completion_effect": "Thalmor achieve dominant influence, Empire becomes puppet state",
         "advancement_triggers": [
@@ -25,7 +25,7 @@
       "talos_persecution_campaign": {
         "name": "Talos Persecution Campaign",
         "description": "Thalmor efforts to eliminate Talos worship and enforce the White-Gold Concordat",
-        "current_progress": 5,
+        "current_progress": 0,
         "total_segments": 10,
         "completion_effect": "Talos worship completely suppressed, shrines destroyed, worshippers imprisoned",
         "advancement_triggers": [
@@ -50,7 +50,7 @@
       "intelligence_network": {
         "name": "Thalmor Intelligence Network",
         "description": "Spy network gathering intelligence on threats to Aldmeri Dominion",
-        "current_progress": 5,
+        "current_progress": 0,
         "total_segments": 8,
         "completion_effect": "Comprehensive spy network, Thalmor know everything happening in Skyrim",
         "advancement_triggers": [
@@ -75,7 +75,7 @@
       "blades_elimination": {
         "name": "Blades Elimination",
         "description": "Hunt down and destroy the remaining Blades members",
-        "current_progress": 7,
+        "current_progress": 0,
         "total_segments": 10,
         "completion_effect": "The Blades are extinct, no organized resistance to Thalmor remains",
         "advancement_triggers": [
@@ -100,7 +100,7 @@
       "dragon_crisis_investigation": {
         "name": "Dragon Crisis Investigation",
         "description": "Thalmor attempts to understand and potentially exploit the dragon crisis",
-        "current_progress": 2,
+        "current_progress": 0,
         "total_segments": 8,
         "completion_effect": "Thalmor understand dragon crisis and seek to manipulate it for Dominion benefit",
         "advancement_triggers": [
@@ -124,7 +124,7 @@
       "ulfric_manipulation": {
         "name": "Ulfric Manipulation",
         "description": "Thalmor's covert influence over Ulfric Stormcloak to prolong civil war",
-        "current_progress": 6,
+        "current_progress": 0,
         "total_segments": 8,
         "completion_effect": "Ulfric becomes unwitting Thalmor asset, civil war continues indefinitely",
         "advancement_triggers": [

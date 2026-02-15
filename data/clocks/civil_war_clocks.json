@@ -1,12 +1,12 @@
 {
   "civil_war_clocks": {
     "description": "Track the progression of the civil war between Imperials and Stormcloaks",
-    "last_updated": "2026-02-08",
+    "last_updated": "2026-02-02",
     "clocks": {
       "imperial_military_dominance": {
         "name": "Imperial Military Dominance",
         "description": "Imperial Legion's progress toward winning the civil war through military victories",
-        "current_progress": 5,
+        "current_progress": 0,
         "total_segments": 10,
         "completion_effect": "Imperial Legion wins the civil war decisively",
         "advancement_triggers": [
@@ -24,7 +24,7 @@
       "stormcloak_rebellion_momentum": {
         "name": "Stormcloak Rebellion Momentum",
         "description": "Stormcloak forces' progress toward independence and military victory",
-        "current_progress": 3,
+        "current_progress": 0,
         "total_segments": 10,
         "completion_effect": "Stormcloaks win the civil war and Skyrim gains independence",
         "advancement_triggers": [
@@ -42,7 +42,7 @@
       "battle_of_whiterun_countdown": {
         "name": "Battle of Whiterun Countdown",
         "description": "Tension builds as both sides prepare for the pivotal Battle of Whiterun",
-        "current_progress": 8,
+        "current_progress": 0,
         "total_segments": 8,
         "completion_effect": "Battle of Whiterun occurs - Whiterun must choose a side or fall",
         "advancement_triggers": [
@@ -61,7 +61,7 @@
       "thalmor_civil_war_manipulation": {
         "name": "Thalmor Civil War Manipulation",
         "description": "Thalmor agents work to prolong the civil war and keep both sides weak",
-        "current_progress": 1,
+        "current_progress": 0,
         "total_segments": 8,
         "completion_effect": "Thalmor successfully prevent decisive victory, keeping Skyrim divided and weak",
         "advancement_triggers": [
@@ -81,7 +81,7 @@
       "civilian_war_weariness": {
         "name": "Civilian War Weariness",
         "description": "The toll of civil war on Skyrim's common people",
-        "current_progress": 6,
+        "current_progress": 0,
         "total_segments": 8,
         "completion_effect": "Mass civilian unrest, refugees flood major cities, economy collapses",
         "advancement_triggers": [
@@ -105,10 +105,10 @@
     },
     "major_battles": {
       "battle_of_whiterun": {
-        "status": "completed_imperial_victory",
+        "status": "not_started",
         "description": "The pivotal battle that will determine Whiterun's allegiance",
         "importance": "Critical - Forces neutral parties to choose sides",
-        "outcome": "Imperial victory; Galmar Stone-Fist killed, Stormcloak chain-of-command and lines broken, Whiterun's Thalmor node neutralized, and the city held firmly for the Empire.",
+        "outcome": null,
         "possible_outcomes": [
           "Imperial victory - Whiterun remains neutral/Imperial",
           "Stormcloak victory - Whiterun falls to Stormcloaks",
