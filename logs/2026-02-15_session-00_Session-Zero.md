@@ -83,6 +83,52 @@ This checkpoint is a canon-alignment snapshot intended to keep the repo/export c
 
 The team departs the College for Saarthal. The first real question isn't "what's down there?" — it's **how quickly the situation forces Oskern to choose between caution and speed** while three students (each with their own ego + fear cocktail) try not to die on his watch.
 
+## Courtyard Leadership & Wolves on the Road
+
+### Courtyard Speech - Role Assignments
+Following the initial setup, Oskern stood before the assembled students in the College courtyard. The expedition south required organization, and as the son of a war hero and a lord of noble lineage, command came naturally—even if it drew unwanted attention.
+
+**Role Assignments**:
+- **Scouts**: Faster students tasked with ranging ahead
+- **Rear Guard**: Watchful students protecting the column's back
+- **Core Formation**: Main group with supply packs
+- **Oskern**: Front leadership position
+
+The speech was measured but confident. Students who had been uncertain now had purpose. The formation took shape with surprising discipline.
+
+### Mechanics Block
+
+**Scene Aspect Created Earlier**: "Signed for Their Safety"
+- **Created by**: Oskern (prior to courtyard scene)
+- **Free Invokes**: 1
+- **Notes**: PC declared responsibility for student safety during expedition planning; promise carries weight.
+
+**Compel Accepted**: "Prove You're Worthy of the Dragon of Haafingar"
+- **Fate Point Gained**: +1 FP (total: 2 FP)
+- **Scene Aspect Created**: "All Eyes on Cindershroud" (GM-controlled, 1 free invoke)
+- **Effect**: Oskern's command presence and noble bearing drew attention from everyone present. His reputation now precedes him on this journey.
+
+**Rapport Roll - Create Advantage**: "Calm Under Command"
+- **Roll**: +1 on 4dF + Rapport +3 + 2 (invoke "Signed for Their Safety") = +6 vs. Difficulty 2
+- **Result**: Success with Style
+- **Free Invoke Consumed**: Invoked "Signed for Their Safety" to ensure success
+- **Scene Aspect Created**: "Calm Under Command" (2 free invokes)
+- **Effect**: Students are organized, roles are clear, formation discipline is reinforced
+
+**Scene Aspect Updated**:
+- "Signed for Their Safety" → free invokes reduced to 0 (consumed in Rapport roll)
+
+### Travel Beat: Wolves on the Road
+
+As the expedition descended from Winterhold's frozen heights toward the winding road south, the landscape opened into snow-swept tundra. The cold bit hard, but the formation held.
+
+Then the scouts spotted movement: **ice wolves**, pale as death, shadowing the expedition from rocky outcrops. They didn't attack—not yet—but their presence was unmistakable. Yellow eyes gleamed in the failing light.
+
+The students tensed. Oskern's hand moved instinctively to the Staff of Cinders. The wolves kept pace, watching, waiting.
+
+**Threat Level**: Moderate (wolves are tracking, not yet hostile)
+**Next Beat**: Decide whether to press forward, confront the pack, or adjust route
+
 ---
 
 **Session End Time**: Staging complete; travel to Saarthal next  

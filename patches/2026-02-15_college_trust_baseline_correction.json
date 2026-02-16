@@ -1,0 +1,16 @@
+{
+  "patch_id": "2026-02-15_college_trust_baseline_correction",
+  "date": "2026-02-15",
+  "type": "canon_alignment",
+  "source": "Session 0 setup + PC backstory alignment",
+  "summary": "Corrected College of Winterhold trust from 2 (basic member) to 5 (Adept baseline) to reflect Oskern's established status as an Adept at the College, not a new initiate.",
+  "canon_reference": [
+    "data/pcs/pc_oskern_cindershroud.json -> aspects.other_aspects[0] == 'Adept of the College of Winterhold'",
+    "data/pcs/pc_oskern_cindershroud.json -> backstory mentions 'Adept of the College of Winterhold at 23'",
+    "data/clocks/faction_trust_clocks.json -> trust_benefits.5 == 'Command small units, Intel, Safe passage'"
+  ],
+  "rationale": "The PC is not joining the College for the first time - he's already an established Adept with standing. Trust level 2 represents basic membership (first join), while level 5 represents an Ally with established rapport and privileges. This correction aligns the trust clock with the PC's canonical status in the backstory and aspects.",
+  "files_touched": [
+    "data/clocks/faction_trust_clocks.json"
+  ]
+}
