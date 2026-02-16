@@ -50,7 +50,7 @@
       "appearance": "Mediterranean features, olive to light skin",
       "racial_ability": {
         "name": "Voice of the Emperor",
-        "effect": "Once per session, gain +2 to Rapport or Deceive in social situations"
+        "effect": "Once per session, automatically succeed at a Rapport roll to calm NPCs or avert a violent escalation."
       },
       "skill_bonuses": [
         "Block",
