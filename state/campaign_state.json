@@ -18,7 +18,18 @@
     "entered_winterhold_hold": true
   },
   "scene_last_major_update": "2026-02-02",
-  "scene_aspects": {},
+  "scene_aspects": {
+    "Shield-Wall Doctrine": {
+      "free_invokes": 1,
+      "created_by": "pc_oskern_cindershroud",
+      "notes": "Imperial military doctrine aspect; invoked during ice wolf encounter. 1 free invoke remaining."
+    },
+    "Magicka-Starved Aftershock": {
+      "free_invokes": 1,
+      "created_by": "standing_stone_atronach",
+      "notes": "Atronach backlash after heavy Destruction casting; GM-controlled invoke until cleared by potion/absorption."
+    }
+  },
   "scene_clocks": {},
   "player": {
     "college_member": true,

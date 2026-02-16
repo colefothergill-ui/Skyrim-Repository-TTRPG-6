@@ -1,0 +1,27 @@
+{
+  "college_story_clocks": {
+    "description": "Story clocks for College of Winterhold questline progression and key NPC dynamics.",
+    "last_updated": "2026-02-15",
+    "clocks": {
+      "ancano_suspicion_meter": {
+        "name": "Ancano's Suspicion of PC",
+        "description": "Tracks Ancano's awareness of the PC as a potential threat to his plans with the Eye of Magnus. Higher values mean more active countermeasures.",
+        "current": 1,
+        "max": 8,
+        "completion_effect": "Ancano actively sabotages the PC or attempts to neutralize them as a threat.",
+        "advancement_triggers": [
+          "PC displays exceptional magical power publicly (+1)",
+          "PC investigates Thalmor activities (+1)",
+          "PC grows close to faculty members who distrust Ancano (+1)",
+          "PC questions Ancano directly or challenges his authority (+2)",
+          "PC discovers Eye of Magnus secrets (+2)"
+        ],
+        "setback_triggers": [
+          "PC appears incompetent or harmless (-1)",
+          "PC publicly supports Thalmor positions (-1)"
+        ],
+        "notes": "[2026-02-15] Initial tick: students witnessed PC's powerful Fireball display during ice wolf encounter, demonstrating notable magical capability."
+      }
+    }
+  }
+}
