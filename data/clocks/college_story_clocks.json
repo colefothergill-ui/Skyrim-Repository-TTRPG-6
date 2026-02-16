@@ -60,13 +60,34 @@
           "Proximity to powerful artifacts (Eye of Magnus, etc.)",
           "Heroic acts witnessed by many"
         ]
+      },
+      "ancano_suspicion_meter": {
+        "name": "Ancano's Suspicion of PC",
+        "description": "Tracks Ancano's awareness of the PC as a potential threat to his plans with the Eye of Magnus. Higher values mean more active countermeasures.",
+        "current": 1,
+        "max": 8,
+        "status": "active",
+        "completion_effect": "Ancano actively sabotages the PC or attempts to neutralize them as a threat.",
+        "advancement_triggers": [
+          "PC displays exceptional magical power publicly (+1)",
+          "PC investigates Thalmor activities (+1)",
+          "PC grows close to faculty members who distrust Ancano (+1)",
+          "PC questions Ancano directly or challenges his authority (+2)",
+          "PC discovers Eye of Magnus secrets (+2)"
+        ],
+        "setback_triggers": [
+          "PC appears incompetent or harmless (-1)",
+          "PC publicly supports Thalmor positions (-1)"
+        ],
+        "notes": "[2026-02-15] Initial tick: students witnessed PC's powerful Fireball display during ice wolf encounter, demonstrating notable magical capability."
       }
     },
     "gm_guidance": {
       "saarthal_focus": "The Saarthal expedition is the immediate narrative driver. Use the logistics clock to pace the dungeon crawl and student survival challenges.",
       "eye_arc": "The Eye of Magnus discovery should be foreshadowed but not rushed. Let it emerge naturally from Saarthal exploration.",
       "politics": "College politics simmer in the background. Use them to create social complications and compel opportunities.",
-      "staff_awakening": "The Staff of Cinders awakening is a long-term character arc. Advance slowly and deliberately based on player choices."
+      "staff_awakening": "The Staff of Cinders awakening is a long-term character arc. Advance slowly and deliberately based on player choices.",
+      "ancano_suspicion": "Track Ancano's growing awareness of the PC. At higher levels, he becomes an active antagonist rather than just a suspicious observer."
     }
   }
 }

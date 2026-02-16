@@ -47,14 +47,25 @@ Oskern signs out a **College-Issued Field Kit**, accepts a **Standing Stone Comp
 
 ### Scene Aspects (Created)
 - **College-Issued Field Kit** (2 free invokes) — signed out supplies (scrolls, potions, emergency gear).
-- **Shield-Wall Doctrine** (2 free invokes) — Oskern's formation order for the student team.
+- **Shield-Wall Doctrine** (2 free invokes, later reduced to 1) — Oskern's formation order for the student team. One free invoke used during ice wolf encounter.
 - **Signed for Their Safety** (1 free invoke) — Mirabelle's directive and accountability pressure.
+- **Magicka-Starved Aftershock** (1 GM free invoke) — Atronach backlash after ice wolf encounter; persists until cleared.
 
 ### Active Scene Clock
 - **Saarthal Expedition Logistics**: 1/4  
   *(1=briefed+supplied; 2=arrive; 3=breach wards; 4=secure exit.)*
 
 ---
+
+## Character Backstory
+
+**Backstory Summary**: **Civil War Entry**: Oskern's Response: "My Father, Lord Elitrigg Cindershroud, and my Mother, Lady Audania of Cyrodil, entered me into a raffle called life. Just a jest, but only just. As the heir to Clan Cindershroud and son of the Legendary War Hero, the Dragon of Hjaalmarch, when war broke out, it was inevitable that I would end up in it. The short of it is that I was once Thane of Solitude by the age of 18, accepted and assessed as an Adept of the College of Winterhold at 23, and watched my best friend High King Torygg die at 25. When that happened, my Clan was split between loyalties, you see. My Father, former Patriarch of our Clan, was as close as Kin with Jarl Ulfric, and for that matter, so was I, often referring to him as my Uncle. A fact that, despite how others in my Clan felt about Ulfric after the infamous duel, landed the majority of my Clan on the headman's chopping block. Only I was spared, thanks to Jarl Elisif's fondness for me and my Mother's connections to the Septim Dynasty back in Cyrodil. Orchestrating me to be sent to Winterhold, where I have been with the College ever since.
+
+**Civil War Stance**: Oskern's Response: That... It is a question more than a little complex. On one hand, my Father was a true Son of Skyrim, Talos Worshipper, and Shield-Brother of Uncle Ulfric. On the other hand, High King Torygg  was my childhood friend, and I served Solitude's bureaucracy proudly, as well as protected Queen Elisif as her pseudo Battle-Mage, for upwards of two years. She, too, is very important to me. So, siding with Ulfric would feel like a betrayal to her and to Torygg, but to take up arms in retribution for them... That would mean betraying my Mother, my Father, my Clan, and Legacy as the next Dragon of Haafingar. All that being said, I serve the College, and the magical pursuits I always wanted as a child, but it feels cowardly.
+
+**Motivation**: Oskern's Response: "Once upon a time, it was the Legacy of each Dragon of Haafingar, a title bestowed upon my family's Patriarch since the early 3rd Era, with my Ancestor Hakon Cindershroud mastering the Thu'um, and being renowned for protecting Solitude with the Staff of Cinder's, and the Shout; Yol Tor Shuul! That's: Fire Breath, in the common tongue. Nowadays, that's the only Shout required by the Patriarch of Clan Cindershroud to don the title, a Shout I am pleased to say, even as an Imperial, that I have mastered in spades. These days, what drives me is my studies, my dream of becoming a legendary Arch Mage, and perhaps restoring my family's Nobility when this damnable war is over, and a new High King or Queen is chosen. Talos let that be soon.
+
+**Connections**: Oskern's Response: "Another, complicated question... Jarl Ulfric helped me hone my Thu'um, rather, he helped me Master Fire Breath's shout. He is the reason I can wear the Title: Dragon of Haafingar. He was also the closest thing to Kin to my Nord Father, and always treated my Mother, Audania, with the utmost respect, despite the fact that she was an Imperial and the 4th or 5th Cousin of the Emperor of Cyrodil.  For this, he will always be my Uncle. Then there's Jarl Elisif... I never spoke this aloud, but I truly believe that I had loved Elisif, and she... Well, she never said it outright, but I knew she felt fondly for me on a deep level. Outside of those two, I have friends in my colleagues, Onmund, J'zargo, and my teacher, Tolfdir. Whiterun? Hm, I once met the Harbinger of Jorvaskr with my father when I was but a boy, Kodlak, I think his name is. Beside him, I have spoken to Jarl Balgruuf the Greater, he is a man worthy of his title to say the least."
 
 ## Continuity Notes (Canon Fixes)
 
@@ -131,5 +142,39 @@ The students tensed. Oskern's hand moved instinctively to the Staff of Cinders. 
 
 ---
 
-**Session End Time**: Staging complete; travel to Saarthal next  
-**Real World Duration**: Session Zero + mid-session alignment checkpoint
+**Session End Time**: Campaign start (pre-adventure)
+**Real World Duration**: Session Zero setup
+
+---
+
+## Travel Encounter: Ice Wolf Pack Ambush
+
+### Context
+During travel between locations, the party was ambushed by a pack of ice wolves. The encounter tested Oskern's combat magic and tactical thinking.
+
+### Mechanics
+- **Lore Attack Roll**: 4dF (+1) + Lore +4 = 5 (base attack roll)
+- **Fireball Stunt**: +2 bonus (once per scene, area attack)
+- **Atronach Stone Surge**: +2 bonus (Atronach-empowered casting)
+- **Aspect Invocation**: "Shield-Wall Doctrine" +2 (free invoke - tactical positioning and Imperial military training)
+- **Total Attack**: 5 (roll) + 2 (Fireball) + 2 (Atronach) + 2 (Shield-Wall free invoke) = 11
+- **Outcome**: Ice wolf pack was **Taken Out** in a single devastating strike
+
+### Consequences & Aspects
+- **Temporary Aspect Created**: "Magicka-Starved Aftershock" (1 GM free invoke)
+  - Represents the backlash from the Atronach Stone after channeling significant Destruction magic
+  - Persists until cleared by potion or magical absorption
+  - GM may invoke this to complicate future magical actions
+
+### Clock Updates
+- **Ancano Suspicion Meter**: +1 (now at 1/8)
+  - College students witnessed the memorable display of magical power
+  - Ancano becomes aware of PC's exceptional capabilities
+- **College of Winterhold Trust**: Set to 5/10
+  - Established standing as capable member
+
+### Fate Points
+- **Starting FP**: 2 (from earlier session activities)
+- **Compel Accepted**: During ice wolf encounter, accepted a compel (+1 FP)
+- **Aspect Invocation**: Used free invoke from "Shield-Wall Doctrine" (no FP cost)
+- **Current Fate Points**: 3 (2 starting + 1 compel - 0 for free invoke)

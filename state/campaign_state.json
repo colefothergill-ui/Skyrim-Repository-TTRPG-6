@@ -35,14 +35,19 @@
       "notes": "Satchel of scrolls, potions, and emergency gear signed out for Saarthal."
     },
     "Shield-Wall Doctrine": {
-      "free_invokes": 2,
+      "free_invokes": 1,
       "created_by": "pc_oskern_cindershroud",
-      "notes": "Formation order: Oskern+Onmund front with wards; Brelyna mid support; J'zargo rear artillery."
+      "notes": "Formation order: Oskern+Onmund front with wards; Brelyna mid support; J'zargo rear artillery. Invoked during ice wolf encounter (1 free invoke consumed)."
     },
     "Signed for Their Safety": {
       "free_invokes": 1,
       "created_by": "npc_stat_mirabelle_ervine",
       "notes": "Mirabelle's directive: you are accountable for student welfare on this expedition."
+    },
+    "Magicka-Starved Aftershock": {
+      "free_invokes": 1,
+      "created_by": "standing_stone_atronach",
+      "notes": "Atronach backlash after heavy Destruction casting during ice wolf encounter; GM-controlled invoke until cleared by potion/absorption."
     }
   },
   "scene_clocks": {
