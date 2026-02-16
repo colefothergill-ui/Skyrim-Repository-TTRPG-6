@@ -1,0 +1,72 @@
+{
+  "college_story_clocks": {
+    "description": "Tracks College of Winterhold storyline progression and related quest clocks",
+    "last_updated": "2026-02-15",
+    "clocks": {
+      "saarthal_expedition_logistics": {
+        "name": "Saarthal Expedition Logistics",
+        "current": 1,
+        "max": 4,
+        "status": "active",
+        "notes": "1=briefed+supplied; 2=arrive; 3=breach wards; 4=secure exit.",
+        "related_quest": "college_under_saarthal",
+        "advancement_triggers": [
+          "Team departs College and reaches Saarthal dig site",
+          "Breach the ancient wards sealing the excavation chamber",
+          "Secure exit route after discovering anomaly"
+        ]
+      },
+      "eye_of_magnus_discovery": {
+        "name": "Eye of Magnus — Discovery Arc",
+        "current": 0,
+        "max": 6,
+        "status": "pending",
+        "notes": "Tracks progress toward unveiling the Eye of Magnus artifact. 0=unknown; 1=rumors; 2=first sighting; 3=ancano involved; 4=crisis escalates; 5=containment breach; 6=resolution.",
+        "related_quest": "college_eye_of_magnus",
+        "advancement_triggers": [
+          "Discover ancient texts or artifacts referencing the Eye",
+          "First encounter with the Eye in Saarthal",
+          "Ancano takes interest in the Eye",
+          "Eye's power becomes uncontrollable",
+          "Major crisis event (lockdown, magical disturbances)",
+          "Final confrontation and resolution"
+        ]
+      },
+      "college_internal_politics": {
+        "name": "College Internal Politics",
+        "current": 0,
+        "max": 8,
+        "status": "background",
+        "notes": "Tracks growing tensions between faculty, Thalmor presence (Ancano), and Arch-Mage Aren's authority. Higher values indicate more political instability.",
+        "advancement_triggers": [
+          "Faculty disputes over research ethics or methods",
+          "Ancano's influence grows among certain faculty",
+          "Arch-Mage makes controversial decisions",
+          "Student incidents create factional divides",
+          "Thalmor pressure intensifies"
+        ]
+      },
+      "staff_of_cinders_awakening": {
+        "name": "Staff of Cinders — Awakening",
+        "current": 0,
+        "max": 10,
+        "status": "background",
+        "notes": "Oskern's artifact slowly awakens through mythic deeds and resonance with ancient power. Unlocks new traits/stunts as clock advances.",
+        "related_artifact": "staff_of_cinders",
+        "advancement_triggers": [
+          "Using the staff in moments of legend or myth",
+          "Resonance with ancient Nordic sites or dragon magic",
+          "Thu'um mastery milestones",
+          "Proximity to powerful artifacts (Eye of Magnus, etc.)",
+          "Heroic acts witnessed by many"
+        ]
+      }
+    },
+    "gm_guidance": {
+      "saarthal_focus": "The Saarthal expedition is the immediate narrative driver. Use the logistics clock to pace the dungeon crawl and student survival challenges.",
+      "eye_arc": "The Eye of Magnus discovery should be foreshadowed but not rushed. Let it emerge naturally from Saarthal exploration.",
+      "politics": "College politics simmer in the background. Use them to create social complications and compel opportunities.",
+      "staff_awakening": "The Staff of Cinders awakening is a long-term character arc. Advance slowly and deliberately based on player choices."
+    }
+  }
+}

@@ -6,26 +6,14 @@
     "Civil war between Imperials and Stormcloaks intensifies",
     "High King Torygg was killed by Ulfric Stormcloak",
     "Thalmor influence in Skyrim grows stronger",
-    "Battle of Whiterun approaching (Stormcloak forces massing; defenses tightening)",
+    "Battle of Whiterun looms as both sides pressure Jarl Balgruuf",
     "Galmar Stone-Fist remains alive and commands Stormcloak forces"
   ],
   "political_situation": {
     "skyrim_status": "Civil War in progress",
-    "imperial_control": [
-      "Solitude",
-      "Falkreath",
-      "Morthal"
-    ],
-    "stormcloak_control": [
-      "Windhelm",
-      "Dawnstar",
-      "Winterhold",
-      "Riften"
-    ],
-    "neutral": [
-      "Whiterun",
-      "Markarth (contested)"
-    ]
+    "imperial_control": ["Solitude", "Falkreath", "Morthal"],
+    "stormcloak_control": ["Windhelm", "Dawnstar", "Winterhold", "Riften"],
+    "neutral": ["Markarth (contested)", "Whiterun (contested/neutral)"]
   },
   "post_dragon_crisis": {
     "status": "Dragons are largely inactive",
@@ -34,25 +22,13 @@
     "blades_status": "Nearly extinct, few remain in hiding"
   },
   "faction_standings": {
-    "Imperial Legion": {
-      "strength": 60,
-      "morale": 55,
-      "public_support": 45
-    },
-    "Stormcloaks": {
-      "strength": 55,
-      "morale": 70,
-      "public_support": 50
-    },
-    "Whiterun": {
-      "strength": 40,
-      "morale": 65,
-      "public_support": 75
-    }
+    "Imperial Legion": { "strength": 60, "morale": 55, "public_support": 45 },
+    "Stormcloaks": { "strength": 55, "morale": 70, "public_support": 50 },
+    "Whiterun": { "strength": 40, "morale": 65, "public_support": 75 }
   },
   "weather_and_season": "Late summer, generally pleasant weather",
   "rumors_and_news": [
-    "Galmar Stone-Fist has been sighted drilling Stormcloak troops and moving supplies near Whiterun — the assault is being prepared.",
+    "Galmar Stone-Fist was seen rallying Stormcloak troops after the west-wall clash — bruised, furious, and very much alive.",
     "Caravans report College mages traveling north under guard; Winterhold locals are muttering about 'another Collapse waiting to happen.'",
     "Civil war tensions rise as both sides prepare for battle",
     "Jarl Balgruuf refuses to take sides in the civil war",
@@ -67,5 +43,5 @@
     "Bandit activity on trade routes",
     "Political instability in neutral holds"
   ],
-  "notes": "Campaign Focus: The civil war between Imperials and Stormcloaks dominates Skyrim. The Thalmor work behind the scenes to keep both sides weak. Jarls are being forced to choose sides, and the common people are caught in the middle. The Battle of Whiterun will be a pivotal moment.\n[2026-02-15] Continuity correction: prior references to Galmar Stone-Fist being slain and to a completed Goldenglow Estate job belonged to a retired PC timeline and are NOT canon for Oskern.\n[2026-02-15] Alignment: Whiterun is neutral (Imperial-leaning) and the battle is approaching, not yet underway."
+  "notes": "Campaign Focus: The civil war between Imperials and Stormcloaks dominates Skyrim. The Thalmor work behind the scenes to keep both sides weak. Jarls are being forced to choose sides, and the common people are caught in the middle. The Battle of Whiterun will be a pivotal moment.\n[2026-02-15] Continuity correction: prior references to Galmar Stone-Fist being slain and to a completed Goldenglow Estate job belonged to a retired PC timeline and are NOT canon for Oskern.\n[2026-02-15] Whiterun timing correction: the Battle of Whiterun has NOT begun; Balgruuf remains officially neutral."
 }

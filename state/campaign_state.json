@@ -7,40 +7,65 @@
   "active_pc_id": "pc_oskern_cindershroud",
   "session_zero_completed": true,
   "session_count": 0,
-  "last_updated": "2026-02-15 03:37:54",
-  "starting_location": "Winterhold - College Bridge",
-  "current_scene_id": "A1_S01_COLLEGE_BRIDGE",
-  "current_location": "Winterhold - College Bridge",
+  "last_updated": "2026-02-15 18:06:13",
+  "starting_location": "Winterhold",
+  "current_scene_id": "A1_S00_COLLEGE_SAARTHAL_BRIEFING",
+  "current_location": "College of Winterhold — Courtyard",
   "active_hold": "Winterhold Hold",
-  "current_objective": "Enter the College of Winterhold and re-establish standing; meet gatekeeper and proceed to faculty intake.",
-  "current_npcs": [],
+  "current_objective": "Lead the Saarthal expedition team; reach the dig site and keep the students alive.",
+  "current_npcs": [
+    "mirabelle_ervine",
+    "tolfdir",
+    "onmund",
+    "brelyna_maryon",
+    "jzargo"
+  ],
   "scene_flags": {
-    "entered_winterhold_hold": true
+    "active_quest_id": "college_under_saarthal",
+    "college_first_lessons_completed": true,
+    "expedition_team": [
+      "onmund",
+      "brelyna_maryon",
+      "jzargo"
+    ],
+    "expedition_lead": "pc_oskern_cindershroud",
+    "compel_resolution": {
+      "atronach_stone_magicka_starved": "Accepted compel; spent Magicka potion to clear immediate exhaustion before departure."
+    }
   },
   "scene_last_major_update": "2026-02-15",
   "scene_aspects": {
-    "Signed for Their Safety": {
-      "free_invokes": 0,
-      "created_by": "pc_oskern_cindershroud",
-      "notes": "PC declared responsibility for student safety; promise carries weight."
+    "College-Issued Field Kit": {
+      "free_invokes": 2,
+      "created_by": "npc_stat_mirabelle_ervine",
+      "notes": "Satchel of scrolls, potions, and emergency gear signed out for Saarthal."
     },
-    "Calm Under Command": {
+    "Shield-Wall Doctrine": {
       "free_invokes": 2,
       "created_by": "pc_oskern_cindershroud",
-      "notes": "Roles assigned; students steadied; formation discipline reinforced."
+      "notes": "Formation order: Oskern+Onmund front with wards; Brelyna mid support; J'zargo rear artillery."
     },
-    "All Eyes on Cindershroud": {
+    "Signed for Their Safety": {
       "free_invokes": 1,
-      "created_by": "gm_compel",
-      "notes": "Your name and command presence draw attention; rumors travel."
+      "created_by": "npc_stat_mirabelle_ervine",
+      "notes": "Mirabelle's directive: you are accountable for student welfare on this expedition."
     }
   },
-  "scene_clocks": {},
+  "scene_clocks": {
+    "saarthal_expedition_logistics": {
+      "name": "Saarthal Expedition Logistics",
+      "current": 1,
+      "max": 4,
+      "notes": "1=briefed+supplied; 2=arrive; 3=breach wards; 4=secure exit."
+    }
+  },
   "player": {
     "college_member": true,
     "college_rank": "Adept",
     "has_staff_of_cinders": true,
-    "artifacts": ["staff_of_cinders"]
+    "artifacts": [
+      "staff_of_cinders"
+    ]
   },
   "civil_war_state": {
     "player_alliance": "neutral",
@@ -132,22 +157,31 @@
         "faction_affinity": "stormcloaks"
       },
       {
-        "npc_id": "npc_stat_hadvar",
-        "name": "Hadvar",
+        "npc_id": "npc_stat_onmund",
+        "name": "Onmund",
         "status": "available",
-        "loyalty": 50,
-        "location": "Riverwood or Whiterun",
-        "recruitment_condition": "Party encounters Hadvar and helps with Imperial-related task",
-        "faction_affinity": "imperial_legion"
+        "loyalty": 30,
+        "location": "College of Winterhold",
+        "recruitment_condition": "Complete Under Saarthal and earn Onmund's respect (keep him alive).",
+        "faction_affinity": "college_of_winterhold"
       },
       {
-        "npc_id": "npc_stat_ralof",
-        "name": "Ralof",
+        "npc_id": "npc_stat_brelyna_maryon",
+        "name": "Brelyna Maryon",
         "status": "available",
-        "loyalty": 50,
-        "location": "Riverwood or Stormcloak camps",
-        "recruitment_condition": "Party encounters Ralof and helps with Stormcloak-related task",
-        "faction_affinity": "stormcloaks"
+        "loyalty": 30,
+        "location": "College of Winterhold",
+        "recruitment_condition": "Complete Under Saarthal and earn Brelyna's trust (prove discretion).",
+        "faction_affinity": "college_of_winterhold"
+      },
+      {
+        "npc_id": "npc_stat_jzargo",
+        "name": "J'zargo",
+        "status": "available",
+        "loyalty": 30,
+        "location": "College of Winterhold",
+        "recruitment_condition": "Complete Under Saarthal and keep J'zargo from reckless collateral damage.",
+        "faction_affinity": "college_of_winterhold"
       }
     ],
     "dismissed_companions": [],
@@ -164,8 +198,11 @@
       "faction_alignment": "neutral"
     }
   ],
-  "starting_narrative": "The party arrives in Whiterun, trying to remain neutral in the civil war. They have not yet committed to either side in the conflict. Jarl Balgruuf the Greater has reluctantly sided with the Empire, and the Stormcloaks prepare to assault the city. The party may align with neutral factions like the Companions, who focus on honor over politics. The Battle of Whiterun approaches, and the party must navigate the conflict while maintaining their independence. They may encounter Hadvar or Ralof in Riverwood or Whiterun and decide whether to accept either as a companion.",
+  "starting_narrative": "Oskern Cindershroud begins at the College of Winterhold, already a capable Adept with a famous (and politically loaded) name. The first crisis is local: Tolfdir's expedition to Saarthal and the sealed anomaly beneath it. The civil war remains a looming backdrop—Whiterun is still officially neutral, and both sides pressure Jarl Balgruuf—while the Thalmor maneuver in the shadows.",
   "faction_relationships": {
+    "college_of_winterhold": 30,
+    "tolfdir": 35,
+    "mirabelle_ervine": 30,
     "companions": 20
   },
   "npc_first_impressions": {}
