@@ -9,10 +9,10 @@
   "session_count": 0,
   "last_updated": "2026-02-15 03:37:54",
   "starting_location": "Winterhold - College Bridge",
-  "current_scene_id": "A1_S01_COLLEGE_BRIDGE",
+  "current_scene_id": "A1_S01_SAARTHAL_ENTRANCE",
   "current_location": "Saarthal Excavation Site — Entrance",
   "active_hold": "Winterhold Hold",
-  "current_objective": "Enter the College of Winterhold and re-establish standing; meet gatekeeper and proceed to faculty intake.",
+  "current_objective": "Begin the Saarthal expedition: check in with Tolfdir, assemble the student team at the excavation entrance, and prepare to enter the ruins.",
   "current_npcs": [],
   "scene_flags": {
     "entered_winterhold_hold": true
