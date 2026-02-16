@@ -18,7 +18,23 @@
     "entered_winterhold_hold": true
   },
   "scene_last_major_update": "2026-02-02",
-  "scene_aspects": {},
+  "scene_aspects": {
+    "Signed for Their Safety": {
+      "free_invokes": 0,
+      "created_by": "pc_oskern_cindershroud",
+      "notes": "PC declared responsibility for student safety; promise carries weight."
+    },
+    "Calm Under Command": {
+      "free_invokes": 2,
+      "created_by": "pc_oskern_cindershroud",
+      "notes": "Roles assigned; students steadied; formation discipline reinforced."
+    },
+    "All Eyes on Cindershroud": {
+      "free_invokes": 1,
+      "created_by": "gm_compel",
+      "notes": "Your name and command presence draw attention; rumors travel."
+    }
+  },
   "scene_clocks": {},
   "player": {
     "college_member": true,
