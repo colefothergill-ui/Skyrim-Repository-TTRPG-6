@@ -178,3 +178,74 @@ During travel between locations, the party was ambushed by a pack of ice wolves.
 - **Compel Accepted**: During ice wolf encounter, accepted a compel (+1 FP)
 - **Aspect Invocation**: Used free invoke from "Shield-Wall Doctrine" (no FP cost)
 - **Current Fate Points**: 3 (2 starting + 1 compel - 0 for free invoke)
+
+---
+
+## Saarthal Inner Threshold: Fire Breath & Slab Reunited
+
+### Context
+The expedition team reached Saarthal's inner threshold, where a sealed stone slab blocked further progress. Ancient Nordic glyphs glowed faintly—a transmutation puzzle requiring both magical knowledge and raw power. Behind them, movement echoed through the ruins.
+
+A **Draugr Sentinel**, fully armored and burning with ancient enchantments, emerged from an alcove. The desiccated guardian moved with horrifying purpose, weapon raised.
+
+### Oskern's Pep Talk & Fire Breath
+
+Oskern stepped forward, Staff of Cinders in hand. He turned to the students, his voice carrying the practiced authority of a battlefield commander—Imperial discipline tempered with Nord fire.
+
+**"Hold formation. Onmund, Brelyna, J'zargo—you focus on that slab. I'll handle the dead."**
+
+The students moved to positions around the glowing barrier. Oskern raised the Staff, its runework flaring crimson, and drew breath.
+
+**"YOL... TOOR... SHUL!"**
+
+The Thu'um erupted—Fire Breath amplified through the Staff of Cinders' 'Runes of the Voice' enchantment. The chamber lit orange-red as dragonfire crashed into the Draugr Sentinel.
+
+### Mechanics: Fire Breath Attack
+- **Action**: Lore attack (Fire Breath Thu'um)
+- **Roll**: Base Lore attack
+- **Modifiers**:
+  - Staff of Cinders 'Runes of the Voice' enchantment: +2 (amplifies Thu'um)
+  - Weapon rating: 4 stress
+  - Draugr fire vulnerability: +2 additional stress (ancient undead weakness)
+- **Outcome**: Draugr Sentinel **Taken Out**
+  - The sentinel's desiccated form ignited completely, armor glowing white-hot before collapsing into ash and bone fragments
+  - Students witnessed Thu'um power firsthand (Ancano Suspicion +2)
+
+### Onmund's Transmutation Roll: Opening the Slab
+
+With the immediate threat eliminated, Onmund approached the sealed slab. The glyphs pulsed—a complex transmutation ward requiring precise magical manipulation.
+
+**Action**: Overcome obstacle (transmutation puzzle)  
+**Opposition**: Great (+4)
+
+**Mechanics**:
+- **Skill**: Lore (Onmund's primary magical skill)
+- **Teamwork**: Brelyna Maryon and J'zargo provided support (+2 teamwork bonus)
+- **Aspect Invoked**: "Calm Under Command" (free invoke) — students focused and coordinated under Oskern's leadership
+- **Roll**: Success with Style
+- **Boost Created**: "Stone Unlocked" (1 free invoke)
+  - The slab segments separated cleanly, revealing passage deeper into Saarthal
+  - No trap triggered, no complication—professional execution
+
+**Oskern's Notes**: *"Onmund proved capable under pressure. The students worked as a unit—exactly what I needed to see. Still, that Thu'um display... I felt eyes on me. Not just theirs."*
+
+### Clock Updates (2026-02-15)
+
+**Saarthal Expedition Progress**: 4 → 5 / 6
+- Draugr guardian eliminated
+- Inner threshold transmutation slab opened
+- Team prepared to advance toward Eye chamber
+
+**Student Safety Pressure**: 0 / 8
+- No injuries or stress to students
+- Clean tactical execution maintained morale
+- Leadership and protection effective
+
+**Ancano Suspicion Meter**: 1 → 3 / 8
+- +2 from Fire Breath display (ancient Nordic power, Thu'um mastery)
+- Students will report back to College about expedition events
+- Ancano's awareness of PC's capabilities now elevated beyond "talented Adept"
+
+### Fate Points
+- **Free Invoke Used**: "Calm Under Command" (consumed for transmutation assist)
+- **Current Fate Points**: 3 (no change this beat)

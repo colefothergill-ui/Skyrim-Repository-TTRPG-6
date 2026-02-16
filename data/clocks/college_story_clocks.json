@@ -4,16 +4,37 @@
     "last_updated": "2026-02-15",
     "clocks": {
       "saarthal_expedition_logistics": {
-        "name": "Saarthal Expedition Logistics",
-        "current": 1,
-        "max": 4,
+        "name": "Saarthal Expedition Progress",
+        "current": 5,
+        "max": 6,
         "status": "active",
-        "notes": "1=briefed+supplied; 2=arrive; 3=breach wards; 4=secure exit.",
+        "notes": "Tracks team progress through Saarthal ruins. 1=briefed; 2=arrive; 3=inner halls; 4=draugr encounter; 5=inner threshold reached; 6=Eye chamber.",
         "related_quest": "college_under_saarthal",
         "advancement_triggers": [
           "Team departs College and reaches Saarthal dig site",
-          "Breach the ancient wards sealing the excavation chamber",
-          "Secure exit route after discovering anomaly"
+          "Navigate inner halls and chambers",
+          "Overcome draugr guardians",
+          "Breach transmutation slab barrier",
+          "Reach Eye of Magnus chamber"
+        ]
+      },
+      "student_safety_pressure": {
+        "name": "Student Safety Pressure",
+        "current": 0,
+        "max": 8,
+        "status": "active",
+        "notes": "Tracks accumulated stress, injuries, and morale issues among student team. 0=safe/confident; 8=crisis/mutiny/casualties.",
+        "related_quest": "college_under_saarthal",
+        "advancement_triggers": [
+          "Students take stress or consequences",
+          "Close calls or near-death moments",
+          "Leadership failures or poor tactical decisions",
+          "Prolonged danger without rest"
+        ],
+        "setback_triggers": [
+          "Students successfully protected from harm",
+          "Morale-boosting leadership or victories",
+          "Rest and recovery opportunities"
         ]
       },
       "eye_of_magnus_discovery": {
@@ -64,7 +85,7 @@
       "ancano_suspicion_meter": {
         "name": "Ancano's Suspicion of PC",
         "description": "Tracks Ancano's awareness of the PC as a potential threat to his plans with the Eye of Magnus. Higher values mean more active countermeasures.",
-        "current": 1,
+        "current": 3,
         "max": 8,
         "status": "active",
         "completion_effect": "Ancano actively sabotages the PC or attempts to neutralize them as a threat.",
@@ -79,7 +100,7 @@
           "PC appears incompetent or harmless (-1)",
           "PC publicly supports Thalmor positions (-1)"
         ],
-        "notes": "[2026-02-15] Initial tick: students witnessed PC's powerful Fireball display during ice wolf encounter, demonstrating notable magical capability."
+        "notes": "[2026-02-15] +1 from ice wolf Fireball display; +2 from Fire Breath Thu'um use in Saarthal (ancient Nordic power displayed to students)."
       }
     },
     "gm_guidance": {
