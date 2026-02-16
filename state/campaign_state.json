@@ -48,6 +48,26 @@
       "free_invokes": 1,
       "created_by": "standing_stone_atronach",
       "notes": "Atronach backlash after heavy Destruction casting during ice wolf encounter; GM-controlled invoke until cleared by potion/absorption."
+    },
+    "Measured, Orderly Grit": {
+      "free_invokes": 1,
+      "created_by": "pc_oskern_cindershroud",
+      "notes": "Voice of the Emperor steadies the student team before entering Saarthal."
+    },
+    "Saarthal Resonance Attunement": {
+      "free_invokes": 1,
+      "created_by": "scene_environment",
+      "notes": "Ancient Nordic magic resonates with the expedition's approach; provided clarity during sentinel ash salvage (1 free invoke consumed during loot action)."
+    },
+    "Ward Held at the Seam": {
+      "free_invokes": 1,
+      "created_by": "npc_stat_onmund + npc_stat_tolfdir",
+      "notes": "Onmund maintained ward integrity while Tolfdir reinforced the seam; delayed approaching draugr."
+    },
+    "Right Key, Right Now": {
+      "free_invokes": 1,
+      "created_by": "pc_oskern_cindershroud",
+      "notes": "Boost from rapid salvage: found the correct key/sigil in the sentinel ash."
     }
   },
   "scene_clocks": {
@@ -56,21 +76,6 @@
       "current": 1,
       "max": 4,
       "notes": "1=briefed+supplied; 2=arrive; 3=breach wards; 4=secure exit."
-    }
-  },
-  "scene_last_major_update": "2026-02-02",
-  "scene_aspects": {
-    "Measured, Orderly Grit": {
-      "free_invokes": 1,
-      "created_by": "pc_oskern_cindershroud",
-      "notes": "Voice of the Emperor steadies the student team before entering Saarthal."
-    }
-  },
-  "scene_clocks": {
-    "saarthal_expedition_logistics": {
-      "current": 2,
-      "max": 8,
-      "name": "Saarthal Expedition Logistics"
     }
   },
   "player": {

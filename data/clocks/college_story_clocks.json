@@ -16,6 +16,22 @@
           "Secure exit route after discovering anomaly"
         ]
       },
+      "saarthal_expedition_progress": {
+        "name": "Saarthal Expedition Progress — Danger Escalation",
+        "current": 6,
+        "max": 6,
+        "status": "critical",
+        "notes": "Tracks dungeon depth and undead response escalation. 6/6 = full awakening; draugr response at maximum intensity.",
+        "related_quest": "college_under_saarthal",
+        "advancement_triggers": [
+          "Breach outer chambers",
+          "Disturb ancient seals",
+          "Trigger ward failures",
+          "Uncover sentinel remains",
+          "Loot sacred artifacts",
+          "Full draugr awakening and counter-assault"
+        ]
+      },
       "eye_of_magnus_discovery": {
         "name": "Eye of Magnus — Discovery Arc",
         "current": 0,

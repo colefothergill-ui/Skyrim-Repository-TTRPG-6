@@ -178,3 +178,66 @@ During travel between locations, the party was ambushed by a pack of ice wolves.
 - **Compel Accepted**: During ice wolf encounter, accepted a compel (+1 FP)
 - **Aspect Invocation**: Used free invoke from "Shield-Wall Doctrine" (no FP cost)
 - **Current Fate Points**: 3 (2 starting + 1 compel - 0 for free invoke)
+
+---
+
+## Saarthal Interior: Loot Under Fire & Ward Hold
+
+### Context
+Having reached Saarthal's inner chambers, the expedition encountered a collapsing ward system. As draugr began stirring in adjacent passages, Oskern spotted sentinel ash containing what appeared to be a burial sigil—a potential key to bypassing the failing wards. Time was critical: the team needed to secure the artifact before the undead fully awakened.
+
+### Mechanics: Loot Under Pressure
+
+**Scene Aspect Created** (prior to this action): "Saarthal Resonance Attunement" (2 free invokes)
+- **Created by**: Scene environment (ancient Nordic magic resonating with expedition's approach)
+- **Effect**: The ruins' latent magical signature provided clarity and focus during high-stress salvage operations
+
+**Notice Overcome Roll - Rapid Salvage**:
+- **Skill**: Notice (Overcome action)
+- **Difficulty**: Good (+3) — identifying and extracting the correct sigil from ash and debris under time pressure
+- **Roll**: 4dF + Notice skill
+- **Aspect Invoked**: "Saarthal Resonance Attunement" (+2 bonus, consumed 1 free invoke)
+- **Outcome**: Success with Style
+- **Boost Created**: "Right Key, Right Now" (1 free invoke)
+- **Item Acquired**: **Saarthal Burial Sigil** (quest key / ward-bypass artifact)
+
+**Aspect Updated**:
+- "Saarthal Resonance Attunement" → 1 free invoke remaining (1 consumed during loot action)
+
+### Mechanics: Ward Seam Defense
+
+While Oskern secured the sigil, Onmund and Tolfdir worked in tandem to stabilize a critical ward seam that was beginning to fail. Their combined effort held the breach long enough to delay the approaching draugr and buy the team precious seconds.
+
+**Create Advantage (Teamwork) - Hold the Line**:
+- **Primary Actor**: Onmund (ward maintenance)
+- **Support**: Tolfdir (ward reinforcement and seam repair)
+- **Difficulty**: Good (+3) — stabilizing failing ancient Nordic wards under combat pressure
+- **Outcome**: Success
+- **Scene Aspect Created**: "Ward Held at the Seam" (1 free invoke)
+  - **Created by**: npc_stat_onmund + npc_stat_tolfdir
+  - **Effect**: Onmund maintained ward integrity while Tolfdir reinforced the seam; delayed approaching draugr
+
+### Clock Updates
+
+**Saarthal Expedition Progress — Danger Escalation**: 6/6 (COMPLETE)
+- The expedition has now penetrated deep enough into Saarthal to trigger full draugr awakening
+- Undead response escalates to maximum intensity
+- The team faces immediate combat threat as ancient guardians rise to defend the ruins
+
+**Narrative Impact**:
+- The sigil provides a path forward through ward-sealed passages
+- But the cost is clear: the expedition has disturbed something ancient, and Saarthal's defenders are fully awakened
+- The team must now fight or flee, with limited options for retreat
+
+### Session Aspects Summary (Updated)
+- **"College-Issued Field Kit"**: 2 free invokes remaining
+- **"Shield-Wall Doctrine"**: 1 free invoke remaining
+- **"Signed for Their Safety"**: 1 free invoke remaining
+- **"Magicka-Starved Aftershock"**: 1 GM invoke remaining
+- **"Measured, Orderly Grit"**: 1 free invoke remaining
+- **"Saarthal Resonance Attunement"**: 1 free invoke remaining (1 consumed)
+- **"Ward Held at the Seam"**: 1 free invoke (NEW)
+- **"Right Key, Right Now"**: 1 free invoke (boost, NEW)
+
+### Fate Points (Post-Salvage)
+- **Current FP**: 3 (unchanged — free invoke used, not paid invoke)

@@ -1,0 +1,31 @@
+{
+  "item_id": "saarthal_burial_sigil",
+  "name": "Saarthal Burial Sigil",
+  "category": "quest_key",
+  "type": "ward_bypass",
+  "origin": "Saarthal Excavation Site — Sentinel Ash",
+  "description": "A stone medallion recovered from sentinel ash in Saarthal's inner chambers. Carved with ancient Nordic runes that pulse faintly with residual ward-magic. The sigil appears to be a key component for bypassing or stabilizing failing Nordic wards.",
+  "mechanical_stats": {
+    "item_rating": 0,
+    "base_bonus": "None (quest item)",
+    "aspect": "Ancient Ward-Key",
+    "special_ability": {
+      "name": "Ward Bypass",
+      "effect": "When used at appropriate ward-sealed passages in Saarthal, grants +2 to Lore rolls to analyze, bypass, or stabilize ancient Nordic ward magic. Can be invoked as an aspect for +2 or reroll when dealing with Saarthal's ward systems.",
+      "cost": "Narrative permission (must be at relevant ward location)",
+      "limitation": "Only functions within Saarthal; no combat or general magic bonus"
+    }
+  },
+  "requirements": "None (carried automatically once acquired)",
+  "lore_significance": "Burial sigils were used by ancient Nordic priests to mark sanctified remains and control ward access. This particular sigil suggests the sentinel whose ashes contained it held significant authority in Saarthal's final days.",
+  "story_impact": "Key to progressing deeper into Saarthal. May provide insight into the ruins' history and the circumstances of its fall. Tolfdir or other College scholars may express interest in studying it after the expedition.",
+  "acquisition": {
+    "session": "2026-02-15",
+    "method": "Looted from sentinel ash during time-pressure encounter",
+    "roll": "Notice Overcome, invoked Saarthal Resonance Attunement",
+    "boost_created": "Right Key, Right Now"
+  },
+  "tags": ["quest_item", "saarthal", "college_questline", "ward_magic", "nordic_ruin"],
+  "weight": "Negligible",
+  "value": "Priceless (quest item, not for sale)"
+}
