@@ -238,7 +238,7 @@
     "Spell of Greater Restoration: Because Oskern's mother was an Imperial Battlemage, he has learned how to mend the wrost of wounds on himself and those around him. Once per Scene, Oskern can channel resotrative Magicka and heal himself or another companion within the same zone for 3 Physical Stress or reduce one Physical Consequence. Severe to Moderate, Moderate to Mild, Mild to None."
   ],
   "refresh": 1,
-  "fate_points": 1,
+  "fate_points": 2,
   "visual_profile_ref": "data/pcs/visual_profiles/oskern_cindershroud_visual.json",
   "portrait_path": "docs/assets/pcs/oskern_cindershroud.jpg",
   "equipment": {
