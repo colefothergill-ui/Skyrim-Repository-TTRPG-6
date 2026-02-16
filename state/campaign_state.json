@@ -10,7 +10,7 @@
   "last_updated": "2026-02-15 03:37:54",
   "starting_location": "Winterhold - College Bridge",
   "current_scene_id": "A1_S01_COLLEGE_BRIDGE",
-  "current_location": "Winterhold - College Bridge",
+  "current_location": "Saarthal Excavation Site — Entrance",
   "active_hold": "Winterhold Hold",
   "current_objective": "Enter the College of Winterhold and re-establish standing; meet gatekeeper and proceed to faculty intake.",
   "current_npcs": [],
@@ -18,8 +18,20 @@
     "entered_winterhold_hold": true
   },
   "scene_last_major_update": "2026-02-02",
-  "scene_aspects": {},
-  "scene_clocks": {},
+  "scene_aspects": {
+    "Measured, Orderly Grit": {
+      "free_invokes": 1,
+      "created_by": "pc_oskern_cindershroud",
+      "notes": "Voice of the Emperor steadies the student team before entering Saarthal."
+    }
+  },
+  "scene_clocks": {
+    "saarthal_expedition_logistics": {
+      "current": 2,
+      "max": 8,
+      "name": "Saarthal Expedition Logistics"
+    }
+  },
   "player": {
     "college_member": true,
     "college_rank": "Adept",

@@ -222,7 +222,7 @@
       },
       "college_of_winterhold_trust": {
         "faction": "College of Winterhold",
-        "current_trust": 2,
+        "current_trust": 5,
         "max_trust": 10,
         "trust_level": "Member (in good standing)",
         "advancement_triggers": {
