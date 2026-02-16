@@ -134,11 +134,11 @@ The students tensed. Oskern's hand moved instinctively to the Staff of Cinders. 
 During travel between locations, the party was ambushed by a pack of ice wolves. The encounter tested Oskern's combat magic and tactical thinking.
 
 ### Mechanics
-- **Lore Attack Roll**: Base total of 9
+- **Lore Attack Roll**: 4dF (+1) + Lore +4 = 5 (base attack roll)
 - **Fireball Stunt**: +2 bonus (once per scene, area attack)
 - **Atronach Stone Surge**: +2 bonus (Atronach-empowered casting)
-- **Aspect Invocation**: "Shield-Wall Doctrine" +2 (tactical positioning and Imperial military training)
-- **Total Effectiveness**: Attack roll 9 + bonuses = extremely effective
+- **Aspect Invocation**: "Shield-Wall Doctrine" +2 (free invoke - tactical positioning and Imperial military training)
+- **Total Attack**: 5 (roll) + 2 (Fireball) + 2 (Atronach) + 2 (Shield-Wall free invoke) = 11
 - **Outcome**: Ice wolf pack was **Taken Out** in a single devastating strike
 
 ### Consequences & Aspects
@@ -155,5 +155,7 @@ During travel between locations, the party was ambushed by a pack of ice wolves.
   - Established standing as capable member
 
 ### Fate Points
-- **Compel Accepted**: PC accepted a compel during or prior to this encounter
-- **Current Fate Points**: 3 (after compel acceptance and aspect invocation)
+- **Starting FP**: 2 (from earlier session activities)
+- **Compel Accepted**: During ice wolf encounter, accepted a compel (+1 FP)
+- **Aspect Invocation**: Used free invoke from "Shield-Wall Doctrine" (no FP cost)
+- **Current Fate Points**: 3 (2 starting + 1 compel - 0 for free invoke)
