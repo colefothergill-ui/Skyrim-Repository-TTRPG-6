@@ -201,15 +201,45 @@ The students moved to positions around the glowing barrier. Oskern raised the St
 The Thu'um erupted—Fire Breath amplified through the Staff of Cinders' 'Runes of the Voice' enchantment. The chamber lit orange-red as dragonfire crashed into the Draugr Sentinel.
 
 ### Mechanics: Fire Breath Attack
-- **Action**: Lore attack (Fire Breath Thu'um)
-- **Roll**: Base Lore attack
-- **Modifiers**:
-  - Staff of Cinders 'Runes of the Voice' enchantment: +2 (amplifies Thu'um)
-  - Weapon rating: 4 stress
-  - Draugr fire vulnerability: +2 additional stress (ancient undead weakness)
-- **Outcome**: Draugr Sentinel **Taken Out**
-  - The sentinel's desiccated form ignited completely, armor glowing white-hot before collapsing into ash and bone fragments
-  - Students witnessed Thu'um power firsthand (Ancano Suspicion +2)
+
+**Action Type**: Lore-based attack using the Fire Breath Thu'um  
+**Skill Used**: Lore **+4** (Oskern's practiced magical theory and Thu'um study)
+
+**Attack Roll**:
+- **Base Roll (4dF)**: `[+][+][0][-]` → **+1**
+- **Lore Skill**: **+4**
+- **Runes of the Voice (Staff of Cinders)**: **+2** (amplifies Thu'um attacks)
+- **Attack Total**: +4 (Lore) + 1 (4dF) + 2 (Runes) = **+7**
+
+**Defender**: Draugr Sentinel
+- **Defense Skill**: Athletics **+2** (lumbering reposition with partial shield cover)
+- **Defense Roll (4dF)**: `[-][0][-][0]` → **-2**
+- **Defense Total**: +2 (Athletics) - 2 (4dF) = **0**
+
+**Shifts of Success**: Attack +7 vs Defense 0 → **7 shifts**
+
+**Weapon Rating**: Fire Breath via Staff of Cinders treated as **Weapon:4 (fire)**
+- On a hit, Weapon:4 adds **+4** stress-equivalent shifts → 7 + 4 = **11 effective shifts**
+
+**Draugr Fire Vulnerability**: **+2 effective shifts** vs. fire-based attacks (ancient undead weakness)
+- Final effective impact: 11 + 2 = **13 shifts** of damage potential
+
+**Draugr Sentinel Durability (for reference)**:
+- Stress boxes: 2-, 3-, and 4-stress boxes → up to **9 stress** if all are used
+- Consequences: Mild (2) and Moderate (4) → up to **6 more** if it stays in the fight
+- **Total capacity if it fights to the bitter end**: 9 (stress) + 6 (consequences) = **15**
+- However, fire vulnerability means the sentinel cannot meaningfully "fight through" a full incendiary engulfment; any hit that would normally push it to stacking multiple consequences instead **rapidly consumes its desiccated body**.
+
+**Rules Application**:
+- The 13 effective shifts are more than enough to:
+  - Fill the 4-stress and 3-stress boxes (7),
+  - Force at least a Mild and Moderate consequence (2 + 4 = 6),
+  - And still leave shifts unaccounted for once its flammable, desiccated condition is considered.
+- Rather than track every consequence explicitly, the Draugr is **Taken Out** in a way that fits the fiction: instant incineration under overwhelming, fire-typed damage it is especially vulnerable to.
+
+**Outcome**: Draugr Sentinel **Taken Out**
+- The sentinel's desiccated form ignited completely, armor glowing white-hot before collapsing into ash and bone fragments
+- Students witnessed Thu'um power firsthand (Ancano Suspicion +2)
 
 ### Onmund's Transmutation Roll: Opening the Slab
 
@@ -219,19 +249,23 @@ With the immediate threat eliminated, Onmund approached the sealed slab. The gly
 **Opposition**: Great (+4)
 
 **Mechanics**:
-- **Skill**: Lore (Onmund's primary magical skill)
-- **Teamwork**: Brelyna Maryon and J'zargo provided support (+2 teamwork bonus)
-- **Aspect Invoked**: "Calm Under Command" (free invoke) — students focused and coordinated under Oskern's leadership
-- **Roll**: Success with Style
-- **Boost Created**: "Stone Unlocked" (1 free invoke)
-  - The slab segments separated cleanly, revealing passage deeper into Saarthal
-  - No trap triggered, no complication—professional execution
+- **Skill Used**: Lore **+3** (Onmund's primary magical skill)
+- **Base Roll (4dF)**: `[+][0][+][0]` → **+2**
+- **Teamwork Bonus**: **+2** (Brelyna Maryon and J'zargo provided support)
+- **Aspect Invoked**: "Calm Under Command" (free invoke) → **+2**
+- **Total**: +3 (Lore) + 2 (4dF) + 2 (teamwork) + 2 (invoke) = **+9**
+- **vs. Opposition**: Great (+4)
+- **Result**: **Success with Style** (margin of +5)
+
+**Boost Created**: "Stone Unlocked" (1 free invoke)
+- The slab segments separated cleanly, revealing passage deeper into Saarthal
+- No trap triggered, no complication—professional execution
 
 **Oskern's Notes**: *"Onmund proved capable under pressure. The students worked as a unit—exactly what I needed to see. Still, that Thu'um display... I felt eyes on me. Not just theirs."*
 
 ### Clock Updates (2026-02-15)
 
-**Saarthal Expedition Progress**: 4 → 5 / 6
+**Saarthal Expedition Progress**: 1 → 5 / 6
 - Draugr guardian eliminated
 - Inner threshold transmutation slab opened
 - Team prepared to advance toward Eye chamber
