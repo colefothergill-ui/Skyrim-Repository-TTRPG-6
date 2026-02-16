@@ -224,7 +224,7 @@
         "faction": "College of Winterhold",
         "current_trust": 5,
         "max_trust": 10,
-        "trust_level": "Member (in good standing)",
+        "trust_level": "Ally",
         "advancement_triggers": {
           "join_college": "+2",
           "complete_college_quest": "+1 to +2",

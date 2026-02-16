@@ -7,19 +7,13 @@
   "active_pc_id": "pc_oskern_cindershroud",
   "session_zero_completed": true,
   "session_count": 0,
-  "last_updated": "2026-02-15 18:06:13",
-  "starting_location": "Winterhold",
-  "current_scene_id": "A1_S00_COLLEGE_SAARTHAL_BRIEFING",
-  "current_location": "College of Winterhold — Courtyard",
+  "last_updated": "2026-02-15 03:37:54",
+  "starting_location": "Winterhold - College Bridge",
+  "current_scene_id": "A1_S01_SAARTHAL_ENTRANCE",
+  "current_location": "Saarthal Excavation Site — Entrance",
   "active_hold": "Winterhold Hold",
-  "current_objective": "Lead the Saarthal expedition team; reach the dig site and keep the students alive.",
-  "current_npcs": [
-    "mirabelle_ervine",
-    "tolfdir",
-    "onmund",
-    "brelyna_maryon",
-    "jzargo"
-  ],
+  "current_objective": "Begin the Saarthal expedition: check in with Tolfdir, assemble the student team at the excavation entrance, and prepare to enter the ruins.",
+  "current_npcs": [],
   "scene_flags": {
     "active_quest_id": "college_under_saarthal",
     "college_first_lessons_completed": true,
@@ -57,6 +51,21 @@
       "current": 1,
       "max": 4,
       "notes": "1=briefed+supplied; 2=arrive; 3=breach wards; 4=secure exit."
+    }
+  },
+  "scene_last_major_update": "2026-02-02",
+  "scene_aspects": {
+    "Measured, Orderly Grit": {
+      "free_invokes": 1,
+      "created_by": "pc_oskern_cindershroud",
+      "notes": "Voice of the Emperor steadies the student team before entering Saarthal."
+    }
+  },
+  "scene_clocks": {
+    "saarthal_expedition_logistics": {
+      "current": 2,
+      "max": 8,
+      "name": "Saarthal Expedition Logistics"
     }
   },
   "player": {
