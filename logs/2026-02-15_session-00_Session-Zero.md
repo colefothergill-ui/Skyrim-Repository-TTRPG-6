@@ -188,7 +188,8 @@ Having reached Saarthal's inner chambers, the expedition encountered a collapsin
 
 ### Mechanics: Loot Under Pressure
 
-**Scene Aspect Created** (prior to this action): "Saarthal Resonance Attunement" (2 free invokes)
+**Scene Aspect Created** (earlier during chamber entry): "Saarthal Resonance Attunement"
+- **Initial free invokes**: 2
 - **Created by**: Scene environment (ancient Nordic magic resonating with expedition's approach)
 - **Effect**: The ruins' latent magical signature provided clarity and focus during high-stress salvage operations
 
@@ -202,7 +203,7 @@ Having reached Saarthal's inner chambers, the expedition encountered a collapsin
 - **Item Acquired**: **Saarthal Burial Sigil** (quest key / ward-bypass artifact)
 
 **Aspect Updated**:
-- "Saarthal Resonance Attunement" → 1 free invoke remaining (1 consumed during loot action)
+- "Saarthal Resonance Attunement" → 1 free invoke remaining (started with 2, consumed 1 during loot action)
 
 ### Mechanics: Ward Seam Defense
 
