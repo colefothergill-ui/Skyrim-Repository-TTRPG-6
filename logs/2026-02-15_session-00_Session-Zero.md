@@ -114,13 +114,18 @@ The speech was measured but confident. Students who had been uncertain now had p
 
 ### Mechanics Block
 
+**Scene Aspect Created Earlier**: "Signed for Their Safety"
+- **Created by**: Oskern (prior to courtyard scene)
+- **Free Invokes**: 1
+- **Notes**: PC declared responsibility for student safety during expedition planning; promise carries weight.
+
 **Compel Accepted**: "Prove You're Worthy of the Dragon of Haafingar"
-- **Fate Point Gained**: +1 FP (total: 3 FP)
+- **Fate Point Gained**: +1 FP (total: 2 FP)
 - **Scene Aspect Created**: "All Eyes on Cindershroud" (GM-controlled, 1 free invoke)
 - **Effect**: Oskern's command presence and noble bearing drew attention from everyone present. His reputation now precedes him on this journey.
 
 **Rapport Roll - Create Advantage**: "Calm Under Command"
-- **Roll**: +1 on 4dF + Rapport +3 = +4 vs. Difficulty 2
+- **Roll**: +1 on 4dF + Rapport +3 + 2 (invoke "Signed for Their Safety") = +6 vs. Difficulty 2
 - **Result**: Success with Style
 - **Free Invoke Consumed**: Invoked "Signed for Their Safety" to ensure success
 - **Scene Aspect Created**: "Calm Under Command" (2 free invokes)
