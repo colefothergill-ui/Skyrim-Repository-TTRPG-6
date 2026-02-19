@@ -1,0 +1,98 @@
+{
+  "name": "Falk Firebeard",
+  "id": "npc_stat_falk_firebeard",
+  "type": "Nord Steward",
+  "category": "Authority Figure",
+  "location": "Blue Palace, Solitude",
+  "faction": "Haafingar Hold / Imperial sympathizer",
+  "role": "Nord Steward of Elisif (Blue Palace)",
+  "aspects": {
+    "high_concept": "Unshakeable Steward of the Blue Palace",
+    "trouble": "Carries Haafingar's Burdens So Elisif Need Not",
+    "other_aspects": [
+      "Loyal to the Throne Above All Factions",
+      "Pragmatic Nord With an Eye for Trouble",
+      "Quietly Skeptical of Imperial Overreach"
+    ]
+  },
+  "skills": {
+    "Great": ["Lore", "Physique"],
+    "Good": ["Will", "Resources"],
+    "Fair": ["Rapport", "Notice"],
+    "Average": ["Empathy", "Investigate"]
+  },
+  "stunts": [
+    "Resolute Steward: +2 to Lore when managing city matters, administrative disputes, or Hold law.",
+    "Steward's Will: +2 to Physique when resisting exhaustion or stress from overwork and long duties.",
+    "Voice of the Hold: Once per session, invoke his authority as Steward to cut through bureaucratic obstacles or expedite an official request."
+  ],
+  "stress": {
+    "physical": [false, false, false],
+    "mental": [false, false, false]
+  },
+  "consequences": {
+    "mild": null,
+    "moderate": null,
+    "severe": null
+  },
+  "refresh": 3,
+  "fate_points": 3,
+  "equipment": {
+    "armor": "Fine steward's robes",
+    "weapon": "Steel dagger (concealed, rarely used)",
+    "special": "Blue Palace administrative ledgers, Hold seal"
+  },
+  "personality_notes": {
+    "speaking_style": "Measured and efficient; rarely wastes words. Polite but firm, especially with those who bring problems without solutions.",
+    "motivations": [
+      "Keep Haafingar running smoothly regardless of war",
+      "Protect Elisif from the worst pressures of rulership",
+      "Preserve Solitude's prosperity and independence where possible",
+      "Ensure Nord traditions are not entirely subsumed by Imperial culture"
+    ],
+    "fears": [
+      "Elisif making a catastrophic political misstep",
+      "Haafingar being drawn too deeply into the civil war",
+      "Corruption spreading through the hold's administration",
+      "His own overwork leading to critical errors"
+    ],
+    "quirks": [
+      "Reviews administrative documents at meals",
+      "Finishes others' sentences when impatient",
+      "Nods slowly when he disagrees but will comply"
+    ]
+  },
+  "relationships": {
+    "Elisif the Fair": "Devoted steward; views her almost paternally",
+    "Legate Rikke": "Professional respect; coordinates on security matters",
+    "Erikur": "Wary—Erikur's merchant influence at court is a source of tension",
+    "Sybille Stentor": "Court mage; relies on her expertise, slightly uneasy with her methods",
+    "Player": "Cautious welcome; a capable outsider who assists the hold earns his cooperation"
+  },
+  "trust_clock": {
+    "current": 0,
+    "max": 6,
+    "advancement_triggers": [
+      "Complete an administrative task for the hold (+2)",
+      "Help Elisif without seeking reward (+1)",
+      "Demonstrate competence and loyalty (+1)"
+    ],
+    "setback_triggers": [
+      "Cause disruption in the Blue Palace (-1)",
+      "Challenge his authority in front of Elisif (-2)"
+    ],
+    "trust_benefits": {
+      "3": "Falk provides access to hold records and minor resources",
+      "6": "Falk assigns important hold duties and shares sensitive intelligence"
+    }
+  },
+  "scene_triggers": [
+    "Blue Palace administrative scenes",
+    "Hold management quests in Haafingar",
+    "Diplomatic meetings at Solitude",
+    "Thane and court-rank conversations"
+  ],
+  "act_context": ["Act 1", "Act 2", "Act 3"],
+  "notes": "Falk Firebeard is the backbone of Haafingar's administration. Where Elisif provides the face of rulership, Falk provides the substance. He is not unkind, but he has little patience for those who waste his time. Characters who demonstrate genuine usefulness to the hold will find him an excellent resource.",
+  "gm_notes": "Use Falk as the practical gatekeeper to Solitude's resources. He dispenses quests dealing with hold logistics, threats to Haafingar, and matters Elisif cannot be seen to handle directly. His subtle skepticism of Imperial micromanagement can be a useful tension point in politically complex scenarios."
+}

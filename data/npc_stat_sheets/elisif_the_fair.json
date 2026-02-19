@@ -1,0 +1,103 @@
+{
+  "name": "Elisif the Fair",
+  "id": "npc_stat_elisif_the_fair",
+  "type": "Nord Jarl",
+  "category": "Authority Figure",
+  "location": "Blue Palace, Solitude",
+  "faction": "Imperial Legion (sympathizer)",
+  "role": "Nord Jarl of Haafingar, Thane of Solitude",
+  "aspects": {
+    "high_concept": "Nord Jarl of Haafingar, Thane of Solitude",
+    "trouble": "Grieving Widow Leaning on Imperial Support",
+    "other_aspects": [
+      "Beloved by the People for Her Gentleness",
+      "Shaped by Torygg's Shadow",
+      "Caught Between Nord Tradition and Imperial Loyalty"
+    ]
+  },
+  "skills": {
+    "Great": ["Rapport", "Will"],
+    "Good": ["Empathy", "Resources"],
+    "Fair": ["Lore", "Notice"],
+    "Average": ["Physique", "Investigate"]
+  },
+  "stunts": [
+    "Leader's Authority: +2 to Rapport when commanding nobles or addressing formal court.",
+    "Winds of Fate: +2 to Will when resisting intimidation or political pressure.",
+    "Seat of Haafingar: Once per session, invoke her title as Jarl to call on Imperial resources or Solitude's garrison for aid."
+  ],
+  "stress": {
+    "physical": [false, false],
+    "mental": [false, false, false]
+  },
+  "consequences": {
+    "mild": null,
+    "moderate": null,
+    "severe": null
+  },
+  "refresh": 3,
+  "fate_points": 3,
+  "equipment": {
+    "armor": "Fine court robes",
+    "weapon": "None carried openly",
+    "special": "Jarl's seal, Torygg's war horn (keepsake)"
+  },
+  "personality_notes": {
+    "speaking_style": "Soft-spoken but earnest; formal in court, warm in private; often defers to Falk on complex matters.",
+    "motivations": [
+      "Honor King Torygg's memory",
+      "Keep Solitude and Haafingar stable under Imperial protection",
+      "Prove herself worthy of the throne despite her youth and inexperience",
+      "See Ulfric Stormcloak brought to justice for Torygg's death"
+    ],
+    "fears": [
+      "Losing Solitude to the Stormcloak rebellion",
+      "Being seen as a weak or puppet ruler",
+      "Failing her people without Falk's guidance",
+      "Ulfric going unpunished"
+    ],
+    "quirks": [
+      "Quietly touches Torygg's war horn when stressed",
+      "Greets petitioners by name when she can",
+      "Defers visibly to Falk Firebeard in administrative matters"
+    ]
+  },
+  "relationships": {
+    "Falk Firebeard": "Trusted steward and primary advisor; relies on him heavily",
+    "Legate Rikke": "Imperial liaison; Elisif views her as a protector",
+    "General Tullius": "Respects his authority; uneasy with his bluntness",
+    "Ulfric Stormcloak": "Deep hatred—he killed her husband Torygg",
+    "Erikur": "Tolerates his merchant influence at court, mildly distrustful",
+    "Player": "Potential champion; warming trust unlocks quest hooks and court access"
+  },
+  "trust_clock": {
+    "current": 0,
+    "max": 8,
+    "advancement_triggers": [
+      "Assist Elisif with a personal quest (war horn) (+2)",
+      "Defend Solitude or Haafingar (+1)",
+      "Show respect for Torygg's memory (+1)",
+      "Support the Imperial cause (+1)",
+      "Protect Haafingar citizens (+1)"
+    ],
+    "setback_triggers": [
+      "Support Ulfric or Stormcloaks (-5)",
+      "Disrespect the court (-1)",
+      "Threaten Imperial presence (-2)"
+    ],
+    "trust_benefits": {
+      "3": "Elisif acknowledges you as a friend of Haafingar",
+      "5": "Grants thane status consideration; opens court resources",
+      "8": "Full thane; Elisif shares her personal fears and hopes"
+    }
+  },
+  "scene_triggers": [
+    "Petitioner scenes at the Blue Palace",
+    "Torygg's war horn quest",
+    "Civil war Imperial questline",
+    "High-level court negotiations in Solitude"
+  ],
+  "act_context": ["Act 1", "Act 2", "Act 3"],
+  "notes": "Elisif the Fair is Skyrim's most prominent female Jarl, elevated after her husband High King Torygg was slain by Ulfric Stormcloak in single combat. Young and inexperienced, she leans heavily on her steward Falk Firebeard and Imperial military support. Despite her reliance on others, she is genuinely beloved and shows real potential for growth. She represents the human cost of the civil war—a widow thrust into power during a crisis.",
+  "gm_notes": "Elisif works best as a sympathetic figure rather than a mere quest dispenser. Her grief is real, and players who take time to earn her trust will find a generous and loyal ally. Her war horn quest is a meaningful character beat. In a Stormcloak campaign, she becomes a tragic obstacle."
+}

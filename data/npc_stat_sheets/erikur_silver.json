@@ -1,0 +1,98 @@
+{
+  "name": "Erikur Silver-Maned",
+  "id": "npc_stat_erikur_silver",
+  "type": "Nord Merchant",
+  "category": "Neutral NPC",
+  "location": "Solitude (Blue Palace court, docks)",
+  "faction": "Solitude Merchant Class",
+  "role": "Nord Merchant and Court Figure",
+  "aspects": {
+    "high_concept": "Nord Merchant and Bane of Mice (Silver)",
+    "trouble": "Ambition That Buys Friends and Makes Enemies",
+    "other_aspects": [
+      "Coin Speaks Louder Than Swords",
+      "Court Influence Built on Favors and Debts",
+      "Silver Tongue, Silver Purse"
+    ]
+  },
+  "skills": {
+    "Great": ["Rapport", "Resources"],
+    "Good": ["Notice", "Deceive"],
+    "Fair": ["Empathy", "Contacts"],
+    "Average": ["Will", "Investigate"]
+  },
+  "stunts": [
+    "Silver Tongue: +2 to Rapport when negotiating deals, bargains, or commercial agreements.",
+    "Merchant's Memory: +2 to Notice when spotting valuable goods, counterfeit items, or hidden wealth.",
+    "Debtor's Leverage: Once per session, call in a favor from a contact in Solitude's merchant or dock community to obtain information or a service."
+  ],
+  "stress": {
+    "physical": [false, false],
+    "mental": [false, false, false]
+  },
+  "consequences": {
+    "mild": null,
+    "moderate": null,
+    "severe": null
+  },
+  "refresh": 3,
+  "fate_points": 3,
+  "equipment": {
+    "armor": "Wealthy merchant's fine clothes",
+    "weapon": "Steel dagger (decorative, functional)",
+    "special": "Merchant ledger, promissory notes, access to Solitude docks"
+  },
+  "personality_notes": {
+    "speaking_style": "Smooth, confident, always calculating. Flatters those useful to him; dismissive of those who are not. Uses business language even in personal conversation.",
+    "motivations": [
+      "Expand his trading network across Skyrim and into Cyrodiil",
+      "Secure court influence through financial leverage",
+      "Protect his shipping interests at Solitude's docks",
+      "Outmaneuver rival merchants in Haafingar"
+    ],
+    "fears": [
+      "Financial ruin or loss of court standing",
+      "Discovery of ethically questionable dealings",
+      "Someone smarter at negotiation than he is",
+      "The civil war disrupting his trade routes"
+    ],
+    "quirks": [
+      "Subtly appraises everything in a room on entering",
+      "Never drinks without first calculating social benefit",
+      "Uses diminutives condescendingly with people he considers beneath him"
+    ]
+  },
+  "relationships": {
+    "Elisif the Fair": "Uses court access to advance merchant interests; gives gifts to maintain goodwill",
+    "Falk Firebeard": "Tense—Falk sees through his flattery and keeps him at arm's length",
+    "Solitude Dockworkers": "Employer; treats them as resources rather than people",
+    "Thalmor": "Maintains cordial trade relations; some suspect deeper ties",
+    "Player": "Sees capable outsiders as potential tools; will hire them for morally ambiguous work"
+  },
+  "trust_clock": {
+    "current": 0,
+    "max": 6,
+    "advancement_triggers": [
+      "Complete a profitable task for him (+2)",
+      "Help protect his business interests (+1)",
+      "Demonstrate valuable connections or skills (+1)"
+    ],
+    "setback_triggers": [
+      "Interfere with his trade dealings (-2)",
+      "Expose him to Falk or Elisif's scrutiny (-3)"
+    ],
+    "trust_benefits": {
+      "3": "Erikur offers preferential prices and access to rare trade goods",
+      "6": "Erikur shares dock contacts, smuggling routes, and lucrative but risky jobs"
+    }
+  },
+  "scene_triggers": [
+    "Commerce and trade negotiations in Solitude",
+    "Court political intrigue at the Blue Palace",
+    "Dockside deals or smuggling investigations",
+    "Morally grey mercantile quests"
+  ],
+  "act_context": ["Act 1", "Act 2", "Act 3"],
+  "notes": "Erikur Silver-Maned is one of Solitude's most prominent merchants and a fixture of Elisif's court. He is charming but fundamentally self-serving, and his commercial interests often blur into political manipulation. He is not a villain per se, but his willingness to use people makes him an untrustworthy ally.",
+  "gm_notes": "Erikur works well as a morally grey quest giver—his jobs pay well but rarely sit cleanly with heroic sensibilities. His Thalmor connections can be hinted at and developed into a subplot. Falk's visible distrust of him is a useful signal to players who pay attention to court dynamics."
+}

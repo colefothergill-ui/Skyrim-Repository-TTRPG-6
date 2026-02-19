@@ -268,5 +268,23 @@
     "mirabelle_ervine": 35,
     "companions": 20
   },
-  "npc_first_impressions": {}
+  "npc_first_impressions": {
+    "test_companion": {
+      "pc_oskern_cindershroud": {
+        "timestamp": "2026-02-19T12:07:47.307787",
+        "disposition": "neutral",
+        "line": "Blue eyes, steady hands. Either you're disciplined... or dangerously confident.",
+        "source": "default",
+        "recognition_tags": [
+          "college_of_winterhold",
+          "imperial_noble",
+          "pyromancer",
+          "thuum_user",
+          "atronach_stone_blessed",
+          "cindershroud_name",
+          "staff_of_cinders"
+        ]
+      }
+    }
+  }
 }

@@ -1,0 +1,98 @@
+{
+  "name": "Storn Crag-Strider",
+  "id": "npc_stat_storn_cragstrider",
+  "type": "Dunmer Blacksmith",
+  "category": "Friendly NPC",
+  "location": "Solitude (smithy near Castle Dour)",
+  "faction": "Independent / Solitude",
+  "role": "Dunmer Blacksmith of Solitude",
+  "aspects": {
+    "high_concept": "Dunmer Blacksmith Forging Trust One Blade at a Time",
+    "trouble": "Dunmer in a City That Barely Tolerates Outsiders",
+    "other_aspects": [
+      "Steel Does Not Care What Race Holds It",
+      "Pride in Craft Above All Else",
+      "Quiet Observer of Solitude's Politics"
+    ]
+  },
+  "skills": {
+    "Great": ["Crafts"],
+    "Good": ["Physique", "Notice"],
+    "Fair": ["Will", "Resources"],
+    "Average": ["Empathy", "Fight"]
+  },
+  "stunts": [
+    "Armorer's Craft: +2 to Crafts (Smithing) when forging, repairing, or improving weapons and armor.",
+    "Sturdy as Steel: +2 to Physique when resisting fatigue, exhaustion, or physical stress from labor or hardship.",
+    "Eye of the Smith: Once per scene, examine a weapon or piece of armor to identify its origin, quality, or any hidden flaws or enchantments."
+  ],
+  "stress": {
+    "physical": [false, false, false],
+    "mental": [false, false]
+  },
+  "consequences": {
+    "mild": null,
+    "moderate": null,
+    "severe": null
+  },
+  "refresh": 3,
+  "fate_points": 3,
+  "equipment": {
+    "armor": "Leather smithing apron (Armor:1)",
+    "weapon": "Blacksmith's hammer (improvised Weapon:2)",
+    "special": "Master-quality smithing tools, stock of steel and ebony ingots"
+  },
+  "personality_notes": {
+    "speaking_style": "Quiet and direct; lets his work speak for him. Wary with strangers initially but opens up to those who respect his craft. Slight Dunmeri accent.",
+    "motivations": [
+      "Produce the finest weapons and armor in Haafingar",
+      "Earn the respect and steady coin that keeps him secure in Solitude",
+      "Preserve Dunmeri smithing traditions alongside Nord techniques",
+      "Avoid entanglement in the civil war"
+    ],
+    "fears": [
+      "Solitude's prejudice turning into open hostility against Dunmer",
+      "Losing his forge if the city falls in the civil war",
+      "Being forced to smith weapons for a cause he doesn't believe in",
+      "Inferior materials or rushed work ruining his reputation"
+    ],
+    "quirks": [
+      "Tests the edge of any blade he makes before handing it over",
+      "Keeps a small Dunmeri ancestor shrine hidden behind his forge",
+      "Speaks more freely after a customer proves they know their weapons"
+    ]
+  },
+  "relationships": {
+    "Solitude Guard": "Tolerated—his quality work earns grudging respect from soldiers",
+    "Castle Dour Armory": "Supplier of repair work and custom pieces for the garrison",
+    "Erikur Silver-Maned": "Occasional trading partner for rare metals; distrusts him personally",
+    "Dunmer Community": "Informal point of contact for the small Dunmer population in Solitude",
+    "Player": "Welcomes characters who treat him with equal respect regardless of race"
+  },
+  "trust_clock": {
+    "current": 0,
+    "max": 6,
+    "advancement_triggers": [
+      "Bring rare materials or a challenging commission (+2)",
+      "Treat him with respect as an equal (+1)",
+      "Defend him or other Dunmer from prejudice (+2)"
+    ],
+    "setback_triggers": [
+      "Disrespect his craft or his race (-2)",
+      "Shortchange him or attempt to cheat him (-1)"
+    ],
+    "trust_benefits": {
+      "3": "Storn offers discounted repairs and access to standard stock at fair prices",
+      "6": "Storn crafts custom masterwork pieces and shares knowledge of Dunmeri smithing techniques"
+    }
+  },
+  "scene_triggers": [
+    "Equipment repair and crafting",
+    "Sourcing rare metals or specialized weapons",
+    "Dunmer community storylines in Solitude",
+    "Castle Dour garrison supply quests"
+  ],
+  "act_context": ["Act 1", "Act 2", "Act 3"],
+  "notes": "Storn Crag-Strider is one of the few Dunmer craftsmen who has made a stable life in Solitude, earning his place through exceptional skill rather than social ease. He is a quiet but perceptive figure who misses little of what happens near his forge. Characters who respect both his craft and his dignity will find a loyal and skilled ally.",
+  "gm_notes": "Storn provides practical smithing services and a Dunmer perspective on life in Haafingar. His forge near Castle Dour positions him as a natural information source on garrison activity. His hidden ancestor shrine can become a story hook involving Dunmeri culture, ancestral spirits, or unwanted attention from the Thalmor."
+}
