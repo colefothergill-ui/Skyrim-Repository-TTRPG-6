@@ -9,10 +9,10 @@
   "session_count": 0,
   "last_updated": "2026-02-15 03:37:54",
   "starting_location": "Winterhold - College Bridge",
-  "current_scene_id": "A1_S01_SAARTHAL_ENTRANCE",
-  "current_location": "Saarthal Excavation Site — Entrance",
+  "current_scene_id": "A1_S01_SAARTHAL_INNER_CHAMBERS",
+  "current_location": "Saarthal Excavation Site — Inner Chambers",
   "active_hold": "Winterhold Hold",
-  "current_objective": "Begin the Saarthal expedition: check in with Tolfdir, assemble the student team at the excavation entrance, and prepare to enter the ruins.",
+  "current_objective": "Survive the awakened draugr assault triggered by penetrating deep into Saarthal; use the recovered Burial Sigil to navigate ward-sealed passages and locate the source of the anomaly.",
   "current_npcs": [],
   "scene_flags": {
     "active_quest_id": "college_under_saarthal",
@@ -40,9 +40,9 @@
       "notes": "Formation order: Oskern+Onmund front with wards; Brelyna mid support; J'zargo rear artillery. Invoked during ice wolf encounter (1 free invoke consumed)."
     },
     "Signed for Their Safety": {
-      "free_invokes": 1,
+      "free_invokes": 0,
       "created_by": "npc_stat_mirabelle_ervine",
-      "notes": "Mirabelle's directive: you are accountable for student welfare on this expedition."
+      "notes": "Mirabelle's directive: you are accountable for student welfare on this expedition. Consumed during Rapport roll to create 'Calm Under Command'."
     },
     "Magicka-Starved Aftershock": {
       "free_invokes": 1,
@@ -76,6 +76,12 @@
       "current": 1,
       "max": 4,
       "notes": "1=briefed+supplied; 2=arrive; 3=breach wards; 4=secure exit."
+    },
+    "saarthal_expedition_progress": {
+      "name": "Saarthal Expedition Progress",
+      "current": 6,
+      "max": 6,
+      "notes": "Danger escalation in Saarthal ruins; 6/6 indicates full draugr awakening impacting the current scene."
     }
   },
   "player": {
