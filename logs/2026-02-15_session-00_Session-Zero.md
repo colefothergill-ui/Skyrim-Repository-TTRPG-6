@@ -249,5 +249,6 @@ While Oskern secured the sigil, Onmund and Tolfdir worked in tandem to stabilize
 ## Post-Threshold Regroup (2026-02-15 Patch)
 
 - Oskern refused "Rear-Guard Pride" and regrouped through the threshold.
-- Trust gains: Tolfdir +10; student loyalties increased (Onmund/Brelyna/J'zargo).
+- Trust gains: Tolfdir +10 (relationship now 45); student loyalties increased (Onmund/Brelyna/J'zargo now 40/38/42 respectively).
 - Staff Awakening ticked to 2/6 due to mythic protective use.
+- New scene aspect created: **"Threshold Sealed"** (created by npc_stat_tolfdir; Tolfdir used the Saarthal Burial Sigil to seal the threshold against pursuit from the inner chambers; 0 free invokes).
