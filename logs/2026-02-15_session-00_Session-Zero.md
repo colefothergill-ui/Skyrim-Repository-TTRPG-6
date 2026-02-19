@@ -243,3 +243,11 @@ While Oskern secured the sigil, Onmund and Tolfdir worked in tandem to stabilize
 
 ### Fate Points (Post-Salvage)
 - **Current FP**: 3 (unchanged — free invoke used, not paid invoke)
+
+---
+
+## Post-Threshold Regroup (2026-02-15 Patch)
+
+- Oskern refused "Rear-Guard Pride" and regrouped through the threshold.
+- Trust gains: Tolfdir +10; student loyalties increased (Onmund/Brelyna/J'zargo).
+- Staff Awakening ticked to 2/6 due to mythic protective use.

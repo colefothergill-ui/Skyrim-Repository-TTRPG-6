@@ -68,6 +68,11 @@
       "free_invokes": 1,
       "created_by": "pc_oskern_cindershroud",
       "notes": "Boost from rapid salvage: found the correct key/sigil in the sentinel ash."
+    },
+    "Threshold Sealed": {
+      "free_invokes": 0,
+      "created_by": "npc_stat_tolfdir",
+      "notes": "Tolfdir used Saarthal Burial Sigil to seal pursuit after regroup."
     }
   },
   "scene_clocks": {
@@ -185,7 +190,7 @@
         "npc_id": "npc_stat_onmund",
         "name": "Onmund",
         "status": "available",
-        "loyalty": 30,
+        "loyalty": 40,
         "location": "College of Winterhold",
         "recruitment_condition": "Complete Under Saarthal and earn Onmund's respect (keep him alive).",
         "faction_affinity": "college_of_winterhold"
@@ -194,7 +199,7 @@
         "npc_id": "npc_stat_brelyna_maryon",
         "name": "Brelyna Maryon",
         "status": "available",
-        "loyalty": 30,
+        "loyalty": 38,
         "location": "College of Winterhold",
         "recruitment_condition": "Complete Under Saarthal and earn Brelyna's trust (prove discretion).",
         "faction_affinity": "college_of_winterhold"
@@ -203,7 +208,7 @@
         "npc_id": "npc_stat_jzargo",
         "name": "J'zargo",
         "status": "available",
-        "loyalty": 30,
+        "loyalty": 42,
         "location": "College of Winterhold",
         "recruitment_condition": "Complete Under Saarthal and keep J'zargo from reckless collateral damage.",
         "faction_affinity": "college_of_winterhold"
@@ -226,7 +231,7 @@
   "starting_narrative": "Oskern Cindershroud begins at the College of Winterhold, already a capable Adept with a famous (and politically loaded) name. The first crisis is local: Tolfdir's expedition to Saarthal and the sealed anomaly beneath it. The civil war remains a looming backdrop—Whiterun is still officially neutral, and both sides pressure Jarl Balgruuf—while the Thalmor maneuver in the shadows.",
   "faction_relationships": {
     "college_of_winterhold": 30,
-    "tolfdir": 35,
+    "tolfdir": 45,
     "mirabelle_ervine": 30,
     "companions": 20
   },

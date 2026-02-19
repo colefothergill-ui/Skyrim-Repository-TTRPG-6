@@ -6,7 +6,7 @@
       "pc_oskern_staff_of_cinders_awakening": {
         "name": "Staff of Cinders — Awakening",
         "description": "Unlock additional locked trait/stunt slots as the staff reawakens through mythic use, study, and story milestones.",
-        "current": 0,
+        "current": 2,
         "max": 6,
         "completion_effect": "Unlock one locked trait OR one locked stunt slot on the Staff of Cinders (GM picks based on narrative).",
         "advancement_triggers": [
