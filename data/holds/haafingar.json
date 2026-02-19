@@ -1,5 +1,5 @@
 {
-  "hold": "Haafingar",
+  "hold": "Haafingar Hold",
   "capital": "Solitude",
   "jarl": "Elisif the Fair",
   "allegiance": "Imperial",
@@ -24,9 +24,8 @@
   ],
   "major_settlements": [
     "Solitude (city)",
-    "Morthal (satellite hold town)",
     "Dragon Bridge (town on Haafingar border)",
-    "Kayak (fishing village)"
+    "Minor fishing villages along the Haafingar coast"
   ],
   "factions_present": [
     "Imperial Legion",
