@@ -283,3 +283,78 @@ With the immediate threat eliminated, Onmund approached the sealed slab. The gly
 ### Fate Points
 - **Free Invoke Used**: "Calm Under Command" (consumed for transmutation assist)
 - **Current Fate Points**: 3 (no change this beat)
+
+---
+
+## Beat: Threshold Slip + Fireball Funnel (2026-02-15)
+
+### Tolfdir — Threshold Ward Bypass (Saarthal Burial Sigil)
+
+The inner threshold ward pulsed with cold Saarthal rune-fire, refusing passage. Tolfdir produced the **Saarthal Burial Sigil** and pressed it to the ward surface.
+
+**Action**: Overcome (bypass threshold ward)
+**Skill Used**: Lore **+5** (Tolfdir — veteran runic scholar)
+**Opposition**: Great (+4) (ancient Saarthal threshold ward)
+
+**Mechanics**:
+- **Base Roll (4dF)**: `[+][+][+][0]` → **+3**
+- **Lore Skill**: **+5**
+- **Total**: +5 (Lore) + 3 (4dF) = **+8**
+- **vs. Opposition**: Great (+4)
+- **Result**: **Success with Style** (margin of +4)
+
+**Boost Created**: "Door Accepts the Seal" (1 free invoke)
+- The ward recognized the burial sigil; threshold parted cleanly
+- Can be invoked to seal/deny pursuit through this passage
+
+**Scene Aspect Updated**: "Ward Reforged in Heat" (created this beat; see below)
+
+---
+
+### Oskern — Rearguard Fireball Funnel (Wight-Caller + Draugr Wave)
+
+A **Wight-Caller** crested the corridor behind the party, raising a fresh draugr wave to cut off retreat. Oskern held the chokepoint alone.
+
+**Action**: Attack (zone attack — Fireball stunt)
+**Skill Used**: Shoot **+3** (fire-typed zone attack)
+**Opposition**: Wight-Caller: Good (+3) defense; Draugr Wave: Fair (+2) group defense
+
+**Mechanics**:
+- **Base Roll (4dF)**: `[+][+][0][+]` → **+3**
+- **Shoot Skill**: **+3**
+- **Staff of Cinders — Dragon Fire trait**: **+2** (once/scene bonus)
+- **Aspect Invoked**: "Ward Reforged in Heat" (free invoke) → **+2**
+- **Aspect Invoked**: "Lightning-Stunned" (Wight-Caller condition) → **+2**
+- **Attack Total**: +3 (Shoot) + 3 (4dF) + 2 (Dragon Fire) + 2 (invoke Ward) + 2 (invoke Lightning-Stunned) = **+12**
+- **vs. Wight-Caller Defense**: Good (+3)
+- **vs. Draugr Wave Defense**: Fair (+2)
+
+**Shifts vs. Wight-Caller**: +12 − 3 = **9 shifts**
+- Weapon:3 (Fireball zone) → 9 + 3 = **12 effective shifts** → **Taken Out**
+
+**Shifts vs. Draugr Wave**: +12 − 2 = **10 shifts**
+- Zone attack clears the wave; **Taken Out** as a group obstacle
+
+**Outcome**:
+- Wight-Caller incinerated in the chokepoint; bone-fire consumed the draugr wave behind it
+- Retreat corridor secured; students maintain forward momentum toward Eye chamber
+- Students witnessed a second major zone Destruction display (Ancano Suspicion +1)
+
+**Scene Aspect Created**: "Ward Reforged in Heat" (2 free invokes at creation; 1 consumed in this attack, leaving 1 remaining)
+- Ambient fire magic from Fireball funnel supercharged the residual threshold ward energy
+
+---
+
+### Clock Updates (2026-02-15 — Threshold Slip Beat)
+
+**Ancano Suspicion Meter**: 3 → **4 / 8**
+- +1 from repeated high-profile magic (Fireball zone + Staff of Cinders Dragon Fire) witnessed by student team at inner threshold
+
+**Saarthal Expedition Progress**: 5 / 6 (unchanged — still approaching Eye chamber)
+
+---
+
+### Fate Points
+- **Free Invoke Used**: "Ward Reforged in Heat" (1 of 2 consumed during Fireball funnel attack)
+- **Free Invoke Used**: "Lightning-Stunned" (Wight-Caller condition, consumed)
+- **Boost Created**: "Door Accepts the Seal" (1 free invoke — Tolfdir's sigil bypass)

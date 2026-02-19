@@ -85,7 +85,7 @@
       "ancano_suspicion_meter": {
         "name": "Ancano's Suspicion of PC",
         "description": "Tracks Ancano's awareness of the PC as a potential threat to his plans with the Eye of Magnus. Higher values mean more active countermeasures.",
-        "current": 3,
+        "current": 4,
         "max": 8,
         "status": "active",
         "completion_effect": "Ancano actively sabotages the PC or attempts to neutralize them as a threat.",
@@ -100,7 +100,7 @@
           "PC appears incompetent or harmless (-1)",
           "PC publicly supports Thalmor positions (-1)"
         ],
-        "notes": "[2026-02-15] +1 from ice wolf Fireball display; +2 from Fire Breath Thu'um use in Saarthal (ancient Nordic power displayed to students)."
+        "notes": "[2026-02-15] +1 from ice wolf Fireball display; +2 from Fire Breath Thu'um use in Saarthal (ancient Nordic power displayed to students).\n[2026-02-15] +1 from repeated high-profile magic (Fireball funnel + Staff of Cinders Dragon Fire) witnessed by students at inner threshold; total now 4/8."
       }
     },
     "gm_guidance": {
