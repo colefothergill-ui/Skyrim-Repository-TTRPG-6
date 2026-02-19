@@ -6,7 +6,7 @@
       "pc_oskern_staff_of_cinders_awakening": {
         "name": "Staff of Cinders — Awakening",
         "description": "Unlock additional locked trait/stunt slots as the staff reawakens through mythic use, study, and story milestones.",
-        "current": 2,
+        "current": 4,
         "max": 6,
         "completion_effect": "Unlock one locked trait OR one locked stunt slot on the Staff of Cinders (GM picks based on narrative).",
         "advancement_triggers": [
@@ -20,7 +20,8 @@
         "setback_triggers": [
           "Staff is stolen/confiscated (-2)",
           "Public scandal damages the staff's legend (-1)"
-        ]
+        ],
+        "notes": "[2026-02-15] Ticked to 3/6: Eye-channeling via Staff of Cinders counted as mythic protective use.\n[2026-02-15] Ticked to 4/6: Legendary Eye-siphon via Staff conduit (SWS success)."
       },
       "pc_oskern_fire_breath_mastery": {
         "name": "Shout Mastery — Fire Breath (Yol Toor Shul)",

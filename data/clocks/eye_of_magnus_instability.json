@@ -1,0 +1,11 @@
+{
+  "last_updated": "2026-02-15",
+  "clocks": {
+    "eye_of_magnus_instability": {
+      "name": "Eye of Magnus Instability",
+      "current": 1,
+      "max": 6,
+      "notes": "Ticks when the Eye is siphoned/perturbed; at 6, containment fails or an external force intervenes.\n[2026-02-15] Tick 1/6: initial Eye siphon via Oskern's Atronach Hunger compel (Staff of Cinders conduit); surge stabilized by Tolfdir spending 1 invoke from 'Containment Lattice Harmonized'."
+    }
+  }
+}

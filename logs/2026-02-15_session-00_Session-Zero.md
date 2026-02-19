@@ -252,3 +252,86 @@ While Oskern secured the sigil, Onmund and Tolfdir worked in tandem to stabilize
 - Trust gains: Tolfdir +10 (relationship now 45); student loyalties increased (Onmund/Brelyna/J'zargo now 40/38/42 respectively).
 - Staff Awakening ticked to 2/6 due to mythic protective use.
 - New scene aspect created: **"Threshold Sealed"** (created by npc_stat_tolfdir; Tolfdir used the Saarthal Burial Sigil to seal the threshold against pursuit from the inner chambers; 0 free invokes).
+
+---
+
+## Eye Chamber: Atronach Hunger Siphon (2026-02-15)
+
+### Narrative
+
+Oskern faced the Eye of Magnus directly. The Atronach Stone's hunger surged as the Eye's power beckoned. Rather than resist, Oskern accepted the compel and channeled the draw through the Staff of Cinders, invoking his title as Dragon of Haafingar to maintain control of the siphon.
+
+### Mechanics: Controlled Eye Siphon (Create Advantage)
+
+- **Action**: Create Advantage (controlled siphon of Eye output through Staff of Cinders)
+- **Skill**: Lore
+- **Compel Accepted**: Atronach Hunger (+1 FP)
+- **Aspect Invoked**: "Dragon of Haafingar" (-1 FP)
+- **Outcome**: Success — Created aspect **"Measured Eye Siphon"** (1 free invoke)
+  - **Created by**: pc_oskern_cindershroud
+  - **Effect**: Controlled siphon channel from the Eye through Staff of Cinders; safe 'battery charge' and resonance key.
+- **GM Trigger**: Eye answered the siphon with an uncontrolled surge → Aspect **"Overcharged Conduit"** placed (GM-controlled, free invoke spent immediately on Eye surge)
+- **Tolfdir Response**: Spent 1 free invoke from "Containment Lattice Harmonized" (2 → 1) to stabilize the Eye surge.
+
+### Clock Updates
+
+- **Ancano Suspicion Meter**: 4 → 5 (+1 from Eye Chamber siphon via Atronach Hunger compel)
+- **Staff of Cinders Awakening**: 2 → 3 (+1: Eye-channeling via Staff counted as mythic protective use)
+
+### Fate Points
+
+- Accepted Compel (Atronach Hunger): +1 FP
+- Invoked Dragon of Haafingar: -1 FP
+- **Current FP**: 3 (unchanged net)
+
+### Trust Nudges
+
+- Tolfdir relationship: 45 → 46 (+1)
+- Onmund loyalty: 40 → 42 (+2)
+- Brelyna Maryon loyalty: 38 → 39 (+1)
+- J'zargo loyalty: 42 → 43 (+1)
+
+---
+
+## Eye Chamber: SWS Drain + Boon + Triggers (2026-02-15)
+
+### Narrative
+
+Oskern pressed further, spending the free invokes from "Calm Under Command" and "Saarthal Resonance Attunement" to achieve a Success with Style on a second Eye siphon. The Staff of Cinders blazed with absorbed power. The Eye's output was redirected into a supercharged reservoir keyed to the containment lattice — but the surge was loud enough to reach Ancano's ears.
+
+### Mechanics: SWS Eye Siphon (Create Advantage)
+
+- **Action**: Create Advantage (deep Eye siphon via Staff conduit)
+- **Skill**: Lore
+- **Aspects Invoked (free)**:
+  - "Calm Under Command" (1 free invoke consumed → 0 remaining)
+  - "Saarthal Resonance Attunement" (1 free invoke consumed → 0 remaining)
+- **Outcome**: Success with Style — Created aspect **"Eye-Fed Reservoir"** (2 free invokes)
+  - **Created by**: pc_oskern_cindershroud
+  - **Effect**: Supercharged reservoir keyed to containment lattice; controlled Eye output via Staff of Cinders.
+- **Boon Granted**: "Eye-Touched Mastery" — one-use +2 bonus on Lore or Will rolls related to the Eye of Magnus or ward magic.
+- **GM Trigger**: Ancano alerted to Eye activity → Aspect **"Ancano's Attention"** placed (1 GM-controlled free invoke).
+
+### Clock Updates
+
+- **Ancano Suspicion Meter**: 5 → 6 (+1 from SWS Eye siphon; Eye activity detected by Ancano; trigger "Ancano's Attention")
+- **Staff of Cinders Awakening**: 3 → 4 (+1: Legendary Eye-siphon via Staff conduit)
+- **Eye of Magnus Instability**: Clock created at 1/6 (ticked once from initial Eye siphon)
+
+### Session Aspects Summary (Updated)
+
+- **"College-Issued Field Kit"**: 2 free invokes remaining
+- **"Shield-Wall Doctrine"**: 1 free invoke remaining
+- **"Signed for Their Safety"**: 0 free invokes remaining (consumed in Rapport roll)
+- **"Magicka-Starved Aftershock"**: 1 GM invoke remaining
+- **"Measured, Orderly Grit"**: 1 free invoke remaining
+- **"Saarthal Resonance Attunement"**: 0 free invokes remaining (2 consumed total)
+- **"Calm Under Command"**: 0 free invokes remaining (consumed in SWS Eye siphon)
+- **"Ward Held at the Seam"**: 1 free invoke remaining
+- **"Right Key, Right Now"**: 1 free invoke (boost)
+- **"Threshold Sealed"**: 0 free invokes
+- **"Containment Lattice Harmonized"**: 1 free invoke remaining (Tolfdir spent 1 to stabilize surge)
+- **"Measured Eye Siphon"**: 1 free invoke remaining (NEW — pc_oskern_cindershroud)
+- **"Overcharged Conduit"**: 0 free invokes (NEW — GM, spent on initial surge)
+- **"Eye-Fed Reservoir"**: 2 free invokes remaining (NEW — pc_oskern_cindershroud, SWS)
+- **"Ancano's Attention"**: 1 GM free invoke (NEW — triggered by suspicion hitting 6)
