@@ -1,0 +1,38 @@
+{
+  "hold": "Haafingar Hold",
+  "capital": "Solitude",
+  "jarl": "Elisif the Fair",
+  "allegiance": "Imperial",
+  "description": "Haafingar occupies Skyrim's rugged northwest. Its capital, Solitude, perches atop the Great Arch over the Karth River mouth. Solitude is strongly Imperial – General Tullius commands the Legion at nearby Castle Dour, while Jarl Elisif rules from the Blue Palace. The hold's defences and fleet make it the Empire's bulwark against rebellion. Towns along Haafingar's windswept shore live by fishing, trade, and the presence of soldiers. However, Stormcloak supporters pose hidden threats even here as the civil war intensifies.",
+  "districts": [
+    {
+      "name": "Blue Palace",
+      "description": "Solitude's grand stone castle on the Great Arch. Within its walls Jarl Elisif holds court. Banners of the Empire hang proudly alongside Solitude's own colors. Imperial guards patrol the marble halls. The palace gardens overlook the sea, but everywhere echoes the weight of war diplomacy and strategy."
+    },
+    {
+      "name": "Castle Dour",
+      "description": "A fortress overlooking Solitude Harbor, housing the Imperial Legion's command. Here General Tullius and Legate Rikke plan campaigns. The courtyard is filled with Legionnaires training under watchful centurions. Its walls are thick and granite, and the courtyard's gates open to the bustling harbor below."
+    },
+    {
+      "name": "Solitude Harbor",
+      "description": "The main port beneath the Great Arch. Massive longships of the East Empire Company and the Legion dock here. Sailors unload supplies amidst the spray of the Sea of Ghosts. Market stalls line the docks selling fish, ale, and imported goods. Gangplanks creak as workers and recruits pass under the gaze of towered watchmen."
+    },
+    {
+      "name": "Bards College",
+      "description": "A cobblestoned quadrangle of classrooms and inns near the city center. Music drifts from private practice rooms. Master Maurice Jondrelle mentors students in the arts of melody and poetry. The College's annual King Olaf festivities are a raucous source of civic pride here."
+    }
+  ],
+  "major_settlements": [
+    "Solitude (city)",
+    "Dragon Bridge (town on Haafingar border)",
+    "Minor fishing villages along the Haafingar coast"
+  ],
+  "factions_present": [
+    "Imperial Legion",
+    "Haafingar City Guard",
+    "East Empire Company",
+    "Bards College",
+    "Stormcloak Sympathizers (underground)"
+  ],
+  "notes": "Haafingar is an Imperial bastion in the civil war. Elisif the Fair (Torygg's widow) rules Solitude, often deferring to General Tullius's military leadership. Local quests may involve assisting the Legion, protecting Solitude from spies, or influencing the hold's stance in the rebellion. The Thalmor also maintain a hidden embassy in the mountains, hinting at intrigue behind the scenes."
+}
