@@ -1,0 +1,98 @@
+{
+  "name": "Maurice Jondrelle",
+  "id": "npc_stat_maurice_jondrelle",
+  "type": "High Elf Master Bard",
+  "category": "Friendly NPC",
+  "location": "Bards College, Solitude",
+  "faction": "Bards College",
+  "role": "High Elf Master of the Bards College",
+  "aspects": {
+    "high_concept": "High Elf Master of the Bards College",
+    "trouble": "Perfectionism That Silences Potential",
+    "other_aspects": [
+      "Keeper of Song, Story, and Skyrim's Living Memory",
+      "Diplomatic Neutrality Cloaking Old Prejudices",
+      "Voice That Could Calm a Battlefield"
+    ]
+  },
+  "skills": {
+    "Great": ["Empathy", "Crafts"],
+    "Good": ["Rapport", "Lore"],
+    "Fair": ["Will", "Notice"],
+    "Average": ["Resources", "Investigate"]
+  },
+  "stunts": [
+    "Conducting Circle: +2 to Empathy when calming, inspiring, or rallying listeners through performance or oration.",
+    "Versatile Bard: +2 to Crafts (Performance) when playing instruments or composing music.",
+    "Living Archive: Once per session, recall an obscure historical, cultural, or bardic fact that provides a +2 bonus to any Lore-based action."
+  ],
+  "stress": {
+    "physical": [false, false],
+    "mental": [false, false, false]
+  },
+  "consequences": {
+    "mild": null,
+    "moderate": null,
+    "severe": null
+  },
+  "refresh": 3,
+  "fate_points": 3,
+  "equipment": {
+    "armor": "Bards College robes (fine quality)",
+    "weapon": "None",
+    "special": "Masterwork lute, Bards College faculty seal, annotated songbook collection"
+  },
+  "personality_notes": {
+    "speaking_style": "Measured and theatrical by turns; uses poetic language naturally. Corrects inaccuracies about history or music with gentle but firm insistence.",
+    "motivations": [
+      "Preserve the musical and poetic heritage of Skyrim and the Empire",
+      "Train the next generation of bards to carry culture through war",
+      "Maintain the College's political neutrality",
+      "Perfect his own compositions before age takes its toll"
+    ],
+    "fears": [
+      "The College losing its neutral standing in the civil war",
+      "Nordic culture being destroyed by the conflict",
+      "His own compositions being forgotten",
+      "A student's potential being wasted"
+    ],
+    "quirks": [
+      "Hums softly while thinking",
+      "Critiques poor storytelling even in casual conversation",
+      "Quotes historical ballads instead of giving direct opinions"
+    ]
+  },
+  "relationships": {
+    "Elisif the Fair": "Respectful professional; performs at Blue Palace on occasion",
+    "Falk Firebeard": "Cordial; keeps the College's relationship with hold administration smooth",
+    "Bards College Students": "Exacting master; genuinely invests in promising students",
+    "Sybille Stentor": "Mutual respect between court mage and master bard; share love of arcane lore",
+    "Player": "Will warm to characters who demonstrate genuine interest in history or performance"
+  },
+  "trust_clock": {
+    "current": 0,
+    "max": 6,
+    "advancement_triggers": [
+      "Assist in recovering lost songs or historical records (+2)",
+      "Demonstrate real bardic or historical knowledge (+1)",
+      "Perform a college quest with distinction (+1)"
+    ],
+    "setback_triggers": [
+      "Vandalize or disrespect College property (-2)",
+      "Spread misinformation about history in his presence (-1)"
+    ],
+    "trust_benefits": {
+      "3": "Jondrelle grants access to the College library and offers bardic training",
+      "6": "Jondrelle shares rare compositions and opens doors with nobles who respect the College"
+    }
+  },
+  "scene_triggers": [
+    "Bards College questline",
+    "Burning of King Olaf's effigy festival",
+    "Recovering lost Nord songs or poems",
+    "Diplomatic events requiring cultural performance"
+  ],
+  "act_context": ["Act 1", "Act 2", "Act 3"],
+  "notes": "Maurice Jondrelle leads the Bards College with a demanding but ultimately generous spirit. He values cultural preservation above politics, and the College's neutrality is genuine—though it sometimes masks a High Elf's quiet sense of cultural superiority. Characters who prove themselves culturally curious will find him an invaluable ally with contacts across Skyrim's courts.",
+  "gm_notes": "Jondrelle is ideal for quests involving lost lore, diplomatic events, and cultural mysteries. His High Elf background can create mild friction with Stormcloak-sympathizing characters—not hostility, but a subtle condescension he tries (imperfectly) to suppress. His perfectionism can become a source of comedic tension during College questlines."
+}

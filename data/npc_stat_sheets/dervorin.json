@@ -1,0 +1,98 @@
+{
+  "name": "Dervorin",
+  "id": "npc_stat_dervorin",
+  "type": "Imperial Innkeeper",
+  "category": "Friendly NPC",
+  "location": "Winking Skeever, Solitude",
+  "faction": "Independent / Solitude",
+  "role": "Imperial Bartender at the Winking Skeever",
+  "aspects": {
+    "high_concept": "Imperial Bartender at the Winking Skeever",
+    "trouble": "Knows Too Much About Too Many People",
+    "other_aspects": [
+      "A Warm Hearth for Every Traveler",
+      "Reads the Room Better Than Any Spy",
+      "Neutral Ground Has a Price"
+    ]
+  },
+  "skills": {
+    "Great": ["Rapport", "Notice"],
+    "Good": ["Empathy", "Contacts"],
+    "Fair": ["Resources", "Will"],
+    "Average": ["Investigate", "Physique"]
+  },
+  "stunts": [
+    "House of Cheer: +2 to Rapport when calming upset, agitated, or hostile patrons within the Winking Skeever.",
+    "Sharp Eye: +2 to Notice when spotting hidden coins, concealed items, disguised individuals, or covert exchanges.",
+    "Font of Gossip: Once per session, tap the Winking Skeever's network of travelers and regulars to learn a useful rumor or piece of local intelligence."
+  ],
+  "stress": {
+    "physical": [false, false],
+    "mental": [false, false]
+  },
+  "consequences": {
+    "mild": null,
+    "moderate": null,
+    "severe": null
+  },
+  "refresh": 2,
+  "fate_points": 2,
+  "equipment": {
+    "armor": "Innkeeper's apron",
+    "weapon": "Club kept under the bar (Weapon:1)",
+    "special": "Inn ledger, room keys, standing account with Solitude merchants"
+  },
+  "personality_notes": {
+    "speaking_style": "Affable and welcoming with a sharp undercurrent; quick to laugh, quicker to notice. Uses first names once introduced. Never shares a secret for free.",
+    "motivations": [
+      "Run a profitable and respected inn in Solitude",
+      "Maintain neutrality so all factions keep spending coin here",
+      "Protect his regulars from trouble spilling through his door",
+      "Keep himself out of anything that could shut him down"
+    ],
+    "fears": [
+      "The civil war choosing his inn as a battleground",
+      "A faction deciding his neutrality is unacceptable",
+      "Losing his license or the Winking Skeever's reputation",
+      "The wrong person overhearing the wrong conversation"
+    ],
+    "quirks": [
+      "Wipes down the same spot on the bar when thinking",
+      "Greets repeat customers with their last order before they ask",
+      "Deliberately mishears questions he would rather not answer"
+    ]
+  },
+  "relationships": {
+    "Solitude Guard": "Cooperative—keeps trouble out and guards keep an eye out",
+    "Legate Rikke": "Occasional patron; he never repeats what she says at the bar",
+    "Erikur Silver-Maned": "Regular customer; Dervorin tolerates his manner for his coin",
+    "Bards College Students": "Regular performers; they bring atmosphere and crowds",
+    "Player": "Open to travelers who pay and behave; trust grows with good custom and discretion"
+  },
+  "trust_clock": {
+    "current": 0,
+    "max": 6,
+    "advancement_triggers": [
+      "Defuse trouble in the inn without causing damage (+2)",
+      "Become a regular paying customer (+1)",
+      "Help protect a patron or the inn itself (+2)"
+    ],
+    "setback_triggers": [
+      "Start a fight or cause destruction in the inn (-3)",
+      "Attempt to coerce information from him (-1)"
+    ],
+    "trust_benefits": {
+      "3": "Dervorin shares local rumors freely and offers discounted rooms",
+      "6": "Dervorin alerts the party to unusual activity in Solitude and shares contacts from his network"
+    }
+  },
+  "scene_triggers": [
+    "Arriving in Solitude for the first time",
+    "Information gathering about Solitude factions",
+    "Safe rest and rumor collection between missions",
+    "Social encounters with Solitude's notable figures"
+  ],
+  "act_context": ["Act 1", "Act 2", "Act 3"],
+  "notes": "Dervorin has run the Winking Skeever long enough to have seen everything Solitude's streets can produce. He is one of the best-connected commoners in the city, second only to the Thieves Guild in knowing who is doing what to whom. His neutrality is genuine but not free—he expects discretion from those he helps.",
+  "gm_notes": "Dervorin is the party's primary social anchor in Solitude. Use him to deliver rumors, introduce plot hooks through overheard conversations, and provide a neutral safe space between high-stakes scenes. His 'deliberate mishearing' quirk is a useful GM tool for controlling information flow without outright refusal."
+}

@@ -1,0 +1,24 @@
+{
+  "locations": [
+    {
+      "name": "Solitude Bridge",
+      "description": "The road between Solitude and Dragon Bridge crosses high stone arches. Checkpoints manned by Legate Rikke's troops ensure only cleared travelers pass toward the city."
+    },
+    {
+      "name": "Temple of the Divines (Solitude)",
+      "description": "A shrine tucked into Solitude's layout, dedicated to all Divines (but especially Talos). Priest Lachance conducts rites here, providing a place of peace amid the martial hustle of the city."
+    },
+    {
+      "name": "Blue Palace Courtyard",
+      "description": "The open courtyard of the Blue Palace. Elisif greets petitioners at midday, and courtiers hurry to and fro. Imperial banners and Nord runes both hang here, symbolizing Elisif's tenuous unity of throne and tradition."
+    },
+    {
+      "name": "Castle Dour Armory",
+      "description": "The weapons room for the Haafingar garrison. Racks of polished steel and imperial standards line the walls. Soldiers train outside, eyeing newcomers warily as they don red-and-black Legion cloaks."
+    },
+    {
+      "name": "Bards College Lecture Hall",
+      "description": "A circular room with tiered seating, where Master Jondrelle teaches music and poetry. A grand organ and carved wooden statues adorn the walls. Students sit on benches, awaiting lessons in speech or song."
+    }
+  ]
+}
