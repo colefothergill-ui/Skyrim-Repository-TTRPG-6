@@ -23,7 +23,7 @@ def solitude_location_triggers(loc, campaign_state):
     """
     events = []
     loc_lower = str(loc).lower()
-    companions = campaign_state.get("companions", {}).get("active_companions", [])
+    active_companions = campaign_state.get("companions", {}).get("active_companions", [])
 
     # Entering the Blue Palace (Jarl's Residence)
     if "blue palace" in loc_lower:
@@ -31,14 +31,14 @@ def solitude_location_triggers(loc, campaign_state):
 
     # Entering Castle Dour (Legion HQ)
     if "castle dour" in loc_lower:
-        events.append("You step under Castle Dour's portcullis. Imperial Legionnaires in red\u2011black armor march down the ramparts. An officer eyes you sharply, then salutes, 'At ease, stranger. Keep your steel sheathed inside Imperial walls.'")
+        events.append("You step under Castle Dour's portcullis. Imperial Legionnaires in red-black armor march down the ramparts. An officer eyes you sharply, then salutes, 'At ease, stranger. Keep your steel sheathed inside Imperial walls.'")
 
     # Entering the Winking Skeever (inn)
     if "winking skeever" in loc_lower:
         events.append("The inn's hearth and ale welcome you. Patrons clank mugs and a bard strums a lute in the corner. Dervorin the innkeeper greets you with a grin: 'Sit, have a drink on the house. Solitude's always safer with a friend.'")
 
     # Companion commentary: if Marcurio is present and in Solitude, he comments on Imperial hold
-    if is_companion_present(companions, "marcurio") and "solitude" in loc_lower:
-        events.append('Marcurio (mistress of the arcane) raises an eyebrow. "Your Highness\'s city is well-protected\u2026 impressive. But I sense discontent beneath the loyalty."')
+    if is_companion_present(active_companions, "marcurio") and "solitude" in loc_lower:
+        events.append('Marcurio (master of the arcane) raises an eyebrow. "Your Highness\'s city is well-protected... impressive. But I sense discontent beneath the loyalty."')
 
     return events
