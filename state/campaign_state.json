@@ -8,7 +8,8 @@
   "session_zero_completed": true,
   "session_count": 1,
   "last_updated": "2026-02-19 05:12:49",
-  "starting_location": "Saarthal",
+  "starting_location": "Winterhold - College Bridge",
+  "session_start_location": "Saarthal — Eye Chamber (pre-withdrawal)",
   "current_scene_id": "A1_S01_SAARTHAL_WITHDRAWAL",
   "current_location": "Saarthal — Eye Chamber (pre-withdrawal)",
   "active_hold": "Winterhold Hold",
@@ -52,7 +53,7 @@
     "Shield-Wall Doctrine": {
       "free_invokes": 0,
       "created_by": "pc_oskern_cindershroud",
-      "notes": "Formation order: Oskern+Onmund front with wards; Brelyna mid support; J'zargo rear artillery."
+      "notes": "Formation order: Oskern+Onmund front with wards; Brelyna mid support; J'zargo rear artillery. Free invoke spent to coordinate the initial shield surge against the draugr ambush at the chokepoint."
     },
     "Signed for Their Safety": {
       "free_invokes": 0,
@@ -86,7 +87,7 @@
     },
     "Ancano's Attention": {
       "free_invokes": 1,
-      "created_by": "gm",
+      "created_by": "npc_stat_ancano",
       "notes": "Ancano is now watching you as a political obstacle, not a student."
     },
     "Containment Lattice Harmonized": {
