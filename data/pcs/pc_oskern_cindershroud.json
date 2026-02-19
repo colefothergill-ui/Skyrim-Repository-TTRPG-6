@@ -251,10 +251,31 @@
     ],
     "items": [
       "Satchel of reagents & inks",
-      "Spellbook folios (warded)"
+      "Spellbook folios (warded)",
+      "College-Issued Field Kit (scrolls, potions, emergency gear)",
+      "Saarthal Burial Sigil (carried by Tolfdir; ward-key studied by the team)"
     ]
   },
   "extras": [
+    {
+      "name": "Eye of Magnus Resonance",
+      "type": "boon",
+      "refresh_cost": 0,
+      "description": "Residual Eye energy safely keyed to Oskern's magicka matrix via the Staff of Cinders. Stored charge can be tapped without destabilizing the Eye (within limits).",
+      "aspects": [
+        {
+          "name": "Eye-Fed Reservoir",
+          "charges": { "current": 2, "max": 2 },
+          "use": "Spend 1 charge to gain +2 or a reroll on a Lore or Will action involving ward-magic, magicka control, or Eye-related phenomena. Also functions as narrative permission to ignore minor magicka-starved complications."
+        },
+        {
+          "name": "Eye-Touched Mastery",
+          "charges": { "current": 1, "max": 1 },
+          "use": "One-use +2 on Lore or Will related to the Eye of Magnus or ward analysis (including creating or stabilizing wards)."
+        }
+      ],
+      "expires": "Charges refresh only after a major Eye milestone or GM-approved recovery scene."
+    },
     {
       "name": "Artifact — Staff of Cinders",
       "type": "artifact",
@@ -314,7 +335,19 @@
   "backstory": "**Civil War Entry**: Oskern\u2019s Response: \u201cMy Father, Lord Elitrigg Cindershroud, and my Mother, Lady Audania of Cyrodil, entered me into a raffle called life. Just a jest, but only just. As the heir to Clan Cindershroud and son of the Legendary War Hero, the Dragon of Hjaalmarch, when war broke out, it was inevitable that I would end up in it. The short of it is that I was once Thane of Solitude by the age of 18, accepted and assessed as an Adept of the College of Winterhold at 23, and watched my best friend High King Torygg die at 25. When that happened, my Clan was split between loyalties, you see. My Father, former Patriarch of our Clan, was as close as Kin with Jarl Ulfric, and for that matter, so was I, often referring to him as my Uncle. A fact that, despite how others in my Clan felt about Ulfric after the infamous duel, landed the majority of my Clan on the headman's chopping block. Only I was spared, thanks to Jarl Elisif\u2019s fondness for me and my Mother\u2019s connections to the Septim Dynasty back in Cyrodil. Orchestrating me to be sent to Winterhold, where I have been with the College ever since.\n\n**Civil War Stance**: Oskern\u2019s Response: That... It is a question more than a little complex. On one hand, my Father was a true Son of Skyrim, Talos Worshipper, and Shield-Brother of Uncle Ulfric. On the other hand, High King Torygg  was my childhood friend, and I served Solitude\u2019s bureaucracy proudly, as well as protected Queen Elisif as her pseudo Battle-Mage, for upwards of two years. She, too, is very important to me. So, siding with Ulfric would feel like a betrayal to her and to Torygg, but to take up arms in retribution for them... That would mean betraying my Mother, my Father, my Clan, and Legacy as the next Dragon of Haafingar. All that being said, I serve the College, and the magical pursuits I always wanted as a child, but it feels cowardly.\n\n**Motivation**: Oskern\u2019s Response: \u201cOnce upon a time, it was the Legacy of each Dragon of Haafingar, a title bestowed upon my family's Patriarch since the early 3rd Era, with my Ancestor Hakon Cindershroud mastering the Thu\u2019um, and being renowned for protecting Solitude with the Staff of Cinder\u2019s, and the Shout; Yol Tor Shuul! That\u2019s: Fire Breath, in the common tongue. Nowadays, that\u2019s the only Shout required by the Patriarch of Clan Cindershroud to don the title, a Shout I am pleased to say, even as an Imperial, that I have mastered in spades. These days, what drives me is my studies, my dream of becoming a legendary Arch Mage, and perhaps restoring my family\u2019s Nobility when this damnable war is over, and a new High King or Queen is chosen. Talos let that be soon.\n\n**Connections**: Oskern\u2019s Response: \u201cAnother, complicated question... Jarl Ulfric helped me hone my Thu\u2019um, rather, he helped me Master Fire Breath\u2019s shout. He is the reason I can wear the Title: Dragon of Haafingar. He was also the closest thing to Kin to my Nord Father, and always treated my Mother, Audania, with the utmost respect, despite the fact that she was an Imperial and the 4th or 5th Cousin of the Emperor of Cyrodil.  For this, he will always be my Uncle. Then there\u2019s Jarl Elisif... I never spoke this aloud, but I was always envious of Torygg, for I truly believe that I had loved Elisif, and she... Well, she never said it outright, but I knew she felt fondly for me on a deep level. Outside of those two, I have friends in my colleagues, Onmund, J\u2019zargo, and my teacher, Tolfdir. Whiterun? Hm, I once met the Harbinger of Jorvaskr with my father when I was but a boy, Kodlak, I think his name is. Beside him, I have spoken to Jarl Balgruuf the Greater, he is a man worthy of his title to say the least.\u201d",
   "relationships": {},
   "quests": [],
-  "session_history": [],
+  "session_history": [
+    {
+      "session_id": "2026-02-15_session-00",
+      "act": 1,
+      "summary": "Led the College expedition into Saarthal, protected the students through wolves, wards, and draugr, discovered the Eye of Magnus, safely siphoned a measured charge through the Staff of Cinders (creating Eye-Fed Reservoir), and publicly checked Ancano's attempted power-grab.",
+      "milestone": "Minor (session end)",
+      "notable_clocks": {
+        "ancano_suspicion_meter": "6/8",
+        "pc_oskern_staff_of_cinders_awakening": "4/6",
+        "eye_of_magnus_instability": "1/6"
+      }
+    }
+  ],
   "notes": "Created during Session Zero\n[2026-02-15] Accepted Atronach Stone compel (magicka-starved surge); cleared immediate exhaustion with a Magicka potion before Saarthal departure.\n[2026-02-15] Travel encounter: ice wolf pack ambush. Used Fireball stunt (once/scene) with Atronach Stone surge and invoked \"Shield-Wall Doctrine\" (free invoke). Pack was Taken Out.\n[2026-02-15] After casting: gained temporary aspect \"Magicka-Starved Aftershock\" (GM free invoke 1) until potion/absorption clears it.\n[2026-02-15] Tolfdir used Saarthal Burial Sigil to bypass threshold ward (success with style): boost \"Door Accepts the Seal\".\n[2026-02-15] Oskern used Fireball stunt (zone attack, Lore +4 + stunt +2) + Staff of Cinders Dragon Fire trait (reroll 4dF once/scene) and invoked \"Ward Reforged in Heat\" (free invoke, pre-created via CA) to Take Out Wight-Caller and incoming draugr wave in chokepoint.\n[2026-02-15] Ancano suspicion ticked to 4/8 due to repeated high-profile magic witnessed by students.\n[2026-02-15] Accepted Compel: Atronach Hunger (+1 FP) then invoked Dragon of Haafingar (-1 FP) while creating advantage with Lore to siphon the Eye safely via Staff of Cinders.\n[2026-02-15] Created aspect: \"Measured Eye Siphon\" (1 free invoke). Gained aspect \"Overcharged Conduit\" (GM-controlled), free invoke spent immediately on Eye surge.\n[2026-02-15] Success with Style on subsequent Eye siphon via Staff of Cinders (4dF +2 + Lore +4 + free invokes +4 = +10 vs. Good +3; consumed Calm Under Command and Saarthal Resonance Attunement free invokes): safely channeled surplus Eye power into Oskern's magicka matrix.\n[2026-02-15] Created aspect: \"Eye-Fed Reservoir\" (2 free invokes), representing stored, controllable Eye charge Oskern can tap during future scenes.\n[2026-02-15] Gained boon: \"Eye-Touched Mastery\" (one-use +2 on Lore/Will rolls related to Eye of Magnus or ward magic).\n[2026-02-15] Confronted Ancano's authority grab in the Eye chamber (Rapport Overcome vs Great +4). Used situational boost \"Rehearsed Treaty Brief\" (+2) and invoked aspect \"Dragon of Haafingar\" (+2, -1 FP). Result: Success with Style; created scene aspect \"Thalmor Overreach Publicly Checked\" (2 free invokes).",
   "faction_alignment": "neutral",
   "additional_faction_interests": "College of Winterhold, Stormcloaks, The Greybeards,"
