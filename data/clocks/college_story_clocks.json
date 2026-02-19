@@ -1,130 +1,48 @@
 {
   "college_story_clocks": {
-    "description": "Tracks College of Winterhold storyline progression and related quest clocks",
-    "last_updated": "2026-02-15",
+    "last_updated": "2026-02-19",
     "clocks": {
       "saarthal_expedition_logistics": {
-        "name": "Saarthal Expedition Progress",
-        "current": 5,
+        "name": "Saarthal Expedition Logistics",
+        "current": 6,
         "max": 6,
-        "status": "active",
-        "notes": "Tracks team progress through Saarthal ruins. 1=briefed; 2=arrive; 3=inner halls; 4=draugr encounter; 5=inner threshold reached; 6=Eye chamber.",
-        "related_quest": "college_under_saarthal",
-        "advancement_triggers": [
-          "Team departs College and reaches Saarthal dig site",
-          "Navigate inner halls and chambers",
-          "Overcome draugr guardians",
-          "Breach transmutation slab barrier",
-          "Reach Eye of Magnus chamber"
-        ]
+        "status": "completed",
+        "notes": "Tracks the expedition staging → ruins entry → breach.\n1=briefed+supplied; 2=arrive; 3=outer wards breached; 4=first draugr; 5=inner threshold reached; 6=Eye chamber (secured for withdrawal)."
       },
       "student_safety_pressure": {
         "name": "Student Safety Pressure",
         "current": 0,
-        "max": 8,
-        "status": "active",
-        "notes": "Tracks accumulated stress, injuries, and morale issues among student team. 0=safe/confident; 8=crisis/mutiny/casualties.",
-        "related_quest": "college_under_saarthal",
-        "advancement_triggers": [
-          "Students take stress or consequences",
-          "Close calls or near-death moments",
-          "Leadership failures or poor tactical decisions",
-          "Prolonged danger without rest"
-        ],
-        "setback_triggers": [
-          "Students successfully protected from harm",
-          "Morale-boosting leadership or victories",
-          "Rest and recovery opportunities"
-        ]
-      },
-      "saarthal_expedition_progress": {
-        "name": "Saarthal Expedition Progress — Danger Escalation",
-        "current": 6,
         "max": 6,
+        "status": "active",
+        "notes": "Ticks when students are put in danger or injured. If filled, Mirabelle disciplines you and/or students are withdrawn."
+      },
+      "ancano_suspicion_meter": {
+        "name": "Ancano Suspicion Meter",
+        "current": 6,
+        "max": 8,
         "status": "critical",
-        "notes": "Tracks dungeon depth and undead response escalation. 6/6 = full awakening; draugr response at maximum intensity.",
-        "related_quest": "college_under_saarthal",
-        "advancement_triggers": [
-          "Breach outer chambers",
-          "Disturb ancient seals",
-          "Trigger ward failures",
-          "Uncover sentinel remains",
-          "Loot sacred artifacts",
-          "Full draugr awakening and counter-assault"
-        ]
+        "notes": "Ticks when Oskern blocks, outshines, or thwarts Ancano. At 8, Ancano escalates directly."
       },
       "eye_of_magnus_discovery": {
-        "name": "Eye of Magnus — Discovery Arc",
-        "current": 0,
-        "max": 6,
-        "status": "pending",
-        "notes": "Tracks progress toward unveiling the Eye of Magnus artifact. 0=unknown; 1=rumors; 2=first sighting; 3=ancano involved; 4=crisis escalates; 5=containment breach; 6=resolution.",
-        "related_quest": "college_eye_of_magnus",
-        "advancement_triggers": [
-          "Discover ancient texts or artifacts referencing the Eye",
-          "First encounter with the Eye in Saarthal",
-          "Ancano takes interest in the Eye",
-          "Eye's power becomes uncontrollable",
-          "Major crisis event (lockdown, magical disturbances)",
-          "Final confrontation and resolution"
-        ]
+        "name": "Eye of Magnus Discovery",
+        "current": 3,
+        "max": 5,
+        "status": "active",
+        "notes": "Progresses from first sighting → containment → transport to College.\nAt 5, it becomes the College's central crisis."
       },
       "college_internal_politics": {
         "name": "College Internal Politics",
-        "current": 0,
-        "max": 8,
-        "status": "background",
-        "notes": "Tracks growing tensions between faculty, Thalmor presence (Ancano), and Arch-Mage Aren's authority. Higher values indicate more political instability.",
-        "advancement_triggers": [
-          "Faculty disputes over research ethics or methods",
-          "Ancano's influence grows among certain faculty",
-          "Arch-Mage makes controversial decisions",
-          "Student incidents create factional divides",
-          "Thalmor pressure intensifies"
-        ]
-      },
-      "staff_of_cinders_awakening": {
-        "name": "Staff of Cinders — Awakening",
-        "current": 0,
-        "max": 10,
-        "status": "background",
-        "notes": "Oskern's artifact slowly awakens through mythic deeds and resonance with ancient power. Unlocks new traits/stunts as clock advances.",
-        "related_artifact": "staff_of_cinders",
-        "advancement_triggers": [
-          "Using the staff in moments of legend or myth",
-          "Resonance with ancient Nordic sites or dragon magic",
-          "Thu'um mastery milestones",
-          "Proximity to powerful artifacts (Eye of Magnus, etc.)",
-          "Heroic acts witnessed by many"
-        ]
-      },
-      "ancano_suspicion_meter": {
-        "name": "Ancano's Suspicion of PC",
-        "description": "Tracks Ancano's awareness of the PC as a potential threat to his plans with the Eye of Magnus. Higher values mean more active countermeasures.",
-        "current": 6,
+        "current": 1,
         "max": 8,
         "status": "active",
-        "completion_effect": "Ancano actively sabotages the PC or attempts to neutralize them as a threat.",
-        "advancement_triggers": [
-          "PC displays exceptional magical power publicly (+1)",
-          "PC investigates Thalmor activities (+1)",
-          "PC grows close to faculty members who distrust Ancano (+1)",
-          "PC questions Ancano directly or challenges his authority (+2)",
-          "PC discovers Eye of Magnus secrets (+2)"
-        ],
-        "setback_triggers": [
-          "PC appears incompetent or harmless (-1)",
-          "PC publicly supports Thalmor positions (-1)"
-        ],
-        "notes": "[2026-02-15] +1 from ice wolf Fireball display; +2 from Fire Breath Thu'um use in Saarthal (ancient Nordic power displayed to students).\n[2026-02-15] +1 from repeated high-profile magic (Fireball funnel + Staff of Cinders Dragon Fire) witnessed by students at inner threshold; total now 4/8.\n[2026-02-15] +1 from Eye Chamber siphon via Atronach Hunger compel + Dragon of Haafingar invoke; total now 5/8.\n[2026-02-15] +1 from SWS Eye siphon — Eye activity detected by Ancano; triggered 'Ancano's Attention'; total now 6/8."
+        "notes": "Tracks tension between factions in the College (Ancano vs traditionalists).\nAt 8, the College fractures into open conflict.\n[2026-02-15] Ancano's authority grab was publicly checked in the Eye chamber. Political tension rises."
       }
     },
-    "gm_guidance": {
-      "saarthal_focus": "The Saarthal expedition is the immediate narrative driver. Use the logistics clock to pace the dungeon crawl and student survival challenges.",
-      "eye_arc": "The Eye of Magnus discovery should be foreshadowed but not rushed. Let it emerge naturally from Saarthal exploration.",
-      "politics": "College politics simmer in the background. Use them to create social complications and compel opportunities.",
-      "staff_awakening": "The Staff of Cinders awakening is a long-term character arc. Advance slowly and deliberately based on player choices.",
-      "ancano_suspicion": "Track Ancano's growing awareness of the PC. At higher levels, he becomes an active antagonist rather than just a suspicious observer."
+    "deprecated": {
+      "staff_of_cinders_awakening": {
+        "replaced_by": "data/clocks/pc_extras_clocks.json#pc_oskern_staff_of_cinders_awakening",
+        "note": "Removed from college_story_clocks to prevent duplicate tracking. Use pc_extras_clocks for canon."
+      }
     }
   }
 }

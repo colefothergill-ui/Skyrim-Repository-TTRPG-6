@@ -1,0 +1,44 @@
+{
+  "patch_id": "2026-02-19_session-00_end_session_protocol",
+  "session_id": "2026-02-15_session-00",
+  "applied_date": "2026-02-19",
+  "applied_by": "end_session_protocol",
+  "commit_message": "End Session 00: Eye chamber freeze + boons + LATEST log + aspect fix",
+  "description": "Freeze canon at the Saarthal Eye Chamber (pre-withdrawal). Fix scene aspect note-mixup (Right Key vs Ward Reforged). Formalize the Eye siphon SWS boon as a PC Extra (charges). Create *_LATEST.md log and append END SESSION block. Record patch file for audit trail.",
+  "changes": [
+    {
+      "file": "state/campaign_state.json",
+      "action": "replace",
+      "reason": "Freeze canon at A1_S01_SAARTHAL_WITHDRAWAL; fix Right Key / Ward Reforged aspect notes mixup; set end_session_protocol_ran timestamp."
+    },
+    {
+      "file": "data/clocks/college_story_clocks.json",
+      "action": "replace",
+      "reason": "Update saarthal_expedition_logistics to 6/6 completed (6-segment detailed progression: all stages through 'Eye chamber secured for withdrawal' done); restructure clocks to match end-of-session state; deprecate staff_of_cinders_awakening to pc_extras_clocks. NOTE: campaign_state.json scene_clocks uses a separate 4-segment high-level overview version of this clock (currently 3/4 — eye chamber reached; segment 4 = secure exit + return report is the next scene)."
+    },
+    {
+      "file": "data/pcs/pc_oskern_cindershroud.json",
+      "action": "edit",
+      "reason": "Append Eye of Magnus Resonance boon extra (Eye-Fed Reservoir 2 charges, Eye-Touched Mastery 1 charge); append equipment items; append session_history entry for session-00."
+    },
+    {
+      "file": "data/world_state/current_state.json",
+      "action": "replace",
+      "reason": "Add Eye of Magnus discovery to major_events; add Saarthal rumor; add end-session note."
+    },
+    {
+      "file": "logs/2026-02-15_session-00_Session-Zero.md",
+      "action": "append",
+      "reason": "Append END SESSION PROTOCOL block with stop point, clocks, trust standings, stress/consequences, boons, FP, milestone, and cold-open hook."
+    },
+    {
+      "file": "logs/2026-02-15_session-00_LATEST.md",
+      "action": "create",
+      "reason": "Create LATEST log with one-page recap, mechanical highlights, stop point, and reference to END SESSION PROTOCOL."
+    }
+  ],
+  "verification": [
+    "python3 scripts/mid_session_protocol.py",
+    "python3 -m py_compile scripts/*.py scripts/triggers/*.py"
+  ]
+}

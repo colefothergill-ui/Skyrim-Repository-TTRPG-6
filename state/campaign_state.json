@@ -6,14 +6,21 @@
   "active_pc": "pc_oskern_cindershroud",
   "active_pc_id": "pc_oskern_cindershroud",
   "session_zero_completed": true,
-  "session_count": 0,
-  "last_updated": "2026-02-15 03:37:54",
+  "session_count": 1,
+  "last_updated": "2026-02-19 05:12:49",
   "starting_location": "Winterhold - College Bridge",
-  "current_scene_id": "A1_S00_EYE_CHAMBER",
-  "current_location": "College of Winterhold — Eye of Magnus Chamber",
+  "session_start_location": "Saarthal — Eye Chamber (pre-withdrawal)",
+  "current_scene_id": "A1_S01_SAARTHAL_WITHDRAWAL",
+  "current_location": "Saarthal — Eye Chamber (pre-withdrawal)",
   "active_hold": "Winterhold Hold",
-  "current_objective": "Monitor the Eye of Magnus after publicly checking Ancano's authority grab; coordinate with Tolfdir on containment.",
-  "current_npcs": ["ancano"],
+  "current_objective": "Withdraw from Saarthal with the students and the College's notes. Report the Eye of Magnus discovery to Arch-Mage Savos Aren. Keep Ancano boxed into \"observer\" status.",
+  "current_npcs": [
+    "tolfdir",
+    "ancano",
+    "onmund",
+    "brelyna_maryon",
+    "jzargo"
+  ],
   "scene_flags": {
     "active_quest_id": "college_under_saarthal",
     "college_first_lessons_completed": true,
@@ -24,8 +31,17 @@
     ],
     "expedition_lead": "pc_oskern_cindershroud",
     "compel_resolution": {
-      "atronach_stone_magicka_starved": "Accepted compel; spent Magicka potion to clear immediate exhaustion before departure."
-    }
+      "atronach_stone_magicka_starved": "Accepted compel; spent Magicka potion to clear immediate exhaustion before departure.",
+      "atronach_hunger_eye_siphon": "Accepted compel; siphoned the Eye via Staff of Cinders, created Measured Eye Siphon and Eye-Fed Reservoir; Ancano was alerted."
+    },
+    "eye_of_magnus_discovered": true,
+    "eye_siphon_completed": true,
+    "eye_fed_reservoir_charges": 2,
+    "ancano_publicly_checked": true,
+    "saarthal_burial_sigil_acquired": true,
+    "threshold_sealed": true,
+    "psijic_warning_pending": true,
+    "end_session_protocol_ran": "2026-02-19 05:12:49"
   },
   "scene_last_major_update": "2026-02-15",
   "scene_aspects": {
@@ -35,98 +51,73 @@
       "notes": "Satchel of scrolls, potions, and emergency gear signed out for Saarthal."
     },
     "Shield-Wall Doctrine": {
-      "free_invokes": 1,
+      "free_invokes": 0,
       "created_by": "pc_oskern_cindershroud",
-      "notes": "Formation order: Oskern+Onmund front with wards; Brelyna mid support; J'zargo rear artillery. Invoked during ice wolf encounter (1 free invoke consumed)."
+      "notes": "Formation order: Oskern+Onmund front with wards; Brelyna mid support; J'zargo rear artillery. Free invoke spent to coordinate the initial shield surge against the draugr ambush at the chokepoint."
     },
     "Signed for Their Safety": {
       "free_invokes": 0,
       "created_by": "npc_stat_mirabelle_ervine",
-      "notes": "Mirabelle's directive: you are accountable for student welfare on this expedition. Consumed during Rapport roll to create 'Calm Under Command'."
-    },
-    "Magicka-Starved Aftershock": {
-      "free_invokes": 1,
-      "created_by": "standing_stone_atronach",
-      "notes": "Atronach backlash after heavy Destruction casting during ice wolf encounter; GM-controlled invoke until cleared by potion/absorption."
+      "notes": "Mirabelle's directive: you are accountable for student welfare on this expedition."
     },
     "Measured, Orderly Grit": {
-      "free_invokes": 1,
+      "free_invokes": 0,
       "created_by": "pc_oskern_cindershroud",
-      "notes": "Voice of the Emperor steadies the student team before entering Saarthal."
+      "notes": "Voice of the Emperor used at the Saarthal gate to steady the group's nerves and enforce procedure."
     },
     "Saarthal Resonance Attunement": {
       "free_invokes": 0,
-      "created_by": "scene_environment",
-      "notes": "Ancient Nordic magic resonates with the expedition's approach. Started with 2 free invokes; 1st consumed during sentinel ash salvage (loot action); 2nd consumed during SWS Eye siphon roll."
+      "created_by": "pc_oskern_cindershroud",
+      "notes": "Oskern keyed to the ruin's ward-hum, letting him feel pressure shifts before they happen."
     },
-    "Calm Under Command": {
+    "Ward Reforged in Heat": {
       "free_invokes": 0,
       "created_by": "pc_oskern_cindershroud",
-      "notes": "Created via Rapport roll (consuming 'Signed for Their Safety'); students are steadied under Oskern's calm leadership. Invoke consumed: SWS Eye siphon roll."
+      "notes": "Oskern blasted back frost buildup with heat, layering the frontline ward; invoked during the Fireball funnel in the chokepoint."
     },
-    "Containment Lattice Harmonized": {
-      "free_invokes": 1,
-      "created_by": "npc_stat_tolfdir",
-      "notes": "Tolfdir harmonized the containment lattice around the Eye chamber. Started at 2 free invokes; 1 spent by Tolfdir to stabilize the Eye surge caused by Oskern's Atronach Hunger siphon."
-    },
-    "Measured Eye Siphon": {
-      "free_invokes": 1,
-      "created_by": "pc_oskern_cindershroud",
-      "notes": "Controlled siphon channel from the Eye through Staff of Cinders; safe 'battery charge' and resonance key."
-    },
-    "Overcharged Conduit": {
+    "Right Key, Right Now": {
       "free_invokes": 0,
-      "created_by": "gm_compel_atronach_hunger",
-      "notes": "The Eye answered the siphon with an uncontrolled surge; free invoke spent on the initial pulse."
-    },
-    "Eye-Fed Reservoir": {
-      "free_invokes": 2,
       "created_by": "pc_oskern_cindershroud",
-      "notes": "Success with Style: controlled siphon of Eye output through Staff of Cinders; supercharged reservoir keyed to lattice."
-    },
-    "Ancano's Attention": {
-      "free_invokes": 1,
-      "created_by": "gm_trigger_ancano_suspicion",
-      "notes": "Ancano is alerted to Eye activity; GM-controlled invoke."
+      "notes": "Boost from ash-salvage: the correct ward-key was found in the sentinel ash (Saarthal Burial Sigil). Boost is spent; the item remains."
     },
     "Thalmor Overreach Publicly Checked": {
       "free_invokes": 2,
       "created_by": "pc_oskern_cindershroud",
-      "notes": "Ancano's attempted claim of authority over the Eye is publicly shut down in front of faculty + students."
+      "notes": "Oskern and Tolfdir boxed Ancano into observer posture in front of the students."
     },
-    "Ward Held at the Seam": {
+    "Ancano's Attention": {
       "free_invokes": 1,
-      "created_by": "npc_stat_onmund + npc_stat_tolfdir",
-      "notes": "Onmund maintained ward integrity while Tolfdir reinforced the seam; delayed approaching draugr."
+      "created_by": "npc_stat_ancano",
+      "notes": "Ancano is now watching you as a political obstacle, not a student."
     },
-    "Right Key, Right Now": {
+    "Containment Lattice Harmonized": {
       "free_invokes": 1,
-      "created_by": "npc_stat_onmund",
-      "notes": "Onmund transmuted the slab with Brelyna and J'zargo assisting; barrier opened cleanly."
+      "created_by": "npc_stat_tolfdir",
+      "notes": "Tolfdir's diagram stabilizes the barrier. A window of safety has been created."
     },
-    "Ward Reforged in Heat": {
+    "Measured Eye Siphon": {
       "free_invokes": 1,
       "created_by": "pc_oskern_cindershroud",
-      "notes": "Boost from rapid salvage: found the correct key/sigil in the sentinel ash."
+      "notes": "A precise, throttled draw. Enough to empower, not enough to rupture."
     },
-    "Threshold Sealed": {
-      "free_invokes": 0,
-      "created_by": "npc_stat_tolfdir",
-      "notes": "Tolfdir used the Saarthal Burial Sigil to seal the threshold against pursuit from the inner chambers."
+    "Eye-Fed Reservoir": {
+      "free_invokes": 2,
+      "created_by": "pc_oskern_cindershroud",
+      "notes": "A stored charge of Eye energy threaded through the Staff of Cinders into Oskern's matrix."
     }
   },
   "scene_clocks": {
     "saarthal_expedition_logistics": {
       "name": "Saarthal Expedition Logistics",
-      "current": 1,
+      "current": 3,
       "max": 4,
-      "notes": "1=briefed+supplied; 2=arrive; 3=breach wards; 4=secure exit."
+      "notes": "1=briefed+supplied; 2=arrive; 3=breach wards + reach Eye chamber; 4=secure exit + return report."
     },
     "saarthal_expedition_progress": {
       "name": "Saarthal Expedition Progress",
       "current": 6,
       "max": 6,
-      "notes": "Danger escalation in Saarthal ruins; 6/6 indicates full draugr awakening impacting the current scene."
+      "notes": "6/6 means you have reached the Eye chamber. Extraction/withdrawal begins next scene."
     }
   },
   "player": {
@@ -189,7 +180,9 @@
     "towns_affected": [],
     "npcs_killed": [],
     "npcs_befriended": [],
-    "major_choices": []
+    "major_choices": [
+      "Publicly checked Ancano's attempted authority grab at the Eye chamber."
+    ]
   },
   "active_story_arcs": [
     {
@@ -270,9 +263,9 @@
   ],
   "starting_narrative": "Oskern Cindershroud begins at the College of Winterhold, already a capable Adept with a famous (and politically loaded) name. The first crisis is local: Tolfdir's expedition to Saarthal and the sealed anomaly beneath it. The civil war remains a looming backdrop—Whiterun is still officially neutral, and both sides pressure Jarl Balgruuf—while the Thalmor maneuver in the shadows.",
   "faction_relationships": {
-    "college_of_winterhold": 30,
+    "college_of_winterhold": 32,
     "tolfdir": 47,
-    "mirabelle_ervine": 30,
+    "mirabelle_ervine": 35,
     "companions": 20
   },
   "npc_first_impressions": {}

@@ -373,3 +373,42 @@ Ancano attempted to claim authority over the Eye of Magnus in front of assembled
 - **Onmund loyalty**: +1
 - **Brelyna loyalty**: +1
 - **J'zargo loyalty**: +1
+
+---
+# END SESSION PROTOCOL — Session 00 (2026-02-15)
+
+## Stop Point
+- **Act**: 1
+- **Next Scene ID**: A1_S01_SAARTHAL_WITHDRAWAL
+- **Location**: Saarthal — Eye Chamber (pre-withdrawal)
+- **Objective (Next Session)**: Withdraw from Saarthal with the students and the College's notes. Report the Eye of Magnus discovery to Arch-Mage Savos Aren. Keep Ancano boxed into "observer" status.
+
+## Clocks (Top 3)
+- **Ancano Suspicion Meter**: 6/8
+- **Staff of Cinders Awakening**: 4/6
+- **Eye of Magnus Instability**: 1/6
+
+## Trust / Standing / Companions
+- **College Trust (0–10)**: 5/10
+- **Tolfdir Relationship**: 47
+- **Student Loyalty**:
+  - Onmund: 43
+  - Brelyna: 40
+  - J'zargo: 44
+
+## Active Consequences / Stress
+- **Stress**: {"physical": {"current": 0, "max": 2}, "mental": {"current": 0, "max": 2}}
+- **Consequences**: {"mild": null, "moderate": null, "severe": null}
+
+## Persistent Boons / Scene Carryover
+- **Eye-Fed Reservoir**: 2 charges (see PC extra: *Eye of Magnus Resonance*)
+- **Eye-Touched Mastery**: 1 charge (one-use +2 on Lore/Will for Eye/wards)
+
+## Fate Points
+- **Oskern FP**: 2 (Refresh 1)
+
+## Milestone
+- **Minor Milestone earned** (Session End)
+
+## Next Session Cold-Open Hook
+The tunnel behind you is silent for one long, suspicious breath… and then the stone remembers it has teeth.

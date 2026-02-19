@@ -7,7 +7,8 @@
     "High King Torygg was killed by Ulfric Stormcloak",
     "Thalmor influence in Skyrim grows stronger",
     "Battle of Whiterun looms as both sides pressure Jarl Balgruuf",
-    "Galmar Stone-Fist remains alive and commands Stormcloak forces"
+    "Galmar Stone-Fist remains alive and commands Stormcloak forces",
+    "College expedition at Saarthal uncovered a sealed Eye of Magnus chamber; Thalmor Advisor Ancano was present."
   ],
   "political_situation": {
     "skyrim_status": "Civil War in progress",
@@ -28,6 +29,7 @@
   },
   "weather_and_season": "Late summer, generally pleasant weather",
   "rumors_and_news": [
+    "Rumor: A blue glow poured from the Saarthal excavation at dusk, and the College party returned shaken, speaking in whispers about an \"Eye\".",
     "Galmar Stone-Fist was seen rallying Stormcloak troops after the west-wall clash — bruised, furious, and very much alive.",
     "Caravans report College mages traveling north under guard; Winterhold locals are muttering about 'another Collapse waiting to happen.'",
     "Civil war tensions rise as both sides prepare for battle",
@@ -43,5 +45,5 @@
     "Bandit activity on trade routes",
     "Political instability in neutral holds"
   ],
-  "notes": "Campaign Focus: The civil war between Imperials and Stormcloaks dominates Skyrim. The Thalmor work behind the scenes to keep both sides weak. Jarls are being forced to choose sides, and the common people are caught in the middle. The Battle of Whiterun will be a pivotal moment.\n[2026-02-15] Continuity correction: prior references to Galmar Stone-Fist being slain and to a completed Goldenglow Estate job belonged to a retired PC timeline and are NOT canon for Oskern.\n[2026-02-15] Whiterun timing correction: the Battle of Whiterun has NOT begun; Balgruuf remains officially neutral."
+  "notes": "Campaign Focus: The civil war between Imperials and Stormcloaks dominates Skyrim. The Thalmor work behind the scenes to keep both sides weak. Jarls are being forced to choose sides, and the common people are caught in the middle. The Battle of Whiterun will be a pivotal moment.\n[2026-02-15] Continuity correction: prior references to Galmar Stone-Fist being slain and to a completed Goldenglow Estate job belonged to a retired PC timeline and are NOT canon for Oskern.\n[2026-02-15] Whiterun timing correction: the Battle of Whiterun has NOT begun; Balgruuf remains officially neutral.\n[2026-02-19] End-session update: Eye of Magnus chamber reached; Ancano publicly checked; expedition preparing to withdraw."
 }
