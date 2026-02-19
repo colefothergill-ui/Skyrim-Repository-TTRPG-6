@@ -124,6 +124,7 @@
     "college_member": true,
     "college_rank": "Adept",
     "has_staff_of_cinders": true,
+    "staff_level": 2,
     "artifacts": [
       "staff_of_cinders"
     ]

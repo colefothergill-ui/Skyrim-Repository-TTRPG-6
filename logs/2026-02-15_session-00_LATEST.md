@@ -16,3 +16,8 @@ Oskern led the College expedition from Winterhold to Saarthal, held the students
 
 ## End Session Protocol
 See appended END SESSION PROTOCOL block in `logs/2026-02-15_session-00_Session-Zero.md`.
+
+## Artifact Event: Staff of Cinders Awakening 6/6
+On Jyrik Gauldurson's defeat, the Staff of Cinders completes its Awakening. Hairline runes flare along the ebony length, revealing a hidden Thu'um inscription:
+**FEIM. ZII. GRON.**
+Unlocked Shout: **Become Ethereal (Feim Zii Gron)**, mastery 0/8.

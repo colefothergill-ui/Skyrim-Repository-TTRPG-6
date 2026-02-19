@@ -326,6 +326,22 @@
           "cooldown": "Once per scene (mastered) or costs 1 Fate Point (unmastered).",
           "mastery_clock": { "current": 8, "max": 8, "status": "mastered" },
           "training_locations": ["Dustman's Cairn", "Sunderstone Gorge Word Wall"]
+        },
+        {
+          "name": "Become Ethereal (Feim Zii Gron)",
+          "words": ["Feim", "Zii", "Gron"],
+          "effect": "Step partially into the ethereal plane, becoming immune to damage but unable to attack.",
+          "mechanics": {
+            "action_type": "Defend (Will)",
+            "one_word": "Become ethereal for 1 exchange; immune to physical/magical damage; cannot attack or cast offensive spells.",
+            "two_words": "Ethereal for 2 exchanges; can move freely through zones without impediment.",
+            "three_words": "Ethereal for 3 exchanges; on return, create 'Phased Return' boost (+2 to next action)."
+          },
+          "mastery_benefits": "Mastered: May make a single defensive action (Create Advantage) while ethereal without breaking the effect.",
+          "cooldown": "Once per scene (mastered) or costs 1 Fate Point (unmastered).",
+          "mastery_clock": { "current": 0, "max": 8 },
+          "source": "Staff of Cinders rune-reveal (Level 2 unlock)",
+          "training_locations": ["Saarthal Eye Chamber — rune-reveal on Jyrik Gauldurson finisher (2026-02-19)"]
         }
       ]
     }
@@ -343,12 +359,12 @@
       "milestone": "Minor (session end)",
       "notable_clocks": {
         "ancano_suspicion_meter": "6/8",
-        "pc_oskern_staff_of_cinders_awakening": "4/6",
+        "pc_oskern_staff_of_cinders_awakening": "6/6 (RESOLVED)",
         "eye_of_magnus_instability": "1/6"
       }
     }
   ],
-  "notes": "Created during Session Zero\n[2026-02-15] Accepted Atronach Stone compel (magicka-starved surge); cleared immediate exhaustion with a Magicka potion before Saarthal departure.\n[2026-02-15] Travel encounter: ice wolf pack ambush. Used Fireball stunt (once/scene) with Atronach Stone surge and invoked \"Shield-Wall Doctrine\" (free invoke). Pack was Taken Out.\n[2026-02-15] After casting: gained temporary aspect \"Magicka-Starved Aftershock\" (GM free invoke 1) until potion/absorption clears it.\n[2026-02-15] Tolfdir used Saarthal Burial Sigil to bypass threshold ward (success with style): boost \"Door Accepts the Seal\".\n[2026-02-15] Oskern used Fireball stunt (zone attack, Lore +4 + stunt +2) + Staff of Cinders Dragon Fire trait (reroll 4dF once/scene) and invoked \"Ward Reforged in Heat\" (free invoke, pre-created via CA) to Take Out Wight-Caller and incoming draugr wave in chokepoint.\n[2026-02-15] Ancano suspicion ticked to 4/8 due to repeated high-profile magic witnessed by students.\n[2026-02-15] Accepted Compel: Atronach Hunger (+1 FP) then invoked Dragon of Haafingar (-1 FP) while creating advantage with Lore to siphon the Eye safely via Staff of Cinders.\n[2026-02-15] Created aspect: \"Measured Eye Siphon\" (1 free invoke). Gained aspect \"Overcharged Conduit\" (GM-controlled), free invoke spent immediately on Eye surge.\n[2026-02-15] Success with Style on subsequent Eye siphon via Staff of Cinders (4dF +2 + Lore +4 + free invokes +4 = +10 vs. Good +3; consumed Calm Under Command and Saarthal Resonance Attunement free invokes): safely channeled surplus Eye power into Oskern's magicka matrix.\n[2026-02-15] Created aspect: \"Eye-Fed Reservoir\" (2 free invokes), representing stored, controllable Eye charge Oskern can tap during future scenes.\n[2026-02-15] Gained boon: \"Eye-Touched Mastery\" (one-use +2 on Lore/Will rolls related to Eye of Magnus or ward magic).\n[2026-02-15] Confronted Ancano's authority grab in the Eye chamber (Rapport Overcome vs Great +4). Used situational boost \"Rehearsed Treaty Brief\" (+2) and invoked aspect \"Dragon of Haafingar\" (+2, -1 FP). Result: Success with Style; created scene aspect \"Thalmor Overreach Publicly Checked\" (2 free invokes).",
+  "notes": "Created during Session Zero\n[2026-02-15] Accepted Atronach Stone compel (magicka-starved surge); cleared immediate exhaustion with a Magicka potion before Saarthal departure.\n[2026-02-15] Travel encounter: ice wolf pack ambush. Used Fireball stunt (once/scene) with Atronach Stone surge and invoked \"Shield-Wall Doctrine\" (free invoke). Pack was Taken Out.\n[2026-02-15] After casting: gained temporary aspect \"Magicka-Starved Aftershock\" (GM free invoke 1) until potion/absorption clears it.\n[2026-02-15] Tolfdir used Saarthal Burial Sigil to bypass threshold ward (success with style): boost \"Door Accepts the Seal\".\n[2026-02-15] Oskern used Fireball stunt (zone attack, Lore +4 + stunt +2) + Staff of Cinders Dragon Fire trait (reroll 4dF once/scene) and invoked \"Ward Reforged in Heat\" (free invoke, pre-created via CA) to Take Out Wight-Caller and incoming draugr wave in chokepoint.\n[2026-02-15] Ancano suspicion ticked to 4/8 due to repeated high-profile magic witnessed by students.\n[2026-02-15] Accepted Compel: Atronach Hunger (+1 FP) then invoked Dragon of Haafingar (-1 FP) while creating advantage with Lore to siphon the Eye safely via Staff of Cinders.\n[2026-02-15] Created aspect: \"Measured Eye Siphon\" (1 free invoke). Gained aspect \"Overcharged Conduit\" (GM-controlled), free invoke spent immediately on Eye surge.\n[2026-02-15] Success with Style on subsequent Eye siphon via Staff of Cinders (4dF +2 + Lore +4 + free invokes +4 = +10 vs. Good +3; consumed Calm Under Command and Saarthal Resonance Attunement free invokes): safely channeled surplus Eye power into Oskern's magicka matrix.\n[2026-02-15] Created aspect: \"Eye-Fed Reservoir\" (2 free invokes), representing stored, controllable Eye charge Oskern can tap during future scenes.\n[2026-02-15] Gained boon: \"Eye-Touched Mastery\" (one-use +2 on Lore/Will rolls related to Eye of Magnus or ward magic).\n[2026-02-15] Confronted Ancano's authority grab in the Eye chamber (Rapport Overcome vs Great +4). Used situational boost \"Rehearsed Treaty Brief\" (+2) and invoked aspect \"Dragon of Haafingar\" (+2, -1 FP). Result: Success with Style; created scene aspect \"Thalmor Overreach Publicly Checked\" (2 free invokes).\n[2026-02-19] Staff of Cinders Awakening reached 6/6 (RESOLVED) on Jyrik Gauldurson finisher in Saarthal Eye Chamber. Staff advanced to Level 2. Rune-reveal: FEIM. ZII. GRON. Unlocked shout: Become Ethereal (Feim Zii Gron), mastery 0/8.",
   "faction_alignment": "neutral",
   "additional_faction_interests": "College of Winterhold, Stormcloaks, The Greybeards,"
 }
