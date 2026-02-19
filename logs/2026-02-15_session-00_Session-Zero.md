@@ -339,3 +339,37 @@ Oskern pressed further, spending the free invokes from "Calm Under Command" and 
 - **"Overcharged Conduit"**: 0 free invokes (NEW — GM, spent on initial surge)
 - **"Eye-Fed Reservoir"**: 2 free invokes remaining (NEW — pc_oskern_cindershroud, SWS)
 - **"Ancano's Attention"**: 1 GM free invoke (NEW — triggered by suspicion hitting 6)
+
+---
+
+## Eye Chamber: Oskern Checks Ancano Publicly
+
+### Narrative
+
+Ancano attempted to claim authority over the Eye of Magnus in front of assembled faculty and students. Oskern stepped forward, leveraging his title and a carefully prepared diplomatic brief to publicly refute the Thalmor Envoy's overreach. The confrontation was decisive — Ancano was forced into an observer posture, his authority grab shut down before it could take root.
+
+### Mechanics: Rapport Overcome vs Ancano (Eye Chamber)
+
+- **Action**: Overcome (Rapport)
+- **Skill**: Rapport (+3)
+- **Opposition**: Great (+4) — Ancano's Thalmor authority and prepared position
+- **Modifiers**:
+  - Situational boost "Rehearsed Treaty Brief" (+2)
+  - Invoked aspect "Dragon of Haafingar" (+2, −1 FP)
+- **Fate Points**: 3 → 2 (spent 1 FP on "Dragon of Haafingar" invoke)
+- **Roll**: 4dF (+0) + Rapport +3 + boost +2 + invoke +2 = +7 vs Great +4 (beat difficulty by +3)
+- **Result**: Success with Style (beat difficulty by +3)
+- **Outcome**: Created scene aspect **"Thalmor Overreach Publicly Checked"** (2 free invokes)
+  - **Created by**: pc_oskern_cindershroud
+  - **Effect**: Ancano forced into observer posture; tension rises. Faculty and students witnessed the rebuke.
+
+### Clock Updates
+
+- **Ancano Powerplay**: Created at 1/4 (first open authority grab, publicly checked)
+
+### Trust Nudges
+
+- **Tolfdir**: +1 (witnessed Oskern hold the line against Thalmor pressure)
+- **Onmund loyalty**: +1
+- **Brelyna loyalty**: +1
+- **J'zargo loyalty**: +1

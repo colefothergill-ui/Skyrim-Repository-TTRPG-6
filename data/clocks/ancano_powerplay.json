@@ -1,0 +1,11 @@
+{
+  "last_updated": "2026-02-15",
+  "clocks": {
+    "ancano_powerplay": {
+      "name": "Ancano Powerplay",
+      "current": 1,
+      "max": 4,
+      "notes": "Tracks Ancano escalating from open grabs to subtle interference; at 4, he makes a decisive move."
+    }
+  }
+}
