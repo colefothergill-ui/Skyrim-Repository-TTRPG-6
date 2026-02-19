@@ -181,105 +181,65 @@ During travel between locations, the party was ambushed by a pack of ice wolves.
 
 ---
 
-## Saarthal Inner Threshold: Fire Breath & Slab Reunited
+## Saarthal Interior: Loot Under Fire & Ward Hold
 
 ### Context
-The expedition team reached Saarthal's inner threshold, where a sealed stone slab blocked further progress. Ancient Nordic glyphs glowed faintly—a transmutation puzzle requiring both magical knowledge and raw power. Behind them, movement echoed through the ruins.
+Having reached Saarthal's inner chambers, the expedition encountered a collapsing ward system. As draugr began stirring in adjacent passages, Oskern spotted sentinel ash containing what appeared to be a burial sigil—a potential key to bypassing the failing wards. Time was critical: the team needed to secure the artifact before the undead fully awakened.
 
-A **Draugr Sentinel**, fully armored and burning with ancient enchantments, emerged from an alcove. The desiccated guardian moved with horrifying purpose, weapon raised.
+### Mechanics: Loot Under Pressure
 
-### Oskern's Pep Talk & Fire Breath
+**Scene Aspect Created** (earlier during chamber entry): "Saarthal Resonance Attunement"
+- **Initial free invokes**: 2
+- **Created by**: Scene environment (ancient Nordic magic resonating with expedition's approach)
+- **Effect**: The ruins' latent magical signature provided clarity and focus during high-stress salvage operations
 
-Oskern stepped forward, Staff of Cinders in hand. He turned to the students, his voice carrying the practiced authority of a battlefield commander—Imperial discipline tempered with Nord fire.
+**Notice Overcome Roll - Rapid Salvage**:
+- **Skill**: Notice (Overcome action)
+- **Difficulty**: Good (+3) — identifying and extracting the correct sigil from ash and debris under time pressure
+- **Roll**: 4dF (+1) + Notice +2 + invoke +2 = +5 vs. Good (+3)
+- **Aspect Invoked**: "Saarthal Resonance Attunement" (+2 bonus, consumed 1 free invoke)
+- **Outcome**: Success (beat difficulty by +2)
+- **Boost Created**: "Right Key, Right Now" (1 free invoke)
+- **Item Acquired**: **Saarthal Burial Sigil** (quest key / ward-bypass artifact)
 
-**"Hold formation. Onmund, Brelyna, J'zargo—you focus on that slab. I'll handle the dead."**
+**Aspect Updated**:
+- "Saarthal Resonance Attunement" → 1 free invoke remaining (started with 2, consumed 1 during loot action)
 
-The students moved to positions around the glowing barrier. Oskern raised the Staff, its runework flaring crimson, and drew breath.
+### Mechanics: Ward Seam Defense
 
-**"YOL... TOOR... SHUL!"**
+While Oskern secured the sigil, Onmund and Tolfdir worked in tandem to stabilize a critical ward seam that was beginning to fail. Their combined effort held the breach long enough to delay the approaching draugr and buy the team precious seconds.
 
-The Thu'um erupted—Fire Breath amplified through the Staff of Cinders' 'Runes of the Voice' enchantment. The chamber lit orange-red as dragonfire crashed into the Draugr Sentinel.
+**Create Advantage (Teamwork) - Hold the Line**:
+- **Primary Actor**: Onmund (ward maintenance)
+- **Support**: Tolfdir (ward reinforcement and seam repair)
+- **Roll**: 4dF (+0) + Onmund's Lore (Ward Theory) +3 + Teamwork +1 (Tolfdir support) = +4 vs. Good (+3)
+- **Difficulty**: Good (+3) — stabilizing failing ancient Nordic wards under combat pressure
+- **Outcome**: Success (beat difficulty by +1)
+- **Scene Aspect Created**: "Ward Held at the Seam" (1 free invoke)
+  - **Created by**: npc_stat_onmund + npc_stat_tolfdir
+  - **Effect**: Onmund maintained ward integrity while Tolfdir reinforced the seam; delayed approaching draugr
 
-### Mechanics: Fire Breath Attack
+### Clock Updates
 
-**Action Type**: Lore-based attack using the Fire Breath Thu'um  
-**Skill Used**: Lore **+4** (Oskern's practiced magical theory and Thu'um study)
+**Saarthal Expedition Progress — Danger Escalation**: 6/6 (COMPLETE)
+- The expedition has now penetrated deep enough into Saarthal to trigger full draugr awakening
+- Undead response escalates to maximum intensity
+- The team faces immediate combat threat as ancient guardians rise to defend the ruins
 
-**Attack Roll**:
-- **Base Roll (4dF)**: `[+][+][0][-]` → **+1**
-- **Lore Skill**: **+4**
-- **Runes of the Voice (Staff of Cinders)**: **+2** (amplifies Thu'um attacks)
-- **Attack Total**: +4 (Lore) + 1 (4dF) + 2 (Runes) = **+7**
+**Narrative Impact**:
+- The sigil provides a path forward through ward-sealed passages
+- But the cost is clear: the expedition has disturbed something ancient, and Saarthal's defenders are fully awakened
+- The team must now fight or flee, with limited options for retreat
 
-**Defender**: Draugr Sentinel
-- **Defense Skill**: Athletics **+2** (lumbering reposition with partial shield cover)
-- **Defense Roll (4dF)**: `[-][0][-][0]` → **-2**
-- **Defense Total**: +2 (Athletics) - 2 (4dF) = **0**
+### Session Aspects Summary (Updated)
+- **"College-Issued Field Kit"**: 2 free invokes remaining
+- **"Shield-Wall Doctrine"**: 1 free invoke remaining
+- **"Signed for Their Safety"**: 0 free invokes remaining (consumed in Rapport roll)
+- **"Magicka-Starved Aftershock"**: 1 GM invoke remaining
+- **"Measured, Orderly Grit"**: 1 free invoke remaining
+- **"Saarthal Resonance Attunement"**: 1 free invoke remaining (1 consumed)
+- **"Ward Held at the Seam"**: 1 free invoke (NEW)
+- **"Right Key, Right Now"**: 1 free invoke (boost, NEW)
 
-**Shifts of Success**: Attack +7 vs Defense 0 → **7 shifts**
-
-**Weapon Rating**: Fire Breath via Staff of Cinders treated as **Weapon:4 (fire)**
-- On a hit, Weapon:4 adds **+4** stress-equivalent shifts → 7 + 4 = **11 effective shifts**
-
-**Draugr Fire Vulnerability**: **+2 effective shifts** vs. fire-based attacks (ancient undead weakness)
-- Final effective impact: 11 + 2 = **13 shifts** of damage potential
-
-**Draugr Sentinel Durability (for reference)**:
-- Stress boxes: 2-, 3-, and 4-stress boxes → up to **9 stress** if all are used
-- Consequences: Mild (2) and Moderate (4) → up to **6 more** if it stays in the fight
-- **Total capacity if it fights to the bitter end**: 9 (stress) + 6 (consequences) = **15**
-- However, fire vulnerability means the sentinel cannot meaningfully "fight through" a full incendiary engulfment; any hit that would normally push it to stacking multiple consequences instead **rapidly consumes its desiccated body**.
-
-**Rules Application**:
-- The 13 effective shifts are more than enough to:
-  - Fill the 4-stress and 3-stress boxes (7),
-  - Force at least a Mild and Moderate consequence (2 + 4 = 6),
-  - And still leave shifts unaccounted for once its flammable, desiccated condition is considered.
-- Rather than track every consequence explicitly, the Draugr is **Taken Out** in a way that fits the fiction: instant incineration under overwhelming, fire-typed damage it is especially vulnerable to.
-
-**Outcome**: Draugr Sentinel **Taken Out**
-- The sentinel's desiccated form ignited completely, armor glowing white-hot before collapsing into ash and bone fragments
-- Students witnessed Thu'um power firsthand (Ancano Suspicion +2)
-
-### Onmund's Transmutation Roll: Opening the Slab
-
-With the immediate threat eliminated, Onmund approached the sealed slab. The glyphs pulsed—a complex transmutation ward requiring precise magical manipulation.
-
-**Action**: Overcome obstacle (transmutation puzzle)  
-**Opposition**: Great (+4)
-
-**Mechanics**:
-- **Skill Used**: Lore **+3** (Onmund's primary magical skill)
-- **Base Roll (4dF)**: `[+][0][+][0]` → **+2**
-- **Teamwork Bonus**: **+2** (Brelyna Maryon and J'zargo provided support)
-- **Aspect Invoked**: "Calm Under Command" (free invoke) → **+2**
-- **Total**: +3 (Lore) + 2 (4dF) + 2 (teamwork) + 2 (invoke) = **+9**
-- **vs. Opposition**: Great (+4)
-- **Result**: **Success with Style** (margin of +5)
-
-**Boost Created**: "Stone Unlocked" (1 free invoke)
-- The slab segments separated cleanly, revealing passage deeper into Saarthal
-- No trap triggered, no complication—professional execution
-
-**Oskern's Notes**: *"Onmund proved capable under pressure. The students worked as a unit—exactly what I needed to see. Still, that Thu'um display... I felt eyes on me. Not just theirs."*
-
-### Clock Updates (2026-02-15)
-
-**Saarthal Expedition Progress**: 1 → 5 / 6
-- Draugr guardian eliminated
-- Inner threshold transmutation slab opened
-- Team prepared to advance toward Eye chamber
-
-**Student Safety Pressure**: 0 / 8
-- No injuries or stress to students
-- Clean tactical execution maintained morale
-- Leadership and protection effective
-
-**Ancano Suspicion Meter**: 1 → 3 / 8
-- +2 from Fire Breath display (ancient Nordic power, Thu'um mastery)
-- Students will report back to College about expedition events
-- Ancano's awareness of PC's capabilities now elevated beyond "talented Adept"
-
-### Fate Points
-- **Free Invoke Used**: "Calm Under Command" (consumed for transmutation assist)
-- **Current Fate Points**: 3 (no change this beat)
+### Fate Points (Post-Salvage)
+- **Current FP**: 3 (unchanged — free invoke used, not paid invoke)
