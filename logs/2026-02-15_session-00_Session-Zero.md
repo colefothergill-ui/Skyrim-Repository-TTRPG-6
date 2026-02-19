@@ -198,7 +198,7 @@ Having reached Saarthal's inner chambers, the expedition encountered a collapsin
 - **Difficulty**: Good (+3) — identifying and extracting the correct sigil from ash and debris under time pressure
 - **Roll**: 4dF (+1) + Notice +2 + invoke +2 = +5 vs. Good (+3)
 - **Aspect Invoked**: "Saarthal Resonance Attunement" (+2 bonus, consumed 1 free invoke)
-- **Outcome**: Success (beat difficulty by +2, not enough for Success with Style at +3)
+- **Outcome**: Success (beat difficulty by +2)
 - **Boost Created**: "Right Key, Right Now" (1 free invoke)
 - **Item Acquired**: **Saarthal Burial Sigil** (quest key / ward-bypass artifact)
 
@@ -215,7 +215,6 @@ While Oskern secured the sigil, Onmund and Tolfdir worked in tandem to stabilize
 - **Roll**: 4dF (+0) + Onmund's Lore (Ward Theory) +3 + Teamwork +1 (Tolfdir support) = +4 vs. Good (+3)
 - **Difficulty**: Good (+3) — stabilizing failing ancient Nordic wards under combat pressure
 - **Outcome**: Success (beat difficulty by +1)
-- **Margin of Success**: +1
 - **Scene Aspect Created**: "Ward Held at the Seam" (1 free invoke)
   - **Created by**: npc_stat_onmund + npc_stat_tolfdir
   - **Effect**: Onmund maintained ward integrity while Tolfdir reinforced the seam; delayed approaching draugr
