@@ -380,5 +380,7 @@ Ancano attempted to claim authority over the Eye of Magnus in front of assembled
 
 ### Narrative
 
-- Oskern covertly adds a counter-scry weave to the ward dome (Lore CA, invoked Ward Shell Stable + Containment Blueprint; SWS).
-- Created 'Counter-Scry Lattice' (2 free invokes); containment remains stable (Instability unchanged).
+- Oskern covertly adds a counter-scry weave to the ward dome (Lore CA; SWS).
+- Invoked aspect **"Ward Shell Stable"** (1 free invoke consumed; 1 remaining).
+- Invoked aspect **"Containment Blueprint"** (1 free invoke consumed; 0 remaining).
+- Created scene aspect **"Counter-Scry Lattice"** (2 free invokes); containment remains stable (Eye of Magnus Instability clock unchanged).

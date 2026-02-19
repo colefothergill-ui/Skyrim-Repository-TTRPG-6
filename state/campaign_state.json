@@ -127,7 +127,7 @@
     "Counter-Scry Lattice": {
       "free_invokes": 2,
       "created_by": "pc_oskern_cindershroud",
-      "notes": "Oskern laced Onmund's ward shell with a counter-divination weave; scries/relay attempts get static or leave obvious signatures."
+      "notes": "Oskern laced Onmund's ward shell with a counter-divination weave; scrying or relay attempts get static or leave obvious signatures."
     }
   },
   "scene_clocks": {
@@ -142,6 +142,12 @@
       "current": 6,
       "max": 6,
       "notes": "Danger escalation in Saarthal ruins; 6/6 indicates full draugr awakening impacting the current scene."
+    },
+    "eye_of_magnus_instability": {
+      "name": "Eye of Magnus Instability",
+      "current": 1,
+      "max": 6,
+      "notes": "Tracks Eye of Magnus instability from siphoning or perturbation. 1/6: initial siphon via Oskern's Atronach Hunger compel; surge stabilized by Tolfdir."
     }
   },
   "player": {
