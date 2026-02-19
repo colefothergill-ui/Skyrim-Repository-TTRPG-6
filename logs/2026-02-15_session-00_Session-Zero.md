@@ -265,8 +265,11 @@ Oskern faced the Eye of Magnus directly. The Atronach Stone's hunger surged as t
 
 - **Action**: Create Advantage (controlled siphon of Eye output through Staff of Cinders)
 - **Skill**: Lore
+- **Pre-Established Scene Aspect**: **"Containment Lattice Harmonized"** (2 free invokes, created by npc_stat_tolfdir)
+  - Tolfdir performed a warding ritual before the siphon test to lace the Eye chamber with interlocking containment sigils. This layered lattice can absorb, dampen, or redirect uncontrolled magical surges from the Eye.
 - **Compel Accepted**: Atronach Hunger (+1 FP)
-- **Aspect Invoked**: "Dragon of Haafingar" (-1 FP)
+- **Aspect Invoked**: "Dragon of Haafingar" (-1 FP, +2 bonus)
+- **Roll**: 4dF (-1) + Lore +3 + invoke +2 ("Dragon of Haafingar") = +4 vs. Great (+3) — **Success (beat difficulty by +1)**
 - **Outcome**: Success — Created aspect **"Measured Eye Siphon"** (1 free invoke)
   - **Created by**: pc_oskern_cindershroud
   - **Effect**: Controlled siphon channel from the Eye through Staff of Cinders; safe 'battery charge' and resonance key.
@@ -304,8 +307,9 @@ Oskern pressed further, spending the free invokes from "Calm Under Command" and 
 - **Action**: Create Advantage (deep Eye siphon via Staff conduit)
 - **Skill**: Lore
 - **Aspects Invoked (free)**:
-  - "Calm Under Command" (1 free invoke consumed → 0 remaining)
-  - "Saarthal Resonance Attunement" (1 free invoke consumed → 0 remaining)
+  - "Calm Under Command" (1 free invoke consumed → 0 remaining, +2 bonus)
+  - "Saarthal Resonance Attunement" (1 free invoke consumed → 0 remaining, +2 bonus)
+- **Roll**: 4dF (+2) + Lore +4 + free invokes +4 ("Calm Under Command" +2, "Saarthal Resonance Attunement" +2) = +10 vs. Good (+3) — **Success with Style (beat difficulty by +7)**
 - **Outcome**: Success with Style — Created aspect **"Eye-Fed Reservoir"** (2 free invokes)
   - **Created by**: pc_oskern_cindershroud
   - **Effect**: Supercharged reservoir keyed to containment lattice; controlled Eye output via Staff of Cinders.

@@ -1,10 +1,23 @@
 {
   "last_updated": "2026-02-15",
+  "description": "Tracks Eye of Magnus instability and perturbation from siphoning or manipulation",
   "clocks": {
     "eye_of_magnus_instability": {
       "name": "Eye of Magnus Instability",
       "current": 1,
       "max": 6,
+      "description": "Tracks how unstable the Eye of Magnus becomes as it is siphoned, perturbed, or otherwise disturbed.",
+      "completion_effect": "At 6/6, the Eye's containment fails or an overwhelming external force intervenes, radically changing the situation.",
+      "advancement_triggers": [
+        "PCs or NPCs siphon power from the Eye of Magnus",
+        "Significant perturbations, miscasts, or magical feedback near the Eye",
+        "Containment lattice is weakened, bypassed, or left unattended during a major event"
+      ],
+      "setback_triggers": [
+        "Power is safely vented or redirected away from the Eye",
+        "Major reinforcement or re-harmonization of the containment lattice",
+        "Powerful external stabilization, warding, or divine intervention focused on the Eye"
+      ],
       "notes": "Ticks when the Eye is siphoned/perturbed; at 6, containment fails or an external force intervenes.\n[2026-02-15] Tick 1/6: initial Eye siphon via Oskern's Atronach Hunger compel (Staff of Cinders conduit); surge stabilized by Tolfdir spending 1 invoke from 'Containment Lattice Harmonized'."
     }
   }
