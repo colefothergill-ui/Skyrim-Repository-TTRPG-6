@@ -9,10 +9,10 @@
   "session_count": 0,
   "last_updated": "2026-02-15 03:37:54",
   "starting_location": "Winterhold - College Bridge",
-  "current_scene_id": "A1_S01_SAARTHAL_INNER_THRESHOLD",
-  "current_location": "Saarthal Excavation Site — Inner Threshold",
+  "current_scene_id": "A1_S00_EYE_CHAMBER",
+  "current_location": "College of Winterhold — Eye of Magnus Chamber",
   "active_hold": "Winterhold Hold",
-  "current_objective": "Regroup beyond the sealed threshold; assess team status and determine next move after Tolfdir sealed pursuit using the Saarthal Burial Sigil.",
+  "current_objective": "Monitor the Eye of Magnus after publicly checking Ancano's authority grab; coordinate with Tolfdir on containment.",
   "current_npcs": ["ancano"],
   "scene_flags": {
     "active_quest_id": "college_under_saarthal",

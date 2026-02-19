@@ -357,6 +357,7 @@ Ancano attempted to claim authority over the Eye of Magnus in front of assembled
   - Situational boost "Rehearsed Treaty Brief" (+2)
   - Invoked aspect "Dragon of Haafingar" (+2, −1 FP)
 - **Fate Points**: 3 → 2 (spent 1 FP on "Dragon of Haafingar" invoke)
+- **Roll**: 4dF (+0) + Rapport +3 + boost +2 + invoke +2 = +7 vs Great +4 (beat difficulty by +3)
 - **Result**: Success with Style (beat difficulty by +3)
 - **Outcome**: Created scene aspect **"Thalmor Overreach Publicly Checked"** (2 free invokes)
   - **Created by**: pc_oskern_cindershroud
