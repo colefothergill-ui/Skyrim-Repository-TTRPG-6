@@ -113,6 +113,21 @@
       "free_invokes": 0,
       "created_by": "npc_stat_tolfdir",
       "notes": "Tolfdir used the Saarthal Burial Sigil to seal the threshold against pursuit from the inner chambers."
+    },
+    "Ward Shell Stable": {
+      "free_invokes": 1,
+      "created_by": "npc_stat_onmund",
+      "notes": "Onmund's sustained ward dome over the Eye chamber; stable baseline containment. Started with 2 free invokes; 1 consumed by Oskern's Lore CA to weave Counter-Scry Lattice."
+    },
+    "Containment Blueprint": {
+      "free_invokes": 0,
+      "created_by": "npc_stat_tolfdir",
+      "notes": "Tolfdir's strategic containment framework for the Eye chamber. Started with 1 free invoke; consumed by Oskern's Lore CA to weave Counter-Scry Lattice."
+    },
+    "Counter-Scry Lattice": {
+      "free_invokes": 2,
+      "created_by": "pc_oskern_cindershroud",
+      "notes": "Oskern laced Onmund's ward shell with a counter-divination weave; scries/relay attempts get static or leave obvious signatures."
     }
   },
   "scene_clocks": {

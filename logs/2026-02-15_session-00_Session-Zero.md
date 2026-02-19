@@ -373,3 +373,12 @@ Ancano attempted to claim authority over the Eye of Magnus in front of assembled
 - **Onmund loyalty**: +1
 - **Brelyna loyalty**: +1
 - **J'zargo loyalty**: +1
+
+---
+
+## Eye Chamber: Oskern Adds Counter-Scry Lattice
+
+### Narrative
+
+- Oskern covertly adds a counter-scry weave to the ward dome (Lore CA, invoked Ward Shell Stable + Containment Blueprint; SWS).
+- Created 'Counter-Scry Lattice' (2 free invokes); containment remains stable (Instability unchanged).
