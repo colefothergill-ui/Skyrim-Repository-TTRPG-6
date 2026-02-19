@@ -66,8 +66,18 @@
     },
     "Right Key, Right Now": {
       "free_invokes": 1,
+      "created_by": "npc_stat_onmund",
+      "notes": "Onmund transmuted the slab with Brelyna and J'zargo assisting; barrier opened cleanly."
+    },
+    "Ward Reforged in Heat": {
+      "free_invokes": 1,
       "created_by": "pc_oskern_cindershroud",
-      "notes": "Boost from rapid salvage: found the correct key/sigil in the sentinel ash."
+      "notes": "Threshold ward supercharged by ambient fire magic from Oskern's Fireball funnel; originally 2 free invokes — 1 consumed during Take Out of Wight-Caller and draugr wave."
+    },
+    "Door Accepts the Seal": {
+      "free_invokes": 1,
+      "created_by": "npc_stat_tolfdir",
+      "notes": "Threshold ward recognizes Saarthal Burial Sigil; can be used to seal/deny pursuit."
     }
   },
   "scene_clocks": {
