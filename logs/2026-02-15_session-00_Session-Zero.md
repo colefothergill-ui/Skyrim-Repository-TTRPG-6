@@ -307,7 +307,27 @@ The inner threshold ward pulsed with cold Saarthal rune-fire, refusing passage. 
 - The ward recognized the burial sigil; threshold parted cleanly
 - Can be invoked to seal/deny pursuit through this passage
 
-**Scene Aspect Updated**: "Ward Reforged in Heat" (created this beat; see below)
+**Narrative Setup**: As the sigil activation completes, residual ward energy pulses through the corridor — Oskern will shape it into "Ward Reforged in Heat" via Create Advantage in the next action.
+
+---
+
+### Oskern — Create Advantage: Ward Reforged in Heat
+
+Before committing to the attack, Oskern seized the reactive energy still pulsing from Tolfdir's sigil activation and channeled it into the corridor walls, shaping it into a tactical aspect.
+
+**Action**: Create Advantage (harnessing residual ward fire)
+**Skill Used**: Lore **+4**
+**Opposition**: Fair (+2) (ambient magical turbulence in the corridor)
+
+**Mechanics**:
+- **Base Roll (4dF)**: `[+][+][0][0]` → **+2**
+- **Lore Skill**: **+4**
+- **Total**: +4 (Lore) + 2 (4dF) = **+6**
+- **vs. Opposition**: Fair (+2)
+- **Result**: **Success with Style** (margin of +4)
+
+**Scene Aspect Created**: "Ward Reforged in Heat" (2 free invokes)
+- Ambient fire magic from the threshold reaction coils into the chokepoint; Oskern draws on it in his next action
 
 ---
 
@@ -316,32 +336,29 @@ The inner threshold ward pulsed with cold Saarthal rune-fire, refusing passage. 
 A **Wight-Caller** crested the corridor behind the party, raising a fresh draugr wave to cut off retreat. Oskern held the chokepoint alone.
 
 **Action**: Attack (zone attack — Fireball stunt)
-**Skill Used**: Shoot **+3** (fire-typed zone attack)
+**Skill Used**: Lore **+4** (fire-typed zone attack via Fireball stunt)
 **Opposition**: Wight-Caller: Good (+3) defense; Draugr Wave: Fair (+2) group defense
 
 **Mechanics**:
-- **Base Roll (4dF)**: `[+][+][0][+]` → **+3**
-- **Shoot Skill**: **+3**
-- **Staff of Cinders — Dragon Fire trait**: **+2** (once/scene bonus)
-- **Aspect Invoked**: "Ward Reforged in Heat" (free invoke) → **+2**
-- **Aspect Invoked**: "Lightning-Stunned" (Wight-Caller condition) → **+2**
-- **Attack Total**: +3 (Shoot) + 3 (4dF) + 2 (Dragon Fire) + 2 (invoke Ward) + 2 (invoke Lightning-Stunned) = **+12**
+- **Base Roll (4dF)** (after Dragon Fire reroll): `[+][+][0][+]` → **+3**
+- **Lore Skill**: **+4**
+- **Fireball stunt**: **+2** (zone attack bonus)
+- **Staff of Cinders — Dragon Fire trait**: reroll 4dF on fire-typed Attack (once/scene; result already reflected above)
+- **Aspect Invoked**: "Ward Reforged in Heat" (free invoke, 1 of 2) → **+2**
+- **Attack Total**: +4 (Lore) + 3 (4dF) + 2 (Fireball stunt) + 2 (invoke Ward) = **+11**
 - **vs. Wight-Caller Defense**: Good (+3)
 - **vs. Draugr Wave Defense**: Fair (+2)
 
-**Shifts vs. Wight-Caller**: +12 − 3 = **9 shifts**
-- Weapon:3 (Fireball zone) → 9 + 3 = **12 effective shifts** → **Taken Out**
+**Shifts vs. Wight-Caller**: +11 − 3 = **8 shifts**
+- Weapon:3 (Fireball zone) → 8 + 3 = **11 effective shifts** → **Taken Out**
 
-**Shifts vs. Draugr Wave**: +12 − 2 = **10 shifts**
-- Zone attack clears the wave; **Taken Out** as a group obstacle
+**Shifts vs. Draugr Wave**: +11 − 2 = **9 shifts**
+- Zone attack clears the wave; Weapon:3 → 9 + 3 = **12 effective shifts** → **Taken Out** as a group obstacle
 
 **Outcome**:
 - Wight-Caller incinerated in the chokepoint; bone-fire consumed the draugr wave behind it
 - Retreat corridor secured; students maintain forward momentum toward Eye chamber
 - Students witnessed a second major zone Destruction display (Ancano Suspicion +1)
-
-**Scene Aspect Created**: "Ward Reforged in Heat" (2 free invokes at creation; 1 consumed in this attack, leaving 1 remaining)
-- Ambient fire magic from Fireball funnel supercharged the residual threshold ward energy
 
 ---
 
@@ -355,6 +372,5 @@ A **Wight-Caller** crested the corridor behind the party, raising a fresh draugr
 ---
 
 ### Fate Points
-- **Free Invoke Used**: "Ward Reforged in Heat" (1 of 2 consumed during Fireball funnel attack)
-- **Free Invoke Used**: "Lightning-Stunned" (Wight-Caller condition, consumed)
+- **Free Invoke Used**: "Ward Reforged in Heat" (1 of 2 consumed during Fireball funnel attack; 1 remaining)
 - **Boost Created**: "Door Accepts the Seal" (1 free invoke — Tolfdir's sigil bypass)
