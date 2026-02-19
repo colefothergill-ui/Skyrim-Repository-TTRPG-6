@@ -9,10 +9,10 @@
   "session_count": 0,
   "last_updated": "2026-02-15 03:37:54",
   "starting_location": "Winterhold - College Bridge",
-  "current_scene_id": "A1_S01_SAARTHAL_INNER_CHAMBERS",
-  "current_location": "Saarthal Excavation Site — Inner Chambers",
+  "current_scene_id": "A1_S01_SAARTHAL_INNER_THRESHOLD",
+  "current_location": "Saarthal Excavation Site — Inner Threshold",
   "active_hold": "Winterhold Hold",
-  "current_objective": "Survive the awakened draugr assault triggered by penetrating deep into Saarthal; use the recovered Burial Sigil to navigate ward-sealed passages and locate the source of the anomaly.",
+  "current_objective": "Regroup beyond the sealed threshold; assess team status and determine next move after Tolfdir sealed pursuit using the Saarthal Burial Sigil.",
   "current_npcs": [],
   "scene_flags": {
     "active_quest_id": "college_under_saarthal",
@@ -72,12 +72,12 @@
     "Ward Reforged in Heat": {
       "free_invokes": 1,
       "created_by": "pc_oskern_cindershroud",
-      "notes": "Threshold ward supercharged by ambient fire magic from Oskern's Fireball funnel; originally 2 free invokes — 1 consumed during Take Out of Wight-Caller and draugr wave."
+      "notes": "Boost from rapid salvage: found the correct key/sigil in the sentinel ash."
     },
-    "Door Accepts the Seal": {
-      "free_invokes": 1,
+    "Threshold Sealed": {
+      "free_invokes": 0,
       "created_by": "npc_stat_tolfdir",
-      "notes": "Threshold ward recognizes Saarthal Burial Sigil; can be used to seal/deny pursuit."
+      "notes": "Tolfdir used the Saarthal Burial Sigil to seal the threshold against pursuit from the inner chambers."
     }
   },
   "scene_clocks": {
@@ -195,7 +195,7 @@
         "npc_id": "npc_stat_onmund",
         "name": "Onmund",
         "status": "available",
-        "loyalty": 30,
+        "loyalty": 40,
         "location": "College of Winterhold",
         "recruitment_condition": "Complete Under Saarthal and earn Onmund's respect (keep him alive).",
         "faction_affinity": "college_of_winterhold"
@@ -204,7 +204,7 @@
         "npc_id": "npc_stat_brelyna_maryon",
         "name": "Brelyna Maryon",
         "status": "available",
-        "loyalty": 30,
+        "loyalty": 38,
         "location": "College of Winterhold",
         "recruitment_condition": "Complete Under Saarthal and earn Brelyna's trust (prove discretion).",
         "faction_affinity": "college_of_winterhold"
@@ -213,7 +213,7 @@
         "npc_id": "npc_stat_jzargo",
         "name": "J'zargo",
         "status": "available",
-        "loyalty": 30,
+        "loyalty": 42,
         "location": "College of Winterhold",
         "recruitment_condition": "Complete Under Saarthal and keep J'zargo from reckless collateral damage.",
         "faction_affinity": "college_of_winterhold"
@@ -236,7 +236,7 @@
   "starting_narrative": "Oskern Cindershroud begins at the College of Winterhold, already a capable Adept with a famous (and politically loaded) name. The first crisis is local: Tolfdir's expedition to Saarthal and the sealed anomaly beneath it. The civil war remains a looming backdrop—Whiterun is still officially neutral, and both sides pressure Jarl Balgruuf—while the Thalmor maneuver in the shadows.",
   "faction_relationships": {
     "college_of_winterhold": 30,
-    "tolfdir": 35,
+    "tolfdir": 45,
     "mirabelle_ervine": 30,
     "companions": 20
   },

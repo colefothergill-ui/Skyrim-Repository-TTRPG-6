@@ -221,97 +221,34 @@ While Oskern secured the sigil, Onmund and Tolfdir worked in tandem to stabilize
 
 ### Clock Updates
 
-### Fate Points
-- **Free Invoke Used**: "Calm Under Command" (consumed for transmutation assist)
-- **Current Fate Points**: 3 (no change this beat)
+**Saarthal Expedition Progress — Danger Escalation**: 6/6 (COMPLETE)
+- The expedition has now penetrated deep enough into Saarthal to trigger full draugr awakening
+- Undead response escalates to maximum intensity
+- The team faces immediate combat threat as ancient guardians rise to defend the ruins
+
+**Narrative Impact**:
+- The sigil provides a path forward through ward-sealed passages
+- But the cost is clear: the expedition has disturbed something ancient, and Saarthal's defenders are fully awakened
+- The team must now fight or flee, with limited options for retreat
+
+### Session Aspects Summary (Updated)
+- **"College-Issued Field Kit"**: 2 free invokes remaining
+- **"Shield-Wall Doctrine"**: 1 free invoke remaining
+- **"Signed for Their Safety"**: 0 free invokes remaining (consumed in Rapport roll)
+- **"Magicka-Starved Aftershock"**: 1 GM invoke remaining
+- **"Measured, Orderly Grit"**: 1 free invoke remaining
+- **"Saarthal Resonance Attunement"**: 1 free invoke remaining (1 consumed)
+- **"Ward Held at the Seam"**: 1 free invoke (NEW)
+- **"Right Key, Right Now"**: 1 free invoke (boost, NEW)
+
+### Fate Points (Post-Salvage)
+- **Current FP**: 3 (unchanged — free invoke used, not paid invoke)
 
 ---
 
-## Beat: Threshold Slip + Fireball Funnel (2026-02-15)
+## Post-Threshold Regroup (2026-02-15 Patch)
 
-### Tolfdir — Threshold Ward Bypass (Saarthal Burial Sigil)
-
-The inner threshold ward pulsed with cold Saarthal rune-fire, refusing passage. Tolfdir produced the **Saarthal Burial Sigil** and pressed it to the ward surface.
-
-**Action**: Overcome (bypass threshold ward)
-**Skill Used**: Lore **+5** (Tolfdir — veteran runic scholar)
-**Opposition**: Great (+4) (ancient Saarthal threshold ward)
-
-**Mechanics**:
-- **Base Roll (4dF)**: `[+][+][+][0]` → **+3**
-- **Lore Skill**: **+5**
-- **Total**: +5 (Lore) + 3 (4dF) = **+8**
-- **vs. Opposition**: Great (+4)
-- **Result**: **Success with Style** (margin of +4)
-
-**Boost Created**: "Door Accepts the Seal" (1 free invoke)
-- The ward recognized the burial sigil; threshold parted cleanly
-- Can be invoked to seal/deny pursuit through this passage
-
-**Narrative Setup**: As the sigil activation completes, residual ward energy pulses through the corridor — Oskern will shape it into "Ward Reforged in Heat" via Create Advantage in the next action.
-
----
-
-### Oskern — Create Advantage: Ward Reforged in Heat
-
-Before committing to the attack, Oskern seized the reactive energy still pulsing from Tolfdir's sigil activation and channeled it into the corridor walls, shaping it into a tactical aspect.
-
-**Action**: Create Advantage (harnessing residual ward fire)
-**Skill Used**: Lore **+4**
-**Opposition**: Fair (+2) (ambient magical turbulence in the corridor)
-
-**Mechanics**:
-- **Base Roll (4dF)**: `[+][+][0][0]` → **+2**
-- **Lore Skill**: **+4**
-- **Total**: +4 (Lore) + 2 (4dF) = **+6**
-- **vs. Opposition**: Fair (+2)
-- **Result**: **Success with Style** (margin of +4)
-
-**Scene Aspect Created**: "Ward Reforged in Heat" (2 free invokes)
-- Ambient fire magic from the threshold reaction coils into the chokepoint; Oskern draws on it in his next action
-
----
-
-### Oskern — Rearguard Fireball Funnel (Wight-Caller + Draugr Wave)
-
-A **Wight-Caller** crested the corridor behind the party, raising a fresh draugr wave to cut off retreat. Oskern held the chokepoint alone.
-
-**Action**: Attack (zone attack — Fireball stunt)
-**Skill Used**: Lore **+4** (fire-typed zone attack via Fireball stunt)
-**Opposition**: Wight-Caller: Good (+3) defense; Draugr Wave: Fair (+2) group defense
-
-**Mechanics**:
-- **Base Roll (4dF)** (after Dragon Fire reroll): `[+][+][0][+]` → **+3**
-- **Lore Skill**: **+4**
-- **Fireball stunt**: **+2** (zone attack bonus)
-- **Staff of Cinders — Dragon Fire trait**: reroll 4dF on fire-typed Attack (once/scene; result already reflected above)
-- **Aspect Invoked**: "Ward Reforged in Heat" (free invoke, 1 of 2) → **+2**
-- **Attack Total**: +4 (Lore) + 3 (4dF) + 2 (Fireball stunt) + 2 (invoke Ward) = **+11**
-- **vs. Wight-Caller Defense**: Good (+3)
-- **vs. Draugr Wave Defense**: Fair (+2)
-
-**Shifts vs. Wight-Caller**: +11 − 3 = **8 shifts**
-- Weapon:3 (Fireball zone) → 8 + 3 = **11 effective shifts** → **Taken Out**
-
-**Shifts vs. Draugr Wave**: +11 − 2 = **9 shifts**
-- Zone attack clears the wave; Weapon:3 → 9 + 3 = **12 effective shifts** → **Taken Out** as a group obstacle
-
-**Outcome**:
-- Wight-Caller incinerated in the chokepoint; bone-fire consumed the draugr wave behind it
-- Retreat corridor secured; students maintain forward momentum toward Eye chamber
-- Students witnessed a second major zone Destruction display (Ancano Suspicion +1)
-
----
-
-### Clock Updates (2026-02-15 — Threshold Slip Beat)
-
-**Ancano Suspicion Meter**: 3 → **4 / 8**
-- +1 from repeated high-profile magic (Fireball zone + Staff of Cinders Dragon Fire) witnessed by student team at inner threshold
-
-**Saarthal Expedition Progress**: 5 / 6 (unchanged — still approaching Eye chamber)
-
----
-
-### Fate Points
-- **Free Invoke Used**: "Ward Reforged in Heat" (1 of 2 consumed during Fireball funnel attack; 1 remaining)
-- **Boost Created**: "Door Accepts the Seal" (1 free invoke — Tolfdir's sigil bypass)
+- Oskern refused "Rear-Guard Pride" and regrouped through the threshold.
+- Trust gains: Tolfdir +10 (relationship now 45); student loyalties increased (Onmund/Brelyna/J'zargo now 40/38/42 respectively).
+- Staff Awakening ticked to 2/6 due to mythic protective use.
+- New scene aspect created: **"Threshold Sealed"** (created by npc_stat_tolfdir; Tolfdir used the Saarthal Burial Sigil to seal the threshold against pursuit from the inner chambers; 0 free invokes).
