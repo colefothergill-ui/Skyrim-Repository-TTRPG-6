@@ -42,7 +42,7 @@
         ],
         "rewards": [
           "Inner Circle membership and access to the Underforge",
-          "If embraced: Werewolf Form stunt (once per session, transform - Great Fight, ignore stress track in beast form for one exchange)",
+          "If embraced: Werewolf Form stunt (once per session, transform for one scene - Fight and Physique treated as Great (+4), ignore first mild consequence each scene, cannot use social skills while transformed, requires Will vs Fair (+2) at scene end or take 'Shame of the Wolf' mild mental consequence; see data/stunts/companions.json)",
           "If refused: 'Kodlak's Blessing' aspect with 1 free invoke (Kodlak confides deeper secrets)"
         ],
         "branching": {
@@ -65,7 +65,7 @@
         "name": "Cure or Sacrifice",
         "quest_id": "companions_kodlak_cure_or_sacrifice",
         "quest_giver": "Kodlak Whitemane",
-        "description": "Kodlak Whitemane lies dying - a Companion ambush has struck him down. With his final breaths he asks you to choose his legacy: attempt the ritual that might purge the lycanthropic taint from his soul and free him to walk Sovngarde, or allow his death to stand and honor the beast blood he carried. This is the moral heart of the questline.",
+        "description": "Kodlak Whitemane lies dying - an enemy ambush on the Companions has struck him down. With his final breaths he asks you to choose his legacy: attempt the ritual that might purge the lycanthropic taint from his soul and free him to walk Sovngarde, or allow his death to stand and honor the beast blood he carried. This is the moral heart of the questline.",
         "objectives": [
           "Reach the dying Kodlak after the ambush at Whiterun",
           "Gather the components for the Glenmoril Witch cure (or choose not to)",
@@ -123,9 +123,9 @@
         "name": "Dragon at the Barrow",
         "quest_id": "companions_final_journey",
         "quest_giver": "Vilkas",
-        "description": "The Companions march on Ysgramor's Tomb at Yngol Barrow to lay Kodlak to rest with honor and put a dragon that has nested in the burial mound to the sword. There, in sight of Ysgramor's statue, the PC completes the arc - and if the cure was completed, Kodlak's spirit briefly appears to grant the Breath of Ysgramor power.",
+        "description": "The Companions march on Ysgramor's Tomb to lay Kodlak to rest with honor and put a dragon that has nested in the burial mound to the sword. There, in sight of Ysgramor's statue, the PC completes the arc - and if the cure was completed, Kodlak's spirit briefly appears to grant the Breath of Ysgramor power.",
         "objectives": [
-          "Gather the Companions and travel to Yngol Barrow",
+          "Gather the Companions and travel to Ysgramor's Tomb",
           "Fight through the tomb's draugr and the nesting dragon",
           "Lay Kodlak's ashes or spirit to rest at Ysgramor's statue",
           "Receive the Breath of Ysgramor advancement if eligible"
