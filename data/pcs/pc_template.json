@@ -1,0 +1,46 @@
+{
+  "name": "PC Name",
+  "id": "pc_template",
+  "player": "Player Name",
+  "race": "Nord",
+  "class": "Warrior",
+  "level": 1,
+  "aspects": {
+    "high_concept": "High Concept Aspect",
+    "trouble": "Trouble Aspect",
+    "other_aspects": [
+      "Free Aspect 1",
+      "Free Aspect 2",
+      "Free Aspect 3"
+    ]
+  },
+  "skills": {
+    "Great (+4)": [],
+    "Good (+3)": [],
+    "Fair (+2)": [],
+    "Average (+1)": []
+  },
+  "stunts": [],
+  "stress": {
+    "physical": [false, false, false],
+    "mental": [false, false, false]
+  },
+  "consequences": {
+    "mild": null,
+    "moderate": null,
+    "severe": null
+  },
+  "refresh": 3,
+  "fate_points": 3,
+  "experience": 0,
+  "milestones": [],
+  "equipment": [],
+  "gold": 100,
+  "relationships": {},
+  "quests": [],
+  "companions_progression": {
+    "beast_blood": { "tier": 0, "max_tier": 3 },
+    "sovngarde_blessing": { "tier": 0, "max_tier": 3 }
+  },
+  "notes": "New PC template. Fill in aspects, skills, and stunts during Session Zero."
+}

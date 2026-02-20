@@ -1905,6 +1905,133 @@ Schemes Discovered: {len(state['thalmor_arc']['thalmor_schemes_discovered'])}
         self.save_campaign_state(state)
         return state
 
+    # ------------------------------------------------------------------
+    # Silver Hand escalation
+    # ------------------------------------------------------------------
+
+    def _load_silver_hand_quests(self):
+        """Load Silver Hand dynamic quest data."""
+        path = self.data_dir / "quests" / "silver_hand_dynamic.json"
+        if path.exists():
+            with open(path, "r") as f:
+                return json.load(f)
+        return {}
+
+    def increment_silver_hand_awareness(self, state=None, amount=1):
+        """
+        Increment the Silver Hand awareness_level when beast blood is used
+        publicly.  Saves state to disk.
+
+        Args:
+            state: Optional campaign_state dict; loads from disk if not provided.
+            amount: How much to increment (default 1).
+
+        Returns:
+            Updated campaign_state dict.
+        """
+        if state is None:
+            state = self.load_campaign_state() or {}
+
+        sh_state = state.setdefault("silver_hand_state", {
+            "awareness_level": 0,
+            "active_hunts": [],
+            "high_purifier_alive": True,
+        })
+        current = sh_state.get("awareness_level", 0)
+        sh_state["awareness_level"] = min(current + amount, 6)
+
+        self.save_campaign_state(state)
+        return state
+
+    def trigger_silver_hand_event(self, state=None):
+        """
+        Evaluate the current Silver Hand awareness_level and return the
+        appropriate narrative event descriptor.  Does not modify state.
+
+        Args:
+            state: Optional campaign_state dict; loads from disk if not provided.
+
+        Returns:
+            dict with keys 'level', 'event', 'description', or None if beast
+            blood is not active or awareness_level is 0.
+        """
+        if state is None:
+            state = self.load_campaign_state() or {}
+
+        companions_state = state.get("companions_state", {})
+        if not companions_state.get("beast_blood", False):
+            return None
+
+        sh_state = state.get("silver_hand_state", {})
+        level = sh_state.get("awareness_level", 0)
+        if level == 0:
+            return None
+
+        threshold_map = {
+            1: {
+                "event": "silver_hand_scouts_appear",
+                "description": "Silver Hand scouts have been spotted near Companions-affiliated locations.",
+            },
+            2: {
+                "event": "silver_hand_ambush",
+                "description": "A Silver Hand warband sets an ambush for the beastblooded target.",
+            },
+            3: {
+                "event": "silver_hand_fort_siege",
+                "description": "The Silver Hand stages a siege against a known Companions stronghold.",
+            },
+            4: {
+                "event": "silver_hand_named_npc_hunt",
+                "description": "High Purifier Valdrek Ice-Blood dispatches elite hunters after the beastblooded PC.",
+            },
+            5: {
+                "event": "silver_hand_jorrvaskr_assault",
+                "description": "The Silver Hand launches a full assault on Jorrvaskr in Whiterun.",
+            },
+            6: {
+                "event": "silver_hand_final_purge",
+                "description": "The Silver Hand initiates the Final Purge — all-out war against the Companions and their allies.",
+            },
+        }
+
+        entry = threshold_map.get(level)
+        if entry is None:
+            return None
+        return {"level": level, **entry}
+
+    def check_silver_hand_quest_eligibility(self, quest_id, state=None):
+        """
+        Return True if the given Silver Hand quest is eligible to activate
+        based on current campaign state.
+
+        Args:
+            quest_id: One of the silver_hand_dynamic.json quest IDs.
+            state: Optional campaign_state dict; loads from disk if not provided.
+
+        Returns:
+            bool
+        """
+        if state is None:
+            state = self.load_campaign_state() or {}
+
+        quests = self._load_silver_hand_quests()
+        quest = quests.get(quest_id)
+        if quest is None:
+            return False
+
+        conditions = quest.get("activation_conditions", {})
+        companions_state = state.get("companions_state", {})
+        sh_state = state.get("silver_hand_state", {})
+
+        if conditions.get("requires_beast_blood") and not companions_state.get("beast_blood", False):
+            return False
+
+        min_level = conditions.get("silver_hand_awareness_level_min", 0)
+        if sh_state.get("awareness_level", 0) < min_level:
+            return False
+
+        return True
+
     def start_battle_of_whiterun(self, faction, state=None):
         """
         Initiate the Battle of Whiterun for the given faction.

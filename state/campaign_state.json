@@ -305,5 +305,18 @@
     "eye_instability": 0,
     "ancano_suspicion": 0,
     "internal_politics": 0
+  },
+  "companions_state": {
+    "beast_blood": false,
+    "beast_blood_tier": 0,
+    "sovngarde_blessing_tier": 0,
+    "companions_rank": null,
+    "kodlak_quest_complete": false,
+    "harbinger": false
+  },
+  "silver_hand_state": {
+    "awareness_level": 0,
+    "active_hunts": [],
+    "high_purifier_alive": true
   }
 }

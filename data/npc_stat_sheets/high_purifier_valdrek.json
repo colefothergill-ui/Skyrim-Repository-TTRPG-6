@@ -1,0 +1,71 @@
+{
+  "name": "High Purifier Valdrek Ice-Blood",
+  "id": "npc_stat_high_purifier_valdrek",
+  "type": "Nord Zealot",
+  "category": "Hostile NPC",
+  "location": "Silver Hand fortress, Skyrim wilds",
+  "faction": "The Silver Hand",
+  "role": "Leader of the Silver Hand — former Companion turned purifier",
+  "aspects": {
+    "high_concept": "Former Companion Who Now Hunts His Own Kind",
+    "trouble": "Grief Over Kodlak's Perceived Betrayal Blinds Me",
+    "other_aspects": [
+      "Ysgramor's Legacy Must Not Be Defiled",
+      "Silver Weapons for a Silver Cause",
+      "I Know Every Werewolf Weakness"
+    ]
+  },
+  "skills": {
+    "Great": ["Fight", "Will"],
+    "Good": ["Athletics", "Intimidate"],
+    "Fair": ["Notice", "Lore"],
+    "Average": ["Physique", "Stealth"]
+  },
+  "stunts": [
+    "Purifier's Strike: +2 to Fight when attacking a werewolf or beastblooded target.",
+    "Silver-Honed Blade: Weapons treated as silver; werewolves cannot use lycanthropic regeneration when taken out by Valdrek.",
+    "I've Hunted Your Kind Before: Once per scene, reveal a weakness or secret about a beastblooded NPC or PC as a free Create Advantage.",
+    "Unbroken Conviction: +2 to Will when resisting compels or persuasion attempts that ask him to spare a lycanthrope."
+  ],
+  "stress": {
+    "physical": [false, false, false, false],
+    "mental": [false, false, false, false]
+  },
+  "consequences": {
+    "mild": null,
+    "moderate": null,
+    "severe": null
+  },
+  "refresh": 2,
+  "fate_points": 3,
+  "equipment": {
+    "weapon": "Silver greatsword (named 'Hircine's Bane')",
+    "armor": "Studded Nord plate with Silver Hand heraldry",
+    "special": "Silver throwing knives, wolfsbane potion, wanted notices for beastblooded targets"
+  },
+  "personality_notes": {
+    "speaking_style": "Measured and sorrowful. Quotes Ysgramor. Refers to werewolves as 'the corrupted.' Never gloats — he kills with grim duty, not pleasure.",
+    "motivations": [
+      "Avenge what he sees as Kodlak Whitemane's betrayal of Ysgramor's ideals",
+      "Purge lycanthropy from Skyrim's warrior culture",
+      "Protect Sovngarde from being denied to Hircine's thralls",
+      "Restore the Companions to their pre-corruption glory"
+    ],
+    "fears": [
+      "That he himself was once tempted by the beast blood and refused",
+      "That his methods make him as monstrous as those he hunts",
+      "Dying before his purification mission is complete"
+    ],
+    "quirks": [
+      "Wears a wolf-tooth necklace taken from a Companion he killed — a reminder of the 'cost'",
+      "Recites lines from the Song of the Companions before battle",
+      "Will offer a clean death to beastblooded foes who renounce Hircine"
+    ]
+  },
+  "trust_clock": {
+    "enabled": false,
+    "description": "Valdrek does not build trust — only hunt eligibility. Not tracked as a trust clock."
+  },
+  "lore_notes": "Valdrek was a Companion a generation ago who left when he learned of the beast blood. He believes Kodlak Whitemane's attempt to seek a cure was a sign of weakness, not redemption. Unknown to him, a Thalmor agent has been quietly funding his operations to destabilize Nord warrior culture.",
+  "combat_notes": "Valdrek is a named boss encounter activated at Silver Hand escalation level 4+. He fights until severely wounded, then offers parley if the PC is not beastblooded. If beastblooded, he fights to the end."
+}

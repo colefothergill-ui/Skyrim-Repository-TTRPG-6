@@ -1,0 +1,56 @@
+{
+  "id": "silver_hand",
+  "name": "The Silver Hand",
+  "type": "Vigilante Faction",
+  "ideology": "Purify Skyrim of lycanthropy and Hircine's corruption",
+  "public_face": "Witch-hunters",
+  "secret_sponsors": ["unknown_altmer_contacts?"],
+  "alignment": "Hostile (anti-werewolf)",
+  "description": "Anti-werewolf vigilante faction that splintered from the Companions long ago. The Silver Hand believes the Companions were corrupted by Hircine and operate from forts and hidden dens across Skyrim. Not officially recognized as noble, they are organized into autonomous warbands under a High Purifier.",
+  "structure": {
+    "cells": "Autonomous warbands",
+    "leadership": "High Purifier"
+  },
+  "internal_branches": {
+    "purists": {
+      "name": "Purists",
+      "description": "True believers. Religious Nord traditionalists who hate all Daedric influence.",
+      "methods": "Vigilante hunts and fort raids"
+    },
+    "radicals": {
+      "name": "Radicals",
+      "description": "Want to wipe out the Companions entirely. Use torture and extreme methods.",
+      "methods": "Torture, assassinations, scorched-earth raids"
+    },
+    "shadow_patrons": {
+      "name": "Shadow Patrons",
+      "description": "Possibly Thalmor manipulation via an anti-Nord destabilization agenda.",
+      "methods": "Secret funding, intelligence supply, chaos-seeding"
+    }
+  },
+  "escalation_clock": {
+    "current": 0,
+    "max": 6
+  },
+  "escalation_thresholds": {
+    "1": "Scouts appear near Companions-affiliated locations",
+    "2": "Ambush event triggered against beastblooded PC or allies",
+    "3": "Fort siege against a known Companions stronghold",
+    "4": "Named NPC hunt — High Purifier dispatches elite killers",
+    "5": "Jorrvaskr assault — full Silver Hand strike on the mead hall",
+    "6": "Final Purge quest — all-out war against the Companions and their allies"
+  },
+  "notable_members": [
+    "High Purifier Valdrek Ice-Blood (leader — former Companion)",
+    "Sister Kaari of the Cleansing Flame (priestess-zealot)",
+    "Unknown Thalmor Agent (hidden — supplies silver, encourages chaos)"
+  ],
+  "relationships": {
+    "companions": "Bitter enemies — Silver Hand views the Companions as Hircine-corrupted traitors to Ysgramor's legacy",
+    "stormcloaks": "Uneasy tolerance — shared Nord traditionalism, but Silver Hand distrust of anyone harboring werewolves",
+    "imperial_legion": "Ignored — Silver Hand sees Imperial entanglements as irrelevant to their purification mission",
+    "thalmor": "Unknown manipulation — a hidden Thalmor agent funds and directs the Shadow Patrons branch"
+  },
+  "questline_ref": "data/quests/silver_hand_dynamic.json",
+  "gm_notes": "Use Silver Hand as a reactive nemesis faction for beastblooded PCs. If the PC never takes Beast Blood they remain a background faction and can even be infiltrated to expose Thalmor involvement. Escalation clock ticks whenever Beast Blood is used publicly."
+}
