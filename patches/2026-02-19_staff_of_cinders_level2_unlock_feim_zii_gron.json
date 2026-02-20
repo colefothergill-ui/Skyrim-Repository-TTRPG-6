@@ -1,0 +1,20 @@
+{
+  "patch_id": "2026-02-19_staff_of_cinders_level2_unlock_feim_zii_gron",
+  "type": "artifact_unlock",
+  "date": "2026-02-19",
+  "artifact": "Staff of Cinders",
+  "event": "Staff Awakening reached 6/6 on Jyrik Gauldurson finisher in Saarthal Eye Chamber",
+  "changes": {
+    "staff_awakening_clock": { "current": 6, "max": 6, "resolved": true },
+    "staff_level": 2,
+    "unlocks": [
+      {
+        "type": "rune_reveal_shout",
+        "name": "Become Ethereal",
+        "words": ["Feim", "Zii", "Gron"],
+        "mastery_clock": { "current": 0, "max": 8 },
+        "notes": "Chosen to avoid power creep. Defensive/escape shout. Cannot attack while ethereal per Thu'um rules."
+      }
+    ]
+  }
+}
