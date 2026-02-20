@@ -104,10 +104,10 @@
     "faction": "silver_hand",
     "act": "Act 3",
     "activation_conditions": {
-      "requires_beast_blood": true,
-      "silver_hand_awareness_level_min": 4,
-      "companions_state_beast_blood": true,
-      "note": "Can also trigger if PC is not beastblooded but has completed silver_hand_purification_ritual and sided against the Silver Hand"
+    "requires_beast_blood": true,
+    "silver_hand_awareness_level_min": 4,
+    "companions_state_beast_blood": true,
+    "note": "GM guidance: For non-beastblooded PCs, trigger this showdown manually once they have completed silver_hand_purification_ritual and definitively sided against the Silver Hand."
     },
     "status": "locked",
     "objectives": [
