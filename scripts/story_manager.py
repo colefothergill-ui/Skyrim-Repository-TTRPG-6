@@ -31,6 +31,17 @@ except (ImportError, ModuleNotFoundError) as e:
     # print(f"Warning: DragonbreakManager not available: {e}", file=sys.stderr)
 
 
+# College of Winterhold quest chain order
+COLLEGE_CHAIN = {
+    "college_first_lessons": "college_under_saarthal",
+    "college_under_saarthal": "college_hitting_the_books",
+    "college_hitting_the_books": "college_revealing_the_unseen",
+    "college_revealing_the_unseen": "college_staff_of_magnus",
+    "college_staff_of_magnus": "college_eye_of_magnus",
+    "college_eye_of_magnus": None,
+}
+
+
 class StoryManager:
     def __init__(self, data_dir="../data", state_dir="../state"):
         self.data_dir = Path(data_dir)
@@ -38,10 +49,12 @@ class StoryManager:
         self.campaign_state_path = self.state_dir / "campaign_state.json"
         self.main_quests_path = self.data_dir / "quests" / "main_quests.json"
         self.civil_war_path = self.data_dir / "quests" / "civil_war_quests.json"
+        self.college_path = self.data_dir / "quests" / "college_of_winterhold_quests.json"
         self.thalmor_path = self.data_dir / "thalmor_arcs.json"
         self.npc_stat_sheets_dir = self.data_dir / "npc_stat_sheets"
         self.query_manager = DataQueryManager(str(self.data_dir))
-        
+        self.college_quests = self.load_college_quests()
+
         # Initialize Dragonbreak Manager if available
         if DRAGONBREAK_AVAILABLE:
             self.dragonbreak_manager = DragonbreakManager(str(self.data_dir), str(self.state_dir))
@@ -75,7 +88,74 @@ class StoryManager:
             with open(self.civil_war_path, 'r') as f:
                 return json.load(f)
         return None
-    
+
+    def load_college_quests(self):
+        """Load College of Winterhold quest data"""
+        if self.college_path.exists():
+            with open(self.college_path, 'r') as f:
+                return json.load(f)
+        return {}
+
+    def start_college_questline(self, state):
+        """
+        Activate the first College quest (college_first_lessons).
+
+        Args:
+            state: Campaign state dict (mutated in-place).
+        """
+        college_state = state.setdefault("college_state", {
+            "active_quest": None,
+            "completed_quests": [],
+            "quest_progress": {},
+            "eye_instability": 0,
+            "ancano_suspicion": 0,
+            "internal_politics": 0,
+        })
+        college_state["active_quest"] = "college_first_lessons"
+        college_state.setdefault("quest_progress", {})["college_first_lessons"] = "active"
+
+    def complete_college_quest(self, state):
+        """
+        Complete the current active College quest and advance to the next one.
+
+        Args:
+            state: Campaign state dict (mutated in-place).
+
+        Returns:
+            The newly activated quest ID, or None if the arc is finished.
+        """
+        college_state = state.get("college_state", {})
+        current = college_state.get("active_quest")
+        if not current:
+            return None
+
+        completed = college_state.setdefault("completed_quests", [])
+        if current not in completed:
+            completed.append(current)
+        college_state.setdefault("quest_progress", {})[current] = "completed"
+
+        next_q = COLLEGE_CHAIN.get(current)
+        if next_q:
+            college_state["active_quest"] = next_q
+            college_state["quest_progress"][next_q] = "active"
+        else:
+            college_state["active_quest"] = None
+
+        return next_q
+
+    def dragonbreak_precheck_college(self, state):
+        """
+        Return True if the Eye of Magnus instability threshold warrants a Dragonbreak.
+
+        Args:
+            state: Campaign state dict.
+        """
+        college_state = state.get("college_state", {})
+        if college_state.get("active_quest") == "college_eye_of_magnus":
+            if college_state.get("eye_instability", 0) >= 5:
+                return True
+        return False
+
     def record_branching_decision(self, decision_key, choice):
         """
         Record a major branching decision
@@ -240,7 +320,18 @@ class StoryManager:
                     'type': 'main',
                     'quest': quest
                 })
-        
+
+        # Check College questline
+        college_state = state.get("college_state", {})
+        active_college_quest = college_state.get("active_quest")
+        if active_college_quest and self.college_quests:
+            quest_data = self.college_quests.get(active_college_quest)
+            if quest_data:
+                available.append({
+                    'type': 'college',
+                    'quest': quest_data
+                })
+
         return available
     
     def advance_quest(self, quest_id, new_status):

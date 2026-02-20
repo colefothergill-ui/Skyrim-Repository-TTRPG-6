@@ -942,7 +942,33 @@ class SessionZeroManager:
             else:
                 # Generic neutral gets modest companion relationship
                 campaign_state["faction_relationships"]["companions"] = 20
-        
+
+        # Initialize college_state and queue first quest when starting as College member
+        subfaction_key = neutral_subfaction or ""
+        resolved_faction = FACTION_NAME_MAPPING.get(subfaction_key, subfaction_key)
+        if resolved_faction == "college_of_winterhold":
+            college_state = campaign_state.setdefault("college_state", {
+                "active_quest": None,
+                "completed_quests": [],
+                "quest_progress": {},
+                "eye_instability": 0,
+                "ancano_suspicion": 0,
+                "internal_politics": 0,
+            })
+            if not college_state.get("active_quest"):
+                college_state["active_quest"] = "college_first_lessons"
+                college_state.setdefault("quest_progress", {})["college_first_lessons"] = "active"
+            campaign_state["starting_faction"] = "college_of_winterhold"
+        else:
+            campaign_state.setdefault("college_state", {
+                "active_quest": None,
+                "completed_quests": [],
+                "quest_progress": {},
+                "eye_instability": 0,
+                "ancano_suspicion": 0,
+                "internal_politics": 0,
+            })
+
         # Update last updated timestamp
         campaign_state["last_updated"] = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         
