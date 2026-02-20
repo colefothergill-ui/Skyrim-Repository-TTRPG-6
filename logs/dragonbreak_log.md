@@ -132,8 +132,8 @@ When a Dragonbreak occurs, add an entry using this template:
 
 ## Dragonbreak: Test Civil War Split
 
-**Date**: 2026-02-20 06:35:24  
-**Timeline Branch**: branch_3  
+**Date**: 2026-02-20 17:46:11  
+**Timeline Branch**: branch_1  
 **Trigger Event**: Test battle outcome
 
 **Description**: Test timeline divergence
@@ -142,48 +142,8 @@ When a Dragonbreak occurs, add an entry using this template:
 
 ## Dragonbreak: Test Story Branch
 
-**Date**: 2026-02-20 06:35:24  
-**Timeline Branch**: branch_4  
-**Trigger Event**: Test story event
-
-**Description**: Test story divergence
-
----
-
-## Dragonbreak: Test Civil War Split
-
-**Date**: 2026-02-20 06:36:19  
-**Timeline Branch**: branch_5  
-**Trigger Event**: Test battle outcome
-
-**Description**: Test timeline divergence
-
----
-
-## Dragonbreak: Test Story Branch
-
-**Date**: 2026-02-20 06:36:19  
-**Timeline Branch**: branch_6  
-**Trigger Event**: Test story event
-
-**Description**: Test story divergence
-
----
-
-## Dragonbreak: Test Civil War Split
-
-**Date**: 2026-02-20 06:37:16  
-**Timeline Branch**: branch_7  
-**Trigger Event**: Test battle outcome
-
-**Description**: Test timeline divergence
-
----
-
-## Dragonbreak: Test Story Branch
-
-**Date**: 2026-02-20 06:37:16  
-**Timeline Branch**: branch_8  
+**Date**: 2026-02-20 17:46:11  
+**Timeline Branch**: branch_2  
 **Trigger Event**: Test story event
 
 **Description**: Test story divergence

@@ -7,8 +7,7 @@
     "act": "Act 2",
     "activation_conditions": {
       "requires_beast_blood": true,
-      "silver_hand_awareness_level_min": 2,
-      "companions_state_beast_blood": true
+      "silver_hand_awareness_level_min": 2
     },
     "status": "locked",
     "objectives": [
@@ -32,8 +31,7 @@
     "act": "Act 2-3",
     "activation_conditions": {
       "requires_beast_blood": true,
-      "silver_hand_awareness_level_min": 5,
-      "companions_state_beast_blood": true
+      "silver_hand_awareness_level_min": 5
     },
     "status": "locked",
     "objectives": [
@@ -106,7 +104,6 @@
     "activation_conditions": {
     "requires_beast_blood": true,
     "silver_hand_awareness_level_min": 4,
-    "companions_state_beast_blood": true,
     "note": "GM guidance: For non-beastblooded PCs, trigger this showdown manually once they have completed silver_hand_purification_ritual and definitively sided against the Silver Hand."
     },
     "status": "locked",
