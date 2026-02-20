@@ -305,5 +305,13 @@
     "eye_instability": 0,
     "ancano_suspicion": 0,
     "internal_politics": 0
+  },
+  "companions_state": {
+    "active_quest": null,
+    "completed_quests": [],
+    "quest_progress": {},
+    "embraced_curse": false,
+    "skjor_alive": true,
+    "kodlak_cured": false
   }
 }

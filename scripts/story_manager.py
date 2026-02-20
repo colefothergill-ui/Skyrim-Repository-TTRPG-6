@@ -41,6 +41,15 @@ COLLEGE_CHAIN = {
     "college_eye_of_magnus": None,
 }
 
+# Companions quest chain order (default / non-dragonbreak path)
+COMPANIONS_CHAIN = {
+    "companions_proving_honor": "companions_inner_circle_rites",
+    "companions_inner_circle_rites": "companions_kodlak_cure_or_sacrifice",
+    "companions_kodlak_cure_or_sacrifice": "companions_final_journey",
+    "companions_skjor_dragonbreak": "companions_final_journey",
+    "companions_final_journey": None,
+}
+
 
 class StoryManager:
     def __init__(self, data_dir="../data", state_dir="../state"):
@@ -50,10 +59,12 @@ class StoryManager:
         self.main_quests_path = self.data_dir / "quests" / "main_quests.json"
         self.civil_war_path = self.data_dir / "quests" / "civil_war_quests.json"
         self.college_path = self.data_dir / "quests" / "college_of_winterhold_quests.json"
+        self.companions_path = self.data_dir / "quests" / "companions_questline.json"
         self.thalmor_path = self.data_dir / "thalmor_arcs.json"
         self.npc_stat_sheets_dir = self.data_dir / "npc_stat_sheets"
         self.query_manager = DataQueryManager(str(self.data_dir))
         self.college_quests = self.load_college_quests()
+        self.companions_quests = self.load_companions_quests()
 
         # Initialize Dragonbreak Manager if available
         if DRAGONBREAK_AVAILABLE:
@@ -94,6 +105,14 @@ class StoryManager:
         if self.college_path.exists():
             with open(self.college_path, 'r') as f:
                 return json.load(f)
+        return {}
+
+    def load_companions_quests(self):
+        """Load Companions questline data"""
+        if self.companions_path.exists():
+            with open(self.companions_path, 'r') as f:
+                data = json.load(f)
+            return data.get("companions_questline", {}).get("quests", {})
         return {}
 
     def start_college_questline(self, state):
@@ -153,6 +172,86 @@ class StoryManager:
         college_state = state.get("college_state", {})
         if college_state.get("active_quest") == "college_eye_of_magnus":
             if college_state.get("eye_instability", 0) >= 5:
+                return True
+        return False
+
+    def start_companions_questline(self, state):
+        """
+        Activate the first Companions quest (companions_proving_honor).
+
+        Args:
+            state: Campaign state dict (mutated in-place).
+        """
+        companions_state = state.setdefault("companions_state", {
+            "active_quest": None,
+            "completed_quests": [],
+            "quest_progress": {},
+            "embraced_curse": False,
+            "skjor_alive": True,
+            "kodlak_cured": False,
+        })
+        companions_state["active_quest"] = "companions_proving_honor"
+        companions_state.setdefault("quest_progress", {})["companions_proving_honor"] = "active"
+
+    def complete_companions_quest(self, state):
+        """
+        Complete the current active Companions quest and advance to the next one.
+
+        Includes Dragonbreak branch logic: if the completed quest is
+        companions_kodlak_cure_or_sacrifice and skjor_alive AND embraced_curse
+        are both True, the next quest is companions_skjor_dragonbreak instead
+        of the default companions_final_journey.
+
+        Args:
+            state: Campaign state dict (mutated in-place).
+
+        Returns:
+            The newly activated quest ID, or None if the arc is finished.
+        """
+        companions_state = state.get("companions_state", {})
+        current = companions_state.get("active_quest")
+        if not current:
+            return None
+
+        completed = companions_state.setdefault("completed_quests", [])
+        if current not in completed:
+            completed.append(current)
+        companions_state.setdefault("quest_progress", {})[current] = "completed"
+
+        # Dragonbreak branch: inject skjor_dragonbreak when conditions are met
+        if (
+            current == "companions_kodlak_cure_or_sacrifice"
+            and companions_state.get("skjor_alive", False)
+            and companions_state.get("embraced_curse", False)
+        ):
+            next_q = "companions_skjor_dragonbreak"
+        else:
+            next_q = COMPANIONS_CHAIN.get(current)
+
+        if next_q:
+            companions_state["active_quest"] = next_q
+            companions_state["quest_progress"][next_q] = "active"
+        else:
+            companions_state["active_quest"] = None
+
+        return next_q
+
+    def dragonbreak_check_companions(self, state):
+        """
+        Return True if the Companions Skjor Dragonbreak branch should fire.
+
+        Condition: active quest is companions_kodlak_cure_or_sacrifice,
+        skjor_alive is True, and embraced_curse is True.
+
+        Args:
+            state: Campaign state dict.
+        """
+        companions_state = state.get("companions_state", {})
+        if companions_state.get("active_quest") == "companions_kodlak_cure_or_sacrifice":
+            if (
+                companions_state.get("skjor_alive", False)
+                and companions_state.get("embraced_curse", False)
+            ):
                 return True
         return False
 
@@ -329,6 +428,17 @@ class StoryManager:
             if quest_data:
                 available.append({
                     'type': 'college',
+                    'quest': quest_data
+                })
+
+        # Check Companions questline
+        companions_state = state.get("companions_state", {})
+        active_companions_quest = companions_state.get("active_quest")
+        if active_companions_quest and self.companions_quests:
+            quest_data = self.companions_quests.get(active_companions_quest)
+            if quest_data:
+                available.append({
+                    'type': 'companions',
                     'quest': quest_data
                 })
 

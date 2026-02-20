@@ -969,6 +969,30 @@ class SessionZeroManager:
                 "internal_politics": 0,
             })
 
+        # Initialize companions_state and queue first quest when starting as Companions member
+        if resolved_faction == "companions":
+            companions_state = campaign_state.setdefault("companions_state", {
+                "active_quest": None,
+                "completed_quests": [],
+                "quest_progress": {},
+                "embraced_curse": False,
+                "skjor_alive": True,
+                "kodlak_cured": False,
+            })
+            if not companions_state.get("active_quest"):
+                companions_state["active_quest"] = "companions_proving_honor"
+                companions_state.setdefault("quest_progress", {})["companions_proving_honor"] = "active"
+            campaign_state["starting_faction"] = "companions"
+        else:
+            campaign_state.setdefault("companions_state", {
+                "active_quest": None,
+                "completed_quests": [],
+                "quest_progress": {},
+                "embraced_curse": False,
+                "skjor_alive": True,
+                "kodlak_cured": False,
+            })
+
         # Update last updated timestamp
         campaign_state["last_updated"] = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         
@@ -981,6 +1005,7 @@ class SessionZeroManager:
         print(f"Starting location: Whiterun")
         print(f"Faction alignment: {faction_alignment}")
         return campaign_state
+
     
     def validate_character_data(self, character):
         """Validate that character has all required data"""

@@ -189,4 +189,54 @@ def whiterun_location_triggers(loc, campaign_state):
             )
             flags["college_allegiance_choice_prompted"] = True
 
+    # ------------------------------------------------------------------
+    # Companions tie-in: Jorrvaskr HQ and Inner Circle
+    # ------------------------------------------------------------------
+    companions_state = campaign_state.get("companions_state", {}) or {}
+    active_companions_quest = companions_state.get("active_quest")
+
+    if "jorrvaskr" in loc_lower or ("wind" in loc_lower and "whiterun" in loc_lower):
+        if active_companions_quest == "companions_proving_honor":
+            if not flags.get("jorrvaskr_proving_honor_briefing_done"):
+                events.append(
+                    "Jorrvaskr's mead hall rises before you - the ancient home of the Companions. "
+                    "The smell of roasting meat and mead fills the air. Kodlak Whitemane sits at "
+                    "the head table, watching you with measured eyes. The trial awaits."
+                )
+                flags["jorrvaskr_proving_honor_briefing_done"] = True
+
+        elif active_companions_quest == "companions_inner_circle_rites":
+            if not flags.get("jorrvaskr_inner_circle_triggered"):
+                events.append(
+                    "Skjor catches your eye as you enter Jorrvaskr and tilts his head toward "
+                    "the rear of the hall. The Underforge is beneath you - and the secret of the "
+                    "Inner Circle waits below. This is not a conversation for open mead halls."
+                )
+                flags["jorrvaskr_inner_circle_triggered"] = True
+
+        elif active_companions_quest == "companions_kodlak_cure_or_sacrifice":
+            if not flags.get("jorrvaskr_kodlak_dying_triggered"):
+                events.append(
+                    "Jorrvaskr is quiet in a way it should never be. The shield-siblings speak "
+                    "in hushed tones and avert their eyes. Kodlak Whitemane has been struck down. "
+                    "His chamber is ahead. Whatever you choose next will define his legacy."
+                )
+                flags["jorrvaskr_kodlak_dying_triggered"] = True
+
+    # Companions deployment: Kodlak sends PC to defend Whiterun's civilians
+    if (
+        starting_faction == "companions"
+        and active_companions_quest in ("companions_proving_honor", "companions_inner_circle_rites")
+        and siege_active
+        and not flags.get("companions_whiterun_deployment_triggered")
+    ):
+        events.append(
+            "[COMPANIONS TIE-IN] Kodlak's orders echo in your mind: the Companions do not "
+            "choose sides in civil wars, but they do not stand by while innocents burn. "
+            "Defend Whiterun's people - Plains District, Wind District, wherever the battle "
+            "spills into civilian streets. This is not Imperial or Stormcloak work. "
+            "This is honor."
+        )
+        flags["companions_whiterun_deployment_triggered"] = True
+
     return events

@@ -25,7 +25,7 @@ from pathlib import Path
 _REPO_ROOT = Path(__file__).parent.parent
 sys.path.insert(0, str(_REPO_ROOT / "scripts"))
 
-from story_manager import StoryManager, COLLEGE_CHAIN
+from story_manager import StoryManager, COLLEGE_CHAIN, COMPANIONS_CHAIN
 from session_zero import SessionZeroManager
 
 
@@ -33,7 +33,11 @@ from session_zero import SessionZeroManager
 # Helpers
 # ---------------------------------------------------------------------------
 
-def _make_minimal_state(tmpdir: Path, college_state: dict | None = None) -> Path:
+def _make_minimal_state(
+    tmpdir: Path,
+    college_state: dict | None = None,
+    companions_state: dict | None = None,
+) -> Path:
     """Write a minimal campaign_state.json into tmpdir and return its path."""
     state = {
         "campaign_id": "test_001",
@@ -64,17 +68,29 @@ def _make_minimal_state(tmpdir: Path, college_state: dict | None = None) -> Path
             "ancano_suspicion": 0,
             "internal_politics": 0,
         },
+        "companions_state": companions_state or {
+            "active_quest": None,
+            "completed_quests": [],
+            "quest_progress": {},
+            "embraced_curse": False,
+            "skjor_alive": True,
+            "kodlak_cured": False,
+        },
     }
     state_path = tmpdir / "campaign_state.json"
     state_path.write_text(json.dumps(state, indent=2))
     return state_path
 
 
-def _make_story_manager(tmpdir: Path, college_state: dict | None = None) -> StoryManager:
+def _make_story_manager(
+    tmpdir: Path,
+    college_state: dict | None = None,
+    companions_state: dict | None = None,
+) -> StoryManager:
     """Create a StoryManager pointing at real data but a temp state dir."""
     state_dir = tmpdir / "state"
     state_dir.mkdir(exist_ok=True)
-    _make_minimal_state(state_dir, college_state)
+    _make_minimal_state(state_dir, college_state, companions_state)
     data_dir = str(_REPO_ROOT / "data")
     return StoryManager(data_dir=data_dir, state_dir=str(state_dir))
 
@@ -354,13 +370,360 @@ class TestSessionZeroCollegeFaction:
         print("  ✓ college_state always initialised by session-zero")
 
 
+class TestCompanionsQuests:
+    """Tests for the Companions questline integration."""
+
+    def test_load_companions_quests_returns_all_five(self):
+        """load_companions_quests() should return a dict with all five quests."""
+        with tempfile.TemporaryDirectory() as tmpdir:
+            sm = _make_story_manager(Path(tmpdir))
+            quests = sm.companions_quests
+            assert isinstance(quests, dict), "companions_quests should be a dict"
+            expected_ids = {
+                "companions_proving_honor",
+                "companions_inner_circle_rites",
+                "companions_kodlak_cure_or_sacrifice",
+                "companions_skjor_dragonbreak",
+                "companions_final_journey",
+            }
+            assert expected_ids.issubset(quests.keys()), (
+                f"Missing quests: {expected_ids - quests.keys()}"
+            )
+            print(f"  ✓ {len(quests)} Companions quests loaded")
+
+    def test_start_companions_questline_sets_active_quest(self):
+        """start_companions_questline() should set companions_proving_honor as active."""
+        state = {
+            "companions_state": {
+                "active_quest": None,
+                "completed_quests": [],
+                "quest_progress": {},
+                "embraced_curse": False,
+                "skjor_alive": True,
+                "kodlak_cured": False,
+            }
+        }
+        with tempfile.TemporaryDirectory() as tmpdir:
+            sm = _make_story_manager(Path(tmpdir))
+            sm.start_companions_questline(state)
+        cs = state["companions_state"]
+        assert cs["active_quest"] == "companions_proving_honor"
+        assert cs["quest_progress"]["companions_proving_honor"] == "active"
+        print("  ✓ start_companions_questline sets companions_proving_honor as active")
+
+    def test_complete_companions_quest_default_chain(self):
+        """complete_companions_quest() advances through the default chain."""
+        # Default path: no dragonbreak (skjor_alive=False or embraced_curse=False)
+        ordered = [
+            "companions_proving_honor",
+            "companions_inner_circle_rites",
+            "companions_kodlak_cure_or_sacrifice",
+            "companions_final_journey",
+        ]
+        with tempfile.TemporaryDirectory() as tmpdir:
+            sm = _make_story_manager(Path(tmpdir))
+            state = {
+                "companions_state": {
+                    "active_quest": "companions_proving_honor",
+                    "completed_quests": [],
+                    "quest_progress": {"companions_proving_honor": "active"},
+                    "embraced_curse": False,
+                    "skjor_alive": True,
+                    "kodlak_cured": False,
+                }
+            }
+            for i, current_id in enumerate(ordered):
+                assert state["companions_state"]["active_quest"] == current_id, (
+                    f"Expected active quest '{current_id}', got "
+                    f"'{state['companions_state']['active_quest']}'"
+                )
+                next_q = sm.complete_companions_quest(state)
+                expected_next = COMPANIONS_CHAIN[current_id]
+                assert next_q == expected_next, (
+                    f"After completing '{current_id}', expected next '{expected_next}', "
+                    f"got '{next_q}'"
+                )
+                assert current_id in state["companions_state"]["completed_quests"]
+                assert state["companions_state"]["quest_progress"][current_id] == "completed"
+
+        print("  ✓ complete_companions_quest chains through default path correctly")
+
+    def test_complete_companions_quest_arc_ends_cleanly(self):
+        """After completing companions_final_journey, active_quest should be None."""
+        state = {
+            "companions_state": {
+                "active_quest": "companions_final_journey",
+                "completed_quests": [],
+                "quest_progress": {"companions_final_journey": "active"},
+                "embraced_curse": False,
+                "skjor_alive": True,
+                "kodlak_cured": False,
+            }
+        }
+        with tempfile.TemporaryDirectory() as tmpdir:
+            sm = _make_story_manager(Path(tmpdir))
+            result = sm.complete_companions_quest(state)
+        assert result is None
+        assert state["companions_state"]["active_quest"] is None
+        assert "companions_final_journey" in state["companions_state"]["completed_quests"]
+        print("  ✓ complete_companions_quest ends arc cleanly at final_journey")
+
+    def test_dragonbreak_branch_fires_when_conditions_met(self):
+        """complete_companions_quest() injects skjor_dragonbreak when skjor_alive and embraced_curse."""
+        state = {
+            "companions_state": {
+                "active_quest": "companions_kodlak_cure_or_sacrifice",
+                "completed_quests": [],
+                "quest_progress": {"companions_kodlak_cure_or_sacrifice": "active"},
+                "embraced_curse": True,
+                "skjor_alive": True,
+                "kodlak_cured": False,
+            }
+        }
+        with tempfile.TemporaryDirectory() as tmpdir:
+            sm = _make_story_manager(Path(tmpdir))
+            next_q = sm.complete_companions_quest(state)
+        assert next_q == "companions_skjor_dragonbreak", (
+            f"Expected dragonbreak quest, got '{next_q}'"
+        )
+        print("  ✓ Dragonbreak branch fires when skjor_alive=True and embraced_curse=True")
+
+    def test_dragonbreak_branch_skipped_without_curse(self):
+        """No dragonbreak when embraced_curse is False even if skjor_alive."""
+        state = {
+            "companions_state": {
+                "active_quest": "companions_kodlak_cure_or_sacrifice",
+                "completed_quests": [],
+                "quest_progress": {"companions_kodlak_cure_or_sacrifice": "active"},
+                "embraced_curse": False,
+                "skjor_alive": True,
+                "kodlak_cured": False,
+            }
+        }
+        with tempfile.TemporaryDirectory() as tmpdir:
+            sm = _make_story_manager(Path(tmpdir))
+            next_q = sm.complete_companions_quest(state)
+        assert next_q == "companions_final_journey", (
+            f"Expected final_journey, got '{next_q}'"
+        )
+        print("  ✓ Dragonbreak branch skipped when embraced_curse=False")
+
+    def test_dragonbreak_branch_skipped_without_skjor(self):
+        """No dragonbreak when skjor_alive is False even if embraced_curse."""
+        state = {
+            "companions_state": {
+                "active_quest": "companions_kodlak_cure_or_sacrifice",
+                "completed_quests": [],
+                "quest_progress": {"companions_kodlak_cure_or_sacrifice": "active"},
+                "embraced_curse": True,
+                "skjor_alive": False,
+                "kodlak_cured": False,
+            }
+        }
+        with tempfile.TemporaryDirectory() as tmpdir:
+            sm = _make_story_manager(Path(tmpdir))
+            next_q = sm.complete_companions_quest(state)
+        assert next_q == "companions_final_journey", (
+            f"Expected final_journey, got '{next_q}'"
+        )
+        print("  ✓ Dragonbreak branch skipped when skjor_alive=False")
+
+    def test_dragonbreak_check_companions_logic(self):
+        """dragonbreak_check_companions() returns True only when both flags set on correct quest."""
+        with tempfile.TemporaryDirectory() as tmpdir:
+            sm = _make_story_manager(Path(tmpdir))
+
+            state_both = {
+                "companions_state": {
+                    "active_quest": "companions_kodlak_cure_or_sacrifice",
+                    "skjor_alive": True,
+                    "embraced_curse": True,
+                }
+            }
+            state_no_curse = {
+                "companions_state": {
+                    "active_quest": "companions_kodlak_cure_or_sacrifice",
+                    "skjor_alive": True,
+                    "embraced_curse": False,
+                }
+            }
+            state_no_skjor = {
+                "companions_state": {
+                    "active_quest": "companions_kodlak_cure_or_sacrifice",
+                    "skjor_alive": False,
+                    "embraced_curse": True,
+                }
+            }
+            state_wrong_quest = {
+                "companions_state": {
+                    "active_quest": "companions_proving_honor",
+                    "skjor_alive": True,
+                    "embraced_curse": True,
+                }
+            }
+            assert sm.dragonbreak_check_companions(state_both) is True
+            assert sm.dragonbreak_check_companions(state_no_curse) is False
+            assert sm.dragonbreak_check_companions(state_no_skjor) is False
+            assert sm.dragonbreak_check_companions(state_wrong_quest) is False
+        print("  ✓ dragonbreak_check_companions logic is correct")
+
+    def test_get_available_quests_includes_active_companions_quest(self):
+        """get_available_quests() should list the active Companions quest."""
+        companions_state = {
+            "active_quest": "companions_proving_honor",
+            "completed_quests": [],
+            "quest_progress": {"companions_proving_honor": "active"},
+            "embraced_curse": False,
+            "skjor_alive": True,
+            "kodlak_cured": False,
+        }
+        with tempfile.TemporaryDirectory() as tmpdir:
+            sm = _make_story_manager(Path(tmpdir), companions_state=companions_state)
+            available = sm.get_available_quests()
+
+        companions_entries = [q for q in available if q.get("type") == "companions"]
+        assert len(companions_entries) >= 1, (
+            "Expected at least one companions quest in available quests"
+        )
+        quest_data = companions_entries[0]["quest"]
+        assert quest_data.get("quest_id") == "companions_proving_honor", (
+            f"Expected quest_id 'companions_proving_honor', got: {quest_data.get('quest_id')!r}"
+        )
+        print("  ✓ get_available_quests surfaces active Companions quest")
+
+    def test_get_available_quests_no_companions_when_inactive(self):
+        """get_available_quests() should not include Companions quest when none is active."""
+        with tempfile.TemporaryDirectory() as tmpdir:
+            sm = _make_story_manager(Path(tmpdir))
+            available = sm.get_available_quests()
+
+        companions_entries = [q for q in available if q.get("type") == "companions"]
+        assert len(companions_entries) == 0, (
+            "Expected no companions quests when active_quest is null"
+        )
+        print("  ✓ get_available_quests hides Companions quest when inactive")
+
+
+class TestSessionZeroCompanionsFaction:
+    """Tests for session_zero Companions-faction initialization."""
+
+    def _make_session_zero_env(self, tmpdir: Path):
+        """Set up a SessionZeroManager with a valid state/data layout."""
+        data_dir = tmpdir / "data"
+        state_dir = tmpdir / "state"
+        (data_dir / "pcs").mkdir(parents=True)
+        state_dir.mkdir(parents=True)
+
+        (state_dir / "campaign_state.json").write_text(json.dumps({
+            "campaign_id": "test_001",
+            "current_act": 1,
+            "civil_war_state": {
+                "player_alliance": "neutral",
+                "battle_of_whiterun_status": "approaching",
+                "imperial_victories": 0,
+                "stormcloak_victories": 0,
+                "key_battles_completed": [],
+                "faction_relationship": {"imperial_legion": 0, "stormcloaks": 0},
+            },
+            "main_quest_state": {},
+            "thalmor_arc": {},
+            "branching_decisions": {},
+            "world_consequences": {"major_choices": []},
+            "active_story_arcs": [],
+            "companions": {
+                "active_companions": [],
+                "available_companions": [],
+                "dismissed_companions": [],
+                "companion_relationships": {},
+            },
+        }, indent=2))
+
+        return SessionZeroManager(data_dir=str(data_dir), state_dir=str(state_dir))
+
+    def test_companions_faction_queues_proving_honor(self):
+        """Session-zero with Companions subfaction should activate companions_proving_honor."""
+        with tempfile.TemporaryDirectory() as tmpdir:
+            mgr = self._make_session_zero_env(Path(tmpdir))
+            characters = [{
+                "id": "pc_test",
+                "name": "Test Warrior",
+                "player": "Player One",
+                "race": "Nord",
+                "standing_stone": "The Warrior Stone",
+                "faction_alignment": "neutral",
+            }]
+            state = mgr.update_campaign_state(
+                faction_alignment="neutral",
+                characters=characters,
+                neutral_subfaction="companions",
+            )
+
+        assert "companions_state" in state, "companions_state should be present in campaign state"
+        cs = state["companions_state"]
+        assert cs["active_quest"] == "companions_proving_honor", (
+            f"Expected companions_proving_honor as active quest, got: {cs['active_quest']}"
+        )
+        assert cs["quest_progress"].get("companions_proving_honor") == "active"
+        assert state.get("starting_faction") == "companions"
+        print("  ✓ session-zero with Companions queues companions_proving_honor")
+
+    def test_non_companions_faction_does_not_activate_companions_quests(self):
+        """Session-zero with non-Companions subfaction should leave companions_state inactive."""
+        with tempfile.TemporaryDirectory() as tmpdir:
+            mgr = self._make_session_zero_env(Path(tmpdir))
+            characters = [{
+                "id": "pc_test2",
+                "name": "Test Mage",
+                "player": "Player Two",
+                "race": "Breton",
+                "standing_stone": "The Mage Stone",
+                "faction_alignment": "neutral",
+            }]
+            state = mgr.update_campaign_state(
+                faction_alignment="neutral",
+                characters=characters,
+                neutral_subfaction="college",
+            )
+
+        cs = state.get("companions_state", {})
+        assert cs.get("active_quest") is None, (
+            f"Expected no active companions quest for College faction, got: {cs.get('active_quest')}"
+        )
+        print("  ✓ non-Companions faction does not activate Companions quests")
+
+    def test_companions_state_initialised_for_all_factions(self):
+        """companions_state should always be present after session-zero."""
+        with tempfile.TemporaryDirectory() as tmpdir:
+            mgr = self._make_session_zero_env(Path(tmpdir))
+            characters = [{
+                "id": "pc_test3",
+                "name": "Test Imperial",
+                "player": "Player Three",
+                "race": "Imperial",
+                "standing_stone": "The Lord Stone",
+                "faction_alignment": "imperial",
+            }]
+            state = mgr.update_campaign_state(
+                faction_alignment="imperial",
+                characters=characters,
+            )
+
+        assert "companions_state" in state, "companions_state should be present even for Imperial start"
+        print("  ✓ companions_state always initialised by session-zero")
+
+
 def run_all_tests():
     """Run all test classes"""
     print("=" * 60)
-    print("STORY MANAGER — COLLEGE QUESTLINE TEST SUITE")
+    print("STORY MANAGER — COLLEGE & COMPANIONS QUESTLINE TEST SUITE")
     print("=" * 60)
 
-    test_classes = [TestCollegeQuests, TestSessionZeroCollegeFaction]
+    test_classes = [
+        TestCollegeQuests,
+        TestSessionZeroCollegeFaction,
+        TestCompanionsQuests,
+        TestSessionZeroCompanionsFaction,
+    ]
     passed = 0
     failed = 0
 

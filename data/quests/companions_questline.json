@@ -1,0 +1,150 @@
+{
+  "companions_questline": {
+    "name": "The Companions",
+    "description": "Join the ancient warrior guild of Jorrvaskr, earn your place in the Inner Circle, and face the choice of lycanthropy or purity as Kodlak Whitemane's fate hangs in the balance.",
+    "quests": {
+      "companions_proving_honor": {
+        "name": "Proving Honor",
+        "quest_id": "companions_proving_honor",
+        "quest_giver": "Kodlak Whitemane",
+        "description": "To earn a place among the Companions of Jorrvaskr, you must prove your honor and battle-worth. Kodlak Whitemane sets you a trial: recover a fragment of Wuuthrad from a bandit-held dungeon and return it to Jorrvaskr. The quest is a test of courage, discipline, and Nordic virtue.",
+        "objectives": [
+          "Speak to Kodlak Whitemane in Jorrvaskr's mead hall",
+          "Travel to the designated dungeon and defeat its guardian",
+          "Recover the Wuuthrad fragment from the depths",
+          "Return the fragment to Kodlak and formally join the Companions"
+        ],
+        "rewards": [
+          "Official membership in the Companions (rank: Companion)",
+          "Access to Jorrvaskr's training yard and armory",
+          "Kodlak's personal respect (+2 trust with Kodlak Whitemane)",
+          "+2 Companions faction standing"
+        ],
+        "outcomes": {
+          "fragment_recovered": "The fragment is returned. Kodlak clasps your arm and speaks the old words of welcome. You are a Companion.",
+          "valor_displayed": "Fighting through with discipline and grit earns a free invoke on 'Proven in Battle' for the next dungeon scene.",
+          "quick_retreat": "You recovered the fragment but left some enemies standing. Vilkas will note it - take -1 trust with Vilkas."
+        },
+        "notes": "Entry quest for the Companions arc. Mirrors the College's 'First Lessons' in function. Vilkas and Farkas are present in Jorrvaskr; their dispositions toward the PC are set here. If PC demonstrates exceptional combat ability (SWS on Fight), Farkas offers a free sparring stunt for later.",
+        "prerequisites": [],
+        "follow_up_quest": "companions_inner_circle_rites"
+      },
+      "companions_inner_circle_rites": {
+        "name": "Inner Circle Rites",
+        "quest_id": "companions_inner_circle_rites",
+        "quest_giver": "Skjor",
+        "description": "After proving yourself among the rank and file, Skjor pulls you aside and offers initiation into the Companions' Inner Circle - the secret society of werewolves known as the Circle. You must choose: embrace the lycanthropic gift that grants power beyond mortal reckoning, or refuse it in honor of Kodlak's own wish to be cured. This choice will shape the entire arc.",
+        "objectives": [
+          "Speak privately with Skjor in the Underforge beneath Jorrvaskr",
+          "Learn the truth of the Circle's werewolf nature",
+          "Decide: embrace lycanthropy or refuse the gift",
+          "Complete the initiation rite (or resist it)"
+        ],
+        "rewards": [
+          "Inner Circle membership and access to the Underforge",
+          "If embraced: Werewolf Form stunt (once per session, transform for one scene - Fight and Physique treated as Great (+4), ignore first mild consequence each scene, cannot use social skills while transformed, requires Will vs Fair (+2) at scene end or take 'Shame of the Wolf' mild mental consequence; see data/stunts/companions.json)",
+          "If refused: 'Kodlak's Blessing' aspect with 1 free invoke (Kodlak confides deeper secrets)"
+        ],
+        "branching": {
+          "embrace_curse": {
+            "description": "PC accepts the blood and becomes a werewolf. Sets state flag embraced_curse=true. Skjor becomes a strong ally.",
+            "flag": "embraced_curse",
+            "value": true
+          },
+          "refuse_curse": {
+            "description": "PC refuses lycanthropy. Sets embraced_curse=false. Kodlak is deeply moved and shares his own desire to cure himself.",
+            "flag": "embraced_curse",
+            "value": false
+          }
+        },
+        "notes": "This is the pivotal choice of the arc. The embraced_curse flag governs Kodlak's fate branch and Skjor's role later. If Skjor is alive when companions_kodlak_cure_or_sacrifice is reached and embraced_curse is true, the Dragonbreak branch triggers.",
+        "prerequisites": ["companions_proving_honor"],
+        "follow_up_quest": "companions_kodlak_cure_or_sacrifice"
+      },
+      "companions_kodlak_cure_or_sacrifice": {
+        "name": "Cure or Sacrifice",
+        "quest_id": "companions_kodlak_cure_or_sacrifice",
+        "quest_giver": "Kodlak Whitemane",
+        "description": "Kodlak Whitemane lies dying - an enemy ambush on the Companions has struck him down. With his final breaths he asks you to choose his legacy: attempt the ritual that might purge the lycanthropic taint from his soul and free him to walk Sovngarde, or allow his death to stand and honor the beast blood he carried. This is the moral heart of the questline.",
+        "objectives": [
+          "Reach the dying Kodlak after the ambush at Whiterun",
+          "Gather the components for the Glenmoril Witch cure (or choose not to)",
+          "Perform the cure rite at the Flame of the Harbinger, or stand aside",
+          "Witness Kodlak's fate and take up the mantle of leadership"
+        ],
+        "rewards": [
+          "If cured: 'Kodlak's Soul Freed' campaign aspect (1 free invoke), unlocks Sovngarde power",
+          "If not cured: 'Weight of What Was Not Done' aspect on PC (compellable), Companions respect Kodlak's beast-burial"
+        ],
+        "branching": {
+          "cure_kodlak": {
+            "description": "PC gathers witch heads and purges Kodlak's wolf spirit. Kodlak dies at peace. Dragonbreak branch skipped (proceeds to final_journey).",
+            "follow_up_quest": "companions_final_journey"
+          },
+          "skjor_alive_and_curse_embraced": {
+            "description": "If Skjor is alive AND embraced_curse=true, a Dragonbreak event fires before the cure choice is finalized, forking into companions_skjor_dragonbreak.",
+            "follow_up_quest": "companions_skjor_dragonbreak"
+          },
+          "sacrifice_kodlak": {
+            "description": "PC chooses not to cure Kodlak. He dies under the beast blood. The Companions honor him as a warrior, not a freed soul.",
+            "follow_up_quest": "companions_final_journey"
+          }
+        },
+        "notes": "Dragonbreak trigger: check state['companions_state']['skjor_alive'] AND state['companions_state']['embraced_curse']. If both true, inject companions_skjor_dragonbreak before final_journey. The GM should present the cure option as costly (requiring travel to Glenmoril Coven) to give the choice real weight.",
+        "prerequisites": ["companions_inner_circle_rites"],
+        "follow_up_quest": "companions_final_journey"
+      },
+      "companions_skjor_dragonbreak": {
+        "name": "The Dragonbreak of Jorrvaskr",
+        "quest_id": "companions_skjor_dragonbreak",
+        "quest_giver": "Skjor",
+        "description": "This branch only activates if Skjor survived the earlier ambush AND the PC embraced lycanthropy. Skjor, grief-stricken and beast-blooded, performs a desperate ritual to reverse time's flow around Kodlak's death - a minor Dragonbreak anchored to Jorrvaskr. Two timelines momentarily coexist: one where Kodlak is saved, one where he dies. The PC must navigate the fracture and choose which thread to pull closed.",
+        "objectives": [
+          "Reach the Underforge as Skjor begins the Dragonbreak ritual",
+          "Navigate the fractured timeline (two versions of Jorrvaskr exist simultaneously)",
+          "Decide which timeline to stabilize: save Kodlak or let the beast-blood stand",
+          "Seal the Dragonbreak before it propagates beyond Jorrvaskr"
+        ],
+        "rewards": [
+          "Dragonbreak resolved: +2 fate points from the temporal stress",
+          "Skjor's loyalty locked as a permanent ally",
+          "Unique aspect 'Witnessed the Fracture' (1 free invoke on timeline-related Lore checks)"
+        ],
+        "dragonbreak_mechanics": {
+          "trigger_condition": "skjor_alive == true AND embraced_curse == true AND active_quest == companions_kodlak_cure_or_sacrifice",
+          "scope": "local (Jorrvaskr only)",
+          "resolution": "PC makes a Will roll vs Great (+4) to close the fracture; success with style preserves both timeline aspects as boosts"
+        },
+        "notes": "This is the special Skjor-alive branch described in the problem statement. The DragonbreakManager should be used if available. This quest is skipped if Skjor died or if the PC refused lycanthropy. After this quest, the arc always proceeds to companions_final_journey.",
+        "prerequisites": ["companions_kodlak_cure_or_sacrifice"],
+        "follow_up_quest": "companions_final_journey"
+      },
+      "companions_final_journey": {
+        "name": "Dragon at the Barrow",
+        "quest_id": "companions_final_journey",
+        "quest_giver": "Vilkas",
+        "description": "The Companions march on Ysgramor's Tomb to lay Kodlak to rest with honor and put a dragon that has nested in the burial mound to the sword. There, in sight of Ysgramor's statue, the PC completes the arc - and if the cure was completed, Kodlak's spirit briefly appears to grant the Breath of Ysgramor power.",
+        "objectives": [
+          "Gather the Companions and travel to Ysgramor's Tomb",
+          "Fight through the tomb's draugr and the nesting dragon",
+          "Lay Kodlak's ashes or spirit to rest at Ysgramor's statue",
+          "Receive the Breath of Ysgramor advancement if eligible"
+        ],
+        "rewards": [
+          "Harbinger title (PC becomes leader of the Companions)",
+          "Breath of Ysgramor advancement (see data/stunts/companions.json)",
+          "+3 Companions faction standing (maximum)",
+          "Jorrvaskr as a permanent safe house and resource"
+        ],
+        "outcomes": {
+          "dragon_slain_with_honor": "The dragon falls and the Companions cheer. Ysgramor's statue seems to glow warmly. Breath of Ysgramor is unlocked.",
+          "kodlak_spirit_farewell": "If cured, Kodlak's shade appears briefly. His final words create a permanent scene aspect 'Harbinger's Blessing' with 1 free invoke.",
+          "beast_burial": "If not cured, Farkas howls at the barrow entrance. The Companions honor the warrior, not the soul's fate."
+        },
+        "notes": "Final quest in the Companions arc. After this quest, companions_state.active_quest is set to null. The Harbinger title gives the PC narrative authority over Jorrvaskr NPCs. Breath of Ysgramor stunt is found in data/stunts/companions.json.",
+        "prerequisites": ["companions_kodlak_cure_or_sacrifice"],
+        "follow_up_quest": null
+      }
+    }
+  }
+}

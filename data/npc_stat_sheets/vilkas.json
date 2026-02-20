@@ -1,0 +1,90 @@
+{
+  "name": "Vilkas",
+  "id": "npc_stat_vilkas",
+  "type": "Nord Warrior",
+  "category": "Friendly NPC",
+  "location": "Jorrvaskr, Whiterun",
+  "faction": "The Companions",
+  "role": "Inner Circle member, Companions scholar",
+  "aspects": {
+    "high_concept": "Sharpest Mind and Bitterest Blade in Jorrvaskr",
+    "trouble": "The Wolf's Anger Is My Own",
+    "other_aspects": [
+      "Scholar of Ysgramor's Legacy",
+      "Harder on Himself Than Anyone Else",
+      "Loyalty Without Softness"
+    ]
+  },
+  "skills": {
+    "Great": ["Fight"],
+    "Good": ["Lore", "Will"],
+    "Fair": ["Notice", "Provoke", "Athletics"],
+    "Average": ["Physique", "Empathy", "Rapport"]
+  },
+  "stunts": [
+    "Tactical Eye: +2 to Notice when assessing enemy formations or combat terrain.",
+    "Scholar-Warrior: Once per session, Vilkas may use Lore in place of Fight for a single overcome action when recalling a historical combat technique.",
+    "Pack Ferocity: When fighting alongside another Companion NPC, both gain +1 to their next Fight roll."
+  ],
+  "stress": {
+    "physical": [false, false, false],
+    "mental": [false, false, false]
+  },
+  "consequences": {
+    "mild": null,
+    "moderate": null,
+    "severe": null
+  },
+  "refresh": 3,
+  "armor": 2,
+  "notes": "Vilkas is the intellectual conscience of the Companions - bookish for a warrior, sharp-tongued, and deeply loyal beneath his prickly surface. He resents the beast blood philosophically (agreeing with Kodlak) but struggles to contain the wolf's rage that makes him short-tempered. He tests new Companions hard because he believes the guild deserves only the best.",
+  "trust_clock": {
+    "enabled": true,
+    "current": 0,
+    "max": 6,
+    "description": "Vilkas's respect is earned through demonstrated skill, discipline, and intellectual engagement.",
+    "gain_triggers": [
+      "+1: winning a trial with tactical superiority, not just brute force",
+      "+1: showing knowledge of Companions history or Nordic tradition",
+      "+2: helping Kodlak pursue the cure (Vilkas shares the dream)",
+      "+1: accepting Vilkas's criticism without argument and improving"
+    ],
+    "loss_triggers": [
+      "-1: sloppy or reckless combat that embarrasses the guild",
+      "-2: dismissing the importance of Companions history",
+      "-1: challenging Vilkas's authority in front of newer members"
+    ],
+    "milestones": {
+      "2": "Vilkas stops testing and starts advising",
+      "4": "Vilkas shares his own conflict with the beast blood",
+      "6": "Vilkas names PC as his Shield-Sibling - the highest personal compliment he gives"
+    }
+  },
+  "combat_tactics": "Vilkas fights with controlled aggression - he reads openings and waits for the perfect moment. His intelligence makes him unpredictable; enemies expecting a berserk Nord get a calculated swordsman. When his wolf-rage slips through, his attacks become more powerful but less precise.",
+  "scene_triggers": [
+    "Jorrvaskr training yard",
+    "Companions questline",
+    "Proving Honor quest",
+    "Inner Circle meetings",
+    "Kodlak's death scene"
+  ],
+  "act_context": ["Act 1", "Act 2"],
+  "starting_equipment": {
+    "armor": "Companions Armor (Armor:2)",
+    "weapon": "Skyforge Steel Sword (Weapon:2)",
+    "other": ["Ysgramor's history text (personal copy)", "Sharpening stone"]
+  },
+  "relationships": {
+    "Kodlak Whitemane": "Deep reverence; Kodlak is father-figure and moral compass",
+    "Farkas": "Twin brother; protective, occasionally exasperated by Farkas's simplicity",
+    "Skjor": "Mutual respect, ideological friction over beast blood",
+    "Aela the Huntress": "Tense camaraderie; she embraces what he resents",
+    "The Player": "Judges harshly at first; trust is earned not given"
+  },
+  "dialogue_samples": {
+    "greeting": "You're the one asking to join? Show me your sword arm first. Words are cheap in Jorrvaskr.",
+    "testing": "The shield-siblings will tell you I'm hard on new blood. They're right. Kodlak deserves better than mediocrity.",
+    "on_beast_blood": "Power at the cost of your soul is no bargain I'd take willingly. Kodlak is right to seek a cure. I just... struggle to refuse the wolf when it howls.",
+    "after_proving_honor": "You passed. Don't let it go to your head - passing the entry trial just means you're not useless yet."
+  }
+}

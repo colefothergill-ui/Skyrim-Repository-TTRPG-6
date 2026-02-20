@@ -1,0 +1,35 @@
+{
+  "companions_stunts": {
+    "description": "Advancements and special powers available to PCs who complete the Companions questline.",
+    "powers": {
+      "breath_of_ysgramor": {
+        "id": "breath_of_ysgramor",
+        "name": "Breath of Ysgramor",
+        "unlock_condition": "Complete companions_final_journey quest",
+        "unlock_flavor": "As Kodlak's spirit ascends toward Sovngarde, a warmth passes through you - not the wild heat of the beast, but something older and cleaner. Ysgramor's ancestors acknowledge the deeds done in honor.",
+        "type": "session_power",
+        "cost": "Once per session",
+        "effect": "Invoke the warrior-spirit of Ysgramor's legacy. Choose one: (a) clear all physical stress and one mild consequence, drawing on the resolve of generations of Companions; or (b) add +3 to a single Fight roll as the Harbinger's authority fills your arm.",
+        "scaling": {
+          "base": "Once per session, choose option (a) or (b).",
+          "upgraded": "At a major milestone after completing the arc, unlock both options per session."
+        },
+        "aspect_created": "Harbinger's Legacy",
+        "aspect_notes": "Once per session when using this power, the PC may also create the 'Harbinger's Legacy' scene aspect with 1 free invoke representing the Companions' morale rising at their leader's example.",
+        "prerequisites": ["companions_proving_honor", "companions_inner_circle_rites", "companions_kodlak_cure_or_sacrifice", "companions_final_journey"],
+        "notes": "This power is only fully unlocked if Kodlak was cured before death (companions_state.kodlak_cured == true). If Kodlak was not cured, the power still unlocks but only option (b) is available - the beast-taint in the legacy means the healing aspect of option (a) is unavailable."
+      },
+      "werewolf_form": {
+        "id": "werewolf_form",
+        "name": "Werewolf Form",
+        "unlock_condition": "Complete companions_inner_circle_rites with embraced_curse == true",
+        "unlock_flavor": "The blood burns through you and the world becomes sharper - smells like iron, sounds like prey. You are wolf now.",
+        "type": "session_power",
+        "cost": "Once per session; lasts one scene",
+        "effect": "Transform into werewolf form for one scene. While transformed: Fight and Physique are treated as Great (+4) regardless of base skill; you ignore your first mild consequence each scene; you cannot use social skills (Rapport, Empathy, Deceive) as the beast overrides social reasoning. At end of scene, make a Will roll vs Fair (+2) or take a mild mental consequence 'Shame of the Wolf'.",
+        "prerequisites": ["companions_inner_circle_rites"],
+        "notes": "Only available if embraced_curse == true. Kodlak views this power with sadness; using it in his presence costs 1 trust with Kodlak. Skjor approves (+1 trust with Skjor when used effectively)."
+      }
+    }
+  }
+}
