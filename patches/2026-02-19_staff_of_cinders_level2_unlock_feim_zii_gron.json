@@ -1,5 +1,6 @@
 {
-  "patch_type": "artifact_unlock",
+  "patch_id": "2026-02-19_staff_of_cinders_level2_unlock_feim_zii_gron",
+  "type": "artifact_unlock",
   "date": "2026-02-19",
   "artifact": "Staff of Cinders",
   "event": "Staff Awakening reached 6/6 on Jyrik Gauldurson finisher in Saarthal Eye Chamber",

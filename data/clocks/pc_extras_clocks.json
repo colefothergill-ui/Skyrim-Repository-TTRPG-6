@@ -22,7 +22,7 @@
           "Staff is stolen/confiscated (-2)",
           "Public scandal damages the staff's legend (-1)"
         ],
-        "notes": "[2026-02-15] Ticked to 3/6: Eye-channeling via Staff of Cinders counted as mythic protective use.\n[2026-02-15] Ticked to 4/6: Legendary Eye-siphon via Staff conduit (SWS success).\n[2026-02-19] Ticked to 6/6 (RESOLVED): Jyrik Gauldurson finisher in Saarthal Eye Chamber. Staff Level 2 unlocked. Rune-reveal shout: Become Ethereal (Feim Zii Gron), mastery 0/8."
+        "notes": "[2026-02-15] Ticked to 3/6: Eye-channeling via Staff of Cinders counted as mythic protective use.\n[2026-02-15] Ticked to 4/6: Legendary Eye-siphon via Staff conduit (SWS success).\n[2026-02-19] Ticked to 6/6 (RESOLVED): Jyrik Gauldurson finisher in Saarthal Eye Chamber. Counts as:\n  • Defeat a named foe using fire magic while invoking the staff's aspect (+1)\n  • Survive a mythic consequence caused by your own power (+1)\nStaff Level 2 unlocked. Rune-reveal shout: Become Ethereal (Feim Zii Gron), mastery 0/8."
       },
       "pc_oskern_fire_breath_mastery": {
         "name": "Shout Mastery — Fire Breath (Yol Toor Shul)",

@@ -329,16 +329,16 @@
         },
         {
           "name": "Become Ethereal (Feim Zii Gron)",
-          "words": ["Feim", "Zii", "Gron"],
-          "effect": "Step partially into the ethereal plane, becoming immune to damage but unable to attack.",
+          "words": ["Feim (Fade)", "Zii (Spirit)", "Gron (Bind)"],
+          "effect": "Become incorporeal and immune to harm temporarily",
           "mechanics": {
-            "action_type": "Defend (Will)",
-            "one_word": "Become ethereal for 1 exchange; immune to physical/magical damage; cannot attack or cast offensive spells.",
-            "two_words": "Ethereal for 2 exchanges; can move freely through zones without impediment.",
-            "three_words": "Ethereal for 3 exchanges; on return, create 'Phased Return' boost (+2 to next action)."
+            "action_type": "Overcome/Defend",
+            "one_word": "Gain +3 to defend against one attack, take no consequence if you would be taken out.",
+            "two_words": "Become incorporeal for one exchange: immune to physical damage, cannot attack, can move through obstacles.",
+            "three_words": "Become incorporeal for two exchanges: immune to all damage, cannot attack, can move freely, survive any fall."
           },
-          "mastery_benefits": "Mastered: May make a single defensive action (Create Advantage) while ethereal without breaking the effect.",
-          "cooldown": "Once per scene (mastered) or costs 1 Fate Point (unmastered).",
+          "mastery_benefits": "Mastered version: Can attack during final exchange of ethereal state at -2 penalty.",
+          "cooldown": "Twice per scene (mastered) or costs 1 Fate Point (unmastered).",
           "mastery_clock": { "current": 0, "max": 8 },
           "source": "Staff of Cinders rune-reveal (Level 2 unlock)",
           "training_locations": ["Saarthal Eye Chamber — rune-reveal on Jyrik Gauldurson finisher (2026-02-19)"]
