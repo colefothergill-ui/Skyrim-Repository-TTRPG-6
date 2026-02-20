@@ -1,0 +1,87 @@
+{
+  "whiterun_faction_tie_in": {
+    "type": "branching_prebattle",
+    "design_only": true,
+    "convergence_flag": "civil_war_state.allegiance",
+    "routes_to": "battle_of_whiterun",
+    "faction_routes": {
+      "college": {
+        "precondition_flag": "college_intro_complete",
+        "intro_quest": "college_first_lessons",
+        "scene_name": "The Arcane Observer",
+        "location": "Arcanaeum or Hall of the Elements",
+        "hook": "Urag or Tolfdir sends you to Whiterun to examine reports of magical artillery in the war.",
+        "scene_aspects": [
+          "Magic as Weapon",
+          "The Eye Is Watching",
+          "Ancano's Interest"
+        ],
+        "choice_convergence": {
+          "aid_balgruuf": {
+            "description": "Aid Balgruuf in stabilizing the city",
+            "result": "imperial"
+          },
+          "protect_nord_traditions": {
+            "description": "Protect Nord traditions from Imperial arcane suppression",
+            "result": "stormcloak"
+          }
+        }
+      },
+      "companions": {
+        "precondition_flag": "companions_intro_complete",
+        "intro_quest": "companions_take_up_arms",
+        "scene_name": "Honor Before Banner",
+        "location": "Jorrvaskr",
+        "hook": "Kodlak is torn. Jorrvaskr is divided. You are sent to protect civilians or defend Nord sovereignty.",
+        "choice_convergence": {
+          "defend_as_balgruufs_shield": {
+            "description": "Defend Whiterun as Balgruuf's shield",
+            "result": "imperial"
+          },
+          "stand_with_nord_jarls": {
+            "description": "Stand with Nord jarls against the Empire",
+            "result": "stormcloak"
+          }
+        }
+      },
+      "dark_brotherhood": {
+        "precondition_flag": "db_intro_complete",
+        "intro_quest": "db_with_friends_like_these",
+        "scene_name": "War Is Good for Business",
+        "location": "Whiterun",
+        "hook": "Astrid gives you a contract tied to Whiterun instability.",
+        "choice_convergence": {
+          "kill_stormcloak_supply_officer": {
+            "description": "Kill a Stormcloak supply officer",
+            "result": "imperial"
+          },
+          "kill_imperial_war_asset": {
+            "description": "Kill an Imperial war asset",
+            "result": "stormcloak"
+          },
+          "refuse_contract": {
+            "description": "Refuse the contract, leaving Whiterun's Imperial-aligned stability intact",
+            "result": "imperial"
+          }
+        }
+      },
+      "thieves_guild": {
+        "precondition_flag": "tg_intro_complete",
+        "intro_quest": "tg_a_chance_arrangement",
+        "scene_name": "Chaos Means Opportunity",
+        "location": "Whiterun",
+        "hook": "Brynjolf: 'War's bad for trade. Unless you know where to stand.'",
+        "choice_convergence": {
+          "secure_whiterun_treasury": {
+            "description": "Secure Whiterun treasury — protect the economy",
+            "result": "imperial"
+          },
+          "sabotage_supply_routes": {
+            "description": "Sabotage Imperial supply routes",
+            "result": "stormcloak"
+          }
+        }
+      }
+    }
+  }
+}

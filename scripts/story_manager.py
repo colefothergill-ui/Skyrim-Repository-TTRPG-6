@@ -1729,80 +1729,121 @@ Schemes Discovered: {len(state['thalmor_arc']['thalmor_schemes_discovered'])}
         
         return self.dragonbreak_manager.get_timeline_state()
 
-    def start_battle_of_whiterun(self, faction):
+    def check_civil_war_eligibility(self, state, faction=None):
         """
-        Initialize the Battle of Whiterun staged flow in campaign state.
+        Determine whether the party is eligible to begin the Battle of Whiterun.
+
+        A party is eligible only after completing their faction's intro quest:
+        - Imperial / Stormcloak: their respective intro flag must be set
+        - Neutral: must have completed the neutral_war_catalyst quest OR their
+          neutral subfaction's intro quest
+
+        Args:
+            state: The campaign_state dict
+            faction: Optional target faction ('imperial'/'stormcloak') to use
+                     instead of the current player_alliance in state.  Pass this
+                     when a neutral party has just chosen a side and state hasn't
+                     been updated yet.
+
+        Returns:
+            bool: True if the civil war battle may proceed
+        """
+        flags = state.get("faction_flags", {})
+        civil_war = state.get("civil_war_state", {})
+        current_alliance = civil_war.get("player_alliance", "neutral")
+
+        # The `faction` parameter lets callers check eligibility against a target
+        # faction that differs from player_alliance (e.g., the battle has just been
+        # triggered and state hasn't been updated yet).  However, neutral players
+        # must always be evaluated on the neutral path because they completed a
+        # neutral-faction intro, not an imperial/stormcloak one.
+        if faction and current_alliance != "neutral":
+            alliance = faction
+        else:
+            alliance = current_alliance
+
+        if alliance == "imperial":
+            return flags.get("imperial_intro_complete", False)
+        elif alliance == "stormcloak":
+            return flags.get("stormcloak_intro_complete", False)
+        else:  # neutral
+            if state.get("neutral_war_catalyst", False) or state.get("neutral_war_catalyst_complete", False):
+                return True
+            neutral_subfaction = civil_war.get("neutral_subfaction")
+            if neutral_subfaction:
+                _subfaction_flag_map = {
+                    "companions": "companions_intro_complete",
+                    "college": "college_intro_complete",
+                    "thieves_guild": "tg_intro_complete",
+                    "dark_brotherhood": "db_intro_complete",
+                }
+                intro_flag = _subfaction_flag_map.get(neutral_subfaction, f"{neutral_subfaction}_intro_complete")
+                return flags.get(intro_flag, False)
+            return False
+
+    def mark_faction_intro_complete(self, subfaction, state=None):
+        """
+        Record that a faction's intro quest has been completed, unlocking civil
+        war eligibility.  Saves the updated state to disk.
+
+        Args:
+            subfaction: One of 'imperial', 'stormcloak', 'companions', 'college',
+                        'thieves_guild', 'dark_brotherhood'
+            state: Optional campaign_state dict; loads from disk if not provided
+
+        Returns:
+            Updated campaign_state dict
+        """
+        if state is None:
+            state = self.load_campaign_state() or {}
+
+        flags = state.setdefault("faction_flags", {})
+        flag_map = {
+            "imperial": "imperial_intro_complete",
+            "stormcloak": "stormcloak_intro_complete",
+            "companions": "companions_intro_complete",
+            "college": "college_intro_complete",
+            "thieves_guild": "tg_intro_complete",
+            "dark_brotherhood": "db_intro_complete",
+        }
+        flag_key = flag_map.get(subfaction)
+        if flag_key is None:
+            raise ValueError(f"Unknown subfaction '{subfaction}'. Valid values: {', '.join(flag_map)}")
+        flags[flag_key] = True
+
+        self.save_campaign_state(state)
+        return state
+
+    def start_battle_of_whiterun(self, faction, state=None):
+        """
+        Initiate the Battle of Whiterun for the given faction.
+
+        Raises:
+            Exception: If the party has not yet completed their faction intro quest.
 
         Args:
             faction: 'imperial' or 'stormcloak'
+            state: Optional campaign_state dict; loads from disk if not provided
 
         Returns:
-            True on success, False otherwise.
+            Updated campaign_state dict
         """
-        if faction not in ('imperial', 'stormcloak'):
-            print(f"Error: faction must be 'imperial' or 'stormcloak', got: {faction!r}")
-            return False
+        if state is None:
+            state = self.load_campaign_state() or {}
 
-        state = self.load_campaign_state()
-        if not state:
-            return False
+        if not self.check_civil_war_eligibility(state, faction=faction):
+            raise Exception("Civil War locked: complete your faction intro first.")
 
-        cw = state.setdefault('civil_war_state', {})
-        cw['battle_of_whiterun_status'] = 'active'
-        cw['battle_of_whiterun_faction'] = faction
-        cw.setdefault('battle_of_whiterun_stage', 0)
-        cw.setdefault('battle_of_whiterun_last_stage_completed', 0)
-        cw.setdefault('battle_of_whiterun_companion', None)
+        civil_war = state.setdefault("civil_war_state", {})
+        # Set both fields: 'allegiance' for new code, 'player_alliance' for legacy consumers
+        civil_war["allegiance"] = faction
+        civil_war["player_alliance"] = faction
+        civil_war["battle_of_whiterun_status"] = "active"
+        civil_war["civil_war_eligible"] = True
+        civil_war.pop("civil_war_locked_reason", None)
 
         self.save_campaign_state(state)
-        print(f"Battle of Whiterun started - Faction: {faction}")
-        return True
-
-    def complete_battle_of_whiterun_stage(self):
-        """
-        Advance the Battle of Whiterun to the next stage.
-
-        Increments battle_of_whiterun_stage and updates
-        battle_of_whiterun_last_stage_completed.  When all 5 stages are done
-        the battle status is set to 'completed' and the appropriate next quest
-        is unlocked.
-
-        Returns:
-            The new stage number, or None on failure.
-        """
-        state = self.load_campaign_state()
-        if not state:
-            return None
-
-        cw = state.get('civil_war_state', {})
-        current_stage = cw.get('battle_of_whiterun_stage', 0)
-
-        if cw.get('battle_of_whiterun_status') != 'active':
-            print("Battle of Whiterun is not currently active.")
-            return None
-
-        new_stage = current_stage + 1
-        cw['battle_of_whiterun_stage'] = new_stage
-        cw['battle_of_whiterun_last_stage_completed'] = current_stage
-
-        print(f"Battle of Whiterun stage advanced: {current_stage} -> {new_stage}/5")
-
-        if new_stage > 5:
-            cw['battle_of_whiterun_status'] = 'completed'
-            faction = cw.get('battle_of_whiterun_faction', 'imperial')
-            next_quest_map = {
-                'imperial': 'reunification_of_skyrim_falkreath',
-                'stormcloak': 'liberation_of_skyrim_falkreath',
-            }
-            next_quest_id = next_quest_map.get(faction)
-            print(f"Battle of Whiterun COMPLETED (faction: {faction})")
-            if next_quest_id:
-                print(f"Next quest unlocked: {next_quest_id}")
-                # Record in state for downstream consumers
-                cw['battle_of_whiterun_next_quest'] = next_quest_id
-
-        self.save_campaign_state(state)
-        return new_stage
+        return state
 
 
 def main():
