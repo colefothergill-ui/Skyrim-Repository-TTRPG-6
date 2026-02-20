@@ -303,7 +303,7 @@ def test_civil_war_eligibility_gating():
 
             # --- Imperial: not eligible without flag ---
             state = {"civil_war_state": {"player_alliance": "imperial"}, "faction_flags": {}}
-            assert not mgr.check_civil_war_eligibility(state), "Imperial should be ineligible without flag"
+            assert not mgr.check_civil_war_eligibility(state), "Imperial should be ineligible without imperial_intro_complete flag"
 
             state["faction_flags"]["imperial_intro_complete"] = True
             assert mgr.check_civil_war_eligibility(state), "Imperial should be eligible with flag"

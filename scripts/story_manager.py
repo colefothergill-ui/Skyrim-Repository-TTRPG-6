@@ -1783,7 +1783,9 @@ Schemes Discovered: {len(state['thalmor_arc']['thalmor_schemes_discovered'])}
             "thieves_guild": "tg_intro_complete",
             "dark_brotherhood": "db_intro_complete",
         }
-        flag_key = flag_map.get(subfaction, f"{subfaction}_intro_complete")
+        flag_key = flag_map.get(subfaction)
+        if flag_key is None:
+            raise ValueError(f"Unknown subfaction '{subfaction}'. Valid values: {', '.join(flag_map)}")
         flags[flag_key] = True
 
         self.save_campaign_state(state)
