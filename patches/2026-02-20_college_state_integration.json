@@ -1,0 +1,32 @@
+{
+  "patch_id": "2026-02-20_college_state_integration",
+  "date": "2026-02-20",
+  "type": "state_migration",
+  "source": "College of Winterhold engine integration (issue requirement)",
+  "summary": "Append-only patch: adds college_state block to campaign_state.json. Does not overwrite existing data. Initialises tracking fields for active quest, completed quests, quest progress, and narrative pressure clocks (eye_instability, ancano_suspicion, internal_politics).",
+  "changes": [
+    {
+      "operation": "setdefault",
+      "path": "state/campaign_state.json",
+      "key": "college_state",
+      "value": {
+        "active_quest": null,
+        "completed_quests": [],
+        "quest_progress": {},
+        "eye_instability": 0,
+        "ancano_suspicion": 0,
+        "internal_politics": 0
+      },
+      "notes": "Uses setdefault semantics - field is only written if absent. Existing progress is preserved."
+    }
+  ],
+  "affected_files": [
+    "state/campaign_state.json",
+    "scripts/story_manager.py",
+    "scripts/session_zero.py",
+    "scripts/triggers/winterhold_triggers.py",
+    "scripts/triggers/whiterun_triggers.py"
+  ],
+  "rollback": "Remove the college_state key from state/campaign_state.json and revert story_manager.py, session_zero.py, winterhold_triggers.py, and whiterun_triggers.py to their previous versions. Original quest definitions in data/quests/college_of_winterhold_quests.json are unchanged.",
+  "gm_notes": "After applying this patch, the College of Winterhold questline is engine-driven: load_college_quests() reads the quest file, start_college_questline() activates the first quest, complete_college_quest() chains quests in order, and winterhold_triggers emit narrative hooks at the correct locations. Session-zero characters who choose College as their starting faction automatically receive college_first_lessons as their active quest."
+}

@@ -27,6 +27,8 @@ def whiterun_location_triggers(loc, campaign_state):
     # Normalize location for case-insensitive matching
     loc_lower = str(loc).lower()
 
+    flags = campaign_state.setdefault("scene_flags", {})
+
     # ------------------------------------------------------------------
     # Siege state detection
     # ------------------------------------------------------------------
@@ -154,5 +156,37 @@ def whiterun_location_triggers(loc, campaign_state):
                 'Lydia smiles fondly as she looks around. '
                 '"It\'s good to be back in Whiterun, my Thane," she says softly.'
             )
+
+    # ------------------------------------------------------------------
+    # College of Winterhold tie-in: Farengar research mission
+    # ------------------------------------------------------------------
+    starting_faction = campaign_state.get("starting_faction", "")
+    college_state = campaign_state.get("college_state", {}) or {}
+    active_college_quest = college_state.get("active_quest")
+    farengar_mission_done = flags.get("farengar_college_mission_complete", False)
+
+    if (
+        starting_faction == "college_of_winterhold"
+        and not farengar_mission_done
+        and "whiterun" in loc_lower
+    ):
+        if not flags.get("college_farengar_tie_in_triggered"):
+            events.append(
+                "Tolfdir's instructions echo in your mind: seek out Farengar Secret-Fire "
+                "in Dragonsreach and share the College's dragon-research notes. The Eye of "
+                "Magnus and the dragons may be connected - the College needs to know what "
+                "Farengar has discovered."
+            )
+            flags["college_farengar_tie_in_triggered"] = True
+
+        if siege_active and not flags.get("college_allegiance_choice_prompted"):
+            events.append(
+                "[COLLEGE TIE-IN] The battle erupts before Farengar's briefing is complete. "
+                "Tolfdir's letter sits unread on his desk. You must choose: stand with the "
+                "Imperial defenders (Hadvar) or the Stormcloak attackers (Ralof). "
+                "Your choice will set your civil-war alliance and allow the Farengar mission "
+                "to continue after the battle."
+            )
+            flags["college_allegiance_choice_prompted"] = True
 
     return events

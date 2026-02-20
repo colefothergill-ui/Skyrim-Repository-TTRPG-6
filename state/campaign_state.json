@@ -297,5 +297,13 @@
       }
     }
   },
-  "relationship_inference": {}
+  "relationship_inference": {},
+  "college_state": {
+    "active_quest": null,
+    "completed_quests": [],
+    "quest_progress": {},
+    "eye_instability": 0,
+    "ancano_suspicion": 0,
+    "internal_politics": 0
+  }
 }

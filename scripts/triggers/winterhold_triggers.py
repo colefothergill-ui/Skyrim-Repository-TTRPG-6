@@ -75,6 +75,9 @@ def winterhold_location_triggers(loc: str, campaign_state: dict) -> list[str]:
 
     has_staff = _has_staff_of_cinders(player)
 
+    college_state = campaign_state.get("college_state", {}) or {}
+    active_college_quest = college_state.get("active_quest")
+
     # --- WINTERHOLD TOWN ----------------------------------------------------
     if key in {"winterhold", "winterhold_town", "winterhold_ruins"}:
         if not flags.get("winterhold_first_arrival"):
@@ -224,5 +227,47 @@ def winterhold_location_triggers(loc: str, campaign_state: dict) -> list[str]:
                 "Tolfdir clears his throat like he's about to apologize to the past. 'We… may have found something. Something *significant.* Stay close.'"
             )
             flags["saarthal_eye_of_magnus_hook"] = True
+
+    # --- COLLEGE QUEST PROGRESSION HOOKS ------------------------------------
+    # Location-keyed completion triggers.  We set a flag and emit a narrative
+    # beat; the GM/engine calls complete_college_quest() to advance state.
+    _QUEST_LOCATION_HOOKS = {
+        "college_first_lessons": {
+            "locations": {"college_hall_of_elements", "hall_of_elements", "college_courtyard", "winterhold_college"},
+            "flag": "college_first_lessons_completion_hook",
+            "bark": "Tolfdir nods with quiet satisfaction as the lesson concludes. 'You've demonstrated more than I expected. I believe you're ready for Saarthal.'",
+        },
+        "college_under_saarthal": {
+            "locations": {"saarthal_excavation", "saarthal", "saarthal_eye_chamber"},
+            "flag": "college_under_saarthal_completion_hook",
+            "bark": "The Eye pulses once - slow, enormous, aware. Tolfdir breathes: 'We need to report this to Savos Aren. Now.'",
+        },
+        "college_hitting_the_books": {
+            "locations": {"college_arcanaeum", "arcanaeum", "college_library"},
+            "flag": "college_hitting_the_books_completion_hook",
+            "bark": "Urag sets the recovered texts on the table with ceremonious weight. 'The Eye of Magnus. Here it is - in writing, centuries old. This changes everything.'",
+        },
+        "college_revealing_the_unseen": {
+            "locations": {"college_hall_of_elements", "hall_of_elements", "hall_of_elements_eye", "winterhold_college"},
+            "flag": "college_revealing_the_unseen_completion_hook",
+            "bark": "The Eye's light shifts - contained, for now. Mirabelle exhales. 'The Staff of Magnus is the only thing that can control it. Find it. Quickly.'",
+        },
+        "college_staff_of_magnus": {
+            "locations": {"labyrinthian"},
+            "flag": "college_staff_of_magnus_completion_hook",
+            "bark": "The Staff thrums in your hands, alive with purpose. Labyrinthian's silence feels like held breath. The College is waiting.",
+        },
+        "college_eye_of_magnus": {
+            "locations": {"college_hall_of_elements", "hall_of_elements", "hall_of_elements_final"},
+            "flag": "college_eye_of_magnus_completion_hook",
+            "bark": "The Eye closes. Ancano falls. The Hall of Elements is very, very quiet. Whatever just happened - it isn't over.",
+        },
+    }
+
+    if active_college_quest and active_college_quest in _QUEST_LOCATION_HOOKS:
+        hook = _QUEST_LOCATION_HOOKS[active_college_quest]
+        if key in hook["locations"] and not flags.get(hook["flag"]):
+            events.append(hook["bark"])
+            flags[hook["flag"]] = True
 
     return events
