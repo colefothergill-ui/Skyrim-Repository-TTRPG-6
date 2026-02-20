@@ -47,12 +47,34 @@
         "act": "Act I",
         "description": "The civil war erupts in Whiterun as either the Imperials defend or the Stormcloaks attack. The party must choose sides in this pivotal battle that will shape Skyrim's future.",
         "objectives": [
-          "Witness escalating tensions in Whiterun",
-          "Choose to join Imperial defense, Stormcloak assault, or attempt neutrality",
-          "Participate in the battle for Whiterun's fate",
-          "Deal with the aftermath and new Jarl if applicable",
-          "Notice suspicious Thalmor presence during battle"
+          "Stage 0: Attend the pre-battle briefing with your faction's commanders",
+          "Stage 1: Repel or breach the first line of defenders (Dragonsreach infiltrators or outer barricades)",
+          "Stage 2: Fight through the district approach and accomplish key side tasks",
+          "Stage 3: Resolve the Hadvar/Ralof confrontation at the Gildergreen",
+          "Stage 4: Stabilize the inner district and route remaining resistance",
+          "Stage 5: Achieve the climax objective (gatehouse break or Dragonsreach climax)"
         ],
+        "battle_overview": {
+          "stages_total": 5,
+          "faction_versions": ["imperial", "stormcloak"],
+          "key_set_pieces": [
+            "Dragonsreach infiltration (Imperial) / outer barricades breach (Stormcloak)",
+            "District approach with civilian rescue and temple defense tasks",
+            "Hadvar vs Ralof confrontation at the Gildergreen",
+            "Inner district sweep with loot hooks and sabotage prevention",
+            "Climax: gatehouse break (Imperial) or Dragonsreach surrender/combat (Stormcloak)"
+          ],
+          "dragonbreak_triggers": [
+            "Galmar Stone-Fist killed",
+            "Vignar Gray-Mane killed",
+            "Jarl Balgruuf killed",
+            "Irileth killed",
+            "Hadvar or Ralof killed (if major-canon ally)"
+          ],
+          "rivalry_clock": "hadvar_ralof_rivalry (6 segments)",
+          "stage_clock": "battle_of_whiterun_stages (5 segments)",
+          "see_also": "civil_war_quests.json battle_of_whiterun for full stage data"
+        },
         "branching_choice": {
           "choice": "Support Imperials, Support Stormcloaks, or Remain Neutral",
           "consequences": {

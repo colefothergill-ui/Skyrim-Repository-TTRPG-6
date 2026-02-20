@@ -1,0 +1,60 @@
+{
+  "name": "Commander Caius",
+  "id": "npc_stat_commander_caius",
+  "type": "Imperial Commander",
+  "category": "Friendly NPC",
+  "location": "Dragonsreach, Whiterun (Battle of Whiterun)",
+  "faction": "Imperial Legion",
+  "role": "Field Commander assigned to Dragonsreach interior defense",
+  "aspects": {
+    "high_concept": "Quick-Thinking Imperial Commander Under Fire",
+    "trouble": "I Act Before I Verify - Sometimes That's the Right Call",
+    "other_aspects": [
+      "Loyal to the Legion, Pragmatic in Practice",
+      "First In, Last Out"
+    ]
+  },
+  "skills": {
+    "Good": ["Fight", "Command"],
+    "Fair": ["Athletics", "Notice", "Will"],
+    "Average": ["Tactics", "Empathy"]
+  },
+  "stunts": [
+    "First Responder: +2 to Command in the first exchange of any combat; allies gain +1 to their first action.",
+    "Rapid Assessment: Can assess an enemy's stress track (visible to GM) once per scene with a successful Notice vs Average."
+  ],
+  "stress": {
+    "physical": [false, false, false],
+    "mental": [false, false]
+  },
+  "consequences": {
+    "mild": null,
+    "moderate": null,
+    "severe": null
+  },
+  "refresh": 2,
+  "fate_points": 2,
+  "equipment": {
+    "weapon": "Imperial sword (Weapon:2)",
+    "armor": "Imperial light armor (Armor:1)",
+    "special": "Dragonsreach access token"
+  },
+  "personality_notes": {
+    "speaking_style": "Rapid, declarative sentences. Reports facts first, opinions second. Trusts his instincts.",
+    "quirks": [
+      "Always enters rooms looking for the tallest threat first",
+      "Respects Legate Cipius even when they disagree"
+    ]
+  },
+  "relationships": {
+    "Legate Cipius": "Professional respect; they complement each other well",
+    "Legate Rikke": "Direct superior; follows her orders precisely",
+    "Irileth": "Mutual professional respect"
+  },
+  "combat_tactics": "Caius fights aggressively in close quarters but always maintains awareness of escape routes. Will sacrifice position to save allies.",
+  "scene_triggers": [
+    "Battle of Whiterun Stage 1 (Imperial defense - Dragonsreach breach)",
+    "War Room Briefing Stage 0 (as tactical reference)"
+  ],
+  "act_context": ["Act 1"]
+}

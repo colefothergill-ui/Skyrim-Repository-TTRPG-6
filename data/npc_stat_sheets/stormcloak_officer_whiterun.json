@@ -1,0 +1,53 @@
+{
+  "name": "Stormcloak Officer (Whiterun)",
+  "id": "npc_stat_stormcloak_officer_whiterun",
+  "type": "Stormcloak Officer",
+  "category": "Enemy",
+  "location": "Dragonsreach infiltration, Whiterun",
+  "faction": "Stormcloaks",
+  "role": "Officer leading the Stormcloak infiltration force inside Dragonsreach",
+  "aspects": {
+    "high_concept": "Stormcloak Strike Leader Inside the Lion's Den",
+    "trouble": "The Plan Didn't Account for This Much Resistance",
+    "other_aspects": [
+      "Greymane Contact - Knows the Postern",
+      "For Ulfric, No Hesitation"
+    ]
+  },
+  "skills": {
+    "Great": ["Fight"],
+    "Good": ["Athletics", "Will"],
+    "Fair": ["Provoke", "Notice"],
+    "Average": ["Stealth", "Physique"]
+  },
+  "stunts": [
+    "Infiltrator's Edge: +2 to Fight in the first exchange of combat when the enemy is surprised or in difficult terrain.",
+    "Rally Cry: Once per scene, grant +1 to all Stormcloak allies in the zone for one exchange."
+  ],
+  "stress": {
+    "physical": [false, false, false, true],
+    "mental": [false, false, false]
+  },
+  "consequences": {
+    "mild": null,
+    "moderate": null,
+    "severe": null
+  },
+  "refresh": 2,
+  "fate_points": 2,
+  "equipment": {
+    "weapon": "Stormcloak battle-axe (Weapon:2)",
+    "armor": "Stormcloak Officer armor (Armor:2)",
+    "special": "Postern gate key, Greymane correspondence (if captured)"
+  },
+  "combat_tactics": "Fights aggressively while attempting to hold the Dragonsreach chokepoint. Will retreat across the bridge if stress is too high. Capture reveals the Greymane Contact intelligence.",
+  "capture_vs_kill": {
+    "capture": "Reveals 'Greymane Contact' aspect (1 free invoke) and reduces Stage 2 Imperial defense opposition by 1.",
+    "kill": "No intel; Stormcloaks gain +1 momentum in Stage 2.",
+    "forced_retreat": "Officer escapes; ticks Hadvar/Ralof rivalry clock +1."
+  },
+  "scene_triggers": [
+    "Battle of Whiterun Stage 1 (Imperial defense - Dragonsreach breach)"
+  ],
+  "act_context": ["Act 1"]
+}

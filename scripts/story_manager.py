@@ -203,6 +203,22 @@ class StoryManager:
         self.save_campaign_state(state)
         return True
     
+    def _iter_quest_records(self, quests_data):
+        """
+        Helper to iterate quest records regardless of whether they are stored
+        as a list or a dict (dict.values() covers the new format).
+
+        Args:
+            quests_data: The value of main_questline['quests'] (list or dict).
+
+        Yields:
+            Individual quest record dicts.
+        """
+        if isinstance(quests_data, dict):
+            yield from quests_data.values()
+        elif isinstance(quests_data, list):
+            yield from quests_data
+
     def get_available_quests(self):
         """
         Get list of currently available quests based on state
@@ -216,8 +232,10 @@ class StoryManager:
         available = []
         
         # Check main questline
-        for quest in main_quests_data['main_questline']['quests']:
-            if quest['status'] == 'available':
+        for quest in self._iter_quest_records(
+            main_quests_data['main_questline']['quests']
+        ):
+            if quest.get('status') == 'available':
                 available.append({
                     'type': 'main',
                     'quest': quest
@@ -237,17 +255,19 @@ class StoryManager:
         if not main_quests_data:
             return False
         
+        quests_raw = main_quests_data['main_questline']['quests']
+        
         # Find and update quest
-        for quest in main_quests_data['main_questline']['quests']:
-            if quest['id'] == quest_id:
-                old_status = quest['status']
+        for quest in self._iter_quest_records(quests_raw):
+            if quest.get('id') == quest_id:
+                old_status = quest.get('status')
                 quest['status'] = new_status
                 
                 # If completing a quest, unlock next quest
                 if new_status == 'completed' and 'next_quest' in quest:
                     next_quest_id = quest['next_quest']
-                    for next_quest in main_quests_data['main_questline']['quests']:
-                        if next_quest['id'] == next_quest_id:
+                    for next_quest in self._iter_quest_records(quests_raw):
+                        if next_quest.get('id') == next_quest_id:
                             next_quest['status'] = 'available'
                             print(f"Unlocked quest: {next_quest['name']}")
                 
@@ -1316,8 +1336,11 @@ Schemes Discovered: {len(state['thalmor_arc']['thalmor_schemes_discovered'])}
         if not main_quests_data:
             return []
         
-        quests = main_quests_data.get('main_questline', {}).get('quests', [])
-        act_quests = [q for q in quests if q.get('act') == act]
+        quests_raw = main_quests_data.get('main_questline', {}).get('quests', [])
+        act_quests = [
+            q for q in self._iter_quest_records(quests_raw)
+            if q.get('act') == act
+        ]
         
         return act_quests
     
@@ -1511,8 +1534,8 @@ Schemes Discovered: {len(state['thalmor_arc']['thalmor_schemes_discovered'])}
         if not main_quests_data:
             return None
         
-        quests = main_quests_data.get('main_questline', {}).get('quests', [])
-        for quest in quests:
+        quests_raw = main_quests_data.get('main_questline', {}).get('quests', [])
+        for quest in self._iter_quest_records(quests_raw):
             if quest.get('id') == quest_id:
                 return {
                     'quest_name': quest.get('name'),
