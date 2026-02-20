@@ -1,0 +1,129 @@
+{
+  "name": "Torhild Wolf-Bane",
+  "id": "npc_stat_torhild_wolf_bane",
+  "type": "Nord Warrior",
+  "category": "Hostile NPC",
+  "location": "Frostmere Vigil — Barracks and Armory (Zone 2)",
+  "faction": "Silver Hand",
+  "role": "Barracks commander and field lieutenant; primary enforcer for Silver Hand raids",
+  "aspects": {
+    "high_concept": "Rejected Companion Turned Silver Hand's Sharpest Blade",
+    "trouble": "Every Fight Is the One Where Farkas Said No",
+    "other_aspects": [
+      "Hyper-Aggressive — Subtlety is for People Who Weren't Good Enough",
+      "Trained by a Companion, Abandoned by One",
+      "Could Have Been Something Else"
+    ]
+  },
+  "skills": {
+    "Great": ["Fight", "Athletics"],
+    "Good": ["Physique", "Provoke", "Notice"],
+    "Fair": ["Will", "Intimidate", "Stealth"],
+    "Average": ["Lore", "Investigate"]
+  },
+  "stunts": [
+    "Relentless Assault: When Torhild succeeds on a Fight attack, she can choose to push the target one zone instead of dealing a boost.",
+    "Wolf-Bane Strike: +2 to Fight attacks against Beastblooded targets. On a Success with Style, she also creates the aspect 'Cornered Beast' on the target with one free invoke.",
+    "Companion-Trained Footwork: +2 to Athletics when defending against melee attacks. She learned from the best — even if the best rejected her.",
+    "Rage Focus: When Torhild takes a consequence, her next attack gets +2. This stacks with Wolf-Bane Strike."
+  ],
+  "stress": {
+    "physical": [false, false, false, false],
+    "mental": [false, false, false]
+  },
+  "consequences": {
+    "mild": null,
+    "moderate": null
+  },
+  "refresh": 2,
+  "armor": 1,
+  "fate_points": 2,
+  "equipment": {
+    "weapon": "Silver greatsword (Weapon:3, worn but maintained obsessively)",
+    "armor": "Hardened leather with silver pauldrons (Armor:1)",
+    "special": [
+      "Vial of silver powder (thrown as zone hazard; creates 'Silver Dust' aspect with one free invoke vs Beastblooded targets)",
+      "A Companions trial letter — the rejection notice, carried always"
+    ]
+  },
+  "combat_tactics": "Torhild fights hyper-aggressively, closing distance immediately and applying constant pressure. She uses Relentless Assault to push enemies into disadvantageous zones, then follows up. Against Beastblooded PCs she activates Wolf-Bane Strike and does not let up. She has no patience for tactics she cannot explain in a single sentence. Her aggression is her greatest strength and her most exploitable weakness — a patient opponent can bait her into overextension.",
+  "personality_notes": {
+    "speaking_style": "Blunt, fast, dismissive. Every sentence is three words shorter than it should be. She does not explain herself unless she is about to kill you — then she explains everything.",
+    "motivations": [
+      "Prove she was better than the Companions thought",
+      "Kill enough Companions (or Companions-affiliated fighters) to stop feeling rejected",
+      "Earn Valdrek's respect as a commander, not just a weapon",
+      "Eventually: be recognized as something other than 'the one who failed initiation'"
+    ],
+    "fears": [
+      "That she would have made a good Companion if they had given her a real chance",
+      "That Farkas was right about her",
+      "That she is only here because the Silver Hand takes anyone the Companions threw away"
+    ],
+    "quirks": [
+      "Keeps the Companions rejection letter in her armor — she has read it so many times the paper has softened",
+      "Refers to Farkas only as 'my trainer' — never by name",
+      "Will not back down from any challenge, ever, under any circumstances, even when outmatched",
+      "Secretly practices the fighting form Farkas taught her when alone"
+    ]
+  },
+  "backstory": {
+    "origin": "Once trained under Farkas during a trial period for Companions membership.",
+    "rejection": "Failed initiation. The exact reason varies by campaign (GM discretion: could be the Beast Blood reveal, a loss of nerve, a judgment call from Farkas about character). She believes the Circle rejected her because they were afraid of how good she was.",
+    "reality": "The Circle rejected her because of her uncontrolled aggression and inability to distinguish between fighting and destruction. She could not protect anyone — only attack.",
+    "radicalization": "Silver Hand found her six months after the rejection. She joined for access to silver weapons and silver training. She stayed because Valdrek understood her anger and gave it direction.",
+    "silver_hand_role": "Runs the barracks of Frostmere Vigil. Trains new Silver Hand recruits in Companion-derived fighting techniques — with modifications for killing werewolves specifically."
+  },
+  "spared_branch": {
+    "condition": "PC defeats Torhild without killing her (takes her out via consequences, not concede kill)",
+    "immediate_effect": "Silver Hand rivalry clock +1",
+    "long_term": "Torhild may defect in a later arc if the PC demonstrates that the Circle is capable of acknowledging her. Requires: PC brings message from Farkas (or another Companion) acknowledging her skill, OR PC spares her a second time.",
+    "defection_trigger": "If Farkas dies and the PC can prove it, Torhild loses her primary grudge anchor. She may not join the PC, but she will cease hunting them.",
+    "defection_outcome": "If fully defected, Torhild becomes a reluctant source of Silver Hand cell intelligence. She will never forgive the Circle, but she will direct her aggression elsewhere."
+  },
+  "killed_branch": {
+    "condition": "PC kills Torhild using Beast Blood abilities",
+    "effect": "Silver Hand rivalry clock +1 regardless of whether she was spared first. The manner of death becomes a Silver Hand recruitment story — 'beast-murdered by one of them' — that raises Silver Hand awareness by 1."
+  },
+  "dialogue_samples": {
+    "opening": "You have Companion written all over you. Good. I've been waiting for one of you to come through that door.",
+    "if_companions_pc": "I know your order. Trained under them. You know what they do when you're good enough to be a threat but not useful enough to be family? They thank you for your time. Come on then.",
+    "beastblood_pc": "There it is. Silver finds it every time.",
+    "taking_damage": "Good. Keep going. I need to know if you're worth it.",
+    "spared_alive": "...You could have. Why didn't you? ...Don't answer that. Go.",
+    "if_killing_blow": "I should have — I should have been — I was better than this.",
+    "taunting_pc": "Farkas taught me everything. I taught myself the rest. Let's find out which half matters."
+  },
+  "relationships": {
+    "Farkas": "Her trainer, her rejection, the wound that has never closed. She will not speak his name but cannot stop thinking about his judgment.",
+    "Valdrek Ice-Blood": "Respects him as the only authority she has accepted since the Companions. Wary of disappointing him.",
+    "Sister Kaari": "Uncomfortable around her — Kaari's calm reads as control Torhild lacks and envies.",
+    "The Companions": "Collective grudge. Every Companion-affiliated fighter she defeats is a referendum on the initiation she failed."
+  },
+  "rivalry_clock": {
+    "name": "Silver Hand — Torhild Rivalry",
+    "current": 0,
+    "max": 4,
+    "notes": "Ticks when: Torhild is spared (1), Beastblooded PC kills her (1 extra), Silver Hand raid is repelled with Torhild present (1). At 4: triggers Torhild defection opportunity OR Silver Hand personal vendetta against PC.",
+    "enabled": true
+  },
+  "scene_triggers": [
+    "Frostmere Vigil Zone 2 (Barracks) entered",
+    "PC is Companions-affiliated",
+    "PC has Beast Blood active",
+    "Silver Hand barracks raid encounter (awareness level >= 3)"
+  ],
+  "act_context": ["Act 2", "Act 3"],
+  "loot": {
+    "guaranteed": [
+      "Silver greatsword (Weapon:3)",
+      "Companions rejection letter (lore item — triggers dialogue with Farkas/Vilkas/Aela if shown)",
+      "Silver Hand patrol routes (tactical document)"
+    ],
+    "possible": [
+      "Vial of silver powder (unused)",
+      "Personal training notes (Companion-derived techniques, value to Companions questline)"
+    ]
+  },
+  "gm_notes": "Torhild is the most straightforwardly violent of the three Silver Hand leaders, but she is not the simplest. Her aggression is a wound wearing armor. The key scene is the moment after she is spared — she genuinely does not understand mercy as a concept in combat, and that bafflement is more interesting than gratitude would be. If the Companions questline is active, showing her the rejection letter to Farkas is one of the most emotionally loaded optional beats in the Silver Hand arc."
+}

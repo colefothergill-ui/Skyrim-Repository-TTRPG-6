@@ -1,0 +1,163 @@
+{
+  "name": "High Purifier Valdrek Ice-Blood",
+  "id": "npc_stat_high_purifier_valdrek",
+  "type": "Nord Warrior-Inquisitor",
+  "category": "Hostile NPC",
+  "location": "Frostmere Vigil — Ritual Chamber of the Moon (Zone 5)",
+  "faction": "Silver Hand",
+  "role": "High Purifier of Frostmere Vigil; supreme commander of the Silver Hand's purification campaign",
+  "aspects": {
+    "high_concept": "High Purifier Who Would Save Companions From Themselves",
+    "trouble": "Cannot Accept That His Oldest Friend Chose the Curse",
+    "other_aspects": [
+      "Once a Circle Initiate, Closest Friend to Skjor",
+      "Sovngarde is Closed to Werewolves — He Will Prove It",
+      "Silver-Inlaid Judgment He Believes Is Mercy",
+      "Oathbreaker's Grief Hardened Into Doctrine"
+    ]
+  },
+  "skills": {
+    "Superb": ["Fight"],
+    "Great": ["Will", "Provoke"],
+    "Good": ["Athletics", "Lore", "Notice"],
+    "Fair": ["Physique", "Intimidate", "Investigate"],
+    "Average": ["Rapport", "Resources"]
+  },
+  "stunts": [
+    "Silver Dominion: All silver weapons in Valdrek's zone gain Weapon:2 vs Beastblooded targets. Stacks with existing weapon ratings.",
+    "Oathbreaker's Cry: Once per scene, Provoke +5 attack vs any Companions-affiliated PC. On success, PC gains the aspect 'Oathbreaker's Shame' with one free invoke for Valdrek.",
+    "Cleansing Judgment (Final Phase): Once per conflict, Valdrek may attempt a ritual to strip Beast Blood. Overcome action vs target's Will (+4). On success, target loses all Beast Blood bonuses for the remainder of the scene.",
+    "Inquisitor's Eye: +2 to Notice vs Beastblooded targets. Can detect lycanthrope scent passively (no roll required if target has transformed this scene).",
+    "Veteran's Endurance: Once per conflict, ignore a mild consequence."
+  ],
+  "stress": {
+    "physical": [false, false, false, false],
+    "mental": [false, false, false, false]
+  },
+  "consequences": {
+    "mild": null,
+    "moderate": null,
+    "severe": null
+  },
+  "refresh": 3,
+  "armor": 2,
+  "fate_points": 3,
+  "equipment": {
+    "weapon": "Valdrek's Judgment (silvered greatsword, Weapon:3, inlaid with lunar runes)",
+    "armor": "Silver Hand plate (Armor:2, marked with purification sigils)",
+    "special": [
+      "Ritual stripping scroll (single use, targets Beast Blood)",
+      "Silver Hand commander's seal",
+      "Letters from Companions defectors"
+    ]
+  },
+  "boss_mechanics": {
+    "silver_dominion": {
+      "description": "All silver weapons in Valdrek's zone gain Weapon:2 vs Beastblooded targets.",
+      "stacks_with": "Existing weapon ratings"
+    },
+    "oathbreakers_cry": {
+      "description": "Once per scene, Provoke +5 vs Companions PC.",
+      "effect": "On success, target gains aspect 'Oathbreaker's Shame' (one free invoke for Valdrek)."
+    },
+    "cleansing_judgment": {
+      "description": "Final phase ritual to permanently strip Beast Blood.",
+      "mechanics": "Overcome vs target's Will (+4 difficulty). Success: target loses Beast Blood bonuses for scene. Success with Style: consequence 'Beast Blood Suppressed' until cured.",
+      "trigger": "Triggers when Valdrek takes his first consequence."
+    },
+    "phase_transitions": [
+      {
+        "phase": 1,
+        "trigger": "Combat start",
+        "tactics": "Uses Silver Dominion, focuses on Beastblooded PC first. Oathbreaker's Cry if Companions PC present."
+      },
+      {
+        "phase": 2,
+        "trigger": "First consequence taken",
+        "tactics": "Activates Cleansing Judgment ritual. Becomes more aggressive. Invokes 'Silver Inlaid Floor Runes' and 'Moonlight Through Ice'."
+      },
+      {
+        "phase": 3,
+        "trigger": "Moderate consequence taken",
+        "tactics": "Drops pretense of mercy. Full offensive. Invokes 'Judgment Circle'. Will sacrifice himself if it means completing the ritual."
+      }
+    ]
+  },
+  "scene_aspects": [
+    "Silver Inlaid Floor Runes",
+    "Moonlight Through Ice",
+    "Judgment Circle"
+  ],
+  "combat_tactics": "Valdrek leads from the front, which sets him apart from most Silver Hand commanders. He believes in dying with conviction. He targets Beastblooded PCs with Oathbreaker's Cry to destabilize them emotionally before engaging. He positions himself at the center of the Judgment Circle to maximize Silver Dominion's radius. In phase two he attempts the Cleansing Judgment ritual while fighting — a dangerous split of attention that represents how consumed he is by his mission.",
+  "personality_notes": {
+    "speaking_style": "Deliberate, sorrowful, certain. He sounds more like a priest than a soldier. Never taunts — explains. Quotes Ysgramor's original oaths. Refers to werewolves as 'the Bound' rather than monsters.",
+    "motivations": [
+      "Close Sovngarde's gates to no one — cure or kill the curse",
+      "Honor the memory of who Skjor was before the beast blood",
+      "Dismantle what he sees as Kodlak's greatest betrayal: spreading the curse",
+      "Prove that the Silver Hand is the true inheritor of Ysgramor's legacy"
+    ],
+    "fears": [
+      "That he is wrong — that Sovngarde does accept werewolves",
+      "That Skjor knows what Valdrek has become",
+      "That he has killed innocents in service of a lie",
+      "Dying without completing the purification"
+    ],
+    "quirks": [
+      "Keeps a portrait miniature of Skjor from their initiation days",
+      "Recites the original Companions' oath before every execution",
+      "Has defaced every Ysgramor carving in Frostmere's catacombs that shows the ancient Companions — cannot bear the contradiction",
+      "Refers to the PC as 'the Bound' rather than by name if they are Beastblooded"
+    ]
+  },
+  "backstory": {
+    "origin": "Former Circle initiate of the Companions. Closest friend to Skjor during their shared initiation period.",
+    "turning_point": "Discovered the Companions' Beast Blood pact. Felt utterly betrayed by Kodlak Whitemane, who he had revered as a father figure.",
+    "canon_divergence": "In the standard timeline, Skjor dies at Gallows Rock. In this Dragonbreak path, Skjor survives — and Valdrek interprets this as proof that the Circle 'cheats death through Daedra,' which he cannot forgive.",
+    "ideology": "Believes Sovngarde is closed to werewolves. Believes the Companions have damned every soul they infected with Beast Blood. Does not see himself as a villain — he sees himself as the only person willing to do what is necessary to save their souls.",
+    "silver_hand_role": "Founded Frostmere Vigil as the Silver Hand's doctrinal center. Elevated the Silver Hand from opportunistic hunters to an ideological movement."
+  },
+  "dialogue_samples": {
+    "opening": "You came here knowing what we are. That means you know what you carry. I don't want to kill you. I want to free you. The beast has no place in Sovngarde, and I will not let it drag you down.",
+    "companions_pc": "I knew your order before you did. I knelt at the same fire, took the same oath. Kodlak Whitemane damned every soul in that hall the night he made his pact. You are not a warrior of Ysgramor. You are Hircine's collateral.",
+    "beastblood_pc": "You smell of it. Even standing here, trying to be something else — you smell of it. I pity you. That is why this must end.",
+    "taking_damage": "Conviction... is not painless.",
+    "final_phase": "Then we do this the old way. The only way.",
+    "defeated_alive": "...Is this it? Is this what mercy looks like? I have forgotten.",
+    "defeated_dead": "Sovngarde... Skjor... I am coming as a man, not a beast. Let that count for something."
+  },
+  "relationships": {
+    "Skjor": "Once closest friend; now the wound that drives everything. Valdrek believes Skjor's survival proves the Circle cheats death — and cannot forgive him for choosing the beast blood.",
+    "Sister Kaari": "Respects her as his most trusted lieutenant. Their methods differ — she uses fire, he uses silver — but their conviction is identical.",
+    "Torhild Wolf-Bane": "Sees her as raw potential. Concerned her rage may undermine doctrine.",
+    "Kodlak Whitemane": "The betrayer. Valdrek grieves the mentor he lost when he learned the truth of the pact.",
+    "The Companions": "Former brothers and sisters he now considers condemned — not enemies by choice, but by curse."
+  },
+  "outcome_branches": {
+    "valdrek_killed": "Sister Kaari assumes command of Frostmere Vigil. Silver Hand becomes more radical without Valdrek's doctrinal restraint.",
+    "valdrek_captured": "Opportunity for interrogation. Will reveal Silver Hand cell locations if convinced the PC genuinely seeks to break the Beast Blood cycle, not perpetuate it.",
+    "valdrek_redeemed": "Requires: PC is pursuing Beast Blood cure, has Sovngarde blessing, AND defeats Valdrek in honest combat without using Beast Blood abilities. Valdrek agrees to a ceasefire — not an alliance. He will not forgive the Companions, but he will stop killing.",
+    "valdrek_escapes": "Silver Hand awareness level does not increase from HQ discovery. Valdrek regroups and the HQ partially relocates."
+  },
+  "scene_triggers": [
+    "Silver Hand awareness level >= 6",
+    "Frostmere Vigil dungeon Zone 5 entered",
+    "Companions questline active and Jorrvaskr siege triggered",
+    "PC has Beast Blood and has used it publicly"
+  ],
+  "act_context": ["Act 2", "Act 3"],
+  "loot": {
+    "guaranteed": [
+      "Valdrek's Judgment (silvered greatsword, Weapon:3, lunar runes)",
+      "High Purifier's seal (unlocks Silver Hand intel caches)",
+      "Frostmere Vigil command documents"
+    ],
+    "possible": [
+      "Portrait of Skjor (lore item, grief trigger for Companions NPCs)",
+      "Ritual stripping scroll (if not used in combat)",
+      "Intercepted Companions correspondence",
+      "Thalmor contact letter (hooks Thalmor meta-arc if active)"
+    ]
+  },
+  "gm_notes": "Valdrek is the moral counterweight to the Companions, not a straightforward villain. The most powerful scenes occur when the PC cannot dismiss his argument outright. Run him as someone who is right about some things (Beast Blood IS a curse; Hircine IS a Daedric Prince) and catastrophically wrong about the method. His tragedy is that he is doing monstrous things for genuinely compassionate reasons. If the campaign has a redemption arc active, this is where it pays off."
+}

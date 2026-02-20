@@ -1,0 +1,229 @@
+{
+  "id": "silver_hand_frostmere_vigil",
+  "name": "Frostmere Vigil",
+  "type": "Silver Hand High Purifier Stronghold",
+  "location": "Frostmere Crag, Hjaalmarch — elevated Nordic ruin reclaimed by Silver Hand",
+  "lore_anchor": "Established as the Silver Hand's doctrinal headquarters, built on an existing Skyrim location. Frostmere's remote elevation, Nordic ruin substructure, and symbolic ice (purity through cold) make it the ideological heart of the High Purifier movement.",
+  "unlock_condition": "silver_hand_state.awareness_level >= 6",
+  "discovery_condition": "silver_hand_state.hq_discovered == false",
+  "recommended_party_level": "Act 2 experienced party (3+ sessions of Silver Hand conflict)",
+  "dungeon_aspects": [
+    "Purity Through Ice",
+    "The Silver Hand Is a Movement Now",
+    "Every Stone Carries the Weight of Their Conviction"
+  ],
+  "zones": [
+    {
+      "id": "courtyard",
+      "name": "Outer Courtyard",
+      "zone_number": 1,
+      "aspects": [
+        "Silvered Ballistae",
+        "Wolf Heads on Pikes",
+        "Snow-Blind Wind"
+      ],
+      "hazards": [
+        {
+          "id": "silver_ballista",
+          "name": "Silver-Tipped Ballista",
+          "mechanics": "Attacks once per exchange at Great (+4). Creates 'Pinned Down' boost on hit. If target is Beastblooded, also deals one mild consequence (silver tip bypasses defenses).",
+          "disable": "Overcome vs Good (+3) using Athletics (physical sabotage) or Fight (destroy mechanism). Disabling it takes a full action."
+        },
+        {
+          "id": "alarm_horn",
+          "name": "Alarm Horn",
+          "mechanics": "If sounded (enemy action or PC trigger), ticks the Silver Hand escalation clock by 1. NPCs in Zones 2 and 3 gain Ready aspect (one free invoke on first attack).",
+          "disable": "Overcome vs Fair (+2) using Stealth or Investigate to locate and muffle before enemy reaches it."
+        }
+      ],
+      "beastblood_modifier": "If any PC is Beastblooded, all Silver Hand enemies in Zone 1 gain +1 to Notice vs that PC for the entire zone.",
+      "enemies": [
+        {
+          "type": "Silver Hand Sentinels",
+          "count": "3-4",
+          "stat_ref": "companion_member (reskinned as Silver Hand soldier)",
+          "equipment": "Silver shortswords, light armor",
+          "tactics": "Two engage at melee, one covers ballista, one reaches for alarm horn if combat begins."
+        }
+      ],
+      "scene_notes": "The courtyard is the gauntlet. Getting through quietly (Stealth-based) avoids the alarm horn and prevents the Ready aspect. Getting through violently but fast (taking out the horn operator first) limits escalation. Brute force triggers everything."
+    },
+    {
+      "id": "barracks",
+      "name": "Barracks and Armory",
+      "zone_number": 2,
+      "aspects": [
+        "Silver Everywhere",
+        "Fanatic Discipline",
+        "Ritual Branding Iron"
+      ],
+      "loot_hooks": [
+        {
+          "item": "Silvered weapon schematics",
+          "value": "Crafting document — worth 200 gold to any blacksmith, or can be used to have silver weapons made at cost.",
+          "location": "Armory chest, locked (Overcome vs Good +3)"
+        },
+        {
+          "item": "Intercepted Thalmor correspondence",
+          "condition": "Only present if Thalmor meta-arc is active in campaign_state",
+          "value": "Evidence of Thalmor funding of Silver Hand. Hooks the Thalmor conspiracy arc.",
+          "location": "Commander's desk (Torhild's quarters)"
+        },
+        {
+          "item": "Silver Hand recruitment manifesto",
+          "value": "Details Silver Hand cell structure. Reduces awareness level needed to locate satellite forts by 1.",
+          "location": "Open on a table — deliberately visible (they want recruits to find it)"
+        }
+      ],
+      "boss": "npc_stat_torhild_wolf_bane",
+      "enemies": [
+        {
+          "type": "Silver Hand Hunters",
+          "count": "2-3",
+          "stat_ref": "companion_member (reskinned)",
+          "equipment": "Silver weapons, medium armor",
+          "tactics": "Fight in pairs. If Torhild is present, defer to her positioning."
+        }
+      ],
+      "scene_notes": "Zone 2 is about information as much as combat. The barracks contain the most actionable intelligence in Frostmere. Rushing past without looting costs significant campaign advantage. Torhild may be bypassed with a successful Stealth overcome (Superb +5) — she runs a tight patrol but has a predictable schedule."
+    },
+    {
+      "id": "chapel",
+      "name": "Chapel of the Cleansing Flame",
+      "zone_number": 3,
+      "aspects": [
+        "Cleansing Flame Burns Constant",
+        "Silver-Dipped Wards on Every Threshold",
+        "Stendarr and Shor Both Honored Here"
+      ],
+      "boss": "npc_stat_sister_kaari",
+      "hazards": [
+        {
+          "id": "ritual_braziers",
+          "name": "Ritual Braziers",
+          "mechanics": "Three braziers line the chapel. Each active brazier creates a 'Burning Threshold' zone aspect (one free invoke for Kaari's fire attacks). Destroying a brazier (Attack vs Fair +2) removes the aspect.",
+          "note": "Kaari cannot use Ritual Wards if all braziers are destroyed before she activates the stunt."
+        }
+      ],
+      "special_triggers": {
+        "sovngarde_blessing": "If PC has Sovngarde blessing aspect, Kaari hesitates. She calls the PC 'Salvageable' and offers one exchange of non-combat negotiation. Rapport vs Will (Good +3) to convince her to stand down.",
+        "beastblood_suppression": "If Kaari uses Cleansing Surge and succeeds against a Beastblooded PC, that PC loses Beast Blood bonuses for one exchange. This can stack with Valdrek's Silver Dominion if both zones overlap."
+      },
+      "discovery_lore": "The chapel contains a hidden alcove (Investigate vs Good +3) with evidence that Silver Hand doctrine was partially built on defaced Companions prayer texts. Kaari has tried to reconcile Stendarr's mercy and Shor's warrior judgment into a coherent theology — the scrawled margin notes in her prayer book are both unsettling and sad.",
+      "scene_notes": "Zone 3 is where the Silver Hand's ideological depth is most visible. Rushing this zone costs the most thematic weight. The hesitation trigger is worth engineering a reason for the PC to have Sovngarde blessing before reaching Frostmere."
+    },
+    {
+      "id": "catacombs",
+      "name": "Lower Catacombs",
+      "zone_number": 4,
+      "aspects": [
+        "Ancient Ysgramor Carvings Defaced",
+        "Shrine to Stendarr and Shor Both",
+        "The Truth of What the Silver Hand Once Was"
+      ],
+      "lore_discoveries": [
+        {
+          "id": "companions_origin_evidence",
+          "description": "Stone carvings showing ancient Companions warriors with beast-shadow imagery — partially chiseled away but still readable.",
+          "mechanical_effect": "PC who discovers this gains aspect 'Witness to the First Companions' with one free invoke for Lore rolls related to Silver Hand or Companions history.",
+          "investigate_difficulty": "Fair (+2)"
+        },
+        {
+          "id": "internal_division_letters",
+          "description": "Cache of letters showing internal Silver Hand debate: one faction wants to exterminate all werewolves, another believes willing cure is possible. Valdrek's position is the 'moderate' one.",
+          "mechanical_effect": "Reveals that not all Silver Hand members are irredeemable. Creates narrative space for individual Silver Hand NPCs to be spared or turned.",
+          "investigate_difficulty": "Good (+3)"
+        },
+        {
+          "id": "ancient_cure_notes",
+          "description": "Fragmentary notes referencing Glenmoril Witch knowledge of Beast Blood cures. Silver Hand has been researching the same cure as Kodlak — for opposite reasons.",
+          "mechanical_effect": "Can be combined with Companions questline to create a shared information advantage on the cure quest.",
+          "investigate_difficulty": "Great (+4)"
+        }
+      ],
+      "enemies": [
+        {
+          "type": "Silver Hand Archivists",
+          "count": "2",
+          "stat_ref": "companion_member (reskinned as scholarly warrior)",
+          "note": "These are researchers, not front-line fighters. They will attempt to flee and warn Valdrek if combat begins."
+        }
+      ],
+      "scene_notes": "Zone 4 is the moral heart of the dungeon. The Silver Hand's tragedy — that they share the Companions' goal of curing Beast Blood but became monsters in pursuit of it — is laid bare here. GMs should give PCs time to sit with what they find. There is no combat gate on Zone 4; it can be entered quietly if Zones 2-3 are bypassed."
+    },
+    {
+      "id": "ritual_chamber",
+      "name": "Ritual Chamber of the Moon",
+      "zone_number": 5,
+      "aspects": [
+        "Silver Inlaid Floor Runes",
+        "Moonlight Through Ice",
+        "Judgment Circle"
+      ],
+      "boss": "npc_stat_high_purifier_valdrek",
+      "boss_mechanics_summary": {
+        "silver_dominion": "All silver weapons gain Weapon:2 vs Beastblooded in Valdrek's zone.",
+        "oathbreakers_cry": "Provoke +5 vs Companions PC once per scene.",
+        "cleansing_judgment": "Ritual attempt to strip Beast Blood (overcome vs Will +4) triggered after first consequence."
+      },
+      "environmental_aspects": {
+        "silver_inlaid_runes": "Can be invoked by Valdrek for Silver Dominion extension OR by the PC if they understand Nordic rune magic (Lore vs Great +4 to redirect).",
+        "moonlight_through_ice": "At night scenes: all combatants gain +1 to Notice. Beastblooded PCs feel the moon's pull — may be compelled to use Beast Blood abilities.",
+        "judgment_circle": "Aspect invoked by Valdrek for Oathbreaker's Cry. Can be destroyed by creating a 'Broken Circle' boost (Fight attack vs zone, Fair +2)."
+      },
+      "scene_notes": "The Ritual Chamber is the moral climax of Frostmere. Valdrek fights with conviction, not cruelty. The best version of this scene ends with the PC understanding why Valdrek believes what he believes — even if they cannot forgive what he has done. The redemption branch exists but should feel earned."
+    }
+  ],
+  "escalation_outcomes": {
+    "hq_cleared_all_leaders_killed": {
+      "silver_hand_state_changes": {
+        "high_purifier_alive": false,
+        "active_cells": ["gallows_rock", "dustmans_cairn"],
+        "awareness_level": "resets to 3 (cells fragment but do not disappear)"
+      },
+      "narrative": "Without Valdrek and Kaari's ideological framework, the Silver Hand fractures. Some cells dissolve into banditry. Others become more radical without doctrinal restraint.",
+      "new_faction_trigger": "Radical splinter faction may form (see silver_hand_radical_splinter event)"
+    },
+    "hq_cleared_valdrek_alive": {
+      "silver_hand_state_changes": {
+        "high_purifier_alive": true,
+        "hq_discovered": true
+      },
+      "narrative": "Valdrek retreats and regroups. He will not restart the siege immediately, but he begins building a new, more hidden version of Frostmere Vigil. The Silver Hand remains a threat."
+    },
+    "hq_cleared_both_leaders_spared": {
+      "silver_hand_state_changes": {
+        "hq_discovered": true,
+        "high_purifier_alive": true,
+        "awareness_level_modifier": -2
+      },
+      "narrative": "The Silver Hand loses its HQ but not its leadership. A fragile ceasefire exists. This is the most unstable outcome and the most interesting long-term.",
+      "narrative_trigger": "Check for Thalmor funding of splinter sect if thalmor_arc is active"
+    }
+  },
+  "satellite_forts": [
+    {
+      "id": "gallows_rock_rewritten",
+      "name": "Gallows Rock (Rewritten)",
+      "tier": "mid",
+      "unlock_condition": "silver_hand_state.awareness_level >= 3",
+      "features": [
+        "Torture chamber moral dilemma (Silver Hand prisoner or werewolf captive — PC must choose who to prioritize freeing)",
+        "Evidence of Silver Hand prisoner processing (werewolf captives awaiting ritual execution)"
+      ],
+      "note": "Canon Gallows Rock location, recontextualized with Silver Hand dungeon module logic."
+    },
+    {
+      "id": "dustmans_cairn_reclaimed",
+      "name": "Dustman's Cairn (Reclaimed)",
+      "tier": "infiltration",
+      "unlock_condition": "silver_hand_state.awareness_level >= 2",
+      "features": [
+        "Optional infiltration route (bypasses Gallows Rock entirely)",
+        "Can sabotage Silver Hand logistics (reduce awareness_level by 1 if successful)",
+        "Silver Hand supply cache (silver weapons and armor stockpile)"
+      ]
+    }
+  ],
+  "gm_notes": "Frostmere Vigil is designed to be run as a full session dungeon with meaningful choices in every zone. The dungeon rewards preparation and investigation over pure combat. PCs who engage with Zones 3 and 4 will find the final confrontation with Valdrek significantly more emotionally resonant. This is not 'random bandits with silver swords.' Every Silver Hand member in this dungeon has a reason to be here."
+}
