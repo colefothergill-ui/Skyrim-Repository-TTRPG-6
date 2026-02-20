@@ -1,0 +1,150 @@
+{
+  "silver_hand_hunt_the_beast": {
+    "id": "silver_hand_hunt_the_beast",
+    "name": "Hunt the Beast",
+    "description": "The Silver Hand has identified a beastblooded target in Skyrim and dispatched a warband to capture or kill them. If the PC is beastblooded, they are the target.",
+    "faction": "silver_hand",
+    "act": "Act 2",
+    "activation_conditions": {
+      "requires_beast_blood": true,
+      "silver_hand_awareness_level_min": 2,
+      "companions_state_beast_blood": true
+    },
+    "status": "locked",
+    "objectives": [
+      "Survive the Silver Hand ambush",
+      "Discover the warband's staging point",
+      "Optionally: interrogate a captured Silver Hand member for intelligence"
+    ],
+    "rewards": {
+      "fate_points": 1,
+      "information": "Location of a Silver Hand fort and the name of a regional cell leader",
+      "aspect_created": "Hunted by the Silver Hand"
+    },
+    "failure_consequence": "Silver Hand awareness_level increases by 1; warband regroups and reports back to High Purifier",
+    "gm_notes": "This quest serves as the PC's formal introduction to the Silver Hand as a recurring threat. Use it to establish Valdrek as a distant menace. The warband does not include named NPCs at this stage."
+  },
+  "silver_hand_siege_of_jorrvaskr": {
+    "id": "silver_hand_siege_of_jorrvaskr",
+    "name": "Siege of Jorrvaskr",
+    "description": "The Silver Hand launches a full assault on Jorrvaskr, the Companions' mead hall in Whiterun. If unchecked, this could destroy the Companions as a faction.",
+    "faction": "silver_hand",
+    "act": "Act 2-3",
+    "activation_conditions": {
+      "requires_beast_blood": true,
+      "silver_hand_awareness_level_min": 5,
+      "companions_state_beast_blood": true
+    },
+    "status": "locked",
+    "objectives": [
+      "Defend Jorrvaskr against the Silver Hand assault (staged combat encounter)",
+      "Protect at least two Companion members from being killed",
+      "Optionally: capture a Silver Hand officer for interrogation"
+    ],
+    "stages": [
+      {
+        "stage": 1,
+        "description": "Silver Hand scouts reported outside Whiterun — warning phase"
+      },
+      {
+        "stage": 2,
+        "description": "Night raid on Jorrvaskr gates begins"
+      },
+      {
+        "stage": 3,
+        "description": "Breach — Silver Hand fighters pour into the yard"
+      },
+      {
+        "stage": 4,
+        "description": "Inner hall defense — protect the Companions' whelps"
+      },
+      {
+        "stage": 5,
+        "description": "Drive back the last wave; Silver Hand retreats or is routed"
+      }
+    ],
+    "rewards": {
+      "fate_points": 2,
+      "companions_relationship": "+15 with Companions if successful",
+      "aspect_created": "Defender of Jorrvaskr"
+    },
+    "failure_consequence": "Jorrvaskr damaged; 1d3 Companion NPCs killed; Companions faction status drops; silver_hand_state.awareness_level resets to 6 (final purge imminent)",
+    "gm_notes": "This is the major set-piece for the Silver Hand arc. Run it as a 5-stage battle using civil war staging conventions. Completion does NOT end the Silver Hand — Valdrek survives unless the High Purifier Showdown quest was completed first."
+  },
+  "silver_hand_purification_ritual": {
+    "id": "silver_hand_purification_ritual",
+    "name": "The Purification Ritual",
+    "description": "The Silver Hand is preparing a sacred ritual they believe will expose every werewolf in a hold and bind them in silver. The PC must locate and disrupt the ritual before it completes.",
+    "faction": "silver_hand",
+    "act": "Act 2",
+    "activation_conditions": {
+      "requires_beast_blood": false,
+      "silver_hand_awareness_level_min": 3,
+      "note": "This quest activates for any PC once awareness reaches 3, even non-beastblooded"
+    },
+    "status": "locked",
+    "objectives": [
+      "Locate the ritual site (hidden in a Silver Hand fort)",
+      "Infiltrate or assault the fort",
+      "Destroy or corrupt the ritual components before completion",
+      "Optionally: recover the ritual's components for study (College of Winterhold hook)"
+    ],
+    "rewards": {
+      "fate_points": 1,
+      "information": "Evidence of Thalmor involvement (a sealed letter from an Altmer contact)",
+      "clock_reduction": "Reduces silver_hand_state.awareness_level by 1 if disrupted successfully"
+    },
+    "failure_consequence": "Ritual completes — all beastblooded NPCs in the hold suffer a 'Marked by Silver Flame' aspect with 2 free invokes for Silver Hand attackers",
+    "gm_notes": "This quest is the primary vehicle for exposing the Thalmor shadow patron angle. The ritual documents contain an Aldmeri signature that Sister Kaari recognizes — she will share this with a trusted PC."
+  },
+  "silver_hand_high_purifier_showdown": {
+    "id": "silver_hand_high_purifier_showdown",
+    "name": "The High Purifier's Reckoning",
+    "description": "A final confrontation with Valdrek Ice-Blood at the Silver Hand's primary fortress. This quest resolves the Silver Hand arc permanently, one way or another.",
+    "faction": "silver_hand",
+    "act": "Act 3",
+    "activation_conditions": {
+      "requires_beast_blood": true,
+      "silver_hand_awareness_level_min": 4,
+      "companions_state_beast_blood": true,
+      "note": "Can also trigger if PC is not beastblooded but has completed silver_hand_purification_ritual and sided against the Silver Hand"
+    },
+    "status": "locked",
+    "objectives": [
+      "Reach the inner sanctum of Valdrek's fortress",
+      "Confront Valdrek Ice-Blood",
+      "Choose: kill Valdrek, spare him, or turn him against the Thalmor shadow patron"
+    ],
+    "resolution_branches": {
+      "kill_valdrek": {
+        "outcome": "Silver Hand collapses as a faction. Radicals scatter. Kaari either flees or becomes a reluctant ally.",
+        "state_changes": {
+          "silver_hand_state.high_purifier_alive": false,
+          "silver_hand_state.awareness_level": 0
+        }
+      },
+      "spare_valdrek": {
+        "outcome": "Valdrek withdraws to Jorrvaskr's outskirts. Silver Hand scales back. He watches the PC — a neutral watchdog, not a nemesis.",
+        "state_changes": {
+          "silver_hand_state.high_purifier_alive": true,
+          "silver_hand_state.awareness_level": 1
+        }
+      },
+      "turn_valdrek_against_thalmor": {
+        "outcome": "Valdrek redirects Silver Hand aggression toward the Thalmor contact. The Silver Hand becomes a background anti-Thalmor force. Civil War tie-in unlocked.",
+        "requires": "PC must have evidence from silver_hand_purification_ritual",
+        "state_changes": {
+          "silver_hand_state.high_purifier_alive": true,
+          "silver_hand_state.awareness_level": 0,
+          "thalmor_arc_pressure_added": true
+        }
+      }
+    },
+    "rewards": {
+      "fate_points": 3,
+      "milestone": "Major Milestone — Silver Hand arc resolved",
+      "aspect_created": "The Purifier's Reckoning (narrative aspect reflecting resolution choice)"
+    },
+    "gm_notes": "The 'turn Valdrek against the Thalmor' branch is the most narratively rich outcome and should be rewarded generously. It ties Silver Hand into the Thalmor Conspiracy arc and gives the civil war faction another pressure point."
+  }
+}

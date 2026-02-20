@@ -149,6 +149,74 @@
               "timestamp": "2026-01-29 17:43:08"
             }
           ]
+        },
+        {
+          "id": "allegation_3",
+          "type": "thalmor_conspiracy",
+          "accuser": "Test Accuser",
+          "details": "Test allegation details",
+          "status": "pending",
+          "evidence_level": 3,
+          "created": "2026-02-20 06:32:38",
+          "consequences": [],
+          "evidence_trail": [
+            {
+              "description": "Test evidence",
+              "change": 3,
+              "timestamp": "2026-02-20 06:32:38"
+            }
+          ]
+        },
+        {
+          "id": "allegation_4",
+          "type": "thalmor_conspiracy",
+          "accuser": "Test Accuser",
+          "details": "Test allegation details",
+          "status": "pending",
+          "evidence_level": 3,
+          "created": "2026-02-20 06:35:24",
+          "consequences": [],
+          "evidence_trail": [
+            {
+              "description": "Test evidence",
+              "change": 3,
+              "timestamp": "2026-02-20 06:35:24"
+            }
+          ]
+        },
+        {
+          "id": "allegation_5",
+          "type": "thalmor_conspiracy",
+          "accuser": "Test Accuser",
+          "details": "Test allegation details",
+          "status": "pending",
+          "evidence_level": 3,
+          "created": "2026-02-20 06:36:19",
+          "consequences": [],
+          "evidence_trail": [
+            {
+              "description": "Test evidence",
+              "change": 3,
+              "timestamp": "2026-02-20 06:36:19"
+            }
+          ]
+        },
+        {
+          "id": "allegation_6",
+          "type": "thalmor_conspiracy",
+          "accuser": "Test Accuser",
+          "details": "Test allegation details",
+          "status": "pending",
+          "evidence_level": 3,
+          "created": "2026-02-20 06:37:16",
+          "consequences": [],
+          "evidence_trail": [
+            {
+              "description": "Test evidence",
+              "change": 3,
+              "timestamp": "2026-02-20 06:37:16"
+            }
+          ]
         }
       ]
     },

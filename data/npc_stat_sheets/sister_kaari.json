@@ -1,0 +1,85 @@
+{
+  "name": "Sister Kaari of the Cleansing Flame",
+  "id": "npc_stat_sister_kaari",
+  "type": "Nord Priestess-Zealot",
+  "category": "Hostile NPC",
+  "location": "Silver Hand dens, remote shrines to the Nine Divines",
+  "faction": "The Silver Hand",
+  "role": "Spiritual enforcer of the Silver Hand — believes werewolves are denied Sovngarde",
+  "aspects": {
+    "high_concept": "Flame-Tongued Priestess Who Burns Out Hircine's Taint",
+    "trouble": "My Zeal Has Cost Me Every Friend I Ever Had",
+    "other_aspects": [
+      "Sovngarde Must Be Kept Pure",
+      "Fire Cleanses What Silver Cannot",
+      "The Divines Demand This Sacrifice"
+    ]
+  },
+  "skills": {
+    "Great": ["Will", "Lore"],
+    "Good": ["Magic (Destruction)", "Rapport"],
+    "Fair": ["Notice", "Empathy"],
+    "Average": ["Fight", "Stealth"]
+  },
+  "stunts": [
+    "Cleansing Flame: +2 to Magic (Destruction) when using fire spells against lycanthropes or Daedra-touched foes.",
+    "Sermon of Purity: Once per scene, deliver a speech that creates a 'Shaken by Doubt' aspect on a beastblooded PC or NPC (Will vs. Will contested roll).",
+    "Sovngarde's Gatekeeper: When an opponent invokes an aspect related to Daedric power or beast blood, Kaari may immediately contest it with Lore at no cost.",
+    "Righteous Endurance: Kaari may absorb one mild consequence per scene without it counting against her stress track."
+  ],
+  "stress": {
+    "physical": [false, false, false],
+    "mental": [false, false, false, false]
+  },
+  "consequences": {
+    "mild": null,
+    "moderate": null
+  },
+  "refresh": 2,
+  "fate_points": 2,
+  "equipment": {
+    "weapon": "Silver-tipped staff with fire enchantment",
+    "armor": "Robes of the Nine Divines (light protection, fire resistance aura)",
+    "special": "Blessed silver dust (disrupts lycanthropic healing), purity scrolls, a journal of beastblooded sightings"
+  },
+  "personality_notes": {
+    "speaking_style": "Passionate and eloquent. Speaks in cadences that echo religious sermons. Never curses — her fury is cold and righteous. Uses phrases like 'the taint,' 'the gift that damns,' and 'Hircine's leash.'",
+    "motivations": [
+      "Ensure every Nord warrior who falls in battle can reach Sovngarde unhindered",
+      "Convince beastblooded individuals to seek a cure before death",
+      "Expose Thalmor involvement in the Silver Hand (she suspects it but has no proof)",
+      "Convert Radicals within the Silver Hand to more measured methods"
+    ],
+    "fears": [
+      "That she is wrong — that beast blood does not truly bar entry to Sovngarde",
+      "Being exposed as a Radical sympathizer by Valdrek",
+      "Her fire magic being seen as Daedric-tainted herself"
+    ],
+    "quirks": [
+      "Always carries a small brazier of sacred flame",
+      "Speaks directly and without cruelty to beastblooded PCs — she pities them",
+      "Will not participate in torture — a point of conflict with the Radicals"
+    ]
+  },
+  "trust_clock": {
+    "enabled": true,
+    "description": "Kaari can become an unlikely ally if the PC is not beastblooded and investigates Thalmor involvement.",
+    "gain_triggers": [
+      "PC exposes Thalmor manipulation of the Silver Hand (+2)",
+      "PC brings evidence of a beastblooded NPC causing civilian harm (+1)",
+      "PC argues theologically with Kaari and earns her respect via Lore (+1)"
+    ],
+    "loss_triggers": [
+      "PC reveals or uses beast blood in front of Kaari (-3)",
+      "PC defends Hircine or the Companions' werewolf tradition (-2)",
+      "PC is caught lying to Kaari about their nature (-2)"
+    ],
+    "milestones": {
+      "3": "Kaari shares her suspicions about Thalmor involvement",
+      "5": "Kaari provides intelligence on Silver Hand fortress locations",
+      "7": "Kaari splits from Silver Hand and becomes a background ally"
+    }
+  },
+  "lore_notes": "Kaari is a true believer but not a monster. She genuinely grieves for those she sees as 'lost to Hircine.' She is the most likely Silver Hand NPC to become a conditional ally, and the most likely to uncover the Thalmor Agent in their midst — if the PC gives her reason to look.",
+  "combat_notes": "Kaari prefers to avoid direct combat when possible. If forced to fight, she uses fire spells at range and attempts to flee rather than die for the Silver Hand. She can be talked down with a successful Will vs. Will roll if the PC is not beastblooded."
+}
