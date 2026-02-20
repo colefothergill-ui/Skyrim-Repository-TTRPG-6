@@ -1787,7 +1787,7 @@ Schemes Discovered: {len(state['thalmor_arc']['thalmor_schemes_discovered'])}
 
         print(f"Battle of Whiterun stage advanced: {current_stage} -> {new_stage}/5")
 
-        if new_stage >= 5:
+        if new_stage > 5:
             cw['battle_of_whiterun_status'] = 'completed'
             faction = cw.get('battle_of_whiterun_faction', 'imperial')
             next_quest_map = {
