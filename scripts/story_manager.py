@@ -1937,8 +1937,12 @@ Schemes Discovered: {len(state['thalmor_arc']['thalmor_schemes_discovered'])}
             "active_hunts": [],
             "high_purifier_alive": True,
         })
+        # Ensure amount is a non-negative integer increment
+        if not isinstance(amount, int) or amount < 0:
+            amount = 0
         current = sh_state.get("awareness_level", 0)
-        sh_state["awareness_level"] = min(current + amount, 6)
+        new_level = max(0, min(current + amount, 6))
+        sh_state["awareness_level"] = new_level
 
         self.save_campaign_state(state)
         return state
