@@ -1,0 +1,90 @@
+{
+  "name": "Farkas",
+  "id": "npc_stat_farkas",
+  "type": "Nord Warrior",
+  "category": "Friendly NPC",
+  "location": "Jorrvaskr, Whiterun",
+  "faction": "The Companions",
+  "role": "Inner Circle member, Companions protector",
+  "aspects": {
+    "high_concept": "Strongest Arm in Jorrvaskr, Simplest Heart",
+    "trouble": "The Wolf Is Easy; People Are Hard",
+    "other_aspects": [
+      "Honor Is What You Do When Nobody Watches",
+      "Brother's Keeper",
+      "Comfortable in Beast Skin"
+    ]
+  },
+  "skills": {
+    "Great": ["Physique"],
+    "Good": ["Fight", "Athletics"],
+    "Fair": ["Will", "Notice", "Empathy"],
+    "Average": ["Rapport", "Lore", "Provoke"]
+  },
+  "stunts": [
+    "Shield Wall: +2 to Defend when protecting an adjacent ally.",
+    "Bear's Endurance: Farkas may absorb one mild consequence per scene without marking stress (recovers at scene end).",
+    "Pack Bond: Once per session, if Farkas is in the same zone as the PC, the PC gains +1 to a Fight roll."
+  ],
+  "stress": {
+    "physical": [false, false, false, false],
+    "mental": [false, false, false]
+  },
+  "consequences": {
+    "mild": null,
+    "moderate": null,
+    "severe": null
+  },
+  "refresh": 3,
+  "armor": 3,
+  "notes": "Farkas is the gentlest giant in Jorrvaskr - immensely strong, deeply loyal, and surprisingly perceptive about people despite (or because of) his lack of verbal sophistication. He does not share his twin Vilkas's intellectual torment over the beast blood; he simply accepts what he is and focuses on being a good Companion. His simple, unshakeable honor is one of the most trustworthy constants in the guild.",
+  "trust_clock": {
+    "enabled": true,
+    "current": 0,
+    "max": 6,
+    "description": "Farkas trusts straightforwardness and deeds. He is harder to impress with words than almost anyone in Jorrvaskr.",
+    "gain_triggers": [
+      "+1: standing alongside Farkas in combat without needing to be told",
+      "+1: protecting a civilian or weaker person when there was no reward",
+      "+2: earning Farkas's respect in a sparring match (honorable win or honorable loss)",
+      "+1: being honest with Farkas when a lie would have been easier"
+    ],
+    "loss_triggers": [
+      "-1: using deception or manipulation in Farkas's presence",
+      "-2: treating Farkas as simple-minded rather than plain-spoken",
+      "-1: leaving a Companion behind when retreat was optional"
+    ],
+    "milestones": {
+      "2": "Farkas starts standing near you in the training yard - a visible sign of acceptance",
+      "4": "Farkas calls PC 'Shield-Sibling' without qualification",
+      "6": "Farkas would follow PC into Oblivion itself and he says so plainly"
+    }
+  },
+  "combat_tactics": "Farkas fights like a force of nature - direct, powerful, relentless. He uses his size to control zones and protect flanks. In werewolf form he is terrifying; even in human form enemies find him almost impossible to move. He does not use tricks or traps; he considers such things unnecessary when you're this strong.",
+  "scene_triggers": [
+    "Jorrvaskr training yard",
+    "Companions questline",
+    "Proving Honor quest (witness to trial)",
+    "Inner Circle Rites",
+    "Whiterun defense"
+  ],
+  "act_context": ["Act 1", "Act 2"],
+  "starting_equipment": {
+    "armor": "Heavy Companions Armor (Armor:3)",
+    "weapon": "Skyforge Steel Greatsword (Weapon:3)",
+    "other": ["Hardtack and dried meat (always prepared)", "Extra shield (for giving to allies)"]
+  },
+  "relationships": {
+    "Vilkas": "Twin brother; loves him fiercely, sometimes frustrated by Vilkas's brooding",
+    "Kodlak Whitemane": "Deep filial love; Kodlak is father-figure",
+    "Skjor": "Easy camaraderie; two warriors who don't overthink things",
+    "Aela the Huntress": "Respectful friendship; she's fast, he's strong, they work well together",
+    "The Player": "Warms quickly to anyone who demonstrates straightforward courage"
+  },
+  "dialogue_samples": {
+    "greeting": "Jorrvaskr. Good place. You're new. Come in.",
+    "on_proving_honor": "The trial isn't about whether you can swing a sword. Plenty of people can do that. It's about what you do when it gets bad.",
+    "on_beast_blood": "The wolf... yeah. It's strange. But it's part of me now. Kodlak says it's a curse. Maybe. Doesn't feel like one when something's threatening my Shield-Siblings.",
+    "to_pc_mid_quest": "Just do the thing. Talk about it after."
+  }
+}

@@ -38,6 +38,28 @@
   "refresh": 3,
   "armor": 1,
   "notes": "Kodlak Whitemane is the Harbinger of the Companions, the ancient warrior guild based in Jorrvaskr. Old and wise, he leads with honor and wisdom rather than brute strength. Unlike many Companions, he views their werewolf curse as a burden that prevents them from reaching Sovngarde. He's a mentor figure who values honor above all else and seeks to cure the beast blood before his death. Despite his age, he remains a formidable warrior and commands deep respect from all Companions.",
+  "trust_clock": {
+    "enabled": true,
+    "current": 0,
+    "max": 6,
+    "description": "Kodlak's personal respect for the PC grows as they show discipline, honor, and compassion for his plight.",
+    "gain_triggers": [
+      "+1: completing a trial with valor and no unnecessary cruelty",
+      "+1: showing restraint when victory was already secured",
+      "+2: supporting Kodlak's wish to cure the beast blood",
+      "+1: protecting a Companion's life over personal glory"
+    ],
+    "loss_triggers": [
+      "-1: excessive brutality or dishonor in a trial",
+      "-2: mocking Kodlak's wish to die free of Hircine",
+      "-1: abandoning a Companion in the field"
+    ],
+    "milestones": {
+      "2": "Kodlak begins sharing his private journals and the history of the curse",
+      "4": "Kodlak confides his Sovngarde hope and asks for help with the cure",
+      "6": "Kodlak treats PC as kin; his final blessing and Breath of Ysgramor advancement are available"
+    }
+  },
   "combat_tactics": "Kodlak fights with the skill of decades of experience. While age has slowed him, his technique is flawless. He's defensive and strategic, using positioning and timing rather than brute force. He won't transform into werewolf form, as he rejects the beast blood.",
   "scene_triggers": ["Companions recruitment", "Jorrvaskr leadership", "Beast blood storyline", "Honor quests"],
   "act_context": ["Act 1", "Act 2"],
