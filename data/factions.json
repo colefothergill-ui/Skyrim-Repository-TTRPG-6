@@ -115,76 +115,7 @@
         "npc_stat_housecarl",
         "npc_stat_forsworn_marauder"
       ],
-      "allegations": [
-        {
-          "id": "allegation_1",
-          "type": "thalmor_conspiracy",
-          "accuser": "Test Accuser",
-          "details": "Test allegation details",
-          "status": "pending",
-          "evidence_level": 3,
-          "created": "2026-01-27 00:50:34",
-          "consequences": [],
-          "evidence_trail": [
-            {
-              "description": "Test evidence",
-              "change": 3,
-              "timestamp": "2026-01-27 00:50:34"
-            }
-          ]
-        },
-        {
-          "id": "allegation_2",
-          "type": "thalmor_conspiracy",
-          "accuser": "Test Accuser",
-          "details": "Test allegation details",
-          "status": "pending",
-          "evidence_level": 3,
-          "created": "2026-01-29 17:43:08",
-          "consequences": [],
-          "evidence_trail": [
-            {
-              "description": "Test evidence",
-              "change": 3,
-              "timestamp": "2026-01-29 17:43:08"
-            }
-          ]
-        },
-        {
-          "id": "allegation_3",
-          "type": "thalmor_conspiracy",
-          "accuser": "Test Accuser",
-          "details": "Test allegation details",
-          "status": "pending",
-          "evidence_level": 3,
-          "created": "2026-02-20 06:32:38",
-          "consequences": [],
-          "evidence_trail": [
-            {
-              "description": "Test evidence",
-              "change": 3,
-              "timestamp": "2026-02-20 06:32:38"
-            }
-          ]
-        },
-        {
-          "id": "allegation_4",
-          "type": "thalmor_conspiracy",
-          "accuser": "Test Accuser",
-          "details": "Test allegation details",
-          "status": "pending",
-          "evidence_level": 3,
-          "created": "2026-02-20 17:46:11",
-          "consequences": [],
-          "evidence_trail": [
-            {
-              "description": "Test evidence",
-              "change": 3,
-              "timestamp": "2026-02-20 17:46:11"
-            }
-          ]
-        }
-      ]
+      "allegations": []
     },
     "thalmor": {
       "id": "thalmor",
