@@ -757,6 +757,10 @@ class SessionZeroManager:
         campaign_state["civil_war_state"]["player_alliance"] = faction_alignment
         campaign_state["civil_war_state"]["battle_of_whiterun_status"] = "approaching"
         
+        # Set civil war eligibility gate — players must complete faction intro first
+        campaign_state["civil_war_state"]["civil_war_eligible"] = False
+        campaign_state["civil_war_state"]["civil_war_locked_reason"] = "incomplete_faction_intro"
+        
         # Set initial faction relationships based on alignment
         if faction_alignment == "imperial":
             campaign_state["civil_war_state"]["faction_relationship"]["imperial_legion"] = 30
@@ -843,6 +847,20 @@ class SessionZeroManager:
             }
             campaign_state["companions"]["available_companions"].append(hadvar_available)
             campaign_state["companions"]["available_companions"].append(ralof_available)
+        
+        # For neutral alignment, record subfaction and set branching start quest
+        if faction_alignment == "neutral" and neutral_subfaction:
+            campaign_state["civil_war_state"]["neutral_subfaction"] = neutral_subfaction
+            if "faction_flags" not in campaign_state:
+                campaign_state["faction_flags"] = {}
+            neutral_faction_starts = {
+                "college": "college_first_lessons",
+                "companions": "companions_intro",
+                "thieves_guild": "thieves_message_from_brynjolf",
+                "dark_brotherhood": "db_with_friends_like_these",
+            }
+            if neutral_subfaction in neutral_faction_starts:
+                campaign_state["branching_decisions"]["neutral_faction_start"] = neutral_faction_starts[neutral_subfaction]
         
         # Add player characters to campaign state
         campaign_state["player_characters"] = []
@@ -1252,6 +1270,26 @@ the Battle of Whiterun will shape Skyrim's future.
                 faction_alignment = "neutral"
                 print("\n✓ Party remains neutral in the civil war")
                 print("  You focus on honor and independence, possibly joining the Companions.")
+                # Ask which neutral faction to join
+                neutral_sub = None
+                while not neutral_sub:
+                    print("\nChoose a neutral faction to join:")
+                    print("1. The Companions (Whiterun)")
+                    print("2. Thieves Guild (Riften)")
+                    print("3. College of Winterhold")
+                    print("4. Dark Brotherhood")
+                    sub_choice = input("Enter (1-4): ").strip()
+                    if sub_choice == "1":
+                        neutral_sub = "companions"
+                    elif sub_choice == "2":
+                        neutral_sub = "thieves_guild"
+                    elif sub_choice == "3":
+                        neutral_sub = "college"
+                    elif sub_choice == "4":
+                        neutral_sub = "dark_brotherhood"
+                    else:
+                        print("Invalid. Please choose 1-4.")
+                print(f"\nParty neutral alignment chosen: {neutral_sub.replace('_', ' ').title()}.\n")
             else:
                 print("⚠️  Invalid choice. Please enter 1, 2, or 3.")
         
@@ -1262,6 +1300,8 @@ the Battle of Whiterun will shape Skyrim's future.
             'faction_alignment': faction_alignment,
             'hooks': f'- The Battle of Whiterun approaches\n- Choose your role in the civil war\n- Protect or challenge Jarl Balgruuf'
         }
+        if faction_alignment == "neutral":
+            campaign_info['neutral_subfaction'] = neutral_sub
         
         # Get number of players
         while True:
@@ -1399,7 +1439,7 @@ the Battle of Whiterun will shape Skyrim's future.
         
         # Update campaign state with faction alignment and characters
         print("\n--- Updating Campaign State ---")
-        campaign_state = self.update_campaign_state(faction_alignment, characters)
+        campaign_state = self.update_campaign_state(faction_alignment, characters, campaign_info.get('neutral_subfaction'))
         
         # Create session zero log
         print("\n--- Creating Session Zero Log ---")

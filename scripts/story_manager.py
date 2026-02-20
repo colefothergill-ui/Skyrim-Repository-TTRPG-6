@@ -1706,6 +1706,73 @@ Schemes Discovered: {len(state['thalmor_arc']['thalmor_schemes_discovered'])}
         
         return self.dragonbreak_manager.get_timeline_state()
 
+    def check_civil_war_eligibility(self, state):
+        """
+        Determine whether the party is eligible to begin the Battle of Whiterun.
+
+        A party is eligible only after completing their faction's intro quest:
+        - Imperial / Stormcloak: their respective intro flag must be set
+        - Neutral: must have completed the neutral_war_catalyst quest OR their
+          neutral subfaction's intro quest
+
+        Args:
+            state: The campaign_state dict
+
+        Returns:
+            bool: True if the civil war battle may proceed
+        """
+        flags = state.get("faction_flags", {})
+        civil_war = state.get("civil_war_state", {})
+        alliance = civil_war.get("player_alliance", "neutral")
+
+        if alliance == "imperial":
+            return flags.get("imperial_intro_complete", False)
+        elif alliance == "stormcloak":
+            return flags.get("stormcloak_intro_complete", False)
+        else:  # neutral
+            if state.get("neutral_war_catalyst_complete", False):
+                return True
+            neutral_subfaction = civil_war.get("neutral_subfaction")
+            if neutral_subfaction:
+                _subfaction_flag_map = {
+                    "companions": "companions_intro_complete",
+                    "college": "college_intro_complete",
+                    "thieves_guild": "tg_intro_complete",
+                    "dark_brotherhood": "db_intro_complete",
+                }
+                intro_flag = _subfaction_flag_map.get(neutral_subfaction, f"{neutral_subfaction}_intro_complete")
+                return flags.get(intro_flag, False)
+            return False
+
+    def start_battle_of_whiterun(self, faction, state=None):
+        """
+        Initiate the Battle of Whiterun for the given faction.
+
+        Raises:
+            Exception: If the party has not yet completed their faction intro quest.
+
+        Args:
+            faction: 'imperial' or 'stormcloak'
+            state: Optional campaign_state dict; loads from disk if not provided
+
+        Returns:
+            Updated campaign_state dict
+        """
+        if state is None:
+            state = self.load_campaign_state() or {}
+
+        if not self.check_civil_war_eligibility(state):
+            raise Exception("Civil War locked: complete your faction intro first.")
+
+        civil_war = state.setdefault("civil_war_state", {})
+        civil_war["allegiance"] = faction
+        civil_war["battle_of_whiterun_status"] = "active"
+        civil_war["civil_war_eligible"] = True
+        civil_war.pop("civil_war_locked_reason", None)
+
+        self.save_campaign_state(state)
+        return state
+
 
 def main():
     """Main function for testing"""
