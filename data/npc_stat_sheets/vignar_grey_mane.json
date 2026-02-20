@@ -1,0 +1,88 @@
+{
+  "name": "Vignar Gray-Mane",
+  "id": "npc_stat_vignar_grey_mane",
+  "type": "Nord Elder / Stormcloak Sympathizer",
+  "category": "Hostile NPC",
+  "location": "Whiterun, Gray-Mane estate / Gate area during battle",
+  "faction": "Stormcloaks (sympathizer)",
+  "role": "Elder of the Gray-Mane clan; becomes Jarl of Whiterun after Stormcloak victory; leads spearpoint assault in Imperial version of Stage 5",
+  "aspects": {
+    "high_concept": "Gray-Mane Patriarch Who Chose Rebellion Over Neutrality",
+    "trouble": "My Hatred for the Battle-Borns Clouds My Judgment",
+    "other_aspects": [
+      "Great War Veteran Who Remembers a Better Time",
+      "Skyrim's Freedom or Nothing",
+      "The Old Nord Ways Are Worth Dying For",
+      "One Foot in the Grave, Still Standing"
+    ]
+  },
+  "skills": {
+    "Great": ["Will", "Fight"],
+    "Good": ["Provoke", "Lore"],
+    "Fair": ["Physique", "Command"],
+    "Average": ["Notice", "Rapport", "Athletics"]
+  },
+  "stunts": [
+    "Great War Grit: +2 to Will when resisting attempts to break his resolve or intimidate him.",
+    "Elder's Authority: +2 to Command when directing Nord fighters; they will not abandon a position he orders held.",
+    "Old Soldier's Last Stand: Once per session, when taken out, Vignar may instead concede with a severe consequence and keep fighting one more exchange."
+  ],
+  "stress": {
+    "physical": [false, false, false],
+    "mental": [false, false, false]
+  },
+  "consequences": {
+    "mild": null,
+    "moderate": null,
+    "severe": null
+  },
+  "refresh": 2,
+  "fate_points": 2,
+  "equipment": {
+    "weapon": "Ancient Nord sword (Weapon:2, family heirloom)",
+    "armor": "Stormcloak officer variant (Armor:1)",
+    "special": "Gray-Mane family seal (legitimizes Stormcloak claim to Whiterun Jarl seat)"
+  },
+  "personality_notes": {
+    "speaking_style": "Measured but unflinching. Speaks with the authority of age and hard experience. Does not waste words on people he considers beneath discussion.",
+    "motivations": [
+      "See the Gray-Mane name restored to Whiterun prominence",
+      "Free Skyrim from the Empire and Thalmor",
+      "Avenge the humiliation of the Gray-Mane/Battle-Born feud",
+      "Die as a free Nord, not an Imperial subject"
+    ],
+    "fears": [
+      "The Battle-Born clan benefiting from his sacrifice",
+      "Dying before Skyrim is free",
+      "The Gray-Mane line ending with him",
+      "Having been wrong about the cause"
+    ],
+    "quirks": [
+      "Constantly references the Great War to contextualize every argument",
+      "Dismisses anyone who didn't fight in the Great War as 'not knowing the cost'",
+      "Protective of Olfina Gray-Mane beyond what he'd admit"
+    ]
+  },
+  "relationships": {
+    "Olfina Gray-Mane": "Granddaughter; loves her fiercely and disapproves of her relationship with Jon Battle-Born",
+    "Battle-Born Clan": "Bitter feudal rivals; despises their Imperial loyalty",
+    "Ulfric Stormcloak": "The cause he has chosen; absolute support",
+    "Galmar Stone-Fist": "Respects as a warrior and tactician",
+    "Jarl Balgruuf": "Views neutrality as cowardice; no personal hatred, just contempt"
+  },
+  "combat_tactics": "Vignar fights as he lived - direct, traditional, and determined. He has no tricks; he relies on will and experience. Takes hits without flinching. Commands those around him naturally.",
+  "dragonbreak_precheck": "If Vignar is killed during the Imperial Stage 5, trigger a Dragonbreak precheck: Whiterun succession crisis, Companions/Gray-Mane clan fallout, and potential for destabilized post-battle political situation.",
+  "scene_triggers": [
+    "Battle of Whiterun Stage 5 (Imperial side - gatehouse climax)",
+    "Post-battle: Stormcloak victory Whiterun (becomes Jarl)",
+    "Whiterun side quests involving Gray-Mane/Battle-Born feud"
+  ],
+  "act_context": ["Act 1", "Act 2"],
+  "dialogue_examples": [
+    "I fought in the Great War. I know what it costs to stand against something that wants to devour you. The Empire is that thing now.",
+    "Balgruuf is a good man who made a coward's choice. I don't hate him for it. I pity him.",
+    "You want to stop me? Then you'd better be ready to put me down.",
+    "This city was Gray-Mane before it was Battle-Born. It will be Gray-Mane after."
+  ],
+  "gm_notes": "Vignar represents the personal human stakes of the civil war's factional conflict. His feud with the Battle-Borns makes the ideological conflict local and immediate. In the Imperial route Stage 5, he is the emotional weight at the gatehouse - not just an enemy commander but an old man who made a choice. His death should carry narrative weight."
+}

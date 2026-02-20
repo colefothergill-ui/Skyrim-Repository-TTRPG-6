@@ -1,0 +1,116 @@
+{
+  "name": "Ulfric Stormcloak",
+  "id": "npc_stat_ulfric_stormcloak",
+  "type": "Nord Jarl and Rebel Leader",
+  "category": "Hostile NPC",
+  "location": "Palace of the Kings, Windhelm",
+  "faction": "Stormcloaks",
+  "role": "Jarl of Eastmarch and Leader of the Stormcloak Rebellion",
+  "aspects": {
+    "high_concept": "Voice of the Rebellion, Thane of Skyrim's Freedom",
+    "trouble": "The Thalmor Made Me What I Am",
+    "other_aspects": [
+      "High King in All But Name",
+      "The Shout That Killed a King",
+      "Nord Tradition Above All Else",
+      "Prisoner of His Own Legend"
+    ]
+  },
+  "skills": {
+    "Superb": ["Will"],
+    "Great": ["Fight", "Provoke"],
+    "Good": ["Thuum", "Command"],
+    "Fair": ["Tactics", "Physique"],
+    "Average": ["Lore", "Rapport"]
+  },
+  "stunts": [
+    "Voice of Power: Ulfric can use Shout (Thuum) as an attack or overcome action once per scene; treat as Great (+4) attack.",
+    "King's Authority: +2 to Command when rallying Stormcloak forces; allied NPCs in zone gain +1 to their next action.",
+    "Iron Will: Once per session, absorb a moderate consequence as a mild consequence instead.",
+    "Prisoner's Fury: When invoking any aspect related to captivity or Thalmor manipulation, gain an additional +1 on top of the normal invoke bonus."
+  ],
+  "stress": {
+    "physical": [false, false, false, false],
+    "mental": [false, false, false, false]
+  },
+  "consequences": {
+    "mild": null,
+    "moderate": null,
+    "severe": null
+  },
+  "refresh": 4,
+  "fate_points": 4,
+  "equipment": {
+    "weapon": "Windhelm Axe of Ulfric (enchanted, Weapon:3)",
+    "armor": "Stormcloak Officer Armor (heavy variant, Armor:2)",
+    "special": "Jagged Crown (if recovered), royal seal of Eastmarch"
+  },
+  "personality_notes": {
+    "speaking_style": "Commanding, measured, and deeply passionate. Uses silence effectively. Quotes Nord tradition. Capable of surprising warmth with warriors he respects.",
+    "motivations": [
+      "Free Skyrim from Imperial and Thalmor control",
+      "Restore the right to worship Talos openly",
+      "Unite the Nord holds under his leadership",
+      "Prove the Stormcloak cause is just and inevitable"
+    ],
+    "fears": [
+      "That the Thalmor used him as a pawn and still do",
+      "That his methods have made him a monster",
+      "Skyrim fracturing beyond repair",
+      "Dying before Skyrim is free"
+    ],
+    "quirks": [
+      "Measures people in silence before speaking",
+      "References the Great War and Thalmor Concordat often",
+      "Uncomfortable with manipulation - prefers direct challenge",
+      "Carries guilt about Torygg even if he doesn't show it"
+    ]
+  },
+  "relationships": {
+    "Galmar Stone-Fist": "Absolute trust - oldest friend and war chief",
+    "Legate Rikke": "Former student, now enemy; complicated respect",
+    "Thalmor": "The true enemy behind the Empire's leash",
+    "Jarl Balgruuf": "Coward or pragmatist; wants him as ally, not corpse",
+    "The Player": "Potential champion; will test worth ruthlessly"
+  },
+  "trust_clock": {
+    "enabled": true,
+    "description": "Ulfric's trust is earned through deeds, not words. Joining the Stormcloaks opens the door; victories seal it.",
+    "current": 0,
+    "max": 8,
+    "advancement_triggers": [
+      "Join Stormcloaks (+2)",
+      "Win a major battle for the cause (+1)",
+      "Demonstrate personal valor (+1)",
+      "Expose Thalmor manipulation (+2)",
+      "Prove loyalty over Imperial temptation (+1)"
+    ],
+    "setback_triggers": [
+      "Join Imperial Legion (-10, permanent)",
+      "Question his right to be High King (-2)",
+      "Show mercy to Imperials in ways that cost Stormcloak lives (-1)"
+    ]
+  },
+  "combat_tactics": "Ulfric fights with authority and presence. Uses Shout to disrupt enemy formations, then presses with axe-work. Commands nearby NPCs mid-combat. Rarely retreats; views withdrawal as a political statement he cannot afford.",
+  "scene_triggers": [
+    "Joining the Stormcloaks",
+    "Pre-battle briefing for Battle of Whiterun (Stormcloak)",
+    "Major Stormcloak victories",
+    "The Jagged Crown quest",
+    "Final assault on Solitude"
+  ],
+  "act_context": ["Act 1", "Act 2", "Act 3"],
+  "dialogue_examples": [
+    "Skyrim belongs to the Nords. Not to the Thalmor, not to the Empire - to us.",
+    "I killed Torygg in fair combat, as is our ancient right. The Empire calls it murder because they fear what it means.",
+    "You've proven yourself. Good. I need people who act, not people who think about acting.",
+    "The Thalmor want us to keep fighting each other. Every Nord who dies in this war is a victory for them."
+  ],
+  "gm_notes": "Ulfric is the most morally complex figure in the civil war. He is genuinely passionate about Skyrim's freedom but also genuinely ruthless. The revelation that the Thalmor used him (from the Thalmor Dossier) should be available to observant PCs. Use him to challenge the party's assumptions about the 'rebel hero' archetype. His relationship with Galmar is the emotional core of the Stormcloak side.",
+  "story_hooks": [
+    "Thalmor dossier on Ulfric exists - was he manipulated? Is he still?",
+    "His Shout killed Torygg - what does that mean for legitimacy?",
+    "Galmar knows Ulfric's private doubts; could be leveraged",
+    "Ulfric's vision of post-war Skyrim is disturbingly exclusionary to non-Nords"
+  ]
+}

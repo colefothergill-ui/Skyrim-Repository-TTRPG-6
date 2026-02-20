@@ -101,6 +101,50 @@
           "At 7/8: Civil disobedience and protests",
           "At 8/8: Riots and complete breakdown of order"
         ]
+      },
+      "battle_of_whiterun_stages": {
+        "name": "Battle of Whiterun Stages",
+        "description": "Tracks progression through the 5-stage Battle of Whiterun structure",
+        "current_progress": 0,
+        "total_segments": 5,
+        "completion_effect": "Battle of Whiterun concluded; faction gains control of Whiterun Hold",
+        "segments": [
+          { "segment": 1, "label": "Stage 1: First line resolved (Dragonsreach breach or outer barricades)" },
+          { "segment": 2, "label": "Stage 2: District approach cleared" },
+          { "segment": 3, "label": "Stage 3: Gildergreen confrontation resolved" },
+          { "segment": 4, "label": "Stage 4: Inner district stabilized" },
+          { "segment": 5, "label": "Stage 5: Climax achieved (gatehouse or Dragonsreach)" }
+        ],
+        "advancement_triggers": [
+          "Party completes a battle stage (+1 per stage)",
+          "Faction commander survives to lead next stage (+0, required to advance normally)"
+        ],
+        "gm_notes": "Advance 1 segment per completed stage. Clock fills when all 5 stages are done."
+      },
+      "hadvar_ralof_rivalry": {
+        "name": "Hadvar/Ralof Rivalry",
+        "description": "Tracks the escalating personal conflict between Hadvar and Ralof across the Battle of Whiterun",
+        "current_progress": 0,
+        "total_segments": 6,
+        "completion_effect": "Rivalry reaches a breaking point; forces a definitive confrontation with major canon consequences",
+        "escalation_hooks": [
+          { "at": 1, "event": "First clash: Hadvar and Ralof cross paths in the chaos; no resolution yet." },
+          { "at": 2, "event": "Direct confrontation at the Gildergreen; one side yields or the other." },
+          { "at": 3, "event": "Aftermath wounds: surviving party carries scars from the confrontation." },
+          { "at": 4, "event": "Word spreads: other soldiers take sides; morale effects ripple through both armies." },
+          { "at": 5, "event": "Personal vendetta: whichever of Hadvar/Ralof survived becomes obsessed with the outcome." },
+          { "at": 6, "event": "Resolution forced: final confrontation or genuine reconciliation; Dragonbreak precheck triggered." }
+        ],
+        "advancement_triggers": [
+          "Officer_outcome: forced_retreat in Stage 1 (+1)",
+          "Ralof/Hadvar outcome: escaped in Stage 3/4 (+2)",
+          "Both survive the battle with unresolved tension (+1)",
+          "PC avoids resolving the confrontation in Stage 3/4 (+1)"
+        ],
+        "setback_triggers": [
+          "Ralof or Hadvar outcome: turned (-2, rivalry replaced by complex alliance)",
+          "PC brokered a ceasefire between them (-3)"
+        ]
       }
     },
     "major_battles": {

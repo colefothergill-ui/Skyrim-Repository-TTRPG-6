@@ -1,0 +1,65 @@
+{
+  "name": "Legate Cipius",
+  "id": "npc_stat_legate_cipius",
+  "type": "Imperial Legate",
+  "category": "Friendly NPC",
+  "location": "Dragonsreach, Whiterun (Battle of Whiterun)",
+  "faction": "Imperial Legion",
+  "role": "Legate overseeing Whiterun's inner defensive preparations",
+  "aspects": {
+    "high_concept": "Methodical Imperial Legate Who Plans for Every Contingency",
+    "trouble": "My Caution Can Be a Liability When Speed Is Required",
+    "other_aspects": [
+      "The Legion Runs on Logistics",
+      "Verify Before You Commit",
+      "Fifteen Years of Borders and Battlefields"
+    ]
+  },
+  "skills": {
+    "Great": ["Tactics"],
+    "Good": ["Will", "Command"],
+    "Fair": ["Fight", "Notice", "Lore"],
+    "Average": ["Athletics", "Empathy", "Resources"]
+  },
+  "stunts": [
+    "Prepared Positions: If given at least one scene to prepare, Cipius creates a free-invoke aspect on any defensive zone (battlefield engineering).",
+    "Legion Logistics: +2 to Resources when requisitioning Imperial military supplies in an active theater.",
+    "Verify and Respond: +2 to Tactics when reacting to an enemy action (not initiating)."
+  ],
+  "stress": {
+    "physical": [false, false, false],
+    "mental": [false, false, false]
+  },
+  "consequences": {
+    "mild": null,
+    "moderate": null,
+    "severe": null
+  },
+  "refresh": 3,
+  "fate_points": 3,
+  "equipment": {
+    "weapon": "Imperial sword (Weapon:2)",
+    "armor": "Imperial heavy armor (Armor:2)",
+    "special": "Defensive plans for Whiterun, cipher keys for Legion dispatches"
+  },
+  "personality_notes": {
+    "speaking_style": "Methodical and detailed. Always qualifies statements with conditions. Rarely expresses emotion overtly but shows it through precision.",
+    "quirks": [
+      "Mentally maps every space he enters",
+      "Always wants verification before acting - contrasts with Caius",
+      "Unusually good at estimating enemy strength from indirect signs"
+    ]
+  },
+  "relationships": {
+    "Commander Caius": "Professional complement; their contrasting styles work well together",
+    "Legate Rikke": "Deep respect; considers her the model Imperial officer",
+    "Irileth": "Appreciates her tactical rigor; mutual professional courtesy"
+  },
+  "combat_tactics": "Cipius fights from prepared positions. Uses terrain advantages he has identified in advance. Retreats in good order when conditions turn against him.",
+  "scene_triggers": [
+    "Battle of Whiterun Stage 0 (War Room Briefing - Imperial)",
+    "Battle of Whiterun Stage 1 (Dragonsreach breach)",
+    "Stormcloak drawbridge push - Stage 2 (as Imperial commander being referenced)"
+  ],
+  "act_context": ["Act 1"]
+}
