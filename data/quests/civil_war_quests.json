@@ -50,11 +50,187 @@
           "description": "Defend Whiterun from Stormcloak assault",
           "prerequisites": ["message_to_whiterun_imperial"],
           "objectives": [
-            "Man the barricades",
-            "Defend against waves of Stormcloak attackers",
-            "Protect Jarl Balgruuf",
-            "Defeat the Stormcloak commander",
-            "Secure the city"
+            "Stage 0: Attend the War Room Briefing at Dragonsreach",
+            "Stage 1: Repel Stormcloak infiltrators inside Dragonsreach and secure the bridge",
+            "Stage 2: Push through Cloud District stairs and protect the Wind District",
+            "Stage 3: Confront Ralof at the Gildergreen and resolve his fate",
+            "Stage 4: Stabilize the Wind District and route remaining Stormcloak squads",
+            "Stage 5: Break the Stormcloak spearpoint at the main gatehouse"
+          ],
+          "battle_overview": {
+            "stages_total": 5,
+            "downtime_stage": {
+              "name": "War Room Briefing (Dragonsreach)",
+              "location": "whiterun_cloud_district_dragonsreach",
+              "setup": "General Tullius orders the PC to report to Dragonsreach. Jarl Balgruuf has committed to the Empire. Legate Rikke and Legate Cipius prepare defenses as the Stormcloak host gathers outside the walls.",
+              "key_npcs": [
+                "npc_stat_general_tullius",
+                "npc_stat_jarl_balgruuf",
+                "npc_stat_legate_rikke",
+                "npc_stat_legate_cipius",
+                "npc_stat_irileth",
+                "npc_stat_hadvar"
+              ],
+              "bonding_beats": [
+                {
+                  "npc": "npc_stat_jarl_balgruuf",
+                  "prompt": "Balgruuf sizes you up. He asks why you fight, and whether you understand what it costs to keep a Hold standing.",
+                  "approaches": {
+                    "Rapport": "Earn a personal nod and a public acknowledgment at the end of the battle.",
+                    "Empathy": "Spot Balgruuf's hesitation and offer him a clean, principled rationale.",
+                    "Provoke": "Dare him to be the Jarl his people believe he is (high risk, high reward)."
+                  },
+                  "backstory_resonance": {
+                    "keywords_any": ["Balgruuf", "Whiterun", "Kodlak", "Jorrvaskr"],
+                    "bonus": "+1 (or 1 free invoke: \"Recognized History\")"
+                  }
+                },
+                {
+                  "npc": "npc_stat_hadvar",
+                  "prompt": "Hadvar checks straps and steel, then checks you. \"Same side again, then?\"",
+                  "approaches": {
+                    "Rapport": "Lock in trust: Hadvar will take a consequence for you once this battle.",
+                    "Tactics": "Coordinate roles: gain 1 free invoke on \"Prepared Kill-Zones\" in Stage 1."
+                  },
+                  "backstory_resonance": {
+                    "keywords_any": ["Hadvar", "Helgen", "Legion", "Imperial"],
+                    "bonus": "+1 to the first teamwork roll with Hadvar"
+                  }
+                },
+                {
+                  "npc": "npc_stat_irileth",
+                  "prompt": "Irileth wants certainty. \"If the walls break, the Jarl dies. Tell me you can hold a line.\"",
+                  "approaches": {
+                    "Will": "Win her respect by refusing to flinch.",
+                    "Fight": "Offer a concrete battle plan in two sentences.",
+                    "Lore": "Identify Stormcloak siege methods and likely breach points."
+                  },
+                  "reward": "If successful, Irileth grants a tactical boon: 1 free invoke on \"Whiterun Guard Elite\" in Stage 2."
+                }
+              ],
+              "scene_aspects": [
+                "War Drums Beyond the Walls",
+                "Balgruuf's Burden",
+                "Imperial Discipline, Nord Blood"
+              ],
+              "compel_hooks": [
+                "Compel: \"Duty Before Comfort\" (report early, give up personal prep)",
+                "Compel: \"Old Friend, New War\" (backstory ties complicate orders)"
+              ]
+            }
+          },
+          "stages": [
+            {
+              "stage": 1,
+              "name": "Sneak Attack: Dragonsreach Breach",
+              "location": "dragonsreach_great_hall_to_bridge",
+              "objective": "Repel infiltrators inside Dragonsreach and push them back across the bridge.",
+              "inciting_event": "Commander Caius staggers in with his men: \"Greymane opened a postern. They're inside!\" Before Cipius can verify, Stormcloaks strike within the hall.",
+              "key_npcs": [
+                "npc_stat_commander_caius",
+                "npc_stat_legate_rikke",
+                "npc_stat_legate_cipius",
+                "npc_stat_irileth",
+                "npc_stat_jarl_balgruuf",
+                "npc_stat_hadvar"
+              ],
+              "zones": ["Throne Dais", "Great Hall", "Bridge Approach", "Exterior Bridge"],
+              "scene_aspects": ["Echoing Hallways", "Panicked Court", "Narrow Bridge Choke"],
+              "opposition": {
+                "primary": "Good (+3)",
+                "boss": "Great (+4) Stormcloak Officer",
+                "notes": "If party is under-leveled, scale officer down to Good (+3) with elite bodyguards as hazards."
+              },
+              "encounters": [
+                {
+                  "type": "skirmish",
+                  "enemies": ["stormcloak_soldier", "stormcloak_soldier", "stormcloak_soldier"],
+                  "twist": "1 disguised attacker emerges from a \"Trusted Servant\" aspect unless discovered."
+                },
+                {
+                  "type": "boss",
+                  "enemies": ["npc_stat_stormcloak_officer_whiterun"],
+                  "stakes": "Capture vs kill determines interrogation intel for Stage 2-3."
+                }
+              ],
+              "branching_choices": [
+                {
+                  "id": "officer_outcome",
+                  "options": ["kill", "capture", "forced_retreat"],
+                  "impact": {
+                    "kill": "No intel; Stormcloaks gain +1 momentum next stage.",
+                    "capture": "Gain intel aspect \"Greymane Contact\" (1 free invoke) and reduce Stage 2 opposition by 1.",
+                    "forced_retreat": "Officer escapes; ticks Hadvar/Ralof rivalry clock +1."
+                  }
+                }
+              ],
+              "completion_trigger": "Bridge secured and infiltrators routed; Balgruuf remains alive and uninjured."
+            },
+            {
+              "stage": 2,
+              "name": "Down to the Wind District",
+              "location": "cloud_district_stairs_to_wind_district",
+              "objective": "Break through Stormcloak pressure down the Cloud District steps and prevent the Wind District from collapsing.",
+              "key_npcs": ["npc_stat_legate_rikke", "npc_stat_hadvar"],
+              "zones": ["Cloud District Stairs", "Gildergreen Plaza", "Temple Steps"],
+              "scene_aspects": ["Arrowfire From Rooftops", "Civilians in the Open", "Slippery Bloodstone Steps"],
+              "opposition": { "primary": "Great (+4)" },
+              "special_tasks": [
+                {
+                  "id": "save_civilians",
+                  "task": "Escort trapped civilians behind guard lines (Athletics/Physique/Rapport).",
+                  "reward": "Balgruuf trust +5; 1 FP if you accept the \"Citizens in Danger\" compel."
+                },
+                {
+                  "id": "secure_kynareth",
+                  "task": "Keep the Temple of Kynareth from being torched (Will/Crafts).",
+                  "reward": "Blessing boon: +1 to first recovery roll after battle."
+                }
+              ],
+              "completion_trigger": "You arrive at the Wind District line intact with at least one task resolved OR the enemy push halted."
+            },
+            {
+              "stage": 3,
+              "name": "Hadvar vs Ralof: Same Coin, Different Stamp",
+              "location": "wind_district_gildergreen",
+              "objective": "Confront Ralof and decide his fate: kill, capture, turn, or let him flee.",
+              "key_npcs": ["npc_stat_hadvar", "npc_stat_ralof"],
+              "scene_aspects": ["Gildergreen Watching", "Old Flames, New War", "Lines Drawn in the Dirt"],
+              "branching_choices": [
+                {
+                  "id": "ralof_outcome",
+                  "options": ["killed", "captured", "turned", "escaped"],
+                  "impact": {
+                    "killed": "Dragonbreak precheck if Ralof is major-canon ally; Hadvar loyalty +5 / morality cost aspect.",
+                    "captured": "Gain aspect \"Prisoner of War\"; Stormcloak momentum -2.",
+                    "turned": "Rare: requires high Rapport + backstory resonance; sets flag \"Ralof Doubts\".",
+                    "escaped": "Ralof becomes recurring rival; ticks rivalry clock +2."
+                  }
+                }
+              ],
+              "completion_trigger": "Ralof is resolved (killed/captured/turned/escaped) and the Wind District line stabilizes."
+            },
+            {
+              "stage": 4,
+              "name": "Stabilize the Wind District",
+              "location": "wind_district_to_plains_district",
+              "objective": "Push remaining Stormcloak squads out of the inner district and prevent looting/sabotage.",
+              "scene_aspects": ["Smoke Over Market", "Broken Shields Everywhere", "Desperate, Cornered Raiders"],
+              "completion_trigger": "Enemy squads routed; at least one special task resolved OR the party chooses to press to the gates."
+            },
+            {
+              "stage": 5,
+              "name": "Gatehouse Climax: Break the Spearpoint",
+              "location": "whiterun_main_gatehouse",
+              "objective": "Defeat the Stormcloak spearpoint at the gates: Galmar and/or Vignar's strike team.",
+              "key_npcs": ["npc_stat_galmar_stonefist", "npc_stat_vignar_grey_mane"],
+              "scene_aspects": ["Gate Chokepoint", "Bodies on the Stone", "Victory or Ruin"],
+              "dragonbreak_precheck": [
+                { "trigger": "Galmar killed", "why": "Major civil war canon fracture; changes multiple holds' war tempo." },
+                { "trigger": "Vignar killed", "why": "Whiterun succession fracture; Companions + Gray-Mane fallout." }
+              ],
+              "completion_trigger": "Gatehouse secured and the Stormcloak spearpoint broken."
+            }
           ],
           "combat_encounters": [
             {
@@ -95,7 +271,8 @@
             "whiterun_control": "imperial",
             "jarl_balgruuf_status": "remains_in_power",
             "stormcloak_morale": -10
-          }
+          },
+          "next_quest": "reunification_of_skyrim_falkreath"
         },
         "stormcloak_version": {
           "id": "battle_for_whiterun_stormcloak",
@@ -103,27 +280,211 @@
           "description": "Attack Whiterun and take the city for the Stormcloaks",
           "prerequisites": ["message_to_whiterun_stormcloak"],
           "objectives": [
-            "Join the assault force",
-            "Breach the city gates",
-            "Fight through Imperial defenders",
-            "Confront Jarl Balgruuf",
-            "Claim the city for Ulfric"
+            "Stage 0: Attend Ulfric's Pre-Battle Briefing at the war camp",
+            "Stage 1: Breach the outer barricades and eliminate the Imperial officer",
+            "Stage 2: Navigate the drawbridge lever route and push into the Plains District",
+            "Stage 3: Press through the Plains District and secure key positions",
+            "Stage 4: Reach the Wind District and confront Hadvar at the Gildergreen",
+            "Stage 5: Storm Dragonsreach and force surrender or combat climax"
           ],
-          "combat_encounters": [
+          "pre_battle_briefing": {
+            "name": "War Camp Briefing",
+            "location": "stormcloak_camp_outside_whiterun",
+            "setup": "Ulfric Stormcloak addresses his commanders. Galmar Stone-Fist sets the tactical plan. Ralof falls in alongside the PC.",
+            "key_npcs": [
+              "npc_stat_ulfric_stormcloak",
+              "npc_stat_galmar_stonefist",
+              "npc_stat_ralof"
+            ],
+            "bonding_beats": [
+              {
+                "npc": "npc_stat_ulfric_stormcloak",
+                "prompt": "Ulfric speaks to the warriors before the battle. He turns to the PC last: \"You've earned your place here. Tell me - what does Skyrim mean to you?\"",
+                "approaches": {
+                  "Rapport": "Earn Ulfric's personal respect: +1 to rolls in his presence this battle.",
+                  "Provoke": "Rouse the gathered warriors into a frenzy: all Stormcloaks gain +1 to Stage 1 attack rolls.",
+                  "Will": "Show quiet resolve: Ulfric grants a single-use \"Ulfric's Trust\" free invoke."
+                },
+                "backstory_resonance": {
+                  "keywords_any": ["Ulfric", "Talos", "Windhelm", "Stormcloak", "Jarl"],
+                  "bonus": "+1 to the first social roll involving Stormcloak NPCs this session"
+                }
+              },
+              {
+                "npc": "npc_stat_galmar_stonefist",
+                "prompt": "Galmar runs through the tactical plan and ends with: \"You and Ralof take the postern. Think you can handle that without dying?\"",
+                "approaches": {
+                  "Tactics": "Impress Galmar with a tactical insight: gain aspect \"Sharp Eyes on the Approach\" (1 free invoke).",
+                  "Rapport": "Earn a gruff acknowledgment: Galmar covers your flank in Stage 1.",
+                  "Provoke": "Dare Galmar to lead from the front (risky - he might steal the glory, but the push is stronger)."
+                }
+              },
+              {
+                "npc": "npc_stat_ralof",
+                "prompt": "Ralof falls in beside you. \"Side by side again. Just like we always said we'd stand.\" He means it.",
+                "approaches": {
+                  "Rapport": "Cement the bond: Ralof gains Shield Brother equivalent for Stormcloak attacks.",
+                  "Empathy": "Notice his edge of doubt and address it: prevents the rivalry clock ticking on a bad Stage 4 outcome."
+                },
+                "backstory_resonance": {
+                  "keywords_any": ["Ralof", "Helgen", "Riverwood", "Stormcloak", "Nord"],
+                  "bonus": "+1 to the first teamwork roll with Ralof"
+                }
+              }
+            ],
+            "scene_aspects": [
+              "War Drums and Torchlight",
+              "Ulfric's Shadow Looms Large",
+              "The City Waits - And So Does History"
+            ],
+            "compel_hooks": [
+              "Compel: \"Old Wounds\" (someone from the party's past is inside those walls)",
+              "Compel: \"For Skyrim!\" (heroic impulse overrides tactical caution on first assault)"
+            ]
+          },
+          "stages": [
             {
-              "wave": 1,
-              "description": "Breach the main gate under fire",
-              "difficulty": "Fair"
+              "stage": 1,
+              "name": "Breach the Outer Barricades",
+              "location": "whiterun_outer_walls_barricades",
+              "objective": "Overrun the Imperial outer barricades and eliminate the commanding officer.",
+              "key_npcs": ["npc_stat_ralof", "npc_stat_galmar_stonefist"],
+              "zones": ["Outer Gate Approach", "Barricade Line", "Guard Tower Base"],
+              "scene_aspects": ["Crossbow Fire from the Walls", "Burning Torches and Chaos", "Narrow Gate Chokepoint"],
+              "opposition": {
+                "primary": "Good (+3) Imperial Legionnaire squads",
+                "boss": "Great (+4) Legate Officer",
+                "notes": "Galmar leads the main assault; PC and Ralof handle the officer."
+              },
+              "encounters": [
+                {
+                  "type": "breach",
+                  "enemies": ["imperial_legionnaire", "imperial_legionnaire", "whiterun_guard"],
+                  "twist": "A ballista on the wall creates a zone hazard until disabled (Crafts or Shoot)."
+                },
+                {
+                  "type": "boss",
+                  "enemies": ["npc_stat_legate_officer_whiterun"],
+                  "stakes": "Killing vs capturing the officer affects Imperial morale in later stages."
+                }
+              ],
+              "branching_choices": [
+                {
+                  "id": "officer_outcome",
+                  "options": ["kill", "capture", "forced_retreat"],
+                  "impact": {
+                    "kill": "Imperial morale -1 for Stage 2; no intel.",
+                    "capture": "Gain intel aspect \"Gate Codes Extracted\" (reduces Stage 2 drawbridge difficulty by 1).",
+                    "forced_retreat": "Officer alerts inner defenders; Stage 2 opposition +1."
+                  }
+                }
+              ],
+              "completion_trigger": "Outer barricades overrun and Imperial officer resolved."
             },
             {
-              "wave": 2,
-              "description": "Fight through the city streets",
-              "difficulty": "Fair"
+              "stage": 2,
+              "name": "The Drawbridge Push",
+              "location": "whiterun_drawbridge_approach",
+              "objective": "Reach and operate the drawbridge lever to allow the main Stormcloak force entry.",
+              "key_npcs": ["npc_stat_ralof", "npc_stat_galmar_stonefist"],
+              "zones": ["Drawbridge Mechanism", "Plains District Entrance", "Guard Barracks"],
+              "scene_aspects": ["Lever Behind Enemy Lines", "Reinforcements Pouring In", "Now or Never"],
+              "branching_approaches": [
+                {
+                  "id": "lever_route",
+                  "options": ["direct_assault", "stealth_flanking", "distraction_gambit"],
+                  "impact": {
+                    "direct_assault": "High cost; Stormcloak casualties +2 but lever reached quickly.",
+                    "stealth_flanking": "Requires Athletics/Stealth; lever reached with minimal losses.",
+                    "distraction_gambit": "Ralof creates a diversion; PC slips through (Rapport/Deceive vs Good)."
+                  }
+                }
+              ],
+              "commander_choice": {
+                "prompt": "Galmar asks who should lead the main push into the Plains District once the gate opens.",
+                "options": ["commander_caius_intercept", "cipius_flanking_route"],
+                "notes": "References npc_stat_commander_caius and npc_stat_legate_cipius as Imperial commanders intercepting."
+              },
+              "completion_trigger": "Drawbridge lever pulled; main Stormcloak force pours through the gate."
             },
             {
-              "wave": 3,
-              "description": "Storm Dragonsreach",
-              "difficulty": "Good"
+              "stage": 3,
+              "name": "Plains District Push",
+              "location": "whiterun_plains_district",
+              "objective": "Sweep through the Plains District, secure key nodes, and complete available side tasks.",
+              "key_npcs": ["npc_stat_ralof"],
+              "zones": ["Market District", "Bannered Mare Crossroads", "Stable Approach"],
+              "scene_aspects": ["Smoke Over the Market", "Defenders Behind Every Door", "Civilians Caught Between"],
+              "district_nodes": [
+                {
+                  "id": "bannered_mare",
+                  "task": "Secure the Bannered Mare as a field hospital / command post.",
+                  "reward": "+1 Stormcloak momentum; wounded troops recover 1 consequence."
+                },
+                {
+                  "id": "blacksmith",
+                  "task": "Secure Warmaiden's forge for weapon repair and supplies.",
+                  "reward": "Loot aspect: \"Skyforge-Quality Repairs\" (1 free invoke on equipment this battle)."
+                }
+              ],
+              "loot_hooks": [
+                "Imperial supply crates: 50 gold + minor enchanted gear",
+                "Battle-Born strongbox: documents relevant to Thalmor sub-plot (optional discovery)"
+              ],
+              "completion_trigger": "Plains District secured with at least one district node held."
+            },
+            {
+              "stage": 4,
+              "name": "Wind District: Ralof vs Hadvar",
+              "location": "wind_district_gildergreen",
+              "objective": "Reach the Wind District and resolve the Hadvar confrontation.",
+              "key_npcs": ["npc_stat_ralof", "npc_stat_hadvar"],
+              "scene_aspects": ["Gildergreen as Witness", "Brothers on Opposite Sides", "The War Made Personal"],
+              "rivalry_escalation": "This stage ticks the hadvar_ralof_rivalry clock by 1 regardless of outcome.",
+              "branching_choices": [
+                {
+                  "id": "hadvar_outcome",
+                  "options": ["killed", "captured", "turned", "escaped"],
+                  "impact": {
+                    "killed": "Dragonbreak precheck if Hadvar is major-canon ally; Ralof loyalty +5 / morality cost aspect.",
+                    "captured": "Gain aspect \"Imperial Prisoner\"; Imperial momentum -2.",
+                    "turned": "Rare: requires high Rapport + backstory resonance; sets flag \"Hadvar Doubts\".",
+                    "escaped": "Hadvar becomes recurring rival; ticks rivalry clock +2."
+                  }
+                }
+              ],
+              "completion_trigger": "Hadvar resolved and Wind District line broken."
+            },
+            {
+              "stage": 5,
+              "name": "Dragonsreach Climax",
+              "location": "whiterun_cloud_district_dragonsreach",
+              "objective": "Breach Dragonsreach and force Jarl Balgruuf to surrender or be defeated in combat.",
+              "key_npcs": ["npc_stat_jarl_balgruuf", "npc_stat_irileth", "npc_stat_ulfric_stormcloak"],
+              "scene_aspects": ["The Jarl's Last Stand", "Irileth Guards the Throne", "Ulfric Waits at the Gate"],
+              "climax_routes": [
+                {
+                  "id": "combat",
+                  "description": "Fight through Irileth's elite guard and confront Balgruuf directly.",
+                  "opposition": "Great (+4) Irileth + Good (+3) housecarls"
+                },
+                {
+                  "id": "surrender",
+                  "description": "Balgruuf yields if Irileth is defeated and all escape routes are cut off.",
+                  "trigger": "Irileth taken out + all exits controlled."
+                },
+                {
+                  "id": "dragonbreak_parley",
+                  "description": "Rare: PC with Ulfric's Trust + high Rapport offers Balgruuf an honorable exile rather than death.",
+                  "requirements": "\"Ulfric's Trust\" aspect + Rapport roll vs Superb (+5)",
+                  "outcome": "Balgruuf accepts exile peacefully; Vignar installed without bloodshed; massive reputation gain."
+                }
+              ],
+              "dragonbreak_precheck": [
+                { "trigger": "Balgruuf killed", "why": "Whiterun succession crisis; Companions + citizens' fallout." },
+                { "trigger": "Irileth killed", "why": "Dark Brotherhood / Dunmer community ripple; unique recruitable NPC lost." }
+              ],
+              "completion_trigger": "Dragonsreach secured; Balgruuf surrendered, fled, or defeated."
             }
           ],
           "companion_support": {
@@ -145,8 +506,47 @@
             "jarl_balgruuf_status": "exiled_to_solitude",
             "new_jarl": "Vignar Gray-Mane",
             "imperial_morale": -10
-          }
+          },
+          "next_quest": "liberation_of_skyrim_falkreath"
         }
+      },
+      "liberation_of_skyrim_falkreath": {
+        "id": "liberation_of_skyrim_falkreath",
+        "name": "Liberation of Skyrim: Falkreath",
+        "faction": "stormcloak",
+        "description": "With Whiterun secured for the Stormcloaks, Ulfric orders the liberation of Falkreath Hold from Imperial control.",
+        "prerequisites": ["battle_for_whiterun_stormcloak"],
+        "status": "stub",
+        "stub_notes": "Continuation quest placeholder. Full staging TBD in future patch.",
+        "next_quest": "liberation_of_skyrim_the_pale"
+      },
+      "reunification_of_skyrim_falkreath": {
+        "id": "reunification_of_skyrim_falkreath",
+        "name": "Reunification of Skyrim: Falkreath",
+        "faction": "imperial",
+        "description": "With Whiterun secured for the Empire, General Tullius orders the reunification drive through Falkreath Hold.",
+        "prerequisites": ["battle_for_whiterun_imperial"],
+        "status": "stub",
+        "stub_notes": "Continuation quest placeholder. Full staging TBD in future patch.",
+        "next_quest": "reunification_of_skyrim_the_pale"
+      },
+      "liberation_of_skyrim_the_pale": {
+        "id": "liberation_of_skyrim_the_pale",
+        "name": "Liberation of Skyrim: The Pale",
+        "faction": "stormcloak",
+        "description": "Stormcloak forces push into The Pale to capture Dawnstar.",
+        "prerequisites": ["liberation_of_skyrim_falkreath"],
+        "status": "stub",
+        "stub_notes": "Stub placeholder. Full staging TBD."
+      },
+      "reunification_of_skyrim_the_pale": {
+        "id": "reunification_of_skyrim_the_pale",
+        "name": "Reunification of Skyrim: The Pale",
+        "faction": "imperial",
+        "description": "Imperial forces push into The Pale to pacify Dawnstar.",
+        "prerequisites": ["reunification_of_skyrim_falkreath"],
+        "status": "stub",
+        "stub_notes": "Stub placeholder. Full staging TBD."
       },
       "major_battles": [
         {

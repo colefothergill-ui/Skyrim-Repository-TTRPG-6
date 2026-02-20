@@ -203,6 +203,22 @@ class StoryManager:
         self.save_campaign_state(state)
         return True
     
+    def _iter_quest_records(self, quests_data):
+        """
+        Helper to iterate quest records regardless of whether they are stored
+        as a list or a dict (dict.values() covers the new format).
+
+        Args:
+            quests_data: The value of main_questline['quests'] (list or dict).
+
+        Yields:
+            Individual quest record dicts.
+        """
+        if isinstance(quests_data, dict):
+            yield from quests_data.values()
+        elif isinstance(quests_data, list):
+            yield from quests_data
+
     def get_available_quests(self):
         """
         Get list of currently available quests based on state
@@ -216,8 +232,10 @@ class StoryManager:
         available = []
         
         # Check main questline
-        for quest in main_quests_data['main_questline']['quests']:
-            if quest['status'] == 'available':
+        for quest in self._iter_quest_records(
+            main_quests_data['main_questline']['quests']
+        ):
+            if quest.get('status') == 'available':
                 available.append({
                     'type': 'main',
                     'quest': quest
@@ -237,17 +255,19 @@ class StoryManager:
         if not main_quests_data:
             return False
         
+        quests_raw = main_quests_data['main_questline']['quests']
+        
         # Find and update quest
-        for quest in main_quests_data['main_questline']['quests']:
-            if quest['id'] == quest_id:
-                old_status = quest['status']
+        for quest in self._iter_quest_records(quests_raw):
+            if quest.get('id') == quest_id:
+                old_status = quest.get('status')
                 quest['status'] = new_status
                 
                 # If completing a quest, unlock next quest
                 if new_status == 'completed' and 'next_quest' in quest:
                     next_quest_id = quest['next_quest']
-                    for next_quest in main_quests_data['main_questline']['quests']:
-                        if next_quest['id'] == next_quest_id:
+                    for next_quest in self._iter_quest_records(quests_raw):
+                        if next_quest.get('id') == next_quest_id:
                             next_quest['status'] = 'available'
                             print(f"Unlocked quest: {next_quest['name']}")
                 
@@ -1316,8 +1336,11 @@ Schemes Discovered: {len(state['thalmor_arc']['thalmor_schemes_discovered'])}
         if not main_quests_data:
             return []
         
-        quests = main_quests_data.get('main_questline', {}).get('quests', [])
-        act_quests = [q for q in quests if q.get('act') == act]
+        quests_raw = main_quests_data.get('main_questline', {}).get('quests', [])
+        act_quests = [
+            q for q in self._iter_quest_records(quests_raw)
+            if q.get('act') == act
+        ]
         
         return act_quests
     
@@ -1511,8 +1534,8 @@ Schemes Discovered: {len(state['thalmor_arc']['thalmor_schemes_discovered'])}
         if not main_quests_data:
             return None
         
-        quests = main_quests_data.get('main_questline', {}).get('quests', [])
-        for quest in quests:
+        quests_raw = main_quests_data.get('main_questline', {}).get('quests', [])
+        for quest in self._iter_quest_records(quests_raw):
             if quest.get('id') == quest_id:
                 return {
                     'quest_name': quest.get('name'),
@@ -1705,6 +1728,81 @@ Schemes Discovered: {len(state['thalmor_arc']['thalmor_schemes_discovered'])}
             return None
         
         return self.dragonbreak_manager.get_timeline_state()
+
+    def start_battle_of_whiterun(self, faction):
+        """
+        Initialize the Battle of Whiterun staged flow in campaign state.
+
+        Args:
+            faction: 'imperial' or 'stormcloak'
+
+        Returns:
+            True on success, False otherwise.
+        """
+        if faction not in ('imperial', 'stormcloak'):
+            print(f"Error: faction must be 'imperial' or 'stormcloak', got: {faction!r}")
+            return False
+
+        state = self.load_campaign_state()
+        if not state:
+            return False
+
+        cw = state.setdefault('civil_war_state', {})
+        cw['battle_of_whiterun_status'] = 'active'
+        cw['battle_of_whiterun_faction'] = faction
+        cw.setdefault('battle_of_whiterun_stage', 0)
+        cw.setdefault('battle_of_whiterun_last_stage_completed', 0)
+        cw.setdefault('battle_of_whiterun_companion', None)
+
+        self.save_campaign_state(state)
+        print(f"Battle of Whiterun started - Faction: {faction}")
+        return True
+
+    def complete_battle_of_whiterun_stage(self):
+        """
+        Advance the Battle of Whiterun to the next stage.
+
+        Increments battle_of_whiterun_stage and updates
+        battle_of_whiterun_last_stage_completed.  When all 5 stages are done
+        the battle status is set to 'completed' and the appropriate next quest
+        is unlocked.
+
+        Returns:
+            The new stage number, or None on failure.
+        """
+        state = self.load_campaign_state()
+        if not state:
+            return None
+
+        cw = state.get('civil_war_state', {})
+        current_stage = cw.get('battle_of_whiterun_stage', 0)
+
+        if cw.get('battle_of_whiterun_status') != 'active':
+            print("Battle of Whiterun is not currently active.")
+            return None
+
+        new_stage = current_stage + 1
+        cw['battle_of_whiterun_stage'] = new_stage
+        cw['battle_of_whiterun_last_stage_completed'] = current_stage
+
+        print(f"Battle of Whiterun stage advanced: {current_stage} -> {new_stage}/5")
+
+        if new_stage > 5:
+            cw['battle_of_whiterun_status'] = 'completed'
+            faction = cw.get('battle_of_whiterun_faction', 'imperial')
+            next_quest_map = {
+                'imperial': 'reunification_of_skyrim_falkreath',
+                'stormcloak': 'liberation_of_skyrim_falkreath',
+            }
+            next_quest_id = next_quest_map.get(faction)
+            print(f"Battle of Whiterun COMPLETED (faction: {faction})")
+            if next_quest_id:
+                print(f"Next quest unlocked: {next_quest_id}")
+                # Record in state for downstream consumers
+                cw['battle_of_whiterun_next_quest'] = next_quest_id
+
+        self.save_campaign_state(state)
+        return new_stage
 
 
 def main():

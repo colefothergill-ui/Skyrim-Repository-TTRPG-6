@@ -1,0 +1,113 @@
+{
+  "name": "Jarl Balgruuf the Greater",
+  "id": "npc_stat_jarl_balgruuf",
+  "type": "Nord Jarl",
+  "category": "Friendly NPC",
+  "location": "Dragonsreach, Whiterun",
+  "faction": "Whiterun Hold (nominally Imperial-aligned)",
+  "role": "Jarl of Whiterun Hold",
+  "aspects": {
+    "high_concept": "The Jarl Who Refused to Choose - Until He Had To",
+    "trouble": "Every Decision Costs Him Something He Cannot Afford to Lose",
+    "other_aspects": [
+      "Whiterun's People Come First",
+      "More Soldier Than Politician",
+      "The Hold Was My Father's Before Mine",
+      "Irileth Keeps Me Honest"
+    ]
+  },
+  "skills": {
+    "Great": ["Will", "Command"],
+    "Good": ["Fight", "Empathy"],
+    "Fair": ["Notice", "Rapport"],
+    "Average": ["Athletics", "Lore", "Resources"]
+  },
+  "stunts": [
+    "Jarl's Word: Once per session, Balgruuf's decree creates a situational aspect with 2 free invokes for the party (in Whiterun Hold only).",
+    "Soldier's Instinct: +2 to Notice in combat; never surprised in his own hold.",
+    "The Buck Stops Here: +2 to Will when resisting pressure to abandon Whiterun or its people."
+  ],
+  "stress": {
+    "physical": [false, false, false],
+    "mental": [false, false, false, false]
+  },
+  "consequences": {
+    "mild": null,
+    "moderate": null,
+    "severe": null
+  },
+  "refresh": 3,
+  "fate_points": 3,
+  "equipment": {
+    "weapon": "Axe of Whiterun (Weapon:2, enchanted)",
+    "armor": "Jarl's regalia (light, Armor:1)",
+    "special": "Dragonsreach keys, Hold seal"
+  },
+  "personality_notes": {
+    "speaking_style": "Direct and pragmatic. Does not mince words. Shows genuine warmth to those who earn it. Formal in court, blunt in private.",
+    "motivations": [
+      "Protect his people above all factional politics",
+      "Keep Whiterun prosperous and stable",
+      "Honor his family's legacy",
+      "Eventually pick the right side - not just the safer side"
+    ],
+    "fears": [
+      "Making the wrong choice and watching Whiterun burn for it",
+      "His sons growing up in a war-torn Skyrim",
+      "Irileth dying because of his hesitation",
+      "History judging him as a coward"
+    ],
+    "quirks": [
+      "Stands when others would sit during tense conversations",
+      "Checks on his sons when stressed",
+      "Defers to Irileth on tactical matters instinctively",
+      "Respects people who challenge him honestly more than those who flatter him"
+    ]
+  },
+  "relationships": {
+    "Irileth": "Housecarl and closest advisor; trusts her judgment completely",
+    "Farengar Secret-Fire": "Court wizard; appreciates his work even if he's eccentric",
+    "Proventus Avenicci": "Steward; reliable but too cautious",
+    "Ulfric Stormcloak": "Respects as a warrior; resents the impossible choice he's forced",
+    "General Tullius": "Recognizes the necessity; doesn't fully trust Imperial motives",
+    "The Player": "Judges by deeds; rewards competence with unusual openness"
+  },
+  "trust_clock": {
+    "enabled": true,
+    "description": "Balgruuf respects those who demonstrate competence and genuine care for Whiterun's people over political allegiance.",
+    "current": 0,
+    "max": 6,
+    "advancement_triggers": [
+      "Help defend or protect Whiterun's people (+1)",
+      "Complete a task for Farengar or the Hold (+1)",
+      "Demonstrate personal valor in his presence (+1)",
+      "Give him a principled reason to trust your judgment (+1)",
+      "Survive the Battle of Whiterun and acknowledge the cost (+2)"
+    ],
+    "setback_triggers": [
+      "Threaten or harm Whiterun citizens (-3)",
+      "Make him look weak in front of his court (-2)",
+      "Betray a confidence he granted you (-2)"
+    ]
+  },
+  "combat_tactics": "Balgruuf fights when cornered; prefers command. In his throne room he uses Irileth as a screen. If forced into direct combat, he's a capable axe-fighter who relies on his guards' discipline.",
+  "scene_triggers": [
+    "Party first arrives in Whiterun",
+    "Battle of Whiterun pre-battle briefing (Imperial side)",
+    "Any Hold-level political decision in Whiterun",
+    "Thalmor pressure on Whiterun",
+    "Post-battle aftermath"
+  ],
+  "act_context": ["Act 1", "Act 2"],
+  "dialogue_examples": [
+    "I'm a Nord. I love Skyrim as much as any man. But I love my people more than any cause.",
+    "You want to know what it's like to sit this throne? It means every choice you make is wrong somehow.",
+    "Irileth is worth ten of any soldier either side can throw at me. Remember that.",
+    "The Stormcloaks, the Empire... they both talk about Skyrim. Neither of them talks about Whiterun."
+  ],
+  "gm_notes": "Balgruuf is the moral center of the civil war's human cost. He doesn't want to choose sides - not because he's weak but because he understands what choosing means. Let PCs build genuine trust with him; it makes the stakes of the battle more meaningful. His relationship with Irileth should be portrayed as deep mutual respect. If Balgruuf is killed, treat it as a major canon fracture requiring a Dragonbreak check.",
+  "battle_of_whiterun_role": {
+    "imperial": "Active participant in the defense; coordinates from Dragonsreach; grants party Jarl's authority boon if trust is high",
+    "stormcloak": "Target/defender; can surrender, fight, or accept honorable exile (requires Ulfric's Trust + high Rapport)"
+  }
+}

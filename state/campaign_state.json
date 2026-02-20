@@ -7,11 +7,11 @@
   "active_pc_id": "pc_oskern_cindershroud",
   "session_zero_completed": true,
   "session_count": 1,
-  "last_updated": "2026-02-19 05:12:49",
+  "last_updated": "2026-02-20 03:45:09",
   "starting_location": "Winterhold - College Bridge",
-  "session_start_location": "Saarthal — Eye Chamber (pre-withdrawal)",
+  "session_start_location": "Saarthal \u2014 Eye Chamber (pre-withdrawal)",
   "current_scene_id": "A1_S01_SAARTHAL_WITHDRAWAL",
-  "current_location": "Saarthal — Eye Chamber (pre-withdrawal)",
+  "current_location": "Saarthal \u2014 Eye Chamber (pre-withdrawal)",
   "active_hold": "Winterhold Hold",
   "current_objective": "Withdraw from Saarthal with the students and the College's notes. Report the Eye of Magnus discovery to Arch-Mage Savos Aren. Keep Ancano boxed into \"observer\" status.",
   "current_npcs": [
@@ -132,7 +132,7 @@
   "civil_war_state": {
     "player_alliance": "neutral",
     "whiterun_control": "neutral",
-    "battle_of_whiterun_status": "approaching",
+    "battle_of_whiterun_status": "active",
     "imperial_victories": 0,
     "stormcloak_victories": 0,
     "key_battles_completed": [],
@@ -140,7 +140,16 @@
       "imperial_legion": 0,
       "stormcloaks": 0
     },
-    "battle_of_whiterun_modifiers": []
+    "battle_of_whiterun_modifiers": [],
+    "battle_of_whiterun_stage": 1,
+    "battle_of_whiterun_faction": "imperial",
+    "battle_of_whiterun_companion": null,
+    "battle_of_whiterun_last_stage_completed": 0,
+    "hadvar_ralof_rivalry_clock": {
+      "current": 0,
+      "max": 6,
+      "notes": "Ticks during key set-pieces; resolves into kill/capture/turn outcomes."
+    }
   },
   "main_quest_state": {
     "post_alduin_timeline": true,
@@ -262,12 +271,31 @@
       "faction_alignment": "neutral"
     }
   ],
-  "starting_narrative": "Oskern Cindershroud begins at the College of Winterhold, already a capable Adept with a famous (and politically loaded) name. The first crisis is local: Tolfdir's expedition to Saarthal and the sealed anomaly beneath it. The civil war remains a looming backdrop—Whiterun is still officially neutral, and both sides pressure Jarl Balgruuf—while the Thalmor maneuver in the shadows.",
+  "starting_narrative": "Oskern Cindershroud begins at the College of Winterhold, already a capable Adept with a famous (and politically loaded) name. The first crisis is local: Tolfdir's expedition to Saarthal and the sealed anomaly beneath it. The civil war remains a looming backdrop\u2014Whiterun is still officially neutral, and both sides pressure Jarl Balgruuf\u2014while the Thalmor maneuver in the shadows.",
   "faction_relationships": {
     "college_of_winterhold": 32,
     "tolfdir": 47,
     "mirabelle_ervine": 35,
     "companions": 20
   },
-  "npc_first_impressions": {}
+  "npc_first_impressions": {
+    "test_companion": {
+      "pc_oskern_cindershroud": {
+        "timestamp": "2026-02-20T03:35:21.843835",
+        "disposition": "neutral",
+        "line": "Snow's falling and you're holding fire like it's a lantern. Show-off... useful, though.",
+        "source": "default",
+        "recognition_tags": [
+          "college_of_winterhold",
+          "imperial_noble",
+          "pyromancer",
+          "thuum_user",
+          "atronach_stone_blessed",
+          "cindershroud_name",
+          "staff_of_cinders"
+        ]
+      }
+    }
+  },
+  "relationship_inference": {}
 }

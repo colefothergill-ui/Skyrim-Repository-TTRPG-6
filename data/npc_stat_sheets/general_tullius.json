@@ -1,0 +1,107 @@
+{
+  "name": "General Tullius",
+  "id": "npc_stat_general_tullius",
+  "type": "Imperial General",
+  "category": "Friendly NPC",
+  "location": "Castle Dour, Solitude",
+  "faction": "Imperial Legion",
+  "role": "Military Governor of Skyrim and Commander of Imperial Legion forces",
+  "aspects": {
+    "high_concept": "The Empire's Iron Hand in Skyrim",
+    "trouble": "He Doesn't Understand Skyrim - and Doesn't Realize He Needs To",
+    "other_aspects": [
+      "The War Ends When I Say It Ends",
+      "Cyrodilic Pragmatism Above All",
+      "The Thalmor Are an Inconvenience, Not an Enemy",
+      "Rikke Understands These Nords Better Than I Do"
+    ]
+  },
+  "skills": {
+    "Superb": ["Command"],
+    "Great": ["Will", "Tactics"],
+    "Good": ["Fight", "Provoke"],
+    "Fair": ["Notice", "Resources"],
+    "Average": ["Empathy", "Rapport", "Lore"]
+  },
+  "stunts": [
+    "General's Authority: +2 to Command when issuing orders to Imperial soldiers; orders cannot be questioned without serious consequences.",
+    "Strategic Mind: Once per session, declare a free invoke on any battlefield aspect by announcing his tactical assessment.",
+    "Unshakeable Resolve: +2 to Will against Intimidation or fear; ignores first mild mental consequence per session."
+  ],
+  "stress": {
+    "physical": [false, false, false],
+    "mental": [false, false, false, false]
+  },
+  "consequences": {
+    "mild": null,
+    "moderate": null,
+    "severe": null
+  },
+  "refresh": 3,
+  "fate_points": 3,
+  "equipment": {
+    "weapon": "Tullius's sword (Weapon:3, masterwork Imperial blade)",
+    "armor": "General's armor (Armor:2)",
+    "special": "Imperial writ of authority, strategic battle maps of Skyrim, Thalmor liaison documents"
+  },
+  "personality_notes": {
+    "speaking_style": "Clipped, military, and to the point. No sentiment. Occasionally reveals dry wit. Dismissive of Nord customs he doesn't understand.",
+    "motivations": [
+      "End the rebellion and restore Imperial order in Skyrim",
+      "Advance his career through decisive victory",
+      "Protect the Empire's strategic position against future Thalmor aggression",
+      "Prove that disciplined Imperial forces can crush Nord 'barbarian' tactics"
+    ],
+    "fears": [
+      "Losing Skyrim to the Stormcloaks on his watch",
+      "The Thalmor undermining his campaign",
+      "Rikke being right that he doesn't understand what he's dealing with",
+      "The war dragging on and becoming unwinnable"
+    ],
+    "quirks": [
+      "Studies maps compulsively before any meeting",
+      "Cannot hide his frustration with Thalmor diplomatic requirements",
+      "Respects competence, regardless of origin - will acknowledge a good soldier",
+      "Uses 'Rikke, explain this' when Nord customs baffle him"
+    ]
+  },
+  "relationships": {
+    "Legate Rikke": "Trusted tactical officer; values her more than he admits",
+    "Thalmor": "Necessary political inconvenience; privately despises their interference",
+    "Ulfric Stormcloak": "Rebel who must be put down; nothing personal",
+    "Jarl Balgruuf": "Useful loyal jarl; a tool of Imperial strategy",
+    "The Player": "Measures by results; will promote or dismiss based purely on effectiveness"
+  },
+  "trust_clock": {
+    "enabled": true,
+    "description": "Tullius grants trust through demonstrated military effectiveness. No sentiment - only results.",
+    "current": 0,
+    "max": 6,
+    "advancement_triggers": [
+      "Win a significant engagement for the Legion (+2)",
+      "Follow orders without deviation (+1)",
+      "Provide actionable intelligence on Stormcloak positions (+1)",
+      "Survive a major battle and report in (+1)"
+    ],
+    "setback_triggers": [
+      "Disobey direct orders (-2)",
+      "Interact with Thalmor in ways that complicate his diplomatic position (-1)",
+      "Align with Stormcloaks (-10, permanent)"
+    ]
+  },
+  "combat_tactics": "Tullius rarely fights personally; he commands. In extremis, he is a highly trained swordsman who uses disciplined technique. Would rather win with positioning and numbers than personal valor.",
+  "scene_triggers": [
+    "Battle of Whiterun War Room Briefing (referenced/off-screen for field commanders)",
+    "Any major Imperial Legion quest",
+    "Joining the Legion",
+    "Final assault on Windhelm"
+  ],
+  "act_context": ["Act 1", "Act 2", "Act 3"],
+  "dialogue_examples": [
+    "The rebellion ends when Ulfric Stormcloak's head is on a spike. Everything else is logistics.",
+    "I don't care about Nord customs. I care about holding Skyrim for the Empire.",
+    "Rikke, are they always this dramatic?",
+    "You've been effective. That's all that matters here. Don't ruin it by developing opinions."
+  ],
+  "gm_notes": "Tullius represents the Empire's institutional blindness to Skyrim's culture. He is not evil - he is an administrator who sees the rebellion as an operational problem rather than a cultural crisis. His frustration with the Thalmor is genuine and can be leveraged. His reliance on Rikke should be visible. If used well, he provides dry comic relief while illustrating why the civil war started in the first place."
+}

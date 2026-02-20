@@ -1,0 +1,50 @@
+{
+  "name": "Legate Officer (Whiterun)",
+  "id": "npc_stat_legate_officer_whiterun",
+  "type": "Imperial Legate Officer",
+  "category": "Hostile NPC",
+  "location": "Whiterun outer defenses",
+  "faction": "Imperial Legion",
+  "role": "Commanding officer of the outer barricade line during the Stormcloak assault",
+  "aspects": {
+    "high_concept": "Hard-Bitten Imperial Officer Holding the Line",
+    "trouble": "The Orders Don't Account for This Much Chaos",
+    "other_aspects": [
+      "Veteran of Three Border Campaigns",
+      "Discipline Over Everything",
+      "My Men Follow Because I Lead from the Front"
+    ]
+  },
+  "skills": {
+    "Great": ["Fight"],
+    "Good": ["Will", "Command"],
+    "Fair": ["Athletics", "Notice"],
+    "Average": ["Physique", "Tactics"]
+  },
+  "stunts": [
+    "Hold the Line: +2 to Fight when defending a zone against a larger force.",
+    "Officer's Rally: Once per scene, remove a mild consequence from an allied Imperial NPC in the same zone."
+  ],
+  "stress": {
+    "physical": [false, false, false],
+    "mental": [false, false]
+  },
+  "consequences": {
+    "mild": null,
+    "moderate": null,
+    "severe": null
+  },
+  "refresh": 2,
+  "fate_points": 2,
+  "equipment": {
+    "weapon": "Imperial sword (Weapon:2)",
+    "armor": "Imperial heavy armor (Armor:2)",
+    "special": "Officer's seal, tactical orders"
+  },
+  "combat_tactics": "Fights at the center of his line, using his men as a shield formation. Will attempt to retreat and regroup if outnumbered beyond 3:1. Can be captured if flanked or if his guards are neutralized.",
+  "capture_vs_kill": "If captured, provides intel on inner defenses (reduces Stage 2 opposition by 1 for Stormcloak version). If killed, Imperial morale in Stage 2 is reduced but no intel is gained.",
+  "scene_triggers": [
+    "Battle of Whiterun Stage 1 (Stormcloak assault - outer barricades)"
+  ],
+  "act_context": ["Act 1"]
+}

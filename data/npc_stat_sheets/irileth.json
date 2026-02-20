@@ -1,0 +1,112 @@
+{
+  "name": "Irileth",
+  "id": "npc_stat_irileth",
+  "type": "Dunmer Housecarl",
+  "category": "Friendly NPC",
+  "location": "Dragonsreach, Whiterun",
+  "faction": "Whiterun Hold",
+  "role": "Housecarl to Jarl Balgruuf; Commander of Whiterun's Elite Guard",
+  "aspects": {
+    "high_concept": "Dunmer Blade Between the Jarl and Everything That Wants Him Dead",
+    "trouble": "Outsider in a City That Calls Itself Open",
+    "other_aspects": [
+      "I Have Survived Things That Should Have Killed Me",
+      "Balgruuf's Life Comes Before My Own",
+      "Cold Certainty in the Face of Chaos",
+      "Dark Elf in a Nord World - Still Here"
+    ]
+  },
+  "skills": {
+    "Superb": ["Fight"],
+    "Great": ["Will", "Notice"],
+    "Good": ["Athletics", "Physique"],
+    "Fair": ["Provoke", "Stealth"],
+    "Average": ["Empathy", "Lore"]
+  },
+  "stunts": [
+    "Housecarl's Oath: Irileth cannot be compelled to abandon Balgruuf while he lives; +2 to all actions taken in his direct defense.",
+    "Veteran's Read: Once per scene, ask the GM one yes/no question about an enemy's capabilities (free action).",
+    "Dunmer Resilience: +2 to Will against fire-based or magical fear effects; fire damage is reduced by 1 shift."
+  ],
+  "stress": {
+    "physical": [false, false, false, true],
+    "mental": [false, false, false]
+  },
+  "consequences": {
+    "mild": null,
+    "moderate": null,
+    "severe": null
+  },
+  "refresh": 3,
+  "fate_points": 3,
+  "equipment": {
+    "weapon": "Elven sword (Weapon:2) + Elven dagger",
+    "armor": "Housecarl plate (Armor:2)",
+    "special": "Signal whistle (can summon Whiterun guard reinforcements once per scene)"
+  },
+  "personality_notes": {
+    "speaking_style": "Terse, exact, and never wasteful with words. Gives compliments rarely - which makes them valuable. Dunmer-tinged formality in court.",
+    "motivations": [
+      "Keep Balgruuf alive at any cost",
+      "Maintain Whiterun's security regardless of faction politics",
+      "Prove her worth in a city that has doubted her since arrival",
+      "Outlast every threat that comes to Whiterun"
+    ],
+    "fears": [
+      "Balgruuf dying because she made the wrong call",
+      "Being forced to choose between Balgruuf's orders and his survival",
+      "Whiterun's people suffering for her failures",
+      "Her race being used as a reason to dismiss her judgment"
+    ],
+    "quirks": [
+      "Always knows where the exits are in any room",
+      "Evaluates strangers' weapons and footwork within seconds of meeting them",
+      "Gives grudging respect when someone surprises her - and means it",
+      "Refers to Balgruuf as 'the Jarl' in public, 'Balgruuf' only in private"
+    ]
+  },
+  "relationships": {
+    "Jarl Balgruuf": "Total loyalty; the center of her world in Whiterun",
+    "Whiterun Guard": "Trains them personally; they fear and respect her",
+    "Hadvar": "Respects his Imperial discipline; will work with him in the battle",
+    "Stormcloaks": "No political opinion; threat assessment only",
+    "The Player": "Will test them before trusting; reward her respect and she becomes an invaluable ally"
+  },
+  "trust_clock": {
+    "enabled": true,
+    "description": "Irileth's respect is earned through demonstrated competence and reliability, not words. She does not grant trust easily.",
+    "current": 0,
+    "max": 6,
+    "advancement_triggers": [
+      "Demonstrate tactical awareness that saves Balgruuf or her guards (+2)",
+      "Hold a defensive line she assigned you (+1)",
+      "Answer her direct challenge honestly and without flinching (+1)",
+      "Survive the battle without running (+1)"
+    ],
+    "setback_triggers": [
+      "Abandon a position under your responsibility (-2)",
+      "Lie to her face (-2)",
+      "Endanger Balgruuf through carelessness (-3)"
+    ]
+  },
+  "combat_tactics": "Irileth fights close and precise. She never wastes movement. Uses her guard as a shield wall while she finds the most dangerous enemy in the room and neutralizes them. Covers retreats professionally; advances only when she's certain.",
+  "scene_triggers": [
+    "Party arrives at Dragonsreach",
+    "Imperial pre-battle briefing at Dragonsreach",
+    "Stormcloak assault on Dragonsreach (Stage 1)",
+    "Any threat to Jarl Balgruuf",
+    "Dragonborn's first dragon sighting"
+  ],
+  "act_context": ["Act 1", "Act 2"],
+  "dialogue_examples": [
+    "I don't care who you are or where you're from. Can you hold a line? Yes or no.",
+    "If the Jarl dies, everything we're doing here dies with him. That's not politics. That's physics.",
+    "Impressive. For a... newcomer.",
+    "You want to know what it's like to serve a good man in a war that might kill him? It's the hardest thing I've ever done. And I've done hard things."
+  ],
+  "battle_of_whiterun_role": {
+    "imperial": "Key defender in Stage 0 briefing and Stage 1 breach; grants tactical boon if PC impresses her; covers Balgruuf personally",
+    "stormcloak": "Boss encounter in Dragonsreach climax (Stage 5); can be convinced to yield if Balgruuf surrenders"
+  },
+  "gm_notes": "Irileth is one of the rare NPCs who will directly tell the party when they're doing something right. Her approval should feel earned. She's Dunmer in a predominantly Nord city and has survived by being twice as good as everyone else - that history should inform how she treats PCs who prove themselves. If she is killed in the Stormcloak route, run a Dragonbreak precheck."
+}
