@@ -1,0 +1,135 @@
+{
+  "name": "Sister Kaari of the Cleansing Flame",
+  "id": "npc_stat_sister_kaari",
+  "type": "Nord Zealot-Priestess",
+  "category": "Hostile NPC",
+  "location": "Frostmere Vigil — Chapel of the Cleansing Flame (Zone 3)",
+  "faction": "Silver Hand",
+  "role": "Chapel Warden of Frostmere Vigil; ritual specialist and second-in-command",
+  "aspects": {
+    "high_concept": "Former Priestess Turned Purifier Who Found Purpose in Flame",
+    "trouble": "Mercy is the Wound That Already Killed My Husband",
+    "other_aspects": [
+      "The Divines Offered Nothing — Silver and Fire Answered",
+      "Flame Purifies What Prayer Leaves Corrupted",
+      "If You Bear Sovngarde's Blessing She Calls You Salvageable"
+    ]
+  },
+  "skills": {
+    "Great": ["Magic (Destruction — Fire)", "Will"],
+    "Good": ["Provoke", "Lore", "Notice"],
+    "Fair": ["Fight", "Athletics", "Rapport"],
+    "Average": ["Physique", "Investigate"]
+  },
+  "stunts": [
+    "Cleansing Surge: Once per scene, Kaari channels purification fire that removes all Beast Blood bonuses (not stress) in her zone for one exchange. Affects allies and enemies alike.",
+    "Ritual Wards: At the start of combat, Kaari automatically creates one zone aspect 'Ritual Warding Circle' with one free invoke, usable only for defense.",
+    "Flame of Judgment: +2 to Magic (Destruction — Fire) attacks when target has used Beast Blood this scene.",
+    "Voice of the Flame: Use Will instead of Rapport when attempting to Provoke targets into self-doubt about their choices."
+  ],
+  "stress": {
+    "physical": [false, false, false],
+    "mental": [false, false, false, false]
+  },
+  "consequences": {
+    "mild": null,
+    "moderate": null
+  },
+  "refresh": 2,
+  "fate_points": 2,
+  "equipment": {
+    "weapon": "Silver mace (Weapon:2, engraved with Stendarr's runes)",
+    "armor": "Charred ceremonial robes with silver thread (Armor:1)",
+    "special": [
+      "Ritual brazier fuel (creates 'Burning Zone' hazard aspect once per scene)",
+      "Cleansing prayer scroll (triggers Cleansing Surge effect without costing the stunt use)"
+    ]
+  },
+  "boss_mechanics": {
+    "cleansing_surge": {
+      "description": "Once per scene: removes all Beast Blood bonuses in zone for one exchange.",
+      "note": "Does not deal stress. Purely suppressive. Can be devastating when combined with Silver Dominion if Valdrek is present."
+    },
+    "hesitation_trigger": {
+      "condition": "If PC has Sovngarde blessing aspect",
+      "effect": "Kaari hesitates in her final confrontation. She calls the PC 'Salvageable' and offers one exchange of non-combat negotiation before resuming combat. If the PC uses this opening to invoke her backstory, she may be convinced to stand down (Rapport vs her Will, difficulty Good +3)."
+    },
+    "ritual_wards": {
+      "description": "Kaari's zone begins with 'Ritual Warding Circle' aspect (one free defensive invoke).",
+      "note": "Destroy the ritual brazier (attack vs zone hazard, Fair +2 defense) to remove this aspect."
+    }
+  },
+  "combat_tactics": "Kaari fights from range using fire destruction magic, forcing enemies to either advance through flames or stay at a disadvantage. She opens with Ritual Wards to secure her zone, then uses Cleansing Surge to strip Beast Blood bonuses from Beastblooded PCs. Her silver mace is a last resort — she prefers the purity of fire. If the PC demonstrates Sovngarde blessing, she visibly falters before resuming her offensive.",
+  "personality_notes": {
+    "speaking_style": "Calm and evangelical. She speaks with the cadence of a sermon, not a battle-cry. When she hesitates, the change is immediate and frightening — like watching a fire gutter.",
+    "motivations": [
+      "Eliminate lycanthropy as penance for her husband's death",
+      "Prove that the Divines failed and flame succeeds",
+      "Serve Valdrek's doctrinal vision",
+      "Prevent any more families from experiencing what hers did"
+    ],
+    "fears": [
+      "That the Divines might actually have a plan she abandoned too soon",
+      "That her husband's death was random — not cosmic punishment for Skyrim's corruption",
+      "Being 'salvageable' herself (she has buried this hope deeply)"
+    ],
+    "quirks": [
+      "Carries a charred Kynareth prayer token — won't throw it away, won't pray over it",
+      "Refers to all fire she creates as 'the Flame that answers'",
+      "Keeps her voice level even in combat — raised voice means something has genuinely broken through"
+    ]
+  },
+  "backstory": {
+    "origin": "Former priestess of Kynareth at a small shrine in The Reach.",
+    "turning_point": "Her husband was killed by a rogue werewolf with no Companions affiliation. The attack was random, purposeless. The local priesthood offered prayers and 'Kynareth's plan.' She offered nothing.",
+    "radicalization": "She joined the Silver Hand not from hatred of lycanthropes but from the collapse of her faith in the Divines' mercy. The Silver Hand gave her something the Temple never did: an answer that required action.",
+    "ideology": "Believes lycanthropy blocks Sovngarde. Has extended this belief into a general conviction that mercy without power is complicity. Fire is honest — it does what it claims.",
+    "relationship_with_faith": "Not entirely faithless. She still feels the absence of Kynareth. The charred prayer token she carries is evidence that the wound has not fully healed.",
+    "silver_hand_role": "Converted the lower chapel of Frostmere into a purification ritual space. Developed the Cleansing Flame doctrine that gives the Silver Hand its pseudo-religious structure."
+  },
+  "dialogue_samples": {
+    "opening": "You entered this place of your own will. That means some part of you already knows. The flame doesn't hunt. It waits for the ones who are ready.",
+    "beastblood_pc": "I smell the blood on you. Not hatred — sorrow. You are carrying something you did not choose, and it will cost you Sovngarde. Let me end it cleanly.",
+    "sovngarde_blessed_pc": "Wait. You carry... that is Sovngarde's mark. You have been touched by the Hall of Valor. How? How did something like this also carry the beast? You are... salvageable. If you will listen.",
+    "cleansing_surge": "The Flame answers.",
+    "taking_damage": "Pain teaches nothing I haven't already learned.",
+    "defeated_alive": "My husband would have said... that I found purpose in the wrong fire. Perhaps. But at least I found purpose.",
+    "after_hesitation": "You're carrying something real. I don't know what that means. But I can't burn it without knowing. So. Tell me why you stand here, beast-marked and Sovngarde-blessed, in my chapel."
+  },
+  "relationships": {
+    "Valdrek Ice-Blood": "Respects him as the mind behind the movement; shares his conviction though not his grief. Where he mourns, she has already finished mourning.",
+    "Torhild Wolf-Bane": "Views her as undisciplined rage that the Silver Hand can use but must direct carefully.",
+    "Husband (deceased)": "His death is the foundation of everything she has built. She does not speak his name in combat.",
+    "Kynareth": "Former patron, now abandoned. The charred prayer token she keeps is the last evidence of a relationship she won't fully close."
+  },
+  "outcome_branches": {
+    "kaari_killed": "Silver Hand loses its ritual doctrine. Remaining cells become less cohesive — more violent, less organized.",
+    "kaari_convinced_to_stand_down": "Requires: Sovngarde blessing + successful Rapport overcome vs Will. She will not fight for the PC, but she will cease hostilities and may share intelligence on Silver Hand cell locations.",
+    "kaari_escapes": "If Valdrek dies and Kaari escapes, she may assume command. She is harder to negotiate with than Valdrek — her grief is older and quieter.",
+    "kaari_as_reluctant_ally": "Long-shot outcome. Requires completing her hesitation branch AND proving the PC is actively seeking a Beast Blood cure. She may provide alchemical knowledge about suppression rituals."
+  },
+  "scene_triggers": [
+    "Frostmere Vigil Zone 3 (Chapel) entered",
+    "PC has Beast Blood active",
+    "PC carries Sovngarde blessing aspect",
+    "Silver Hand awareness level >= 4"
+  ],
+  "act_context": ["Act 2", "Act 3"],
+  "loot": {
+    "guaranteed": [
+      "Silver mace (Weapon:2)",
+      "Charred Kynareth prayer token (lore item, triggers Priests of Kynareth dialogue branches)",
+      "Chapel ritual notes (alchemical suppression formula for Beast Blood — partial)"
+    ],
+    "possible": [
+      "Cleansing prayer scroll (unused)",
+      "Silver Hand recruitment records",
+      "Personal letter from Valdrek Ice-Blood"
+    ]
+  },
+  "trust_clock": {
+    "enabled": false,
+    "description": "Kaari does not have a trust clock by default. If the hesitation branch is triggered and the PC is pursuing Beast Blood cure, the GM may optionally activate a fragile alliance clock (max 4) that tracks her wavering conviction."
+  },
+  "gm_notes": "Kaari is the most emotionally accessible Silver Hand leader because her origin is comprehensible grief, not ideology. The hesitation mechanic is the most important moment in Zone 3 — run it slowly. She needs a full beat of silence before she says 'Salvageable.' That pause is the scene. Her conviction is not cruelty; it is a woman who found the only answer that worked when everything else failed."
+}

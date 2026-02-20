@@ -1,0 +1,83 @@
+{
+  "silver_hand_clocks": {
+    "description": "Track the Silver Hand faction's escalating response to Beastblooded activity and Companions interference",
+    "last_updated": "2026-02-20",
+    "clocks": {
+      "silver_hand_awareness": {
+        "name": "Silver Hand Awareness",
+        "description": "Measures how much attention the Silver Hand has focused on the PC and their allies. Drives escalating hunter tiers and ultimately unlocks Frostmere Vigil.",
+        "current_progress": 0,
+        "total_segments": 6,
+        "completion_effect": "Frostmere Vigil HQ becomes accessible and the High Purifier takes personal interest in the PC",
+        "tier_thresholds": {
+          "1": "Scout ambush (minor Silver Hand hunters patrol near PC's known locations)",
+          "2": "Named hunter encounter (a named Silver Hand lieutenant targets the PC)",
+          "3": "Fort raid event (Silver Hand attacks a location the PC has recently visited)",
+          "4": "Attempted assassination (Silver Hand sends an elite squad to eliminate the PC)",
+          "5": "Jorrvaskr siege (if Companions questline active: Silver Hand assaults Jorrvaskr directly)",
+          "6": "HQ unlock (Frostmere Vigil location revealed; High Purifier Valdrek issues personal challenge)"
+        },
+        "advancement_triggers": [
+          "Beast Blood used publicly in a populated area (+1)",
+          "Silver Hand NPC spared and released (+1, they report back)",
+          "Companions rank advancement (Companions questline active) (+1)",
+          "Silver Hand cell destroyed (+1, survivors report PC involvement)",
+          "PC identified by Silver Hand scout (+1)",
+          "Jorrvaskr or Companions allies publicly protected (+1)"
+        ],
+        "reduction_triggers": [
+          "Dustman's Cairn logistics sabotage (-1)",
+          "Silver Hand intelligence cache destroyed (-1, delays coordination)",
+          "Named Silver Hand lieutenant captured (not killed) and interrogated (-1)",
+          "High Purifier Valdrek convinced of ceasefire (-2)"
+        ]
+      },
+      "silver_hand_hunter_response": {
+        "name": "Silver Hand Hunter Response Tier",
+        "description": "Tracks which tier of Silver Hand hunters are currently deployed against the PC. Resets when awareness drops below tier threshold.",
+        "current_progress": 0,
+        "total_segments": 4,
+        "completion_effect": "All hunter tiers deployed simultaneously — Silver Hand is in full wartime mobilization",
+        "tier_descriptions": [
+          {
+            "tier": 1,
+            "label": "Scout",
+            "description": "2-3 standard Silver Hand hunters. Lightly armed, silver shortswords. Gather information rather than engage."
+          },
+          {
+            "tier": 2,
+            "label": "Wolf-Hunters",
+            "description": "Named hunter with wolf-bane equipment. Silver weapons, alchemical silver powder. Will engage in combat."
+          },
+          {
+            "tier": 3,
+            "label": "Purifier Squad",
+            "description": "4-5 Silver Hand soldiers with a lieutenant. May include a Silver Hand mage with fire specialization."
+          },
+          {
+            "tier": 4,
+            "label": "High Purifier's Chosen",
+            "description": "Elite squad personally dispatched by Valdrek Ice-Blood or Sister Kaari. Full equipment, silver weapons and armor."
+          }
+        ]
+      },
+      "jorrvaskr_siege_clock": {
+        "name": "Jorrvaskr Siege",
+        "description": "If Silver Hand awareness reaches 5 and Companions questline is active, this clock tracks the Silver Hand's preparation for a full assault on Jorrvaskr. Only activates at awareness level 5.",
+        "current_progress": 0,
+        "total_segments": 4,
+        "activation_condition": "silver_hand_state.awareness_level >= 5 AND companions_questline active",
+        "completion_effect": "Silver Hand storms Jorrvaskr. Companions casualties determined by party intervention.",
+        "advancement_triggers": [
+          "PC takes no action after awareness reaches 5 (+1 per session)",
+          "Companions suffer a public defeat or loss (+1)",
+          "Silver Hand captures Companions intelligence (+1)"
+        ],
+        "reduction_triggers": [
+          "PC warns Jorrvaskr and defenses are prepared (-1)",
+          "Silver Hand leadership disrupted before siege completes (-2)"
+        ]
+      }
+    }
+  }
+}

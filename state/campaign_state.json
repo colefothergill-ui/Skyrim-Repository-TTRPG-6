@@ -305,5 +305,12 @@
     "eye_instability": 0,
     "ancano_suspicion": 0,
     "internal_politics": 0
+  },
+  "silver_hand_state": {
+    "awareness_level": 0,
+    "hq_discovered": false,
+    "high_purifier_alive": true,
+    "active_cells": ["frostmere_vigil"],
+    "hunter_tiers_unlocked": []
   }
 }

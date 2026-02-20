@@ -1905,6 +1905,128 @@ Schemes Discovered: {len(state['thalmor_arc']['thalmor_schemes_discovered'])}
         self.save_campaign_state(state)
         return state
 
+    # ------------------------------------------------------------------
+    # Silver Hand escalation system
+    # ------------------------------------------------------------------
+
+    _SILVER_HAND_DEFAULT_STATE = {
+        "awareness_level": 0,
+        "hq_discovered": False,
+        "high_purifier_alive": True,
+        "active_cells": ["frostmere_vigil"],
+        "hunter_tiers_unlocked": [],
+    }
+
+    def get_silver_hand_state(self, state=None):
+        """
+        Return the silver_hand_state sub-dict from campaign state.
+
+        Args:
+            state: Optional campaign_state dict; loads from disk if not provided.
+
+        Returns:
+            The silver_hand_state dict (initialised with defaults if absent).
+        """
+        if state is None:
+            state = self.load_campaign_state() or {}
+        return state.setdefault(
+            "silver_hand_state",
+            dict(self._SILVER_HAND_DEFAULT_STATE),
+        )
+
+    def increment_silver_hand_awareness(self, amount=1, state=None, save=True):
+        """
+        Increment the Silver Hand awareness level and unlock hunter tiers.
+
+        Args:
+            amount: Number of segments to add (default 1).
+            state:  Optional campaign_state dict; loads from disk if not provided.
+            save:   Whether to persist changes to disk (default True).
+
+        Returns:
+            Updated campaign_state dict.
+        """
+        if state is None:
+            state = self.load_campaign_state() or {}
+
+        sh = self.get_silver_hand_state(state)
+        sh["awareness_level"] = min(6, sh["awareness_level"] + amount)
+
+        # Unlock hunter tiers based on new level
+        tier_map = {1: "scout", 2: "wolf_hunters", 3: "purifier_squad", 4: "high_purifiers_chosen"}
+        for level, tier in tier_map.items():
+            if sh["awareness_level"] >= level and tier not in sh["hunter_tiers_unlocked"]:
+                sh["hunter_tiers_unlocked"].append(tier)
+
+        if save:
+            self.save_campaign_state(state)
+        return state
+
+    def trigger_silver_hand_escalation(self, state=None, save=True):
+        """
+        Check Silver Hand awareness and unlock Frostmere Vigil HQ when
+        the threshold is reached (awareness_level >= 6 and not yet discovered).
+
+        Args:
+            state: Optional campaign_state dict; loads from disk if not provided.
+            save:  Whether to persist changes to disk (default True).
+
+        Returns:
+            Tuple (state, unlocked) where unlocked is True if the dungeon was
+            newly unlocked during this call.
+        """
+        if state is None:
+            state = self.load_campaign_state() or {}
+
+        sh = self.get_silver_hand_state(state)
+        unlocked = False
+
+        if sh["awareness_level"] >= 6 and not sh["hq_discovered"]:
+            sh["hq_discovered"] = True
+            unlocked = True
+            # Ensure frostmere_vigil is in active_cells
+            if "frostmere_vigil" not in sh["active_cells"]:
+                sh["active_cells"].append("frostmere_vigil")
+
+        if save and unlocked:
+            self.save_campaign_state(state)
+
+        return state, unlocked
+
+    def record_silver_hand_outcome(self, outcome, state=None, save=True):
+        """
+        Apply post-HQ-clearance outcomes to silver_hand_state.
+
+        Args:
+            outcome: One of 'all_leaders_killed', 'valdrek_alive',
+                     'both_leaders_spared', 'kaari_takes_command'.
+            state:   Optional campaign_state dict; loads from disk if not provided.
+            save:    Whether to persist changes to disk (default True).
+
+        Returns:
+            Updated campaign_state dict.
+        """
+        if state is None:
+            state = self.load_campaign_state() or {}
+
+        sh = self.get_silver_hand_state(state)
+
+        if outcome == "all_leaders_killed":
+            sh["high_purifier_alive"] = False
+            sh["awareness_level"] = max(0, sh["awareness_level"] - 3)
+            sh["active_cells"] = ["gallows_rock", "dustmans_cairn"]
+        elif outcome == "valdrek_alive":
+            sh["hq_discovered"] = True
+        elif outcome == "both_leaders_spared":
+            sh["hq_discovered"] = True
+            sh["awareness_level"] = max(0, sh["awareness_level"] - 2)
+        elif outcome == "kaari_takes_command":
+            sh["high_purifier_alive"] = False
+
+        if save:
+            self.save_campaign_state(state)
+        return state
+
     def start_battle_of_whiterun(self, faction, state=None):
         """
         Initiate the Battle of Whiterun for the given faction.
