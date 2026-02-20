@@ -15,6 +15,7 @@ import json
 import os
 from pathlib import Path
 from datetime import datetime
+from character_creation import get_backstory_tags
 
 
 # Faction name mapping for consistency
@@ -855,8 +856,8 @@ class SessionZeroManager:
                 campaign_state["faction_flags"] = {}
             neutral_faction_starts = {
                 "college": "college_first_lessons",
-                "companions": "companions_intro",
-                "thieves_guild": "thieves_message_from_brynjolf",
+                "companions": "companions_take_up_arms",
+                "thieves_guild": "tg_a_chance_arrangement",
                 "dark_brotherhood": "db_with_friends_like_these",
             }
             if neutral_subfaction in neutral_faction_starts:
@@ -1373,6 +1374,13 @@ the Battle of Whiterun will shape Skyrim's future.
             if character:
                 # Add faction alignment to character
                 character['faction_alignment'] = faction_alignment
+                # Record starting faction and derive backstory tags
+                neutral_subfaction = campaign_info.get('neutral_subfaction')
+                if faction_alignment == "neutral" and neutral_subfaction:
+                    character['starting_faction'] = neutral_subfaction
+                    character['backstory_tags'] = get_backstory_tags(neutral_subfaction)
+                else:
+                    character['backstory_tags'] = get_backstory_tags(faction_alignment)
                 
                 # Prompt for Aspects (High Concept, Trouble, and 1-3 additional)
                 self.prompt_for_aspects(character)

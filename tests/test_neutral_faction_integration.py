@@ -289,6 +289,159 @@ def test_npc_manager_faction_leaders():
         return False
 
 
+def test_civil_war_eligibility_gating():
+    """Test check_civil_war_eligibility and mark_faction_intro_complete"""
+    print("\n=== Testing Civil War Eligibility Gating ===")
+
+    try:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            data_dir = Path(__file__).parent.parent / "data"
+            state_dir = Path(tmpdir) / "state"
+            state_dir.mkdir()
+
+            mgr = StoryManager(data_dir=str(data_dir), state_dir=str(state_dir))
+
+            # --- Imperial: not eligible without flag ---
+            state = {"civil_war_state": {"player_alliance": "imperial"}, "faction_flags": {}}
+            assert not mgr.check_civil_war_eligibility(state), "Imperial should be ineligible without flag"
+
+            state["faction_flags"]["imperial_intro_complete"] = True
+            assert mgr.check_civil_war_eligibility(state), "Imperial should be eligible with flag"
+            print("✓ Imperial eligibility gating correct")
+
+            # --- Stormcloak ---
+            state2 = {"civil_war_state": {"player_alliance": "stormcloak"}, "faction_flags": {}}
+            assert not mgr.check_civil_war_eligibility(state2)
+            state2["faction_flags"]["stormcloak_intro_complete"] = True
+            assert mgr.check_civil_war_eligibility(state2)
+            print("✓ Stormcloak eligibility gating correct")
+
+            # --- Neutral subfactions ---
+            for subfaction, flag in [
+                ("companions", "companions_intro_complete"),
+                ("college", "college_intro_complete"),
+                ("thieves_guild", "tg_intro_complete"),
+                ("dark_brotherhood", "db_intro_complete"),
+            ]:
+                s = {
+                    "civil_war_state": {"player_alliance": "neutral", "neutral_subfaction": subfaction},
+                    "faction_flags": {},
+                }
+                assert not mgr.check_civil_war_eligibility(s), f"{subfaction} should be ineligible without flag"
+                s["faction_flags"][flag] = True
+                assert mgr.check_civil_war_eligibility(s), f"{subfaction} should be eligible with {flag}"
+            print("✓ All neutral subfaction eligibility flags correct")
+
+            # --- Neutral: war catalyst bypass ---
+            s_catalyst = {
+                "civil_war_state": {"player_alliance": "neutral"},
+                "neutral_war_catalyst": True,
+                "faction_flags": {},
+            }
+            assert mgr.check_civil_war_eligibility(s_catalyst), "neutral_war_catalyst should grant eligibility"
+            s_catalyst2 = {
+                "civil_war_state": {"player_alliance": "neutral"},
+                "neutral_war_catalyst_complete": True,
+                "faction_flags": {},
+            }
+            assert mgr.check_civil_war_eligibility(s_catalyst2), "neutral_war_catalyst_complete should grant eligibility"
+            print("✓ Neutral war catalyst bypass correct")
+
+            # --- faction= override: non-neutral player_alliance, checking target faction ---
+            s_override = {
+                "civil_war_state": {"player_alliance": "imperial"},
+                "faction_flags": {"imperial_intro_complete": True},
+            }
+            assert mgr.check_civil_war_eligibility(s_override, faction="imperial"), \
+                "faction= override should check imperial flag"
+            # Neutral players always use the neutral path regardless of faction= param
+            s_neutral_override = {
+                "civil_war_state": {"player_alliance": "neutral", "neutral_subfaction": "companions"},
+                "faction_flags": {"companions_intro_complete": True},
+            }
+            assert mgr.check_civil_war_eligibility(s_neutral_override, faction="stormcloak"), \
+                "Neutral player with subfaction intro should be eligible even with faction= override"
+            print("✓ faction= override works correctly")
+
+            return True
+
+    except Exception as e:
+        print(f"✗ Civil war eligibility test failed: {e}")
+        import traceback
+        traceback.print_exc()
+        return False
+
+
+def test_start_battle_of_whiterun():
+    """Test start_battle_of_whiterun gating and state mutation"""
+    print("\n=== Testing start_battle_of_whiterun ===")
+
+    try:
+        with tempfile.TemporaryDirectory() as tmpdir:
+            data_dir = Path(__file__).parent.parent / "data"
+            state_dir = Path(tmpdir) / "state"
+            state_dir.mkdir()
+
+            mgr = StoryManager(data_dir=str(data_dir), state_dir=str(state_dir))
+
+            # --- Blocked when intro not complete ---
+            blocked_state = {
+                "civil_war_state": {"player_alliance": "imperial"},
+                "faction_flags": {},
+            }
+            try:
+                mgr.start_battle_of_whiterun("imperial", blocked_state)
+                assert False, "Should have raised for incomplete intro"
+            except Exception as exc:
+                assert "Civil War locked" in str(exc)
+            print("✓ Raises when faction intro not complete")
+
+            # --- Succeeds after mark_faction_intro_complete ---
+            ready_state = {
+                "civil_war_state": {"player_alliance": "imperial"},
+                "faction_flags": {},
+                "last_updated": "",
+            }
+            # Write state to disk so save/load works
+            import json as _json
+            state_file = state_dir / "campaign_state.json"
+            with open(state_file, "w") as f:
+                _json.dump(ready_state, f)
+
+            mgr.mark_faction_intro_complete("imperial")
+            loaded = mgr.load_campaign_state()
+            assert loaded["faction_flags"].get("imperial_intro_complete"), "Flag should be persisted"
+
+            result = mgr.start_battle_of_whiterun("imperial")
+            assert result["civil_war_state"]["allegiance"] == "imperial"
+            assert result["civil_war_state"]["player_alliance"] == "imperial"
+            assert result["civil_war_state"]["battle_of_whiterun_status"] == "active"
+            assert result["civil_war_state"]["civil_war_eligible"] is True
+            assert "civil_war_locked_reason" not in result["civil_war_state"]
+            print("✓ Battle starts correctly after intro complete; sets both allegiance and player_alliance")
+
+            # --- Neutral party choosing a side via faction= override ---
+            neutral_state = {
+                "civil_war_state": {"player_alliance": "neutral", "neutral_subfaction": "companions"},
+                "faction_flags": {"companions_intro_complete": True},
+                "last_updated": "",
+            }
+            with open(state_file, "w") as f:
+                _json.dump(neutral_state, f)
+
+            result2 = mgr.start_battle_of_whiterun("stormcloak")
+            assert result2["civil_war_state"]["player_alliance"] == "stormcloak"
+            print("✓ Neutral-to-stormcloak path resolves correctly")
+
+            return True
+
+    except Exception as e:
+        print(f"✗ start_battle_of_whiterun test failed: {e}")
+        import traceback
+        traceback.print_exc()
+        return False
+
+
 def main():
     """Run all tests"""
     print("="*60)
@@ -304,6 +457,8 @@ def main():
     results.append(("Story Manager Neutral Quest Hooks", test_story_manager_neutral_quest_hooks()))
     results.append(("Battle of Whiterun Encounter", test_battle_of_whiterun_encounter()))
     results.append(("NPC Manager Faction Leaders", test_npc_manager_faction_leaders()))
+    results.append(("Civil War Eligibility Gating", test_civil_war_eligibility_gating()))
+    results.append(("Start Battle of Whiterun", test_start_battle_of_whiterun()))
     
     # Summary
     print("\n" + "="*60)

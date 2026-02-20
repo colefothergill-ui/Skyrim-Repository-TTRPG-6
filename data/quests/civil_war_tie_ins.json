@@ -1,6 +1,7 @@
 {
   "whiterun_faction_tie_in": {
     "type": "branching_prebattle",
+    "design_only": true,
     "convergence_flag": "civil_war_state.allegiance",
     "routes_to": "battle_of_whiterun",
     "faction_routes": {
@@ -28,7 +29,7 @@
       },
       "companions": {
         "precondition_flag": "companions_intro_complete",
-        "intro_quest": "companions_proving_honor",
+        "intro_quest": "companions_take_up_arms",
         "scene_name": "Honor Before Banner",
         "location": "Jorrvaskr",
         "hook": "Kodlak is torn. Jorrvaskr is divided. You are sent to protect civilians or defend Nord sovereignty.",
@@ -45,7 +46,7 @@
       },
       "dark_brotherhood": {
         "precondition_flag": "db_intro_complete",
-        "intro_quest": "dark_brotherhood_first_contract",
+        "intro_quest": "db_with_friends_like_these",
         "scene_name": "War Is Good for Business",
         "location": "Whiterun",
         "hook": "Astrid gives you a contract tied to Whiterun instability.",
@@ -59,14 +60,14 @@
             "result": "stormcloak"
           },
           "refuse_contract": {
-            "description": "Refuse the contract (triggers neutral_war_catalyst)",
-            "result": "neutral_war_catalyst"
+            "description": "Refuse the contract, leaving Whiterun's Imperial-aligned stability intact",
+            "result": "imperial"
           }
         }
       },
       "thieves_guild": {
         "precondition_flag": "tg_intro_complete",
-        "intro_quest": "tg_joining_the_guild",
+        "intro_quest": "tg_a_chance_arrangement",
         "scene_name": "Chaos Means Opportunity",
         "location": "Whiterun",
         "hook": "Brynjolf: 'War's bad for trade. Unless you know where to stand.'",

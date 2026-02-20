@@ -1706,7 +1706,7 @@ Schemes Discovered: {len(state['thalmor_arc']['thalmor_schemes_discovered'])}
         
         return self.dragonbreak_manager.get_timeline_state()
 
-    def check_civil_war_eligibility(self, state):
+    def check_civil_war_eligibility(self, state, faction=None):
         """
         Determine whether the party is eligible to begin the Battle of Whiterun.
 
@@ -1717,20 +1717,34 @@ Schemes Discovered: {len(state['thalmor_arc']['thalmor_schemes_discovered'])}
 
         Args:
             state: The campaign_state dict
+            faction: Optional target faction ('imperial'/'stormcloak') to use
+                     instead of the current player_alliance in state.  Pass this
+                     when a neutral party has just chosen a side and state hasn't
+                     been updated yet.
 
         Returns:
             bool: True if the civil war battle may proceed
         """
         flags = state.get("faction_flags", {})
         civil_war = state.get("civil_war_state", {})
-        alliance = civil_war.get("player_alliance", "neutral")
+        current_alliance = civil_war.get("player_alliance", "neutral")
+
+        # The `faction` parameter lets callers check eligibility against a target
+        # faction that differs from player_alliance (e.g., the battle has just been
+        # triggered and state hasn't been updated yet).  However, neutral players
+        # must always be evaluated on the neutral path because they completed a
+        # neutral-faction intro, not an imperial/stormcloak one.
+        if faction and current_alliance != "neutral":
+            alliance = faction
+        else:
+            alliance = current_alliance
 
         if alliance == "imperial":
             return flags.get("imperial_intro_complete", False)
         elif alliance == "stormcloak":
             return flags.get("stormcloak_intro_complete", False)
         else:  # neutral
-            if state.get("neutral_war_catalyst_complete", False):
+            if state.get("neutral_war_catalyst", False) or state.get("neutral_war_catalyst_complete", False):
                 return True
             neutral_subfaction = civil_war.get("neutral_subfaction")
             if neutral_subfaction:
@@ -1743,6 +1757,37 @@ Schemes Discovered: {len(state['thalmor_arc']['thalmor_schemes_discovered'])}
                 intro_flag = _subfaction_flag_map.get(neutral_subfaction, f"{neutral_subfaction}_intro_complete")
                 return flags.get(intro_flag, False)
             return False
+
+    def mark_faction_intro_complete(self, subfaction, state=None):
+        """
+        Record that a faction's intro quest has been completed, unlocking civil
+        war eligibility.  Saves the updated state to disk.
+
+        Args:
+            subfaction: One of 'imperial', 'stormcloak', 'companions', 'college',
+                        'thieves_guild', 'dark_brotherhood'
+            state: Optional campaign_state dict; loads from disk if not provided
+
+        Returns:
+            Updated campaign_state dict
+        """
+        if state is None:
+            state = self.load_campaign_state() or {}
+
+        flags = state.setdefault("faction_flags", {})
+        flag_map = {
+            "imperial": "imperial_intro_complete",
+            "stormcloak": "stormcloak_intro_complete",
+            "companions": "companions_intro_complete",
+            "college": "college_intro_complete",
+            "thieves_guild": "tg_intro_complete",
+            "dark_brotherhood": "db_intro_complete",
+        }
+        flag_key = flag_map.get(subfaction, f"{subfaction}_intro_complete")
+        flags[flag_key] = True
+
+        self.save_campaign_state(state)
+        return state
 
     def start_battle_of_whiterun(self, faction, state=None):
         """
@@ -1761,11 +1806,13 @@ Schemes Discovered: {len(state['thalmor_arc']['thalmor_schemes_discovered'])}
         if state is None:
             state = self.load_campaign_state() or {}
 
-        if not self.check_civil_war_eligibility(state):
+        if not self.check_civil_war_eligibility(state, faction=faction):
             raise Exception("Civil War locked: complete your faction intro first.")
 
         civil_war = state.setdefault("civil_war_state", {})
+        # Set both fields: 'allegiance' for new code, 'player_alliance' for legacy consumers
         civil_war["allegiance"] = faction
+        civil_war["player_alliance"] = faction
         civil_war["battle_of_whiterun_status"] = "active"
         civil_war["civil_war_eligible"] = True
         civil_war.pop("civil_war_locked_reason", None)

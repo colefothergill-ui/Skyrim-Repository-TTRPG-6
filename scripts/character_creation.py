@@ -8,7 +8,7 @@ during Session Zero character creation.
 
 STARTING_FACTIONS = [
     "neutral",
-    "college_of_winterhold",
+    "college",
     "companions",
     "dark_brotherhood",
     "thieves_guild",
@@ -16,14 +16,14 @@ STARTING_FACTIONS = [
 
 _FACTION_LABELS = {
     "neutral": "Neutral (No faction)",
-    "college_of_winterhold": "College of Winterhold",
+    "college": "College of Winterhold",
     "companions": "The Companions",
     "dark_brotherhood": "Dark Brotherhood",
     "thieves_guild": "Thieves Guild",
 }
 
 _FACTION_QUESTIONS = {
-    "college_of_winterhold": "Which school of magic first bent to your will?",
+    "college": "Which school of magic first bent to your will?",
     "companions": "Was it glory, coin, or honor that brought you to Jorrvaskr?",
     "dark_brotherhood": "What was the name of the first life you were paid to take?",
     "thieves_guild": "What is the most valuable thing you have ever stolen, and why?",
@@ -31,7 +31,7 @@ _FACTION_QUESTIONS = {
 }
 
 _BACKSTORY_TAG_MAP = {
-    "college_of_winterhold": ["college", "winterhold", "magic"],
+    "college": ["college", "winterhold", "magic"],
     "companions": ["companions", "jorrvaskr", "honor"],
     "dark_brotherhood": ["dark_brotherhood", "assassination", "shadow"],
     "thieves_guild": ["thieves_guild", "riften", "stealth"],
