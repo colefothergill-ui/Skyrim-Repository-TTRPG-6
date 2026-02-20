@@ -269,5 +269,23 @@
     "mirabelle_ervine": 35,
     "companions": 20
   },
-  "npc_first_impressions": {}
+  "npc_first_impressions": {
+    "test_companion": {
+      "pc_oskern_cindershroud": {
+        "timestamp": "2026-02-20T03:35:21.843835",
+        "disposition": "neutral",
+        "line": "Snow's falling and you're holding fire like it's a lantern. Show-off... useful, though.",
+        "source": "default",
+        "recognition_tags": [
+          "college_of_winterhold",
+          "imperial_noble",
+          "pyromancer",
+          "thuum_user",
+          "atronach_stone_blessed",
+          "cindershroud_name",
+          "staff_of_cinders"
+        ]
+      }
+    }
+  }
 }
